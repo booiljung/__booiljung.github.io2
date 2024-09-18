@@ -72,11 +72,6 @@ body {
     margin-bottom: 5cm; /* 아래 여백 */
 }
 
-.math {
-    margin-top: 5em;  /* 수식 위쪽 여백 */
-    margin-bottom: 5em; /* 수식 아래쪽 여백 */
-}
-
 .md-button {
     font-family: 'Roboto', sans-serif;
     padding: 24px 32px; /* 위아래, 좌우 여백 조정 */
