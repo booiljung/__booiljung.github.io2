@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://booiljung.github.io/robot/ros2%20humble/chapter%2006/0602/" rel="canonical"/>
+<link href="../../../../img/favicon.ico" rel="shortcut icon"/>
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+<title>상태 전환 및 상태 관리 - 실험 도서관</title>
+<link href="../../../../css/bootstrap-3.3.7.min.css" rel="stylesheet"/>
+<link href="../../../../css/font-awesome-4.7.0.css" rel="stylesheet"/>
+<link href="../../../../css/base.css" rel="stylesheet"/>
+<link href="../../../../css/highlight.css" rel="stylesheet"/>
+<link href="../../../../css/custom.css" rel="stylesheet"/>
+<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+<!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+<script src="../../../../js/jquery-3.2.1.min.js"></script>
+<script src="../../../../js/bootstrap-3.3.7.min.js"></script>
+<script src="../../../../js/highlight.pack.js"></script>
+<base target="_top"/>
+<script>
+      var base_url = '../../../..';
+      var is_top_frame = false;
+        
+        var pageToc = [
+          {title: "Unconfigured \uc0c1\ud0dc", url: "#_top", children: [
+          ]},
+          {title: "Inactive \uc0c1\ud0dc", url: "#inactive", children: [
+          ]},
+          {title: "\uc0c1\ud0dc \uc804\ud658\uc758 \uc218\ud559\uc801 \ubaa8\ub378\ub9c1", url: "#_1", children: [
+          ]},
+          {title: "\uc0c1\ud0dc \uc804\ud658 \uc870\uac74", url: "#_2", children: [
+          ]},
+          {title: "Active \uc0c1\ud0dc", url: "#active", children: [
+          ]},
+          {title: "Finalized \uc0c1\ud0dc", url: "#finalized", children: [
+          ]},
+          {title: "\uc0c1\ud0dc \uc804\ud658 \ub2e4\uc774\uc5b4\uadf8\ub7a8", url: "#_3", children: [
+          ]},
+          {title: "\uc0c1\ud0dc \uc804\ud658\uacfc ROS2 \uc11c\ube44\uc2a4", url: "#ros2", children: [
+          ]},
+          {title: "\uc0c1\ud0dc \uc804\ud658\uacfc \uc774\ubca4\ud2b8 \ud578\ub4e4\ub9c1", url: "#_4", children: [
+          ]},
+        ];
+
+    </script>
+<script src="../../../../js/base.js"></script>
+<script src="../../../../js/google_analytics.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+<script src="https://www.googletagmanager.com/gtag/js?id=G-3F4LHCTF88"></script>
+</meta></head>
+<body>
+<script>
+if (is_top_frame) { $('body').addClass('wm-top-page'); }
+</script>
+<div class="container-fluid wm-page-content">
+<a name="_top"></a>
+<div aria-label="navigation" class="row wm-article-nav-buttons" role="navigation">
+<div class="wm-article-nav pull-right">
+<a class="btn btn-xs btn-default pull-right" href="../0603/">
+        Next
+        <i aria-hidden="true" class="fa fa-chevron-right"></i>
+</a>
+<a class="btn btn-xs btn-link" href="../0603/">
+        Active/Inactive 상태의 의미와 활용
+      </a>
+</div>
+<div class="wm-article-nav">
+<a class="btn btn-xs btn-default pull-left" href="../0601/">
+<i aria-hidden="true" class="fa fa-chevron-left"></i>
+        Previous</a><a class="btn btn-xs btn-link" href="../0601/">
+        생명주기 노드의 개념 및 상태
+      </a>
+</div>
+</div>
+<p>ROS2 생명주기 노드(Lifecycle Node)는 각 상태에서 노드의 행동을 보다 명확하게 정의하고 관리할 수 있도록 돕는다. 생명주기 노드는 크게 다음과 같은 상태(State)로 구분된다.</p>
+<ul>
+<li><strong>Unconfigured</strong></li>
+<li><strong>Inactive</strong></li>
+<li><strong>Active</strong></li>
+<li><strong>Finalized</strong></li>
+</ul>
+<p>각 상태는 그에 대응하는 노드의 동작을 정의하며, 상태 전환(State Transition)을 통해 노드는 각 상태 간을 이동할 수 있다. 상태 전환은 ROS2의 특정 서비스 호출을 통해 이루어지며, 각 전환 시 추가적인 논리를 구현할 수 있다.</p>
+<h4 id="unconfigured">Unconfigured 상태</h4>
+<p>노드가 처음 생성되면, 노드는 <strong>Unconfigured</strong> 상태에 위치한다. 이 상태에서는 아직 노드가 초기화되지 않았으며, 실제 기능은 수행되지 않는다. 기본적으로 노드는 이 상태에서 설정 데이터를 로드하고 초기 자원을 할당할 수 있다. </p>
+<pre><code class="language-cpp">void on_configure()
+{
+  // 노드의 설정과 초기화 코드
+  // 예: 센서 데이터 읽기, 파일 시스템 접근 등
+}
+</code></pre>
+<h4 id="inactive">Inactive 상태</h4>
+<p>노드가 <strong>Unconfigured</strong> 상태에서 <strong>Inactive</strong> 상태로 전환될 때는 노드의 자원들은 설정되어 있으나, 실질적인 작업은 수행되지 않는다. <strong>Inactive</strong> 상태에서는 토픽 퍼블리싱이나 서브스크라이빙 등의 작업이 멈추며, 서비스를 위한 준비만 완료된 상태이다.</p>
+<pre><code class="language-cpp">void on_cleanup()
+{
+  // 노드의 초기화 자원 해제, 설정값 리셋 코드
+  // 예: 메모리 정리, 네트워크 연결 해제 등
+}
+</code></pre>
+<h4 id="_1">상태 전환의 수학적 모델링</h4>
+<p>상태 전환을 수학적으로 모델링하면, 각 상태는 <strong>상태 행렬</strong>로 표현할 수 있고, 상태 간의 전환은 <strong>전이 행렬</strong>로 나타낼 수 있다. 이를 상태 공간 표현으로 정의하면 다음과 같다:</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+\mathbf{x}(t+1) = \mathbf{A} \mathbf{x}(t) + \mathbf{B} \mathbf{u}(t)
+</div>
+<script type="math/tex; mode=display">
+\mathbf{x}(t+1) = \mathbf{A} \mathbf{x}(t) + \mathbf{B} \mathbf{u}(t)
+</script>
+</div>
+<p>여기서,<br/>
+- <span class="arithmatex"><span class="MathJax_Preview">\mathbf{x}(t)</span><script type="math/tex">\mathbf{x}(t)</script></span>는 현재 상태 벡터,<br/>
+- <span class="arithmatex"><span class="MathJax_Preview">\mathbf{A}</span><script type="math/tex">\mathbf{A}</script></span>는 상태 전이 행렬,<br/>
+- <span class="arithmatex"><span class="MathJax_Preview">\mathbf{B}</span><script type="math/tex">\mathbf{B}</script></span>는 입력에 따른 상태 변화 행렬,<br/>
+- <span class="arithmatex"><span class="MathJax_Preview">\mathbf{u}(t)</span><script type="math/tex">\mathbf{u}(t)</script></span>는 입력 벡터를 의미한다.</p>
+<p>노드의 상태 전환은 이 상태 공간 모델을 통해 관리할 수 있으며, 주기적으로 상태가 업데이트된다. 상태 전이 행렬 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{A}</span><script type="math/tex">\mathbf{A}</script></span>는 특정 이벤트에 의해 변경되며, 각 상태에서 실행되는 동작은 입력 벡터 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{u}(t)</span><script type="math/tex">\mathbf{u}(t)</script></span>에 의존한다.</p>
+<h4 id="_2">상태 전환 조건</h4>
+<p>상태 전환은 특정 조건을 만족해야만 수행된다. 예를 들어, 노드가 <strong>Unconfigured</strong> 상태에서 <strong>Inactive</strong> 상태로 전환되기 위해서는 설정 작업이 완료되어야 한다. 수식으로는 다음과 같이 표현할 수 있다:</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+\mathbf{x}_{\text{Inactive}} = \mathbf{f}(\mathbf{x}_{\text{Unconfigured}}, \mathbf{u})
+</div>
+<script type="math/tex; mode=display">
+\mathbf{x}_{\text{Inactive}} = \mathbf{f}(\mathbf{x}_{\text{Unconfigured}}, \mathbf{u})
+</script>
+</div>
+<p>여기서, <span class="arithmatex"><span class="MathJax_Preview">\mathbf{f}</span><script type="math/tex">\mathbf{f}</script></span>는 상태 전환을 결정하는 함수이며, 입력 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{u}</span><script type="math/tex">\mathbf{u}</script></span>는 전환을 발생시키는 이벤트다.</p>
+<h4 id="active">Active 상태</h4>
+<p>노드가 <strong>Inactive</strong> 상태에서 <strong>Active</strong> 상태로 전환되면, 노드는 본격적으로 기능을 수행할 수 있게 된다. 이 상태에서는 토픽 퍼블리셔 및 서브스크라이버가 활성화되고, 서비스 호출을 처리할 수 있다. <strong>Active</strong> 상태는 노드가 작업을 수행할 준비가 완전히 된 상태를 의미한다. 이 상태에서는 실시간 데이터 처리나 네트워크 통신 등의 주요 기능이 실행된다.</p>
+<pre><code class="language-cpp">void on_activate()
+{
+  // 노드 활성화 시의 작업
+  // 예: 퍼블리셔와 서브스크라이버의 활성화
+}
+</code></pre>
+<p>이전 상태들과 마찬가지로, <strong>Active</strong> 상태로의 전환도 수학적으로 모델링할 수 있다. <strong>Inactive</strong> 상태에서 <strong>Active</strong> 상태로의 전환은 다음과 같이 표현할 수 있다:</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+\mathbf{x}_{\text{Active}} = \mathbf{g}(\mathbf{x}_{\text{Inactive}}, \mathbf{v})
+</div>
+<script type="math/tex; mode=display">
+\mathbf{x}_{\text{Active}} = \mathbf{g}(\mathbf{x}_{\text{Inactive}}, \mathbf{v})
+</script>
+</div>
+<p>여기서, <span class="arithmatex"><span class="MathJax_Preview">\mathbf{g}</span><script type="math/tex">\mathbf{g}</script></span>는 <strong>Inactive</strong>에서 <strong>Active</strong> 상태로 전환하는 함수이고, <span class="arithmatex"><span class="MathJax_Preview">\mathbf{v}</span><script type="math/tex">\mathbf{v}</script></span>는 전환에 필요한 추가 조건 또는 입력 값이다. 이 수식은 <strong>Inactive</strong> 상태에서 모든 준비가 완료되었을 때에만 <strong>Active</strong> 상태로 전환됨을 의미한다.</p>
+<h4 id="finalized">Finalized 상태</h4>
+<p><strong>Finalized</strong> 상태는 노드가 더 이상 사용되지 않을 때, 즉 모든 작업이 완료되고 종료되었을 때 도달하는 상태이다. 이 상태에서는 더 이상의 연산이나 데이터 처리가 이루어지지 않으며, 자원이 해제된다. <strong>Finalized</strong> 상태는 일반적으로 노드가 삭제되기 전에 호출된다.</p>
+<pre><code class="language-cpp">void on_shutdown()
+{
+  // 노드 종료 시 실행되는 작업
+  // 예: 퍼블리셔 비활성화, 메모리 해제 등
+}
+</code></pre>
+<h4 id="_3">상태 전환 다이어그램</h4>
+<p>생명주기 노드의 상태 전환을 시각화하면 다음과 같은 전이 다이어그램을 그릴 수 있다:</p>
+<div class="mermaid">graph LR
+Unconfigured --&gt; Inactive --&gt; Active --&gt; Finalized
+</div>
+<p>상태 간의 전환은 트리거 이벤트에 따라 발생하며, 각 전환 시 마다 특정 작업이 실행된다. 각 상태에서의 작업은 주로 자원의 할당 및 해제, 통신의 활성화 및 비활성화로 요약될 수 있다.</p>
+<h4 id="ros2">상태 전환과 ROS2 서비스</h4>
+<p>상태 전환은 ROS2의 서비스 호출로 이루어진다. 각 상태 전환 서비스는 다음과 같다:</p>
+<ul>
+<li><strong>configure()</strong>: <strong>Unconfigured</strong> 상태에서 <strong>Inactive</strong> 상태로 전환</li>
+<li><strong>activate()</strong>: <strong>Inactive</strong> 상태에서 <strong>Active</strong> 상태로 전환</li>
+<li><strong>deactivate()</strong>: <strong>Active</strong> 상태에서 <strong>Inactive</strong> 상태로 전환</li>
+<li><strong>cleanup()</strong>: <strong>Inactive</strong> 상태에서 <strong>Unconfigured</strong> 상태로 전환</li>
+<li><strong>shutdown()</strong>: 모든 상태에서 <strong>Finalized</strong> 상태로 전환</li>
+</ul>
+<p>이 서비스 호출을 통해 각 상태 전환은 명시적으로 수행되며, 각 상태의 자원 관리는 서비스 호출 시 이루어진다.</p>
+<h4 id="_4">상태 전환과 이벤트 핸들링</h4>
+<p>상태 전환은 또한 이벤트 기반으로 트리거될 수 있다. 예를 들어, 특정 메시지를 수신하거나 타이머 이벤트가 발생할 때 상태 전환이 이루어질 수 있다. 상태 전환 이벤트는 다음과 같은 구조로 처리할 수 있다:</p>
+<pre><code class="language-cpp">void on_event_trigger()
+{
+  // 특정 이벤트에 대한 상태 전환 로직
+  if (event == 특정 조건)
+  {
+    // 상태 전환 수행
+    transition_to_active();
+  }
+}
+</code></pre>
+<p>이를 통해 노드는 상태 전환 조건을 세밀하게 제어할 수 있으며, 특정 조건이 충족되었을 때만 상태가 변경되도록 할 수 있다.</p>
+<br/>
+<div aria-label="navigation" class="row wm-article-nav-buttons" role="navigation">
+<div class="wm-article-nav pull-right">
+<a class="btn btn-xs btn-default pull-right" href="../0603/">
+        Next
+        <i aria-hidden="true" class="fa fa-chevron-right"></i>
+</a>
+<a class="btn btn-xs btn-link" href="../0603/">
+        Active/Inactive 상태의 의미와 활용
+      </a>
+</div>
+<div class="wm-article-nav">
+<a class="btn btn-xs btn-default pull-left" href="../0601/">
+<i aria-hidden="true" class="fa fa-chevron-left"></i>
+        Previous</a><a class="btn btn-xs btn-link" href="../0601/">
+        생명주기 노드의 개념 및 상태
+      </a>
+</div>
+</div>
+<br/>
+</div>
+<footer class="container-fluid wm-page-content">
+<p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a> using <a href="https://github.com/gristlabs/mkdocs-windmill">Windmill</a> theme by Grist Labs.</p>
+</footer>
+<script type="module">import mermaid from "https://unpkg.com/mermaid@10.4.0/dist/mermaid.esm.min.mjs";
+mermaid.initialize({});</script></body>
+</html>
