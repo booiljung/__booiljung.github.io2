@@ -105,7 +105,7 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 <p>여기서,
 - <span class="arithmatex"><span class="MathJax_Preview">\mathbf{F}_k</span><script type="math/tex">\mathbf{F}_k</script></span>는 상태 전이 행렬로, 시스템의 현재 상태가 다음 상태로 어떻게 전이되는지를 나타낸다.
 - <span class="arithmatex"><span class="MathJax_Preview">\mathbf{B}_k</span><script type="math/tex">\mathbf{B}_k</script></span>는 입력 제어 행렬로, 외부 입력 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{u}_k</span><script type="math/tex">\mathbf{u}_k</script></span>가 시스템에 미치는 영향을 나타낸다.
-- <span class="arithmatex"><span class="MathJax_Preview">\mathbf{w}_k</span><script type="math/tex">\mathbf{w}_k</script></span>는 프로세스 잡음 벡터로, 시스템 모델이 갖는 불확실성이나 외부 간섭을 나타낸다.</p>
+- <span class="arithmatex"><span class="MathJax_Preview">\mathbf{w}_k</span><script type="math/tex">\mathbf{w}_k</script></span>는 시스템 노이즈 벡터로, 시스템 모델이 갖는 불확실성이나 외부 간섭을 나타낸다.</p>
 <p>예를 들어, 만약 시스템이 일정한 가속도를 가지고 움직이는 경우, 상태 전이 행렬 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{F}_k</span><script type="math/tex">\mathbf{F}_k</script></span>는 다음과 같이 정의될 수 있다:</p>
 <p>$$</p>
 <p>\mathbf{F}_k = \begin{bmatrix}
@@ -137,14 +137,14 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 <p>$$</p>
 <p>이는 위치 정보만 측정된다는 가정을 반영한 것이다. 측정 벡터 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{z}_k</span><script type="math/tex">\mathbf{z}_k</script></span>는 실제로 센서를 통해 얻은 <span class="arithmatex"><span class="MathJax_Preview">x, y, z</span><script type="math/tex">x, y, z</script></span> 좌표를 나타낸다.</p>
 <h3 id="_4">잡음 모델링</h3>
-<p>시스템 모델링의 마지막 단계는 시스템과 측정의 잡음(noise)을 모델링하는 것이다. 잡음은 시스템의 불확실성과 센서 측정의 불확실성을 포함하며, 이는 프로세스 잡음 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{w}_k</span><script type="math/tex">\mathbf{w}_k</script></span>와 측정 잡음 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{v}_k</span><script type="math/tex">\mathbf{v}_k</script></span>로 각각 표현된다.</p>
+<p>시스템 모델링의 마지막 단계는 시스템과 측정의 잡음(noise)을 모델링하는 것이다. 잡음은 시스템의 불확실성과 센서 측정의 불확실성을 포함하며, 이는 시스템 노이즈 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{w}_k</span><script type="math/tex">\mathbf{w}_k</script></span>와 측정 잡음 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{v}_k</span><script type="math/tex">\mathbf{v}_k</script></span>로 각각 표현된다.</p>
 <ul>
-<li>프로세스 잡음 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{w}_k</span><script type="math/tex">\mathbf{w}_k</script></span>: 시스템의 동적 모델에서 발생하는 불확실성을 나타내며, 보통 가우시안 분포를 가진다고 가정한다.</li>
+<li>시스템 노이즈 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{w}_k</span><script type="math/tex">\mathbf{w}_k</script></span>: 시스템의 동적 모델에서 발생하는 불확실성을 나타내며, 보통 가우시안 분포를 가진다고 가정한다.</li>
 </ul>
 <p>$$</p>
 <p>\mathbf{w}_k \sim \mathcal{N}(0, \mathbf{Q}_k)</p>
 <p>$$</p>
-<p>여기서 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{Q}_k</span><script type="math/tex">\mathbf{Q}_k</script></span>는 프로세스 잡음의 공분산 행렬이다.</p>
+<p>여기서 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{Q}_k</span><script type="math/tex">\mathbf{Q}_k</script></span>는 시스템 노이즈의 공분산 행렬이다.</p>
 <ul>
 <li>측정 잡음 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{v}_k</span><script type="math/tex">\mathbf{v}_k</script></span>: 센서의 측정 오차를 나타내며, 이 또한 가우시안 분포를 가진다고 가정한다.</li>
 </ul>

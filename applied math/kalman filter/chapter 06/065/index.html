@@ -172,7 +172,7 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 \mathbf{x}_{k+1} = \mathbf{A} \mathbf{x}_k + \mathbf{B} \mathbf{u}_k + \mathbf{w}_k
 </script>
 </div>
-<p>여기서 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{A}</span><script type="math/tex">\mathbf{A}</script></span>는 시스템 행렬, <span class="arithmatex"><span class="MathJax_Preview">\mathbf{B}</span><script type="math/tex">\mathbf{B}</script></span>는 제어 입력 행렬, <span class="arithmatex"><span class="MathJax_Preview">\mathbf{u}_k</span><script type="math/tex">\mathbf{u}_k</script></span>는 제어 입력, <span class="arithmatex"><span class="MathJax_Preview">\mathbf{w}_k</span><script type="math/tex">\mathbf{w}_k</script></span>는 시스템 잡음을 나타낸다.</p>
+<p>여기서 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{A}</span><script type="math/tex">\mathbf{A}</script></span>는 시스템 행렬, <span class="arithmatex"><span class="MathJax_Preview">\mathbf{B}</span><script type="math/tex">\mathbf{B}</script></span>는 제어 입력 행렬, <span class="arithmatex"><span class="MathJax_Preview">\mathbf{u}_k</span><script type="math/tex">\mathbf{u}_k</script></span>는 제어 입력, <span class="arithmatex"><span class="MathJax_Preview">\mathbf{w}_k</span><script type="math/tex">\mathbf{w}_k</script></span>는 시스템 노이즈을 나타낸다.</p>
 <h4 id="_2">측정 모델</h4>
 <p>비디오 프레임에서 객체의 위치를 관측하여 측정 벡터 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{z}_k</span><script type="math/tex">\mathbf{z}_k</script></span>를 얻는다. 이는 다음과 같은 측정 모델로 표현할 수 있다:</p>
 <div class="arithmatex">
@@ -293,7 +293,7 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 \mathbf{x}_k = \mathbf{A} \mathbf{x}_{k-1} + \mathbf{w}_k
 </script>
 </div>
-<p>여기서 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{x}_k</span><script type="math/tex">\mathbf{x}_k</script></span>는 프레임 <span class="arithmatex"><span class="MathJax_Preview">k</span><script type="math/tex">k</script></span>에서의 분할 경계를 나타내며, <span class="arithmatex"><span class="MathJax_Preview">\mathbf{w}_k</span><script type="math/tex">\mathbf{w}_k</script></span>는 시스템 잡음이다. 칼만 필터는 이전 프레임에서 얻은 정보를 바탕으로 현재 프레임에서의 분할 경계를 예측하고, 새로운 측정값으로 갱신한다.</p>
+<p>여기서 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{x}_k</span><script type="math/tex">\mathbf{x}_k</script></span>는 프레임 <span class="arithmatex"><span class="MathJax_Preview">k</span><script type="math/tex">k</script></span>에서의 분할 경계를 나타내며, <span class="arithmatex"><span class="MathJax_Preview">\mathbf{w}_k</span><script type="math/tex">\mathbf{w}_k</script></span>는 시스템 노이즈이다. 칼만 필터는 이전 프레임에서 얻은 정보를 바탕으로 현재 프레임에서의 분할 경계를 예측하고, 새로운 측정값으로 갱신한다.</p>
 <h4 id="_25">경계 추정의 개선</h4>
 <p>이 과정은 객체의 경계 추정이 시간에 따라 변화하는 상황에서 특히 유용하다. 예를 들어, 움직이는 객체의 경우, 칼만 필터는 객체의 경계를 추정하여 분할의 정확도를 높이는 데 기여할 수 있다. 이는 객체 인식, 추적, 그리고 인식된 객체의 정확한 모양을 유지하는 데 중요한 역할을 한다.</p>
 <h3 id="_26">칼만 필터의 성능 평가 및 최적화</h3>

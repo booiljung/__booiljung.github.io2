@@ -63,7 +63,7 @@
           {title: "\uce7c\ub9cc \ud544\ud130\uc758 \ucd08\uae30\ud654\uc640 \ud2b8\ub798\ud0b9 \uc131\ub2a5", url: "#_17", children: [
           ]},
           {title: "\uce7c\ub9cc \ud544\ud130\uc758 \uc870\uc815 \ubc0f \ud29c\ub2dd", url: "#_18", children: [
-              {title: "\ud504\ub85c\uc138\uc2a4 \ub178\uc774\uc988 \uacf5\ubd84\uc0b0 \\mathbf{Q}_k\\mathbf{Q}_k\uc758 \uc870\uc815", url: "#mathbfq_kmathbfq_k" },
+              {title: "\uc2dc\uc2a4\ud15c \ub178\uc774\uc988 \uacf5\ubd84\uc0b0 \\mathbf{Q}_k\\mathbf{Q}_k\uc758 \uc870\uc815", url: "#mathbfq_kmathbfq_k" },
               {title: "\uce21\uc815 \ub178\uc774\uc988 \uacf5\ubd84\uc0b0 \\mathbf{R}_k\\mathbf{R}_k\uc758 \uc870\uc815", url: "#mathbfr_kmathbfr_k" },
           ]},
           {title: "\uce7c\ub9cc \ud544\ud130\uc758 \uc131\ub2a5 \ud3c9\uac00", url: "#_19", children: [
@@ -143,7 +143,7 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 - <span class="arithmatex"><span class="MathJax_Preview">\mathbf{F}_k</span><script type="math/tex">\mathbf{F}_k</script></span>는 상태 전이 행렬(State Transition Matrix)이다.
 - <span class="arithmatex"><span class="MathJax_Preview">\mathbf{B}_k</span><script type="math/tex">\mathbf{B}_k</script></span>는 제어 입력 행렬(Control Input Matrix)이다.
 - <span class="arithmatex"><span class="MathJax_Preview">\mathbf{u}_k</span><script type="math/tex">\mathbf{u}_k</script></span>는 제어 입력 벡터(Control Input Vector)이다.
-- <span class="arithmatex"><span class="MathJax_Preview">\mathbf{w}_k</span><script type="math/tex">\mathbf{w}_k</script></span>는 프로세스 노이즈(Process Noise)로, 가우시안 분포 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{w}_k \sim \mathcal{N}(0, \mathbf{Q}_k)</span><script type="math/tex">\mathbf{w}_k \sim \mathcal{N}(0, \mathbf{Q}_k)</script></span>를 따른다.</p>
+- <span class="arithmatex"><span class="MathJax_Preview">\mathbf{w}_k</span><script type="math/tex">\mathbf{w}_k</script></span>는 시스템 노이즈(Process Noise)로, 가우시안 분포 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{w}_k \sim \mathcal{N}(0, \mathbf{Q}_k)</span><script type="math/tex">\mathbf{w}_k \sim \mathcal{N}(0, \mathbf{Q}_k)</script></span>를 따른다.</p>
 <p>상태 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{x}_k</span><script type="math/tex">\mathbf{x}_k</script></span>의 예측은 이전 상태 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{\hat{x}}_{k-1}</span><script type="math/tex">\mathbf{\hat{x}}_{k-1}</script></span>와 상태 전이 행렬 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{F}_k</span><script type="math/tex">\mathbf{F}_k</script></span>를 이용해 이루어진다:</p>
 <div class="arithmatex">
 <div class="MathJax_Preview">
@@ -351,7 +351,7 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 <p>칼만 필터는 시스템 노이즈 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{w}_k</span><script type="math/tex">\mathbf{w}_k</script></span>와 측정 노이즈 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{v}_k</span><script type="math/tex">\mathbf{v}_k</script></span>가 가우시안 분포를 따른다고 가정한다. 이때, 노이즈의 공분산 행렬 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{Q}_k</span><script type="math/tex">\mathbf{Q}_k</script></span>와 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{R}_k</span><script type="math/tex">\mathbf{R}_k</script></span>는 필터의 성능에 직접적인 영향을 미친다.</p>
 <ul>
 <li>
-<p><strong>프로세스 노이즈 공분산 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{Q}_k</span><script type="math/tex">\mathbf{Q}_k</script></span></strong>: 시스템 상태의 예측 과정에서 발생하는 불확실성을 나타낸다. 만약 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{Q}_k</span><script type="math/tex">\mathbf{Q}_k</script></span>가 매우 크다면, 시스템 모델에 대한 신뢰도가 낮아지며, 필터는 관측 데이터에 더 많은 가중치를 부여하게 된다.</p>
+<p><strong>시스템 노이즈 공분산 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{Q}_k</span><script type="math/tex">\mathbf{Q}_k</script></span></strong>: 시스템 상태의 예측 과정에서 발생하는 불확실성을 나타낸다. 만약 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{Q}_k</span><script type="math/tex">\mathbf{Q}_k</script></span>가 매우 크다면, 시스템 모델에 대한 신뢰도가 낮아지며, 필터는 관측 데이터에 더 많은 가중치를 부여하게 된다.</p>
 </li>
 <li>
 <p><strong>측정 노이즈 공분산 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{R}_k</span><script type="math/tex">\mathbf{R}_k</script></span></strong>: 관측 과정에서 발생하는 불확실성을 나타낸다. 만약 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{R}_k</span><script type="math/tex">\mathbf{R}_k</script></span>가 매우 크다면, 측정 데이터의 신뢰도가 낮아지며, 필터는 시스템 모델에 더 많은 신뢰를 두게 된다.</p>
@@ -370,9 +370,9 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 </ul>
 <p>필터가 트래킹해야 하는 대상의 동적 특성에 맞추어 초기화를 잘 수행하는 것이 중요하며, 초기화가 잘못될 경우 필터는 안정적으로 동작하지 않을 수 있다.</p>
 <h3 id="_18">칼만 필터의 조정 및 튜닝</h3>
-<p>칼만 필터를 실제 시스템에 적용할 때, 필터의 성능을 최적화하기 위해서는 여러 가지 매개변수의 조정 및 튜닝이 필요하다. 특히, 프로세스 노이즈 공분산 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{Q}_k</span><script type="math/tex">\mathbf{Q}_k</script></span>와 측정 노이즈 공분산 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{R}_k</span><script type="math/tex">\mathbf{R}_k</script></span>의 설정이 필터의 추정 성능에 큰 영향을 미친다.</p>
-<h4 id="mathbfq_kmathbfq_k">프로세스 노이즈 공분산 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{Q}_k</span><script type="math/tex">\mathbf{Q}_k</script></span>의 조정</h4>
-<p>프로세스 노이즈 공분산 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{Q}_k</span><script type="math/tex">\mathbf{Q}_k</script></span>는 시스템 모델이 실제 시스템 동작을 얼마나 잘 표현하고 있는지에 대한 불확실성을 나타낸다. <span class="arithmatex"><span class="MathJax_Preview">\mathbf{Q}_k</span><script type="math/tex">\mathbf{Q}_k</script></span>의 크기는 다음과 같은 방법으로 조정할 수 있다:</p>
+<p>칼만 필터를 실제 시스템에 적용할 때, 필터의 성능을 최적화하기 위해서는 여러 가지 매개변수의 조정 및 튜닝이 필요하다. 특히, 시스템 노이즈 공분산 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{Q}_k</span><script type="math/tex">\mathbf{Q}_k</script></span>와 측정 노이즈 공분산 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{R}_k</span><script type="math/tex">\mathbf{R}_k</script></span>의 설정이 필터의 추정 성능에 큰 영향을 미친다.</p>
+<h4 id="mathbfq_kmathbfq_k">시스템 노이즈 공분산 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{Q}_k</span><script type="math/tex">\mathbf{Q}_k</script></span>의 조정</h4>
+<p>시스템 노이즈 공분산 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{Q}_k</span><script type="math/tex">\mathbf{Q}_k</script></span>는 시스템 모델이 실제 시스템 동작을 얼마나 잘 표현하고 있는지에 대한 불확실성을 나타낸다. <span class="arithmatex"><span class="MathJax_Preview">\mathbf{Q}_k</span><script type="math/tex">\mathbf{Q}_k</script></span>의 크기는 다음과 같은 방법으로 조정할 수 있다:</p>
 <ul>
 <li>
 <p><strong>실험적 조정</strong>: 시스템의 실제 데이터를 사용하여 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{Q}_k</span><script type="math/tex">\mathbf{Q}_k</script></span>를 실험적으로 조정하는 방법이다. 이 방법은 데이터에 대한 접근이 가능할 때 효과적이며, 필터의 동작을 관찰하면서 최적의 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{Q}_k</span><script type="math/tex">\mathbf{Q}_k</script></span> 값을 찾는다.</p>

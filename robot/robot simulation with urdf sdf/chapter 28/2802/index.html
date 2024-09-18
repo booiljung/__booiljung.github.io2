@@ -131,7 +131,7 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 - <span class="arithmatex"><span class="MathJax_Preview">\mathbf{A}</span><script type="math/tex">\mathbf{A}</script></span>는 상태 전이 행렬 (state transition matrix),
 - <span class="arithmatex"><span class="MathJax_Preview">\mathbf{B}</span><script type="math/tex">\mathbf{B}</script></span>는 제어 입력 행렬 (control input matrix),
 - <span class="arithmatex"><span class="MathJax_Preview">\mathbf{u}_k</span><script type="math/tex">\mathbf{u}_k</script></span>는 제어 입력 (control input),
-- <span class="arithmatex"><span class="MathJax_Preview">\mathbf{w}_k</span><script type="math/tex">\mathbf{w}_k</script></span>는 프로세스 잡음 (process noise)이다.</p>
+- <span class="arithmatex"><span class="MathJax_Preview">\mathbf{w}_k</span><script type="math/tex">\mathbf{w}_k</script></span>는 시스템 노이즈 (process noise)이다.</p>
 <p>측정된 센서 데이터 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{z}_k</span><script type="math/tex">\mathbf{z}_k</script></span>는 측정 방정식으로 나타낼 수 있다.</p>
 <div class="arithmatex">
 <div class="MathJax_Preview">
@@ -318,7 +318,7 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 </script>
 </div>
 <ul>
-<li><span class="arithmatex"><span class="MathJax_Preview">\mathbf{Q}_k</span><script type="math/tex">\mathbf{Q}_k</script></span>는 프로세스 잡음 공분산 행렬이다.</li>
+<li><span class="arithmatex"><span class="MathJax_Preview">\mathbf{Q}_k</span><script type="math/tex">\mathbf{Q}_k</script></span>는 시스템 노이즈 공분산 행렬이다.</li>
 </ul>
 <h4 id="b">b. 업데이트 단계</h4>
 <p>예측된 상태가 센서 측정값과 비교되며, 이를 통해 상태를 보정한다. 센서 측정값은 다음과 같은 비선형 측정 방정식을 통해 얻어진다.</p>

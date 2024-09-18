@@ -11,7 +11,7 @@
     <link rel="canonical" href="https://booiljung.github.io/applied%20math/kalman%20filter/chapter%2011%20examples/02%202%EC%B0%A8%EC%9B%90%20%EC%B4%88%EA%B8%B0%20%EC%9C%84%EC%B9%98%20%EB%B0%A9%ED%96%A5%20%EC%95%8C%EA%B3%A0%20%EC%86%8D%EB%8F%84%20%EC%9E%85%EB%A0%A5%20%EC%9C%84%EC%B9%98%20%EC%B6%94%EC%A0%95/06%20%ED%94%84%EB%A1%9C%EC%84%B8%EC%8A%A4%20%EB%85%B8%EC%9D%B4%EC%A6%88%20w/">
     <link rel="shortcut icon" href="../../../../../img/favicon.ico">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
-    <title>프로세스 잡음 w - 실험 도서관</title>
+    <title>시스템 노이즈 w - 실험 도서관</title>
     <link href="../../../../../css/bootstrap-3.3.7.min.css" rel="stylesheet">
     <link href="../../../../../css/font-awesome-4.7.0.css" rel="stylesheet">
     <link href="../../../../../css/base.css" rel="stylesheet">
@@ -33,8 +33,8 @@
       var is_top_frame = false;
         
         var pageToc = [
-          {title: "\ud504\ub85c\uc138\uc2a4 \uc7a1\uc74c \\mathbf{w}_k\\mathbf{w}_k", url: "#_top", children: [
-              {title: "\ud504\ub85c\uc138\uc2a4 \uc7a1\uc74c\uc758 \ubaa8\ub378\ub9c1", url: "#_1" },
+          {title: "\uc2dc\uc2a4\ud15c \ub178\uc774\uc988 \\mathbf{w}_k\\mathbf{w}_k", url: "#_top", children: [
+              {title: "\uc2dc\uc2a4\ud15c \ub178\uc774\uc988\uc758 \ubaa8\ub378\ub9c1", url: "#_1" },
           ]},
         ];
 
@@ -85,8 +85,8 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 
     
 
-    <h2 id="mathbfw_kmathbfw_k">프로세스 잡음 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{w}_k</span><script type="math/tex">\mathbf{w}_k</script></span></h2>
-<p>프로세스 잡음 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{w}_k</span><script type="math/tex">\mathbf{w}_k</script></span>는 시스템의 동적 모델에서 발생하는 불확실성을 나타내며, 보통 가우시안 분포를 따르는 랜덤 벡터로 가정된다. 이 프로세스 잡음은 상태 벡터에 추가적인 랜덤 변화를 도입하여 현실적인 시스템의 변동성을 반영하는 역할을 한다. 칼만 필터에서 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{w}_k</span><script type="math/tex">\mathbf{w}_k</script></span>는 평균이 0이고, 공분산 행렬 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{Q}_k</span><script type="math/tex">\mathbf{Q}_k</script></span>를 가지는 가우시안 잡음으로 가정된다:</p>
+    <h2 id="mathbfw_kmathbfw_k">시스템 노이즈 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{w}_k</span><script type="math/tex">\mathbf{w}_k</script></span></h2>
+<p>시스템 노이즈 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{w}_k</span><script type="math/tex">\mathbf{w}_k</script></span>는 시스템의 동적 모델에서 발생하는 불확실성을 나타내며, 보통 가우시안 분포를 따르는 랜덤 벡터로 가정된다. 이 시스템 노이즈은 상태 벡터에 추가적인 랜덤 변화를 도입하여 현실적인 시스템의 변동성을 반영하는 역할을 한다. 칼만 필터에서 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{w}_k</span><script type="math/tex">\mathbf{w}_k</script></span>는 평균이 0이고, 공분산 행렬 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{Q}_k</span><script type="math/tex">\mathbf{Q}_k</script></span>를 가지는 가우시안 잡음으로 가정된다:</p>
 <div class="arithmatex">
 <div class="MathJax_Preview">
 \mathbf{w}_k \sim \mathcal{N}(\mathbf{0}, \mathbf{Q}_k)
@@ -95,10 +95,10 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 \mathbf{w}_k \sim \mathcal{N}(\mathbf{0}, \mathbf{Q}_k)
 </script>
 </div>
-<h3 id="_1">프로세스 잡음의 모델링</h3>
+<h3 id="_1">시스템 노이즈의 모델링</h3>
 <ol>
 <li><strong>가정 설정:</strong>
-   프로세스 잡음 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{w}_k</span><script type="math/tex">\mathbf{w}_k</script></span>는 일반적으로 시스템이 완벽하게 예측할 수 없는 외부 요인이나 내부의 불확실성을 반영하기 위해 도입된다. 예를 들어, 2차원 위치 추정 문제에서는 다음과 같은 요인들이 포함될 수 있다:</li>
+   시스템 노이즈 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{w}_k</span><script type="math/tex">\mathbf{w}_k</script></span>는 일반적으로 시스템이 완벽하게 예측할 수 없는 외부 요인이나 내부의 불확실성을 반영하기 위해 도입된다. 예를 들어, 2차원 위치 추정 문제에서는 다음과 같은 요인들이 포함될 수 있다:</li>
 <li>센서의 드리프트</li>
 <li>외부 환경의 변동 (예: 바람, 도로 상태)</li>
 <li>
@@ -106,7 +106,7 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 </li>
 <li>
 <p><strong>공분산 행렬 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{Q}_k</span><script type="math/tex">\mathbf{Q}_k</script></span>:</strong>
-   프로세스 잡음 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{w}_k</span><script type="math/tex">\mathbf{w}_k</script></span>의 크기와 상관 관계는 공분산 행렬 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{Q}_k</span><script type="math/tex">\mathbf{Q}_k</script></span>로 결정된다. 이 행렬 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{Q}_k</span><script type="math/tex">\mathbf{Q}_k</script></span>는 보통 다음과 같은 형태를 가진다:</p>
+   시스템 노이즈 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{w}_k</span><script type="math/tex">\mathbf{w}_k</script></span>의 크기와 상관 관계는 공분산 행렬 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{Q}_k</span><script type="math/tex">\mathbf{Q}_k</script></span>로 결정된다. 이 행렬 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{Q}_k</span><script type="math/tex">\mathbf{Q}_k</script></span>는 보통 다음과 같은 형태를 가진다:</p>
 </li>
 </ol>
 <p>$$
@@ -120,7 +120,7 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 <p>여기서 <span class="arithmatex"><span class="MathJax_Preview">\sigma_x^2</span><script type="math/tex">\sigma_x^2</script></span>, <span class="arithmatex"><span class="MathJax_Preview">\sigma_y^2</span><script type="math/tex">\sigma_y^2</script></span>, <span class="arithmatex"><span class="MathJax_Preview">\sigma_\theta^2</span><script type="math/tex">\sigma_\theta^2</script></span>, <span class="arithmatex"><span class="MathJax_Preview">\sigma_v^2</span><script type="math/tex">\sigma_v^2</script></span>는 각각 상태 변수 <span class="arithmatex"><span class="MathJax_Preview">x</span><script type="math/tex">x</script></span>, <span class="arithmatex"><span class="MathJax_Preview">y</span><script type="math/tex">y</script></span>, <span class="arithmatex"><span class="MathJax_Preview">\theta</span><script type="math/tex">\theta</script></span>, <span class="arithmatex"><span class="MathJax_Preview">v</span><script type="math/tex">v</script></span>의 불확실성(즉, 잡음의 분산)을 나타낸다.</p>
 <ol>
 <li><strong>잡음 생성:</strong>
-   프로세스 잡음 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{w}_k</span><script type="math/tex">\mathbf{w}_k</script></span>는 매 시간 스텝 <span class="arithmatex"><span class="MathJax_Preview">k</span><script type="math/tex">k</script></span>마다 새로운 가우시안 랜덤 벡터로 생성된다. 이는 주로 난수 발생기(Random Number Generator, RNG)를 통해 생성되며, 각 상태 변수에 해당하는 분산 값에 따라 스케일링된다.</li>
+   시스템 노이즈 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{w}_k</span><script type="math/tex">\mathbf{w}_k</script></span>는 매 시간 스텝 <span class="arithmatex"><span class="MathJax_Preview">k</span><script type="math/tex">k</script></span>마다 새로운 가우시안 랜덤 벡터로 생성된다. 이는 주로 난수 발생기(Random Number Generator, RNG)를 통해 생성되며, 각 상태 변수에 해당하는 분산 값에 따라 스케일링된다.</li>
 </ol>
 <p>예를 들어, <span class="arithmatex"><span class="MathJax_Preview">x</span><script type="math/tex">x</script></span>와 <span class="arithmatex"><span class="MathJax_Preview">y</span><script type="math/tex">y</script></span> 위치에 대한 잡음 성분을 생성할 때, 다음과 같이 생성할 수 있다:</p>
 <p>$$
@@ -137,7 +137,7 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 <li><strong>시뮬레이션에서의 구현:</strong>
    실제 시뮬레이션에서는 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{w}_k</span><script type="math/tex">\mathbf{w}_k</script></span>를 난수 생성 라이브러리(예: Python의 <code>numpy.random.normal</code>)를 통해 매 시간 스텝마다 동적으로 생성한다. 이 값은 시스템 모델의 상태 전이 식에 추가되어 예측된 상태 벡터 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{x}_{k|k-1}</span><script type="math/tex">\mathbf{x}_{k|k-1}</script></span>를 계산하는 데 사용된다.</li>
 </ol>
-<p>이와 같이 프로세스 잡음 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{w}_k</span><script type="math/tex">\mathbf{w}_k</script></span>는 현실의 불확실성을 모델링하여 칼만 필터의 성능을 개선하고, 시스템이 보다 유연하고 정확한 상태 추정을 할 수 있도록 돕는다.</p>
+<p>이와 같이 시스템 노이즈 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{w}_k</span><script type="math/tex">\mathbf{w}_k</script></span>는 현실의 불확실성을 모델링하여 칼만 필터의 성능을 개선하고, 시스템이 보다 유연하고 정확한 상태 추정을 할 수 있도록 돕는다.</p>
 
   <br>
     

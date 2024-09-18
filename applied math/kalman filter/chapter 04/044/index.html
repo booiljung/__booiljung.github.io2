@@ -134,7 +134,7 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 <p>여기서:</p>
 <ul>
 <li><span class="arithmatex"><span class="MathJax_Preview">\mathbf{A}</span><script type="math/tex">\mathbf{A}</script></span>: 상태 전이 행렬</li>
-<li><span class="arithmatex"><span class="MathJax_Preview">\mathbf{Q}</span><script type="math/tex">\mathbf{Q}</script></span>: 프로세스 잡음 공분산 행렬</li>
+<li><span class="arithmatex"><span class="MathJax_Preview">\mathbf{Q}</span><script type="math/tex">\mathbf{Q}</script></span>: 시스템 노이즈 공분산 행렬</li>
 <li><span class="arithmatex"><span class="MathJax_Preview">\mathbf{C}</span><script type="math/tex">\mathbf{C}</script></span>: 측정 행렬</li>
 <li><span class="arithmatex"><span class="MathJax_Preview">\mathbf{R}</span><script type="math/tex">\mathbf{R}</script></span>: 측정 잡음 공분산 행렬</li>
 <li><span class="arithmatex"><span class="MathJax_Preview">\mathbf{P}_k</span><script type="math/tex">\mathbf{P}_k</script></span>: 시간 <span class="arithmatex"><span class="MathJax_Preview">k</span><script type="math/tex">k</script></span>에서의 추정 오차 공분산 행렬</li>
@@ -144,15 +144,15 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 <p>칼만 필터의 수렴성을 보장하기 위한 몇 가지 중요한 조건이 있다. 이 조건들은 시스템의 모델링 및 잡음 특성에 따라 달라지며, 다음과 같은 주요 조건들이 고려된다:</p>
 <ol>
 <li><strong>시스템의 제어 가능성 및 관측 가능성</strong>  </li>
-<li><strong>제어 가능성</strong>: 상태 전이 행렬 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{A}</span><script type="math/tex">\mathbf{A}</script></span>와 프로세스 잡음 공분산 행렬 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{Q}</span><script type="math/tex">\mathbf{Q}</script></span>의 쌍 <span class="arithmatex"><span class="MathJax_Preview">(\mathbf{A}, \mathbf{Q})</span><script type="math/tex">(\mathbf{A}, \mathbf{Q})</script></span>가 제어 가능할 경우, 필터는 수렴할 가능성이 높다.</li>
+<li><strong>제어 가능성</strong>: 상태 전이 행렬 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{A}</span><script type="math/tex">\mathbf{A}</script></span>와 시스템 노이즈 공분산 행렬 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{Q}</span><script type="math/tex">\mathbf{Q}</script></span>의 쌍 <span class="arithmatex"><span class="MathJax_Preview">(\mathbf{A}, \mathbf{Q})</span><script type="math/tex">(\mathbf{A}, \mathbf{Q})</script></span>가 제어 가능할 경우, 필터는 수렴할 가능성이 높다.</li>
 <li>
 <p><strong>관측 가능성</strong>: 측정 행렬 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{C}</span><script type="math/tex">\mathbf{C}</script></span>와 상태 전이 행렬 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{A}</span><script type="math/tex">\mathbf{A}</script></span>의 쌍 <span class="arithmatex"><span class="MathJax_Preview">(\mathbf{C}, \mathbf{A})</span><script type="math/tex">(\mathbf{C}, \mathbf{A})</script></span>가 관측 가능할 경우, 필터가 상태를 정확하게 추정할 수 있다.</p>
 </li>
 <li>
-<p><strong>시스템 잡음과 측정 잡음의 특성</strong>  </p>
+<p><strong>시스템 노이즈과 측정 잡음의 특성</strong>  </p>
 </li>
 <li>
-<p>시스템 잡음 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{Q}</span><script type="math/tex">\mathbf{Q}</script></span>와 측정 잡음 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{R}</span><script type="math/tex">\mathbf{R}</script></span>의 비율은 필터의 수렴성에 영향을 미친다. 잡음이 과도하게 크거나 작은 경우 필터의 수렴이 방해받을 수 있다.</p>
+<p>시스템 노이즈 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{Q}</span><script type="math/tex">\mathbf{Q}</script></span>와 측정 잡음 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{R}</span><script type="math/tex">\mathbf{R}</script></span>의 비율은 필터의 수렴성에 영향을 미친다. 잡음이 과도하게 크거나 작은 경우 필터의 수렴이 방해받을 수 있다.</p>
 </li>
 <li>
 <p><strong>초기 조건의 영향</strong>  </p>
@@ -217,7 +217,7 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 <h4 id="1_1">1. 시스템 모델의 불완전성</h4>
 <p>시스템 모델이 잘못되었거나 불완전할 경우, 칼만 필터가 수렴하지 않을 수 있다. 예를 들어, 시스템의 동적 모델 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{A}</span><script type="math/tex">\mathbf{A}</script></span>가 실제 시스템의 동작을 제대로 반영하지 못하면, 필터는 잘못된 상태 추정을 지속적으로 수행하게 된다. 이는 시간이 지남에 따라 상태 추정 오차가 줄어들지 않고 증가할 수 있음을 의미한다.</p>
 <h4 id="2">2. 잘못된 잡음 공분산 행렬</h4>
-<p>프로세스 잡음 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{Q}</span><script type="math/tex">\mathbf{Q}</script></span>나 측정 잡음 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{R}</span><script type="math/tex">\mathbf{R}</script></span>의 공분산 행렬이 실제 시스템 잡음 특성과 맞지 않는 경우에도 필터는 수렴하지 않을 수 있다. 예를 들어, 측정 잡음 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{R}</span><script type="math/tex">\mathbf{R}</script></span>을 과소 추정하면, 필터는 측정값에 지나치게 의존하게 되어 오차가 증가할 수 있다. 반대로, 프로세스 잡음 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{Q}</span><script type="math/tex">\mathbf{Q}</script></span>를 과대 추정하면, 필터는 시스템 모델에 지나치게 의존하게 되어 비슷한 문제를 초래할 수 있다.</p>
+<p>시스템 노이즈 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{Q}</span><script type="math/tex">\mathbf{Q}</script></span>나 측정 잡음 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{R}</span><script type="math/tex">\mathbf{R}</script></span>의 공분산 행렬이 실제 시스템 노이즈 특성과 맞지 않는 경우에도 필터는 수렴하지 않을 수 있다. 예를 들어, 측정 잡음 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{R}</span><script type="math/tex">\mathbf{R}</script></span>을 과소 추정하면, 필터는 측정값에 지나치게 의존하게 되어 오차가 증가할 수 있다. 반대로, 시스템 노이즈 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{Q}</span><script type="math/tex">\mathbf{Q}</script></span>를 과대 추정하면, 필터는 시스템 모델에 지나치게 의존하게 되어 비슷한 문제를 초래할 수 있다.</p>
 <h4 id="3">3. 시간 변동이 있는 시스템</h4>
 <p>시간에 따라 시스템 파라미터가 변동하는 경우, 예를 들어 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{A}</span><script type="math/tex">\mathbf{A}</script></span>나 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{C}</span><script type="math/tex">\mathbf{C}</script></span>가 시간에 따라 변하는 비선형 시스템에서는 칼만 필터가 수렴하지 않을 가능성이 높다. 이러한 경우에는 적응형 칼만 필터나 비선형 필터링 기법이 필요할 수 있다.</p>
 <h3 id="_6">비대칭 잡음 분포의 영향</h3>
@@ -235,7 +235,7 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 <h4 id="1_2">1. 시뮬레이션 시나리오 설정</h4>
 <ul>
 <li><strong>시스템 모델</strong>: 2차 선형 시스템 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{A} = \begin{pmatrix} 1 &amp; 1 \\ 0 &amp; 1 \end{pmatrix}</span><script type="math/tex">\mathbf{A} = \begin{pmatrix} 1 & 1 \\ 0 & 1 \end{pmatrix}</script></span>, <span class="arithmatex"><span class="MathJax_Preview">\mathbf{C} = \begin{pmatrix} 1 &amp; 0 \end{pmatrix}</span><script type="math/tex">\mathbf{C} = \begin{pmatrix} 1 & 0 \end{pmatrix}</script></span> 사용.</li>
-<li><strong>잡음 특성</strong>: 프로세스 잡음 공분산 행렬 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{Q} = 0.1 \mathbf{I}</span><script type="math/tex">\mathbf{Q} = 0.1 \mathbf{I}</script></span> 및 측정 잡음 공분산 행렬 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{R} = 0.5</span><script type="math/tex">\mathbf{R} = 0.5</script></span>로 설정.</li>
+<li><strong>잡음 특성</strong>: 시스템 노이즈 공분산 행렬 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{Q} = 0.1 \mathbf{I}</span><script type="math/tex">\mathbf{Q} = 0.1 \mathbf{I}</script></span> 및 측정 잡음 공분산 행렬 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{R} = 0.5</span><script type="math/tex">\mathbf{R} = 0.5</script></span>로 설정.</li>
 <li><strong>초기 조건</strong>: 상태 초기값 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{x}_0 = \begin{pmatrix} 0 \\ 1 \end{pmatrix}</span><script type="math/tex">\mathbf{x}_0 = \begin{pmatrix} 0 \\ 1 \end{pmatrix}</script></span>, 추정 오차 공분산 초기값 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{P}_0 = \mathbf{I}</span><script type="math/tex">\mathbf{P}_0 = \mathbf{I}</script></span>.</li>
 </ul>
 <h4 id="2_1">2. 시뮬레이션 절차</h4>
@@ -259,7 +259,7 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 <h4 id="1-adaptive-kalman-filter">1. 적응형 칼만 필터(Adaptive Kalman Filter)</h4>
 <p>적응형 칼만 필터는 시스템의 동적 변화나 잡음 특성의 변동에 따라 필터 파라미터를 실시간으로 조정하는 방법이다. 필터의 수렴성을 유지하기 위해 다음과 같은 방법들을 사용할 수 있다:</p>
 <ul>
-<li><strong>잡음 공분산 행렬의 적응</strong>: 실시간 데이터로부터 추정된 잡음 통계량을 기반으로, 프로세스 잡음 공분산 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{Q}</span><script type="math/tex">\mathbf{Q}</script></span>와 측정 잡음 공분산 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{R}</span><script type="math/tex">\mathbf{R}</script></span>을 동적으로 조정한다.</li>
+<li><strong>잡음 공분산 행렬의 적응</strong>: 실시간 데이터로부터 추정된 잡음 통계량을 기반으로, 시스템 노이즈 공분산 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{Q}</span><script type="math/tex">\mathbf{Q}</script></span>와 측정 잡음 공분산 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{R}</span><script type="math/tex">\mathbf{R}</script></span>을 동적으로 조정한다.</li>
 <li><strong>가중 이동 평균(GMA)</strong>: 과거 데이터를 일정 기간 동안 가중하여 평균을 계산함으로써 필터의 반응성을 조정할 수 있다. 이 방법은 잡음이 급격히 변할 때 특히 유용하다.</li>
 <li><strong>필터 리셋</strong>: 시스템 파라미터가 급격히 변하거나 비정상적인 상황이 감지되었을 때, 필터를 재초기화하여 새로운 상황에 맞게 조정한다.</li>
 </ul>

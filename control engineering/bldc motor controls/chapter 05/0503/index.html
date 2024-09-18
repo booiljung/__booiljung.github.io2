@@ -143,7 +143,7 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 \mathbf{y}_k = \mathbf{C}\mathbf{x}_k + \mathbf{v}_k
 </script>
 </div>
-<p>여기서, <span class="arithmatex"><span class="MathJax_Preview">\mathbf{w}_k</span><script type="math/tex">\mathbf{w}_k</script></span>와 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{v}_k</span><script type="math/tex">\mathbf{v}_k</script></span>는 각각 프로세스 잡음과 측정 잡음이다. 이들은 보통 가우시안 잡음으로 가정한다.</p>
+<p>여기서, <span class="arithmatex"><span class="MathJax_Preview">\mathbf{w}_k</span><script type="math/tex">\mathbf{w}_k</script></span>와 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{v}_k</span><script type="math/tex">\mathbf{v}_k</script></span>는 각각 시스템 노이즈과 측정 잡음이다. 이들은 보통 가우시안 잡음으로 가정한다.</p>
 <p>칼만 필터의 업데이트는 다음 두 단계로 이루어진다:
 1. <strong>예측 단계 (Prediction Step)</strong>:</p>
 <p>$$
@@ -152,7 +152,7 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 <p>$$
     \mathbf{P}<em>{k|k-1} = \mathbf{A}\mathbf{P}</em>{k-1|k-1}\mathbf{A}^T + \mathbf{Q}</p>
 <p>$$</p>
-<pre><code>여기서, $\mathbf{P}$는 오차 공분산 행렬이며, $\mathbf{Q}$는 프로세스 잡음의 공분산이다.
+<pre><code>여기서, $\mathbf{P}$는 오차 공분산 행렬이며, $\mathbf{Q}$는 시스템 노이즈의 공분산이다.
 </code></pre>
 <ol>
 <li><strong>업데이트 단계 (Update Step)</strong>:</li>

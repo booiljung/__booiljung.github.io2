@@ -244,7 +244,7 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 </li>
 </ul>
 <h3 id="_9">비가우시안 잡음의 처리 한계</h3>
-<p>칼만 필터는 관측 잡음과 시스템 잡음이 모두 가우시안 분포를 따르는 것으로 가정한다. 그러나 실제 환경에서는 잡음이 가우시안 분포를 따르지 않는 경우가 많으며, 이를 비가우시안 잡음이라고 한다.</p>
+<p>칼만 필터는 관측 잡음과 시스템 노이즈이 모두 가우시안 분포를 따르는 것으로 가정한다. 그러나 실제 환경에서는 잡음이 가우시안 분포를 따르지 않는 경우가 많으며, 이를 비가우시안 잡음이라고 한다.</p>
 <h4 id="_10">비가우시안 잡음의 발생 원인</h4>
 <ul>
 <li><strong>센서 오작동</strong>: 센서가 일시적으로 오작동하거나 과도한 노이즈가 발생하는 경우 비가우시안 잡음이 나타날 수 있다.</li>
@@ -273,10 +273,10 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 \mathbf{x}_{k+1} = \mathbf{A}_k \mathbf{x}_k + \mathbf{B}_k \mathbf{u}_k + \mathbf{w}_k
 </script>
 </div>
-<p>여기서 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{A}_k</span><script type="math/tex">\mathbf{A}_k</script></span>는 상태 전이 행렬, <span class="arithmatex"><span class="MathJax_Preview">\mathbf{B}_k</span><script type="math/tex">\mathbf{B}_k</script></span>는 입력 행렬, <span class="arithmatex"><span class="MathJax_Preview">\mathbf{u}_k</span><script type="math/tex">\mathbf{u}_k</script></span>는 외부 입력, <span class="arithmatex"><span class="MathJax_Preview">\mathbf{w}_k</span><script type="math/tex">\mathbf{w}_k</script></span>는 프로세스 잡음을 의미한다. 이와 같은 선형 표현은 필터의 계산을 단순화하며, 선형대수와 확률 이론을 기반으로 필터를 최적화할 수 있게 한다.</p>
+<p>여기서 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{A}_k</span><script type="math/tex">\mathbf{A}_k</script></span>는 상태 전이 행렬, <span class="arithmatex"><span class="MathJax_Preview">\mathbf{B}_k</span><script type="math/tex">\mathbf{B}_k</script></span>는 입력 행렬, <span class="arithmatex"><span class="MathJax_Preview">\mathbf{u}_k</span><script type="math/tex">\mathbf{u}_k</script></span>는 외부 입력, <span class="arithmatex"><span class="MathJax_Preview">\mathbf{w}_k</span><script type="math/tex">\mathbf{w}_k</script></span>는 시스템 노이즈을 의미한다. 이와 같은 선형 표현은 필터의 계산을 단순화하며, 선형대수와 확률 이론을 기반으로 필터를 최적화할 수 있게 한다.</p>
 <p>그러나 실제 많은 시스템은 비선형적 특성을 지니고 있으며, 이러한 비선형성을 고려하지 않으면 칼만 필터의 성능이 크게 저하될 수 있다. 비선형 시스템에서는 확장 칼만 필터(Extended Kalman Filter)나 비선형 필터링 기법을 사용해야 하지만, 이 책에서는 이러한 주제를 다루지 않는다.</p>
 <h4 id="_15">잡음의 가우시안 분포 가정</h4>
-<p>칼만 필터는 시스템 잡음 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{w}_k</span><script type="math/tex">\mathbf{w}_k</script></span>와 관측 잡음 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{v}_k</span><script type="math/tex">\mathbf{v}_k</script></span>가 모두 가우시안 분포를 따른다고 가정한다. 각각의 잡음은 평균이 0인 가우시안 분포로 모델링되며, 다음과 같이 표현된다:</p>
+<p>칼만 필터는 시스템 노이즈 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{w}_k</span><script type="math/tex">\mathbf{w}_k</script></span>와 관측 잡음 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{v}_k</span><script type="math/tex">\mathbf{v}_k</script></span>가 모두 가우시안 분포를 따른다고 가정한다. 각각의 잡음은 평균이 0인 가우시안 분포로 모델링되며, 다음과 같이 표현된다:</p>
 <div class="arithmatex">
 <div class="MathJax_Preview">
 \mathbf{w}_k \sim \mathcal{N}(0, \mathbf{Q}_k), \quad \mathbf{v}_k \sim \mathcal{N}(0, \mathbf{R}_k)
@@ -285,7 +285,7 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 \mathbf{w}_k \sim \mathcal{N}(0, \mathbf{Q}_k), \quad \mathbf{v}_k \sim \mathcal{N}(0, \mathbf{R}_k)
 </script>
 </div>
-<p>여기서 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{Q}_k</span><script type="math/tex">\mathbf{Q}_k</script></span>는 프로세스 잡음 공분산 행렬, <span class="arithmatex"><span class="MathJax_Preview">\mathbf{R}_k</span><script type="math/tex">\mathbf{R}_k</script></span>는 측정 잡음 공분산 행렬이다. 이 가정은 필터가 상태와 측정값의 확률 분포를 정확하게 예측할 수 있도록 하며, 필터링 과정에서 가우시안 확률 밀도 함수를 효과적으로 활용할 수 있게 한다.</p>
+<p>여기서 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{Q}_k</span><script type="math/tex">\mathbf{Q}_k</script></span>는 시스템 노이즈 공분산 행렬, <span class="arithmatex"><span class="MathJax_Preview">\mathbf{R}_k</span><script type="math/tex">\mathbf{R}_k</script></span>는 측정 잡음 공분산 행렬이다. 이 가정은 필터가 상태와 측정값의 확률 분포를 정확하게 예측할 수 있도록 하며, 필터링 과정에서 가우시안 확률 밀도 함수를 효과적으로 활용할 수 있게 한다.</p>
 <p>그러나 실제 시스템에서는 잡음이 가우시안 분포를 따르지 않는 경우가 많다. 예를 들어, 비정상적인 외란이나 시스템의 복잡한 동적 특성으로 인해 비가우시안 잡음이 발생할 수 있다. 이러한 경우, 칼만 필터의 가정이 맞지 않게 되며, 필터의 추정 성능이 저하될 수 있다. 비가우시안 잡음을 처리하기 위해서는 다양한 비선형 필터링 기법이 필요하지만, 이 역시 이 책의 범위 밖이다.</p>
 <h4 id="_16">시간 불변성 가정</h4>
 <p>기본 칼만 필터는 시간 불변 시스템, 즉 상태 전이 행렬 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{A}_k</span><script type="math/tex">\mathbf{A}_k</script></span>와 관측 행렬 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{H}_k</span><script type="math/tex">\mathbf{H}_k</script></span>가 시간에 따라 변하지 않는다고 가정한다. 이 가정 하에서는 시스템이 시간이 지남에 따라 동일한 방식으로 동작하며, 필터 설계가 단순해진다. 시간 불변성 가정은 다음과 같은 형태로 표현된다:</p>

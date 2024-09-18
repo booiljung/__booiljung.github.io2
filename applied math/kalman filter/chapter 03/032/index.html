@@ -47,8 +47,8 @@
               {title: "\uc0c1\ud0dc \ubc29\uc815\uc2dd(State Equation)", url: "#state-equation" },
               {title: "\uad00\uce21 \ubc29\uc815\uc2dd(Measurement Equation)", url: "#measurement-equation" },
           ]},
-          {title: "\ud504\ub85c\uc138\uc2a4 \ub178\uc774\uc988\uc640 \uad00\uce21 \ub178\uc774\uc988", url: "#_7", children: [
-              {title: "\ud504\ub85c\uc138\uc2a4 \ub178\uc774\uc988", url: "#_8" },
+          {title: "\uc2dc\uc2a4\ud15c \ub178\uc774\uc988\uc640 \uad00\uce21 \ub178\uc774\uc988", url: "#_7", children: [
+              {title: "\uc2dc\uc2a4\ud15c \ub178\uc774\uc988", url: "#_8" },
               {title: "\uad00\uce21 \ub178\uc774\uc988", url: "#_9" },
           ]},
           {title: "\uc0c1\ud0dc \ucd94\uc815\uc758 \ubaa9\ud45c", url: "#_10", children: [
@@ -221,7 +221,7 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 - <span class="arithmatex"><span class="MathJax_Preview">\mathbf{x}_{k}</span><script type="math/tex">\mathbf{x}_{k}</script></span>는 <span class="arithmatex"><span class="MathJax_Preview">k</span><script type="math/tex">k</script></span>번째 시간에서의 상태 벡터(State Vector)이다.<br />
 - <span class="arithmatex"><span class="MathJax_Preview">\mathbf{F}_{k-1}</span><script type="math/tex">\mathbf{F}_{k-1}</script></span>은 상태 전이 행렬(State Transition Matrix)로, 이전 상태 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{x}_{k-1}</span><script type="math/tex">\mathbf{x}_{k-1}</script></span>에서 현재 상태 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{x}_{k}</span><script type="math/tex">\mathbf{x}_{k}</script></span>로의 변화를 나타낸다.<br />
 - <span class="arithmatex"><span class="MathJax_Preview">\mathbf{B}_{k-1}</span><script type="math/tex">\mathbf{B}_{k-1}</script></span>은 제어 입력 행렬(Control Input Matrix)로, 시스템에 외부에서 가해지는 입력 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{u}_{k-1}</span><script type="math/tex">\mathbf{u}_{k-1}</script></span>가 상태에 미치는 영향을 나타낸다.<br />
-- <span class="arithmatex"><span class="MathJax_Preview">\mathbf{w}_{k-1}</span><script type="math/tex">\mathbf{w}_{k-1}</script></span>은 프로세스 노이즈(Process Noise)로, 주로 가우시안 분포를 따르는 랜덤 변수로 모델링되며 시스템 모델링의 불확실성을 표현한다.</p>
+- <span class="arithmatex"><span class="MathJax_Preview">\mathbf{w}_{k-1}</span><script type="math/tex">\mathbf{w}_{k-1}</script></span>은 시스템 노이즈(Process Noise)로, 주로 가우시안 분포를 따르는 랜덤 변수로 모델링되며 시스템 모델링의 불확실성을 표현한다.</p>
 <p>이 상태 방정식은 시스템이 시간에 따라 어떻게 변하는지를 기술하며, 과거 상태와 현재 상태 간의 관계를 설명한다.</p>
 <h4 id="measurement-equation">관측 방정식(Measurement Equation)</h4>
 <p>관측 방정식은 시스템의 실제 상태와 이를 기반으로 얻어진 관측 값 간의 관계를 설명한다. 이 방정식은 다음과 같이 표현된다:</p>
@@ -238,10 +238,10 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 - <span class="arithmatex"><span class="MathJax_Preview">\mathbf{H}_{k}</span><script type="math/tex">\mathbf{H}_{k}</script></span>는 관측 행렬(Observation Matrix)로, 상태 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{x}_{k}</span><script type="math/tex">\mathbf{x}_{k}</script></span>에서 관측 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{z}_{k}</span><script type="math/tex">\mathbf{z}_{k}</script></span>로의 매핑을 정의한다.<br />
 - <span class="arithmatex"><span class="MathJax_Preview">\mathbf{v}_{k}</span><script type="math/tex">\mathbf{v}_{k}</script></span>는 관측 노이즈(Measurement Noise)로, 관측 과정에서 발생하는 오차를 나타내며, 주로 가우시안 분포를 따르는 랜덤 변수로 모델링된다.</p>
 <p>이 관측 방정식은 실제로 측정 가능한 값들이 시스템의 상태로부터 어떻게 유도되는지를 설명하며, 필터링 과정에서 상태를 추정하는 데 중요한 역할을 한다.</p>
-<h3 id="_7">프로세스 노이즈와 관측 노이즈</h3>
-<p>칼만 필터는 시스템의 동적 모델과 관측 모델이 완벽하지 않음을 전제로 한다. 이 불완전성은 주로 프로세스 노이즈와 관측 노이즈로 나타난다.</p>
-<h4 id="_8">프로세스 노이즈</h4>
-<p>프로세스 노이즈 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{w}_{k-1}</span><script type="math/tex">\mathbf{w}_{k-1}</script></span>는 모델링되지 않은 외부 요인이나 시스템의 내재적 불확실성에 의해 상태가 예상치 못하게 변할 가능성을 반영한다. 이 노이즈는 보통 가우시안 분포를 따르며, 필터링 과정에서 상태 예측의 불확실성을 증가시킨다. 프로세스 노이즈 공분산 행렬 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{Q}_k</span><script type="math/tex">\mathbf{Q}_k</script></span>는 이 노이즈의 크기와 시스템 상태에 미치는 영향을 정량적으로 나타낸다.</p>
+<h3 id="_7">시스템 노이즈와 관측 노이즈</h3>
+<p>칼만 필터는 시스템의 동적 모델과 관측 모델이 완벽하지 않음을 전제로 한다. 이 불완전성은 주로 시스템 노이즈와 관측 노이즈로 나타난다.</p>
+<h4 id="_8">시스템 노이즈</h4>
+<p>시스템 노이즈 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{w}_{k-1}</span><script type="math/tex">\mathbf{w}_{k-1}</script></span>는 모델링되지 않은 외부 요인이나 시스템의 내재적 불확실성에 의해 상태가 예상치 못하게 변할 가능성을 반영한다. 이 노이즈는 보통 가우시안 분포를 따르며, 필터링 과정에서 상태 예측의 불확실성을 증가시킨다. 시스템 노이즈 공분산 행렬 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{Q}_k</span><script type="math/tex">\mathbf{Q}_k</script></span>는 이 노이즈의 크기와 시스템 상태에 미치는 영향을 정량적으로 나타낸다.</p>
 <h4 id="_9">관측 노이즈</h4>
 <p>관측 노이즈 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{v}_{k}</span><script type="math/tex">\mathbf{v}_{k}</script></span>는 센서의 불완전성이나 환경적 요인으로 인해 실제 측정된 값이 참 상태에서 벗어날 가능성을 반영한다. 이 노이즈 또한 가우시안 분포를 따르며, 관측치의 신뢰성을 나타낸다. 관측 노이즈 공분산 행렬 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{R}_k</span><script type="math/tex">\mathbf{R}_k</script></span>는 관측 노이즈의 크기와 그로 인한 관측치의 불확실성을 정량적으로 나타낸다.</p>
 <h3 id="_10">상태 추정의 목표</h3>
@@ -275,7 +275,7 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 <p>여기서,<br />
 - <span class="arithmatex"><span class="MathJax_Preview">\hat{\mathbf{x}}_{k|k-1}</span><script type="math/tex">\hat{\mathbf{x}}_{k|k-1}</script></span>는 현재 시간 <span class="arithmatex"><span class="MathJax_Preview">k</span><script type="math/tex">k</script></span>에서의 예측된 상태이다.<br />
 - <span class="arithmatex"><span class="MathJax_Preview">\mathbf{P}_{k|k-1}</span><script type="math/tex">\mathbf{P}_{k|k-1}</script></span>는 예측된 상태의 공분산 행렬이다.</p>
-<p>이 과정에서 상태는 시스템의 모델에 따라 시간적으로 변화하며, 이때 추가되는 프로세스 노이즈 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{Q}_{k-1}</span><script type="math/tex">\mathbf{Q}_{k-1}</script></span>는 상태 예측의 불확실성을 증가시킨다.</p>
+<p>이 과정에서 상태는 시스템의 모델에 따라 시간적으로 변화하며, 이때 추가되는 시스템 노이즈 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{Q}_{k-1}</span><script type="math/tex">\mathbf{Q}_{k-1}</script></span>는 상태 예측의 불확실성을 증가시킨다.</p>
 <h4 id="measurement-update">측정 갱신 (Measurement Update)</h4>
 <p>측정 갱신 단계에서는 예측된 상태를 실제 관측치에 맞춰 보정한다. 이 단계는 필터의 핵심으로, 관측된 데이터를 기반으로 상태를 최적화하는 과정이다. 이때 칼만 이득(Kalman Gain) <span class="arithmatex"><span class="MathJax_Preview">\mathbf{K}_k</span><script type="math/tex">\mathbf{K}_k</script></span>이 사용되며, 이를 통해 관측치의 영향력을 조절하게 된다.</p>
 <p>보정된 상태 추정치는 다음 식을 통해 계산된다:</p>
@@ -308,16 +308,16 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 </div>
 <p>이 과정을 통해 필터는 새로운 관측치가 주어질 때마다 상태 추정을 정교하게 조정해 나간다.</p>
 <h3 id="_15">칼만 이득의 역할</h3>
-<p>칼만 이득 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{K}_k</span><script type="math/tex">\mathbf{K}_k</script></span>는 예측된 상태와 실제 관측치 간의 차이를 얼마나 반영할지를 결정하는 요소다. 칼만 이득의 크기는 시스템의 노이즈 특성에 따라 달라지며, 프로세스 노이즈와 관측 노이즈의 비율이 클수록 칼만 이득은 더 작아지고, 관측치의 영향을 덜 받게 된다. 반대로 관측 노이즈가 작고 신뢰할 수 있는 관측치가 들어올 경우, 칼만 이득이 커지며, 상태 추정에 관측치가 더 큰 영향을 미치게 된다.</p>
+<p>칼만 이득 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{K}_k</span><script type="math/tex">\mathbf{K}_k</script></span>는 예측된 상태와 실제 관측치 간의 차이를 얼마나 반영할지를 결정하는 요소다. 칼만 이득의 크기는 시스템의 노이즈 특성에 따라 달라지며, 시스템 노이즈와 관측 노이즈의 비율이 클수록 칼만 이득은 더 작아지고, 관측치의 영향을 덜 받게 된다. 반대로 관측 노이즈가 작고 신뢰할 수 있는 관측치가 들어올 경우, 칼만 이득이 커지며, 상태 추정에 관측치가 더 큰 영향을 미치게 된다.</p>
 <h3 id="_16">상태 추정의 수렴과 안정성</h3>
 <p>칼만 필터는 반복적인 갱신 과정을 통해 상태 추정치가 점차적으로 정확해지는 특징을 가진다. 이는 필터가 초기 상태 추정치와 불확실성으로 시작하더라도, 충분한 관측치가 주어지면 상태 추정치가 실제 상태에 수렴하게 된다는 의미이다. 이 과정에서 필터의 안정성은 매우 중요하며, 이는 필터가 시간이 지나면서 안정적으로 동작하는지를 나타낸다.</p>
 <h4 id="_17">수렴 조건</h4>
-<p>칼만 필터가 안정적으로 수렴하기 위해서는 몇 가지 조건이 필요하다. 첫 번째로, 시스템의 동적 모델이 정확하고, 시스템의 상태 전이 행렬 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{F}_k</span><script type="math/tex">\mathbf{F}_k</script></span>가 안정적이어야 한다. 즉, 상태 전이 행렬의 고유값들이 1보다 작은 경우 필터는 안정적으로 수렴할 가능성이 높아진다. 또한, 프로세스 노이즈 공분산 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{Q}_k</span><script type="math/tex">\mathbf{Q}_k</script></span>와 관측 노이즈 공분산 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{R}_k</span><script type="math/tex">\mathbf{R}_k</script></span>가 잘 설정되어 있어야 하며, 이 값들이 필터의 수렴 속도와 안정성에 직접적인 영향을 미친다.</p>
+<p>칼만 필터가 안정적으로 수렴하기 위해서는 몇 가지 조건이 필요하다. 첫 번째로, 시스템의 동적 모델이 정확하고, 시스템의 상태 전이 행렬 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{F}_k</span><script type="math/tex">\mathbf{F}_k</script></span>가 안정적이어야 한다. 즉, 상태 전이 행렬의 고유값들이 1보다 작은 경우 필터는 안정적으로 수렴할 가능성이 높아진다. 또한, 시스템 노이즈 공분산 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{Q}_k</span><script type="math/tex">\mathbf{Q}_k</script></span>와 관측 노이즈 공분산 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{R}_k</span><script type="math/tex">\mathbf{R}_k</script></span>가 잘 설정되어 있어야 하며, 이 값들이 필터의 수렴 속도와 안정성에 직접적인 영향을 미친다.</p>
 <h4 id="_18">필터의 안정성 분석</h4>
 <p>필터의 안정성은 주로 상태 추정 오차의 공분산 행렬 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{P}_k</span><script type="math/tex">\mathbf{P}_k</script></span>를 분석함으로써 평가된다. 만약 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{P}_k</span><script type="math/tex">\mathbf{P}_k</script></span>가 시간에 따라 수렴하지 않고 발산하는 경우, 필터가 불안정하다는 것을 의미한다. 반면, <span class="arithmatex"><span class="MathJax_Preview">\mathbf{P}_k</span><script type="math/tex">\mathbf{P}_k</script></span>가 특정 값에 수렴하거나 일정한 범위 내에서 유지되는 경우, 필터는 안정적으로 작동하고 있다고 볼 수 있다.</p>
 <p>필터의 안정성을 보장하기 위해서는 다음의 조건들이 필요하다:
 - 상태 전이 행렬 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{F}_k</span><script type="math/tex">\mathbf{F}_k</script></span>가 시간에 따라 변하지 않거나, 변하더라도 시스템이 제어 가능한 상태일 것.
-- 프로세스 노이즈 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{Q}_k</span><script type="math/tex">\mathbf{Q}_k</script></span>와 관측 노이즈 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{R}_k</span><script type="math/tex">\mathbf{R}_k</script></span>가 시간에 따라 크게 변하지 않도록 유지할 것.</p>
+- 시스템 노이즈 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{Q}_k</span><script type="math/tex">\mathbf{Q}_k</script></span>와 관측 노이즈 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{R}_k</span><script type="math/tex">\mathbf{R}_k</script></span>가 시간에 따라 크게 변하지 않도록 유지할 것.</p>
 <p>이러한 조건들이 충족될 때, 칼만 필터는 장기적으로 안정적인 상태 추정을 제공할 수 있다.</p>
 <h3 id="_19">필터 성능 평가</h3>
 <p>칼만 필터의 성능은 주로 상태 추정의 정확성과 효율성으로 평가된다. 성능 평가에는 다음과 같은 지표들이 사용된다.</p>

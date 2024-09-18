@@ -108,7 +108,7 @@ int main() {
     RowVector2d H;
     H &lt;&lt; 1, 0;
 
-    // 프로세스 잡음 공분산 Q
+    // 시스템 노이즈 공분산 Q
     Matrix2d Q;
     Q &lt;&lt; 1e-4, 0,
          0, 1e-4;
@@ -156,7 +156,7 @@ int main() {
 <li><code>Matrix2d F</code>: 상태 전이 행렬로, 위치와 속도 사이의 관계를 정의한다.</li>
 <li><code>Vector2d B</code>: 입력 제어 행렬로, 가속도 입력에 의해 상태가 어떻게 변하는지를 나타낸다.</li>
 <li><code>RowVector2d H</code>: 측정 행렬로, 위치를 측정하는 경우에 사용된다.</li>
-<li><code>Matrix2d Q</code>: 프로세스 잡음 공분산 행렬이다.</li>
+<li><code>Matrix2d Q</code>: 시스템 노이즈 공분산 행렬이다.</li>
 <li><code>double R</code>: 측정 잡음 공분산이다.</li>
 <li><code>Vector2d x_hat</code>: 상태 추정치를 나타낸다.</li>
 <li>

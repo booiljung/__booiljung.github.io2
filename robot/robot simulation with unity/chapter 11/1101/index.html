@@ -33,18 +33,27 @@
       var is_top_frame = false;
         
         var pageToc = [
-          {title: "\ub2e4\uc911 \ub85c\ubd07 \ud658\uacbd \uad6c\uc131", url: "#_top", children: [
-              {title: "\ub85c\ubd07 \ud504\ub9ac\ud339 \uc0dd\uc131 \ubc0f \uad00\ub9ac", url: "#_2" },
-              {title: "\ub85c\ubd07\uc758 \uace0\uc720 \uc2dd\ubcc4\uc790 \uc124\uc815", url: "#_3" },
-              {title: "\ub85c\ubd07 \uac04\uc758 \ucda9\ub3cc \ubc0f \uc0c1\ud638\uc791\uc6a9 \uc124\uc815", url: "#_4" },
-              {title: "\ub85c\ubd07\uc758 \ud1b5\uc2e0 \uc124\uc815", url: "#_5" },
-              {title: "\ub2e4\uc911 \ub85c\ubd07\uc758 \ub3d9\uae30\ud654", url: "#_6" },
-              {title: "\ub85c\ubd07\uc758 \ub3d9\uc791 \ud328\ud134 \uad00\ub9ac", url: "#_7" },
-              {title: "\uc790\uc6d0 \uad00\ub9ac \ubc0f \ucda9\ub3cc \ubc29\uc9c0", url: "#_8" },
-              {title: "\uc2dc\ubbac\ub808\uc774\uc158 \ud658\uacbd\uc758 \ud655\uc7a5\uc131", url: "#_9" },
-              {title: "\ub124\ud2b8\uc6cc\ud06c \uae30\ubc18 \uba40\ud2f0 \ub85c\ubd07 \uc2dc\ubbac\ub808\uc774\uc158", url: "#_10" },
-              {title: "\ub3d9\uc801 \ub85c\ubd07 \ucd94\uac00 \ubc0f \uc81c\uac70", url: "#_11" },
-              {title: "\ub85c\ubd07 \uc0c1\ud0dc \ubaa8\ub2c8\ud130\ub9c1 \ubc0f \uc2dc\uac01\ud654", url: "#_12" },
+          {title: "\ub85c\ubd07 \ud504\ub9ac\ud339 \uc0dd\uc131 \ubc0f \uad00\ub9ac", url: "#_top", children: [
+          ]},
+          {title: "\ub85c\ubd07\uc758 \uace0\uc720 \uc2dd\ubcc4\uc790 \uc124\uc815", url: "#_2", children: [
+          ]},
+          {title: "\ub85c\ubd07 \uac04\uc758 \ucda9\ub3cc \ubc0f \uc0c1\ud638\uc791\uc6a9 \uc124\uc815", url: "#_3", children: [
+          ]},
+          {title: "\ub85c\ubd07\uc758 \ud1b5\uc2e0 \uc124\uc815", url: "#_4", children: [
+          ]},
+          {title: "\ub2e4\uc911 \ub85c\ubd07\uc758 \ub3d9\uae30\ud654", url: "#_5", children: [
+          ]},
+          {title: "\ub85c\ubd07\uc758 \ub3d9\uc791 \ud328\ud134 \uad00\ub9ac", url: "#_6", children: [
+          ]},
+          {title: "\uc790\uc6d0 \uad00\ub9ac \ubc0f \ucda9\ub3cc \ubc29\uc9c0", url: "#_7", children: [
+          ]},
+          {title: "\uc2dc\ubbac\ub808\uc774\uc158 \ud658\uacbd\uc758 \ud655\uc7a5\uc131", url: "#_8", children: [
+          ]},
+          {title: "\ub124\ud2b8\uc6cc\ud06c \uae30\ubc18 \uba40\ud2f0 \ub85c\ubd07 \uc2dc\ubbac\ub808\uc774\uc158", url: "#_9", children: [
+          ]},
+          {title: "\ub3d9\uc801 \ub85c\ubd07 \ucd94\uac00 \ubc0f \uc81c\uac70", url: "#_10", children: [
+          ]},
+          {title: "\ub85c\ubd07 \uc0c1\ud0dc \ubaa8\ub2c8\ud130\ub9c1 \ubc0f \uc2dc\uac01\ud654", url: "#_11", children: [
           ]},
         ];
 
@@ -95,9 +104,8 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 
     
 
-    <h1 id="_1">다중 로봇 환경 구성</h1>
-<p>멀티 로봇 시뮬레이션을 구현하기 위해서는 다중 로봇 환경을 효과적으로 구성하는 것이 중요하다. 이 절에서는 Unity에서 여러 로봇을 배치하고 관리하는 방법, 로봇 간의 상호작용을 설정하는 방법, 그리고 효율적인 시뮬레이션을 위한 최적화 기법에 대해 자세히 다룬다.</p>
-<h3 id="_2">로봇 프리팹 생성 및 관리</h3>
+    <p>멀티 로봇 시뮬레이션을 구현하기 위해서는 다중 로봇 환경을 효과적으로 구성하는 것이 중요하다. 이 절에서는 Unity에서 여러 로봇을 배치하고 관리하는 방법, 로봇 간의 상호작용을 설정하는 방법, 그리고 효율적인 시뮬레이션을 위한 최적화 기법에 대해 자세히 다룬다.</p>
+<h3 id="_1">로봇 프리팹 생성 및 관리</h3>
 <p>멀티 로봇 환경을 구성하기 위해서는 각 로봇의 프리팹(Prefab)을 생성하고 관리하는 것이 필수적이다. 프리팹은 반복적으로 사용되는 객체의 템플릿으로, 여러 로봇 인스턴스를 쉽게 생성할 수 있게 해준다.</p>
 <ol>
 <li>
@@ -129,7 +137,7 @@ public class RobotManager : MonoBehaviour
     }
 }
 </code></pre>
-<h3 id="_3">로봇의 고유 식별자 설정</h3>
+<h3 id="_2">로봇의 고유 식별자 설정</h3>
 <p>멀티 로봇 시뮬레이션에서는 각 로봇을 고유하게 식별할 수 있어야 한다. 이를 위해 각 로봇에 고유한 ID를 부여하고 관리하는 방법을 구현한다.</p>
 <ol>
 <li><strong>로봇 스크립트 수정</strong>: 각 로봇에 고유 ID를 부여하기 위해 로봇 스크립트를 수정한다.</li>
@@ -172,7 +180,7 @@ public class RobotManager : MonoBehaviour
     }
 }
 </code></pre>
-<h3 id="_4">로봇 간의 충돌 및 상호작용 설정</h3>
+<h3 id="_3">로봇 간의 충돌 및 상호작용 설정</h3>
 <p>다중 로봇 시뮬레이션에서는 로봇 간의 물리적 충돌과 상호작용을 적절히 설정해야 한다. 이를 위해 물리 엔진을 활용하여 충돌 처리와 상호작용 로직을 구현한다.</p>
 <ol>
 <li>
@@ -202,7 +210,7 @@ public class Robot : MonoBehaviour
     }
 }
 </code></pre>
-<h3 id="_5">로봇의 통신 설정</h3>
+<h3 id="_4">로봇의 통신 설정</h3>
 <p>멀티 로봇 시뮬레이션에서는 로봇 간의 통신이 필요할 수 있다. 이를 위해 Unity 내에서 네트워크 통신을 설정하거나, ROS와 같은 외부 프레임워크와 연동할 수 있다.</p>
 <ol>
 <li><strong>로컬 통신 설정</strong>: 동일한 Unity 프로젝트 내에서 로봇 간의 통신을 구현할 수 있다. 예를 들어, 메시지 브로커 패턴을 사용하여 로봇 간의 메시지를 주고받을 수 있다.</li>
@@ -267,7 +275,7 @@ public class Robot : MonoBehaviour
     }
 }
 </code></pre>
-<h3 id="_6">다중 로봇의 동기화</h3>
+<h3 id="_5">다중 로봇의 동기화</h3>
 <p>멀티 로봇 시뮬레이션에서는 각 로봇의 상태를 동기화하여 일관된 환경을 유지하는 것이 중요하다. 이를 위해 각 로봇의 위치, 속도, 상태 등을 주기적으로 업데이트하고 동기화한다.</p>
 <ol>
 <li><strong>공통 시간 관리</strong>: 모든 로봇이 동일한 시간 스케일을 따르도록 시간 관리를 설정한다.</li>
@@ -316,7 +324,7 @@ public class Robot : MonoBehaviour
     }
 }
 </code></pre>
-<h3 id="_7">로봇의 동작 패턴 관리</h3>
+<h3 id="_6">로봇의 동작 패턴 관리</h3>
 <p>멀티 로봇 시뮬레이션에서 각 로봇은 고유한 동작 패턴을 가질 수 있다. 이러한 동작 패턴을 효과적으로 관리하기 위해서는 중앙 관리 시스템 또는 분산된 제어 방식을 채택할 수 있다.</p>
 <ol>
 <li>
@@ -397,7 +405,7 @@ void StartFlee()
 ```</p>
 </li>
 </ol>
-<h3 id="_8">자원 관리 및 충돌 방지</h3>
+<h3 id="_7">자원 관리 및 충돌 방지</h3>
 <p>다중 로봇 환경에서는 자원 관리와 충돌 방지가 중요한 요소이다. 각 로봇이 동일한 자원을 동시에 사용하려고 할 때 발생할 수 있는 충돌을 방지하기 위한 전략을 수립해야 한다.</p>
 <ol>
 <li>
@@ -471,7 +479,7 @@ public class CollisionAvoidance : MonoBehaviour
 }
 ```
 </code></pre>
-<h3 id="_9">시뮬레이션 환경의 확장성</h3>
+<h3 id="_8">시뮬레이션 환경의 확장성</h3>
 <p>멀티 로봇 시뮬레이션의 확장성을 높이기 위해서는 시뮬레이션 환경이 다양한 로봇 수와 복잡한 상호작용을 효율적으로 처리할 수 있어야 한다. 이를 위해 다음과 같은 전략을 고려할 수 있다.</p>
 <ol>
 <li>
@@ -540,7 +548,7 @@ public RobotState GetState(int robotID)
 ```</p>
 </li>
 </ol>
-<h3 id="_10">네트워크 기반 멀티 로봇 시뮬레이션</h3>
+<h3 id="_9">네트워크 기반 멀티 로봇 시뮬레이션</h3>
 <p>멀티 로봇 시뮬레이션이 네트워크를 통해 분산되어 실행되는 경우, 로봇 간의 통신 지연과 데이터 동기화 문제가 발생할 수 있다. 이를 해결하기 위한 몇 가지 방법을 소개한다.</p>
 <ol>
 <li>
@@ -571,7 +579,7 @@ using System.Text;</p>
 ```</p>
 </li>
 </ol>
-<h3 id="_11">동적 로봇 추가 및 제거</h3>
+<h3 id="_10">동적 로봇 추가 및 제거</h3>
 <p>시뮬레이션 도중에 로봇을 동적으로 추가하거나 제거해야 하는 경우가 있다. 이를 위해 유연한 로봇 관리 시스템이 필요하다.</p>
 <ol>
 <li>
@@ -603,7 +611,7 @@ using UnityEngine;</p>
 ```</p>
 </li>
 </ol>
-<h3 id="_12">로봇 상태 모니터링 및 시각화</h3>
+<h3 id="_11">로봇 상태 모니터링 및 시각화</h3>
 <p>멀티 로봇 시뮬레이션에서는 각 로봇의 상태를 실시간으로 모니터링하고 시각화하는 것이 중요하다. 이를 통해 시뮬레이션의 진행 상황을 쉽게 파악할 수 있다.</p>
 <ol>
 <li>

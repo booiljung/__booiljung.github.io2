@@ -127,7 +127,7 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 - <span class="arithmatex"><span class="MathJax_Preview">\mathbf{A}_k</span><script type="math/tex">\mathbf{A}_k</script></span>는 상태 전이 행렬(State Transition Matrix)이다.
 - <span class="arithmatex"><span class="MathJax_Preview">\mathbf{B}_k</span><script type="math/tex">\mathbf{B}_k</script></span>는 제어 입력 행렬(Control Input Matrix)이다.
 - <span class="arithmatex"><span class="MathJax_Preview">\mathbf{u}_k</span><script type="math/tex">\mathbf{u}_k</script></span>는 제어 입력 벡터(Control Input Vector)이다.
-- <span class="arithmatex"><span class="MathJax_Preview">\mathbf{w}_k</span><script type="math/tex">\mathbf{w}_k</script></span>는 프로세스 노이즈(Process Noise)로, 평균이 0이고 공분산이 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{Q}_k</span><script type="math/tex">\mathbf{Q}_k</script></span>인 가우시안 분포를 따른다.
+- <span class="arithmatex"><span class="MathJax_Preview">\mathbf{w}_k</span><script type="math/tex">\mathbf{w}_k</script></span>는 시스템 노이즈(Process Noise)로, 평균이 0이고 공분산이 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{Q}_k</span><script type="math/tex">\mathbf{Q}_k</script></span>인 가우시안 분포를 따른다.
 - <span class="arithmatex"><span class="MathJax_Preview">\mathbf{z}_k</span><script type="math/tex">\mathbf{z}_k</script></span>는 시간 <span class="arithmatex"><span class="MathJax_Preview">k</span><script type="math/tex">k</script></span>에서의 관측 벡터(Observation Vector)이다.
 - <span class="arithmatex"><span class="MathJax_Preview">\mathbf{H}_k</span><script type="math/tex">\mathbf{H}_k</script></span>는 관측 행렬(Observation Matrix)이다.
 - <span class="arithmatex"><span class="MathJax_Preview">\mathbf{v}_k</span><script type="math/tex">\mathbf{v}_k</script></span>는 관측 노이즈(Observation Noise)로, 평균이 0이고 공분산이 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{R}_k</span><script type="math/tex">\mathbf{R}_k</script></span>인 가우시안 분포를 따른다.</p>
@@ -229,7 +229,7 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 
 A = np.array([[1, 1], [0, 1]])  # 상태 전이 행렬
 H = np.array([[1, 0]])          # 관측 행렬
-Q = np.array([[1, 0], [0, 3]])  # 프로세스 노이즈 공분산
+Q = np.array([[1, 0], [0, 3]])  # 시스템 노이즈 공분산
 R = np.array([[10]])            # 관측 노이즈 공분산
 B = np.array([[0.5], [1]])      # 제어 입력 행렬
 u = np.array([[2]])             # 제어 입력

@@ -76,7 +76,7 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
       <a href="../22%20%ED%94%84%EB%A1%9C%EC%84%B8%EC%8A%A4%20%EB%85%B8%EC%9D%B4%EC%A6%88%20%EA%B3%B5%EB%B6%84%EC%82%B0%20Q/" class="btn btn-xs btn-default pull-left">
         <i class="fa fa-chevron-left" aria-hidden="true"></i>
         Previous</a><a href="../22%20%ED%94%84%EB%A1%9C%EC%84%B8%EC%8A%A4%20%EB%85%B8%EC%9D%B4%EC%A6%88%20%EA%B3%B5%EB%B6%84%EC%82%B0%20Q/" class="btn btn-xs btn-link">
-        프로세스 잡음 공분산 행렬 Q
+        시스템 노이즈 공분산 행렬 Q
       </a>
     </div>
     
@@ -147,7 +147,7 @@ plt.show()
 <ol>
 <li><strong>초기 상태 설정</strong>: 초기 위치 (<code>x_0</code>, <code>y_0</code>), 초기 방향 (<code>theta_0</code>), 초기 속도 (<code>v_0</code>)를 설정한다.</li>
 <li><strong>시간 설정</strong>: 시간 간격 <code>dt</code>와 총 시간 스텝 수 <code>time_steps</code>를 설정한다.</li>
-<li><strong>칼만 필터 초기화</strong>: 초기 상태 벡터 <code>x</code>와 초기 오차 공분산 행렬 <code>P</code>를 설정한다. 프로세스 잡음 <code>Q_k</code>와 측정 잡음 <code>R_k</code>도 정의한다.</li>
+<li><strong>칼만 필터 초기화</strong>: 초기 상태 벡터 <code>x</code>와 초기 오차 공분산 행렬 <code>P</code>를 설정한다. 시스템 노이즈 <code>Q_k</code>와 측정 잡음 <code>R_k</code>도 정의한다.</li>
 <li><strong>칼만 필터 반복</strong>: 각 시간 스텝마다 상태 예측 및 갱신 단계를 수행한다. 측정값 <code>z_k</code>는 실제 시스템에서 들어오는 측정값을 시뮬레이션한 것이다. 칼만 필터는 예측된 위치와 방향을 기반으로 위치를 추정한다.</li>
 <li><strong>결과 시각화</strong>: 추정된 위치 경로를 시각화하여 결과를 확인한다.</li>
 </ol>
@@ -177,7 +177,7 @@ plt.show()
       <a href="../22%20%ED%94%84%EB%A1%9C%EC%84%B8%EC%8A%A4%20%EB%85%B8%EC%9D%B4%EC%A6%88%20%EA%B3%B5%EB%B6%84%EC%82%B0%20Q/" class="btn btn-xs btn-default pull-left">
         <i class="fa fa-chevron-left" aria-hidden="true"></i>
         Previous</a><a href="../22%20%ED%94%84%EB%A1%9C%EC%84%B8%EC%8A%A4%20%EB%85%B8%EC%9D%B4%EC%A6%88%20%EA%B3%B5%EB%B6%84%EC%82%B0%20Q/" class="btn btn-xs btn-link">
-        프로세스 잡음 공분산 행렬 Q
+        시스템 노이즈 공분산 행렬 Q
       </a>
     </div>
     

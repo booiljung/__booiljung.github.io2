@@ -37,7 +37,7 @@
           ]},
           {title: "\\mathbf{Q}\\mathbf{Q}\uc758 \uad6c\uc131 \uc694\uc18c", url: "#mathbfqmathbfq_1", children: [
           ]},
-          {title: "\ud504\ub85c\uc138\uc2a4 \uc7a1\uc74c \ubaa8\ub378\ub9c1", url: "#_1", children: [
+          {title: "\uc2dc\uc2a4\ud15c \ub178\uc774\uc988 \ubaa8\ub378\ub9c1", url: "#_1", children: [
           ]},
           {title: "\uc608\uc81c: \ub2e8\uc21c\ud55c \uc704\uce58 \ubc0f \uc18d\ub3c4 \ubaa8\ub378\uc5d0\uc11c\uc758 \\mathbf{Q}\\mathbf{Q}", url: "#mathbfqmathbfq_2", children: [
           ]},
@@ -90,9 +90,9 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 
     
 
-    <p>프로세스 공분산 행렬 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{Q}</span><script type="math/tex">\mathbf{Q}</script></span>는 시스템의 동적 모델에서 발생하는 불확실성(잡음)을 나타내는 중요한 요소로, 프로세스 잡음의 공분산을 표현한다. <span class="arithmatex"><span class="MathJax_Preview">\mathbf{Q}</span><script type="math/tex">\mathbf{Q}</script></span>를 구성하는 방법은 시스템의 물리적 특성과 잡음 모델링에 대한 가정에 따라 달라지며, 다음과 같은 절차를 통해 설정된다.</p>
+    <p>프로세스 공분산 행렬 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{Q}</span><script type="math/tex">\mathbf{Q}</script></span>는 시스템의 동적 모델에서 발생하는 불확실성(잡음)을 나타내는 중요한 요소로, 시스템 노이즈의 공분산을 표현한다. <span class="arithmatex"><span class="MathJax_Preview">\mathbf{Q}</span><script type="math/tex">\mathbf{Q}</script></span>를 구성하는 방법은 시스템의 물리적 특성과 잡음 모델링에 대한 가정에 따라 달라지며, 다음과 같은 절차를 통해 설정된다.</p>
 <h3 id="mathbfqmathbfq">프로세스 공분산 행렬 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{Q}</span><script type="math/tex">\mathbf{Q}</script></span>의 정의</h3>
-<p>프로세스 잡음 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{w}_k</span><script type="math/tex">\mathbf{w}_k</script></span>는 시스템이 시간에 따라 변화하면서 발생하는 불확실성을 나타낸다. 이 잡음은 일반적으로 가우시안 분포를 따르며, 그 공분산이 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{Q}</span><script type="math/tex">\mathbf{Q}</script></span>이다. 프로세스 공분산 행렬 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{Q}</span><script type="math/tex">\mathbf{Q}</script></span>는 시스템 상태의 변화에 대한 불확실성의 크기와 상관관계를 설명한다.</p>
+<p>시스템 노이즈 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{w}_k</span><script type="math/tex">\mathbf{w}_k</script></span>는 시스템이 시간에 따라 변화하면서 발생하는 불확실성을 나타낸다. 이 잡음은 일반적으로 가우시안 분포를 따르며, 그 공분산이 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{Q}</span><script type="math/tex">\mathbf{Q}</script></span>이다. 프로세스 공분산 행렬 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{Q}</span><script type="math/tex">\mathbf{Q}</script></span>는 시스템 상태의 변화에 대한 불확실성의 크기와 상관관계를 설명한다.</p>
 <p><span class="arithmatex"><span class="MathJax_Preview">\mathbf{Q}</span><script type="math/tex">\mathbf{Q}</script></span>는 다음과 같이 정의된다:</p>
 <div class="arithmatex">
 <div class="MathJax_Preview">
@@ -117,7 +117,7 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 - <span class="arithmatex"><span class="MathJax_Preview">q_{11}</span><script type="math/tex">q_{11}</script></span>은 위치 잡음의 분산을 나타내고,
 - <span class="arithmatex"><span class="MathJax_Preview">q_{22}</span><script type="math/tex">q_{22}</script></span>는 속도 잡음의 분산을 나타낸다.
 - <span class="arithmatex"><span class="MathJax_Preview">q_{12} = q_{21}</span><script type="math/tex">q_{12} = q_{21}</script></span>는 위치와 속도 간의 잡음 상관성을 나타낸다.</p>
-<h3 id="_1">프로세스 잡음 모델링</h3>
+<h3 id="_1">시스템 노이즈 모델링</h3>
 <p><span class="arithmatex"><span class="MathJax_Preview">\mathbf{Q}</span><script type="math/tex">\mathbf{Q}</script></span>의 실제 값들은 시스템의 물리적 특성, 측정 장비의 정확성, 그리고 모델링 과정에서 발생할 수 있는 불확실성 등을 반영하여 설정된다. 일반적으로 다음과 같은 방법으로 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{Q}</span><script type="math/tex">\mathbf{Q}</script></span>를 설정할 수 있다:</p>
 <ol>
 <li>

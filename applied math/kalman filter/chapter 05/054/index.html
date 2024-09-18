@@ -143,7 +143,7 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 <p>여기서:
 - <span class="arithmatex"><span class="MathJax_Preview">\mathbf{A}_k</span><script type="math/tex">\mathbf{A}_k</script></span>는 상태 전이 행렬(State Transition Matrix)로, 시스템의 동적 모델을 나타낸다.
 - <span class="arithmatex"><span class="MathJax_Preview">\mathbf{P}_{k-1}</span><script type="math/tex">\mathbf{P}_{k-1}</script></span>은 이전 시간 단계에서의 오차 공분산 행렬이다.
-- <span class="arithmatex"><span class="MathJax_Preview">\mathbf{Q}_k</span><script type="math/tex">\mathbf{Q}_k</script></span>는 시스템 잡음 공분산 행렬(Process Noise Covariance Matrix)로, 시스템 모델의 불확실성을 반영한다.</p>
+- <span class="arithmatex"><span class="MathJax_Preview">\mathbf{Q}_k</span><script type="math/tex">\mathbf{Q}_k</script></span>는 시스템 노이즈 공분산 행렬(Process Noise Covariance Matrix)로, 시스템 모델의 불확실성을 반영한다.</p>
 <h3 id="_4">측정 갱신에서의 오차 공분산 업데이트</h3>
 <p>측정 갱신 단계에서는 새로운 측정값을 바탕으로 추정치를 업데이트하며, 이에 따라 오차 공분산 행렬도 갱신된다. 업데이트된 오차 공분산 행렬 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{P}_k</span><script type="math/tex">\mathbf{P}_k</script></span>는 다음과 같이 계산된다:</p>
 <div class="arithmatex">
@@ -182,7 +182,7 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 <p><strong>시스템이 안정적일 때</strong>: 상태 전이 행렬 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{A}_k</span><script type="math/tex">\mathbf{A}_k</script></span>의 고유값이 단위 원 내에 위치할 때, 즉 시스템이 내재적으로 안정적일 때, 필터는 안정적으로 작동할 가능성이 높다.</p>
 </li>
 <li>
-<p><strong>잡음 공분산 행렬이 적절할 때</strong>: 시스템 잡음 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{Q}_k</span><script type="math/tex">\mathbf{Q}_k</script></span>와 측정 잡음 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{R}_k</span><script type="math/tex">\mathbf{R}_k</script></span>의 공분산 행렬이 잘 정의되어 있고, 필터에 주어진 잡음 모델이 실제 시스템의 잡음 특성을 잘 반영할 때, 필터의 성능이 향상된다.</p>
+<p><strong>잡음 공분산 행렬이 적절할 때</strong>: 시스템 노이즈 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{Q}_k</span><script type="math/tex">\mathbf{Q}_k</script></span>와 측정 잡음 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{R}_k</span><script type="math/tex">\mathbf{R}_k</script></span>의 공분산 행렬이 잘 정의되어 있고, 필터에 주어진 잡음 모델이 실제 시스템의 잡음 특성을 잘 반영할 때, 필터의 성능이 향상된다.</p>
 </li>
 </ol>
 <p>수렴성은 일반적으로 오차 공분산 행렬 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{P}_k</span><script type="math/tex">\mathbf{P}_k</script></span>의 성분들이 시간이 지남에 따라 일정한 값으로 수렴하는지를 관찰함으로써 판단할 수 있다. 수렴한 오차 공분산 행렬은 필터가 안정적인 상태 추정을 수행하고 있음을 나타내며, 이는 필터 성능의 중요한 지표가 된다.</p>
@@ -194,7 +194,7 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 <p><strong>순차 처리(Square Root Filtering)</strong>: 오차 공분산 행렬의 제곱근 행렬을 직접 계산하고 갱신하는 방법으로, 수치적 안정성을 높일 수 있다.</p>
 </li>
 <li>
-<p><strong>적응형 필터링(Adaptive Filtering)</strong>: 시스템 잡음과 측정 잡음의 특성이 시간에 따라 변할 수 있는 경우, 필터가 이 변화를 반영하도록 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{Q}_k</span><script type="math/tex">\mathbf{Q}_k</script></span>와 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{R}_k</span><script type="math/tex">\mathbf{R}_k</script></span>를 동적으로 조정하여 수치적 안정성을 유지할 수 있다.</p>
+<p><strong>적응형 필터링(Adaptive Filtering)</strong>: 시스템 노이즈과 측정 잡음의 특성이 시간에 따라 변할 수 있는 경우, 필터가 이 변화를 반영하도록 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{Q}_k</span><script type="math/tex">\mathbf{Q}_k</script></span>와 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{R}_k</span><script type="math/tex">\mathbf{R}_k</script></span>를 동적으로 조정하여 수치적 안정성을 유지할 수 있다.</p>
 </li>
 </ul>
 <h3 id="_9">오차 공분산 행렬의 해석 및 활용</h3>
@@ -238,7 +238,7 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 <p>오차 공분산 행렬 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{P}_k</span><script type="math/tex">\mathbf{P}_k</script></span>의 최적화는 필터의 성능을 개선하기 위한 중요한 과정이다. 이를 위해 고려할 수 있는 몇 가지 방법이 있다:</p>
 <ul>
 <li>
-<p><strong>적응형 칼만 필터(Adaptive Kalman Filter)</strong>: 시스템이나 측정 잡음이 시간에 따라 변하는 환경에서는, <span class="arithmatex"><span class="MathJax_Preview">\mathbf{Q}_k</span><script type="math/tex">\mathbf{Q}_k</script></span>와 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{R}_k</span><script type="math/tex">\mathbf{R}_k</script></span>를 동적으로 조정하여 필터의 오차 공분산 행렬을 최적화할 수 있다. 이는 시스템 잡음이나 측정 잡음의 실시간 특성을 반영하여 필터 성능을 향상시킨다.</p>
+<p><strong>적응형 칼만 필터(Adaptive Kalman Filter)</strong>: 시스템이나 측정 잡음이 시간에 따라 변하는 환경에서는, <span class="arithmatex"><span class="MathJax_Preview">\mathbf{Q}_k</span><script type="math/tex">\mathbf{Q}_k</script></span>와 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{R}_k</span><script type="math/tex">\mathbf{R}_k</script></span>를 동적으로 조정하여 필터의 오차 공분산 행렬을 최적화할 수 있다. 이는 시스템 노이즈이나 측정 잡음의 실시간 특성을 반영하여 필터 성능을 향상시킨다.</p>
 </li>
 <li>
 <p><strong>모델 불확실성 처리(Model Uncertainty Handling)</strong>: 실제 시스템 모델이 불완전하거나 동적 환경에서 모델이 변화할 수 있는 경우, 오차 공분산 행렬을 통해 모델 불확실성을 반영할 수 있다. 이를 위해 필터 설계 시 다양한 잡음 공분산 모델을 고려하거나, 모델 불확실성을 직접 반영하는 방법을 사용할 수 있다.</p>
