@@ -115,10 +115,12 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 \rho = \frac{m}{V}
 </script>
 </div>
-<p>여기서:
-- <span class="arithmatex"><span class="MathJax_Preview">\rho</span><script type="math/tex">\rho</script></span>는 밀도 (kg/m³)
-- <span class="arithmatex"><span class="MathJax_Preview">m</span><script type="math/tex">m</script></span>은 질량 (kg)
-- <span class="arithmatex"><span class="MathJax_Preview">V</span><script type="math/tex">V</script></span>는 체적 (m³)</p>
+<p>여기서:</p>
+<ul>
+<li><span class="arithmatex"><span class="MathJax_Preview">\rho</span><script type="math/tex">\rho</script></span>는 밀도 (kg/m³)</li>
+<li><span class="arithmatex"><span class="MathJax_Preview">m</span><script type="math/tex">m</script></span>은 질량 (kg)</li>
+<li><span class="arithmatex"><span class="MathJax_Preview">V</span><script type="math/tex">V</script></span>는 체적 (m³)</li>
+</ul>
 <p>공기의 밀도는 온도, 압력, 습도에 따라 변한다. 특히, 이상기체 법칙(Ideal Gas Law)을 사용하여 밀도와 다른 변수들 간의 관계를 명확히 할 수 있다.</p>
 <h3 id="_2">이상기체 법칙</h3>
 <p>이상기체 법칙은 공기와 같은 기체의 상태를 설명하는 데 유용하다. 이상기체 법칙은 다음과 같이 정의된다.</p>
@@ -130,12 +132,14 @@ PV = nRT
 PV = nRT
 </script>
 </div>
-<p>여기서:
-- <span class="arithmatex"><span class="MathJax_Preview">P</span><script type="math/tex">P</script></span>는 압력 (Pa, 파스칼)
-- <span class="arithmatex"><span class="MathJax_Preview">V</span><script type="math/tex">V</script></span>는 체적 (m³)
-- <span class="arithmatex"><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span>는 몰수 (몰)
-- <span class="arithmatex"><span class="MathJax_Preview">R</span><script type="math/tex">R</script></span>는 기체 상수 (<span class="arithmatex"><span class="MathJax_Preview">8.314 \text{ J/(mol·K)}</span><script type="math/tex">8.314 \text{ J/(mol·K)}</script></span>)
-- <span class="arithmatex"><span class="MathJax_Preview">T</span><script type="math/tex">T</script></span>는 절대 온도 (K)</p>
+<p>여기서:</p>
+<ul>
+<li><span class="arithmatex"><span class="MathJax_Preview">P</span><script type="math/tex">P</script></span>는 압력 (Pa, 파스칼)</li>
+<li><span class="arithmatex"><span class="MathJax_Preview">V</span><script type="math/tex">V</script></span>는 체적 (m³)</li>
+<li><span class="arithmatex"><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span>는 몰수 (몰)</li>
+<li><span class="arithmatex"><span class="MathJax_Preview">R</span><script type="math/tex">R</script></span>는 기체 상수 (<span class="arithmatex"><span class="MathJax_Preview">8.314 \text{ J/(mol·K)}</span><script type="math/tex">8.314 \text{ J/(mol·K)}</script></span>)</li>
+<li><span class="arithmatex"><span class="MathJax_Preview">T</span><script type="math/tex">T</script></span>는 절대 온도 (K)</li>
+</ul>
 <h3 id="_3">공기의 밀도 계산</h3>
 <p>공기의 밀도를 계산하기 위해, 이상기체 법칙을 변형할 수 있다.</p>
 <div class="arithmatex">
@@ -146,11 +150,13 @@ PV = nRT
 \rho = \frac{P}{RT}
 </script>
 </div>
-<p>이 식을 통해 공기의 밀도를 계산할 수 있다. 여기서:
-- <span class="arithmatex"><span class="MathJax_Preview">\rho</span><script type="math/tex">\rho</script></span>는 밀도 (kg/m³)
-- <span class="arithmatex"><span class="MathJax_Preview">P</span><script type="math/tex">P</script></span>는 압력 (Pa)
-- <span class="arithmatex"><span class="MathJax_Preview">R</span><script type="math/tex">R</script></span>는 공기용 기체 상수 (<span class="arithmatex"><span class="MathJax_Preview">287 \text{ J/(kg·K)}</span><script type="math/tex">287 \text{ J/(kg·K)}</script></span>)
-- <span class="arithmatex"><span class="MathJax_Preview">T</span><script type="math/tex">T</script></span>는 절대 온도 (K)</p>
+<p>이 식을 통해 공기의 밀도를 계산할 수 있다. 여기서:</p>
+<ul>
+<li><span class="arithmatex"><span class="MathJax_Preview">\rho</span><script type="math/tex">\rho</script></span>는 밀도 (kg/m³)</li>
+<li><span class="arithmatex"><span class="MathJax_Preview">P</span><script type="math/tex">P</script></span>는 압력 (Pa)</li>
+<li><span class="arithmatex"><span class="MathJax_Preview">R</span><script type="math/tex">R</script></span>는 공기용 기체 상수 (<span class="arithmatex"><span class="MathJax_Preview">287 \text{ J/(kg·K)}</span><script type="math/tex">287 \text{ J/(kg·K)}</script></span>)</li>
+<li><span class="arithmatex"><span class="MathJax_Preview">T</span><script type="math/tex">T</script></span>는 절대 온도 (K)</li>
+</ul>
 <h3 id="_4">공기 압력</h3>
 <p>공기 압력 <span class="arithmatex"><span class="MathJax_Preview">P</span><script type="math/tex">P</script></span>는 단위 면적당 작용하는 힘을 의미하며, 일반적으로 파스칼(Pa) 단위로 측정된다. 압력은 높이에 따라 변하며, 이는 대기압의 중요한 특성 중 하나이다.</p>
 <h3 id="_5">대기압</h3>
@@ -165,13 +171,15 @@ P(h) = P_0 \exp\left( -\frac{Mgh}{RT} \right)
 P(h) = P_0 \exp\left( -\frac{Mgh}{RT} \right)
 </script>
 </div>
-<p>여기서:
-- <span class="arithmatex"><span class="MathJax_Preview">P(h)</span><script type="math/tex">P(h)</script></span>는 높이 <span class="arithmatex"><span class="MathJax_Preview">h</span><script type="math/tex">h</script></span>에서의 압력 (Pa)
-- <span class="arithmatex"><span class="MathJax_Preview">P_0</span><script type="math/tex">P_0</script></span>는 해수면에서의 표준 압력 (101,325 Pa)
-- <span class="arithmatex"><span class="MathJax_Preview">M</span><script type="math/tex">M</script></span>는 공기의 몰 질량 (<span class="arithmatex"><span class="MathJax_Preview">0.029 \text{ kg/mol}</span><script type="math/tex">0.029 \text{ kg/mol}</script></span>)
-- <span class="arithmatex"><span class="MathJax_Preview">g</span><script type="math/tex">g</script></span>는 중력 가속도 (<span class="arithmatex"><span class="MathJax_Preview">9.81 \text{ m/s}^2</span><script type="math/tex">9.81 \text{ m/s}^2</script></span>)
-- <span class="arithmatex"><span class="MathJax_Preview">R</span><script type="math/tex">R</script></span>는 기체 상수 (<span class="arithmatex"><span class="MathJax_Preview">8.314 \text{ J/(mol·K)}</span><script type="math/tex">8.314 \text{ J/(mol·K)}</script></span>)
-- <span class="arithmatex"><span class="MathJax_Preview">T</span><script type="math/tex">T</script></span>는 절대 온도 (K)</p>
+<p>여기서:</p>
+<ul>
+<li><span class="arithmatex"><span class="MathJax_Preview">P(h)</span><script type="math/tex">P(h)</script></span>는 높이 <span class="arithmatex"><span class="MathJax_Preview">h</span><script type="math/tex">h</script></span>에서의 압력 (Pa)</li>
+<li><span class="arithmatex"><span class="MathJax_Preview">P_0</span><script type="math/tex">P_0</script></span>는 해수면에서의 표준 압력 (101,325 Pa)</li>
+<li><span class="arithmatex"><span class="MathJax_Preview">M</span><script type="math/tex">M</script></span>는 공기의 몰 질량 (<span class="arithmatex"><span class="MathJax_Preview">0.029 \text{ kg/mol}</span><script type="math/tex">0.029 \text{ kg/mol}</script></span>)</li>
+<li><span class="arithmatex"><span class="MathJax_Preview">g</span><script type="math/tex">g</script></span>는 중력 가속도 (<span class="arithmatex"><span class="MathJax_Preview">9.81 \text{ m/s}^2</span><script type="math/tex">9.81 \text{ m/s}^2</script></span>)</li>
+<li><span class="arithmatex"><span class="MathJax_Preview">R</span><script type="math/tex">R</script></span>는 기체 상수 (<span class="arithmatex"><span class="MathJax_Preview">8.314 \text{ J/(mol·K)}</span><script type="math/tex">8.314 \text{ J/(mol·K)}</script></span>)</li>
+<li><span class="arithmatex"><span class="MathJax_Preview">T</span><script type="math/tex">T</script></span>는 절대 온도 (K)</li>
+</ul>
 <h3 id="_7">온도와 밀도 및 압력의 관계</h3>
 <p>온도는 공기의 밀도와 압력에 중요한 영향을 미친다. 온도가 높아지면 기체 분자들의 운동 에너지가 증가하여 분자들이 더 많이 움직이게 되므로, 공기의 밀도는 감소하고 압력은 증가하게 된다.</p>
 <h4 id="_8">찰스의 법칙</h4>
@@ -184,9 +192,11 @@ P(h) = P_0 \exp\left( -\frac{Mgh}{RT} \right)
 \frac{V_1}{T_1} = \frac{V_2}{T_2}
 </script>
 </div>
-<p>여기서:
-- <span class="arithmatex"><span class="MathJax_Preview">V_1, V_2</span><script type="math/tex">V_1, V_2</script></span>는 각각 초기와 최종 체적
-- <span class="arithmatex"><span class="MathJax_Preview">T_1, T_2</span><script type="math/tex">T_1, T_2</script></span>는 각각 초기와 최종 절대 온도</p>
+<p>여기서:</p>
+<ul>
+<li><span class="arithmatex"><span class="MathJax_Preview">V_1, V_2</span><script type="math/tex">V_1, V_2</script></span>는 각각 초기와 최종 체적</li>
+<li><span class="arithmatex"><span class="MathJax_Preview">T_1, T_2</span><script type="math/tex">T_1, T_2</script></span>는 각각 초기와 최종 절대 온도</li>
+</ul>
 <h4 id="_9">보일의 법칙</h4>
 <p>보일의 법칙은 일정한 온도하에서 기체의 압력과 체적이 반비례하는 관계를 설명한다.</p>
 <div class="arithmatex">
