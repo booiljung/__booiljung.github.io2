@@ -33,7 +33,7 @@
       var is_top_frame = false;
         
         var pageToc = [
-          {title: "\uc65c \uc6b0\ub9ac\ub294 \uc870\uc9c1\uc744 \ub9cc\ub4dc\ub294\uac00?", url: "#_top", children: [
+          {title: "\ud611\ub825 \ucc45\uc784 \uc131\uacfc", url: "#_top", children: [
           ]},
           {title: "\uc5b4\ub824\uc6b4 \uc218\ud559 (Mathematics)", url: "#mathematics", children: [
           ]},
@@ -47,7 +47,7 @@
           ]},
           {title: "\ud504\ub85c\uadf8\ub798\ubc0d \uc5b8\uc5b4\uc640 \ud504\ub808\uc784\uc6cc\ud06c \ub77c\uc774\ube0c\ub7ec\ub9ac", url: "#_5", children: [
           ]},
-          {title: "Control Egineering", url: "#control-egineering", children: [
+          {title: "\uc81c\uc5b4\uacf5\ud559 (Control Engineering)", url: "#control-engineering", children: [
           ]},
           {title: "\ub370\uc774\ud130\ubca0\uc774\uc2a4 \uad00\ub9ac \uc2dc\uc2a4\ud15c", url: "#_6", children: [
           ]},
@@ -106,21 +106,22 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 
     
 
-    <h4 id="_1">왜 우리는 조직을 만드는가?</h4>
+    <h4 id="_1">협력 책임 성과</h4>
 <ul>
-<li>조직에서 역할과 책임 (Roles and Responsibilities)</li>
-<li>로봇 연구 개발 프로젝트 관리</li>
+<li>역할과 책임</li>
+<li>로봇 프로젝트 관리</li>
 </ul>
 <h4 id="mathematics">어려운 수학 (Mathematics)</h4>
 <ul>
-<li>선형대수학</li>
-<li>벡터의 기본 연산, 행렬의 기본 연산, 벡터와 행렬간의 기본 연산</li>
-<li>행렬의 분해: LU 분해, QR 분해, 고유값 분해, 숄레스키 분해, 특이값 분해, 비영행렬 분해, 잠재요인 분해</li>
+<li>선형대수학 (Linear Algebra): 벡터, 행렬, 행렬의 분해</li>
+<li>사영기하학 (Projective Geometry)</li>
 </ul>
 <h4 id="applied-mathematics">응용 수학 (Applied Mathematics)</h4>
 <ul>
-<li>동차 좌표계 (Homogeneous Coordinates)</li>
-<li>Kalman Filter는 쉽지 않아!</li>
+<li>자동 미분 (Automatic Differentiation)</li>
+<li>동차 좌표계 (Homogeinous Geometry)</li>
+<li>칼만 필터 (Kalman Filter)</li>
+<li>확장 칼만 필터 (Extended Kalman Filter)</li>
 </ul>
 <h4 id="_2">연결과 통합</h4>
 <ul>
@@ -128,15 +129,18 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 </ul>
 <h4 id="_3">하드웨어 시스템 엔지니어링</h4>
 <ul>
-<li>GPU 설계: GPU를 제대로 사용하기 위한 이해</li>
-<li>Jetson</li>
+<li><strong>GPU 설계</strong> : 보다 나은 병렬 컴퓨팅 소프트웨어 개발을 위한</li>
+<li><strong>Jetson</strong></li>
 </ul>
 <h4 id="_4">리눅스</h4>
 <ul>
-<li><strong>Xenomai</strong>: 실시간 프레임워크 커널</li>
-<li><strong>Preempt RT</strong>: 리눅스 실시간 애플리케이션을 위한</li>
-<li><strong>Yocto 프로젝트</strong>: 임베디드 리눅스 빌드</li>
-<li>Ubuntu 팁</li>
+<li><strong>Xenomai</strong> : 실시간 프레임워크 커널</li>
+<li>
+<p><strong>Preempt RT</strong> : 리눅스 실시간 애플리케이션을 위한</p>
+</li>
+<li>
+<p><strong>Yocto 프로젝트</strong> : 임베디드 리눅스 빌드</p>
+</li>
 </ul>
 <h4 id="_5">프로그래밍 언어와 프레임워크 라이브러리</h4>
 <ul>
@@ -145,9 +149,9 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 <li><strong>Dart</strong>: 모던 크로스 플랫폼 개발을 위한 프로그래밍 언어</li>
 <li><strong>Flutter</strong>: 모던 크로스 플랫폼 개발을 위한 프레임워크</li>
 </ul>
-<h4 id="control-egineering">Control Egineering</h4>
+<h4 id="control-engineering">제어공학 (Control Engineering)</h4>
 <ul>
-<li>BLDC 모터 제어</li>
+<li><strong>BLDC 모터 제어</strong></li>
 </ul>
 <h4 id="_6">데이터베이스 관리 시스템</h4>
 <ul>
@@ -155,37 +159,38 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 </ul>
 <h4 id="_7">센서 데이터 처리</h4>
 <ul>
-<li>카메라 보정 (Camera calibration)</li>
-<li>에피폴라 기하학 (Epipolar Geometry)</li>
-<li>자율 주행을 위한 포인트 클라우드 처리</li>
+<li><strong>카메라 보정 (Camera calibration)</strong></li>
+<li><strong>에피폴라 기하학 (Epipolar Geometry)</strong></li>
+<li><strong>포인트 클라우드 처리</strong>: 자율 주행을 위한</li>
 </ul>
 <h4 id="mechanics">메카닉스 (Mechanics)의 매운맛</h4>
 <ul>
-<li>물리 엔진의 원리</li>
+<li><strong>항공 동역학 (Aerodynamics)</strong></li>
+<li><strong>물리 엔진의 원리 (Physics Engine)</strong></li>
+<li><strong>충돌 검출 (Collision Detection)</strong></li>
 </ul>
 <h4 id="_8">인공지능</h4>
 <ul>
-<li>자동 미분 (Automatic Differentiation)</li>
+<li><strong>Python으로 ChatGPT API 사용하기</strong></li>
 <li>Transformer and Pytorch</li>
 <li>딥러닝</li>
-<li>Python으로 ChatGPT API 사용하기</li>
 </ul>
 <h4 id="_9">로봇</h4>
 <ul>
 <li>
-<p>로봇에 대한 관점과 정의</p>
+<p><strong>쿼드콥터 드론</strong>을 위한 FC와 실시간 리눅스 기반 제어 소프트웨어 개발</p>
 </li>
 <li>
-<p>로봇의 종류와 분류</p>
+<p><strong>드론 플랫폼</strong></p>
 </li>
 <li>
-<p>ROS2</p>
+<p><strong>ROS2 Humble</strong></p>
 </li>
 <li>
-<p>고성능 FC  프로젝트</p>
+<p><strong>Unity 로봇 시뮬레이션</strong></p>
 </li>
 <li>
-<p>PX4 소스코드의 이해</p>
+<p><strong>URDF, SDF로 로봇 시뮬레이션 만들기</strong></p>
 </li>
 </ul>
 <h4 id="_10">소프트웨어 활용 사례</h4>
