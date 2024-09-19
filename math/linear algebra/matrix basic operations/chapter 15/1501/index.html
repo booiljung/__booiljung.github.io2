@@ -94,50 +94,50 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 
     
 
-    <p>양의 정부호 행렬(Positive Definite Matrix)은 주어진 대칭 행렬 <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{A}</span><script type="math/tex">\mathbf{A}</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{A}</span><script type="math/tex">\mathbf{A}</script></span></script></span>에 대해 다음 조건을 만족하는 행렬을 의미한다:</p>
+    <p>양의 정부호 행렬(Positive Definite Matrix)은 주어진 대칭 행렬 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{A}</span><script type="math/tex">\mathbf{A}</script></span>에 대해 다음 조건을 만족하는 행렬을 의미한다:</p>
 <ol>
-<li><strong>대칭성</strong>: <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{A}</span><script type="math/tex">\mathbf{A}</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{A}</span><script type="math/tex">\mathbf{A}</script></span></script></span>는 대칭 행렬이어야 한다, 즉:</li>
+<li><strong>대칭성</strong>: <span class="arithmatex"><span class="MathJax_Preview">\mathbf{A}</span><script type="math/tex">\mathbf{A}</script></span>는 대칭 행렬이어야 한다, 즉:</li>
 </ol>
 <p>$$
    \mathbf{A} = \mathbf{A}^T</p>
 <p>$$</p>
 <ol>
-<li><strong>양의 정부호 조건</strong>: 행렬 <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{A}</span><script type="math/tex">\mathbf{A}</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{A}</span><script type="math/tex">\mathbf{A}</script></span></script></span>의 모든 자명하지 않은 벡터 <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{x}</span><script type="math/tex">\mathbf{x}</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{x}</span><script type="math/tex">\mathbf{x}</script></span></script></span>에 대해 다음 조건을 만족해야 한다:</li>
+<li><strong>양의 정부호 조건</strong>: 행렬 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{A}</span><script type="math/tex">\mathbf{A}</script></span>의 모든 자명하지 않은 벡터 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{x}</span><script type="math/tex">\mathbf{x}</script></span>에 대해 다음 조건을 만족해야 한다:</li>
 </ol>
 <p>$$
    \mathbf{x}^T \mathbf{A} \mathbf{x} &gt; 0 \quad \forall \mathbf{x} \neq \mathbf{0}</p>
 <p>$$</p>
-<p>여기서 <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{x}</span><script type="math/tex">\mathbf{x}</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{x}</span><script type="math/tex">\mathbf{x}</script></span></script></span>는 적절한 길이를 가진 아무 개 벡터이다.</p>
-<p>이 정의는 기하학적으로 양의 정부호 행렬이 형성하는 이차 형식 $$ \mathbf{x}^T \mathbf{A} \mathbf{x} $$이 항상 양수를 반환하게끔 보장한다는 것을 의미한다.</p>
+<p>여기서 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{x}</span><script type="math/tex">\mathbf{x}</script></span>는 적절한 길이를 가진 아무 개 벡터이다.</p>
+<p>이 정의는 기하학적으로 양의 정부호 행렬이 형성하는 이차 형식 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{x}^T \mathbf{A} \mathbf{x}</span><script type="math/tex">\mathbf{x}^T \mathbf{A} \mathbf{x}</script></span>이 항상 양수를 반환하게끔 보장한다는 것을 의미한다.</p>
 <h3 id="_1">양의 정부호 행렬의 성질</h3>
 <p>양의 정부호 행렬은 여러 가지 중요한 성질을 가지고 있다. 이 중 몇 가지 주요한 성질을 살펴보면:</p>
 <ul>
-<li><strong>고윳값</strong>: 양의 정부호 행렬 <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{A}</span><script type="math/tex">\mathbf{A}</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{A}</span><script type="math/tex">\mathbf{A}</script></span></script></span>는 모든 고윳값 <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">\lambda</span><script type="math/tex">\lambda</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">\lambda</span><script type="math/tex">\lambda</script></span></script></span>가 양수이다 (<span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">\lambda &gt; 0</span><script type="math/tex">\lambda > 0</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">\lambda &gt; 0</span><script type="math/tex">\lambda > 0</script></span></script></span>).</li>
-<li><strong>주대각 성분</strong>: 양의 정부호 행렬 <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{A}</span><script type="math/tex">\mathbf{A}</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{A}</span><script type="math/tex">\mathbf{A}</script></span></script></span>의 모든 주대각 성분은 양수이다.</li>
-<li><strong>코시-슈바르츠 부등식</strong>: <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{A}</span><script type="math/tex">\mathbf{A}</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{A}</span><script type="math/tex">\mathbf{A}</script></span></script></span>가 양의 정부호 행렬이면 $$\mathbf{x}^T \mathbf{A} \mathbf{y} \leq (\mathbf{x}^T \mathbf{A} \mathbf{x})^{1/2} (\mathbf{y}^T \mathbf{A} \mathbf{y})^{1/2} $$.</li>
+<li><strong>고윳값</strong>: 양의 정부호 행렬 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{A}</span><script type="math/tex">\mathbf{A}</script></span>는 모든 고윳값 <span class="arithmatex"><span class="MathJax_Preview">\lambda</span><script type="math/tex">\lambda</script></span>가 양수이다 (<span class="arithmatex"><span class="MathJax_Preview">\lambda &gt; 0</span><script type="math/tex">\lambda > 0</script></span>).</li>
+<li><strong>주대각 성분</strong>: 양의 정부호 행렬 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{A}</span><script type="math/tex">\mathbf{A}</script></span>의 모든 주대각 성분은 양수이다.</li>
+<li><strong>코시-슈바르츠 부등식</strong>: <span class="arithmatex"><span class="MathJax_Preview">\mathbf{A}</span><script type="math/tex">\mathbf{A}</script></span>가 양의 정부호 행렬이면 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{x}^T \mathbf{A} \mathbf{y} \leq (\mathbf{x}^T \mathbf{A} \mathbf{x})^{1/2} (\mathbf{y}^T \mathbf{A} \mathbf{y})^{1/2}</span><script type="math/tex">\mathbf{x}^T \mathbf{A} \mathbf{y} \leq (\mathbf{x}^T \mathbf{A} \mathbf{x})^{1/2} (\mathbf{y}^T \mathbf{A} \mathbf{y})^{1/2}</script></span>.</li>
 <li><strong>실특성공간</strong>: 모든 실수 계수 벡터가 구성하는 특성 공간이 실수이다.</li>
 </ul>
 <p>이 외에도 양의 정부호 행렬은 선형대수학 및 최적화 이론에서 중요한 역할을 한다. </p>
 <h3 id="_2">양의 준정부호 행렬의 정의</h3>
 <p>양의 정부호 행렬과 유사한 개념으로 양의 준정부호 행렬(Positive Semidefinite Matrix)이 있다. 이는 다음 조건을 만족하는 행렬을 의미한다:</p>
 <ol>
-<li><strong>대칭성</strong>: <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{A}</span><script type="math/tex">\mathbf{A}</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{A}</span><script type="math/tex">\mathbf{A}</script></span></script></span>는 대칭 행렬이어야 한다, 즉:</li>
+<li><strong>대칭성</strong>: <span class="arithmatex"><span class="MathJax_Preview">\mathbf{A}</span><script type="math/tex">\mathbf{A}</script></span>는 대칭 행렬이어야 한다, 즉:</li>
 </ol>
 <p>$$
    \mathbf{A} = \mathbf{A}^T</p>
 <p>$$</p>
 <ol>
-<li><strong>양의 준정부호 조건</strong>: 행렬 <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{A}</span><script type="math/tex">\mathbf{A}</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{A}</span><script type="math/tex">\mathbf{A}</script></span></script></span>의 모든 자명하지 않은 벡터 <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{x}</span><script type="math/tex">\mathbf{x}</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{x}</span><script type="math/tex">\mathbf{x}</script></span></script></span>에 대해 다음 조건을 만족해야 한다:</li>
+<li><strong>양의 준정부호 조건</strong>: 행렬 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{A}</span><script type="math/tex">\mathbf{A}</script></span>의 모든 자명하지 않은 벡터 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{x}</span><script type="math/tex">\mathbf{x}</script></span>에 대해 다음 조건을 만족해야 한다:</li>
 </ol>
 <p>$$
    \mathbf{x}^T \mathbf{A} \mathbf{x} \geq 0 \quad \forall \mathbf{x}</p>
 <p>$$</p>
-<p>여기서 <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{x}</span><script type="math/tex">\mathbf{x}</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{x}</span><script type="math/tex">\mathbf{x}</script></span></script></span>는 적절한 길이를 가진 모든 벡터를 포함한다.</p>
+<p>여기서 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{x}</span><script type="math/tex">\mathbf{x}</script></span>는 적절한 길이를 가진 모든 벡터를 포함한다.</p>
 <h3 id="_3">양의 준정부호 행렬의 성질</h3>
 <p>양의 준정부호 행렬의 주요 성질은 다음과 같다:</p>
 <ul>
-<li><strong>고윳값</strong>: 양의 준정부호 행렬 <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{A}</span><script type="math/tex">\mathbf{A}</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{A}</span><script type="math/tex">\mathbf{A}</script></span></script></span>의 모든 고윳값 <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">\lambda</span><script type="math/tex">\lambda</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">\lambda</span><script type="math/tex">\lambda</script></span></script></span>는 비음수이다 (<span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">\lambda \geq 0</span><script type="math/tex">\lambda \geq 0</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">\lambda \geq 0</span><script type="math/tex">\lambda \geq 0</script></span></script></span>).</li>
-<li><strong>주대각 성분</strong>: 양의 준정부호 행렬 <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{A}</span><script type="math/tex">\mathbf{A}</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{A}</span><script type="math/tex">\mathbf{A}</script></span></script></span>의 모든 주대각 성분은 비음수이다.</li>
+<li><strong>고윳값</strong>: 양의 준정부호 행렬 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{A}</span><script type="math/tex">\mathbf{A}</script></span>의 모든 고윳값 <span class="arithmatex"><span class="MathJax_Preview">\lambda</span><script type="math/tex">\lambda</script></span>는 비음수이다 (<span class="arithmatex"><span class="MathJax_Preview">\lambda \geq 0</span><script type="math/tex">\lambda \geq 0</script></span>).</li>
+<li><strong>주대각 성분</strong>: 양의 준정부호 행렬 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{A}</span><script type="math/tex">\mathbf{A}</script></span>의 모든 주대각 성분은 비음수이다.</li>
 <li><strong>행렬식</strong>: 양의 준정부호 행렬의 행렬식은 비음수이다.</li>
 <li><strong>실특성공간</strong>: 모든 실수 계수 벡터가 구성하는 특성 공간이 실수이다.</li>
 </ul>
@@ -148,7 +148,7 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 <li><strong>고윳값</strong>: 행렬의 모든 고윳값을 계산하여 양수인지 확인한다.</li>
 <li><strong>주대각 행렬식(minor determinant) 테스트</strong>: 모든 주대각 행렬식이 양수인지 확인한다.</li>
 <li><strong>축소 성질</strong>: 행렬의 모든 축소 행렬(principal submatrix)의 행렬식이 양수(양의 정부호 경우) 또는 비음수(양의 준정부호 경우)인지 확인한다.</li>
-<li><strong>치올레스키 분해</strong>: 행렬 <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{A}</span><script type="math/tex">\mathbf{A}</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{A}</span><script type="math/tex">\mathbf{A}</script></span></script></span>가 $$ \mathbf{A} = \mathbf{L} \mathbf{L}^T $$ 형태로 분해될 수 있는지 확인한다. 여기서 <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{L}</span><script type="math/tex">\mathbf{L}</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{L}</span><script type="math/tex">\mathbf{L}</script></span></script></span>은 하삼각 행렬이다. 분해가 가능한 경우 양의 정부호 행렬이다.</li>
+<li><strong>치올레스키 분해</strong>: 행렬 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{A}</span><script type="math/tex">\mathbf{A}</script></span>가 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{A} = \mathbf{L} \mathbf{L}^T</span><script type="math/tex">\mathbf{A} = \mathbf{L} \mathbf{L}^T</script></span> 형태로 분해될 수 있는지 확인한다. 여기서 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{L}</span><script type="math/tex">\mathbf{L}</script></span>은 하삼각 행렬이다. 분해가 가능한 경우 양의 정부호 행렬이다.</li>
 </ol>
 <h3 id="_5">양의 정부호 및 양의 준정부호 행렬의 예</h3>
 <h4 id="_6">양의 정부호 행렬의 예</h4>
@@ -167,8 +167,8 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 </script>
 </div>
 <p>이 행렬은 다음 조건을 만족한다:
-- <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{A}</span><script type="math/tex">\mathbf{A}</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{A}</span><script type="math/tex">\mathbf{A}</script></span></script></span>는 대칭 행렬이다.
-- <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{x}^T \mathbf{A} \mathbf{x} &gt; 0</span><script type="math/tex">\mathbf{x}^T \mathbf{A} \mathbf{x} > 0</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{x}^T \mathbf{A} \mathbf{x} &gt; 0</span><script type="math/tex">\mathbf{x}^T \mathbf{A} \mathbf{x} > 0</script></span></script></span> 조건을 만족한다.</p>
+- <span class="arithmatex"><span class="MathJax_Preview">\mathbf{A}</span><script type="math/tex">\mathbf{A}</script></span>는 대칭 행렬이다.
+- <span class="arithmatex"><span class="MathJax_Preview">\mathbf{x}^T \mathbf{A} \mathbf{x} &gt; 0</span><script type="math/tex">\mathbf{x}^T \mathbf{A} \mathbf{x} > 0</script></span> 조건을 만족한다.</p>
 <h4 id="_7">양의 준정부호 행렬의 예</h4>
 <div class="arithmatex">
 <div class="MathJax_Preview">
@@ -187,8 +187,8 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 </script>
 </div>
 <p>이 행렬은 다음 조건을 만족한다:
-- <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{B}</span><script type="math/tex">\mathbf{B}</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{B}</span><script type="math/tex">\mathbf{B}</script></span></script></span>는 대칭 행렬이다.
-- <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{x}^T \mathbf{B} \mathbf{x} \geq 0</span><script type="math/tex">\mathbf{x}^T \mathbf{B} \mathbf{x} \geq 0</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{x}^T \mathbf{B} \mathbf{x} \geq 0</span><script type="math/tex">\mathbf{x}^T \mathbf{B} \mathbf{x} \geq 0</script></span></script></span> 조건을 만족한다.</p>
+- <span class="arithmatex"><span class="MathJax_Preview">\mathbf{B}</span><script type="math/tex">\mathbf{B}</script></span>는 대칭 행렬이다.
+- <span class="arithmatex"><span class="MathJax_Preview">\mathbf{x}^T \mathbf{B} \mathbf{x} \geq 0</span><script type="math/tex">\mathbf{x}^T \mathbf{B} \mathbf{x} \geq 0</script></span> 조건을 만족한다.</p>
 <p>이와 같은 예제는 양의 정부호 및 양의 준정부호 행렬의 이해를 돕는다. 이 개념은 다양한 수학적 및 응용적 상황에서 매우 중요하다.</p>
 
   <br>

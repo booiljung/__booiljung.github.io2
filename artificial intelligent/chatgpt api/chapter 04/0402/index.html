@@ -159,9 +159,9 @@ state.add_message(&quot;user&quot;, &quot;How's the weather today?&quot;)
 <p>s_{t+1} = \delta(s_t, a_t)</p>
 <p>$$</p>
 <p>여기서:
-- $$ s_t $$는 현재 상태를 나타내고,
-- $$ a_t $$는 현재 상태에서의 입력(사용자 입력)을 나타낸다.
-- $$ \delta $$는 상태 전이 함수로, 주어진 입력에 따라 새로운 상태 $$ s_{t+1} $$을 반환한다.</p>
+- <span class="arithmatex"><span class="MathJax_Preview">s_t</span><script type="math/tex">s_t</script></span>는 현재 상태를 나타내고,
+- <span class="arithmatex"><span class="MathJax_Preview">a_t</span><script type="math/tex">a_t</script></span>는 현재 상태에서의 입력(사용자 입력)을 나타낸다.
+- <span class="arithmatex"><span class="MathJax_Preview">\delta</span><script type="math/tex">\delta</script></span>는 상태 전이 함수로, 주어진 입력에 따라 새로운 상태 <span class="arithmatex"><span class="MathJax_Preview">s_{t+1}</span><script type="math/tex">s_{t+1}</script></span>을 반환한다.</p>
 <pre><code class="language-python">class DialogueManager:
     def __init__(self):
         self.state = &quot;GREETING&quot;
@@ -188,9 +188,9 @@ print(response)
 <p>\mathbf{S}_{t+1} = f(\mathbf{S}_t, \mathbf{X}_t)</p>
 <p>$$</p>
 <p>여기서:
-- $$ \mathbf{S}<em>t $$는 현재 상태 벡터를 나타내고,
-- $$ \mathbf{X}_t $$는 현재 입력 벡터를 나타낸다.
-- $$ f $$는 상태 전이 함수로, 새로운 상태 $$ \mathbf{S}</em>{t+1} $$를 생성한다.</p>
+- <span class="arithmatex"><span class="MathJax_Preview">\mathbf{S}_t</span><script type="math/tex">\mathbf{S}_t</script></span>는 현재 상태 벡터를 나타내고,
+- <span class="arithmatex"><span class="MathJax_Preview">\mathbf{X}_t</span><script type="math/tex">\mathbf{X}_t</script></span>는 현재 입력 벡터를 나타낸다.
+- <span class="arithmatex"><span class="MathJax_Preview">f</span><script type="math/tex">f</script></span>는 상태 전이 함수로, 새로운 상태 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{S}_{t+1}</span><script type="math/tex">\mathbf{S}_{t+1}</script></span>를 생성한다.</p>
 <h3 id="_6">상태 간 전이 조건</h3>
 <p>대화의 흐름을 원활하게 유지하기 위해 상태 간 전이 조건을 명확히 정의하는 것이 중요하다. 전이 조건은 특정 단어나 구문을 기반으로 할 수 있으며, 이러한 조건이 충족되면 대화 상태가 전이된다.</p>
 <p>예를 들어, 사용자가 "날씨"에 대해 질문할 경우, 상태가 "ASKING"에서 "PROVIDING_INFO"로 전이될 수 있다.</p>

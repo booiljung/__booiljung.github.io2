@@ -112,9 +112,9 @@ G = np.dot(A, A.T)
 
 print(&quot;대칭 양의 정부호 행렬 G:\n&quot;, G)
 </code></pre>
-<p>위의 코드에서 <code>G</code>는 <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">100 \times 100</span><script type="math/tex">100 \times 100</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">100 \times 100</span><script type="math/tex">100 \times 100</script></span></script></span> 크기의 대칭 양의 정부호 행렬이다.</p>
+<p>위의 코드에서 <code>G</code>는 <span class="arithmatex"><span class="MathJax_Preview">100 \times 100</span><script type="math/tex">100 \times 100</script></span> 크기의 대칭 양의 정부호 행렬이다.</p>
 <h3 id="cholesky">Cholesky 분해 수행</h3>
-<p>이제 생성한 대칭 양의 정부호 행렬 $$ \mathbf{G} $$ 에 대해 Cholesky 분해를 수행한다.</p>
+<p>이제 생성한 대칭 양의 정부호 행렬 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{G}</span><script type="math/tex">\mathbf{G}</script></span> 에 대해 Cholesky 분해를 수행한다.</p>
 <div class="arithmatex">
 <div class="MathJax_Preview">
  \mathbf{G} = \mathbf{L} \mathbf{L}^T 
@@ -123,13 +123,13 @@ print(&quot;대칭 양의 정부호 행렬 G:\n&quot;, G)
  \mathbf{G} = \mathbf{L} \mathbf{L}^T 
 </script>
 </div>
-<p>여기서 $$ \mathbf{L} $$ 은 하삼각 행렬이다.</p>
+<p>여기서 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{L}</span><script type="math/tex">\mathbf{L}</script></span> 은 하삼각 행렬이다.</p>
 <pre><code class="language-python">L = np.linalg.cholesky(G)
 
 print(&quot;Cholesky 분해 후 하삼각 행렬 L:\n&quot;, L)
 </code></pre>
 <h3 id="_3">결과 확인</h3>
-<p>Cholesky 분해의 결과로 얻은 하삼각 행렬 $$ \mathbf{L} $$ 을 이용해 원래의 행렬 $$ \mathbf{G} $$ 를 재구성하고, 이를 통해 정확성을 확인한다.</p>
+<p>Cholesky 분해의 결과로 얻은 하삼각 행렬 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{L}</span><script type="math/tex">\mathbf{L}</script></span> 을 이용해 원래의 행렬 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{G}</span><script type="math/tex">\mathbf{G}</script></span> 를 재구성하고, 이를 통해 정확성을 확인한다.</p>
 <pre><code class="language-python">G_reconstructed = np.dot(L, L.T)
 
 print(&quot;복원된 행렬 G:\n&quot;, G_reconstructed)

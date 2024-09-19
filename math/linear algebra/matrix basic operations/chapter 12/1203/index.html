@@ -97,10 +97,10 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
     
 
     <h3 id="_1">선형 변환과 대각화</h3>
-<p>선형 변환은 벡터 공간을 그 자체 또는 다른 벡터 공간으로 매핑하는 함수이다. 행렬을 대각화하면 선형 변환을 더 쉽게 분석할 수 있다. 만약 <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{A}</span><script type="math/tex">\mathbf{A}</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{A}</span><script type="math/tex">\mathbf{A}</script></span></script></span>가 대각화될 수 있는 행렬이라면, <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{A} = \mathbf{P} \mathbf{D} \mathbf{P}^{-1}</span><script type="math/tex">\mathbf{A} = \mathbf{P} \mathbf{D} \mathbf{P}^{-1}</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{A} = \mathbf{P} \mathbf{D} \mathbf{P}^{-1}</span><script type="math/tex">\mathbf{A} = \mathbf{P} \mathbf{D} \mathbf{P}^{-1}</script></span></script></span>로 표현할 수 있다. 여기서:
-- <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{D}</span><script type="math/tex">\mathbf{D}</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{D}</span><script type="math/tex">\mathbf{D}</script></span></script></span>는 <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{A}</span><script type="math/tex">\mathbf{A}</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{A}</span><script type="math/tex">\mathbf{A}</script></span></script></span>의 고유값을 주대각선 요소로 갖는 대각 행렬이다.
-- <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{P}</span><script type="math/tex">\mathbf{P}</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{P}</span><script type="math/tex">\mathbf{P}</script></span></script></span>는 <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{A}</span><script type="math/tex">\mathbf{A}</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{A}</span><script type="math/tex">\mathbf{A}</script></span></script></span>의 고유벡터를 열 벡터로 갖는 행렬이다.</p>
-<p>이를 이용하여 선형 변환 <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{T}</span><script type="math/tex">\mathbf{T}</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{T}</span><script type="math/tex">\mathbf{T}</script></span></script></span>에 대응하는 행렬 <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{A}</span><script type="math/tex">\mathbf{A}</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{A}</span><script type="math/tex">\mathbf{A}</script></span></script></span>의 성질을 단순화하여 분석할 수 있다.</p>
+<p>선형 변환은 벡터 공간을 그 자체 또는 다른 벡터 공간으로 매핑하는 함수이다. 행렬을 대각화하면 선형 변환을 더 쉽게 분석할 수 있다. 만약 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{A}</span><script type="math/tex">\mathbf{A}</script></span>가 대각화될 수 있는 행렬이라면, <span class="arithmatex"><span class="MathJax_Preview">\mathbf{A} = \mathbf{P} \mathbf{D} \mathbf{P}^{-1}</span><script type="math/tex">\mathbf{A} = \mathbf{P} \mathbf{D} \mathbf{P}^{-1}</script></span>로 표현할 수 있다. 여기서:
+- <span class="arithmatex"><span class="MathJax_Preview">\mathbf{D}</span><script type="math/tex">\mathbf{D}</script></span>는 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{A}</span><script type="math/tex">\mathbf{A}</script></span>의 고유값을 주대각선 요소로 갖는 대각 행렬이다.
+- <span class="arithmatex"><span class="MathJax_Preview">\mathbf{P}</span><script type="math/tex">\mathbf{P}</script></span>는 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{A}</span><script type="math/tex">\mathbf{A}</script></span>의 고유벡터를 열 벡터로 갖는 행렬이다.</p>
+<p>이를 이용하여 선형 변환 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{T}</span><script type="math/tex">\mathbf{T}</script></span>에 대응하는 행렬 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{A}</span><script type="math/tex">\mathbf{A}</script></span>의 성질을 단순화하여 분석할 수 있다.</p>
 <h3 id="_2">미분 방정식의 해</h3>
 <p>대각화는 상수 계수를 갖는 선형 미분 방정식을 풀 때 유용하게 사용할 수 있다. 예를 들어, 다음과 같은 시스템을 고려해보겠다.</p>
 <div class="arithmatex">
@@ -111,8 +111,8 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 \frac{d\mathbf{x}(t)}{dt} = \mathbf{A}\mathbf{x}(t)
 </script>
 </div>
-<p>여기서 <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{x}(t)</span><script type="math/tex">\mathbf{x}(t)</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{x}(t)</span><script type="math/tex">\mathbf{x}(t)</script></span></script></span>는 시간 <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">t</span><script type="math/tex">t</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">t</span><script type="math/tex">t</script></span></script></span>에 대한 벡터 함수, <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{A}</span><script type="math/tex">\mathbf{A}</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{A}</span><script type="math/tex">\mathbf{A}</script></span></script></span>는 상수 계수를 갖는 행렬이다. 이 시스템을 풀이할 때 대각화를 사용하면 다음과 같은 과정으로 좀 더 간단하게 해결할 수 있다.</p>
-<p>식 <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{A}</span><script type="math/tex">\mathbf{A}</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{A}</span><script type="math/tex">\mathbf{A}</script></span></script></span>가 대각화 가능하다고 가정하면, <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{A} = \mathbf{P} \mathbf{D} \mathbf{P}^{-1}</span><script type="math/tex">\mathbf{A} = \mathbf{P} \mathbf{D} \mathbf{P}^{-1}</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{A} = \mathbf{P} \mathbf{D} \mathbf{P}^{-1}</span><script type="math/tex">\mathbf{A} = \mathbf{P} \mathbf{D} \mathbf{P}^{-1}</script></span></script></span>로 표현할 수 있다. 이때, 미분 방정식은 다음과 같이 변환된다.</p>
+<p>여기서 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{x}(t)</span><script type="math/tex">\mathbf{x}(t)</script></span>는 시간 <span class="arithmatex"><span class="MathJax_Preview">t</span><script type="math/tex">t</script></span>에 대한 벡터 함수, <span class="arithmatex"><span class="MathJax_Preview">\mathbf{A}</span><script type="math/tex">\mathbf{A}</script></span>는 상수 계수를 갖는 행렬이다. 이 시스템을 풀이할 때 대각화를 사용하면 다음과 같은 과정으로 좀 더 간단하게 해결할 수 있다.</p>
+<p>식 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{A}</span><script type="math/tex">\mathbf{A}</script></span>가 대각화 가능하다고 가정하면, <span class="arithmatex"><span class="MathJax_Preview">\mathbf{A} = \mathbf{P} \mathbf{D} \mathbf{P}^{-1}</span><script type="math/tex">\mathbf{A} = \mathbf{P} \mathbf{D} \mathbf{P}^{-1}</script></span>로 표현할 수 있다. 이때, 미분 방정식은 다음과 같이 변환된다.</p>
 <div class="arithmatex">
 <div class="MathJax_Preview">
 \frac{d\mathbf{x}(t)}{dt} = \mathbf{P} \mathbf{D} \mathbf{P}^{-1}\mathbf{x}(t)
@@ -121,7 +121,7 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 \frac{d\mathbf{x}(t)}{dt} = \mathbf{P} \mathbf{D} \mathbf{P}^{-1}\mathbf{x}(t)
 </script>
 </div>
-<p>양변에 <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{P}^{-1}</span><script type="math/tex">\mathbf{P}^{-1}</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{P}^{-1}</span><script type="math/tex">\mathbf{P}^{-1}</script></span></script></span>을 곱하면,</p>
+<p>양변에 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{P}^{-1}</span><script type="math/tex">\mathbf{P}^{-1}</script></span>을 곱하면,</p>
 <div class="arithmatex">
 <div class="MathJax_Preview">
 \mathbf{P}^{-1}\frac{d\mathbf{x}(t)}{dt} = \mathbf{D} \mathbf{P}^{-1}\mathbf{x}(t)
@@ -130,7 +130,7 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 \mathbf{P}^{-1}\frac{d\mathbf{x}(t)}{dt} = \mathbf{D} \mathbf{P}^{-1}\mathbf{x}(t)
 </script>
 </div>
-<p>벡터 <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{y}(t) = \mathbf{P}^{-1}\mathbf{x}(t)</span><script type="math/tex">\mathbf{y}(t) = \mathbf{P}^{-1}\mathbf{x}(t)</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{y}(t) = \mathbf{P}^{-1}\mathbf{x}(t)</span><script type="math/tex">\mathbf{y}(t) = \mathbf{P}^{-1}\mathbf{x}(t)</script></span></script></span>를 정의하면,</p>
+<p>벡터 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{y}(t) = \mathbf{P}^{-1}\mathbf{x}(t)</span><script type="math/tex">\mathbf{y}(t) = \mathbf{P}^{-1}\mathbf{x}(t)</script></span>를 정의하면,</p>
 <div class="arithmatex">
 <div class="MathJax_Preview">
 \frac{d\mathbf{y}(t)}{dt} = \mathbf{D}\mathbf{y}(t)
@@ -141,7 +141,7 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 </div>
 <p>이것은 각 성분에 독립적인 1차 미분 방정식들로 분해된다. 그리고 이 방정식의 해는 고유값과 초기 조건에 따라 구할 수 있다.</p>
 <h3 id="_3">전력하는 행렬의 계산</h3>
-<p>행렬의 대각화는 행렬의 거듭제곱을 구할 때 매우 유용하다. <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{A}^k</span><script type="math/tex">\mathbf{A}^k</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{A}^k</span><script type="math/tex">\mathbf{A}^k</script></span></script></span>을 계산해야 할 경우, 만약 <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{A} = \mathbf{P} \mathbf{D} \mathbf{P}^{-1}</span><script type="math/tex">\mathbf{A} = \mathbf{P} \mathbf{D} \mathbf{P}^{-1}</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{A} = \mathbf{P} \mathbf{D} \mathbf{P}^{-1}</span><script type="math/tex">\mathbf{A} = \mathbf{P} \mathbf{D} \mathbf{P}^{-1}</script></span></script></span>라면,</p>
+<p>행렬의 대각화는 행렬의 거듭제곱을 구할 때 매우 유용하다. <span class="arithmatex"><span class="MathJax_Preview">\mathbf{A}^k</span><script type="math/tex">\mathbf{A}^k</script></span>을 계산해야 할 경우, 만약 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{A} = \mathbf{P} \mathbf{D} \mathbf{P}^{-1}</span><script type="math/tex">\mathbf{A} = \mathbf{P} \mathbf{D} \mathbf{P}^{-1}</script></span>라면,</p>
 <div class="arithmatex">
 <div class="MathJax_Preview">
 \mathbf{A}^k = (\mathbf{P} \mathbf{D} \mathbf{P}^{-1})^k 
@@ -159,7 +159,7 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 \mathbf{A}^k = \mathbf{P} (\mathbf{D} \mathbf{P}^{-1} \mathbf{P})^{k-1} \mathbf{D} \mathbf{P}^{-1}
 </script>
 </div>
-<p>이 되고, <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{D}</span><script type="math/tex">\mathbf{D}</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{D}</span><script type="math/tex">\mathbf{D}</script></span></script></span>의 단순 대각 행렬 곱셈 성질을 이용해 단순화하면,</p>
+<p>이 되고, <span class="arithmatex"><span class="MathJax_Preview">\mathbf{D}</span><script type="math/tex">\mathbf{D}</script></span>의 단순 대각 행렬 곱셈 성질을 이용해 단순화하면,</p>
 <div class="arithmatex">
 <div class="MathJax_Preview">
 \mathbf{A}^k = \mathbf{P} \mathbf{D}^k \mathbf{P}^{-1}
@@ -168,9 +168,9 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 \mathbf{A}^k = \mathbf{P} \mathbf{D}^k \mathbf{P}^{-1}
 </script>
 </div>
-<p>로 나타낼 수 있다. <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{D}</span><script type="math/tex">\mathbf{D}</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{D}</span><script type="math/tex">\mathbf{D}</script></span></script></span>는 대각 행렬이므로 <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{D}^k</span><script type="math/tex">\mathbf{D}^k</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{D}^k</span><script type="math/tex">\mathbf{D}^k</script></span></script></span>는 각 대각원소를 k승한 새로운 대각 행렬이다. 따라서, 행렬 <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{A}</span><script type="math/tex">\mathbf{A}</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{A}</span><script type="math/tex">\mathbf{A}</script></span></script></span>의 거듭제곱은 매우 단순한 방법으로 계산될 수 있다.</p>
+<p>로 나타낼 수 있다. <span class="arithmatex"><span class="MathJax_Preview">\mathbf{D}</span><script type="math/tex">\mathbf{D}</script></span>는 대각 행렬이므로 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{D}^k</span><script type="math/tex">\mathbf{D}^k</script></span>는 각 대각원소를 k승한 새로운 대각 행렬이다. 따라서, 행렬 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{A}</span><script type="math/tex">\mathbf{A}</script></span>의 거듭제곱은 매우 단순한 방법으로 계산될 수 있다.</p>
 <h3 id="_4">미적분과 대각화</h3>
-<p>대각화는 또한 행렬 미적분을 다룰 때도 유용하게 사용된다. 예를 들어 지수 행렬 <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">e^{\mathbf{A}}</span><script type="math/tex">e^{\mathbf{A}}</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">e^{\mathbf{A}}</span><script type="math/tex">e^{\mathbf{A}}</script></span></script></span>를 계산할 때 이를 활용할 수 있다. 만약 <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{A}</span><script type="math/tex">\mathbf{A}</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{A}</span><script type="math/tex">\mathbf{A}</script></span></script></span>가 대각화 가능한 행렬이라면, </p>
+<p>대각화는 또한 행렬 미적분을 다룰 때도 유용하게 사용된다. 예를 들어 지수 행렬 <span class="arithmatex"><span class="MathJax_Preview">e^{\mathbf{A}}</span><script type="math/tex">e^{\mathbf{A}}</script></span>를 계산할 때 이를 활용할 수 있다. 만약 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{A}</span><script type="math/tex">\mathbf{A}</script></span>가 대각화 가능한 행렬이라면, </p>
 <div class="arithmatex">
 <div class="MathJax_Preview">
 e^{\mathbf{A}} = \sum_{n=0}^{\infty} \frac{\mathbf{A}^n}{n!}
@@ -179,7 +179,7 @@ e^{\mathbf{A}} = \sum_{n=0}^{\infty} \frac{\mathbf{A}^n}{n!}
 e^{\mathbf{A}} = \sum_{n=0}^{\infty} \frac{\mathbf{A}^n}{n!}
 </script>
 </div>
-<p>위 식에서 <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{A}</span><script type="math/tex">\mathbf{A}</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{A}</span><script type="math/tex">\mathbf{A}</script></span></script></span>의 대각화 특성을 이용하면, </p>
+<p>위 식에서 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{A}</span><script type="math/tex">\mathbf{A}</script></span>의 대각화 특성을 이용하면, </p>
 <div class="arithmatex">
 <div class="MathJax_Preview">
 e^{\mathbf{A}} = e^{\mathbf{P} \mathbf{D} \mathbf{P}^{-1}} = \mathbf{P} \cdot e^{\mathbf{D}} \cdot \mathbf{P}^{-1}
@@ -188,7 +188,7 @@ e^{\mathbf{A}} = e^{\mathbf{P} \mathbf{D} \mathbf{P}^{-1}} = \mathbf{P} \cdot e^
 e^{\mathbf{A}} = e^{\mathbf{P} \mathbf{D} \mathbf{P}^{-1}} = \mathbf{P} \cdot e^{\mathbf{D}} \cdot \mathbf{P}^{-1}
 </script>
 </div>
-<p>가 된다. 여기서 $$ e^{\mathbf{D}} $$는 <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{D}</span><script type="math/tex">\mathbf{D}</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{D}</span><script type="math/tex">\mathbf{D}</script></span></script></span>의 대각 요소를 지수 함수에 넣은 대각 행렬이다. 이는 곧,</p>
+<p>가 된다. 여기서 <span class="arithmatex"><span class="MathJax_Preview">e^{\mathbf{D}}</span><script type="math/tex">e^{\mathbf{D}}</script></span>는 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{D}</span><script type="math/tex">\mathbf{D}</script></span>의 대각 요소를 지수 함수에 넣은 대각 행렬이다. 이는 곧,</p>
 <div class="arithmatex">
 <div class="MathJax_Preview">
 e^{\mathbf{D}} = \begin{pmatrix}
@@ -211,11 +211,11 @@ e^{d_1} & 0 & \ldots & 0 \\
 <h3 id="_5">푸리에 변환과 대각화</h3>
 <p>푸리에 변환은 신호나 함수의 주파수 성분을 분석하는 중요한 도구이다. 행렬 대각화는 이산 푸리에 변환(DFT)을 계산하는 데에도 응용될 수 있다. 주기성이 있는 신호를 행렬로 표현하고 이를 대각화하면 주파수 성분을 쉽게 산출할 수 있다. </p>
 <h3 id="_6">물리학에서의 응용</h3>
-<p>대각화는 물리학의 여러 분야, 특히 양자 역학에서 중요한 역할을 한다. 예를 들어, 시스템의 해밀토니언 $$ \mathcal{H} $$가 대각화 될 수 있다면, 고유값은 시스템의 에너지 레벨을 나타내고, 고유벡터는 대응하는 고유 상태를 나타낸다. </p>
-<p>예를 들어, 두 상태의 양자 시스템을 고려해보겠다. 해당 시스템의 해밀토니언을 <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">2 \times 2</span><script type="math/tex">2 \times 2</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">2 \times 2</span><script type="math/tex">2 \times 2</script></span></script></span> 행렬로 표현할 수 있고, 이를 대각화하면 고유 상태와 에너지 레벨을 직접 계산할 수 있다.</p>
+<p>대각화는 물리학의 여러 분야, 특히 양자 역학에서 중요한 역할을 한다. 예를 들어, 시스템의 해밀토니언 <span class="arithmatex"><span class="MathJax_Preview">\mathcal{H}</span><script type="math/tex">\mathcal{H}</script></span>가 대각화 될 수 있다면, 고유값은 시스템의 에너지 레벨을 나타내고, 고유벡터는 대응하는 고유 상태를 나타낸다. </p>
+<p>예를 들어, 두 상태의 양자 시스템을 고려해보겠다. 해당 시스템의 해밀토니언을 <span class="arithmatex"><span class="MathJax_Preview">2 \times 2</span><script type="math/tex">2 \times 2</script></span> 행렬로 표현할 수 있고, 이를 대각화하면 고유 상태와 에너지 레벨을 직접 계산할 수 있다.</p>
 <h2 id="dft">사례 연구: 이산 푸리에 변환 (DFT)</h2>
 <p>이산 푸리에 변환(DFT)은 신호 분석에서 중요한 도구이다. DFT는 시간 영역의 신호를 주파수 영역의 신호로 변환한다. 썸네일 크기의 행렬을 사용하여 DFT를 예시로 들어보겠다.</p>
-<p>신호 <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">(x_0, x_1, x_2, x_3)</span><script type="math/tex">(x_0, x_1, x_2, x_3)</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">(x_0, x_1, x_2, x_3)</span><script type="math/tex">(x_0, x_1, x_2, x_3)</script></span></script></span>가 주어졌을 때, 이 신호의 DFT는 다음과 같이 계산할 수 있다:</p>
+<p>신호 <span class="arithmatex"><span class="MathJax_Preview">(x_0, x_1, x_2, x_3)</span><script type="math/tex">(x_0, x_1, x_2, x_3)</script></span>가 주어졌을 때, 이 신호의 DFT는 다음과 같이 계산할 수 있다:</p>
 <div class="arithmatex">
 <div class="MathJax_Preview">
 X_k = \sum_{n=0}^{3} x_n \cdot e^{-i 2 \pi k n / 4}
@@ -233,7 +233,7 @@ X_k = \sum_{n=0}^{3} x_n \cdot e^{-i 2 \pi k n / 4}
 \mathbf{X} = \mathbf{F} \mathbf{x}
 </script>
 </div>
-<p>가 된다. 여기서 <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{F}</span><script type="math/tex">\mathbf{F}</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{F}</span><script type="math/tex">\mathbf{F}</script></span></script></span>는 <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">4 \times 4</span><script type="math/tex">4 \times 4</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">4 \times 4</span><script type="math/tex">4 \times 4</script></span></script></span>의 DFT 행렬이다. 이 $$ \mathbf{F} $$ 행렬은 대칭 행렬이지만 대각화 가능하며, 이를 통해 주파수 성분을 쉽게 계산할 수 있다.</p>
+<p>가 된다. 여기서 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{F}</span><script type="math/tex">\mathbf{F}</script></span>는 <span class="arithmatex"><span class="MathJax_Preview">4 \times 4</span><script type="math/tex">4 \times 4</script></span>의 DFT 행렬이다. 이 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{F}</span><script type="math/tex">\mathbf{F}</script></span> 행렬은 대칭 행렬이지만 대각화 가능하며, 이를 통해 주파수 성분을 쉽게 계산할 수 있다.</p>
 
   <br>
     

@@ -109,9 +109,9 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
   \mathbf{P'} = \mathbf{R} \cdot \mathbf{P}</p>
 <p>$$</p>
 <p>여기서:
-  - <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{P'}</span><script type="math/tex">\mathbf{P'}</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{P'}</span><script type="math/tex">\mathbf{P'}</script></span></script></span>는 회전 후의 꼭짓점 좌표이다.
-  - <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{R}</span><script type="math/tex">\mathbf{R}</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{R}</span><script type="math/tex">\mathbf{R}</script></span></script></span>은 회전 행렬이다.
-  - <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{P}</span><script type="math/tex">\mathbf{P}</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{P}</span><script type="math/tex">\mathbf{P}</script></span></script></span>는 원래 꼭짓점 좌표이다.</p>
+  - <span class="arithmatex"><span class="MathJax_Preview">\mathbf{P'}</span><script type="math/tex">\mathbf{P'}</script></span>는 회전 후의 꼭짓점 좌표이다.
+  - <span class="arithmatex"><span class="MathJax_Preview">\mathbf{R}</span><script type="math/tex">\mathbf{R}</script></span>은 회전 행렬이다.
+  - <span class="arithmatex"><span class="MathJax_Preview">\mathbf{P}</span><script type="math/tex">\mathbf{P}</script></span>는 원래 꼭짓점 좌표이다.</p>
 <h3 id="3">3. 각 축에 투영 계산</h3>
 <p>SAT의 핵심은 두 큐브의 각 꼭짓점을 <strong>특정 축에 투영</strong>하여 비교하는 것이다. 투영된 값을 계산하는 방법은 다음과 같다:</p>
 <div class="arithmatex">
@@ -123,10 +123,10 @@ p = \mathbf{v} \cdot \mathbf{a}
 </script>
 </div>
 <p>여기서:
-- <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">p</span><script type="math/tex">p</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">p</span><script type="math/tex">p</script></span></script></span>는 꼭짓점 <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">v</span><script type="math/tex">v</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">v</span><script type="math/tex">v</script></span></script></span>가 축 <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">a</span><script type="math/tex">a</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">a</span><script type="math/tex">a</script></span></script></span>에 투영된 값이다.
-- <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{v}</span><script type="math/tex">\mathbf{v}</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{v}</span><script type="math/tex">\mathbf{v}</script></span></script></span>는 큐브 꼭짓점의 좌표 벡터이다.
-- <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{a}</span><script type="math/tex">\mathbf{a}</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{a}</span><script type="math/tex">\mathbf{a}</script></span></script></span>는 투영할 축의 단위 벡터이다.
-- <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">\cdot</span><script type="math/tex">\cdot</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">\cdot</span><script type="math/tex">\cdot</script></span></script></span>는 내적 연산이다.</p>
+- <span class="arithmatex"><span class="MathJax_Preview">p</span><script type="math/tex">p</script></span>는 꼭짓점 <span class="arithmatex"><span class="MathJax_Preview">v</span><script type="math/tex">v</script></span>가 축 <span class="arithmatex"><span class="MathJax_Preview">a</span><script type="math/tex">a</script></span>에 투영된 값이다.
+- <span class="arithmatex"><span class="MathJax_Preview">\mathbf{v}</span><script type="math/tex">\mathbf{v}</script></span>는 큐브 꼭짓점의 좌표 벡터이다.
+- <span class="arithmatex"><span class="MathJax_Preview">\mathbf{a}</span><script type="math/tex">\mathbf{a}</script></span>는 투영할 축의 단위 벡터이다.
+- <span class="arithmatex"><span class="MathJax_Preview">\cdot</span><script type="math/tex">\cdot</script></span>는 내적 연산이다.</p>
 <h4 id="_1">예시: 투영 계산</h4>
 <div class="arithmatex">
 <div class="MathJax_Preview">

@@ -117,20 +117,10 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 <h3 id="aabb-axis-aligned-bounding-box">AABB (Axis-Aligned Bounding Box)</h3>
 <p>AABB는 객체를 감싸는 가장 작은 직육면체로 축에 평행하게 정렬된다. 충돌 검출의 첫 단계로, 이 박스를 두 객체에 대해 비교하여 빠르게 충돌 여부를 판단할 수 있다.</p>
 <h4 id="aabb">AABB 정의</h4>
-<p>AABB는 두 개의 점 <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{min}</span><script type="math/tex">\mathbf{min}</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{min}</span><script type="math/tex">\mathbf{min}</script></span></script></span>과 <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{max}</span><script type="math/tex">\mathbf{max}</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{max}</span><script type="math/tex">\mathbf{max}</script></span></script></span>로 정의된다.</p>
+<p>AABB는 두 개의 점 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{min}</span><script type="math/tex">\mathbf{min}</script></span>과 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{max}</span><script type="math/tex">\mathbf{max}</script></span>로 정의된다.</p>
 <ul>
-<li>
-<div class="arithmatex">
-<div class="MathJax_Preview">\mathbf{min} = (\mathbf{min}_x, \mathbf{min}_y, \mathbf{min}_z)</div>
-<script type="math/tex; mode=display">\mathbf{min} = (\mathbf{min}_x, \mathbf{min}_y, \mathbf{min}_z)</script>
-</div>
-</li>
-<li>
-<div class="arithmatex">
-<div class="MathJax_Preview">\mathbf{max} = (\mathbf{max}_x, \mathbf{max}_y, \mathbf{max}_z)</div>
-<script type="math/tex; mode=display">\mathbf{max} = (\mathbf{max}_x, \mathbf{max}_y, \mathbf{max}_z)</script>
-</div>
-</li>
+<li><span class="arithmatex"><span class="MathJax_Preview">\mathbf{min} = (\mathbf{min}_x, \mathbf{min}_y, \mathbf{min}_z)</span><script type="math/tex">\mathbf{min} = (\mathbf{min}_x, \mathbf{min}_y, \mathbf{min}_z)</script></span></li>
+<li><span class="arithmatex"><span class="MathJax_Preview">\mathbf{max} = (\mathbf{max}_x, \mathbf{max}_y, \mathbf{max}_z)</span><script type="math/tex">\mathbf{max} = (\mathbf{max}_x, \mathbf{max}_y, \mathbf{max}_z)</script></span></li>
 </ul>
 <p>두 AABB가 충돌하는지를 판단하기 위한 조건은 다음과 같다:</p>
 <div class="arithmatex">
@@ -159,7 +149,7 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 <h3 id="obb-oriented-bounding-box">OBB (Oriented Bounding Box)</h3>
 <p>OBB는 축에 평행하지 않고 임의의 방향으로 정렬된 박스로, AABB보다 더 정확한 충돌 감지를 제공한다.</p>
 <h4 id="obb">OBB 정의</h4>
-<p>OBB는 중심점 <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{c}</span><script type="math/tex">\mathbf{c}</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{c}</span><script type="math/tex">\mathbf{c}</script></span></script></span>, 반쪽 길이 벡터 <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{e}</span><script type="math/tex">\mathbf{e}</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{e}</span><script type="math/tex">\mathbf{e}</script></span></script></span>, 그리고 회전 행렬 <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{R}</span><script type="math/tex">\mathbf{R}</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{R}</span><script type="math/tex">\mathbf{R}</script></span></script></span>로 정의된다.</p>
+<p>OBB는 중심점 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{c}</span><script type="math/tex">\mathbf{c}</script></span>, 반쪽 길이 벡터 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{e}</span><script type="math/tex">\mathbf{e}</script></span>, 그리고 회전 행렬 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{R}</span><script type="math/tex">\mathbf{R}</script></span>로 정의된다.</p>
 <p>OBB 충돌 검출은 Separating Axis Theorem (SAT) 을 이용하여 수행할 수 있다. SAT에 따르면, 두 개의 OBB가 충돌하지 않는 조건은 적어도 하나의 축에 대해 투영된 영역이 겹치지 않는 경우이다.</p>
 <h3 id="separating-axis-theorem-sat">Separating Axis Theorem (SAT)</h3>
 <p>SAT는 두 개의 다면체가 충돌하지 않는다면, 그 둘을 분리할 수 있는 평면이 적어도 하나가 존재한다는 원리이다. 이 평면을 분리 축이라 하며, SAT를 통해 충돌 여부를 판단할 수 있다.</p>
@@ -186,7 +176,7 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 <h3 id="_2">충돌 응답</h3>
 <p>충돌 감지 후에는 충돌 응답이 필요하다. 충돌 응답은 객체들의 속도와 방향을 새롭게 설정하여 현실감 있는 상호작용을 구현한다.</p>
 <h4 id="_3">반사 벡터 계산</h4>
-<p>반사 벡터 <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{R}</span><script type="math/tex">\mathbf{R}</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{R}</span><script type="math/tex">\mathbf{R}</script></span></script></span>는 입사 벡터 <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{I}</span><script type="math/tex">\mathbf{I}</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{I}</span><script type="math/tex">\mathbf{I}</script></span></script></span>와 표면 법선 벡터 <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{N}</span><script type="math/tex">\mathbf{N}</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{N}</span><script type="math/tex">\mathbf{N}</script></span></script></span>를 이용해 다음과 같이 계산된다:</p>
+<p>반사 벡터 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{R}</span><script type="math/tex">\mathbf{R}</script></span>는 입사 벡터 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{I}</span><script type="math/tex">\mathbf{I}</script></span>와 표면 법선 벡터 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{N}</span><script type="math/tex">\mathbf{N}</script></span>를 이용해 다음과 같이 계산된다:</p>
 <div class="arithmatex">
 <div class="MathJax_Preview">
 \mathbf{R} = \mathbf{I} - 2 (\mathbf{I} \cdot \mathbf{N}) \mathbf{N}
@@ -199,7 +189,7 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 <h3 id="_4">운동량 보존 법칙 및 충돌 후 속도 계산</h3>
 <p>충돌 후 객체의 속도를 계산할 때, 운동량 보존 법칙을 적용한다. 이 법칙은 충돌 전후의 전체 운동량이 같아야 한다는 원리이다.</p>
 <h4 id="_5">탄성 충돌</h4>
-<p>탄성 충돌에서는 운동 에너지도 보존된다. 두 질량 $$ m_1 $$과 $$ m_2 $$가 충돌하여 속력 $$ v_1 $$와 $$ v_2 $$로 움직일 때, 충돌 후 속력 $$ v_1' $$와 $$ v_2' $$를 계산하는 공식은 다음과 같다:</p>
+<p>탄성 충돌에서는 운동 에너지도 보존된다. 두 질량 <span class="arithmatex"><span class="MathJax_Preview">m_1</span><script type="math/tex">m_1</script></span>과 <span class="arithmatex"><span class="MathJax_Preview">m_2</span><script type="math/tex">m_2</script></span>가 충돌하여 속력 <span class="arithmatex"><span class="MathJax_Preview">v_1</span><script type="math/tex">v_1</script></span>와 <span class="arithmatex"><span class="MathJax_Preview">v_2</span><script type="math/tex">v_2</script></span>로 움직일 때, 충돌 후 속력 <span class="arithmatex"><span class="MathJax_Preview">v_1'</span><script type="math/tex">v_1'</script></span>와 <span class="arithmatex"><span class="MathJax_Preview">v_2'</span><script type="math/tex">v_2'</script></span>를 계산하는 공식은 다음과 같다:</p>
 <div class="arithmatex">
 <div class="MathJax_Preview">
 \begin{align*}
@@ -215,7 +205,7 @@ v_2' &= \frac{(m_2 - m_1) v_2 + 2 m_1 v_1}{m_1 + m_2}
 </script>
 </div>
 <h4 id="_6">비탄성 충돌</h4>
-<p>비탄성 충돌에서는 운동량은 보존되지만 운동 에너지는 보존되지 않는다. 일부 에너지가 열 등 다른 형태로 변환될 수 있다. 이 경우, 탄성 계수 $$ e $$를 사용하여 충돌 후 속도를 계산할 수 있다.</p>
+<p>비탄성 충돌에서는 운동량은 보존되지만 운동 에너지는 보존되지 않는다. 일부 에너지가 열 등 다른 형태로 변환될 수 있다. 이 경우, 탄성 계수 <span class="arithmatex"><span class="MathJax_Preview">e</span><script type="math/tex">e</script></span>를 사용하여 충돌 후 속도를 계산할 수 있다.</p>
 <div class="arithmatex">
 <div class="MathJax_Preview">
 \begin{align*}
@@ -230,11 +220,11 @@ v_2' &= \frac{m_1 v_1 + m_2 v_2 - m_1 e (v_2 - v_1)}{m_1 + m_2}
 \end{align*}
 </script>
 </div>
-<p>여기서 $$ e $$는 0(완전 비탄성 충돌)에서 1(완전 탄성 충돌)까지의 값을 가진다.</p>
+<p>여기서 <span class="arithmatex"><span class="MathJax_Preview">e</span><script type="math/tex">e</script></span>는 0(완전 비탄성 충돌)에서 1(완전 탄성 충돌)까지의 값을 가진다.</p>
 <h3 id="_7">충돌 후 회전 운동</h3>
 <p>충돌 후 객체들은 회전 운동도 경험할 수 있다. 이는 각운동량 보존법칙을 사용하여 회전 속도를 계산할 수 있다.</p>
 <h4 id="_8">각운동량 보존</h4>
-<p>각운동량 $$ L $$은 충돌 전후에 보존되며, 각운동량은 다음과 같이 정의된다:</p>
+<p>각운동량 <span class="arithmatex"><span class="MathJax_Preview">L</span><script type="math/tex">L</script></span>은 충돌 전후에 보존되며, 각운동량은 다음과 같이 정의된다:</p>
 <div class="arithmatex">
 <div class="MathJax_Preview">
 L = I \omega
@@ -243,7 +233,7 @@ L = I \omega
 L = I \omega
 </script>
 </div>
-<p>여기서 $$ I $$는 관성 모멘트이고, $$ \omega $$는 각속도이다.</p>
+<p>여기서 <span class="arithmatex"><span class="MathJax_Preview">I</span><script type="math/tex">I</script></span>는 관성 모멘트이고, <span class="arithmatex"><span class="MathJax_Preview">\omega</span><script type="math/tex">\omega</script></span>는 각속도이다.</p>
 <p>충돌 후 각속도는 다음과 같이 계산된다:</p>
 <div class="arithmatex">
 <div class="MathJax_Preview">
@@ -253,7 +243,7 @@ L = I \omega
 \omega' = \frac{L}{I'}
 </script>
 </div>
-<p>여기서 $$ I' $$는 충돌 후의 새로운 관성 모멘트이다.</p>
+<p>여기서 <span class="arithmatex"><span class="MathJax_Preview">I'</span><script type="math/tex">I'</script></span>는 충돌 후의 새로운 관성 모멘트이다.</p>
 <h3 id="_9">충돌 최적화 기법</h3>
 <p>충돌 감지 시스템을 최적화하기 위해서는 다양한 기법을 사용할 수 있다. 예를 들어, 브로드 페이즈와 내로우 페이즈로 나누어 충돌 검출을 수행할 수 있다.</p>
 <h4 id="_10">브로드 페이즈</h4>

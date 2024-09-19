@@ -169,21 +169,21 @@ int main() {
 </script>
 </div>
 <p>여기서:
-- <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{A}</span><script type="math/tex">\mathbf{A}</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{A}</span><script type="math/tex">\mathbf{A}</script></span></script></span>는 <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">m \times n</span><script type="math/tex">m \times n</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">m \times n</span><script type="math/tex">m \times n</script></span></script></span> 행렬이다.
-- <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{L}</span><script type="math/tex">\mathbf{L}</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{L}</span><script type="math/tex">\mathbf{L}</script></span></script></span>은 <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">m \times m</span><script type="math/tex">m \times m</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">m \times m</span><script type="math/tex">m \times m</script></span></script></span> 하삼각 행렬로, 대각 성분은 모두 1이다.
-- <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{U}</span><script type="math/tex">\mathbf{U}</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{U}</span><script type="math/tex">\mathbf{U}</script></span></script></span>는 <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">m \times n</span><script type="math/tex">m \times n</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">m \times n</span><script type="math/tex">m \times n</script></span></script></span> 상삼각 행렬이다.</p>
+- <span class="arithmatex"><span class="MathJax_Preview">\mathbf{A}</span><script type="math/tex">\mathbf{A}</script></span>는 <span class="arithmatex"><span class="MathJax_Preview">m \times n</span><script type="math/tex">m \times n</script></span> 행렬이다.
+- <span class="arithmatex"><span class="MathJax_Preview">\mathbf{L}</span><script type="math/tex">\mathbf{L}</script></span>은 <span class="arithmatex"><span class="MathJax_Preview">m \times m</span><script type="math/tex">m \times m</script></span> 하삼각 행렬로, 대각 성분은 모두 1이다.
+- <span class="arithmatex"><span class="MathJax_Preview">\mathbf{U}</span><script type="math/tex">\mathbf{U}</script></span>는 <span class="arithmatex"><span class="MathJax_Preview">m \times n</span><script type="math/tex">m \times n</script></span> 상삼각 행렬이다.</p>
 <p>이 수식을 사용하면 주어진 행렬을 두 개의 삼각 행렬로 분해하여, 선형 방정식의 해를 더 효율적으로 구할 수 있다.</p>
 <h3 id="forward-backward-substitution">Forward 및 Backward Substitution</h3>
-<p>LU 분해를 통해 선형 시스템 <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{A} \mathbf{x} = \mathbf{b}</span><script type="math/tex">\mathbf{A} \mathbf{x} = \mathbf{b}</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{A} \mathbf{x} = \mathbf{b}</span><script type="math/tex">\mathbf{A} \mathbf{x} = \mathbf{b}</script></span></script></span>를 풀 때, 두 단계로 나누어 해를 구할 수 있다.</p>
+<p>LU 분해를 통해 선형 시스템 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{A} \mathbf{x} = \mathbf{b}</span><script type="math/tex">\mathbf{A} \mathbf{x} = \mathbf{b}</script></span>를 풀 때, 두 단계로 나누어 해를 구할 수 있다.</p>
 <ol>
-<li><strong>Forward Substitution</strong>: 먼저 하삼각 행렬 <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{L}</span><script type="math/tex">\mathbf{L}</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{L}</span><script type="math/tex">\mathbf{L}</script></span></script></span>을 사용하여 중간 변수를 구한다.</li>
+<li><strong>Forward Substitution</strong>: 먼저 하삼각 행렬 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{L}</span><script type="math/tex">\mathbf{L}</script></span>을 사용하여 중간 변수를 구한다.</li>
 </ol>
 <p>$$
    \mathbf{L} \mathbf{y} = \mathbf{b}</p>
 <p>$$</p>
-<p>여기서 <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{y}</span><script type="math/tex">\mathbf{y}</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{y}</span><script type="math/tex">\mathbf{y}</script></span></script></span>는 중간 변수이다.</p>
+<p>여기서 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{y}</span><script type="math/tex">\mathbf{y}</script></span>는 중간 변수이다.</p>
 <ol>
-<li><strong>Backward Substitution</strong>: 이후 상삼각 행렬 <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{U}</span><script type="math/tex">\mathbf{U}</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{U}</span><script type="math/tex">\mathbf{U}</script></span></script></span>을 사용하여 최종 해 <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{x}</span><script type="math/tex">\mathbf{x}</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{x}</span><script type="math/tex">\mathbf{x}</script></span></script></span>를 구한다.</li>
+<li><strong>Backward Substitution</strong>: 이후 상삼각 행렬 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{U}</span><script type="math/tex">\mathbf{U}</script></span>을 사용하여 최종 해 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{x}</span><script type="math/tex">\mathbf{x}</script></span>를 구한다.</li>
 </ol>
 <p>$$
    \mathbf{U} \mathbf{x} = \mathbf{y}</p>
@@ -192,7 +192,7 @@ int main() {
 <h2 id="armadillo-lu">Armadillo에서의 LU 분해를 통한 선형 방정식 해결</h2>
 <p>Armadillo에서 <code>arma::solve</code> 함수를 사용하면 LU 분해를 통해 선형 방정식을 간편하게 해결할 수 있다. <code>arma::solve</code> 함수는 내부적으로 LU 분해를 사용하여 주어진 선형 시스템의 해를 계산한다.</p>
 <h3 id="_3">선형 방정식 해결 예제</h3>
-<p>다음은 Armadillo를 사용하여 선형 방정식 <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{A} \mathbf{x} = \mathbf{b}</span><script type="math/tex">\mathbf{A} \mathbf{x} = \mathbf{b}</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{A} \mathbf{x} = \mathbf{b}</span><script type="math/tex">\mathbf{A} \mathbf{x} = \mathbf{b}</script></span></script></span>를 해결하는 예제이다.</p>
+<p>다음은 Armadillo를 사용하여 선형 방정식 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{A} \mathbf{x} = \mathbf{b}</span><script type="math/tex">\mathbf{A} \mathbf{x} = \mathbf{b}</script></span>를 해결하는 예제이다.</p>
 <pre><code class="language-cpp">#include &lt;armadillo&gt;
 
 int main() {
@@ -206,14 +206,14 @@ int main() {
     return 0;
 }
 </code></pre>
-<p>이 코드에서는 <code>arma::solve</code> 함수를 사용하여 행렬 <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{A}</span><script type="math/tex">\mathbf{A}</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{A}</span><script type="math/tex">\mathbf{A}</script></span></script></span>와 벡터 <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{b}</span><script type="math/tex">\mathbf{b}</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{b}</span><script type="math/tex">\mathbf{b}</script></span></script></span>로부터 해 <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{x}</span><script type="math/tex">\mathbf{x}</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{x}</span><script type="math/tex">\mathbf{x}</script></span></script></span>를 계산한다. </p>
+<p>이 코드에서는 <code>arma::solve</code> 함수를 사용하여 행렬 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{A}</span><script type="math/tex">\mathbf{A}</script></span>와 벡터 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{b}</span><script type="math/tex">\mathbf{b}</script></span>로부터 해 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{x}</span><script type="math/tex">\mathbf{x}</script></span>를 계산한다. </p>
 <h2 id="pivoting">Pivoting 전략과 수치적 안정성</h2>
 <p>Armadillo의 LU 분해는 기본적으로 피봇팅(Pivoting)을 사용하여 수치적 안정성을 높인다. 피봇팅은 계산 과정에서 행렬의 수치를 재배열하여 작은 수치 오류가 해에 큰 영향을 미치지 않도록 한다.</p>
 <h3 id="partial-pivoting">Partial Pivoting</h3>
 <p>Partial Pivoting은 LU 분해 과정에서 가장 큰 절대값을 가진 피봇(pivot)을 선택하여 행을 교환하는 방법이다. Armadillo의 <code>arma::lu</code> 함수는 기본적으로 Partial Pivoting을 사용한다.</p>
 <pre><code class="language-cpp">arma::lu(L, U, P, A);
 </code></pre>
-<p>이 함수는 행렬 <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{P}</span><script type="math/tex">\mathbf{P}</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{P}</span><script type="math/tex">\mathbf{P}</script></span></script></span>도 반환하며, 이는 교환 행렬로서 원래 행렬 <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{A}</span><script type="math/tex">\mathbf{A}</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{A}</span><script type="math/tex">\mathbf{A}</script></span></script></span>의 행들이 교환된 결과를 나타낸다. 여기서 수학적으로 다음과 같은 관계를 가진다:</p>
+<p>이 함수는 행렬 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{P}</span><script type="math/tex">\mathbf{P}</script></span>도 반환하며, 이는 교환 행렬로서 원래 행렬 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{A}</span><script type="math/tex">\mathbf{A}</script></span>의 행들이 교환된 결과를 나타낸다. 여기서 수학적으로 다음과 같은 관계를 가진다:</p>
 <div class="arithmatex">
 <div class="MathJax_Preview">
 \mathbf{P} \mathbf{A} = \mathbf{L} \mathbf{U}
@@ -297,7 +297,7 @@ int main() {
 \mathbf{A} \mathbf{x} = \mathbf{b}
 </script>
 </div>
-<p>여기서 <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{A}</span><script type="math/tex">\mathbf{A}</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{A}</span><script type="math/tex">\mathbf{A}</script></span></script></span>는 임의의 대규모 행렬이고, <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{b}</span><script type="math/tex">\mathbf{b}</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{b}</span><script type="math/tex">\mathbf{b}</script></span></script></span>는 벡터이다. Armadillo를 사용하여 이 문제를 해결하는 전체 과정을 코드로 작성할 수 있다.</p>
+<p>여기서 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{A}</span><script type="math/tex">\mathbf{A}</script></span>는 임의의 대규모 행렬이고, <span class="arithmatex"><span class="MathJax_Preview">\mathbf{b}</span><script type="math/tex">\mathbf{b}</script></span>는 벡터이다. Armadillo를 사용하여 이 문제를 해결하는 전체 과정을 코드로 작성할 수 있다.</p>
 <pre><code class="language-cpp">#include &lt;armadillo&gt;
 
 int main() {
@@ -311,7 +311,7 @@ int main() {
     return 0;
 }
 </code></pre>
-<p>이 코드에서는 랜덤하게 생성된 1000x1000 행렬 <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{A}</span><script type="math/tex">\mathbf{A}</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{A}</span><script type="math/tex">\mathbf{A}</script></span></script></span>와 1000x1 벡터 <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{b}</span><script type="math/tex">\mathbf{b}</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{b}</span><script type="math/tex">\mathbf{b}</script></span></script></span>를 사용하여 LU 분해를 통해 해 <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{x}</span><script type="math/tex">\mathbf{x}</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{x}</span><script type="math/tex">\mathbf{x}</script></span></script></span>를 계산한다.</p>
+<p>이 코드에서는 랜덤하게 생성된 1000x1000 행렬 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{A}</span><script type="math/tex">\mathbf{A}</script></span>와 1000x1 벡터 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{b}</span><script type="math/tex">\mathbf{b}</script></span>를 사용하여 LU 분해를 통해 해 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{x}</span><script type="math/tex">\mathbf{x}</script></span>를 계산한다.</p>
 
   <br>
     

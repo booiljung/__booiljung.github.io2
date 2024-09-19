@@ -93,7 +93,7 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
     <p>물리 엔진은 시뮬레이션에서 물체 간의 충돌, 중력, 마찰 등의 물리적 현상을 정확히 계산하는데 사용된다. 그러나 실시간 시뮬레이션에서는 물리 엔진이 매우 빠르게 작동해야 하므로 정확성과 속도 사이에 트레이드오프가 발생한다. 이 장에서는 물리 엔진의 속도와 정확성에 대해 살펴본다.</p>
 <h3 id="_1">시간 스텝</h3>
 <p>물리 엔진에서 가장 중요한 요소 중 하나는 시간 스텝(time step)이다. 시간 스텝은 시뮬레이션에서 시간의 단위를 의미하며, 이를 통해 물체의 위치와 속도를 업데이트한다. 짧은 시간 스텝은 높은 정확성을 제공하지만 계산량이 많아진다. 반면 긴 시간 스텝은 계산 속도를 높여주지만 정확성이 떨어질 수 있다.</p>
-<p>시간 스텝을 <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">\Delta t</span><script type="math/tex">\Delta t</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">\Delta t</span><script type="math/tex">\Delta t</script></span></script></span>로 나타내면, 물리 엔진에서 물체의 상태 업데이트는 다음과 같다:</p>
+<p>시간 스텝을 <span class="arithmatex"><span class="MathJax_Preview">\Delta t</span><script type="math/tex">\Delta t</script></span>로 나타내면, 물리 엔진에서 물체의 상태 업데이트는 다음과 같다:</p>
 <div class="arithmatex">
 <div class="MathJax_Preview">
 \mathbf{x}(t + \Delta t) = \mathbf{x}(t) + \mathbf{v}(t) \Delta t + \frac{1}{2} \mathbf{a}(t) \Delta t^2
@@ -102,7 +102,7 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 \mathbf{x}(t + \Delta t) = \mathbf{x}(t) + \mathbf{v}(t) \Delta t + \frac{1}{2} \mathbf{a}(t) \Delta t^2
 </script>
 </div>
-<p>여기서 <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{x}(t)</span><script type="math/tex">\mathbf{x}(t)</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{x}(t)</span><script type="math/tex">\mathbf{x}(t)</script></span></script></span>는 시간 <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">t</span><script type="math/tex">t</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">t</span><script type="math/tex">t</script></span></script></span>에서의 위치, <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{v}(t)</span><script type="math/tex">\mathbf{v}(t)</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{v}(t)</span><script type="math/tex">\mathbf{v}(t)</script></span></script></span>는 시간 <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">t</span><script type="math/tex">t</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">t</span><script type="math/tex">t</script></span></script></span>에서의 속도, <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{a}(t)</span><script type="math/tex">\mathbf{a}(t)</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{a}(t)</span><script type="math/tex">\mathbf{a}(t)</script></span></script></span>는 시간 <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">t</span><script type="math/tex">t</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">t</span><script type="math/tex">t</script></span></script></span>에서의 가속도이다.</p>
+<p>여기서 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{x}(t)</span><script type="math/tex">\mathbf{x}(t)</script></span>는 시간 <span class="arithmatex"><span class="MathJax_Preview">t</span><script type="math/tex">t</script></span>에서의 위치, <span class="arithmatex"><span class="MathJax_Preview">\mathbf{v}(t)</span><script type="math/tex">\mathbf{v}(t)</script></span>는 시간 <span class="arithmatex"><span class="MathJax_Preview">t</span><script type="math/tex">t</script></span>에서의 속도, <span class="arithmatex"><span class="MathJax_Preview">\mathbf{a}(t)</span><script type="math/tex">\mathbf{a}(t)</script></span>는 시간 <span class="arithmatex"><span class="MathJax_Preview">t</span><script type="math/tex">t</script></span>에서의 가속도이다.</p>
 <h3 id="_2">차분 방정식</h3>
 <p>물리 엔진에서는 주로 차분 방정식을 사용하여 상태를 업데이트한다. 이는 미분 방정식을 근사적으로 풀기 위함이다. 가장 단순한 방법은 오일러 방법(Euler method)이다. 그러나 오일러 방법은 시간이 지남에 따라 오차가 누적될 수 있다.</p>
 <p>오일러 방법으로 위치와 속도를 업데이트하는 공식을 보면:</p>
@@ -129,7 +129,7 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 <li>축분리 정리(Separating Axis Theorem, SAT)</li>
 <li>바운딩 볼륨 계층(Bounding Volume Hierarchies, BVH)</li>
 </ul>
-<p>충돌 해결에서는 반발 계수(coefficient of restitution)를 사용하여 두 물체가 충돌 후 어떻게 반응할지를 결정한다. 반발 계수 <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">e</span><script type="math/tex">e</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">e</span><script type="math/tex">e</script></span></script></span>는 두 물체의 실제 속도를 업데이트하는데 사용된다:</p>
+<p>충돌 해결에서는 반발 계수(coefficient of restitution)를 사용하여 두 물체가 충돌 후 어떻게 반응할지를 결정한다. 반발 계수 <span class="arithmatex"><span class="MathJax_Preview">e</span><script type="math/tex">e</script></span>는 두 물체의 실제 속도를 업데이트하는데 사용된다:</p>
 <div class="arithmatex">
 <div class="MathJax_Preview">
 \mathbf{v}_1' = \mathbf{v}_1 + (1 + e) \frac{m_2}{m_1 + m_2} (\mathbf{v}_2 - \mathbf{v}_1) 
@@ -146,7 +146,7 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 \mathbf{v}_2' = \mathbf{v}_2 + (1 + e) \frac{m_1}{m_1 + m_2} (\mathbf{v}_1 - \mathbf{v}_2)
 </script>
 </div>
-<p>여기서 <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">m_1</span><script type="math/tex">m_1</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">m_1</span><script type="math/tex">m_1</script></span></script></span>과 <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">m_2</span><script type="math/tex">m_2</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">m_2</span><script type="math/tex">m_2</script></span></script></span>는 물체 1과 물체 2의 질량이다.</p>
+<p>여기서 <span class="arithmatex"><span class="MathJax_Preview">m_1</span><script type="math/tex">m_1</script></span>과 <span class="arithmatex"><span class="MathJax_Preview">m_2</span><script type="math/tex">m_2</script></span>는 물체 1과 물체 2의 질량이다.</p>
 <h3 id="_4">성능 최적화</h3>
 <p>실시간 시스템에서는 최적화가 매우 중요하다. 물리 엔진의 성능을 최적화하는 방법은 여러 가지가 있다:</p>
 <ul>

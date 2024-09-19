@@ -117,11 +117,11 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 </script>
 </div>
 <p>여기서
-- $$ L $$은 양력,
-- $$ \rho $$는 공기 밀도,
-- $$ v $$는 비행 속도,
-- $$ S $$는 날개의 면적,
-- $$ C_L $$은 양력 계수이다.</p>
+- <span class="arithmatex"><span class="MathJax_Preview">L</span><script type="math/tex">L</script></span>은 양력,
+- <span class="arithmatex"><span class="MathJax_Preview">\rho</span><script type="math/tex">\rho</script></span>는 공기 밀도,
+- <span class="arithmatex"><span class="MathJax_Preview">v</span><script type="math/tex">v</script></span>는 비행 속도,
+- <span class="arithmatex"><span class="MathJax_Preview">S</span><script type="math/tex">S</script></span>는 날개의 면적,
+- <span class="arithmatex"><span class="MathJax_Preview">C_L</span><script type="math/tex">C_L</script></span>은 양력 계수이다.</p>
 <h3 id="drag">항력(Drag)</h3>
 <p>항력은 비행체가 공기 중을 이동할 때 발생하는 저항력이다. 항력은 다음과 같은 식으로 표현할 수 있다:</p>
 <div class="arithmatex">
@@ -133,11 +133,11 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 </script>
 </div>
 <p>여기서
-- $$ D $$는 항력,
-- $$ \rho $$는 공기 밀도,
-- $$ v $$는 비행 속도,
-- $$ S $$는 날개의 면적,
-- $$ C_D $$는 항력 계수이다.</p>
+- <span class="arithmatex"><span class="MathJax_Preview">D</span><script type="math/tex">D</script></span>는 항력,
+- <span class="arithmatex"><span class="MathJax_Preview">\rho</span><script type="math/tex">\rho</script></span>는 공기 밀도,
+- <span class="arithmatex"><span class="MathJax_Preview">v</span><script type="math/tex">v</script></span>는 비행 속도,
+- <span class="arithmatex"><span class="MathJax_Preview">S</span><script type="math/tex">S</script></span>는 날개의 면적,
+- <span class="arithmatex"><span class="MathJax_Preview">C_D</span><script type="math/tex">C_D</script></span>는 항력 계수이다.</p>
 <h3 id="thrust">추력(Thrust)</h3>
 <p>추력은 비행체를 앞으로 나아가게 하는 힘이다. 일반적으로 엔진에 의해 생성되며, 다음 식으로 표현될 수 있다:</p>
 <div class="arithmatex">
@@ -149,9 +149,9 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 </script>
 </div>
 <p>여기서
-- $$ T $$는 추력,
-- $$ r $$은 엔진 회전 반경,
-- $$ n $$은 엔진 회전수(분당 회전수, RPM)이다.</p>
+- <span class="arithmatex"><span class="MathJax_Preview">T</span><script type="math/tex">T</script></span>는 추력,
+- <span class="arithmatex"><span class="MathJax_Preview">r</span><script type="math/tex">r</script></span>은 엔진 회전 반경,
+- <span class="arithmatex"><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span>은 엔진 회전수(분당 회전수, RPM)이다.</p>
 <h3 id="gravity">중력(Gravity)</h3>
 <p>중력은 지구가 비행체에 작용하는 힘으로, 비행체의 질량과 중력가속도를 곱한 값으로 표현된다:</p>
 <div class="arithmatex">
@@ -163,9 +163,9 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 </script>
 </div>
 <p>여기서
-- $$ W $$는 중력에 의한 힘,
-- $$ m $$은 비행체의 질량,
-- $$ g $$는 중력 가속도(대략 9.81 m/s²)이다.</p>
+- <span class="arithmatex"><span class="MathJax_Preview">W</span><script type="math/tex">W</script></span>는 중력에 의한 힘,
+- <span class="arithmatex"><span class="MathJax_Preview">m</span><script type="math/tex">m</script></span>은 비행체의 질량,
+- <span class="arithmatex"><span class="MathJax_Preview">g</span><script type="math/tex">g</script></span>는 중력 가속도(대략 9.81 m/s²)이다.</p>
 <h3 id="stall">실속(Stall)</h3>
 <p>실속은 양력이 급격히 감소하는 현상으로, 날개의 받음각이 특정 임계값을 초과할 때 발생한다. 이 임계값을 넘으면 공기의 흐름이 날개 표면에서 분리되면서 난류가 발생한다.</p>
 <h3 id="stall-margin">실속 한계(Stall Margin)</h3>
@@ -183,9 +183,9 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 </script>
 </div>
 <p>여기서
-- $$ \alpha $$는 받음각,
-- $$ \theta $$는 비행체의 피치 각,
-- $$ \gamma $$는 비행 경로 각도이다.</p>
+- <span class="arithmatex"><span class="MathJax_Preview">\alpha</span><script type="math/tex">\alpha</script></span>는 받음각,
+- <span class="arithmatex"><span class="MathJax_Preview">\theta</span><script type="math/tex">\theta</script></span>는 비행체의 피치 각,
+- <span class="arithmatex"><span class="MathJax_Preview">\gamma</span><script type="math/tex">\gamma</script></span>는 비행 경로 각도이다.</p>
 <h3 id="lift-to-drag-ratio-ld">양력과 항력의 비율(Lift-to-Drag Ratio, L/D)</h3>
 <p>양력과 항력의 비율은 비행체의 효율성을 나타내는 중요한 지표이다. 이 비율은 다음과 같이 계산된다:</p>
 <div class="arithmatex">
@@ -197,9 +197,9 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 </script>
 </div>
 <p>여기서
-- $$ \frac{L}{D} $$는 양력과 항력의 비율,
-- $$ C_L $$은 양력 계수,
-- $$ C_D $$는 항력 계수이다.</p>
+- <span class="arithmatex"><span class="MathJax_Preview">\frac{L}{D}</span><script type="math/tex">\frac{L}{D}</script></span>는 양력과 항력의 비율,
+- <span class="arithmatex"><span class="MathJax_Preview">C_L</span><script type="math/tex">C_L</script></span>은 양력 계수,
+- <span class="arithmatex"><span class="MathJax_Preview">C_D</span><script type="math/tex">C_D</script></span>는 항력 계수이다.</p>
 <h3 id="stability">안정성(Stability)</h3>
 <p>비행체의 안정성은 주로 종축 안정성, 횡축 안정성, 방향 안정성으로 나뉜다.
 - <strong>종축 안정성(Longitudinal Stability)</strong>: 비행체가 앞뒤로 기울어질 때의 안정성.

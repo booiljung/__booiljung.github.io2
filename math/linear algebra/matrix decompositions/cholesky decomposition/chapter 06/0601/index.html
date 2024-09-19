@@ -104,7 +104,7 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 
     <p>Incomplete Cholesky 분해는 대규모 희소 행렬 시스템의 선형 방정식을 효율적으로 풀기 위한 전처리 기법 중 하나이다. 이 방법은 행렬의 희소성 구조를 유지하면서도 근사 분해를 제공한다.</p>
 <h3 id="_1">기본 개념</h3>
-<p>Complete Cholesky 분해는 대칭 양의 정부호 행렬 <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{A}</span><script type="math/tex">\mathbf{A}</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{A}</span><script type="math/tex">\mathbf{A}</script></span></script></span>를 하삼각 행렬 <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{L}</span><script type="math/tex">\mathbf{L}</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{L}</span><script type="math/tex">\mathbf{L}</script></span></script></span>과 그의 전치 행렬 <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{L}^T</span><script type="math/tex">\mathbf{L}^T</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{L}^T</span><script type="math/tex">\mathbf{L}^T</script></span></script></span>의 곱으로 나타내는 방식으로, 다음과 같이 표현된다:</p>
+<p>Complete Cholesky 분해는 대칭 양의 정부호 행렬 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{A}</span><script type="math/tex">\mathbf{A}</script></span>를 하삼각 행렬 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{L}</span><script type="math/tex">\mathbf{L}</script></span>과 그의 전치 행렬 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{L}^T</span><script type="math/tex">\mathbf{L}^T</script></span>의 곱으로 나타내는 방식으로, 다음과 같이 표현된다:</p>
 <div class="arithmatex">
 <div class="MathJax_Preview">
 \mathbf{A} = \mathbf{L} \mathbf{L}^T
@@ -113,7 +113,7 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 \mathbf{A} = \mathbf{L} \mathbf{L}^T
 </script>
 </div>
-<p>Incomplete Cholesky 분해는 이 구조를 대규모 희소 행렬에 적용하기 위해, 하삼각 행렬 <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{L}</span><script type="math/tex">\mathbf{L}</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{L}</span><script type="math/tex">\mathbf{L}</script></span></script></span>의 희소성 패턴을 유지하면서 근사 행렬 <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{L}_{IC}</span><script type="math/tex">\mathbf{L}_{IC}</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{L}_{IC}</span><script type="math/tex">\mathbf{L}_{IC}</script></span></script></span>을 찾아 다음과 같은 근사치를 제공한다:</p>
+<p>Incomplete Cholesky 분해는 이 구조를 대규모 희소 행렬에 적용하기 위해, 하삼각 행렬 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{L}</span><script type="math/tex">\mathbf{L}</script></span>의 희소성 패턴을 유지하면서 근사 행렬 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{L}_{IC}</span><script type="math/tex">\mathbf{L}_{IC}</script></span>을 찾아 다음과 같은 근사치를 제공한다:</p>
 <div class="arithmatex">
 <div class="MathJax_Preview">
 \mathbf{A} \approx \mathbf{L}_{IC} \mathbf{L}_{IC}^T
@@ -122,7 +122,7 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 \mathbf{A} \approx \mathbf{L}_{IC} \mathbf{L}_{IC}^T
 </script>
 </div>
-<p>여기서 <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{L}_{IC}</span><script type="math/tex">\mathbf{L}_{IC}</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{L}_{IC}</span><script type="math/tex">\mathbf{L}_{IC}</script></span></script></span>는 Incomplete Cholesky 분해로 얻어진 하삼각 행렬이다.</p>
+<p>여기서 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{L}_{IC}</span><script type="math/tex">\mathbf{L}_{IC}</script></span>는 Incomplete Cholesky 분해로 얻어진 하삼각 행렬이다.</p>
 <h3 id="_2">목적</h3>
 <p>Incomplete Cholesky 분해는 다음과 같은 목적을 위해 사용된다:</p>
 <ol>
@@ -133,15 +133,15 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 <h3 id="_3">과정</h3>
 <p>Incomplete Cholesky 분해는 다음과 같은 단계로 진행된다:</p>
 <ol>
-<li><strong>희소성 패턴 결정:</strong> 행렬 <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{A}</span><script type="math/tex">\mathbf{A}</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{A}</span><script type="math/tex">\mathbf{A}</script></span></script></span>의 어떤 항들이 <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{L}_{IC}</span><script type="math/tex">\mathbf{L}_{IC}</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{L}_{IC}</span><script type="math/tex">\mathbf{L}_{IC}</script></span></script></span>에서 유지될지를 결정한다. 이를 통해 희소성 패턴을 정의한다.</li>
+<li><strong>희소성 패턴 결정:</strong> 행렬 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{A}</span><script type="math/tex">\mathbf{A}</script></span>의 어떤 항들이 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{L}_{IC}</span><script type="math/tex">\mathbf{L}_{IC}</script></span>에서 유지될지를 결정한다. 이를 통해 희소성 패턴을 정의한다.</li>
 <li><strong>요소 계산:</strong> Cholesky 분해의 각 요소를 계산하면서 미리 정의한 희소성 패턴에 맞추어 계산을 생략하거나 보존한다.</li>
-<li><strong>근사 행렬 생성:</strong> 최종적으로 얻어진 하삼각 행렬 <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{L}_{IC}</span><script type="math/tex">\mathbf{L}_{IC}</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{L}_{IC}</span><script type="math/tex">\mathbf{L}_{IC}</script></span></script></span>를 사용하여 근사치를 만든다.</li>
+<li><strong>근사 행렬 생성:</strong> 최종적으로 얻어진 하삼각 행렬 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{L}_{IC}</span><script type="math/tex">\mathbf{L}_{IC}</script></span>를 사용하여 근사치를 만든다.</li>
 </ol>
 <h3 id="_4">알고리즘</h3>
 <p>Incomplete Cholesky 분해의 알고리즘은 다음의 순서대로 실행된다:</p>
 <ol>
-<li>행렬 <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{A}</span><script type="math/tex">\mathbf{A}</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{A}</span><script type="math/tex">\mathbf{A}</script></span></script></span>의 크기 <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span></script></span>을 구한 뒤, <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{L}_{IC}</span><script type="math/tex">\mathbf{L}_{IC}</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{L}_{IC}</span><script type="math/tex">\mathbf{L}_{IC}</script></span></script></span>를 <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{0}</span><script type="math/tex">\mathbf{0}</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{0}</span><script type="math/tex">\mathbf{0}</script></span></script></span>로 초기화한다.</li>
-<li>행렬 <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{A}</span><script type="math/tex">\mathbf{A}</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{A}</span><script type="math/tex">\mathbf{A}</script></span></script></span>의 비대각 성분에 대하여 다음을 수행한다:</li>
+<li>행렬 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{A}</span><script type="math/tex">\mathbf{A}</script></span>의 크기 <span class="arithmatex"><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span>을 구한 뒤, <span class="arithmatex"><span class="MathJax_Preview">\mathbf{L}_{IC}</span><script type="math/tex">\mathbf{L}_{IC}</script></span>를 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{0}</span><script type="math/tex">\mathbf{0}</script></span>로 초기화한다.</li>
+<li>행렬 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{A}</span><script type="math/tex">\mathbf{A}</script></span>의 비대각 성분에 대하여 다음을 수행한다:</li>
 <li>희소성 패턴에 맞춘 성분들에 대해서만 계산을 수행한다.</li>
 <li>모든 대각 성분에 대해 정규 Cholesky 분해의 대각성분 계산을 수행한다.</li>
 <li>나머지 행렬 성분들에 대해 다음을 수행한다:</li>
@@ -156,7 +156,7 @@ L_{IC,ij} = \frac{1}{L_{IC,ii}} \left( A_{ij} - \sum_{k=1}^{i-1} L_{IC,ik} L_{IC
 </div>
 <p>이 과정에서 각 항목이 희소성 패턴에 포함되는 경우에만 계산을 수행한다.</p>
 <h3 id="_5">예제</h3>
-<p>간단한 예제를 통해 이해를 돕겠다. Given 원래 대칭 행렬 <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{A}</span><script type="math/tex">\mathbf{A}</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{A}</span><script type="math/tex">\mathbf{A}</script></span></script></span>:</p>
+<p>간단한 예제를 통해 이해를 돕겠다. Given 원래 대칭 행렬 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{A}</span><script type="math/tex">\mathbf{A}</script></span>:</p>
 <div class="arithmatex">
 <div class="MathJax_Preview">
 \mathbf{A} = \begin{pmatrix} 
@@ -173,7 +173,7 @@ L_{IC,ij} = \frac{1}{L_{IC,ii}} \left( A_{ij} - \sum_{k=1}^{i-1} L_{IC,ik} L_{IC
 \end{pmatrix}
 </script>
 </div>
-<p>Incomplete Cholesky 분해를 수행하면 다음과 같은 행렬 <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{L}_{IC}</span><script type="math/tex">\mathbf{L}_{IC}</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{L}_{IC}</span><script type="math/tex">\mathbf{L}_{IC}</script></span></script></span>를 얻을 수 있다:</p>
+<p>Incomplete Cholesky 분해를 수행하면 다음과 같은 행렬 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{L}_{IC}</span><script type="math/tex">\mathbf{L}_{IC}</script></span>를 얻을 수 있다:</p>
 <div class="arithmatex">
 <div class="MathJax_Preview">
 \mathbf{L}_{IC} = \begin{pmatrix} 

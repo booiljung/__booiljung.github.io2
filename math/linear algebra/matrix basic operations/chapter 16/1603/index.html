@@ -111,7 +111,7 @@ A\mathbf{x} = \mathbf{b}
 A\mathbf{x} = \mathbf{b}
 </script>
 </div>
-<p>여기서 <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">A</span><script type="math/tex">A</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">A</span><script type="math/tex">A</script></span></script></span>는 계수 행렬, <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{x}</span><script type="math/tex">\mathbf{x}</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{x}</span><script type="math/tex">\mathbf{x}</script></span></script></span>는 미지수 벡터, <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{b}</span><script type="math/tex">\mathbf{b}</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{b}</span><script type="math/tex">\mathbf{b}</script></span></script></span>는 상수 벡터이다.</p>
+<p>여기서 <span class="arithmatex"><span class="MathJax_Preview">A</span><script type="math/tex">A</script></span>는 계수 행렬, <span class="arithmatex"><span class="MathJax_Preview">\mathbf{x}</span><script type="math/tex">\mathbf{x}</script></span>는 미지수 벡터, <span class="arithmatex"><span class="MathJax_Preview">\mathbf{b}</span><script type="math/tex">\mathbf{b}</script></span>는 상수 벡터이다.</p>
 <h3 id="_2">기본 알고리즘</h3>
 <p>가우스 소거법은 다음의 단계를 따른다:</p>
 <ol>
@@ -125,20 +125,20 @@ A\mathbf{x} = \mathbf{b}
 </li>
 </ol>
 <h2 id="_3">역행렬 계산</h2>
-<p>가우스 소거법은 행렬의 역행렬을 계산하는 데도 사용할 수 있다. 행렬 <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">A</span><script type="math/tex">A</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">A</span><script type="math/tex">A</script></span></script></span>의 역행렬 <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">A^{-1}</span><script type="math/tex">A^{-1}</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">A^{-1}</span><script type="math/tex">A^{-1}</script></span></script></span>을 구하기 위해 <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">A</span><script type="math/tex">A</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">A</span><script type="math/tex">A</script></span></script></span>를 단위 행렬 <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">I</span><script type="math/tex">I</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">I</span><script type="math/tex">I</script></span></script></span>로 변환하며 동일한 머리 열 연산을 사용한다.</p>
+<p>가우스 소거법은 행렬의 역행렬을 계산하는 데도 사용할 수 있다. 행렬 <span class="arithmatex"><span class="MathJax_Preview">A</span><script type="math/tex">A</script></span>의 역행렬 <span class="arithmatex"><span class="MathJax_Preview">A^{-1}</span><script type="math/tex">A^{-1}</script></span>을 구하기 위해 <span class="arithmatex"><span class="MathJax_Preview">A</span><script type="math/tex">A</script></span>를 단위 행렬 <span class="arithmatex"><span class="MathJax_Preview">I</span><script type="math/tex">I</script></span>로 변환하며 동일한 머리 열 연산을 사용한다.</p>
 <h3 id="_4">알고리즘</h3>
 <ol>
 <li>
 <p><strong>확장 행렬 구성</strong>:
-   <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">A</span><script type="math/tex">A</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">A</span><script type="math/tex">A</script></span></script></span>와 <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">I</span><script type="math/tex">I</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">I</span><script type="math/tex">I</script></span></script></span>를 함께 $$ [A | I] $$ 형태로 확장한다.</p>
+   <span class="arithmatex"><span class="MathJax_Preview">A</span><script type="math/tex">A</script></span>와 <span class="arithmatex"><span class="MathJax_Preview">I</span><script type="math/tex">I</script></span>를 함께 <span class="arithmatex"><span class="MathJax_Preview">[A | I]</span><script type="math/tex">[A | I]</script></span> 형태로 확장한다.</p>
 </li>
 <li>
 <p><strong>가우스 조던 소거법 적용</strong>:
-   행렬 <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">A</span><script type="math/tex">A</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">A</span><script type="math/tex">A</script></span></script></span> 부분을 단위 행렬로 변환한다. 동일한 연산이 <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">I</span><script type="math/tex">I</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">I</span><script type="math/tex">I</script></span></script></span> 부분에 적용되어 <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">A^{-1}</span><script type="math/tex">A^{-1}</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">A^{-1}</span><script type="math/tex">A^{-1}</script></span></script></span>가 된다.</p>
+   행렬 <span class="arithmatex"><span class="MathJax_Preview">A</span><script type="math/tex">A</script></span> 부분을 단위 행렬로 변환한다. 동일한 연산이 <span class="arithmatex"><span class="MathJax_Preview">I</span><script type="math/tex">I</script></span> 부분에 적용되어 <span class="arithmatex"><span class="MathJax_Preview">A^{-1}</span><script type="math/tex">A^{-1}</script></span>가 된다.</p>
 </li>
 <li>
 <p><strong>결과 확인</strong>:
-   최종적으로 좌측의 단위 행렬과 우측의 <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">A^{-1}</span><script type="math/tex">A^{-1}</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">A^{-1}</span><script type="math/tex">A^{-1}</script></span></script></span>을 확인한다.</p>
+   최종적으로 좌측의 단위 행렬과 우측의 <span class="arithmatex"><span class="MathJax_Preview">A^{-1}</span><script type="math/tex">A^{-1}</script></span>을 확인한다.</p>
 </li>
 </ol>
 <div class="arithmatex">
@@ -167,11 +167,11 @@ I & A^{-1}
 <ol>
 <li>
 <p><strong>상삼각 행렬로 변환</strong>:
-   행렬 <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">A</span><script type="math/tex">A</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">A</span><script type="math/tex">A</script></span></script></span>를 상삼각 행렬 <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">U</span><script type="math/tex">U</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">U</span><script type="math/tex">U</script></span></script></span>로 변환한다.</p>
+   행렬 <span class="arithmatex"><span class="MathJax_Preview">A</span><script type="math/tex">A</script></span>를 상삼각 행렬 <span class="arithmatex"><span class="MathJax_Preview">U</span><script type="math/tex">U</script></span>로 변환한다.</p>
 </li>
 <li>
 <p><strong>대각 성분의 곱 계산</strong>:
-   상삼각 행렬 <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">U</span><script type="math/tex">U</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">U</span><script type="math/tex">U</script></span></script></span>의 대각 성분의 곱을 행렬식으로 계산한다.</p>
+   상삼각 행렬 <span class="arithmatex"><span class="MathJax_Preview">U</span><script type="math/tex">U</script></span>의 대각 성분의 곱을 행렬식으로 계산한다.</p>
 </li>
 </ol>
 <div class="arithmatex">
@@ -182,7 +182,7 @@ I & A^{-1}
 \text{det}(A) = \prod_{i=1}^{n} u_{ii}
 </script>
 </div>
-<p>여기서 <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">u_{ii}</span><script type="math/tex">u_{ii}</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">u_{ii}</span><script type="math/tex">u_{ii}</script></span></script></span>는 상삼각 행렬 <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">U</span><script type="math/tex">U</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">U</span><script type="math/tex">U</script></span></script></span>의 대각 요소이다.</p>
+<p>여기서 <span class="arithmatex"><span class="MathJax_Preview">u_{ii}</span><script type="math/tex">u_{ii}</script></span>는 상삼각 행렬 <span class="arithmatex"><span class="MathJax_Preview">U</span><script type="math/tex">U</script></span>의 대각 요소이다.</p>
 <h2 id="_7">특성 방정식과 고유치</h2>
 <p>가우스 소거법은 행렬의 특성 방정식(characteristic equation)을 풀어 고유치(eigenvalue)를 구하는 데에도 활용된다. 특성 방정식은 다음과 같은 형식으로 주어진다:</p>
 <div class="arithmatex">
@@ -193,12 +193,12 @@ I & A^{-1}
 \text{det}(A - \lambda I) = 0
 </script>
 </div>
-<p>여기서 <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">\lambda</span><script type="math/tex">\lambda</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">\lambda</span><script type="math/tex">\lambda</script></span></script></span>는 고유치이다.</p>
+<p>여기서 <span class="arithmatex"><span class="MathJax_Preview">\lambda</span><script type="math/tex">\lambda</script></span>는 고유치이다.</p>
 <h3 id="_8">알고리즘</h3>
 <ol>
 <li>
-<p><strong>행렬 <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">A - \lambda I</span><script type="math/tex">A - \lambda I</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">A - \lambda I</span><script type="math/tex">A - \lambda I</script></span></script></span> 구성</strong>:
-   <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">\lambda</span><script type="math/tex">\lambda</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">\lambda</span><script type="math/tex">\lambda</script></span></script></span>을 변수로 하는 행렬을 구성한다.</p>
+<p><strong>행렬 <span class="arithmatex"><span class="MathJax_Preview">A - \lambda I</span><script type="math/tex">A - \lambda I</script></span> 구성</strong>:
+   <span class="arithmatex"><span class="MathJax_Preview">\lambda</span><script type="math/tex">\lambda</script></span>을 변수로 하는 행렬을 구성한다.</p>
 </li>
 <li>
 <p><strong>가우스 소거법 적용</strong>:
@@ -221,7 +221,7 @@ I & A^{-1}
 \kappa(A) = \|A\| \|A^{-1}\|
 </script>
 </div>
-<p>여기서 <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">\|A\|</span><script type="math/tex">\|A\|</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">\|A\|</span><script type="math/tex">\|A\|</script></span></script></span>는 행렬 <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">A</span><script type="math/tex">A</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">A</span><script type="math/tex">A</script></span></script></span>의 어떤 벡터 노름이다.</p>
+<p>여기서 <span class="arithmatex"><span class="MathJax_Preview">\|A\|</span><script type="math/tex">\|A\|</script></span>는 행렬 <span class="arithmatex"><span class="MathJax_Preview">A</span><script type="math/tex">A</script></span>의 어떤 벡터 노름이다.</p>
 <h4 id="_11">수치적 안정성</h4>
 <p>수치적 안정성(numerical stability)은 알고리즘이 작은 입력 오차에 대해 큰 출력 오차를 발생시키지 않는 특성을 의미한다. 가우스 소거법을 포함한 대부분의 선형대수 알고리즘은 수치적 안정성에 대한 평가가 필요하다.</p>
 <h3 id="_12">피벗팅 전략</h3>
@@ -231,7 +231,7 @@ I & A^{-1}
 <h4 id="full-pivoting">완전 피벗팅 (Full Pivoting):</h4>
 <p>행과 열 모두에서 가장 큰 절대값을 가진 요소를 선택하여 피벗팅을 수행한다.</p>
 <h3 id="_13">효율성</h3>
-<p>가우스 소거법의 시간 복잡도는 <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">O(n^3)</span><script type="math/tex">O(n^3)</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">O(n^3)</span><script type="math/tex">O(n^3)</script></span></script></span>이다. 이로 인해 매우 큰 행렬에 대해서는 계산 시간이 문제될 수 있다. 이렇게 큰 연산량을 효율적으로 처리하기 위해 여러 기법들이 개발되었다.</p>
+<p>가우스 소거법의 시간 복잡도는 <span class="arithmatex"><span class="MathJax_Preview">O(n^3)</span><script type="math/tex">O(n^3)</script></span>이다. 이로 인해 매우 큰 행렬에 대해서는 계산 시간이 문제될 수 있다. 이렇게 큰 연산량을 효율적으로 처리하기 위해 여러 기법들이 개발되었다.</p>
 <h3 id="_14">블록 알고리즘</h3>
 <p>블록 알고리즘(block algorithm)은 큰 행렬을 작은 블록으로 나누어 병렬 및 분산 계산을 가능하게 한다. 이러한 방법은 특히 고성능 계산(purpose-high computing)에서 유용하다.</p>
 <h3 id="_15">재귀적 알고리즘</h3>

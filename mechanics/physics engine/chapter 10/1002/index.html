@@ -155,7 +155,7 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 \mathbf{\omega} = \frac{d\theta}{dt}
 </script>
 </div>
-<p>여기서 <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{\omega}</span><script type="math/tex">\mathbf{\omega}</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{\omega}</span><script type="math/tex">\mathbf{\omega}</script></span></script></span>는 각속도 벡터이다. 각운동에 대한 물리 법칙은 뉴턴의 제2법칙을 각운동으로 확장한 아래의 방정식으로 나타낼 수 있다:</p>
+<p>여기서 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{\omega}</span><script type="math/tex">\mathbf{\omega}</script></span>는 각속도 벡터이다. 각운동에 대한 물리 법칙은 뉴턴의 제2법칙을 각운동으로 확장한 아래의 방정식으로 나타낼 수 있다:</p>
 <div class="arithmatex">
 <div class="MathJax_Preview">
 \mathbf{\tau} = I \alpha
@@ -164,11 +164,11 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 \mathbf{\tau} = I \alpha
 </script>
 </div>
-<p>여기서 <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{\tau}</span><script type="math/tex">\mathbf{\tau}</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{\tau}</span><script type="math/tex">\mathbf{\tau}</script></span></script></span>는 토크, <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">I</span><script type="math/tex">I</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">I</span><script type="math/tex">I</script></span></script></span>는 관성 모멘트, <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">\alpha</span><script type="math/tex">\alpha</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">\alpha</span><script type="math/tex">\alpha</script></span></script></span>는 각가속도이다.</p>
+<p>여기서 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{\tau}</span><script type="math/tex">\mathbf{\tau}</script></span>는 토크, <span class="arithmatex"><span class="MathJax_Preview">I</span><script type="math/tex">I</script></span>는 관성 모멘트, <span class="arithmatex"><span class="MathJax_Preview">\alpha</span><script type="math/tex">\alpha</script></span>는 각가속도이다.</p>
 <h3 id="prismatic-joint">이동 조인트 (Prismatic Joint)</h3>
 <p>이동 조인트는 두 물체 사이에 직선 운동을 허용하는 조인트이다. 로봇 공학에서는 슬라이더 또는 레일로도 알려져 있다.</p>
 <h4 id="_3">위치와 변위</h4>
-<p>이동 조인트의 변위는 직선 운동을 기준으로 측정되며, 이는 보통 <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">d</span><script type="math/tex">d</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">d</span><script type="math/tex">d</script></span></script></span>로 표시한다. 2D 및 3D 공간에서 변위 벡터로 나타낼 수 있다.</p>
+<p>이동 조인트의 변위는 직선 운동을 기준으로 측정되며, 이는 보통 <span class="arithmatex"><span class="MathJax_Preview">d</span><script type="math/tex">d</script></span>로 표시한다. 2D 및 3D 공간에서 변위 벡터로 나타낼 수 있다.</p>
 <p>2D 변위 벡터:</p>
 <div class="arithmatex">
 <div class="MathJax_Preview">
@@ -188,7 +188,7 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 </script>
 </div>
 <h4 id="_4">이동 운동 방정식</h4>
-<p>이동 조인트의 운동은 선속도 <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{v}</span><script type="math/tex">\mathbf{v}</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{v}</span><script type="math/tex">\mathbf{v}</script></span></script></span>에 의해 기술된다. 위치 $$ \mathbf{p} $$에 대한 시간 변화율은 다음과 같다:</p>
+<p>이동 조인트의 운동은 선속도 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{v}</span><script type="math/tex">\mathbf{v}</script></span>에 의해 기술된다. 위치 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{p}</span><script type="math/tex">\mathbf{p}</script></span>에 대한 시간 변화율은 다음과 같다:</p>
 <div class="arithmatex">
 <div class="MathJax_Preview">
 \mathbf{v} = \frac{d\mathbf{p}}{dt}
@@ -197,7 +197,7 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 \mathbf{v} = \frac{d\mathbf{p}}{dt}
 </script>
 </div>
-<p>가속도 $$ \mathbf{a} $$는 속도 변화율로, 다음과 같이 나타낸다:</p>
+<p>가속도 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{a}</span><script type="math/tex">\mathbf{a}</script></span>는 속도 변화율로, 다음과 같이 나타낸다:</p>
 <div class="arithmatex">
 <div class="MathJax_Preview">
 \mathbf{a} = \frac{d\mathbf{v}}{dt}
@@ -215,7 +215,7 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 \mathbf{F} = m\mathbf{a}
 </script>
 </div>
-<p>여기서 <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{F}</span><script type="math/tex">\mathbf{F}</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{F}</span><script type="math/tex">\mathbf{F}</script></span></script></span>는 힘 벡터, <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">m</span><script type="math/tex">m</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">m</span><script type="math/tex">m</script></span></script></span>은 질량, <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{a}</span><script type="math/tex">\mathbf{a}</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{a}</span><script type="math/tex">\mathbf{a}</script></span></script></span>는 가속도이다.</p>
+<p>여기서 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{F}</span><script type="math/tex">\mathbf{F}</script></span>는 힘 벡터, <span class="arithmatex"><span class="MathJax_Preview">m</span><script type="math/tex">m</script></span>은 질량, <span class="arithmatex"><span class="MathJax_Preview">\mathbf{a}</span><script type="math/tex">\mathbf{a}</script></span>는 가속도이다.</p>
 <h4 id="_5">이동 조인트의 구속 조건</h4>
 <p>이동 조인트는 특정 구속 조건을 가지며, 이는 일반적으로 허용 가능한 이동 범위, 방향 등을 포함한다. 구속 조건을 수학적으로 표현하기 위해 제약 방정식이 사용된다.</p>
 <p>예제 구속 방정식:</p>
@@ -227,13 +227,13 @@ x_{\text{min}} \leq x \leq x_{\text{max}}
 x_{\text{min}} \leq x \leq x_{\text{max}}
 </script>
 </div>
-<p>여기서 <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">x_{\text{min}}</span><script type="math/tex">x_{\text{min}}</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">x_{\text{min}}</span><script type="math/tex">x_{\text{min}}</script></span></script></span>과 <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">x_{\text{max}}</span><script type="math/tex">x_{\text{max}}</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">x_{\text{max}}</span><script type="math/tex">x_{\text{max}}</script></span></script></span>는 허용 가능한 최소 및 최대 위치이다.</p>
+<p>여기서 <span class="arithmatex"><span class="MathJax_Preview">x_{\text{min}}</span><script type="math/tex">x_{\text{min}}</script></span>과 <span class="arithmatex"><span class="MathJax_Preview">x_{\text{max}}</span><script type="math/tex">x_{\text{max}}</script></span>는 허용 가능한 최소 및 최대 위치이다.</p>
 <h3 id="_6">복합 조인트</h3>
 <p>복합 조인트는 회전 및 이동 운동이 결합된 조인트를 의미한다. 이러한 조인트는 특정 시스템에서 복잡한 동작을 재현하기 위해 사용된다.</p>
 <h4 id="screw-joint">예: 나사 조인트 (Screw Joint)</h4>
 <p>나사 조인트는 이동과 회전이 연관된 움직임을 허용한다. 일반적으로 한 회전 단위당 특정 거리를 이동하는 방식으로 작동한다.</p>
 <h4 id="_7">동작 방정식</h4>
-<p>나사 조인트에서 회전 <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">\theta</span><script type="math/tex">\theta</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">\theta</span><script type="math/tex">\theta</script></span></script></span>와 이동 <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">d</span><script type="math/tex">d</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">d</span><script type="math/tex">d</script></span></script></span>는 서로 관련이 있다. 만약 한 회전에 대해 이동하는 거리가 <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">h</span><script type="math/tex">h</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">h</span><script type="math/tex">h</script></span></script></span>라면, 다음과 같은 관계식이 성립한다:</p>
+<p>나사 조인트에서 회전 <span class="arithmatex"><span class="MathJax_Preview">\theta</span><script type="math/tex">\theta</script></span>와 이동 <span class="arithmatex"><span class="MathJax_Preview">d</span><script type="math/tex">d</script></span>는 서로 관련이 있다. 만약 한 회전에 대해 이동하는 거리가 <span class="arithmatex"><span class="MathJax_Preview">h</span><script type="math/tex">h</script></span>라면, 다음과 같은 관계식이 성립한다:</p>
 <div class="arithmatex">
 <div class="MathJax_Preview">
 d = h \theta
@@ -242,9 +242,9 @@ d = h \theta
 d = h \theta
 </script>
 </div>
-<p>여기서 <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">h</span><script type="math/tex">h</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">h</span><script type="math/tex">h</script></span></script></span>는 리드(L)라고도 한다.</p>
+<p>여기서 <span class="arithmatex"><span class="MathJax_Preview">h</span><script type="math/tex">h</script></span>는 리드(L)라고도 한다.</p>
 <h4 id="_8">동작 예제</h4>
-<p>나사 조인트의 경우, 각속도 <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">\omega</span><script type="math/tex">\omega</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">\omega</span><script type="math/tex">\omega</script></span></script></span>와 선속도 <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">v</span><script type="math/tex">v</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">v</span><script type="math/tex">v</script></span></script></span> 사이에는 다음과 같은 관계가 있다:</p>
+<p>나사 조인트의 경우, 각속도 <span class="arithmatex"><span class="MathJax_Preview">\omega</span><script type="math/tex">\omega</script></span>와 선속도 <span class="arithmatex"><span class="MathJax_Preview">v</span><script type="math/tex">v</script></span> 사이에는 다음과 같은 관계가 있다:</p>
 <div class="arithmatex">
 <div class="MathJax_Preview">
 v = h \omega
@@ -253,7 +253,7 @@ v = h \omega
 v = h \omega
 </script>
 </div>
-<p>각가속도 <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">\alpha</span><script type="math/tex">\alpha</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">\alpha</span><script type="math/tex">\alpha</script></span></script></span>와 선가속도 <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">a</span><script type="math/tex">a</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">a</span><script type="math/tex">a</script></span></script></span>사이의 관계는 다음과 같다:</p>
+<p>각가속도 <span class="arithmatex"><span class="MathJax_Preview">\alpha</span><script type="math/tex">\alpha</script></span>와 선가속도 <span class="arithmatex"><span class="MathJax_Preview">a</span><script type="math/tex">a</script></span>사이의 관계는 다음과 같다:</p>
 <div class="arithmatex">
 <div class="MathJax_Preview">
 a = h \alpha

@@ -117,9 +117,9 @@ y_{n+1} = y_n + h f(t_n, y_n)
 </script>
 </div>
 <p>여기서:
-- $$ y_n $$은 시간 $$ t_n $$에서의 상태 벡터.
-- $$ h $$는 시간 간격.
-- $$ f(t, y) $$는 상태의 변화율.</p>
+- <span class="arithmatex"><span class="MathJax_Preview">y_n</span><script type="math/tex">y_n</script></span>은 시간 <span class="arithmatex"><span class="MathJax_Preview">t_n</span><script type="math/tex">t_n</script></span>에서의 상태 벡터.
+- <span class="arithmatex"><span class="MathJax_Preview">h</span><script type="math/tex">h</script></span>는 시간 간격.
+- <span class="arithmatex"><span class="MathJax_Preview">f(t, y)</span><script type="math/tex">f(t, y)</script></span>는 상태의 변화율.</p>
 <h4 id="_3">장점</h4>
 <ol>
 <li>구현이 매우 간단하다.</li>
@@ -135,30 +135,10 @@ y_{n+1} = y_n + h f(t_n, y_n)
 <h4 id="_5">공식</h4>
 <p>RK4 방법은 다음과 같은 4단계를 거쳐 계산된다:</p>
 <ol>
-<li>
-<div class="arithmatex">
-<div class="MathJax_Preview"> k_1 = h f(t_n, y_n) </div>
-<script type="math/tex; mode=display"> k_1 = h f(t_n, y_n) </script>
-</div>
-</li>
-<li>
-<div class="arithmatex">
-<div class="MathJax_Preview"> k_2 = h f(t_n + \frac{h}{2}, y_n + \frac{k_1}{2}) </div>
-<script type="math/tex; mode=display"> k_2 = h f(t_n + \frac{h}{2}, y_n + \frac{k_1}{2}) </script>
-</div>
-</li>
-<li>
-<div class="arithmatex">
-<div class="MathJax_Preview"> k_3 = h f(t_n + \frac{h}{2}, y_n + \frac{k_2}{2}) </div>
-<script type="math/tex; mode=display"> k_3 = h f(t_n + \frac{h}{2}, y_n + \frac{k_2}{2}) </script>
-</div>
-</li>
-<li>
-<div class="arithmatex">
-<div class="MathJax_Preview"> k_4 = h f(t_n + h, y_n + k_3) </div>
-<script type="math/tex; mode=display"> k_4 = h f(t_n + h, y_n + k_3) </script>
-</div>
-</li>
+<li><span class="arithmatex"><span class="MathJax_Preview">k_1 = h f(t_n, y_n)</span><script type="math/tex">k_1 = h f(t_n, y_n)</script></span></li>
+<li><span class="arithmatex"><span class="MathJax_Preview">k_2 = h f(t_n + \frac{h}{2}, y_n + \frac{k_1}{2})</span><script type="math/tex">k_2 = h f(t_n + \frac{h}{2}, y_n + \frac{k_1}{2})</script></span></li>
+<li><span class="arithmatex"><span class="MathJax_Preview">k_3 = h f(t_n + \frac{h}{2}, y_n + \frac{k_2}{2})</span><script type="math/tex">k_3 = h f(t_n + \frac{h}{2}, y_n + \frac{k_2}{2})</script></span></li>
+<li><span class="arithmatex"><span class="MathJax_Preview">k_4 = h f(t_n + h, y_n + k_3)</span><script type="math/tex">k_4 = h f(t_n + h, y_n + k_3)</script></span></li>
 </ol>
 <p>최종 상태는 다음과 같다:</p>
 <div class="arithmatex">
@@ -213,7 +193,7 @@ y_{n+1} = \sum_{j=0}^{k-1} \alpha_j y_{n-j} + h \sum_{j=0}^{k-1} \beta_j f_{n-j}
 y_{n+1} = \sum_{j=0}^{k-1} \alpha_j y_{n-j} + h \sum_{j=0}^{k-1} \beta_j f_{n-j}
 </script>
 </div>
-<p>여기서 $$ \alpha_j $$와 $$ \beta_j $$는 계수이다.</p>
+<p>여기서 <span class="arithmatex"><span class="MathJax_Preview">\alpha_j</span><script type="math/tex">\alpha_j</script></span>와 <span class="arithmatex"><span class="MathJax_Preview">\beta_j</span><script type="math/tex">\beta_j</script></span>는 계수이다.</p>
 <h4 id="_13">장점</h4>
 <ol>
 <li>강성 문제에 대해 매우 안정적이다.</li>

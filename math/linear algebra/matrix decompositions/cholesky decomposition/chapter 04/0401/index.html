@@ -85,7 +85,7 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
     
 
     <h3 id="2x2">2x2 행렬의 예시</h3>
-<p>Sholesky 분해는 대칭 행렬이 주어졌을 때, 이를 하삼각 행렬의 곱으로 나타내는 방법이다. 예를 들어, 다음과 같은 <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">2 \times 2</span><script type="math/tex">2 \times 2</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">2 \times 2</span><script type="math/tex">2 \times 2</script></span></script></span> 대칭 행렬 <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{A}</span><script type="math/tex">\mathbf{A}</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{A}</span><script type="math/tex">\mathbf{A}</script></span></script></span>를 고려해 봅시다.</p>
+<p>Sholesky 분해는 대칭 행렬이 주어졌을 때, 이를 하삼각 행렬의 곱으로 나타내는 방법이다. 예를 들어, 다음과 같은 <span class="arithmatex"><span class="MathJax_Preview">2 \times 2</span><script type="math/tex">2 \times 2</script></span> 대칭 행렬 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{A}</span><script type="math/tex">\mathbf{A}</script></span>를 고려해 봅시다.</p>
 <div class="arithmatex">
 <div class="MathJax_Preview">
 \mathbf{A} = \begin{pmatrix}
@@ -100,7 +100,7 @@ b & d
 \end{pmatrix}
 </script>
 </div>
-<p>Sholesky 분해는 이 행렬 <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{A}</span><script type="math/tex">\mathbf{A}</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{A}</span><script type="math/tex">\mathbf{A}</script></span></script></span>를 다음과 같이 하삼각 행렬 <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{L}</span><script type="math/tex">\mathbf{L}</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{L}</span><script type="math/tex">\mathbf{L}</script></span></script></span>과 그의 전치 행렬 <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{L}^T</span><script type="math/tex">\mathbf{L}^T</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{L}^T</span><script type="math/tex">\mathbf{L}^T</script></span></script></span>의 곱으로 나타내는 것이다.</p>
+<p>Sholesky 분해는 이 행렬 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{A}</span><script type="math/tex">\mathbf{A}</script></span>를 다음과 같이 하삼각 행렬 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{L}</span><script type="math/tex">\mathbf{L}</script></span>과 그의 전치 행렬 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{L}^T</span><script type="math/tex">\mathbf{L}^T</script></span>의 곱으로 나타내는 것이다.</p>
 <div class="arithmatex">
 <div class="MathJax_Preview">
 \mathbf{L} = \begin{pmatrix}
@@ -115,7 +115,7 @@ l_{21} & l_{22}
 \end{pmatrix}
 </script>
 </div>
-<p>우리는 <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{A}</span><script type="math/tex">\mathbf{A}</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{A}</span><script type="math/tex">\mathbf{A}</script></span></script></span> = <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{L} \mathbf{L}^T</span><script type="math/tex">\mathbf{L} \mathbf{L}^T</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{L} \mathbf{L}^T</span><script type="math/tex">\mathbf{L} \mathbf{L}^T</script></span></script></span>이라는 관계식을 통해 <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{L}</span><script type="math/tex">\mathbf{L}</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{L}</span><script type="math/tex">\mathbf{L}</script></span></script></span>의 원소를 구할 수 있다. 이를 위해 우선 <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{L}^T</span><script type="math/tex">\mathbf{L}^T</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{L}^T</span><script type="math/tex">\mathbf{L}^T</script></span></script></span>를 구한다.</p>
+<p>우리는 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{A}</span><script type="math/tex">\mathbf{A}</script></span> = <span class="arithmatex"><span class="MathJax_Preview">\mathbf{L} \mathbf{L}^T</span><script type="math/tex">\mathbf{L} \mathbf{L}^T</script></span>이라는 관계식을 통해 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{L}</span><script type="math/tex">\mathbf{L}</script></span>의 원소를 구할 수 있다. 이를 위해 우선 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{L}^T</span><script type="math/tex">\mathbf{L}^T</script></span>를 구한다.</p>
 <div class="arithmatex">
 <div class="MathJax_Preview">
 \mathbf{L}^T = \begin{pmatrix}
@@ -130,7 +130,7 @@ l_{11} & l_{21} \\
 \end{pmatrix}
 </script>
 </div>
-<p>이제 <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{L} \mathbf{L}^T</span><script type="math/tex">\mathbf{L} \mathbf{L}^T</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{L} \mathbf{L}^T</span><script type="math/tex">\mathbf{L} \mathbf{L}^T</script></span></script></span>를 계산한다.</p>
+<p>이제 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{L} \mathbf{L}^T</span><script type="math/tex">\mathbf{L} \mathbf{L}^T</script></span>를 계산한다.</p>
 <div class="arithmatex">
 <div class="MathJax_Preview">
 \mathbf{L} \mathbf{L}^T = \begin{pmatrix}
@@ -159,7 +159,7 @@ l_{21} l_{11} & l_{21}^2 + l_{22}^2
 \end{pmatrix}
 </script>
 </div>
-<p>이 결과를 원래 행렬 <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{A}</span><script type="math/tex">\mathbf{A}</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{A}</span><script type="math/tex">\mathbf{A}</script></span></script></span>와 같다고 놓고 비교하여 해를 구한다.</p>
+<p>이 결과를 원래 행렬 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{A}</span><script type="math/tex">\mathbf{A}</script></span>와 같다고 놓고 비교하여 해를 구한다.</p>
 <div class="arithmatex">
 <div class="MathJax_Preview">
 \begin{pmatrix}
@@ -201,7 +201,7 @@ l_{21}^2 + l_{22}^2 = d
 \end{cases}
 </script>
 </div>
-<p>첫 번째 식에서 <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">l_{11}</span><script type="math/tex">l_{11}</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">l_{11}</span><script type="math/tex">l_{11}</script></span></script></span>을 구할 수 있다.</p>
+<p>첫 번째 식에서 <span class="arithmatex"><span class="MathJax_Preview">l_{11}</span><script type="math/tex">l_{11}</script></span>을 구할 수 있다.</p>
 <div class="arithmatex">
 <div class="MathJax_Preview">
 l_{11} = \sqrt{a}
@@ -210,7 +210,7 @@ l_{11} = \sqrt{a}
 l_{11} = \sqrt{a}
 </script>
 </div>
-<p>두 번째 식에서 <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">l_{21}</span><script type="math/tex">l_{21}</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">l_{21}</span><script type="math/tex">l_{21}</script></span></script></span>을 구한다.</p>
+<p>두 번째 식에서 <span class="arithmatex"><span class="MathJax_Preview">l_{21}</span><script type="math/tex">l_{21}</script></span>을 구한다.</p>
 <div class="arithmatex">
 <div class="MathJax_Preview">
 l_{21} = \frac{b}{l_{11}} = \frac{b}{\sqrt{a}}
@@ -219,7 +219,7 @@ l_{21} = \frac{b}{l_{11}} = \frac{b}{\sqrt{a}}
 l_{21} = \frac{b}{l_{11}} = \frac{b}{\sqrt{a}}
 </script>
 </div>
-<p>마지막으로 세 번째 식에서 <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">l_{22}</span><script type="math/tex">l_{22}</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">l_{22}</span><script type="math/tex">l_{22}</script></span></script></span>을 구한다.</p>
+<p>마지막으로 세 번째 식에서 <span class="arithmatex"><span class="MathJax_Preview">l_{22}</span><script type="math/tex">l_{22}</script></span>을 구한다.</p>
 <div class="arithmatex">
 <div class="MathJax_Preview">
 l_{22} = \sqrt{d - l_{21}^2} = \sqrt{d - \left(\frac{b}{\sqrt{a}}\right)^2} = \sqrt{d - \frac{b^2}{a}}
@@ -228,7 +228,7 @@ l_{22} = \sqrt{d - l_{21}^2} = \sqrt{d - \left(\frac{b}{\sqrt{a}}\right)^2} = \s
 l_{22} = \sqrt{d - l_{21}^2} = \sqrt{d - \left(\frac{b}{\sqrt{a}}\right)^2} = \sqrt{d - \frac{b^2}{a}}
 </script>
 </div>
-<p>이로써 <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{L}</span><script type="math/tex">\mathbf{L}</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{L}</span><script type="math/tex">\mathbf{L}</script></span></script></span>을 구할 수 있다.</p>
+<p>이로써 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{L}</span><script type="math/tex">\mathbf{L}</script></span>을 구할 수 있다.</p>
 <div class="arithmatex">
 <div class="MathJax_Preview">
 \mathbf{L} = \begin{pmatrix}
@@ -243,7 +243,7 @@ l_{22} = \sqrt{d - l_{21}^2} = \sqrt{d - \left(\frac{b}{\sqrt{a}}\right)^2} = \s
 \end{pmatrix}
 </script>
 </div>
-<p>따라서 <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{A}</span><script type="math/tex">\mathbf{A}</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{A}</span><script type="math/tex">\mathbf{A}</script></span></script></span>의 Sholesky 분해는 다음과 같은 형태로 나타낼 수 있다.</p>
+<p>따라서 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{A}</span><script type="math/tex">\mathbf{A}</script></span>의 Sholesky 분해는 다음과 같은 형태로 나타낼 수 있다.</p>
 <div class="arithmatex">
 <div class="MathJax_Preview">
 \mathbf{A} = \mathbf{L} \mathbf{L}^T = \begin{pmatrix}

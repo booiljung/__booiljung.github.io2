@@ -147,7 +147,7 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 <p>$$</p>
 <p>\mathbf{v}<em>{\text{apple}} \approx \mathbf{v}</em>{\text{fruit}}</p>
 <p>$$</p>
-<p>여기서 $$ \mathbf{v}<em>{\text{apple}} $$과 $$ \mathbf{v}</em>{\text{fruit}} $$는 각각 "apple"과 "fruit"에 대한 벡터다.</p>
+<p>여기서 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{v}_{\text{apple}}</span><script type="math/tex">\mathbf{v}_{\text{apple}}</script></span>과 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{v}_{\text{fruit}}</span><script type="math/tex">\mathbf{v}_{\text{fruit}}</script></span>는 각각 "apple"과 "fruit"에 대한 벡터다.</p>
 <h3 id="json-javascript-object-notation">JSON (JavaScript Object Notation)</h3>
 <p>데이터를 키-값 쌍으로 표현하는 경량 데이터 교환 형식으로, 주로 API 요청 및 응답에서 데이터 구조를 전달할 때 사용된다. 예를 들어, ChatGPT API에서 프롬프트와 관련된 데이터를 JSON 형식으로 주고받는다. 다음은 JSON의 간단한 예시다:</p>
 <pre><code class="language-json">{
@@ -164,7 +164,7 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 <p>$$</p>
 <p>P(\text{token}_i) = \frac{\exp(\frac{z_i}{T})}{\sum_j \exp(\frac{z_j}{T})}</p>
 <p>$$</p>
-<p>여기서 $$ T $$는 temperature를 나타내며, $$ z_i $$는 각 토큰에 대한 점수이다.</p>
+<p>여기서 <span class="arithmatex"><span class="MathJax_Preview">T</span><script type="math/tex">T</script></span>는 temperature를 나타내며, <span class="arithmatex"><span class="MathJax_Preview">z_i</span><script type="math/tex">z_i</script></span>는 각 토큰에 대한 점수이다.</p>
 <h3 id="completion">Completion (완성)</h3>
 <p>API에서 제공한 프롬프트에 대해 생성된 텍스트 결과물을 의미한다. 예를 들어, 사용자가 "The weather today is"라는 프롬프트를 입력하면 모델이 이에 대한 텍스트를 완성하게 된다. 이 때 반환된 텍스트가 "sunny with a chance of rain."이라면, 이 전체가 Completion이다.</p>
 <h3 id="model">Model (모델)</h3>
@@ -193,7 +193,7 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 <h3 id="temperature">Temperature</h3>
 <p>모델의 출력을 결정할 때 무작위성을 제어하는 파라미터로, 낮은 값은 더 결정론적인 출력을, 높은 값은 더 무작위적인 출력을 생성한다. 일반적으로 0과 1 사이의 값을 사용하며, 높을수록 다양한 출력을 생성할 가능성이 높아진다.</p>
 <h3 id="top-p-nucleus-sampling">Top-p (Nucleus Sampling)</h3>
-<p>출력 후보에서 상위 <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">p\%</span><script type="math/tex">p\%</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">p\%</span><script type="math/tex">p\%</script></span></script></span>에 속하는 토큰들만을 선택하여 결과를 생성하는 샘플링 방법이다. 예를 들어, <code>top_p=0.9</code>로 설정하면, 누적 확률이 90%에 해당하는 후보군에서만 출력을 생성한다. 이 방법은 다양한 응답을 생성하면서도 지나치게 무작위적이지 않은 결과를 얻기 위해 사용된다.</p>
+<p>출력 후보에서 상위 <span class="arithmatex"><span class="MathJax_Preview">p\%</span><script type="math/tex">p\%</script></span>에 속하는 토큰들만을 선택하여 결과를 생성하는 샘플링 방법이다. 예를 들어, <code>top_p=0.9</code>로 설정하면, 누적 확률이 90%에 해당하는 후보군에서만 출력을 생성한다. 이 방법은 다양한 응답을 생성하면서도 지나치게 무작위적이지 않은 결과를 얻기 위해 사용된다.</p>
 <h3 id="logits">Logits</h3>
 <p>모델이 각 토큰에 대해 예측하는 확률 분포의 전 단계 값으로, 모델은 이 값을 사용하여 토큰의 선택 확률을 계산한다. Logits 값이 높을수록 해당 토큰이 선택될 확률이 높아진다. Softmax 함수가 Logits를 확률로 변환하는 데 사용된다.</p>
 <p>$$</p>

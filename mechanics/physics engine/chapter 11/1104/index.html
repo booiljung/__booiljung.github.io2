@@ -34,7 +34,7 @@
         
         var pageToc = [
           {title: "\uacf5\uae30 \uc800\ud56d", url: "#_top", children: [
-              {title: "\ud56d\ub825 \uacc4\uc218($$ C_d $$)", url: "#c_d" },
+              {title: "\ud56d\ub825 \uacc4\uc218(C_dC_d)", url: "#c_dc_d" },
           ]},
           {title: "\uc720\uccb4 \uc800\ud56d", url: "#_2", children: [
               {title: "\uc810\uc131", url: "#_3" },
@@ -98,7 +98,7 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 
     <p>공기 저항과 유체 저항은 물체가 유체를 통과할 때 받는 힘을 설명한다. 이 두 종류의 저항은 공학, 물리학, 그리고 전산 유체 역학 시뮬레이션에서 중요한 역할을 한다. 아래에서는 공기 저항과 유체 저항의 이론적 배경, 수식, 그리고 응용 사례에 대해 다루겠다.</p>
 <h3 id="_1">공기 저항</h3>
-<p>공기 저항은 물체가 공기 중을 움직일 때 받는 저항력을 의미한다. 이 힘은 물체의 속도, 형상, 표면적, 그리고 공기의 밀도에 따라 달라진다. 공기 저항력(Drag Force, $$ \mathbf{F}_d $$)은 일반적으로 다음과 같은 식으로 표현된다:</p>
+<p>공기 저항은 물체가 공기 중을 움직일 때 받는 저항력을 의미한다. 이 힘은 물체의 속도, 형상, 표면적, 그리고 공기의 밀도에 따라 달라진다. 공기 저항력(Drag Force, <span class="arithmatex"><span class="MathJax_Preview">\mathbf{F}_d</span><script type="math/tex">\mathbf{F}_d</script></span>)은 일반적으로 다음과 같은 식으로 표현된다:</p>
 <div class="arithmatex">
 <div class="MathJax_Preview">
 \mathbf{F}_d = \frac{1}{2} \rho v^2 C_d A
@@ -109,13 +109,13 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 </div>
 <p>여기서:</p>
 <ul>
-<li>$$ \rho $$: 유체의 밀도 (공기의 경우 약 <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">1.225 \, \text{kg/m}^3</span><script type="math/tex">1.225 \, \text{kg/m}^3</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">1.225 \, \text{kg/m}^3</span><script type="math/tex">1.225 \, \text{kg/m}^3</script></span></script></span>)</li>
-<li>$$ v $$: 물체의 상대 속도</li>
-<li>$$ C_d $$: 항력 계수 (Drag Coefficient), 물체의 형상에 따라 결정</li>
-<li>$$ A $$: 물체의 기준 면적 (Cross-sectional Area)</li>
+<li><span class="arithmatex"><span class="MathJax_Preview">\rho</span><script type="math/tex">\rho</script></span>: 유체의 밀도 (공기의 경우 약 <span class="arithmatex"><span class="MathJax_Preview">1.225 \, \text{kg/m}^3</span><script type="math/tex">1.225 \, \text{kg/m}^3</script></span>)</li>
+<li><span class="arithmatex"><span class="MathJax_Preview">v</span><script type="math/tex">v</script></span>: 물체의 상대 속도</li>
+<li><span class="arithmatex"><span class="MathJax_Preview">C_d</span><script type="math/tex">C_d</script></span>: 항력 계수 (Drag Coefficient), 물체의 형상에 따라 결정</li>
+<li><span class="arithmatex"><span class="MathJax_Preview">A</span><script type="math/tex">A</script></span>: 물체의 기준 면적 (Cross-sectional Area)</li>
 </ul>
-<h4 id="c_d">항력 계수($$ C_d $$)</h4>
-<p>항력 계수는 물체의 형상, 표면 상태, 그리고 유동 속도에 의해 결정된다. 예를 들어, 구와 같은 단순한 형상은 $$ C_d $$ 값이 잘 알려져 있다. 일반적으로 구의 경우 $$ C_d $$는 약 0.47이다. 항력 계수를 얻기 위한 가장 일반적인 방법은 실험적 데이터와 유동 해석을 통한 측정이다.</p>
+<h4 id="c_dc_d">항력 계수(<span class="arithmatex"><span class="MathJax_Preview">C_d</span><script type="math/tex">C_d</script></span>)</h4>
+<p>항력 계수는 물체의 형상, 표면 상태, 그리고 유동 속도에 의해 결정된다. 예를 들어, 구와 같은 단순한 형상은 <span class="arithmatex"><span class="MathJax_Preview">C_d</span><script type="math/tex">C_d</script></span> 값이 잘 알려져 있다. 일반적으로 구의 경우 <span class="arithmatex"><span class="MathJax_Preview">C_d</span><script type="math/tex">C_d</script></span>는 약 0.47이다. 항력 계수를 얻기 위한 가장 일반적인 방법은 실험적 데이터와 유동 해석을 통한 측정이다.</p>
 <h3 id="_2">유체 저항</h3>
 <p>유체 저항(Fluid Resistance)은 물체가 물과 같은 다른 유체에서 움직일 때 발생하는 저항이다. 유체 저항은 공기 저항과 비슷한 매커니즘을 가지고 있으며, 동일한 기본 원리를 따른다. 단, 유체의 밀도와 점도가 다르기 때문에 다소 차이가 있다.</p>
 <p>유체에서 받는 저항력은 뉴턴의 유체 저항 법칙으로 설명할 수 있으며, 이를 일반화하면 유체에서의 드래그 포스는 다음과 같이 표현할 수 있다:</p>
@@ -140,11 +140,11 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 </div>
 <p>여기서:</p>
 <ul>
-<li>$$ \eta $$: 유체의 점도</li>
-<li>$$ A $$: 물체의 표면적</li>
-<li><span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">\frac{dv}{dx}</span><script type="math/tex">\frac{dv}{dx}</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">\frac{dv}{dx}</span><script type="math/tex">\frac{dv}{dx}</script></span></script></span>: 속도 변화율</li>
+<li><span class="arithmatex"><span class="MathJax_Preview">\eta</span><script type="math/tex">\eta</script></span>: 유체의 점도</li>
+<li><span class="arithmatex"><span class="MathJax_Preview">A</span><script type="math/tex">A</script></span>: 물체의 표면적</li>
+<li><span class="arithmatex"><span class="MathJax_Preview">\frac{dv}{dx}</span><script type="math/tex">\frac{dv}{dx}</script></span>: 속도 변화율</li>
 </ul>
-<p>점성 저항은 일반적으로 레이놀즈 수(<span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">Re</span><script type="math/tex">Re</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">Re</span><script type="math/tex">Re</script></span></script></span>)와 관련이 있다. 레이놀즈 수는 다음과 같이 정의된다:</p>
+<p>점성 저항은 일반적으로 레이놀즈 수(<span class="arithmatex"><span class="MathJax_Preview">Re</span><script type="math/tex">Re</script></span>)와 관련이 있다. 레이놀즈 수는 다음과 같이 정의된다:</p>
 <div class="arithmatex">
 <div class="MathJax_Preview">
 Re = \frac{\rho v L}{\eta}
@@ -155,8 +155,8 @@ Re = \frac{\rho v L}{\eta}
 </div>
 <p>여기서:</p>
 <ul>
-<li>$$ L $$: 특성 길이 (characteristic length)</li>
-<li>$$ \rho, v, \eta $$: 이전과 동일</li>
+<li><span class="arithmatex"><span class="MathJax_Preview">L</span><script type="math/tex">L</script></span>: 특성 길이 (characteristic length)</li>
+<li><span class="arithmatex"><span class="MathJax_Preview">\rho, v, \eta</span><script type="math/tex">\rho, v, \eta</script></span>: 이전과 동일</li>
 </ul>
 <h3 id="_4">사례 연구</h3>
 <h4 id="_5">차량 공학</h4>

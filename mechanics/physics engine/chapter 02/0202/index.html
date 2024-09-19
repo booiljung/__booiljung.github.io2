@@ -108,21 +108,21 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
     <h3 id="1">1. 운동학</h3>
 <p>운동학(Kinematics)은 힘과 토크를 고려하지 않고 물체의 위치, 속도, 가속도 등을 연구하는 분야이다. 운동학에서는 주로 다음과 같은 물리량들을 다룬다:</p>
 <ul>
-<li><strong>위치 (Position, <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{p}</span><script type="math/tex">\mathbf{p}</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{p}</span><script type="math/tex">\mathbf{p}</script></span></script></span>)</strong>: 물체의 특정 시점에서의 좌표를 나타낸다.</li>
-<li><strong>속도 (Velocity, <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{v}</span><script type="math/tex">\mathbf{v}</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{v}</span><script type="math/tex">\mathbf{v}</script></span></script></span>)</strong>: 단위 시간당 위치의 변화율이다. 수식으로는 다음과 같이 표현할 수 있다:</li>
+<li><strong>위치 (Position, <span class="arithmatex"><span class="MathJax_Preview">\mathbf{p}</span><script type="math/tex">\mathbf{p}</script></span>)</strong>: 물체의 특정 시점에서의 좌표를 나타낸다.</li>
+<li><strong>속도 (Velocity, <span class="arithmatex"><span class="MathJax_Preview">\mathbf{v}</span><script type="math/tex">\mathbf{v}</script></span>)</strong>: 단위 시간당 위치의 변화율이다. 수식으로는 다음과 같이 표현할 수 있다:</li>
 </ul>
 <p>$$
   \mathbf{v} = \frac{d\mathbf{p}}{dt}</p>
 <p>$$</p>
 <ul>
-<li><strong>가속도 (Acceleration, <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{a}</span><script type="math/tex">\mathbf{a}</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{a}</span><script type="math/tex">\mathbf{a}</script></span></script></span>)</strong>: 단위 시간당 속도의 변화율이다. 수식으로는 다음과 같다:</li>
+<li><strong>가속도 (Acceleration, <span class="arithmatex"><span class="MathJax_Preview">\mathbf{a}</span><script type="math/tex">\mathbf{a}</script></span>)</strong>: 단위 시간당 속도의 변화율이다. 수식으로는 다음과 같다:</li>
 </ul>
 <p>$$
   \mathbf{a} = \frac{d\mathbf{v}}{dt} = \frac{d^2\mathbf{p}}{dt^2}</p>
 <p>$$</p>
 <p>이런 기초 물리량들을 바탕으로 물체의 운동을 시간 함수로 표현할 수 있다.</p>
 <h4 id="2">예: 2차원 평면에서의 직선 운동</h4>
-<p>만약 2차원 평면에서 물체가 일정한 가속도로 운동한다면, 물체의 위치와 속도는 다음과 같이 표현할 수 있다. 초기 위치를 <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{p}_0</span><script type="math/tex">\mathbf{p}_0</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{p}_0</span><script type="math/tex">\mathbf{p}_0</script></span></script></span>, 초기 속도를 <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{v}_0</span><script type="math/tex">\mathbf{v}_0</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{v}_0</span><script type="math/tex">\mathbf{v}_0</script></span></script></span>, 그리고 일정한 가속도를 <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{a}</span><script type="math/tex">\mathbf{a}</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{a}</span><script type="math/tex">\mathbf{a}</script></span></script></span>라고 가정한다.</p>
+<p>만약 2차원 평면에서 물체가 일정한 가속도로 운동한다면, 물체의 위치와 속도는 다음과 같이 표현할 수 있다. 초기 위치를 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{p}_0</span><script type="math/tex">\mathbf{p}_0</script></span>, 초기 속도를 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{v}_0</span><script type="math/tex">\mathbf{v}_0</script></span>, 그리고 일정한 가속도를 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{a}</span><script type="math/tex">\mathbf{a}</script></span>라고 가정한다.</p>
 <ul>
 <li><strong>위치</strong>:</li>
 </ul>
@@ -150,11 +150,11 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 \mathbf{F} = m \mathbf{a}
 </script>
 </div>
-<p>여기서 <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{F}</span><script type="math/tex">\mathbf{F}</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{F}</span><script type="math/tex">\mathbf{F}</script></span></script></span>는 힘, <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">m</span><script type="math/tex">m</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">m</span><script type="math/tex">m</script></span></script></span>은 질량, <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{a}</span><script type="math/tex">\mathbf{a}</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{a}</span><script type="math/tex">\mathbf{a}</script></span></script></span>는 가속도이다.</p>
+<p>여기서 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{F}</span><script type="math/tex">\mathbf{F}</script></span>는 힘, <span class="arithmatex"><span class="MathJax_Preview">m</span><script type="math/tex">m</script></span>은 질량, <span class="arithmatex"><span class="MathJax_Preview">\mathbf{a}</span><script type="math/tex">\mathbf{a}</script></span>는 가속도이다.</p>
 <h4 id="3-">뉴턴의 제3 운동 법칙 (작용-반작용 법칙)</h4>
 <p>모든 작용에는 크기가 같고 방향이 반대인 반작용이 존재한다.</p>
 <h4 id="2_3">예: 2차원 평면에서의 물체 운동</h4>
-<p>고정된 박스에 로프가 연결되어 있고, 로프에 일정한 힘 <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{F}</span><script type="math/tex">\mathbf{F}</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{F}</span><script type="math/tex">\mathbf{F}</script></span></script></span>가 작용한다고 가정한다. 물체의 초기 속도는 <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{v}_0</span><script type="math/tex">\mathbf{v}_0</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{v}_0</span><script type="math/tex">\mathbf{v}_0</script></span></script></span>, 질량은 <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">m</span><script type="math/tex">m</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">m</span><script type="math/tex">m</script></span></script></span>이다.</p>
+<p>고정된 박스에 로프가 연결되어 있고, 로프에 일정한 힘 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{F}</span><script type="math/tex">\mathbf{F}</script></span>가 작용한다고 가정한다. 물체의 초기 속도는 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{v}_0</span><script type="math/tex">\mathbf{v}_0</script></span>, 질량은 <span class="arithmatex"><span class="MathJax_Preview">m</span><script type="math/tex">m</script></span>이다.</p>
 <ul>
 <li><strong>가속도</strong>:</li>
 </ul>
@@ -176,7 +176,7 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 <h3 id="3">3. 에너지와 일</h3>
 <p>동역학에서 중요한 개념 중 하나는 에너지와 일이다. 물체의 운동과 이를 변화시키는 힘의 관계를 설명한다.</p>
 <h4 id="kinetic-energy">운동 에너지 (Kinetic Energy)</h4>
-<p>운동 에너지는 물체의 운동 상태에 따라 결정된다. 물체의 질량이 <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">m</span><script type="math/tex">m</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">m</span><script type="math/tex">m</script></span></script></span>이고 속도가 <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{v}</span><script type="math/tex">\mathbf{v}</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{v}</span><script type="math/tex">\mathbf{v}</script></span></script></span>일 때, 운동 에너지는 다음과 같이 정의된다:</p>
+<p>운동 에너지는 물체의 운동 상태에 따라 결정된다. 물체의 질량이 <span class="arithmatex"><span class="MathJax_Preview">m</span><script type="math/tex">m</script></span>이고 속도가 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{v}</span><script type="math/tex">\mathbf{v}</script></span>일 때, 운동 에너지는 다음과 같이 정의된다:</p>
 <div class="arithmatex">
 <div class="MathJax_Preview">
 KE = \frac{1}{2} m \mathbf{v}^2
@@ -195,9 +195,9 @@ PE = mgh
 PE = mgh
 </script>
 </div>
-<p>여기서 <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">m</span><script type="math/tex">m</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">m</span><script type="math/tex">m</script></span></script></span>은 물체의 질량, <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">g</span><script type="math/tex">g</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">g</span><script type="math/tex">g</script></span></script></span>는 중력 가속도, <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">h</span><script type="math/tex">h</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">h</span><script type="math/tex">h</script></span></script></span>는 기준점으로부터의 높이이다.</p>
+<p>여기서 <span class="arithmatex"><span class="MathJax_Preview">m</span><script type="math/tex">m</script></span>은 물체의 질량, <span class="arithmatex"><span class="MathJax_Preview">g</span><script type="math/tex">g</script></span>는 중력 가속도, <span class="arithmatex"><span class="MathJax_Preview">h</span><script type="math/tex">h</script></span>는 기준점으로부터의 높이이다.</p>
 <h4 id="work">일 (Work)</h4>
-<p>일은 힘이 물체를 이동시키는 과정에서 에너지가 변환되는 것을 의미한다. 일정한 힘 <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{F}</span><script type="math/tex">\mathbf{F}</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{F}</span><script type="math/tex">\mathbf{F}</script></span></script></span>가 물체를 <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{d}</span><script type="math/tex">\mathbf{d}</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{d}</span><script type="math/tex">\mathbf{d}</script></span></script></span>만큼 이동시킬 때, 일은 다음과 같이 정의된다:</p>
+<p>일은 힘이 물체를 이동시키는 과정에서 에너지가 변환되는 것을 의미한다. 일정한 힘 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{F}</span><script type="math/tex">\mathbf{F}</script></span>가 물체를 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{d}</span><script type="math/tex">\mathbf{d}</script></span>만큼 이동시킬 때, 일은 다음과 같이 정의된다:</p>
 <div class="arithmatex">
 <div class="MathJax_Preview">
 W = \mathbf{F} \cdot \mathbf{d}
@@ -206,7 +206,7 @@ W = \mathbf{F} \cdot \mathbf{d}
 W = \mathbf{F} \cdot \mathbf{d}
 </script>
 </div>
-<p>이 때, 점곱 <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">\cdot</span><script type="math/tex">\cdot</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">\cdot</span><script type="math/tex">\cdot</script></span></script></span>은 힘과 이동 거리 간의 각도를 고려하여, 실제로 물체를 이동시키는 방향의 성분만을 계산한다.</p>
+<p>이 때, 점곱 <span class="arithmatex"><span class="MathJax_Preview">\cdot</span><script type="math/tex">\cdot</script></span>은 힘과 이동 거리 간의 각도를 고려하여, 실제로 물체를 이동시키는 방향의 성분만을 계산한다.</p>
 <h4 id="_1">에너지 보존 법칙</h4>
 <p>에너지 보존 법칙은 고립 시스템의 전체 에너지가 일정하다는 원리이다. 즉, 운동 에너지(KE)와 위치 에너지(PE)의 합이 항상 일정한다:</p>
 <div class="arithmatex">
@@ -220,14 +220,14 @@ W = \mathbf{F} \cdot \mathbf{d}
 <h3 id="4">4. 회전 운동</h3>
 <p>회전 운동은 물체가 일정한 중심을 기준으로 회전하는 운동을 말한다. 이 때 중요한 물리량들은 다음과 같다:</p>
 <ul>
-<li><strong>각속도 (Angular Velocity, <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">\omega</span><script type="math/tex">\omega</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">\omega</span><script type="math/tex">\omega</script></span></script></span>)</strong>: 단위 시간당 회전 각도이다. </li>
-<li><strong>각가속도 (Angular Acceleration, <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">\alpha</span><script type="math/tex">\alpha</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">\alpha</span><script type="math/tex">\alpha</script></span></script></span>)</strong>: 단위 시간당 각속도의 변화율이다.</li>
-<li><strong>토크 (Torque, <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">\tau</span><script type="math/tex">\tau</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">\tau</span><script type="math/tex">\tau</script></span></script></span>)</strong>: 회전을 일으키는 힘의 효과이다. 수식으로는,</li>
+<li><strong>각속도 (Angular Velocity, <span class="arithmatex"><span class="MathJax_Preview">\omega</span><script type="math/tex">\omega</script></span>)</strong>: 단위 시간당 회전 각도이다. </li>
+<li><strong>각가속도 (Angular Acceleration, <span class="arithmatex"><span class="MathJax_Preview">\alpha</span><script type="math/tex">\alpha</script></span>)</strong>: 단위 시간당 각속도의 변화율이다.</li>
+<li><strong>토크 (Torque, <span class="arithmatex"><span class="MathJax_Preview">\tau</span><script type="math/tex">\tau</script></span>)</strong>: 회전을 일으키는 힘의 효과이다. 수식으로는,</li>
 </ul>
 <p>$$
   \tau = r \times F</p>
 <p>$$</p>
-<p>여기서 <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">r</span><script type="math/tex">r</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">r</span><script type="math/tex">r</script></span></script></span>은 회전축부터 힘이 작용하는 점까지의 거리, <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">F</span><script type="math/tex">F</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">F</span><script type="math/tex">F</script></span></script></span>는 힘이다.</p>
+<p>여기서 <span class="arithmatex"><span class="MathJax_Preview">r</span><script type="math/tex">r</script></span>은 회전축부터 힘이 작용하는 점까지의 거리, <span class="arithmatex"><span class="MathJax_Preview">F</span><script type="math/tex">F</script></span>는 힘이다.</p>
 <h4 id="moment-of-inertia">관성 모멘트 (Moment of Inertia)</h4>
 <p>회전 운동에서는 질량이 어떻게 분포되어 있는지가 중요하다. 관성 모멘트는 물체의 질량이 회전축 주변에 분포된 양상에 따라 정의된다. 저명하는 공식을 사용하여,</p>
 <div class="arithmatex">
@@ -238,7 +238,7 @@ I = \sum m_i r_i^2
 I = \sum m_i r_i^2
 </script>
 </div>
-<p>여기서 <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">I</span><script type="math/tex">I</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">I</span><script type="math/tex">I</script></span></script></span>는 관성 모멘트, <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">m_i</span><script type="math/tex">m_i</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">m_i</span><script type="math/tex">m_i</script></span></script></span>는 질량의 부분, <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">r_i</span><script type="math/tex">r_i</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">r_i</span><script type="math/tex">r_i</script></span></script></span>는 회전축부터 질량의 부분까지의 거리이다.</p>
+<p>여기서 <span class="arithmatex"><span class="MathJax_Preview">I</span><script type="math/tex">I</script></span>는 관성 모멘트, <span class="arithmatex"><span class="MathJax_Preview">m_i</span><script type="math/tex">m_i</script></span>는 질량의 부분, <span class="arithmatex"><span class="MathJax_Preview">r_i</span><script type="math/tex">r_i</script></span>는 회전축부터 질량의 부분까지의 거리이다.</p>
 <h4 id="_2">회전 운동 방정식</h4>
 <p>뉴턴의 운동 법칙을 회전 운동에 적용하면, 다음과 같은 회전 운동 방정식을 얻을 수 있다:</p>
 <div class="arithmatex">
@@ -249,7 +249,7 @@ I = \sum m_i r_i^2
 \tau = I \alpha
 </script>
 </div>
-<p>여기서 <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">\tau</span><script type="math/tex">\tau</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">\tau</span><script type="math/tex">\tau</script></span></script></span>는 토크, <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">I</span><script type="math/tex">I</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">I</span><script type="math/tex">I</script></span></script></span>는 관성 모멘트, <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">\alpha</span><script type="math/tex">\alpha</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">\alpha</span><script type="math/tex">\alpha</script></span></script></span>는 각가속도이다.</p>
+<p>여기서 <span class="arithmatex"><span class="MathJax_Preview">\tau</span><script type="math/tex">\tau</script></span>는 토크, <span class="arithmatex"><span class="MathJax_Preview">I</span><script type="math/tex">I</script></span>는 관성 모멘트, <span class="arithmatex"><span class="MathJax_Preview">\alpha</span><script type="math/tex">\alpha</script></span>는 각가속도이다.</p>
 <h3 id="5">5. 진동 운동</h3>
 <p>진동 운동은 물체가 평형 위치를 중심으로 반복적으로 운동하는 패턴을 말한다. 가장 흔한 예로는 단진자와 스프링-질량 시스템이 있다.</p>
 <h4 id="hookes-law">훅의 법칙 (Hooke's Law)</h4>
@@ -262,7 +262,7 @@ F = -kx
 F = -kx
 </script>
 </div>
-<p>여기서 <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">k</span><script type="math/tex">k</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">k</span><script type="math/tex">k</script></span></script></span>는 스프링 상수, <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">x</span><script type="math/tex">x</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">x</span><script type="math/tex">x</script></span></script></span>는 평형점으로부터의 변위이다.</p>
+<p>여기서 <span class="arithmatex"><span class="MathJax_Preview">k</span><script type="math/tex">k</script></span>는 스프링 상수, <span class="arithmatex"><span class="MathJax_Preview">x</span><script type="math/tex">x</script></span>는 평형점으로부터의 변위이다.</p>
 <h4 id="_3">단진자 운동</h4>
 <p>단진자의 경우, 작은 각도에서의 운동은 근사적으로 다음과 같은 단조화 운동으로 설명된다:</p>
 <div class="arithmatex">
@@ -273,7 +273,7 @@ T = 2\pi \sqrt{\frac{L}{g}}
 T = 2\pi \sqrt{\frac{L}{g}}
 </script>
 </div>
-<p>여기서 <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">T</span><script type="math/tex">T</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">T</span><script type="math/tex">T</script></span></script></span>는 주기, <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">L</span><script type="math/tex">L</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">L</span><script type="math/tex">L</script></span></script></span>는 진자의 길이, <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">g</span><script type="math/tex">g</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">g</span><script type="math/tex">g</script></span></script></span>는 중력 가속도이다.</p>
+<p>여기서 <span class="arithmatex"><span class="MathJax_Preview">T</span><script type="math/tex">T</script></span>는 주기, <span class="arithmatex"><span class="MathJax_Preview">L</span><script type="math/tex">L</script></span>는 진자의 길이, <span class="arithmatex"><span class="MathJax_Preview">g</span><script type="math/tex">g</script></span>는 중력 가속도이다.</p>
 
   <br>
     

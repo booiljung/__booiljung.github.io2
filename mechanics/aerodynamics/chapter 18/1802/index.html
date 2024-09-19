@@ -100,7 +100,7 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 
     <p>고도에 따른 비행 특성 분석은 항공기 설계와 성능 평가에서 중요한 주제이다. 고도 변화는 공기 밀도, 온도, 기압 등 다양한 기체 특성에 영향을 미쳐 항공기의 비행 특성에 큰 변화를 초래한다. 이번 장에서는 이러한 변화를 분석한다.</p>
 <h3 id="1">1. 공기 밀도 변화</h3>
-<p>고도가 증가하면 공기 밀도는 감소한다. 공기 밀도 <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">\rho</span><script type="math/tex">\rho</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">\rho</span><script type="math/tex">\rho</script></span></script></span>는 다음과 같이 정의된다:</p>
+<p>고도가 증가하면 공기 밀도는 감소한다. 공기 밀도 <span class="arithmatex"><span class="MathJax_Preview">\rho</span><script type="math/tex">\rho</script></span>는 다음과 같이 정의된다:</p>
 <div class="arithmatex">
 <div class="MathJax_Preview">
 \rho = \frac{p}{R T}
@@ -110,12 +110,12 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 </script>
 </div>
 <p>여기서,
-- <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">p</span><script type="math/tex">p</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">p</span><script type="math/tex">p</script></span></script></span>는 기압
-- <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">R</span><script type="math/tex">R</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">R</span><script type="math/tex">R</script></span></script></span>은 공기 가스 상수 (약 287 J/(kg·K))
-- <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">T</span><script type="math/tex">T</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">T</span><script type="math/tex">T</script></span></script></span>는 절대 온도 (케빈)</p>
-<p>고도가 증가하면 기압 <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">p</span><script type="math/tex">p</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">p</span><script type="math/tex">p</script></span></script></span>와 온도 <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">T</span><script type="math/tex">T</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">T</span><script type="math/tex">T</script></span></script></span>는 모두 감소하므로, 공기 밀도 <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">\rho</span><script type="math/tex">\rho</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">\rho</span><script type="math/tex">\rho</script></span></script></span>도 감소한다.</p>
+- <span class="arithmatex"><span class="MathJax_Preview">p</span><script type="math/tex">p</script></span>는 기압
+- <span class="arithmatex"><span class="MathJax_Preview">R</span><script type="math/tex">R</script></span>은 공기 가스 상수 (약 287 J/(kg·K))
+- <span class="arithmatex"><span class="MathJax_Preview">T</span><script type="math/tex">T</script></span>는 절대 온도 (케빈)</p>
+<p>고도가 증가하면 기압 <span class="arithmatex"><span class="MathJax_Preview">p</span><script type="math/tex">p</script></span>와 온도 <span class="arithmatex"><span class="MathJax_Preview">T</span><script type="math/tex">T</script></span>는 모두 감소하므로, 공기 밀도 <span class="arithmatex"><span class="MathJax_Preview">\rho</span><script type="math/tex">\rho</script></span>도 감소한다.</p>
 <h3 id="2">2. 항력 변화</h3>
-<p>항력 <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">D</span><script type="math/tex">D</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">D</span><script type="math/tex">D</script></span></script></span>는 다음과 같이 정의된다:</p>
+<p>항력 <span class="arithmatex"><span class="MathJax_Preview">D</span><script type="math/tex">D</script></span>는 다음과 같이 정의된다:</p>
 <div class="arithmatex">
 <div class="MathJax_Preview">
 D = \frac{1}{2} \rho v^2 S C_D
@@ -125,12 +125,12 @@ D = \frac{1}{2} \rho v^2 S C_D
 </script>
 </div>
 <p>여기서,
-- <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">v</span><script type="math/tex">v</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">v</span><script type="math/tex">v</script></span></script></span>는 항공기 속도
-- <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">S</span><script type="math/tex">S</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">S</span><script type="math/tex">S</script></span></script></span>는 참조 면적
-- <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">C_D</span><script type="math/tex">C_D</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">C_D</span><script type="math/tex">C_D</script></span></script></span>는 항력 계수</p>
-<p>공기 밀도 <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">\rho</span><script type="math/tex">\rho</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">\rho</span><script type="math/tex">\rho</script></span></script></span>가 감소하면 동일한 속도에서 항력 <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">D</span><script type="math/tex">D</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">D</span><script type="math/tex">D</script></span></script></span>도 감소하게 된다.</p>
+- <span class="arithmatex"><span class="MathJax_Preview">v</span><script type="math/tex">v</script></span>는 항공기 속도
+- <span class="arithmatex"><span class="MathJax_Preview">S</span><script type="math/tex">S</script></span>는 참조 면적
+- <span class="arithmatex"><span class="MathJax_Preview">C_D</span><script type="math/tex">C_D</script></span>는 항력 계수</p>
+<p>공기 밀도 <span class="arithmatex"><span class="MathJax_Preview">\rho</span><script type="math/tex">\rho</script></span>가 감소하면 동일한 속도에서 항력 <span class="arithmatex"><span class="MathJax_Preview">D</span><script type="math/tex">D</script></span>도 감소하게 된다.</p>
 <h3 id="3">3. 양력 변화</h3>
-<p>양력 <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">L</span><script type="math/tex">L</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">L</span><script type="math/tex">L</script></span></script></span>은 다음과 같이 정의된다:</p>
+<p>양력 <span class="arithmatex"><span class="MathJax_Preview">L</span><script type="math/tex">L</script></span>은 다음과 같이 정의된다:</p>
 <div class="arithmatex">
 <div class="MathJax_Preview">
 L = \frac{1}{2} \rho v^2 S C_L
@@ -140,10 +140,10 @@ L = \frac{1}{2} \rho v^2 S C_L
 </script>
 </div>
 <p>여기서,
-- <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">C_L</span><script type="math/tex">C_L</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">C_L</span><script type="math/tex">C_L</script></span></script></span>는 양력 계수</p>
-<p>고도가 증가하여 공기 밀도 <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">\rho</span><script type="math/tex">\rho</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">\rho</span><script type="math/tex">\rho</script></span></script></span>가 감소하면, 동일한 속도에서 발생하는 양력 <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">L</span><script type="math/tex">L</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">L</span><script type="math/tex">L</script></span></script></span>도 감소한다. 이를 보상하기 위해 속도를 증가시키거나, 양력 계수 <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">C_L</span><script type="math/tex">C_L</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">C_L</span><script type="math/tex">C_L</script></span></script></span>를 조절해야 한다.</p>
+- <span class="arithmatex"><span class="MathJax_Preview">C_L</span><script type="math/tex">C_L</script></span>는 양력 계수</p>
+<p>고도가 증가하여 공기 밀도 <span class="arithmatex"><span class="MathJax_Preview">\rho</span><script type="math/tex">\rho</script></span>가 감소하면, 동일한 속도에서 발생하는 양력 <span class="arithmatex"><span class="MathJax_Preview">L</span><script type="math/tex">L</script></span>도 감소한다. 이를 보상하기 위해 속도를 증가시키거나, 양력 계수 <span class="arithmatex"><span class="MathJax_Preview">C_L</span><script type="math/tex">C_L</script></span>를 조절해야 한다.</p>
 <h3 id="4">4. 최대 비행 속도</h3>
-<p>고도가 증가하면 최대 비행 속도도 영향을 받는다. 최대 비행 속도 <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">v_{\max}</span><script type="math/tex">v_{\max}</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">v_{\max}</span><script type="math/tex">v_{\max}</script></span></script></span>는 엔진 성능과 항력의 함수로 정의된다:</p>
+<p>고도가 증가하면 최대 비행 속도도 영향을 받는다. 최대 비행 속도 <span class="arithmatex"><span class="MathJax_Preview">v_{\max}</span><script type="math/tex">v_{\max}</script></span>는 엔진 성능과 항력의 함수로 정의된다:</p>
 <div class="arithmatex">
 <div class="MathJax_Preview">
 v_{\max} = \sqrt{\frac{2 P}{\rho S C_D}}
@@ -153,10 +153,10 @@ v_{\max} = \sqrt{\frac{2 P}{\rho S C_D}}
 </script>
 </div>
 <p>여기서,
-- <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">P</span><script type="math/tex">P</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">P</span><script type="math/tex">P</script></span></script></span>는 엔진 출력</p>
-<p>고도가 높아짐에 따라 공기 밀도 <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">\rho</span><script type="math/tex">\rho</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">\rho</span><script type="math/tex">\rho</script></span></script></span>가 감소하면, 최대 비행 속도 <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">v_{\max}</span><script type="math/tex">v_{\max}</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">v_{\max}</span><script type="math/tex">v_{\max}</script></span></script></span>는 증가한다.</p>
+- <span class="arithmatex"><span class="MathJax_Preview">P</span><script type="math/tex">P</script></span>는 엔진 출력</p>
+<p>고도가 높아짐에 따라 공기 밀도 <span class="arithmatex"><span class="MathJax_Preview">\rho</span><script type="math/tex">\rho</script></span>가 감소하면, 최대 비행 속도 <span class="arithmatex"><span class="MathJax_Preview">v_{\max}</span><script type="math/tex">v_{\max}</script></span>는 증가한다.</p>
 <h3 id="5">5. 최소 비행 속도</h3>
-<p>최소 비행 속도 <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">v_{\min}</span><script type="math/tex">v_{\min}</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">v_{\min}</span><script type="math/tex">v_{\min}</script></span></script></span>는 다음과 같이 정의된다:</p>
+<p>최소 비행 속도 <span class="arithmatex"><span class="MathJax_Preview">v_{\min}</span><script type="math/tex">v_{\min}</script></span>는 다음과 같이 정의된다:</p>
 <div class="arithmatex">
 <div class="MathJax_Preview">
 v_{\min} = \sqrt{\frac{2 W}{\rho S C_L}}
@@ -166,8 +166,8 @@ v_{\min} = \sqrt{\frac{2 W}{\rho S C_L}}
 </script>
 </div>
 <p>여기서,
-- <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">W</span><script type="math/tex">W</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">W</span><script type="math/tex">W</script></span></script></span>는 항공기의 무게</p>
-<p>고도가 증가하여 공기 밀도 <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">\rho</span><script type="math/tex">\rho</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">\rho</span><script type="math/tex">\rho</script></span></script></span>가 감소하면, 최소 비행 속도 <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">v_{\min}</span><script type="math/tex">v_{\min}</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">v_{\min}</span><script type="math/tex">v_{\min}</script></span></script></span>는 증가한다.</p>
+- <span class="arithmatex"><span class="MathJax_Preview">W</span><script type="math/tex">W</script></span>는 항공기의 무게</p>
+<p>고도가 증가하여 공기 밀도 <span class="arithmatex"><span class="MathJax_Preview">\rho</span><script type="math/tex">\rho</script></span>가 감소하면, 최소 비행 속도 <span class="arithmatex"><span class="MathJax_Preview">v_{\min}</span><script type="math/tex">v_{\min}</script></span>는 증가한다.</p>
 <h3 id="6">6. 항속 거리와 항속 시간</h3>
 <p>고도는 항속 거리와 항속 시간에도 영향을 미친다. 항공기가 비행하는 동안 소비하는 연료는 공기 밀도와 관련이 있으며, 이로 인해 항속 거리와 항속 시간도 변화한다.</p>
 <p>고도가 높아질수록 엔진의 효율성과 연료 소비율이 달라지며, 이는 항속 거리와 항속 시간에 영향을 미친다. 예를 들어, 높은 고도에서 항공기는 공기 밀도가 낮아져 연료 소비가 줄어들 수 있으나, 동일한 양력을 유지하기 위해 더 높은 속도가 필요할 수 있다. 이를 통해 항속 거리와 시간이 어떻게 변하는지 이해할 수 있다.</p>

@@ -90,13 +90,13 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 
     <h2 id="_1">분해 과정에서의 행렬 계산</h2>
 <h3 id="_2">기본 개념</h3>
-<p>Sholesky 분해(Cholesky decomposition)는 양의 정부호 대칭 행렬 <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{A}</span><script type="math/tex">\mathbf{A}</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{A}</span><script type="math/tex">\mathbf{A}</script></span></script></span>을 하삼각 행렬(Lower triangular matrix) <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{L}</span><script type="math/tex">\mathbf{L}</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{L}</span><script type="math/tex">\mathbf{L}</script></span></script></span>과 그 전치 행렬(<span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{L}^T</span><script type="math/tex">\mathbf{L}^T</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{L}^T</span><script type="math/tex">\mathbf{L}^T</script></span></script></span>)의 곱 형태로 분해하는 방식이다. 즉, <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{A} = \mathbf{L} \mathbf{L}^T</span><script type="math/tex">\mathbf{A} = \mathbf{L} \mathbf{L}^T</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{A} = \mathbf{L} \mathbf{L}^T</span><script type="math/tex">\mathbf{A} = \mathbf{L} \mathbf{L}^T</script></span></script></span>와 같은 형태로 나타낼 수 있다.</p>
+<p>Sholesky 분해(Cholesky decomposition)는 양의 정부호 대칭 행렬 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{A}</span><script type="math/tex">\mathbf{A}</script></span>을 하삼각 행렬(Lower triangular matrix) <span class="arithmatex"><span class="MathJax_Preview">\mathbf{L}</span><script type="math/tex">\mathbf{L}</script></span>과 그 전치 행렬(<span class="arithmatex"><span class="MathJax_Preview">\mathbf{L}^T</span><script type="math/tex">\mathbf{L}^T</script></span>)의 곱 형태로 분해하는 방식이다. 즉, <span class="arithmatex"><span class="MathJax_Preview">\mathbf{A} = \mathbf{L} \mathbf{L}^T</span><script type="math/tex">\mathbf{A} = \mathbf{L} \mathbf{L}^T</script></span>와 같은 형태로 나타낼 수 있다.</p>
 <h3 id="_3">행렬 계산 과정</h3>
 <p>Sholesky 분해 과정은 다음과 같은 단계로 구성된다:</p>
 <ol>
-<li>주어진 대칭 행렬 <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{A}</span><script type="math/tex">\mathbf{A}</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{A}</span><script type="math/tex">\mathbf{A}</script></span></script></span>를 읽는다.</li>
-<li>하삼각 행렬 <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{L}</span><script type="math/tex">\mathbf{L}</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{L}</span><script type="math/tex">\mathbf{L}</script></span></script></span>을 초기화한다.</li>
-<li><span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{A}</span><script type="math/tex">\mathbf{A}</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{A}</span><script type="math/tex">\mathbf{A}</script></span></script></span>의 원소들을 직접적으로 이용하여 <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{L}</span><script type="math/tex">\mathbf{L}</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{L}</span><script type="math/tex">\mathbf{L}</script></span></script></span>의 원소들을 계산한다.</li>
+<li>주어진 대칭 행렬 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{A}</span><script type="math/tex">\mathbf{A}</script></span>를 읽는다.</li>
+<li>하삼각 행렬 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{L}</span><script type="math/tex">\mathbf{L}</script></span>을 초기화한다.</li>
+<li><span class="arithmatex"><span class="MathJax_Preview">\mathbf{A}</span><script type="math/tex">\mathbf{A}</script></span>의 원소들을 직접적으로 이용하여 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{L}</span><script type="math/tex">\mathbf{L}</script></span>의 원소들을 계산한다.</li>
 </ol>
 <div class="arithmatex">
 <div class="MathJax_Preview">
@@ -135,7 +135,7 @@ l_{n1} & l_{n2} & \cdots & l_{nn}
 </script>
 </div>
 <h3 id="_4">일반적인 계산 공식</h3>
-<p>하삼각 행렬 <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{L}</span><script type="math/tex">\mathbf{L}</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{L}</span><script type="math/tex">\mathbf{L}</script></span></script></span>의 원소는 아래의 공식으로 구할 수 있다:</p>
+<p>하삼각 행렬 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{L}</span><script type="math/tex">\mathbf{L}</script></span>의 원소는 아래의 공식으로 구할 수 있다:</p>
 <ol>
 <li><strong>대각 원소 계산:</strong></li>
 </ol>
@@ -158,11 +158,11 @@ l_{ij} = \frac{1}{l_{jj}} \left(a_{ij} - \sum_{k=1}^{j-1} l_{ik} l_{jk}\right), 
 l_{ij} = \frac{1}{l_{jj}} \left(a_{ij} - \sum_{k=1}^{j-1} l_{ik} l_{jk}\right), \quad i > j
 </script>
 </div>
-<p>각 원소를 차례로 구하며 <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{L}</span><script type="math/tex">\mathbf{L}</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{L}</span><script type="math/tex">\mathbf{L}</script></span></script></span>을 구성한다.</p>
+<p>각 원소를 차례로 구하며 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{L}</span><script type="math/tex">\mathbf{L}</script></span>을 구성한다.</p>
 <h3 id="_5">단계별 예제</h3>
 <p>다음은 단계별로 계산 과정에서 필요한 예제이다:</p>
 <h4 id="1">1. 초기화 단계</h4>
-<p>대칭 행렬 <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{A}</span><script type="math/tex">\mathbf{A}</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{A}</span><script type="math/tex">\mathbf{A}</script></span></script></span>:</p>
+<p>대칭 행렬 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{A}</span><script type="math/tex">\mathbf{A}</script></span>:</p>
 <div class="arithmatex">
 <div class="MathJax_Preview">
 \mathbf{A} =
@@ -181,7 +181,7 @@ l_{ij} = \frac{1}{l_{jj}} \left(a_{ij} - \sum_{k=1}^{j-1} l_{ik} l_{jk}\right), 
 \end{bmatrix}
 </script>
 </div>
-<p>하삼각 행렬 <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{L}</span><script type="math/tex">\mathbf{L}</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{L}</span><script type="math/tex">\mathbf{L}</script></span></script></span>:</p>
+<p>하삼각 행렬 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{L}</span><script type="math/tex">\mathbf{L}</script></span>:</p>
 <div class="arithmatex">
 <div class="MathJax_Preview">
 \mathbf{L} =
@@ -254,7 +254,7 @@ l_{33} = \sqrt{a_{33} - (l_{31}^2 + l_{32}^2)} = \sqrt{98 - ((-8)^2 + 5^2)} = \s
 </script>
 </div>
 <h4 id="_6">최종 하삼각 행렬</h4>
-<p>모든 원소를 계산하여 하삼각 행렬 <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{L}</span><script type="math/tex">\mathbf{L}</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{L}</span><script type="math/tex">\mathbf{L}</script></span></script></span>를 완성한다:</p>
+<p>모든 원소를 계산하여 하삼각 행렬 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{L}</span><script type="math/tex">\mathbf{L}</script></span>를 완성한다:</p>
 <div class="arithmatex">
 <div class="MathJax_Preview">
 \mathbf{L} =
@@ -273,7 +273,7 @@ l_{33} = \sqrt{a_{33} - (l_{31}^2 + l_{32}^2)} = \sqrt{98 - ((-8)^2 + 5^2)} = \s
 \end{bmatrix}
 </script>
 </div>
-<p>그리고, <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{A}</span><script type="math/tex">\mathbf{A}</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{A}</span><script type="math/tex">\mathbf{A}</script></span></script></span>는 이제 정말로 <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{L} \mathbf{L}^T</span><script type="math/tex">\mathbf{L} \mathbf{L}^T</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{L} \mathbf{L}^T</span><script type="math/tex">\mathbf{L} \mathbf{L}^T</script></span></script></span>로 분해될 수 있다:</p>
+<p>그리고, <span class="arithmatex"><span class="MathJax_Preview">\mathbf{A}</span><script type="math/tex">\mathbf{A}</script></span>는 이제 정말로 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{L} \mathbf{L}^T</span><script type="math/tex">\mathbf{L} \mathbf{L}^T</script></span>로 분해될 수 있다:</p>
 <div class="arithmatex">
 <div class="MathJax_Preview">
 \mathbf{A} = \mathbf{L} \mathbf{L}^T = 
@@ -312,7 +312,7 @@ l_{33} = \sqrt{a_{33} - (l_{31}^2 + l_{32}^2)} = \sqrt{98 - ((-8)^2 + 5^2)} = \s
 \end{bmatrix}
 </script>
 </div>
-<p>즉, 주어진 대칭 행렬 <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{A}</span><script type="math/tex">\mathbf{A}</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{A}</span><script type="math/tex">\mathbf{A}</script></span></script></span>는 정확하게 하삼각 행렬 <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{L}</span><script type="math/tex">\mathbf{L}</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{L}</span><script type="math/tex">\mathbf{L}</script></span></script></span>과 그 전치 행렬 <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{L}^T</span><script type="math/tex">\mathbf{L}^T</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{L}^T</span><script type="math/tex">\mathbf{L}^T</script></span></script></span>로 분해되었다.</p>
+<p>즉, 주어진 대칭 행렬 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{A}</span><script type="math/tex">\mathbf{A}</script></span>는 정확하게 하삼각 행렬 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{L}</span><script type="math/tex">\mathbf{L}</script></span>과 그 전치 행렬 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{L}^T</span><script type="math/tex">\mathbf{L}^T</script></span>로 분해되었다.</p>
 <hr />
 <p>Sholesky 분해는 대칭이고 양의 정부호인 행렬을 하삼각 행렬과 그 전치 행렬의 곱으로 분해하는 매우 유용한 기법이다. 이를 통해 시스템의 연립방정식을 효율적으로 풀 수 있고 여러 수치해석 문제에 적용할 수 있다.</p>
 

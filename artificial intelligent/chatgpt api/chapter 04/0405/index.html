@@ -129,7 +129,7 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 <p>$$</p>
 <p>y_i = f_i(\mathbf{x})</p>
 <p>$$</p>
-<p>여기서, $$ f_i $$는 모델 $$ i $$가 입력 <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{x}</span><script type="math/tex">\mathbf{x}</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{x}</span><script type="math/tex">\mathbf{x}</script></span></script></span>에 대해 생성한 출력을 나타내며, 최종 출력 $$ y $$는 여러 $$ y_i $$들의 결합으로 이루어질 수 있다.</p>
+<p>여기서, <span class="arithmatex"><span class="MathJax_Preview">f_i</span><script type="math/tex">f_i</script></span>는 모델 <span class="arithmatex"><span class="MathJax_Preview">i</span><script type="math/tex">i</script></span>가 입력 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{x}</span><script type="math/tex">\mathbf{x}</script></span>에 대해 생성한 출력을 나타내며, 최종 출력 <span class="arithmatex"><span class="MathJax_Preview">y</span><script type="math/tex">y</script></span>는 여러 <span class="arithmatex"><span class="MathJax_Preview">y_i</span><script type="math/tex">y_i</script></span>들의 결합으로 이루어질 수 있다.</p>
 <h3 id="_5">하이브리드 모델 구성</h3>
 <p>하이브리드 모델 구성은 여러 모델을 결합하여 단일 시스템에서 협력적으로 동작하게 하는 방법이다. 이러한 구성을 통해 단일 모델로는 얻기 어려운 성능을 달성할 수 있다. 하이브리드 모델 구성의 예시는 다음과 같다:</p>
 <h4 id="ensemble-learning">앙상블 학습 (Ensemble Learning)</h4>
@@ -140,7 +140,7 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 <p>$$</p>
 <p>y = \sum_{i=1}^{n} w_i \cdot f_i(\mathbf{x})</p>
 <p>$$</p>
-<p>여기서, $$ w_i $$는 모델 $$ i $$의 가중치이며, $$ \sum_{i=1}^{n} w_i = 1 $$이다.</p>
+<p>여기서, <span class="arithmatex"><span class="MathJax_Preview">w_i</span><script type="math/tex">w_i</script></span>는 모델 <span class="arithmatex"><span class="MathJax_Preview">i</span><script type="math/tex">i</script></span>의 가중치이며, <span class="arithmatex"><span class="MathJax_Preview">\sum_{i=1}^{n} w_i = 1</span><script type="math/tex">\sum_{i=1}^{n} w_i = 1</script></span>이다.</p>
 <h4 id="sequential-models">시퀀셜 모델 (Sequential Models)</h4>
 <p>모델을 순차적으로 사용하여 단계별로 출력을 개선하는 방법이다. 첫 번째 모델의 출력이 다음 모델의 입력으로 사용된다. 이 방법은 복잡한 문제를 해결할 때 유용하다.</p>
 <p>$$</p>
@@ -152,7 +152,7 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 <p>$$</p>
 <p>\mathbf{y}_3 = f_3(\mathbf{y}_2)</p>
 <p>$$</p>
-<p>이러한 방식으로, 최종 출력 $$ \mathbf{y}_3 $$는 초기 입력 <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{x}</span><script type="math/tex">\mathbf{x}</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{x}</span><script type="math/tex">\mathbf{x}</script></span></script></span>에 대한 여러 단계의 변환 결과로 얻어진다.</p>
+<p>이러한 방식으로, 최종 출력 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{y}_3</span><script type="math/tex">\mathbf{y}_3</script></span>는 초기 입력 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{x}</span><script type="math/tex">\mathbf{x}</script></span>에 대한 여러 단계의 변환 결과로 얻어진다.</p>
 <h3 id="_6">모델 전환 전략</h3>
 <p>모델 전환 전략은 응용 프로그램의 상태나 외부 요인에 따라 사용하는 모델을 동적으로 변경하는 방법이다. 이러한 전략을 통해 각 상황에 가장 적합한 모델을 선택하여 성능과 효율성을 최적화할 수 있다.</p>
 <h4 id="conditional-model-switching">조건부 모델 전환 (Conditional Model Switching)</h4>
@@ -166,7 +166,7 @@ f_2(\mathbf{x}) &amp; \text{if } \text{Condition 2} \
 f_n(\mathbf{x}) &amp; \text{if } \text{Condition n}
 \end{cases}</p>
 <p>$$</p>
-<p>여기서 각 조건은 입력 데이터 <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{x}</span><script type="math/tex">\mathbf{x}</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{x}</span><script type="math/tex">\mathbf{x}</script></span></script></span>의 특성에 따라 정의된다.</p>
+<p>여기서 각 조건은 입력 데이터 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{x}</span><script type="math/tex">\mathbf{x}</script></span>의 특성에 따라 정의된다.</p>
 <h4 id="gradual-performance-requirements">단계적 성능 요구 (Gradual Performance Requirements)</h4>
 <p>작업의 복잡도에 따라 점진적으로 더 강력한 모델을 사용하는 전략이다. 예를 들어, 처음에는 간단한 모델로 시도하고, 결과가 만족스럽지 않으면 더 강력한 모델을 호출하는 방식이다. 이 방법은 비용을 절감하면서도 성능을 보장할 수 있는 장점이 있다.</p>
 <p>$$</p>

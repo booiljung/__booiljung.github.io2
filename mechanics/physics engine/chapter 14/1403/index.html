@@ -113,10 +113,7 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 <p>충돌 감지 최적화에서 가장 중요한 요소 중 하나는 공간 분할 기법이다. 대규모 게임 환경에서 모든 객체 간의 충돌을 검사하는 것은 비효율적이기 때문에, 공간 분할 기법을 통해 이 문제를 해결할 수 있다.</p>
 <h4 id="quadtree">사분 트리 (Quadtree)</h4>
 <p>사분 트리는 2D 공간을 네 개의 재귀적 하위 공간으로 분할하는 구조이다. 각 노드는 네 개의 자식 노드를 가지며, 이 과정은 객체가 소속된 공간의 범위가 충분히 작아질 때까지 반복된다.</p>
-<div class="arithmatex">
-<div class="MathJax_Preview">\text{여기서 각 노드는 아래와 같이 정의된다:}</div>
-<script type="math/tex; mode=display">\text{여기서 각 노드는 아래와 같이 정의된다:}</script>
-</div>
+<p><span class="arithmatex"><span class="MathJax_Preview">\text{여기서 각 노드는 아래와 같이 정의된다:}</span><script type="math/tex">\text{여기서 각 노드는 아래와 같이 정의된다:}</script></span></p>
 <ul>
 <li>루트 노드는 전체 공간을 나타낸다.</li>
 <li>각 내부 노드는 네 개의 자식 노드를 가지고, 각각의 자식 노드는 더 작은 사분면을 나타낸다.</li>
@@ -125,30 +122,14 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 <p>옥트리는 사분 트리의 3D 버전이다. 전체 공간을 여덟 개의 부분 공간으로 나누고, 각 노드는 여덟 개의 자식 노드를 갖는다. 이는 3D 충돌 감지에 더 적합한다.</p>
 <h3 id="axis-aligned-bounding-box-aabb">Axis-Aligned Bounding Box (AABB)</h3>
 <p>AABB는 축에 정렬된 경계 상자로, 각 객체를 포함하는 최소한의 축 정렬된 붕괴 상자를 의미한다. 두 AABB가 충돌하는지를 체크하는 것은 매우 단순하면서도 효율적이다. 두 AABB가 충돌하는지 판단하기 위해서는 각 축에 대해 투영된 간격이 겹치는지를 검사하면 된다.</p>
-<div class="arithmatex">
-<div class="MathJax_Preview">\text{AABB 충돌 검사 알고리즘은 아래와 같다:}</div>
-<script type="math/tex; mode=display">\text{AABB 충돌 검사 알고리즘은 아래와 같다:}</script>
-</div>
+<p><span class="arithmatex"><span class="MathJax_Preview">\text{AABB 충돌 검사 알고리즘은 아래와 같다:}</span><script type="math/tex">\text{AABB 충돌 검사 알고리즘은 아래와 같다:}</script></span></p>
 <ol>
-<li>두 AABB <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">A</span><script type="math/tex">A</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">A</span><script type="math/tex">A</script></span></script></span>와 <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">B</span><script type="math/tex">B</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">B</span><script type="math/tex">B</script></span></script></span>의 최소 점과 최대 점을 각각 <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">A_{min}</span><script type="math/tex">A_{min}</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">A_{min}</span><script type="math/tex">A_{min}</script></span></script></span>, <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">A_{max}</span><script type="math/tex">A_{max}</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">A_{max}</span><script type="math/tex">A_{max}</script></span></script></span>, <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">B_{min}</span><script type="math/tex">B_{min}</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">B_{min}</span><script type="math/tex">B_{min}</script></span></script></span>, <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">B_{max}</span><script type="math/tex">B_{max}</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">B_{max}</span><script type="math/tex">B_{max}</script></span></script></span> 이라고 하자.</li>
-<li>각 축에 대해 <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">A</span><script type="math/tex">A</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">A</span><script type="math/tex">A</script></span></script></span>와 <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">B</span><script type="math/tex">B</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">B</span><script type="math/tex">B</script></span></script></span>가 겹치는지 확인한다:</li>
+<li>두 AABB <span class="arithmatex"><span class="MathJax_Preview">A</span><script type="math/tex">A</script></span>와 <span class="arithmatex"><span class="MathJax_Preview">B</span><script type="math/tex">B</script></span>의 최소 점과 최대 점을 각각 <span class="arithmatex"><span class="MathJax_Preview">A_{min}</span><script type="math/tex">A_{min}</script></span>, <span class="arithmatex"><span class="MathJax_Preview">A_{max}</span><script type="math/tex">A_{max}</script></span>, <span class="arithmatex"><span class="MathJax_Preview">B_{min}</span><script type="math/tex">B_{min}</script></span>, <span class="arithmatex"><span class="MathJax_Preview">B_{max}</span><script type="math/tex">B_{max}</script></span> 이라고 하자.</li>
+<li>각 축에 대해 <span class="arithmatex"><span class="MathJax_Preview">A</span><script type="math/tex">A</script></span>와 <span class="arithmatex"><span class="MathJax_Preview">B</span><script type="math/tex">B</script></span>가 겹치는지 확인한다:</li>
+<li><span class="arithmatex"><span class="MathJax_Preview">x</span><script type="math/tex">x</script></span> 축: <span class="arithmatex"><span class="MathJax_Preview">A_{max}.x \geq B_{min}.x</span><script type="math/tex">A_{max}.x \geq B_{min}.x</script></span> 그리고 <span class="arithmatex"><span class="MathJax_Preview">A_{min}.x \leq B_{max}.x</span><script type="math/tex">A_{min}.x \leq B_{max}.x</script></span></li>
+<li><span class="arithmatex"><span class="MathJax_Preview">y</span><script type="math/tex">y</script></span> 축: <span class="arithmatex"><span class="MathJax_Preview">A_{max}.y \geq B_{min}.y</span><script type="math/tex">A_{max}.y \geq B_{min}.y</script></span> 그리고 <span class="arithmatex"><span class="MathJax_Preview">A_{min}.y \leq B_{max}.y</span><script type="math/tex">A_{min}.y \leq B_{max}.y</script></span></li>
 <li>
-<div class="arithmatex">
-<div class="MathJax_Preview">x$$ 축: $$A_{max}.x \geq B_{min}.x$$ 그리고 $$A_{min}.x \leq B_{max}.x</div>
-<script type="math/tex; mode=display">x$$ 축: $$A_{max}.x \geq B_{min}.x$$ 그리고 $$A_{min}.x \leq B_{max}.x</script>
-</div>
-</li>
-<li>
-<div class="arithmatex">
-<div class="MathJax_Preview">y$$ 축: $$A_{max}.y \geq B_{min}.y$$ 그리고 $$A_{min}.y \leq B_{max}.y</div>
-<script type="math/tex; mode=display">y$$ 축: $$A_{max}.y \geq B_{min}.y$$ 그리고 $$A_{min}.y \leq B_{max}.y</script>
-</div>
-</li>
-<li>
-<div class="arithmatex">
-<div class="MathJax_Preview">z$$ 축 (3D의 경우): $$A_{max}.z \geq B_{min}.z$$ 그리고 $$A_{min}.z \leq B_{max}.z</div>
-<script type="math/tex; mode=display">z$$ 축 (3D의 경우): $$A_{max}.z \geq B_{min}.z$$ 그리고 $$A_{min}.z \leq B_{max}.z</script>
-</div>
+<p><span class="arithmatex"><span class="MathJax_Preview">z</span><script type="math/tex">z</script></span> 축 (3D의 경우): <span class="arithmatex"><span class="MathJax_Preview">A_{max}.z \geq B_{min}.z</span><script type="math/tex">A_{max}.z \geq B_{min}.z</script></span> 그리고 <span class="arithmatex"><span class="MathJax_Preview">A_{min}.z \leq B_{max}.z</span><script type="math/tex">A_{min}.z \leq B_{max}.z</script></span></p>
 </li>
 <li>
 <p>모든 축에 대해 겹치면 두 AABB는 충돌한다고 판단한다.</p>
@@ -170,11 +151,8 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 <h3 id="gjk-gilbert-johnson-keerthi-algorithm">GJK (Gilbert-Johnson-Keerthi) Algorithm</h3>
 <p>GJK 알고리즘은 두 볼록한 폴리헤드에 대한 충돌 여부를 판별하는 효율적인 방법이다.</p>
 <h4 id="_3">기본 아이디어</h4>
-<p>두 폴리헤드 <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">A</span><script type="math/tex">A</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">A</span><script type="math/tex">A</script></span></script></span>와 <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">B</span><script type="math/tex">B</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">B</span><script type="math/tex">B</script></span></script></span>가 충돌하는 것은 그들의 Minkowski 합집합이 원점을 포함하는지 여부로 결정된다. 이 알고리즘은 반복적 절차를 통해 이 문제를 해결한다.</p>
-<div class="arithmatex">
-<div class="MathJax_Preview">\text{Minkowski 합집합:}</div>
-<script type="math/tex; mode=display">\text{Minkowski 합집합:}</script>
-</div>
+<p>두 폴리헤드 <span class="arithmatex"><span class="MathJax_Preview">A</span><script type="math/tex">A</script></span>와 <span class="arithmatex"><span class="MathJax_Preview">B</span><script type="math/tex">B</script></span>가 충돌하는 것은 그들의 Minkowski 합집합이 원점을 포함하는지 여부로 결정된다. 이 알고리즘은 반복적 절차를 통해 이 문제를 해결한다.</p>
+<p><span class="arithmatex"><span class="MathJax_Preview">\text{Minkowski 합집합:}</span><script type="math/tex">\text{Minkowski 합집합:}</script></span></p>
 <div class="arithmatex">
 <div class="MathJax_Preview">
 A \oplus (-B) = \{ \mathbf{a} - \mathbf{b} \mid \mathbf{a} \in A, \mathbf{b} \in B \}

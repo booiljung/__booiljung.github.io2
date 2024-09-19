@@ -56,8 +56,8 @@
           {title: "11. \uaddc\uc81c \ubc0f \ud45c\uc900 \uc900\uc218", url: "#11", children: [
           ]},
           {title: "\uc218\ud559\uc801 \ubaa8\ub378\ub9c1", url: "#_1", children: [
-              {title: "\uc591\ub825 (Lift, LLLL) \uacc4\uc0b0", url: "#lift-llll" },
-              {title: "\ud56d\ub825 (Drag, DDDD) \uacc4\uc0b0", url: "#drag-dddd" },
+              {title: "\uc591\ub825 (Lift, LL) \uacc4\uc0b0", url: "#lift-ll" },
+              {title: "\ud56d\ub825 (Drag, DD) \uacc4\uc0b0", url: "#drag-dd" },
               {title: "\uc591\ub825/\ud56d\ub825 \ube44", url: "#_2" },
           ]},
           {title: "\ucd5c\uc801\ud654 \ubb38\uc81c", url: "#_3", children: [
@@ -156,21 +156,21 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 <p>항공기 설계는 국제 및 국내 규제와 표준을 준수해야 한다. 이들 규제를 만족시키는 것이 필수적이다.</p>
 <h3 id="_1">수학적 모델링</h3>
 <p>항공기 날개 설계에 사용되는 수학적 모델링에 대해 다음과 같은 요소들이 포함된다:</p>
-<h4 id="lift-llll">양력 (Lift, <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">L</span><script type="math/tex">L</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">L</span><script type="math/tex">L</script></span></script></span>) 계산</h4>
+<h4 id="lift-ll">양력 (Lift, <span class="arithmatex"><span class="MathJax_Preview">L</span><script type="math/tex">L</script></span>) 계산</h4>
 <p>$$</p>
 <p>L = \frac{1}{2} \rho v^2 S C_L 
 $$</p>
 <p>여기서:
-- <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">\rho</span><script type="math/tex">\rho</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">\rho</span><script type="math/tex">\rho</script></span></script></span>는 공기 밀도
-- <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">v</span><script type="math/tex">v</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">v</span><script type="math/tex">v</script></span></script></span>는 비행 속도
-- <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">S</span><script type="math/tex">S</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">S</span><script type="math/tex">S</script></span></script></span>는 날개 면적
-- <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">C_L</span><script type="math/tex">C_L</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">C_L</span><script type="math/tex">C_L</script></span></script></span>는 양력 계수</p>
-<h4 id="drag-dddd">항력 (Drag, <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">D</span><script type="math/tex">D</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">D</span><script type="math/tex">D</script></span></script></span>) 계산</h4>
+- <span class="arithmatex"><span class="MathJax_Preview">\rho</span><script type="math/tex">\rho</script></span>는 공기 밀도
+- <span class="arithmatex"><span class="MathJax_Preview">v</span><script type="math/tex">v</script></span>는 비행 속도
+- <span class="arithmatex"><span class="MathJax_Preview">S</span><script type="math/tex">S</script></span>는 날개 면적
+- <span class="arithmatex"><span class="MathJax_Preview">C_L</span><script type="math/tex">C_L</script></span>는 양력 계수</p>
+<h4 id="drag-dd">항력 (Drag, <span class="arithmatex"><span class="MathJax_Preview">D</span><script type="math/tex">D</script></span>) 계산</h4>
 <p>$$</p>
 <p>D = \frac{1}{2} \rho v^2 S C_D 
 $$</p>
 <p>여기서:
-- <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">C_D</span><script type="math/tex">C_D</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">C_D</span><script type="math/tex">C_D</script></span></script></span>는 항력 계수</p>
+- <span class="arithmatex"><span class="MathJax_Preview">C_D</span><script type="math/tex">C_D</script></span>는 항력 계수</p>
 <h4 id="_2">양력/항력 비</h4>
 <p>$$</p>
 <p>\frac{L}{D} = \frac{C_L}{C_D} 

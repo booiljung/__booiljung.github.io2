@@ -110,7 +110,7 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 \mathbf{F} = m\mathbf{a}
 </script>
 </div>
-<p>여기서 $$ \mathbf{F} $$는 힘 벡터, $$ m $$은 질량, $$ \mathbf{a} $$는 가속도이다.</p>
+<p>여기서 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{F}</span><script type="math/tex">\mathbf{F}</script></span>는 힘 벡터, <span class="arithmatex"><span class="MathJax_Preview">m</span><script type="math/tex">m</script></span>은 질량, <span class="arithmatex"><span class="MathJax_Preview">\mathbf{a}</span><script type="math/tex">\mathbf{a}</script></span>는 가속도이다.</p>
 <h4 id="_3">힘의 예</h4>
 <p>다음은 몇 가지 사용자 정의 힘의 예시이다.</p>
 <ol>
@@ -120,7 +120,7 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 <p>$$
     \mathbf{F}_{d} = -c_d |\mathbf{v}| \mathbf{v}</p>
 <p>$$</p>
-<pre><code>여기서 $$ c_d $$는 드래그 계수, $$ \mathbf{v} $$는 속도 벡터이다.
+<pre><code>여기서 $c_d$는 드래그 계수, $\mathbf{v}$는 속도 벡터이다.
 </code></pre>
 <ol>
 <li><strong>흐름에 의한 힘(유체 저항)</strong>
@@ -129,7 +129,7 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 <p>$$
     \mathbf{F}_{f} = \frac{1}{2} \rho v^2 A C_d \mathbf{\hat{v}}</p>
 <p>$$</p>
-<pre><code>여기서 $$ \rho $$는 유체 밀도, $$ v $$는 유체 속도, $$ A $$는 단면적, $$ C_d $$는 저항 계수, $$ \mathbf{\hat{v}} $$는 속도의 단위 벡터이다.
+<pre><code>여기서 $\rho$는 유체 밀도, $v$는 유체 속도, $A$는 단면적, $C_d$는 저항 계수, $\mathbf{\hat{v}}$는 속도의 단위 벡터이다.
 </code></pre>
 <h3 id="_4">사용자 정의 충돌 처리</h3>
 <h4 id="_5">충돌 감지</h4>
@@ -161,7 +161,7 @@ def aabb_collision(box1, box2):
 <p>$$
     \mathbf{v}<em>{1} = \mathbf{v}</em>{1} - \left(1 + e\right) \frac{\left(\mathbf{v}<em>{1} - \mathbf{v}</em>{2}\right) \cdot \mathbf{n}}{\left(\mathbf{n} \cdot \mathbf{n}\right)} \mathbf{n}</p>
 <p>$$</p>
-<pre><code>여기서 $$ e $$는 계수 반발계수, $$ \mathbf{n} $$은 충돌 면의 법선 벡터이다.
+<pre><code>여기서 $e$는 계수 반발계수, $\mathbf{n}$은 충돌 면의 법선 벡터이다.
 </code></pre>
 <ol>
 <li><strong>감쇠 기반 충돌 응답</strong>
@@ -170,7 +170,7 @@ def aabb_collision(box1, box2):
 <p>$$
     \mathbf{v}' = \mathbf{v} - d\mathbf{v}</p>
 <p>$$</p>
-<pre><code>여기서 $$ d $$는 감쇠 계수이다.
+<pre><code>여기서 $d$는 감쇠 계수이다.
 </code></pre>
 <h2 id="_7">고급 사용자 정의 요소</h2>
 <h3 id="_8">다루기 어려운 물리적 특성</h3>
@@ -184,7 +184,7 @@ def aabb_collision(box1, box2):
 \mathbf{v}_{new} = \frac{m_1 \mathbf{v}_1 + m_2 \mathbf{v}_2}{m_1 + m_2}
 </script>
 </div>
-<p>여기서 <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">v_{new}</span><script type="math/tex">v_{new}</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">v_{new}</span><script type="math/tex">v_{new}</script></span></script></span>는 병합 후의 공통 속도이다.</p>
+<p>여기서 <span class="arithmatex"><span class="MathJax_Preview">v_{new}</span><script type="math/tex">v_{new}</script></span>는 병합 후의 공통 속도이다.</p>
 <h4 id="_10">점성 및 유체 역학</h4>
 <p>유체 시뮬레이션은 물리 엔진에서 매우 중요한 요소이다. SPH(Smoothed Particle Hydrodynamics)와 같은 알고리즘은 유체의 점성 및 밀도 변화를 효율적으로 모델링할 수 있다.</p>
 <div class="arithmatex">
@@ -195,7 +195,7 @@ def aabb_collision(box1, box2):
 \mathbf{F}_i = - \sum_{j} m_j \left( P_i + P_j \right) \frac{\nabla W_{ij}}{\rho_j}
 </script>
 </div>
-<p>여기서 <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">W_{ij}</span><script type="math/tex">W_{ij}</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">W_{ij}</span><script type="math/tex">W_{ij}</script></span></script></span>는 커널 함수, <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">\rho_j</span><script type="math/tex">\rho_j</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">\rho_j</span><script type="math/tex">\rho_j</script></span></script></span>는 입자의 밀도이다.</p>
+<p>여기서 <span class="arithmatex"><span class="MathJax_Preview">W_{ij}</span><script type="math/tex">W_{ij}</script></span>는 커널 함수, <span class="arithmatex"><span class="MathJax_Preview">\rho_j</span><script type="math/tex">\rho_j</script></span>는 입자의 밀도이다.</p>
 <h3 id="_11">사용자 정의 물체의 행태</h3>
 <h4 id="_12">유연체 및 나일론</h4>
 <p>유연체(soft body)와 다른 변형 가능한 물체는 정확한 물리 엔진 커스터마이징이 필요하다. 유연체 시뮬레이션은 주로 스프링-매스 모형이나 FEM(Finite Element Method)을 사용한다.</p>

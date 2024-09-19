@@ -172,7 +172,7 @@ void addVectors(float* a, float* b, float* result, int size) {
 <p>$$</p>
 <p>F_{approx} = (1 + \epsilon) F_{exact}</p>
 <p>$$</p>
-<p>여기서 $$ \epsilon $$는 허용 가능한 오차 범위이다.</p>
+<p>여기서 <span class="arithmatex"><span class="MathJax_Preview">\epsilon</span><script type="math/tex">\epsilon</script></span>는 허용 가능한 오차 범위이다.</p>
 <h3 id="_7">하드웨어 가속기 사용</h3>
 <h4 id="cuda">예제: CUDA를 이용한 물리 연산 최적화</h4>
 <pre><code class="language-cpp">__global__ void vectorAdd(float* A, float* B, float* C, int N) {

@@ -99,12 +99,12 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 <p>벡터 곱은 3D 공간에서 벡터를 회전시키는 데 중요한 역할을 한다. 사실, 벡터 회전은 공학과 물리학에서 매우 중요한 주제이다. 아래는 벡터 곱을 이용한 회전 벡터의 응용이다.</p>
 <h3 id="_2">기본 개념</h3>
 <ul>
-<li>두 벡터 <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{a}</span><script type="math/tex">\mathbf{a}</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{a}</span><script type="math/tex">\mathbf{a}</script></span></script></span>와 <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{b}</span><script type="math/tex">\mathbf{b}</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{b}</span><script type="math/tex">\mathbf{b}</script></span></script></span>의 벡터 곱 <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{a} \times \mathbf{b}</span><script type="math/tex">\mathbf{a} \times \mathbf{b}</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{a} \times \mathbf{b}</span><script type="math/tex">\mathbf{a} \times \mathbf{b}</script></span></script></span>는 이 두 벡터에 수직인 벡터를 나타낸다.</li>
-<li>결과 벡터의 크기는 <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{a}</span><script type="math/tex">\mathbf{a}</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{a}</span><script type="math/tex">\mathbf{a}</script></span></script></span>와 <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{b}</span><script type="math/tex">\mathbf{b}</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{b}</span><script type="math/tex">\mathbf{b}</script></span></script></span> 벡터로 구성된 평행사변형의 면적을 나타낸다.</li>
+<li>두 벡터 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{a}</span><script type="math/tex">\mathbf{a}</script></span>와 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{b}</span><script type="math/tex">\mathbf{b}</script></span>의 벡터 곱 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{a} \times \mathbf{b}</span><script type="math/tex">\mathbf{a} \times \mathbf{b}</script></span>는 이 두 벡터에 수직인 벡터를 나타낸다.</li>
+<li>결과 벡터의 크기는 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{a}</span><script type="math/tex">\mathbf{a}</script></span>와 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{b}</span><script type="math/tex">\mathbf{b}</script></span> 벡터로 구성된 평행사변형의 면적을 나타낸다.</li>
 <li>이 결과 벡터는 회전의 축을 나타내며, 그 크기는 회전의 강도를 나타낸다.</li>
 </ul>
 <h3 id="_3">예시</h3>
-<p>점 <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">(1,0,0)</span><script type="math/tex">(1,0,0)</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">(1,0,0)</span><script type="math/tex">(1,0,0)</script></span></script></span>을 원점 <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">(0,0,0)</span><script type="math/tex">(0,0,0)</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">(0,0,0)</span><script type="math/tex">(0,0,0)</script></span></script></span> 주변에 90도 회전시키려면, 회전 행렬과 로드리게스 회전 공식을 사용해야 한다. </p>
+<p>점 <span class="arithmatex"><span class="MathJax_Preview">(1,0,0)</span><script type="math/tex">(1,0,0)</script></span>을 원점 <span class="arithmatex"><span class="MathJax_Preview">(0,0,0)</span><script type="math/tex">(0,0,0)</script></span> 주변에 90도 회전시키려면, 회전 행렬과 로드리게스 회전 공식을 사용해야 한다. </p>
 <h3 id="_4">수식</h3>
 <p>이를 표현하는 선형 변환 수식은 다음과 같다:</p>
 <p>$$</p>
@@ -132,7 +132,7 @@ z
 0 &amp; 0 &amp; 1
 \end{bmatrix}</p>
 <p>$$</p>
-<p><span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">\theta = 90^\circ</span><script type="math/tex">\theta = 90^\circ</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">\theta = 90^\circ</span><script type="math/tex">\theta = 90^\circ</script></span></script></span>일 때 <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">\cos\theta = 0</span><script type="math/tex">\cos\theta = 0</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">\cos\theta = 0</span><script type="math/tex">\cos\theta = 0</script></span></script></span>이고 <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">\sin\theta = 1</span><script type="math/tex">\sin\theta = 1</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">\sin\theta = 1</span><script type="math/tex">\sin\theta = 1</script></span></script></span>이므로:</p>
+<p><span class="arithmatex"><span class="MathJax_Preview">\theta = 90^\circ</span><script type="math/tex">\theta = 90^\circ</script></span>일 때 <span class="arithmatex"><span class="MathJax_Preview">\cos\theta = 0</span><script type="math/tex">\cos\theta = 0</script></span>이고 <span class="arithmatex"><span class="MathJax_Preview">\sin\theta = 1</span><script type="math/tex">\sin\theta = 1</script></span>이므로:</p>
 <p>$$</p>
 <p>R = \begin{bmatrix}
 0 &amp; -1 &amp; 0 \
@@ -161,38 +161,38 @@ z
 0
 \end{bmatrix}</p>
 <p>$$</p>
-<p>이는 점 <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">(1,0,0)</span><script type="math/tex">(1,0,0)</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">(1,0,0)</span><script type="math/tex">(1,0,0)</script></span></script></span>이 점 <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">(0,1,0)</span><script type="math/tex">(0,1,0)</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">(0,1,0)</span><script type="math/tex">(0,1,0)</script></span></script></span>으로 회전된 것을 나타낸다.</p>
+<p>이는 점 <span class="arithmatex"><span class="MathJax_Preview">(1,0,0)</span><script type="math/tex">(1,0,0)</script></span>이 점 <span class="arithmatex"><span class="MathJax_Preview">(0,1,0)</span><script type="math/tex">(0,1,0)</script></span>으로 회전된 것을 나타낸다.</p>
 <h2 id="_5">물리학 응용</h2>
 <h3 id="torque">토크 (Torque)</h3>
 <p>물체에 작용하는 힘이 회전을 유발하는 정도를 나타내는 물리량이다. 토크는 벡터 곱을 사용하여 계산된다.</p>
 <h3 id="_6">기본 개념</h3>
-<p>토크 <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{\tau}</span><script type="math/tex">\mathbf{\tau}</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{\tau}</span><script type="math/tex">\mathbf{\tau}</script></span></script></span>는 위치 벡터 <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{r}</span><script type="math/tex">\mathbf{r}</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{r}</span><script type="math/tex">\mathbf{r}</script></span></script></span>와 힘 벡터 <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{F}</span><script type="math/tex">\mathbf{F}</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{F}</span><script type="math/tex">\mathbf{F}</script></span></script></span>의 벡터 곱으로 정의된다.</p>
+<p>토크 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{\tau}</span><script type="math/tex">\mathbf{\tau}</script></span>는 위치 벡터 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{r}</span><script type="math/tex">\mathbf{r}</script></span>와 힘 벡터 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{F}</span><script type="math/tex">\mathbf{F}</script></span>의 벡터 곱으로 정의된다.</p>
 <h3 id="_7">수식</h3>
 <p>$$</p>
 <p>\mathbf{\tau} = \mathbf{r} \times \mathbf{F}</p>
 <p>$$</p>
 <ul>
-<li><span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{r}</span><script type="math/tex">\mathbf{r}</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{r}</span><script type="math/tex">\mathbf{r}</script></span></script></span>: 회전 중심에서 힘 작용점까지의 위치 벡터</li>
-<li><span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{F}</span><script type="math/tex">\mathbf{F}</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{F}</span><script type="math/tex">\mathbf{F}</script></span></script></span>: 힘 벡터</li>
+<li><span class="arithmatex"><span class="MathJax_Preview">\mathbf{r}</span><script type="math/tex">\mathbf{r}</script></span>: 회전 중심에서 힘 작용점까지의 위치 벡터</li>
+<li><span class="arithmatex"><span class="MathJax_Preview">\mathbf{F}</span><script type="math/tex">\mathbf{F}</script></span>: 힘 벡터</li>
 </ul>
 <h3 id="_8">예시</h3>
-<p>길이 <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">L</span><script type="math/tex">L</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">L</span><script type="math/tex">L</script></span></script></span>인 막대의 끝에 <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">F</span><script type="math/tex">F</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">F</span><script type="math/tex">F</script></span></script></span>만큼의 힘이 수직으로 작용할 때, 생성되는 토크는 다음과 같다.</p>
+<p>길이 <span class="arithmatex"><span class="MathJax_Preview">L</span><script type="math/tex">L</script></span>인 막대의 끝에 <span class="arithmatex"><span class="MathJax_Preview">F</span><script type="math/tex">F</script></span>만큼의 힘이 수직으로 작용할 때, 생성되는 토크는 다음과 같다.</p>
 <p>$$</p>
 <p>\tau = |\mathbf{r}| |\mathbf{F}| \sin \theta</p>
 <p>$$</p>
-<p>막대가 수평일 때 <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">\theta = 90^\circ</span><script type="math/tex">\theta = 90^\circ</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">\theta = 90^\circ</span><script type="math/tex">\theta = 90^\circ</script></span></script></span>이다. 따라서 <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">\sin \theta = 1</span><script type="math/tex">\sin \theta = 1</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">\sin \theta = 1</span><script type="math/tex">\sin \theta = 1</script></span></script></span>이고 토크는:</p>
+<p>막대가 수평일 때 <span class="arithmatex"><span class="MathJax_Preview">\theta = 90^\circ</span><script type="math/tex">\theta = 90^\circ</script></span>이다. 따라서 <span class="arithmatex"><span class="MathJax_Preview">\sin \theta = 1</span><script type="math/tex">\sin \theta = 1</script></span>이고 토크는:</p>
 <p>$$</p>
 <p>\tau = L \cdot F</p>
 <p>$$</p>
 <h3 id="_9">연습 문제</h3>
-<p>문제 1: 벡터 <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{a} = (3, -2, 1)</span><script type="math/tex">\mathbf{a} = (3, -2, 1)</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{a} = (3, -2, 1)</span><script type="math/tex">\mathbf{a} = (3, -2, 1)</script></span></script></span>와 <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{b} = (1, 2, 3)</span><script type="math/tex">\mathbf{b} = (1, 2, 3)</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{b} = (1, 2, 3)</span><script type="math/tex">\mathbf{b} = (1, 2, 3)</script></span></script></span>의 벡터 곱을 구하시오.</p>
-<p>문제 2: 점 <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">(2, 2, 0)</span><script type="math/tex">(2, 2, 0)</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">(2, 2, 0)</span><script type="math/tex">(2, 2, 0)</script></span></script></span>이 원점 <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">(0,0,0)</span><script type="math/tex">(0,0,0)</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">(0,0,0)</span><script type="math/tex">(0,0,0)</script></span></script></span>을 기준으로 z축을 중심으로 180도 회전한 후 새로운 좌표를 구하시오.</p>
+<p>문제 1: 벡터 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{a} = (3, -2, 1)</span><script type="math/tex">\mathbf{a} = (3, -2, 1)</script></span>와 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{b} = (1, 2, 3)</span><script type="math/tex">\mathbf{b} = (1, 2, 3)</script></span>의 벡터 곱을 구하시오.</p>
+<p>문제 2: 점 <span class="arithmatex"><span class="MathJax_Preview">(2, 2, 0)</span><script type="math/tex">(2, 2, 0)</script></span>이 원점 <span class="arithmatex"><span class="MathJax_Preview">(0,0,0)</span><script type="math/tex">(0,0,0)</script></span>을 기준으로 z축을 중심으로 180도 회전한 후 새로운 좌표를 구하시오.</p>
 <p>문제 3:  길이 3m의 막대에 수직으로 작용하는 5N의 힘이 막대의 한쪽 끝에 작용할 때 발생하는 토크를 구하시오.</p>
-<p>문제 4: 위치 벡터 <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{r} = (4, 0, 0)</span><script type="math/tex">\mathbf{r} = (4, 0, 0)</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{r} = (4, 0, 0)</span><script type="math/tex">\mathbf{r} = (4, 0, 0)</script></span></script></span>인 점에 작용하는 힘 <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{F} = (0, 6, 0)</span><script type="math/tex">\mathbf{F} = (0, 6, 0)</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{F} = (0, 6, 0)</span><script type="math/tex">\mathbf{F} = (0, 6, 0)</script></span></script></span>이 주어졌을 때, 생성되는 토크 벡터를 구하시오.</p>
-<p>문제 5: 점 <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">(1, 0, 0)</span><script type="math/tex">(1, 0, 0)</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">(1, 0, 0)</span><script type="math/tex">(1, 0, 0)</script></span></script></span>이 x축을 중심으로 90도 회전한 후, 새로운 좌표를 구하시오.</p>
+<p>문제 4: 위치 벡터 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{r} = (4, 0, 0)</span><script type="math/tex">\mathbf{r} = (4, 0, 0)</script></span>인 점에 작용하는 힘 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{F} = (0, 6, 0)</span><script type="math/tex">\mathbf{F} = (0, 6, 0)</script></span>이 주어졌을 때, 생성되는 토크 벡터를 구하시오.</p>
+<p>문제 5: 점 <span class="arithmatex"><span class="MathJax_Preview">(1, 0, 0)</span><script type="math/tex">(1, 0, 0)</script></span>이 x축을 중심으로 90도 회전한 후, 새로운 좌표를 구하시오.</p>
 <h3 id="_10">해결 방안 및 풀이</h3>
 <h4 id="1">문제 1</h4>
-<p>벡터 <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{a} = (3, -2, 1)</span><script type="math/tex">\mathbf{a} = (3, -2, 1)</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{a} = (3, -2, 1)</span><script type="math/tex">\mathbf{a} = (3, -2, 1)</script></span></script></span>과 <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{b} = (1, 2, 3)</span><script type="math/tex">\mathbf{b} = (1, 2, 3)</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{b} = (1, 2, 3)</span><script type="math/tex">\mathbf{b} = (1, 2, 3)</script></span></script></span>의 벡터 곱을 구하는 과정:</p>
+<p>벡터 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{a} = (3, -2, 1)</span><script type="math/tex">\mathbf{a} = (3, -2, 1)</script></span>과 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{b} = (1, 2, 3)</span><script type="math/tex">\mathbf{b} = (1, 2, 3)</script></span>의 벡터 곱을 구하는 과정:</p>
 <p>$$</p>
 <p>\mathbf{a} \times \mathbf{b} = 
 \begin{bmatrix}
@@ -217,7 +217,7 @@ z
 </script>
 </div>
 <h4 id="2">문제 2</h4>
-<p>점 <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">(2, 2, 0)</span><script type="math/tex">(2, 2, 0)</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">(2, 2, 0)</span><script type="math/tex">(2, 2, 0)</script></span></script></span>이 z축을 기준으로 180도 회전하면, 변환 행렬은:</p>
+<p>점 <span class="arithmatex"><span class="MathJax_Preview">(2, 2, 0)</span><script type="math/tex">(2, 2, 0)</script></span>이 z축을 기준으로 180도 회전하면, 변환 행렬은:</p>
 <p>$$</p>
 <p>R =
 \begin{bmatrix}
@@ -248,12 +248,12 @@ z
 \end{bmatrix}</p>
 <p>$$</p>
 <h4 id="3">문제 3</h4>
-<p>길이 <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">L = 3m</span><script type="math/tex">L = 3m</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">L = 3m</span><script type="math/tex">L = 3m</script></span></script></span>의 막대에 수직으로 작용하는 <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">F = 5N</span><script type="math/tex">F = 5N</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">F = 5N</span><script type="math/tex">F = 5N</script></span></script></span>의 힘:</p>
+<p>길이 <span class="arithmatex"><span class="MathJax_Preview">L = 3m</span><script type="math/tex">L = 3m</script></span>의 막대에 수직으로 작용하는 <span class="arithmatex"><span class="MathJax_Preview">F = 5N</span><script type="math/tex">F = 5N</script></span>의 힘:</p>
 <p>$$</p>
 <p>\tau = L \cdot F = 3m \cdot 5N = 15 Nm</p>
 <p>$$</p>
 <h4 id="4">문제 4</h4>
-<p>위치 벡터 <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{r} = (4, 0, 0)</span><script type="math/tex">\mathbf{r} = (4, 0, 0)</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{r} = (4, 0, 0)</span><script type="math/tex">\mathbf{r} = (4, 0, 0)</script></span></script></span>와 힘 벡터 <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{F} = (0, 6, 0)</span><script type="math/tex">\mathbf{F} = (0, 6, 0)</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{F} = (0, 6, 0)</span><script type="math/tex">\mathbf{F} = (0, 6, 0)</script></span></script></span>:</p>
+<p>위치 벡터 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{r} = (4, 0, 0)</span><script type="math/tex">\mathbf{r} = (4, 0, 0)</script></span>와 힘 벡터 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{F} = (0, 6, 0)</span><script type="math/tex">\mathbf{F} = (0, 6, 0)</script></span>:</p>
 <p>$$</p>
 <p>\mathbf{\tau} = \mathbf{r} \times \mathbf{F} =
 \begin{vmatrix}
@@ -269,7 +269,7 @@ z
 <p>\mathbf{\tau} = (0, 0, 24)</p>
 <p>$$</p>
 <h4 id="5">문제 5</h4>
-<p>점 <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">(1, 0, 0)</span><script type="math/tex">(1, 0, 0)</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">(1, 0, 0)</span><script type="math/tex">(1, 0, 0)</script></span></script></span>이 x축을 중심으로 90도 회전할 때:</p>
+<p>점 <span class="arithmatex"><span class="MathJax_Preview">(1, 0, 0)</span><script type="math/tex">(1, 0, 0)</script></span>이 x축을 중심으로 90도 회전할 때:</p>
 <p>$$</p>
 <p>R = 
 \begin{bmatrix}

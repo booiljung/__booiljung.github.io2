@@ -76,8 +76,8 @@
           {title: "\uc5f0\uc2b5 \ubb38\uc81c 11: LU \ubd84\ud574\uc640 \ud589\ub82c\uc758 \uc5ed\ud589\ub82c \uacc4\uc0b0", url: "#11-lu", children: [
           ]},
           {title: "\ud574\ub2f5 11:", url: "#11", children: [
-              {title: "Step 1: \\mathbf{L}\\mathbf{y} = \\mathbf{I}\\mathbf{L}\\mathbf{y} = \\mathbf{I}\\mathbf{L}\\mathbf{y} = \\mathbf{I}\\mathbf{L}\\mathbf{y} = \\mathbf{I}", url: "#step-1-mathbflmathbfy-mathbfimathbflmathbfy-mathbfimathbflmathbfy-mathbfimathbflmathbfy-mathbfi" },
-              {title: "Step 2: \\mathbf{U}\\mathbf{A}^{-1} = \\mathbf{y}\\mathbf{U}\\mathbf{A}^{-1} = \\mathbf{y}\\mathbf{U}\\mathbf{A}^{-1} = \\mathbf{y}\\mathbf{U}\\mathbf{A}^{-1} = \\mathbf{y}", url: "#step-2-mathbfumathbfa-1-mathbfymathbfumathbfa-1-mathbfymathbfumathbfa-1-mathbfymathbfumathbfa-1-mathbfy" },
+              {title: "Step 1: \\mathbf{L}\\mathbf{y} = \\mathbf{I}\\mathbf{L}\\mathbf{y} = \\mathbf{I}", url: "#step-1-mathbflmathbfy-mathbfimathbflmathbfy-mathbfi" },
+              {title: "Step 2: \\mathbf{U}\\mathbf{A}^{-1} = \\mathbf{y}\\mathbf{U}\\mathbf{A}^{-1} = \\mathbf{y}", url: "#step-2-mathbfumathbfa-1-mathbfymathbfumathbfa-1-mathbfy" },
           ]},
           {title: "\uc5f0\uc2b5 \ubb38\uc81c 12: LU \ubd84\ud574\ub97c \uc774\uc6a9\ud55c \ud589\ub82c\uc2dd \uacc4\uc0b0", url: "#12-lu", children: [
           ]},
@@ -167,14 +167,14 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 </script>
 </div>
 <ol>
-<li>위의 행렬 <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{A}</span><script type="math/tex">\mathbf{A}</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{A}</span><script type="math/tex">\mathbf{A}</script></span></script></span>를 LU 분해하기 위해서 필요한 모든 단계를 계산하시오.</li>
-<li><span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{L}</span><script type="math/tex">\mathbf{L}</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{L}</span><script type="math/tex">\mathbf{L}</script></span></script></span>과 <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{U}</span><script type="math/tex">\mathbf{U}</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{U}</span><script type="math/tex">\mathbf{U}</script></span></script></span> 행렬을 각각 구하고, <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{L}\mathbf{U}</span><script type="math/tex">\mathbf{L}\mathbf{U}</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{L}\mathbf{U}</span><script type="math/tex">\mathbf{L}\mathbf{U}</script></span></script></span>가 <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{A}</span><script type="math/tex">\mathbf{A}</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{A}</span><script type="math/tex">\mathbf{A}</script></span></script></span>와 같은지 확인하시오.</li>
+<li>위의 행렬 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{A}</span><script type="math/tex">\mathbf{A}</script></span>를 LU 분해하기 위해서 필요한 모든 단계를 계산하시오.</li>
+<li><span class="arithmatex"><span class="MathJax_Preview">\mathbf{L}</span><script type="math/tex">\mathbf{L}</script></span>과 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{U}</span><script type="math/tex">\mathbf{U}</script></span> 행렬을 각각 구하고, <span class="arithmatex"><span class="MathJax_Preview">\mathbf{L}\mathbf{U}</span><script type="math/tex">\mathbf{L}\mathbf{U}</script></span>가 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{A}</span><script type="math/tex">\mathbf{A}</script></span>와 같은지 확인하시오.</li>
 </ol>
 <h3 id="1">해답 1:</h3>
 <ol>
-<li>주어진 행렬 <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{A}</span><script type="math/tex">\mathbf{A}</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{A}</span><script type="math/tex">\mathbf{A}</script></span></script></span>에 대해, <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{L}</span><script type="math/tex">\mathbf{L}</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{L}</span><script type="math/tex">\mathbf{L}</script></span></script></span>과 <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{U}</span><script type="math/tex">\mathbf{U}</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{U}</span><script type="math/tex">\mathbf{U}</script></span></script></span>를 구하려면 다음 단계를 따른다.</li>
+<li>주어진 행렬 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{A}</span><script type="math/tex">\mathbf{A}</script></span>에 대해, <span class="arithmatex"><span class="MathJax_Preview">\mathbf{L}</span><script type="math/tex">\mathbf{L}</script></span>과 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{U}</span><script type="math/tex">\mathbf{U}</script></span>를 구하려면 다음 단계를 따른다.</li>
 </ol>
-<p>첫 번째 단계로, <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{L}</span><script type="math/tex">\mathbf{L}</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{L}</span><script type="math/tex">\mathbf{L}</script></span></script></span>의 첫 열과 <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{U}</span><script type="math/tex">\mathbf{U}</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{U}</span><script type="math/tex">\mathbf{U}</script></span></script></span>의 첫 행을 구한다.</p>
+<p>첫 번째 단계로, <span class="arithmatex"><span class="MathJax_Preview">\mathbf{L}</span><script type="math/tex">\mathbf{L}</script></span>의 첫 열과 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{U}</span><script type="math/tex">\mathbf{U}</script></span>의 첫 행을 구한다.</p>
 <div class="arithmatex">
 <div class="MathJax_Preview">
 \mathbf{L} = \begin{pmatrix}
@@ -199,7 +199,7 @@ u_{11} & u_{12} & u_{13} \\
 \end{pmatrix}
 </script>
 </div>
-<p>우선 <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">u_{11} = 2</span><script type="math/tex">u_{11} = 2</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">u_{11} = 2</span><script type="math/tex">u_{11} = 2</script></span></script></span>, <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">u_{12} = 3</span><script type="math/tex">u_{12} = 3</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">u_{12} = 3</span><script type="math/tex">u_{12} = 3</script></span></script></span>, <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">u_{13} = 1</span><script type="math/tex">u_{13} = 1</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">u_{13} = 1</span><script type="math/tex">u_{13} = 1</script></span></script></span>이 된다. 이제 <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">\ell_{21}</span><script type="math/tex">\ell_{21}</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">\ell_{21}</span><script type="math/tex">\ell_{21}</script></span></script></span>과 <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">\ell_{31}</span><script type="math/tex">\ell_{31}</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">\ell_{31}</span><script type="math/tex">\ell_{31}</script></span></script></span>을 계산한다.</p>
+<p>우선 <span class="arithmatex"><span class="MathJax_Preview">u_{11} = 2</span><script type="math/tex">u_{11} = 2</script></span>, <span class="arithmatex"><span class="MathJax_Preview">u_{12} = 3</span><script type="math/tex">u_{12} = 3</script></span>, <span class="arithmatex"><span class="MathJax_Preview">u_{13} = 1</span><script type="math/tex">u_{13} = 1</script></span>이 된다. 이제 <span class="arithmatex"><span class="MathJax_Preview">\ell_{21}</span><script type="math/tex">\ell_{21}</script></span>과 <span class="arithmatex"><span class="MathJax_Preview">\ell_{31}</span><script type="math/tex">\ell_{31}</script></span>을 계산한다.</p>
 <div class="arithmatex">
 <div class="MathJax_Preview">
 \ell_{21} = \frac{4}{2} = 2, \quad \ell_{31} = \frac{6}{2} = 3
@@ -208,7 +208,7 @@ u_{11} & u_{12} & u_{13} \\
 \ell_{21} = \frac{4}{2} = 2, \quad \ell_{31} = \frac{6}{2} = 3
 </script>
 </div>
-<p>다음으로, <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{U}</span><script type="math/tex">\mathbf{U}</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{U}</span><script type="math/tex">\mathbf{U}</script></span></script></span>의 두 번째 행을 계산한다.</p>
+<p>다음으로, <span class="arithmatex"><span class="MathJax_Preview">\mathbf{U}</span><script type="math/tex">\mathbf{U}</script></span>의 두 번째 행을 계산한다.</p>
 <div class="arithmatex">
 <div class="MathJax_Preview">
 \mathbf{A}_2 = \begin{pmatrix}
@@ -223,7 +223,7 @@ u_{11} & u_{12} & u_{13} \\
 \end{pmatrix}
 </script>
 </div>
-<p>여기서 <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">u_{22} = 1</span><script type="math/tex">u_{22} = 1</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">u_{22} = 1</span><script type="math/tex">u_{22} = 1</script></span></script></span>이며, <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">u_{23} = 0</span><script type="math/tex">u_{23} = 0</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">u_{23} = 0</span><script type="math/tex">u_{23} = 0</script></span></script></span>이다. <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">\ell_{32}</span><script type="math/tex">\ell_{32}</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">\ell_{32}</span><script type="math/tex">\ell_{32}</script></span></script></span>는 다음과 같이 계산된다.</p>
+<p>여기서 <span class="arithmatex"><span class="MathJax_Preview">u_{22} = 1</span><script type="math/tex">u_{22} = 1</script></span>이며, <span class="arithmatex"><span class="MathJax_Preview">u_{23} = 0</span><script type="math/tex">u_{23} = 0</script></span>이다. <span class="arithmatex"><span class="MathJax_Preview">\ell_{32}</span><script type="math/tex">\ell_{32}</script></span>는 다음과 같이 계산된다.</p>
 <div class="arithmatex">
 <div class="MathJax_Preview">
 \ell_{32} = \frac{9}{1} = 9
@@ -232,7 +232,7 @@ u_{11} & u_{12} & u_{13} \\
 \ell_{32} = \frac{9}{1} = 9
 </script>
 </div>
-<p>마지막으로, <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">u_{33}</span><script type="math/tex">u_{33}</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">u_{33}</span><script type="math/tex">u_{33}</script></span></script></span>을 계산한다.</p>
+<p>마지막으로, <span class="arithmatex"><span class="MathJax_Preview">u_{33}</span><script type="math/tex">u_{33}</script></span>을 계산한다.</p>
 <div class="arithmatex">
 <div class="MathJax_Preview">
 u_{33} = -4
@@ -241,7 +241,7 @@ u_{33} = -4
 u_{33} = -4
 </script>
 </div>
-<p>결과적으로, <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{L}</span><script type="math/tex">\mathbf{L}</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{L}</span><script type="math/tex">\mathbf{L}</script></span></script></span>과 <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{U}</span><script type="math/tex">\mathbf{U}</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{U}</span><script type="math/tex">\mathbf{U}</script></span></script></span>는 다음과 같다.</p>
+<p>결과적으로, <span class="arithmatex"><span class="MathJax_Preview">\mathbf{L}</span><script type="math/tex">\mathbf{L}</script></span>과 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{U}</span><script type="math/tex">\mathbf{U}</script></span>는 다음과 같다.</p>
 <div class="arithmatex">
 <div class="MathJax_Preview">
 \mathbf{L} = \begin{pmatrix}
@@ -267,7 +267,7 @@ u_{33} = -4
 </script>
 </div>
 <ol>
-<li><span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{L}\mathbf{U}</span><script type="math/tex">\mathbf{L}\mathbf{U}</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{L}\mathbf{U}</span><script type="math/tex">\mathbf{L}\mathbf{U}</script></span></script></span>를 계산하여 <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{A}</span><script type="math/tex">\mathbf{A}</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{A}</span><script type="math/tex">\mathbf{A}</script></span></script></span>와 같은지 확인한다.</li>
+<li><span class="arithmatex"><span class="MathJax_Preview">\mathbf{L}\mathbf{U}</span><script type="math/tex">\mathbf{L}\mathbf{U}</script></span>를 계산하여 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{A}</span><script type="math/tex">\mathbf{A}</script></span>와 같은지 확인한다.</li>
 </ol>
 <div class="arithmatex">
 <div class="MathJax_Preview">
@@ -327,9 +327,9 @@ u_{33} = -4
 \end{pmatrix}
 </script>
 </div>
-<p><span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{L}\mathbf{y} = \mathbf{b}</span><script type="math/tex">\mathbf{L}\mathbf{y} = \mathbf{b}</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{L}\mathbf{y} = \mathbf{b}</span><script type="math/tex">\mathbf{L}\mathbf{y} = \mathbf{b}</script></span></script></span>에 대해 <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{y}</span><script type="math/tex">\mathbf{y}</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{y}</span><script type="math/tex">\mathbf{y}</script></span></script></span>를 구하시오.</p>
+<p><span class="arithmatex"><span class="MathJax_Preview">\mathbf{L}\mathbf{y} = \mathbf{b}</span><script type="math/tex">\mathbf{L}\mathbf{y} = \mathbf{b}</script></span>에 대해 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{y}</span><script type="math/tex">\mathbf{y}</script></span>를 구하시오.</p>
 <h3 id="2">해답 2:</h3>
-<p>Forward Substitution을 사용하여 <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{y}</span><script type="math/tex">\mathbf{y}</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{y}</span><script type="math/tex">\mathbf{y}</script></span></script></span>를 구하려면 다음 단계들을 따른다.</p>
+<p>Forward Substitution을 사용하여 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{y}</span><script type="math/tex">\mathbf{y}</script></span>를 구하려면 다음 단계들을 따른다.</p>
 <ol>
 <li>첫 번째 행:</li>
 </ol>
@@ -363,7 +363,7 @@ y_3 = b_3 - \ell_{31}y_1 - \ell_{32}y_2 = 34 - 3 \times 5 - 9 \times 2 = 34 - 15
 y_3 = b_3 - \ell_{31}y_1 - \ell_{32}y_2 = 34 - 3 \times 5 - 9 \times 2 = 34 - 15 - 18 = 1
 </script>
 </div>
-<p>따라서, <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{y}</span><script type="math/tex">\mathbf{y}</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{y}</span><script type="math/tex">\mathbf{y}</script></span></script></span>는 다음과 같다.</p>
+<p>따라서, <span class="arithmatex"><span class="MathJax_Preview">\mathbf{y}</span><script type="math/tex">\mathbf{y}</script></span>는 다음과 같다.</p>
 <div class="arithmatex">
 <div class="MathJax_Preview">
 \mathbf{y} = \begin{pmatrix}
@@ -381,7 +381,7 @@ y_3 = b_3 - \ell_{31}y_1 - \ell_{32}y_2 = 34 - 3 \times 5 - 9 \times 2 = 34 - 15
 </script>
 </div>
 <h3 id="3-backward-substitution">연습 문제 3: Backward Substitution</h3>
-<p>이제 <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{U}\mathbf{x} = \mathbf{y}</span><script type="math/tex">\mathbf{U}\mathbf{x} = \mathbf{y}</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{U}\mathbf{x} = \mathbf{y}</span><script type="math/tex">\mathbf{U}\mathbf{x} = \mathbf{y}</script></span></script></span>를 풀기 위해 Backward Substitution을 이용하시오. 여기서 <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{U}</span><script type="math/tex">\mathbf{U}</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{U}</span><script type="math/tex">\mathbf{U}</script></span></script></span>는 다음과 같다.</p>
+<p>이제 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{U}\mathbf{x} = \mathbf{y}</span><script type="math/tex">\mathbf{U}\mathbf{x} = \mathbf{y}</script></span>를 풀기 위해 Backward Substitution을 이용하시오. 여기서 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{U}</span><script type="math/tex">\mathbf{U}</script></span>는 다음과 같다.</p>
 <div class="arithmatex">
 <div class="MathJax_Preview">
 \mathbf{U} = \begin{pmatrix}
@@ -399,7 +399,7 @@ y_3 = b_3 - \ell_{31}y_1 - \ell_{32}y_2 = 34 - 3 \times 5 - 9 \times 2 = 34 - 15
 </script>
 </div>
 <h3 id="3">해답 3:</h3>
-<p>Backward Substitution을 사용하여 <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{x}</span><script type="math/tex">\mathbf{x}</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{x}</span><script type="math/tex">\mathbf{x}</script></span></script></span>를 구하기 위해 다음 단계들을 따른다.</p>
+<p>Backward Substitution을 사용하여 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{x}</span><script type="math/tex">\mathbf{x}</script></span>를 구하기 위해 다음 단계들을 따른다.</p>
 <ol>
 <li>세 번째 행:</li>
 </ol>
@@ -433,7 +433,7 @@ x_1 = \frac{y_1 - u_{12}x_2 - u_{13}x_3}{u_{11}} = \frac{5 - 3 \times 2 - 1 \tim
 x_1 = \frac{y_1 - u_{12}x_2 - u_{13}x_3}{u_{11}} = \frac{5 - 3 \times 2 - 1 \times -\frac{1}{4}}{2} = \frac{5 - 6 + \frac{1}{4}}{2} = \frac{-1 + \frac{1}{4}}{2} = \frac{-\frac{3}{4}}{2} = -\frac{3}{8}
 </script>
 </div>
-<p>따라서, <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{x}</span><script type="math/tex">\mathbf{x}</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{x}</span><script type="math/tex">\mathbf{x}</script></span></script></span>는 다음과 같다.</p>
+<p>따라서, <span class="arithmatex"><span class="MathJax_Preview">\mathbf{x}</span><script type="math/tex">\mathbf{x}</script></span>는 다음과 같다.</p>
 <div class="arithmatex">
 <div class="MathJax_Preview">
 \mathbf{x} = \begin{pmatrix}
@@ -469,44 +469,29 @@ x_1 = \frac{y_1 - u_{12}x_2 - u_{13}x_3}{u_{11}} = \frac{5 - 3 \times 2 - 1 \tim
 </script>
 </div>
 <ol>
-<li><span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{A}</span><script type="math/tex">\mathbf{A}</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{A}</span><script type="math/tex">\mathbf{A}</script></span></script></span>를 Doolittle 알고리즘을 사용하여 분해하는 과정을 설명하시오.</li>
-<li>분해된 <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{L}</span><script type="math/tex">\mathbf{L}</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{L}</span><script type="math/tex">\mathbf{L}</script></span></script></span>과 <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{U}</span><script type="math/tex">\mathbf{U}</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{U}</span><script type="math/tex">\mathbf{U}</script></span></script></span> 행렬을 구하시오.</li>
+<li><span class="arithmatex"><span class="MathJax_Preview">\mathbf{A}</span><script type="math/tex">\mathbf{A}</script></span>를 Doolittle 알고리즘을 사용하여 분해하는 과정을 설명하시오.</li>
+<li>분해된 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{L}</span><script type="math/tex">\mathbf{L}</script></span>과 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{U}</span><script type="math/tex">\mathbf{U}</script></span> 행렬을 구하시오.</li>
 </ol>
 <h3 id="4">해답 4:</h3>
-<p>Doolittle 알고리즘은 <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{L}</span><script type="math/tex">\mathbf{L}</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{L}</span><script type="math/tex">\mathbf{L}</script></span></script></span>의 대각 요소를 모두 1로 만드는 방법이다. 다음 단계를 따른다.</p>
+<p>Doolittle 알고리즘은 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{L}</span><script type="math/tex">\mathbf{L}</script></span>의 대각 요소를 모두 1로 만드는 방법이다. 다음 단계를 따른다.</p>
 <ol>
 <li>
-<div class="arithmatex">
-<div class="MathJax_Preview">u_{11} = 4$$, $$u_{12} = -2$$, $$u_{13} = 1</div>
-<script type="math/tex; mode=display">u_{11} = 4$$, $$u_{12} = -2$$, $$u_{13} = 1</script>
-</div>
+<p><span class="arithmatex"><span class="MathJax_Preview">u_{11} = 4</span><script type="math/tex">u_{11} = 4</script></span>, <span class="arithmatex"><span class="MathJax_Preview">u_{12} = -2</span><script type="math/tex">u_{12} = -2</script></span>, <span class="arithmatex"><span class="MathJax_Preview">u_{13} = 1</span><script type="math/tex">u_{13} = 1</script></span></p>
 </li>
 <li>
-<div class="arithmatex">
-<div class="MathJax_Preview">\ell_{21} = \frac{20}{4} = 5$$, $$\ell_{31} = \frac{-8}{4} = -2</div>
-<script type="math/tex; mode=display">\ell_{21} = \frac{20}{4} = 5$$, $$\ell_{31} = \frac{-8}{4} = -2</script>
-</div>
+<p><span class="arithmatex"><span class="MathJax_Preview">\ell_{21} = \frac{20}{4} = 5</span><script type="math/tex">\ell_{21} = \frac{20}{4} = 5</script></span>, <span class="arithmatex"><span class="MathJax_Preview">\ell_{31} = \frac{-8}{4} = -2</span><script type="math/tex">\ell_{31} = \frac{-8}{4} = -2</script></span></p>
 </li>
 <li>
-<div class="arithmatex">
-<div class="MathJax_Preview">u_{22} = -7 - (-2) \times (-2) = -7 - 4 = -11$$, $$u_{23} = 12 - (-2) \times 1 = 12 + 2 = 14</div>
-<script type="math/tex; mode=display">u_{22} = -7 - (-2) \times (-2) = -7 - 4 = -11$$, $$u_{23} = 12 - (-2) \times 1 = 12 + 2 = 14</script>
-</div>
+<p><span class="arithmatex"><span class="MathJax_Preview">u_{22} = -7 - (-2) \times (-2) = -7 - 4 = -11</span><script type="math/tex">u_{22} = -7 - (-2) \times (-2) = -7 - 4 = -11</script></span>, <span class="arithmatex"><span class="MathJax_Preview">u_{23} = 12 - (-2) \times 1 = 12 + 2 = 14</span><script type="math/tex">u_{23} = 12 - (-2) \times 1 = 12 + 2 = 14</script></span></p>
 </li>
 <li>
-<div class="arithmatex">
-<div class="MathJax_Preview">\ell_{32} = \frac{13 - (-2) \times (-2)}{-11} = \frac{13 - 4}{-11} = \frac{9}{-11} = -\frac{9}{11}</div>
-<script type="math/tex; mode=display">\ell_{32} = \frac{13 - (-2) \times (-2)}{-11} = \frac{13 - 4}{-11} = \frac{9}{-11} = -\frac{9}{11}</script>
-</div>
+<p><span class="arithmatex"><span class="MathJax_Preview">\ell_{32} = \frac{13 - (-2) \times (-2)}{-11} = \frac{13 - 4}{-11} = \frac{9}{-11} = -\frac{9}{11}</span><script type="math/tex">\ell_{32} = \frac{13 - (-2) \times (-2)}{-11} = \frac{13 - 4}{-11} = \frac{9}{-11} = -\frac{9}{11}</script></span></p>
 </li>
 <li>
-<div class="arithmatex">
-<div class="MathJax_Preview">u_{33} = 17 - 5 \times 1 + \frac{9}{11} \times 14 = 17 - 5 + \frac{126}{11} = 12 + \frac{126}{11} = \frac{132}{11} = 12</div>
-<script type="math/tex; mode=display">u_{33} = 17 - 5 \times 1 + \frac{9}{11} \times 14 = 17 - 5 + \frac{126}{11} = 12 + \frac{126}{11} = \frac{132}{11} = 12</script>
-</div>
+<p><span class="arithmatex"><span class="MathJax_Preview">u_{33} = 17 - 5 \times 1 + \frac{9}{11} \times 14 = 17 - 5 + \frac{126}{11} = 12 + \frac{126}{11} = \frac{132}{11} = 12</span><script type="math/tex">u_{33} = 17 - 5 \times 1 + \frac{9}{11} \times 14 = 17 - 5 + \frac{126}{11} = 12 + \frac{126}{11} = \frac{132}{11} = 12</script></span></p>
 </li>
 </ol>
-<p>결과적으로, <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{L}</span><script type="math/tex">\mathbf{L}</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{L}</span><script type="math/tex">\mathbf{L}</script></span></script></span>과 <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{U}</span><script type="math/tex">\mathbf{U}</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{U}</span><script type="math/tex">\mathbf{U}</script></span></script></span>는 다음과 같다.</p>
+<p>결과적으로, <span class="arithmatex"><span class="MathJax_Preview">\mathbf{L}</span><script type="math/tex">\mathbf{L}</script></span>과 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{U}</span><script type="math/tex">\mathbf{U}</script></span>는 다음과 같다.</p>
 <div class="arithmatex">
 <div class="MathJax_Preview">
 \mathbf{L} = \begin{pmatrix}
@@ -550,13 +535,13 @@ x_1 = \frac{y_1 - u_{12}x_2 - u_{13}x_3}{u_{11}} = \frac{5 - 3 \times 2 - 1 \tim
 </script>
 </div>
 <ol>
-<li>Crout 알고리즘의 과정을 통해 <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{L}</span><script type="math/tex">\mathbf{L}</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{L}</span><script type="math/tex">\mathbf{L}</script></span></script></span>과 <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{U}</span><script type="math/tex">\mathbf{U}</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{U}</span><script type="math/tex">\mathbf{U}</script></span></script></span>를 구하시오.</li>
-<li>결과를 확인하고, <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{L}\mathbf{U} = \mathbf{A}</span><script type="math/tex">\mathbf{L}\mathbf{U} = \mathbf{A}</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{L}\mathbf{U} = \mathbf{A}</span><script type="math/tex">\mathbf{L}\mathbf{U} = \mathbf{A}</script></span></script></span>를 검증하시오.</li>
+<li>Crout 알고리즘의 과정을 통해 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{L}</span><script type="math/tex">\mathbf{L}</script></span>과 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{U}</span><script type="math/tex">\mathbf{U}</script></span>를 구하시오.</li>
+<li>결과를 확인하고, <span class="arithmatex"><span class="MathJax_Preview">\mathbf{L}\mathbf{U} = \mathbf{A}</span><script type="math/tex">\mathbf{L}\mathbf{U} = \mathbf{A}</script></span>를 검증하시오.</li>
 </ol>
 <h3 id="5">해답 5:</h3>
-<p>Crout 알고리즘은 <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{U}</span><script type="math/tex">\mathbf{U}</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{U}</span><script type="math/tex">\mathbf{U}</script></span></script></span>의 대각 요소를 모두 1로 만드는 방법이다. 다음 단계를 통해 <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{L}</span><script type="math/tex">\mathbf{L}</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{L}</span><script type="math/tex">\mathbf{L}</script></span></script></span>과 <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{U}</span><script type="math/tex">\mathbf{U}</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{U}</span><script type="math/tex">\mathbf{U}</script></span></script></span>를 구할 수 있다.</p>
+<p>Crout 알고리즘은 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{U}</span><script type="math/tex">\mathbf{U}</script></span>의 대각 요소를 모두 1로 만드는 방법이다. 다음 단계를 통해 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{L}</span><script type="math/tex">\mathbf{L}</script></span>과 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{U}</span><script type="math/tex">\mathbf{U}</script></span>를 구할 수 있다.</p>
 <ol>
-<li>첫 번째 열을 사용하여 <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">\ell_{11}</span><script type="math/tex">\ell_{11}</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">\ell_{11}</span><script type="math/tex">\ell_{11}</script></span></script></span>, <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">\ell_{21}</span><script type="math/tex">\ell_{21}</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">\ell_{21}</span><script type="math/tex">\ell_{21}</script></span></script></span>, <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">\ell_{31}</span><script type="math/tex">\ell_{31}</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">\ell_{31}</span><script type="math/tex">\ell_{31}</script></span></script></span>을 계산한다.</li>
+<li>첫 번째 열을 사용하여 <span class="arithmatex"><span class="MathJax_Preview">\ell_{11}</span><script type="math/tex">\ell_{11}</script></span>, <span class="arithmatex"><span class="MathJax_Preview">\ell_{21}</span><script type="math/tex">\ell_{21}</script></span>, <span class="arithmatex"><span class="MathJax_Preview">\ell_{31}</span><script type="math/tex">\ell_{31}</script></span>을 계산한다.</li>
 </ol>
 <div class="arithmatex">
 <div class="MathJax_Preview">
@@ -567,7 +552,7 @@ x_1 = \frac{y_1 - u_{12}x_2 - u_{13}x_3}{u_{11}} = \frac{5 - 3 \times 2 - 1 \tim
 </script>
 </div>
 <ol>
-<li>첫 번째 행을 사용하여 <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">u_{12}</span><script type="math/tex">u_{12}</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">u_{12}</span><script type="math/tex">u_{12}</script></span></script></span>와 <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">u_{13}</span><script type="math/tex">u_{13}</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">u_{13}</span><script type="math/tex">u_{13}</script></span></script></span>을 계산한다.</li>
+<li>첫 번째 행을 사용하여 <span class="arithmatex"><span class="MathJax_Preview">u_{12}</span><script type="math/tex">u_{12}</script></span>와 <span class="arithmatex"><span class="MathJax_Preview">u_{13}</span><script type="math/tex">u_{13}</script></span>을 계산한다.</li>
 </ol>
 <div class="arithmatex">
 <div class="MathJax_Preview">
@@ -578,7 +563,7 @@ u_{12} = \frac{-2}{\ell_{11}} = \frac{-2}{6} = -\frac{1}{3}, \quad u_{13} = \fra
 </script>
 </div>
 <ol>
-<li>두 번째 열을 사용하여 <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">\ell_{22}</span><script type="math/tex">\ell_{22}</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">\ell_{22}</span><script type="math/tex">\ell_{22}</script></span></script></span>와 <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">\ell_{32}</span><script type="math/tex">\ell_{32}</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">\ell_{32}</span><script type="math/tex">\ell_{32}</script></span></script></span>를 계산한다.</li>
+<li>두 번째 열을 사용하여 <span class="arithmatex"><span class="MathJax_Preview">\ell_{22}</span><script type="math/tex">\ell_{22}</script></span>와 <span class="arithmatex"><span class="MathJax_Preview">\ell_{32}</span><script type="math/tex">\ell_{32}</script></span>를 계산한다.</li>
 </ol>
 <div class="arithmatex">
 <div class="MathJax_Preview">
@@ -597,7 +582,7 @@ u_{12} = \frac{-2}{\ell_{11}} = \frac{-2}{6} = -\frac{1}{3}, \quad u_{13} = \fra
 </script>
 </div>
 <ol>
-<li>두 번째 행을 사용하여 <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">u_{23}</span><script type="math/tex">u_{23}</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">u_{23}</span><script type="math/tex">u_{23}</script></span></script></span>을 계산한다.</li>
+<li>두 번째 행을 사용하여 <span class="arithmatex"><span class="MathJax_Preview">u_{23}</span><script type="math/tex">u_{23}</script></span>을 계산한다.</li>
 </ol>
 <div class="arithmatex">
 <div class="MathJax_Preview">
@@ -608,7 +593,7 @@ u_{23} = \frac{-3 - \ell_{21} \times u_{13}}{\ell_{22}} = \frac{-3 - (-4) \times
 </script>
 </div>
 <ol>
-<li>세 번째 열을 사용하여 <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">\ell_{33}</span><script type="math/tex">\ell_{33}</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">\ell_{33}</span><script type="math/tex">\ell_{33}</script></span></script></span>을 계산한다.</li>
+<li>세 번째 열을 사용하여 <span class="arithmatex"><span class="MathJax_Preview">\ell_{33}</span><script type="math/tex">\ell_{33}</script></span>을 계산한다.</li>
 </ol>
 <div class="arithmatex">
 <div class="MathJax_Preview">
@@ -636,7 +621,7 @@ u_{23} = \frac{-3 - \ell_{21} \times u_{13}}{\ell_{22}} = \frac{-3 - (-4) \times
 \ell_{33} = \frac{374}{51} - \frac{65}{51} = \frac{309}{51} = 6.06
 </script>
 </div>
-<p>결과적으로, <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{L}</span><script type="math/tex">\mathbf{L}</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{L}</span><script type="math/tex">\mathbf{L}</script></span></script></span>과 <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{U}</span><script type="math/tex">\mathbf{U}</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{U}</span><script type="math/tex">\mathbf{U}</script></span></script></span>는 다음과 같다.</p>
+<p>결과적으로, <span class="arithmatex"><span class="MathJax_Preview">\mathbf{L}</span><script type="math/tex">\mathbf{L}</script></span>과 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{U}</span><script type="math/tex">\mathbf{U}</script></span>는 다음과 같다.</p>
 <div class="arithmatex">
 <div class="MathJax_Preview">
 \mathbf{L} = \begin{pmatrix}
@@ -661,7 +646,7 @@ u_{23} = \frac{-3 - \ell_{21} \times u_{13}}{\ell_{22}} = \frac{-3 - (-4) \times
 \end{pmatrix}
 </script>
 </div>
-<p><span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{L}\mathbf{U} = \mathbf{A}</span><script type="math/tex">\mathbf{L}\mathbf{U} = \mathbf{A}</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{L}\mathbf{U} = \mathbf{A}</span><script type="math/tex">\mathbf{L}\mathbf{U} = \mathbf{A}</script></span></script></span>인지 검증하기 위해 두 행렬을 곱해보면, 주어진 <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{A}</span><script type="math/tex">\mathbf{A}</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{A}</span><script type="math/tex">\mathbf{A}</script></span></script></span>와 동일한 행렬이 나옴을 확인할 수 있다.</p>
+<p><span class="arithmatex"><span class="MathJax_Preview">\mathbf{L}\mathbf{U} = \mathbf{A}</span><script type="math/tex">\mathbf{L}\mathbf{U} = \mathbf{A}</script></span>인지 검증하기 위해 두 행렬을 곱해보면, 주어진 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{A}</span><script type="math/tex">\mathbf{A}</script></span>와 동일한 행렬이 나옴을 확인할 수 있다.</p>
 <h3 id="6-cholesky">연습 문제 6: Cholesky 분해</h3>
 <p>다음 대칭 행렬을 Cholesky 분해하시오.</p>
 <div class="arithmatex">
@@ -681,13 +666,13 @@ u_{23} = \frac{-3 - \ell_{21} \times u_{13}}{\ell_{22}} = \frac{-3 - (-4) \times
 </script>
 </div>
 <ol>
-<li><span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{A} = \mathbf{L}\mathbf{L}^T</span><script type="math/tex">\mathbf{A} = \mathbf{L}\mathbf{L}^T</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{A} = \mathbf{L}\mathbf{L}^T</span><script type="math/tex">\mathbf{A} = \mathbf{L}\mathbf{L}^T</script></span></script></span>의 형태로 분해하시오.</li>
-<li><span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{L}</span><script type="math/tex">\mathbf{L}</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{L}</span><script type="math/tex">\mathbf{L}</script></span></script></span> 행렬을 구하고 검증하시오.</li>
+<li><span class="arithmatex"><span class="MathJax_Preview">\mathbf{A} = \mathbf{L}\mathbf{L}^T</span><script type="math/tex">\mathbf{A} = \mathbf{L}\mathbf{L}^T</script></span>의 형태로 분해하시오.</li>
+<li><span class="arithmatex"><span class="MathJax_Preview">\mathbf{L}</span><script type="math/tex">\mathbf{L}</script></span> 행렬을 구하고 검증하시오.</li>
 </ol>
 <h3 id="6">해답 6:</h3>
-<p>Cholesky 분해를 통해 <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{L}</span><script type="math/tex">\mathbf{L}</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{L}</span><script type="math/tex">\mathbf{L}</script></span></script></span>을 구하기 위해서는 다음 단계를 수행한다.</p>
+<p>Cholesky 분해를 통해 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{L}</span><script type="math/tex">\mathbf{L}</script></span>을 구하기 위해서는 다음 단계를 수행한다.</p>
 <ol>
-<li>첫 번째 단계에서, <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">\ell_{11}</span><script type="math/tex">\ell_{11}</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">\ell_{11}</span><script type="math/tex">\ell_{11}</script></span></script></span>을 구한다.</li>
+<li>첫 번째 단계에서, <span class="arithmatex"><span class="MathJax_Preview">\ell_{11}</span><script type="math/tex">\ell_{11}</script></span>을 구한다.</li>
 </ol>
 <div class="arithmatex">
 <div class="MathJax_Preview">
@@ -698,7 +683,7 @@ u_{23} = \frac{-3 - \ell_{21} \times u_{13}}{\ell_{22}} = \frac{-3 - (-4) \times
 </script>
 </div>
 <ol>
-<li>다음으로 <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">\ell_{21}</span><script type="math/tex">\ell_{21}</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">\ell_{21}</span><script type="math/tex">\ell_{21}</script></span></script></span>과 <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">\ell_{31}</span><script type="math/tex">\ell_{31}</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">\ell_{31}</span><script type="math/tex">\ell_{31}</script></span></script></span>을 구한다.</li>
+<li>다음으로 <span class="arithmatex"><span class="MathJax_Preview">\ell_{21}</span><script type="math/tex">\ell_{21}</script></span>과 <span class="arithmatex"><span class="MathJax_Preview">\ell_{31}</span><script type="math/tex">\ell_{31}</script></span>을 구한다.</li>
 </ol>
 <div class="arithmatex">
 <div class="MathJax_Preview">
@@ -709,7 +694,7 @@ u_{23} = \frac{-3 - \ell_{21} \times u_{13}}{\ell_{22}} = \frac{-3 - (-4) \times
 </script>
 </div>
 <ol>
-<li><span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">\ell_{22}</span><script type="math/tex">\ell_{22}</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">\ell_{22}</span><script type="math/tex">\ell_{22}</script></span></script></span>를 구한다.</li>
+<li><span class="arithmatex"><span class="MathJax_Preview">\ell_{22}</span><script type="math/tex">\ell_{22}</script></span>를 구한다.</li>
 </ol>
 <div class="arithmatex">
 <div class="MathJax_Preview">
@@ -720,7 +705,7 @@ u_{23} = \frac{-3 - \ell_{21} \times u_{13}}{\ell_{22}} = \frac{-3 - (-4) \times
 </script>
 </div>
 <ol>
-<li>마지막으로, <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">\ell_{32}</span><script type="math/tex">\ell_{32}</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">\ell_{32}</span><script type="math/tex">\ell_{32}</script></span></script></span>와 <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">\ell_{33}</span><script type="math/tex">\ell_{33}</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">\ell_{33}</span><script type="math/tex">\ell_{33}</script></span></script></span>을 구한다.</li>
+<li>마지막으로, <span class="arithmatex"><span class="MathJax_Preview">\ell_{32}</span><script type="math/tex">\ell_{32}</script></span>와 <span class="arithmatex"><span class="MathJax_Preview">\ell_{33}</span><script type="math/tex">\ell_{33}</script></span>을 구한다.</li>
 </ol>
 <div class="arithmatex">
 <div class="MathJax_Preview">
@@ -730,7 +715,7 @@ u_{23} = \frac{-3 - \ell_{21} \times u_{13}}{\ell_{22}} = \frac{-3 - (-4) \times
 \ell_{32} = \frac{0 - (-1) \times 3}{3} = \frac{3}{3} = 1, \quad \ell_{33} = \sqrt{11 - 1^2} = \sqrt{10}
 </script>
 </div>
-<p>따라서, <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{L}</span><script type="math/tex">\mathbf{L}</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{L}</span><script type="math/tex">\mathbf{L}</script></span></script></span>은 다음과 같다.</p>
+<p>따라서, <span class="arithmatex"><span class="MathJax_Preview">\mathbf{L}</span><script type="math/tex">\mathbf{L}</script></span>은 다음과 같다.</p>
 <div class="arithmatex">
 <div class="MathJax_Preview">
 \mathbf{L} = \begin{pmatrix}
@@ -747,7 +732,7 @@ u_{23} = \frac{-3 - \ell_{21} \times u_{13}}{\ell_{22}} = \frac{-3 - (-4) \times
 \end{pmatrix}
 </script>
 </div>
-<p>그리고 <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{L}\mathbf{L}^T</span><script type="math/tex">\mathbf{L}\mathbf{L}^T</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{L}\mathbf{L}^T</span><script type="math/tex">\mathbf{L}\mathbf{L}^T</script></span></script></span>를 계산하면, 주어진 <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{A}</span><script type="math/tex">\mathbf{A}</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{A}</span><script type="math/tex">\mathbf{A}</script></span></script></span>와 동일한 행렬임을 확인할 수 있다.</p>
+<p>그리고 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{L}\mathbf{L}^T</span><script type="math/tex">\mathbf{L}\mathbf{L}^T</script></span>를 계산하면, 주어진 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{A}</span><script type="math/tex">\mathbf{A}</script></span>와 동일한 행렬임을 확인할 수 있다.</p>
 <h3 id="7-lu">연습 문제 7: 대각 행렬의 LU 분해</h3>
 <p>다음 대각 행렬의 LU 분해를 수행하시오.</p>
 <div class="arithmatex">
@@ -767,13 +752,13 @@ u_{23} = \frac{-3 - \ell_{21} \times u_{13}}{\ell_{22}} = \frac{-3 - (-4) \times
 </script>
 </div>
 <ol>
-<li>이 행렬의 <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{L}</span><script type="math/tex">\mathbf{L}</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{L}</span><script type="math/tex">\mathbf{L}</script></span></script></span>과 <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{U}</span><script type="math/tex">\mathbf{U}</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{U}</span><script type="math/tex">\mathbf{U}</script></span></script></span>를 구하시오.</li>
+<li>이 행렬의 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{L}</span><script type="math/tex">\mathbf{L}</script></span>과 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{U}</span><script type="math/tex">\mathbf{U}</script></span>를 구하시오.</li>
 <li>대각 행렬의 LU 분해의 특성을 설명하시오.</li>
 </ol>
 <h3 id="7">해답 7:</h3>
-<p>대각 행렬 <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{A}</span><script type="math/tex">\mathbf{A}</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{A}</span><script type="math/tex">\mathbf{A}</script></span></script></span>의 경우, LU 분해는 매우 간단한다. 대각 행렬은 이미 상삼각 행렬 <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{U}</span><script type="math/tex">\mathbf{U}</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{U}</span><script type="math/tex">\mathbf{U}</script></span></script></span>와 하삼각 행렬 <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{L}</span><script type="math/tex">\mathbf{L}</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{L}</span><script type="math/tex">\mathbf{L}</script></span></script></span>로 자연스럽게 분해된다.</p>
+<p>대각 행렬 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{A}</span><script type="math/tex">\mathbf{A}</script></span>의 경우, LU 분해는 매우 간단한다. 대각 행렬은 이미 상삼각 행렬 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{U}</span><script type="math/tex">\mathbf{U}</script></span>와 하삼각 행렬 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{L}</span><script type="math/tex">\mathbf{L}</script></span>로 자연스럽게 분해된다.</p>
 <ol>
-<li><span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{L}</span><script type="math/tex">\mathbf{L}</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{L}</span><script type="math/tex">\mathbf{L}</script></span></script></span>과 <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{U}</span><script type="math/tex">\mathbf{U}</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{U}</span><script type="math/tex">\mathbf{U}</script></span></script></span>는 각각 다음과 같다.</li>
+<li><span class="arithmatex"><span class="MathJax_Preview">\mathbf{L}</span><script type="math/tex">\mathbf{L}</script></span>과 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{U}</span><script type="math/tex">\mathbf{U}</script></span>는 각각 다음과 같다.</li>
 </ol>
 <div class="arithmatex">
 <div class="MathJax_Preview">
@@ -799,11 +784,11 @@ u_{23} = \frac{-3 - \ell_{21} \times u_{13}}{\ell_{22}} = \frac{-3 - (-4) \times
 \end{pmatrix}
 </script>
 </div>
-<p>따라서, 대각 행렬은 항상 단위 행렬 <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{L}</span><script type="math/tex">\mathbf{L}</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{L}</span><script type="math/tex">\mathbf{L}</script></span></script></span>과 본래의 대각 행렬 <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{U}</span><script type="math/tex">\mathbf{U}</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{U}</span><script type="math/tex">\mathbf{U}</script></span></script></span>로 분해된다.</p>
+<p>따라서, 대각 행렬은 항상 단위 행렬 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{L}</span><script type="math/tex">\mathbf{L}</script></span>과 본래의 대각 행렬 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{U}</span><script type="math/tex">\mathbf{U}</script></span>로 분해된다.</p>
 <ol>
 <li>대각 행렬의 LU 분해 특성:</li>
 </ol>
-<p>대각 행렬은 LU 분해에서 가장 단순한 경우에 해당한다. 이러한 행렬의 LU 분해는 <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{L}</span><script type="math/tex">\mathbf{L}</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{L}</span><script type="math/tex">\mathbf{L}</script></span></script></span>이 단위 행렬이 되고, <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{U}</span><script type="math/tex">\mathbf{U}</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{U}</span><script type="math/tex">\mathbf{U}</script></span></script></span>는 원래의 대각 행렬과 동일하게 나타난다. 이는 대각 행렬이 상삼각 행렬과 하삼각 행렬의 곱으로 바로 나타날 수 있음을 의미한다.</p>
+<p>대각 행렬은 LU 분해에서 가장 단순한 경우에 해당한다. 이러한 행렬의 LU 분해는 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{L}</span><script type="math/tex">\mathbf{L}</script></span>이 단위 행렬이 되고, <span class="arithmatex"><span class="MathJax_Preview">\mathbf{U}</span><script type="math/tex">\mathbf{U}</script></span>는 원래의 대각 행렬과 동일하게 나타난다. 이는 대각 행렬이 상삼각 행렬과 하삼각 행렬의 곱으로 바로 나타날 수 있음을 의미한다.</p>
 <h3 id="8-lu">연습 문제 8: 대칭 행렬에서의 LU 분해</h3>
 <p>다음 대칭 행렬의 LU 분해를 수행하시오.</p>
 <div class="arithmatex">
@@ -823,15 +808,15 @@ u_{23} = \frac{-3 - \ell_{21} \times u_{13}}{\ell_{22}} = \frac{-3 - (-4) \times
 </script>
 </div>
 <ol>
-<li><span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{L}</span><script type="math/tex">\mathbf{L}</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{L}</span><script type="math/tex">\mathbf{L}</script></span></script></span>과 <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{U}</span><script type="math/tex">\mathbf{U}</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{U}</span><script type="math/tex">\mathbf{U}</script></span></script></span>를 구하시오.</li>
+<li><span class="arithmatex"><span class="MathJax_Preview">\mathbf{L}</span><script type="math/tex">\mathbf{L}</script></span>과 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{U}</span><script type="math/tex">\mathbf{U}</script></span>를 구하시오.</li>
 <li>LU 분해가 가능한지 확인하고, 만약 그렇지 않다면 그 이유를 설명하시오.</li>
 </ol>
 <h3 id="8">해답 8:</h3>
 <p>대칭 행렬의 경우, LU 분해가 항상 가능한 것은 아니다. 그러나 이 행렬은 LU 분해가 가능한다.</p>
 <ol>
-<li><span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{L}</span><script type="math/tex">\mathbf{L}</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{L}</span><script type="math/tex">\mathbf{L}</script></span></script></span>과 <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{U}</span><script type="math/tex">\mathbf{U}</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{U}</span><script type="math/tex">\mathbf{U}</script></span></script></span>를 다음과 같이 구할 수 있다.</li>
+<li><span class="arithmatex"><span class="MathJax_Preview">\mathbf{L}</span><script type="math/tex">\mathbf{L}</script></span>과 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{U}</span><script type="math/tex">\mathbf{U}</script></span>를 다음과 같이 구할 수 있다.</li>
 </ol>
-<p>첫 번째 단계에서 <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{L}</span><script type="math/tex">\mathbf{L}</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{L}</span><script type="math/tex">\mathbf{L}</script></span></script></span>과 <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{U}</span><script type="math/tex">\mathbf{U}</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{U}</span><script type="math/tex">\mathbf{U}</script></span></script></span>의 초기 값을 설정한다.</p>
+<p>첫 번째 단계에서 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{L}</span><script type="math/tex">\mathbf{L}</script></span>과 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{U}</span><script type="math/tex">\mathbf{U}</script></span>의 초기 값을 설정한다.</p>
 <div class="arithmatex">
 <div class="MathJax_Preview">
 \mathbf{L} = \begin{pmatrix}
@@ -857,7 +842,7 @@ u_{11} & u_{12} & u_{13} \\
 </script>
 </div>
 <ol>
-<li><span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">u_{11}</span><script type="math/tex">u_{11}</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">u_{11}</span><script type="math/tex">u_{11}</script></span></script></span>을 먼저 구한다.</li>
+<li><span class="arithmatex"><span class="MathJax_Preview">u_{11}</span><script type="math/tex">u_{11}</script></span>을 먼저 구한다.</li>
 </ol>
 <div class="arithmatex">
 <div class="MathJax_Preview">
@@ -867,7 +852,7 @@ u_{11} = 4
 u_{11} = 4
 </script>
 </div>
-<p>다음으로 <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">\ell_{21}</span><script type="math/tex">\ell_{21}</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">\ell_{21}</span><script type="math/tex">\ell_{21}</script></span></script></span>과 <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">\ell_{31}</span><script type="math/tex">\ell_{31}</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">\ell_{31}</span><script type="math/tex">\ell_{31}</script></span></script></span>을 구한다.</p>
+<p>다음으로 <span class="arithmatex"><span class="MathJax_Preview">\ell_{21}</span><script type="math/tex">\ell_{21}</script></span>과 <span class="arithmatex"><span class="MathJax_Preview">\ell_{31}</span><script type="math/tex">\ell_{31}</script></span>을 구한다.</p>
 <div class="arithmatex">
 <div class="MathJax_Preview">
 \ell_{21} = \frac{1}{4} = 0.25, \quad \ell_{31} = \frac{2}{4} = 0.5
@@ -877,7 +862,7 @@ u_{11} = 4
 </script>
 </div>
 <ol>
-<li>이제 <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">u_{12}</span><script type="math/tex">u_{12}</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">u_{12}</span><script type="math/tex">u_{12}</script></span></script></span>, <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">u_{13}</span><script type="math/tex">u_{13}</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">u_{13}</span><script type="math/tex">u_{13}</script></span></script></span>을 구한다.</li>
+<li>이제 <span class="arithmatex"><span class="MathJax_Preview">u_{12}</span><script type="math/tex">u_{12}</script></span>, <span class="arithmatex"><span class="MathJax_Preview">u_{13}</span><script type="math/tex">u_{13}</script></span>을 구한다.</li>
 </ol>
 <div class="arithmatex">
 <div class="MathJax_Preview">
@@ -888,7 +873,7 @@ u_{12} = 1, \quad u_{13} = 2
 </script>
 </div>
 <ol>
-<li>다음으로 <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">u_{22}</span><script type="math/tex">u_{22}</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">u_{22}</span><script type="math/tex">u_{22}</script></span></script></span>를 구한다.</li>
+<li>다음으로 <span class="arithmatex"><span class="MathJax_Preview">u_{22}</span><script type="math/tex">u_{22}</script></span>를 구한다.</li>
 </ol>
 <div class="arithmatex">
 <div class="MathJax_Preview">
@@ -898,7 +883,7 @@ u_{22} = 3 - 0.25 \times 1 = 2.75
 u_{22} = 3 - 0.25 \times 1 = 2.75
 </script>
 </div>
-<p>이어서 <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">\ell_{32}</span><script type="math/tex">\ell_{32}</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">\ell_{32}</span><script type="math/tex">\ell_{32}</script></span></script></span>를 구한다.</p>
+<p>이어서 <span class="arithmatex"><span class="MathJax_Preview">\ell_{32}</span><script type="math/tex">\ell_{32}</script></span>를 구한다.</p>
 <div class="arithmatex">
 <div class="MathJax_Preview">
 \ell_{32} = \frac{-1 - 0.5 \times 1}{2.75} = \frac{-1.5}{2.75} = -0.545
@@ -907,7 +892,7 @@ u_{22} = 3 - 0.25 \times 1 = 2.75
 \ell_{32} = \frac{-1 - 0.5 \times 1}{2.75} = \frac{-1.5}{2.75} = -0.545
 </script>
 </div>
-<p>마지막으로 <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">u_{33}</span><script type="math/tex">u_{33}</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">u_{33}</span><script type="math/tex">u_{33}</script></span></script></span>을 구한다.</p>
+<p>마지막으로 <span class="arithmatex"><span class="MathJax_Preview">u_{33}</span><script type="math/tex">u_{33}</script></span>을 구한다.</p>
 <div class="arithmatex">
 <div class="MathJax_Preview">
 u_{33} = 3 - 0.5 \times 2 - (-0.545) \times (-0.545) \times 2.75
@@ -925,7 +910,7 @@ u_{33} \approx 2.295
 u_{33} \approx 2.295
 </script>
 </div>
-<p>따라서 최종적으로 <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{L}</span><script type="math/tex">\mathbf{L}</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{L}</span><script type="math/tex">\mathbf{L}</script></span></script></span>과 <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{U}</span><script type="math/tex">\mathbf{U}</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{U}</span><script type="math/tex">\mathbf{U}</script></span></script></span>는 다음과 같다.</p>
+<p>따라서 최종적으로 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{L}</span><script type="math/tex">\mathbf{L}</script></span>과 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{U}</span><script type="math/tex">\mathbf{U}</script></span>는 다음과 같다.</p>
 <div class="arithmatex">
 <div class="MathJax_Preview">
 \mathbf{L} = \begin{pmatrix}
@@ -953,7 +938,7 @@ u_{33} \approx 2.295
 <ol>
 <li>검증:</li>
 </ol>
-<p><span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{L}\mathbf{U}</span><script type="math/tex">\mathbf{L}\mathbf{U}</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{L}\mathbf{U}</span><script type="math/tex">\mathbf{L}\mathbf{U}</script></span></script></span>를 계산하면 <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{A}</span><script type="math/tex">\mathbf{A}</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{A}</span><script type="math/tex">\mathbf{A}</script></span></script></span>와 동일한 행렬이 나옴을 확인할 수 있다.</p>
+<p><span class="arithmatex"><span class="MathJax_Preview">\mathbf{L}\mathbf{U}</span><script type="math/tex">\mathbf{L}\mathbf{U}</script></span>를 계산하면 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{A}</span><script type="math/tex">\mathbf{A}</script></span>와 동일한 행렬이 나옴을 확인할 수 있다.</p>
 <p>이로써 이 대칭 행렬은 성공적으로 LU 분해가 가능함을 알 수 있다.</p>
 <h3 id="9-lu">연습 문제 9: 희소 행렬에서의 LU 분해</h3>
 <p>다음 희소 행렬의 LU 분해를 수행하시오.</p>
@@ -976,13 +961,13 @@ u_{33} \approx 2.295
 </script>
 </div>
 <ol>
-<li><span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{L}</span><script type="math/tex">\mathbf{L}</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{L}</span><script type="math/tex">\mathbf{L}</script></span></script></span>과 <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{U}</span><script type="math/tex">\mathbf{U}</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{U}</span><script type="math/tex">\mathbf{U}</script></span></script></span>를 구하시오.</li>
+<li><span class="arithmatex"><span class="MathJax_Preview">\mathbf{L}</span><script type="math/tex">\mathbf{L}</script></span>과 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{U}</span><script type="math/tex">\mathbf{U}</script></span>를 구하시오.</li>
 <li>희소 행렬에서의 LU 분해의 특성과 장점을 설명하시오.</li>
 </ol>
 <h3 id="9">해답 9:</h3>
 <p>희소 행렬의 LU 분해는 대부분의 요소가 0인 행렬을 분해하는 과정으로, 저장 공간과 계산 시간을 절약할 수 있다.</p>
 <ol>
-<li><span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{L}</span><script type="math/tex">\mathbf{L}</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{L}</span><script type="math/tex">\mathbf{L}</script></span></script></span>과 <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{U}</span><script type="math/tex">\mathbf{U}</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{U}</span><script type="math/tex">\mathbf{U}</script></span></script></span>는 다음과 같다.</li>
+<li><span class="arithmatex"><span class="MathJax_Preview">\mathbf{L}</span><script type="math/tex">\mathbf{L}</script></span>과 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{U}</span><script type="math/tex">\mathbf{U}</script></span>는 다음과 같다.</li>
 </ol>
 <div class="arithmatex">
 <div class="MathJax_Preview">
@@ -1051,7 +1036,7 @@ u_{33} \approx 2.295
 <p>Pivoting 없이 LU 분해를 시도하면, 첫 번째 열의 첫 번째 요소가 0이기 때문에 문제가 발생한다. 분해를 시도하면 행렬이 특이하게 되어 결과가 정확하지 않게 된다.</p>
 </li>
 <li>
-<p>첫 번째 단계에서 <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">\ell_{21}</span><script type="math/tex">\ell_{21}</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">\ell_{21}</span><script type="math/tex">\ell_{21}</script></span></script></span>과 <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">\ell_{31}</span><script type="math/tex">\ell_{31}</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">\ell_{31}</span><script type="math/tex">\ell_{31}</script></span></script></span>을 계산하려면 첫 번째 열의 첫 번째 요소를 사용해야 하지만, 이 값이 0이므로 분모가 0이 되어 분해가 불가능한다.</p>
+<p>첫 번째 단계에서 <span class="arithmatex"><span class="MathJax_Preview">\ell_{21}</span><script type="math/tex">\ell_{21}</script></span>과 <span class="arithmatex"><span class="MathJax_Preview">\ell_{31}</span><script type="math/tex">\ell_{31}</script></span>을 계산하려면 첫 번째 열의 첫 번째 요소를 사용해야 하지만, 이 값이 0이므로 분모가 0이 되어 분해가 불가능한다.</p>
 </li>
 <li>
 <p>발생하는 문제와 Pivoting 전략의 중요성:</p>
@@ -1059,7 +1044,7 @@ u_{33} \approx 2.295
 </ol>
 <p>Pivoting 전략은 분해 과정에서 0 또는 작은 값으로 인한 수치적 불안정성을 피하기 위해 사용된다. 이 전략은 행 또는 열을 교환하여 가장 큰 절대값을 가진 요소를 사용하여 분해를 수행함으로써, 계산의 안정성을 보장한다. 이는 특히 대규모 행렬이나 희소 행렬에서 중요한 역할을 한다.</p>
 <h3 id="11-lu">연습 문제 11: LU 분해와 행렬의 역행렬 계산</h3>
-<p>다음 행렬 <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{A}</span><script type="math/tex">\mathbf{A}</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{A}</span><script type="math/tex">\mathbf{A}</script></span></script></span>의 역행렬을 LU 분해를 사용하여 구하시오.</p>
+<p>다음 행렬 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{A}</span><script type="math/tex">\mathbf{A}</script></span>의 역행렬을 LU 분해를 사용하여 구하시오.</p>
 <div class="arithmatex">
 <div class="MathJax_Preview">
 \mathbf{A} = \begin{pmatrix}
@@ -1075,12 +1060,12 @@ u_{33} \approx 2.295
 </script>
 </div>
 <ol>
-<li><span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{A}</span><script type="math/tex">\mathbf{A}</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{A}</span><script type="math/tex">\mathbf{A}</script></span></script></span>를 LU 분해하시오.</li>
-<li>LU 분해를 이용해 <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{A}^{-1}</span><script type="math/tex">\mathbf{A}^{-1}</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{A}^{-1}</span><script type="math/tex">\mathbf{A}^{-1}</script></span></script></span>를 계산하시오.</li>
+<li><span class="arithmatex"><span class="MathJax_Preview">\mathbf{A}</span><script type="math/tex">\mathbf{A}</script></span>를 LU 분해하시오.</li>
+<li>LU 분해를 이용해 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{A}^{-1}</span><script type="math/tex">\mathbf{A}^{-1}</script></span>를 계산하시오.</li>
 </ol>
 <h3 id="11">해답 11:</h3>
 <ol>
-<li><span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{A}</span><script type="math/tex">\mathbf{A}</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{A}</span><script type="math/tex">\mathbf{A}</script></span></script></span>의 LU 분해를 구한다.</li>
+<li><span class="arithmatex"><span class="MathJax_Preview">\mathbf{A}</span><script type="math/tex">\mathbf{A}</script></span>의 LU 분해를 구한다.</li>
 </ol>
 <div class="arithmatex">
 <div class="MathJax_Preview">
@@ -1096,7 +1081,7 @@ u_{33} \approx 2.295
 \end{pmatrix}
 </script>
 </div>
-<p>우선, <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{L}</span><script type="math/tex">\mathbf{L}</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{L}</span><script type="math/tex">\mathbf{L}</script></span></script></span>과 <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{U}</span><script type="math/tex">\mathbf{U}</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{U}</span><script type="math/tex">\mathbf{U}</script></span></script></span>를 설정한다.</p>
+<p>우선, <span class="arithmatex"><span class="MathJax_Preview">\mathbf{L}</span><script type="math/tex">\mathbf{L}</script></span>과 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{U}</span><script type="math/tex">\mathbf{U}</script></span>를 설정한다.</p>
 <div class="arithmatex">
 <div class="MathJax_Preview">
 \mathbf{L} = \begin{pmatrix}
@@ -1117,8 +1102,8 @@ u_{11} & u_{12} \\
 \end{pmatrix}
 </script>
 </div>
-<p>첫 번째로 <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">u_{11} = 4</span><script type="math/tex">u_{11} = 4</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">u_{11} = 4</span><script type="math/tex">u_{11} = 4</script></span></script></span>이고, <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">u_{12} = 3</span><script type="math/tex">u_{12} = 3</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">u_{12} = 3</span><script type="math/tex">u_{12} = 3</script></span></script></span>이다.</p>
-<p>다음으로 <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">\ell_{21}</span><script type="math/tex">\ell_{21}</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">\ell_{21}</span><script type="math/tex">\ell_{21}</script></span></script></span>과 <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">u_{22}</span><script type="math/tex">u_{22}</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">u_{22}</span><script type="math/tex">u_{22}</script></span></script></span>를 구한다.</p>
+<p>첫 번째로 <span class="arithmatex"><span class="MathJax_Preview">u_{11} = 4</span><script type="math/tex">u_{11} = 4</script></span>이고, <span class="arithmatex"><span class="MathJax_Preview">u_{12} = 3</span><script type="math/tex">u_{12} = 3</script></span>이다.</p>
+<p>다음으로 <span class="arithmatex"><span class="MathJax_Preview">\ell_{21}</span><script type="math/tex">\ell_{21}</script></span>과 <span class="arithmatex"><span class="MathJax_Preview">u_{22}</span><script type="math/tex">u_{22}</script></span>를 구한다.</p>
 <div class="arithmatex">
 <div class="MathJax_Preview">
 \ell_{21} = \frac{6}{4} = 1.5, \quad u_{22} = 3 - 1.5 \times 3 = 3 - 4.5 = -1.5
@@ -1149,14 +1134,14 @@ u_{11} & u_{12} \\
 </script>
 </div>
 <ol>
-<li>이제 LU 분해를 이용해 <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{A}^{-1}</span><script type="math/tex">\mathbf{A}^{-1}</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{A}^{-1}</span><script type="math/tex">\mathbf{A}^{-1}</script></span></script></span>를 구한다. <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{A}\mathbf{A}^{-1} = \mathbf{I}</span><script type="math/tex">\mathbf{A}\mathbf{A}^{-1} = \mathbf{I}</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{A}\mathbf{A}^{-1} = \mathbf{I}</span><script type="math/tex">\mathbf{A}\mathbf{A}^{-1} = \mathbf{I}</script></span></script></span>임을 이용해, <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{A}\mathbf{x} = \mathbf{b}</span><script type="math/tex">\mathbf{A}\mathbf{x} = \mathbf{b}</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{A}\mathbf{x} = \mathbf{b}</span><script type="math/tex">\mathbf{A}\mathbf{x} = \mathbf{b}</script></span></script></span>의 형태로 계산을 수행한다.</li>
+<li>이제 LU 분해를 이용해 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{A}^{-1}</span><script type="math/tex">\mathbf{A}^{-1}</script></span>를 구한다. <span class="arithmatex"><span class="MathJax_Preview">\mathbf{A}\mathbf{A}^{-1} = \mathbf{I}</span><script type="math/tex">\mathbf{A}\mathbf{A}^{-1} = \mathbf{I}</script></span>임을 이용해, <span class="arithmatex"><span class="MathJax_Preview">\mathbf{A}\mathbf{x} = \mathbf{b}</span><script type="math/tex">\mathbf{A}\mathbf{x} = \mathbf{b}</script></span>의 형태로 계산을 수행한다.</li>
 </ol>
-<p><span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{A}\mathbf{A}^{-1} = \mathbf{LU}\mathbf{A}^{-1} = \mathbf{I}</span><script type="math/tex">\mathbf{A}\mathbf{A}^{-1} = \mathbf{LU}\mathbf{A}^{-1} = \mathbf{I}</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{A}\mathbf{A}^{-1} = \mathbf{LU}\mathbf{A}^{-1} = \mathbf{I}</span><script type="math/tex">\mathbf{A}\mathbf{A}^{-1} = \mathbf{LU}\mathbf{A}^{-1} = \mathbf{I}</script></span></script></span>이므로, <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{LU}\mathbf{A}^{-1} = \mathbf{I}</span><script type="math/tex">\mathbf{LU}\mathbf{A}^{-1} = \mathbf{I}</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{LU}\mathbf{A}^{-1} = \mathbf{I}</span><script type="math/tex">\mathbf{LU}\mathbf{A}^{-1} = \mathbf{I}</script></span></script></span>가 된다. 이를 풀기 위해서는, 두 단계로 나누어 계산한다.</p>
+<p><span class="arithmatex"><span class="MathJax_Preview">\mathbf{A}\mathbf{A}^{-1} = \mathbf{LU}\mathbf{A}^{-1} = \mathbf{I}</span><script type="math/tex">\mathbf{A}\mathbf{A}^{-1} = \mathbf{LU}\mathbf{A}^{-1} = \mathbf{I}</script></span>이므로, <span class="arithmatex"><span class="MathJax_Preview">\mathbf{LU}\mathbf{A}^{-1} = \mathbf{I}</span><script type="math/tex">\mathbf{LU}\mathbf{A}^{-1} = \mathbf{I}</script></span>가 된다. 이를 풀기 위해서는, 두 단계로 나누어 계산한다.</p>
 <ul>
-<li>먼저 <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{L}\mathbf{y} = \mathbf{I}</span><script type="math/tex">\mathbf{L}\mathbf{y} = \mathbf{I}</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{L}\mathbf{y} = \mathbf{I}</span><script type="math/tex">\mathbf{L}\mathbf{y} = \mathbf{I}</script></span></script></span>를 풀어 <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{y}</span><script type="math/tex">\mathbf{y}</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{y}</span><script type="math/tex">\mathbf{y}</script></span></script></span>를 구한다.</li>
-<li>다음으로 <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{U}\mathbf{A}^{-1} = \mathbf{y}</span><script type="math/tex">\mathbf{U}\mathbf{A}^{-1} = \mathbf{y}</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{U}\mathbf{A}^{-1} = \mathbf{y}</span><script type="math/tex">\mathbf{U}\mathbf{A}^{-1} = \mathbf{y}</script></span></script></span>를 풀어 <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{A}^{-1}</span><script type="math/tex">\mathbf{A}^{-1}</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{A}^{-1}</span><script type="math/tex">\mathbf{A}^{-1}</script></span></script></span>를 구한다.</li>
+<li>먼저 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{L}\mathbf{y} = \mathbf{I}</span><script type="math/tex">\mathbf{L}\mathbf{y} = \mathbf{I}</script></span>를 풀어 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{y}</span><script type="math/tex">\mathbf{y}</script></span>를 구한다.</li>
+<li>다음으로 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{U}\mathbf{A}^{-1} = \mathbf{y}</span><script type="math/tex">\mathbf{U}\mathbf{A}^{-1} = \mathbf{y}</script></span>를 풀어 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{A}^{-1}</span><script type="math/tex">\mathbf{A}^{-1}</script></span>를 구한다.</li>
 </ul>
-<h4 id="step-1-mathbflmathbfy-mathbfimathbflmathbfy-mathbfimathbflmathbfy-mathbfimathbflmathbfy-mathbfi">Step 1: <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{L}\mathbf{y} = \mathbf{I}</span><script type="math/tex">\mathbf{L}\mathbf{y} = \mathbf{I}</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{L}\mathbf{y} = \mathbf{I}</span><script type="math/tex">\mathbf{L}\mathbf{y} = \mathbf{I}</script></span></script></span></h4>
+<h4 id="step-1-mathbflmathbfy-mathbfimathbflmathbfy-mathbfi">Step 1: <span class="arithmatex"><span class="MathJax_Preview">\mathbf{L}\mathbf{y} = \mathbf{I}</span><script type="math/tex">\mathbf{L}\mathbf{y} = \mathbf{I}</script></span></h4>
 <div class="arithmatex">
 <div class="MathJax_Preview">
 \mathbf{L} = \begin{pmatrix}
@@ -1195,7 +1180,7 @@ y_1 = 0, \quad y_2 = 1
 y_1 = 0, \quad y_2 = 1
 </script>
 </div>
-<p><span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{y}</span><script type="math/tex">\mathbf{y}</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{y}</span><script type="math/tex">\mathbf{y}</script></span></script></span>는 다음과 같이 나온다.</p>
+<p><span class="arithmatex"><span class="MathJax_Preview">\mathbf{y}</span><script type="math/tex">\mathbf{y}</script></span>는 다음과 같이 나온다.</p>
 <div class="arithmatex">
 <div class="MathJax_Preview">
 \mathbf{y} = \begin{pmatrix}
@@ -1210,7 +1195,7 @@ y_1 = 0, \quad y_2 = 1
 \end{pmatrix}
 </script>
 </div>
-<h4 id="step-2-mathbfumathbfa-1-mathbfymathbfumathbfa-1-mathbfymathbfumathbfa-1-mathbfymathbfumathbfa-1-mathbfy">Step 2: <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{U}\mathbf{A}^{-1} = \mathbf{y}</span><script type="math/tex">\mathbf{U}\mathbf{A}^{-1} = \mathbf{y}</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{U}\mathbf{A}^{-1} = \mathbf{y}</span><script type="math/tex">\mathbf{U}\mathbf{A}^{-1} = \mathbf{y}</script></span></script></span></h4>
+<h4 id="step-2-mathbfumathbfa-1-mathbfymathbfumathbfa-1-mathbfy">Step 2: <span class="arithmatex"><span class="MathJax_Preview">\mathbf{U}\mathbf{A}^{-1} = \mathbf{y}</span><script type="math/tex">\mathbf{U}\mathbf{A}^{-1} = \mathbf{y}</script></span></h4>
 <div class="arithmatex">
 <div class="MathJax_Preview">
 \mathbf{U}\mathbf{A}^{-1} = \begin{pmatrix}
@@ -1266,11 +1251,11 @@ y_1 = 0, \quad y_2 = 1
 </div>
 <ol>
 <li>LU 분해를 수행하시오.</li>
-<li>LU 분해를 사용하여 행렬식 <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">\text{det}(\mathbf{A})</span><script type="math/tex">\text{det}(\mathbf{A})</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">\text{det}(\mathbf{A})</span><script type="math/tex">\text{det}(\mathbf{A})</script></span></script></span>를 계산하시오.</li>
+<li>LU 분해를 사용하여 행렬식 <span class="arithmatex"><span class="MathJax_Preview">\text{det}(\mathbf{A})</span><script type="math/tex">\text{det}(\mathbf{A})</script></span>를 계산하시오.</li>
 </ol>
 <h3 id="12">해답 12:</h3>
 <ol>
-<li><span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{A}</span><script type="math/tex">\mathbf{A}</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{A}</span><script type="math/tex">\mathbf{A}</script></span></script></span>의 LU 분해를 구한다.</li>
+<li><span class="arithmatex"><span class="MathJax_Preview">\mathbf{A}</span><script type="math/tex">\mathbf{A}</script></span>의 LU 분해를 구한다.</li>
 </ol>
 <p>LU 분해의 결과는 다음과 같다.</p>
 <div class="arithmatex">
@@ -1300,7 +1285,7 @@ y_1 = 0, \quad y_2 = 1
 <ol>
 <li>LU 분해를 이용하여 행렬식을 계산한다.</li>
 </ol>
-<p>행렬식은 상삼각 행렬 <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{U}</span><script type="math/tex">\mathbf{U}</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{U}</span><script type="math/tex">\mathbf{U}</script></span></script></span>의 대각 성분의 곱으로 구할 수 있다.</p>
+<p>행렬식은 상삼각 행렬 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{U}</span><script type="math/tex">\mathbf{U}</script></span>의 대각 성분의 곱으로 구할 수 있다.</p>
 <div class="arithmatex">
 <div class="MathJax_Preview">
 \text{det}(\mathbf{A}) = u_{11} \times u_{22} \times u_{33} = 2 \times (-1) \times 7 = -14
@@ -1309,7 +1294,7 @@ y_1 = 0, \quad y_2 = 1
 \text{det}(\mathbf{A}) = u_{11} \times u_{22} \times u_{33} = 2 \times (-1) \times 7 = -14
 </script>
 </div>
-<p>이로써 <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{A}</span><script type="math/tex">\mathbf{A}</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{A}</span><script type="math/tex">\mathbf{A}</script></span></script></span>의 행렬식은 <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">-14</span><script type="math/tex">-14</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">-14</span><script type="math/tex">-14</script></span></script></span>임을 알 수 있다.</p>
+<p>이로써 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{A}</span><script type="math/tex">\mathbf{A}</script></span>의 행렬식은 <span class="arithmatex"><span class="MathJax_Preview">-14</span><script type="math/tex">-14</script></span>임을 알 수 있다.</p>
 <h3 id="13-pivoting-lu">연습 문제 13: Pivoting을 사용한 LU 분해</h3>
 <p>Pivoting을 포함하여 다음 행렬의 LU 분해를 수행하시오.</p>
 <div class="arithmatex">
@@ -1334,7 +1319,7 @@ y_1 = 0, \quad y_2 = 1
 </ol>
 <h3 id="13">해답 13:</h3>
 <ol>
-<li>Partial Pivoting을 적용하여 <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{A}</span><script type="math/tex">\mathbf{A}</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{A}</span><script type="math/tex">\mathbf{A}</script></span></script></span>를 LU 분해한다.</li>
+<li>Partial Pivoting을 적용하여 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{A}</span><script type="math/tex">\mathbf{A}</script></span>를 LU 분해한다.</li>
 </ol>
 <p>먼저, 첫 번째 열에서 가장 큰 절대값을 가진 요소를 찾아 행을 교환한다.</p>
 <p>교환 후:</p>
@@ -1379,7 +1364,7 @@ y_1 = 0, \quad y_2 = 1
 \end{pmatrix}
 </script>
 </div>
-<p><span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">\ell_{32}</span><script type="math/tex">\ell_{32}</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">\ell_{32}</span><script type="math/tex">\ell_{32}</script></span></script></span>와 <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">u_{33}</span><script type="math/tex">u_{33}</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">u_{33}</span><script type="math/tex">u_{33}</script></span></script></span>을 계산하면,</p>
+<p><span class="arithmatex"><span class="MathJax_Preview">\ell_{32}</span><script type="math/tex">\ell_{32}</script></span>와 <span class="arithmatex"><span class="MathJax_Preview">u_{33}</span><script type="math/tex">u_{33}</script></span>을 계산하면,</p>
 <div class="arithmatex">
 <div class="MathJax_Preview">
 \ell_{32} = \frac{2}{-0.75} = -\frac{8}{3}, \quad u_{33} = 1 - (-\frac{8}{3}) \times 2
@@ -1443,7 +1428,7 @@ y_1 = 0, \quad y_2 = 1
 </script>
 </div>
 <ol>
-<li>블록 행렬 <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{A}</span><script type="math/tex">\mathbf{A}</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{A}</span><script type="math/tex">\mathbf{A}</script></span></script></span>를 LU 분해하시오.</li>
+<li>블록 행렬 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{A}</span><script type="math/tex">\mathbf{A}</script></span>를 LU 분해하시오.</li>
 <li>블록 행렬의 LU 분해의 이점과 활용 사례를 설명하시오.</li>
 </ol>
 <h3 id="14">해답 14:</h3>
@@ -1476,7 +1461,7 @@ y_1 = 0, \quad y_2 = 1
 \end{pmatrix}
 </script>
 </div>
-<p>여기서 <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{L_{11}}</span><script type="math/tex">\mathbf{L_{11}}</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{L_{11}}</span><script type="math/tex">\mathbf{L_{11}}</script></span></script></span>과 <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{U_{11}}</span><script type="math/tex">\mathbf{U_{11}}</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{U_{11}}</span><script type="math/tex">\mathbf{U_{11}}</script></span></script></span>는 <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{A_{11}}</span><script type="math/tex">\mathbf{A_{11}}</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{A_{11}}</span><script type="math/tex">\mathbf{A_{11}}</script></span></script></span>의 LU 분해로 구할 수 있다.</p>
+<p>여기서 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{L_{11}}</span><script type="math/tex">\mathbf{L_{11}}</script></span>과 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{U_{11}}</span><script type="math/tex">\mathbf{U_{11}}</script></span>는 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{A_{11}}</span><script type="math/tex">\mathbf{A_{11}}</script></span>의 LU 분해로 구할 수 있다.</p>
 <div class="arithmatex">
 <div class="MathJax_Preview">
 \mathbf{L_{11}} = \begin{pmatrix} 1 &amp; 0 \\ 0.5 &amp; 1 \end{pmatrix}, \quad \mathbf{U_{11}} = \begin{pmatrix} 4 &amp; 2 \\ 0 &amp; 2 \end{pmatrix}
@@ -1485,7 +1470,7 @@ y_1 = 0, \quad y_2 = 1
 \mathbf{L_{11}} = \begin{pmatrix} 1 & 0 \\ 0.5 & 1 \end{pmatrix}, \quad \mathbf{U_{11}} = \begin{pmatrix} 4 & 2 \\ 0 & 2 \end{pmatrix}
 </script>
 </div>
-<p>다음으로 <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{L_{21}}</span><script type="math/tex">\mathbf{L_{21}}</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{L_{21}}</span><script type="math/tex">\mathbf{L_{21}}</script></span></script></span>을 구한다.</p>
+<p>다음으로 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{L_{21}}</span><script type="math/tex">\mathbf{L_{21}}</script></span>을 구한다.</p>
 <div class="arithmatex">
 <div class="MathJax_Preview">
 \mathbf{L_{21}} = \mathbf{A_{21}} \mathbf{U_{11}}^{-1} = \begin{pmatrix} 5 &amp; 4 \\ 3 &amp; 6 \end{pmatrix} \begin{pmatrix} 0.25 &amp; -0.25 \\ 0 &amp; 0.5 \end{pmatrix} = \begin{pmatrix} 1.25 &amp; 0.5 \\ 0.75 &amp; 1.5 \end{pmatrix}
@@ -1494,7 +1479,7 @@ y_1 = 0, \quad y_2 = 1
 \mathbf{L_{21}} = \mathbf{A_{21}} \mathbf{U_{11}}^{-1} = \begin{pmatrix} 5 & 4 \\ 3 & 6 \end{pmatrix} \begin{pmatrix} 0.25 & -0.25 \\ 0 & 0.5 \end{pmatrix} = \begin{pmatrix} 1.25 & 0.5 \\ 0.75 & 1.5 \end{pmatrix}
 </script>
 </div>
-<p><span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{U_{12}}</span><script type="math/tex">\mathbf{U_{12}}</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{U_{12}}</span><script type="math/tex">\mathbf{U_{12}}</script></span></script></span>은 다음과 같이 구할 수 있다.</p>
+<p><span class="arithmatex"><span class="MathJax_Preview">\mathbf{U_{12}}</span><script type="math/tex">\mathbf{U_{12}}</script></span>은 다음과 같이 구할 수 있다.</p>
 <div class="arithmatex">
 <div class="MathJax_Preview">
 \mathbf{U_{12}} = \mathbf{L_{11}}^{-1} \mathbf{A_{12}} = \begin{pmatrix} 1 &amp; 0 \\ -0.5 &amp; 1 \end{pmatrix} \begin{pmatrix} 3 &amp; 5 \\ 1 &amp; 2 \end{pmatrix} = \begin{pmatrix} 3 &amp; 5 \\ -0.5 &amp; -0.5 \end{pmatrix}
@@ -1503,7 +1488,7 @@ y_1 = 0, \quad y_2 = 1
 \mathbf{U_{12}} = \mathbf{L_{11}}^{-1} \mathbf{A_{12}} = \begin{pmatrix} 1 & 0 \\ -0.5 & 1 \end{pmatrix} \begin{pmatrix} 3 & 5 \\ 1 & 2 \end{pmatrix} = \begin{pmatrix} 3 & 5 \\ -0.5 & -0.5 \end{pmatrix}
 </script>
 </div>
-<p>마지막으로 <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{L_{22}}</span><script type="math/tex">\mathbf{L_{22}}</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{L_{22}}</span><script type="math/tex">\mathbf{L_{22}}</script></span></script></span>와 <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{U_{22}}</span><script type="math/tex">\mathbf{U_{22}}</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{U_{22}}</span><script type="math/tex">\mathbf{U_{22}}</script></span></script></span>는 다음과 같이 구한다.</p>
+<p>마지막으로 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{L_{22}}</span><script type="math/tex">\mathbf{L_{22}}</script></span>와 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{U_{22}}</span><script type="math/tex">\mathbf{U_{22}}</script></span>는 다음과 같이 구한다.</p>
 <div class="arithmatex">
 <div class="MathJax_Preview">
 \mathbf{S} = \mathbf{A_{22}} - \mathbf{L_{21}} \mathbf{U_{12}} = \begin{pmatrix} 7 &amp; 1 \\ 8 &amp; 3 \end{pmatrix} - \begin{pmatrix} 1.25 &amp; 0.5 \\ 0.75 &amp; 1.5 \end{pmatrix} \begin{pmatrix} 3 &amp; 5 \\ -0.5 &amp; -0.5 \end{pmatrix}
@@ -1512,7 +1497,7 @@ y_1 = 0, \quad y_2 = 1
 \mathbf{S} = \mathbf{A_{22}} - \mathbf{L_{21}} \mathbf{U_{12}} = \begin{pmatrix} 7 & 1 \\ 8 & 3 \end{pmatrix} - \begin{pmatrix} 1.25 & 0.5 \\ 0.75 & 1.5 \end{pmatrix} \begin{pmatrix} 3 & 5 \\ -0.5 & -0.5 \end{pmatrix}
 </script>
 </div>
-<p>계산 결과 <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{S}</span><script type="math/tex">\mathbf{S}</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{S}</span><script type="math/tex">\mathbf{S}</script></span></script></span>는 다음과 같다.</p>
+<p>계산 결과 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{S}</span><script type="math/tex">\mathbf{S}</script></span>는 다음과 같다.</p>
 <div class="arithmatex">
 <div class="MathJax_Preview">
 \mathbf{S} = \begin{pmatrix} 2.25 &amp; -2.75 \\ 4.25 &amp; -0.75 \end{pmatrix}
@@ -1521,7 +1506,7 @@ y_1 = 0, \quad y_2 = 1
 \mathbf{S} = \begin{pmatrix} 2.25 & -2.75 \\ 4.25 & -0.75 \end{pmatrix}
 </script>
 </div>
-<p>이제 <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{S}</span><script type="math/tex">\mathbf{S}</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{S}</span><script type="math/tex">\mathbf{S}</script></span></script></span>를 LU 분해하여 <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{L_{22}}</span><script type="math/tex">\mathbf{L_{22}}</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{L_{22}}</span><script type="math/tex">\mathbf{L_{22}}</script></span></script></span>와 <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{U_{22}}</span><script type="math/tex">\mathbf{U_{22}}</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{U_{22}}</span><script type="math/tex">\mathbf{U_{22}}</script></span></script></span>를 구한다.</p>
+<p>이제 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{S}</span><script type="math/tex">\mathbf{S}</script></span>를 LU 분해하여 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{L_{22}}</span><script type="math/tex">\mathbf{L_{22}}</script></span>와 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{U_{22}}</span><script type="math/tex">\mathbf{U_{22}}</script></span>를 구한다.</p>
 <div class="arithmatex">
 <div class="MathJax_Preview">
 \mathbf{L_{22}} = \begin{pmatrix} 1 &amp; 0 \\ 1.8889 &amp; 1 \end{pmatrix}, \quad \mathbf{U_{22}} = \begin{pmatrix} 2.25 &amp; -2.75 \\ 0 &amp; 4.25 \end{pmatrix}
@@ -1566,13 +1551,13 @@ y_1 = 0, \quad y_2 = 1
 </script>
 </div>
 <ol>
-<li>행렬 <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{A}</span><script type="math/tex">\mathbf{A}</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{A}</span><script type="math/tex">\mathbf{A}</script></span></script></span>를 LU 분해하시오.</li>
+<li>행렬 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{A}</span><script type="math/tex">\mathbf{A}</script></span>를 LU 분해하시오.</li>
 <li>분해 과정에서 발생할 수 있는 수치적 오류를 설명하시오.</li>
 <li>이러한 오류를 최소화할 수 있는 방법을 제안하시오.</li>
 </ol>
 <h3 id="15">해답 15:</h3>
 <ol>
-<li><span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{A}</span><script type="math/tex">\mathbf{A}</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{A}</span><script type="math/tex">\mathbf{A}</script></span></script></span>의 LU 분해를 수행한다.</li>
+<li><span class="arithmatex"><span class="MathJax_Preview">\mathbf{A}</span><script type="math/tex">\mathbf{A}</script></span>의 LU 분해를 수행한다.</li>
 </ol>
 <div class="arithmatex">
 <div class="MathJax_Preview">
@@ -1594,7 +1579,7 @@ u_{11} & u_{12} \\
 \end{pmatrix}
 </script>
 </div>
-<p>여기서 <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">u_{11} = 10^{-16}</span><script type="math/tex">u_{11} = 10^{-16}</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">u_{11} = 10^{-16}</span><script type="math/tex">u_{11} = 10^{-16}</script></span></script></span>, <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">u_{12} = 1</span><script type="math/tex">u_{12} = 1</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">u_{12} = 1</span><script type="math/tex">u_{12} = 1</script></span></script></span>이며, <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">\ell_{21} = \frac{1}{10^{-16}} = 10^{16}</span><script type="math/tex">\ell_{21} = \frac{1}{10^{-16}} = 10^{16}</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">\ell_{21} = \frac{1}{10^{-16}} = 10^{16}</span><script type="math/tex">\ell_{21} = \frac{1}{10^{-16}} = 10^{16}</script></span></script></span>이다. <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">u_{22}</span><script type="math/tex">u_{22}</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">u_{22}</span><script type="math/tex">u_{22}</script></span></script></span>는 다음과 같이 구할 수 있다.</p>
+<p>여기서 <span class="arithmatex"><span class="MathJax_Preview">u_{11} = 10^{-16}</span><script type="math/tex">u_{11} = 10^{-16}</script></span>, <span class="arithmatex"><span class="MathJax_Preview">u_{12} = 1</span><script type="math/tex">u_{12} = 1</script></span>이며, <span class="arithmatex"><span class="MathJax_Preview">\ell_{21} = \frac{1}{10^{-16}} = 10^{16}</span><script type="math/tex">\ell_{21} = \frac{1}{10^{-16}} = 10^{16}</script></span>이다. <span class="arithmatex"><span class="MathJax_Preview">u_{22}</span><script type="math/tex">u_{22}</script></span>는 다음과 같이 구할 수 있다.</p>
 <div class="arithmatex">
 <div class="MathJax_Preview">
 u_{22} = 1 - \ell_{21} \times u_{12} = 1 - 10^{16} \times 1 = -10^{16} + 1 \approx -10^{16}
@@ -1627,7 +1612,7 @@ u_{22} = 1 - \ell_{21} \times u_{12} = 1 - 10^{16} \times 1 = -10^{16} + 1 \appr
 <ol>
 <li>수치적 오류 분석:</li>
 </ol>
-<p>이 행렬에서는 매우 작은 값 <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">10^{-16}</span><script type="math/tex">10^{-16}</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">10^{-16}</span><script type="math/tex">10^{-16}</script></span></script></span>이 피벗 요소로 선택되며, 그 결과로 수치적 오류가 발생할 수 있다. 특히, <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">10^{16}</span><script type="math/tex">10^{16}</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">10^{16}</span><script type="math/tex">10^{16}</script></span></script></span>과 같은 큰 숫자가 등장하게 되며, 이는 수치적인 불안정성을 초래할 수 있다. 이로 인해 계산 오차가 크게 발생할 가능성이 있다.</p>
+<p>이 행렬에서는 매우 작은 값 <span class="arithmatex"><span class="MathJax_Preview">10^{-16}</span><script type="math/tex">10^{-16}</script></span>이 피벗 요소로 선택되며, 그 결과로 수치적 오류가 발생할 수 있다. 특히, <span class="arithmatex"><span class="MathJax_Preview">10^{16}</span><script type="math/tex">10^{16}</script></span>과 같은 큰 숫자가 등장하게 되며, 이는 수치적인 불안정성을 초래할 수 있다. 이로 인해 계산 오차가 크게 발생할 가능성이 있다.</p>
 <ol>
 <li>
 <p>오류를 최소화할 수 있는 방법:</p>
@@ -1641,7 +1626,7 @@ u_{22} = 1 - \ell_{21} \times u_{12} = 1 - 10^{16} \times 1 = -10^{16} + 1 \appr
 <p>화하여 피벗 요소가 너무 작거나 너무 큰 값이 되지 않도록 조정할 수 있다.</p>
 <h3 id="16-lu">연습 문제 16: LU 분해를 활용한 시스템 안정성 분석</h3>
 <p>LU 분해를 사용하여 다음 시스템의 안정성을 분석하시오.</p>
-<p>주어진 시스템의 행렬 <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{A}</span><script type="math/tex">\mathbf{A}</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{A}</span><script type="math/tex">\mathbf{A}</script></span></script></span>는 다음과 같다.</p>
+<p>주어진 시스템의 행렬 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{A}</span><script type="math/tex">\mathbf{A}</script></span>는 다음과 같다.</p>
 <div class="arithmatex">
 <div class="MathJax_Preview">
 \mathbf{A} = \begin{pmatrix}
@@ -1664,7 +1649,7 @@ u_{22} = 1 - \ell_{21} \times u_{12} = 1 - 10^{16} \times 1 = -10^{16} + 1 \appr
 </ol>
 <h3 id="16">해답 16:</h3>
 <ol>
-<li><span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{A}</span><script type="math/tex">\mathbf{A}</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{A}</span><script type="math/tex">\mathbf{A}</script></span></script></span>의 LU 분해를 수행한다.</li>
+<li><span class="arithmatex"><span class="MathJax_Preview">\mathbf{A}</span><script type="math/tex">\mathbf{A}</script></span>의 LU 분해를 수행한다.</li>
 </ol>
 <div class="arithmatex">
 <div class="MathJax_Preview">
@@ -1710,8 +1695,8 @@ u_{22} = 1 - \ell_{21} \times u_{12} = 1 - 10^{16} \times 1 = -10^{16} + 1 \appr
 <ol>
 <li>시스템 안정성 분석:</li>
 </ol>
-<p>LU 분해를 통해 얻어진 상삼각 행렬 <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{U}</span><script type="math/tex">\mathbf{U}</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{U}</span><script type="math/tex">\mathbf{U}</script></span></script></span>의 대각 성분들을 통해 시스템의 안정성을 분석할 수 있다. 모든 대각 성분이 양수이므로, 이 시스템은 수치적으로 안정적이며 해를 구할 수 있다.</p>
-<p>그러나, <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{U}</span><script type="math/tex">\mathbf{U}</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{U}</span><script type="math/tex">\mathbf{U}</script></span></script></span>의 일부 요소들이 음수임을 통해 이 시스템이 강하게 안정적인 시스템은 아님을 알 수 있다. 하지만 전체적으로, 이 시스템은 안정적이다.</p>
+<p>LU 분해를 통해 얻어진 상삼각 행렬 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{U}</span><script type="math/tex">\mathbf{U}</script></span>의 대각 성분들을 통해 시스템의 안정성을 분석할 수 있다. 모든 대각 성분이 양수이므로, 이 시스템은 수치적으로 안정적이며 해를 구할 수 있다.</p>
+<p>그러나, <span class="arithmatex"><span class="MathJax_Preview">\mathbf{U}</span><script type="math/tex">\mathbf{U}</script></span>의 일부 요소들이 음수임을 통해 이 시스템이 강하게 안정적인 시스템은 아님을 알 수 있다. 하지만 전체적으로, 이 시스템은 안정적이다.</p>
 <p>LU 분해를 통해 시스템의 안정성을 판단할 수 있으며, 각 단계에서 발생하는 수치적 특성은 시스템의 안정성에 중요한 정보를 제공한다.</p>
 
   <br>

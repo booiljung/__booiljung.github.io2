@@ -123,7 +123,7 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
     \text{API 호출 후 데이터 저장} &amp; \text{캐시에 없을 때} 
 \end{cases}</p>
 <p>$$</p>
-<p>여기서 $$ \mathbf{x} $$는 요청 데이터로, 프롬프트와 파라미터를 포함한다.</p>
+<p>여기서 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{x}</span><script type="math/tex">\mathbf{x}</script></span>는 요청 데이터로, 프롬프트와 파라미터를 포함한다.</p>
 <h3 id="_3">캐싱 전략</h3>
 <p>캐싱 전략을 선택하는 것은 성능 최적화의 핵심이다. ChatGPT API를 사용할 때 적합한 몇 가지 캐싱 전략은 다음과 같다.</p>
 <h4 id="1-simple-caching">1. <strong>단순 캐싱(Simple Caching)</strong></h4>
@@ -137,7 +137,7 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 <p>$$</p>
 <p>\text{TTL}(\mathbf{x}) = t_{\text{현재 시간}} - t_{\text{저장 시간}}</p>
 <p>$$</p>
-<p>여기서 $$ t_{\text{현재 시간}} $$은 현재 시간이고, $$ t_{\text{저장 시간}} $$은 데이터가 캐시에 저장된 시간이다. $$ \text{TTL}(\mathbf{x}) $$이 설정된 시간보다 크다면 캐시가 만료된 것으로 간주하고, API 호출을 통해 데이터를 갱신한다.</p>
+<p>여기서 <span class="arithmatex"><span class="MathJax_Preview">t_{\text{현재 시간}}</span><script type="math/tex">t_{\text{현재 시간}}</script></span>은 현재 시간이고, <span class="arithmatex"><span class="MathJax_Preview">t_{\text{저장 시간}}</span><script type="math/tex">t_{\text{저장 시간}}</script></span>은 데이터가 캐시에 저장된 시간이다. <span class="arithmatex"><span class="MathJax_Preview">\text{TTL}(\mathbf{x})</span><script type="math/tex">\text{TTL}(\mathbf{x})</script></span>이 설정된 시간보다 크다면 캐시가 만료된 것으로 간주하고, API 호출을 통해 데이터를 갱신한다.</p>
 <ul>
 <li><strong>장점</strong>: 주기적으로 갱신이 필요한 데이터에 적합.</li>
 <li><strong>단점</strong>: TTL이 너무 짧으면 캐시 효과가 감소하고, 너무 길면 오래된 데이터를 반환할 수 있음.</li>
@@ -147,7 +147,7 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 <p>$$</p>
 <p>\text{Cache}<em>{\text{LRU}}( \mathbf{x} ) = \min</em>{\mathbf{x}<em>i \in \mathbf{C}} \left( t</em>{\text{사용 시간}}(\mathbf{x}_i) \right)</p>
 <p>$$</p>
-<p>여기서 $$ t_{\text{사용 시간}}(\mathbf{x}_i) $$는 항목 $$ \mathbf{x}_i $$가 마지막으로 사용된 시간을 나타낸다.</p>
+<p>여기서 <span class="arithmatex"><span class="MathJax_Preview">t_{\text{사용 시간}}(\mathbf{x}_i)</span><script type="math/tex">t_{\text{사용 시간}}(\mathbf{x}_i)</script></span>는 항목 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{x}_i</span><script type="math/tex">\mathbf{x}_i</script></span>가 마지막으로 사용된 시간을 나타낸다.</p>
 <ul>
 <li><strong>장점</strong>: 메모리 효율이 높고, 자주 사용되는 데이터를 우선적으로 보관.</li>
 <li><strong>단점</strong>: LRU 알고리즘 구현에 추가적인 메모리와 계산 비용이 발생.</li>
@@ -242,15 +242,15 @@ def get_chatgpt_response(prompt):
 <p>$$</p>
 <p>t_{\text{TTL}} \approx \frac{t_{\text{최신 데이터 필요 시간}}}{2}</p>
 <p>$$</p>
-<p>위 공식에서 $$ t_{\text{TTL}} $$은 최신 데이터가 필요할 때까지의 시간을 반영하여 설정할 수 있다.</p>
+<p>위 공식에서 <span class="arithmatex"><span class="MathJax_Preview">t_{\text{TTL}}</span><script type="math/tex">t_{\text{TTL}}</script></span>은 최신 데이터가 필요할 때까지의 시간을 반영하여 설정할 수 있다.</p>
 <h3 id="_9">캐싱 미스와 히트율 계산</h3>
 <p>캐시의 효과를 분석하기 위해 <strong>캐시 미스</strong>와 <strong>캐시 히트율</strong>을 계산할 수 있다. 캐시 히트율은 전체 요청 중 캐시에서 데이터를 반환한 비율을 나타낸다.</p>
 <p>$$</p>
 <p>\text{히트율} = \frac{\text{캐시 히트 수}}{\text{총 요청 수}} = \frac{H}{R}</p>
 <p>$$</p>
 <p>여기서:
-- $$ H $$는 캐시 히트 횟수
-- $$ R $$은 총 요청 횟수이다.</p>
+- <span class="arithmatex"><span class="MathJax_Preview">H</span><script type="math/tex">H</script></span>는 캐시 히트 횟수
+- <span class="arithmatex"><span class="MathJax_Preview">R</span><script type="math/tex">R</script></span>은 총 요청 횟수이다.</p>
 <p>히트율이 높을수록 캐시가 효과적으로 동작하고 있다는 것을 의미하며, 미스율이 높다면 캐싱 전략을 조정하거나 캐시 크기, TTL 등을 최적화해야 한다.</p>
 <h3 id="invalidation">캐시 무효화(Invalidation)</h3>
 <p>캐시 무효화는 데이터가 오래되어 더 이상 유효하지 않을 때 캐시를 갱신하는 메커니즘이다. 특히, 동적 데이터나 자주 변경되는 데이터의 경우 캐시 무효화 전략을 잘 설계해야 한다.</p>

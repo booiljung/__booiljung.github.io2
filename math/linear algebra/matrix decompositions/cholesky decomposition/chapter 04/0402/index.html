@@ -91,7 +91,7 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
     <h3 id="3x3">3x3 행렬의 예시</h3>
 <p>Sholesky 분해는 대칭 행렬에 대해 매우 유용한 분해 방식이다. 여기에서는 3x3 대칭 행렬을 예로 들어 Sholesky 분해를 어떻게 수행하는지 자세히 살펴보겠다.</p>
 <h4 id="_1">예제 행렬 설정</h4>
-<p>다음과 같은 3x3 대칭 행렬 <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{A}</span><script type="math/tex">\mathbf{A}</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{A}</span><script type="math/tex">\mathbf{A}</script></span></script></span>를 고려한다:</p>
+<p>다음과 같은 3x3 대칭 행렬 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{A}</span><script type="math/tex">\mathbf{A}</script></span>를 고려한다:</p>
 <div class="arithmatex">
 <div class="MathJax_Preview">
 \mathbf{A} = \begin{pmatrix}
@@ -108,12 +108,12 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 \end{pmatrix}
 </script>
 </div>
-<p>이제 이 행렬 <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{A}</span><script type="math/tex">\mathbf{A}</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{A}</span><script type="math/tex">\mathbf{A}</script></span></script></span>를 Cholesky 분해하여 <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{L}\mathbf{L}^\mathsf{T}</span><script type="math/tex">\mathbf{L}\mathbf{L}^\mathsf{T}</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{L}\mathbf{L}^\mathsf{T}</span><script type="math/tex">\mathbf{L}\mathbf{L}^\mathsf{T}</script></span></script></span>의 형태로 표현해 보겠다. 여기서 <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{L}</span><script type="math/tex">\mathbf{L}</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{L}</span><script type="math/tex">\mathbf{L}</script></span></script></span>은 아래 삼각 행렬이다.</p>
+<p>이제 이 행렬 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{A}</span><script type="math/tex">\mathbf{A}</script></span>를 Cholesky 분해하여 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{L}\mathbf{L}^\mathsf{T}</span><script type="math/tex">\mathbf{L}\mathbf{L}^\mathsf{T}</script></span>의 형태로 표현해 보겠다. 여기서 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{L}</span><script type="math/tex">\mathbf{L}</script></span>은 아래 삼각 행렬이다.</p>
 <h4 id="_2">분해 과정</h4>
 <ol>
 <li><strong>첫 번째 행과 열을 사용한 요소 계산:</strong></li>
 </ol>
-<p>먼저, <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">L_{11}</span><script type="math/tex">L_{11}</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">L_{11}</span><script type="math/tex">L_{11}</script></span></script></span> 값을 계산한다.</p>
+<p>먼저, <span class="arithmatex"><span class="MathJax_Preview">L_{11}</span><script type="math/tex">L_{11}</script></span> 값을 계산한다.</p>
 <div class="arithmatex">
 <div class="MathJax_Preview">
 L_{11}^2 = A_{11} \implies L_{11} = \sqrt{4} = 2
@@ -131,7 +131,7 @@ L_{11} = 2
 L_{11} = 2
 </script>
 </div>
-<p>다음으로, <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">L_{21}</span><script type="math/tex">L_{21}</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">L_{21}</span><script type="math/tex">L_{21}</script></span></script></span>과 <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">L_{31}</span><script type="math/tex">L_{31}</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">L_{31}</span><script type="math/tex">L_{31}</script></span></script></span> 값을 계산한다:</p>
+<p>다음으로, <span class="arithmatex"><span class="MathJax_Preview">L_{21}</span><script type="math/tex">L_{21}</script></span>과 <span class="arithmatex"><span class="MathJax_Preview">L_{31}</span><script type="math/tex">L_{31}</script></span> 값을 계산한다:</p>
 <div class="arithmatex">
 <div class="MathJax_Preview">
 L_{21} = \frac{A_{21}}{L_{11}} = \frac{12}{2} = 6
@@ -151,7 +151,7 @@ L_{31} = \frac{A_{31}}{L_{11}} = \frac{-16}{2} = -8
 <ol>
 <li><strong>두 번째 행과 열을 사용한 요소 계산:</strong></li>
 </ol>
-<p>다음으로, 두 번째 행에서 <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">L_{22}</span><script type="math/tex">L_{22}</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">L_{22}</span><script type="math/tex">L_{22}</script></span></script></span> 값을 계산한다:</p>
+<p>다음으로, 두 번째 행에서 <span class="arithmatex"><span class="MathJax_Preview">L_{22}</span><script type="math/tex">L_{22}</script></span> 값을 계산한다:</p>
 <div class="arithmatex">
 <div class="MathJax_Preview">
 L_{22}^2 = A_{22} - L_{21}^2 = 37 - 6^2 = 37 - 36 = 1 \implies L_{22} = \sqrt{1} = 1
@@ -169,7 +169,7 @@ L_{22} = 1
 L_{22} = 1
 </script>
 </div>
-<p>마지막으로, <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">L_{32}</span><script type="math/tex">L_{32}</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">L_{32}</span><script type="math/tex">L_{32}</script></span></script></span> 값을 계산한다:</p>
+<p>마지막으로, <span class="arithmatex"><span class="MathJax_Preview">L_{32}</span><script type="math/tex">L_{32}</script></span> 값을 계산한다:</p>
 <div class="arithmatex">
 <div class="MathJax_Preview">
 L_{32} = \frac{A_{32} - L_{31}L_{21}}{L_{22}} = \frac{-43 - (-8)(6)}{1} = \frac{-43 + 48}{1} = 5
@@ -181,7 +181,7 @@ L_{32} = \frac{A_{32} - L_{31}L_{21}}{L_{22}} = \frac{-43 - (-8)(6)}{1} = \frac{
 <ol>
 <li><strong>세 번째 행과 열을 사용한 요소 계산:</strong></li>
 </ol>
-<p>마지막으로, 세 번째 행에서 <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">L_{33}</span><script type="math/tex">L_{33}</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">L_{33}</span><script type="math/tex">L_{33}</script></span></script></span> 값을 계산한다:</p>
+<p>마지막으로, 세 번째 행에서 <span class="arithmatex"><span class="MathJax_Preview">L_{33}</span><script type="math/tex">L_{33}</script></span> 값을 계산한다:</p>
 <div class="arithmatex">
 <div class="MathJax_Preview">
 L_{33}^2 = A_{33} - L_{31}^2 - L_{32}^2 = 98 - (-8)^2 - 5^2 = 98 - 64 - 25 = 9 \implies L_{33} = \sqrt{9} = 3
@@ -200,7 +200,7 @@ L_{33} = 3
 </script>
 </div>
 <h4 id="_3">최종 행렬</h4>
-<p>이제 행렬 <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{L}</span><script type="math/tex">\mathbf{L}</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{L}</span><script type="math/tex">\mathbf{L}</script></span></script></span>의 모든 요소가 구해졌으므로, 최종적인 행렬 <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{L}</span><script type="math/tex">\mathbf{L}</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{L}</span><script type="math/tex">\mathbf{L}</script></span></script></span>은 다음과 같다:</p>
+<p>이제 행렬 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{L}</span><script type="math/tex">\mathbf{L}</script></span>의 모든 요소가 구해졌으므로, 최종적인 행렬 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{L}</span><script type="math/tex">\mathbf{L}</script></span>은 다음과 같다:</p>
 <div class="arithmatex">
 <div class="MathJax_Preview">
 \mathbf{L} = \begin{pmatrix}
@@ -217,9 +217,9 @@ L_{33} = 3
 \end{pmatrix}
 </script>
 </div>
-<p>그리고 <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{A}</span><script type="math/tex">\mathbf{A}</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{A}</span><script type="math/tex">\mathbf{A}</script></span></script></span>는 <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{L}\mathbf{L}^\mathsf{T}</span><script type="math/tex">\mathbf{L}\mathbf{L}^\mathsf{T}</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{L}\mathbf{L}^\mathsf{T}</span><script type="math/tex">\mathbf{L}\mathbf{L}^\mathsf{T}</script></span></script></span> 형태로 정확히 분해된다.</p>
+<p>그리고 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{A}</span><script type="math/tex">\mathbf{A}</script></span>는 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{L}\mathbf{L}^\mathsf{T}</span><script type="math/tex">\mathbf{L}\mathbf{L}^\mathsf{T}</script></span> 형태로 정확히 분해된다.</p>
 <h4 id="sholesky">Sholesky 분해의 검증</h4>
-<p>이제 얻은 <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{L}</span><script type="math/tex">\mathbf{L}</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{L}</span><script type="math/tex">\mathbf{L}</script></span></script></span> 행렬을 이용해 <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{A}</span><script type="math/tex">\mathbf{A}</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{A}</span><script type="math/tex">\mathbf{A}</script></span></script></span>이 정말로 <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{L}\mathbf{L}^\mathsf{T}</span><script type="math/tex">\mathbf{L}\mathbf{L}^\mathsf{T}</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{L}\mathbf{L}^\mathsf{T}</span><script type="math/tex">\mathbf{L}\mathbf{L}^\mathsf{T}</script></span></script></span>의 형태로 분해될 수 있는지 확인해보겠다:</p>
+<p>이제 얻은 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{L}</span><script type="math/tex">\mathbf{L}</script></span> 행렬을 이용해 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{A}</span><script type="math/tex">\mathbf{A}</script></span>이 정말로 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{L}\mathbf{L}^\mathsf{T}</span><script type="math/tex">\mathbf{L}\mathbf{L}^\mathsf{T}</script></span>의 형태로 분해될 수 있는지 확인해보겠다:</p>
 <div class="arithmatex">
 <div class="MathJax_Preview">
 \mathbf{L}^\mathsf{T} = \begin{pmatrix}
@@ -295,7 +295,7 @@ L_{33} = 3
 \end{pmatrix}
 </script>
 </div>
-<p>분명히 이것은 원래의 행렬 <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{A}</span><script type="math/tex">\mathbf{A}</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{A}</span><script type="math/tex">\mathbf{A}</script></span></script></span>와 일치한다. 따라서, <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{L}</span><script type="math/tex">\mathbf{L}</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{L}</span><script type="math/tex">\mathbf{L}</script></span></script></span> 행렬은 정확히 계산되었음을 알 수 있다.</p>
+<p>분명히 이것은 원래의 행렬 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{A}</span><script type="math/tex">\mathbf{A}</script></span>와 일치한다. 따라서, <span class="arithmatex"><span class="MathJax_Preview">\mathbf{L}</span><script type="math/tex">\mathbf{L}</script></span> 행렬은 정확히 계산되었음을 알 수 있다.</p>
 <p>이로써 Cholesky 분해는 성공적으로 수행되었다. 이 예제는 3x3 행렬을 사용했지만, 동일한 방법을 더 큰 대칭 행렬에 적용할 수 있다. 대칭 행렬에서 Cholesky 분해는 매우 효율적으로 이루어지며, 특히 선형 대수학에서 신뢰성 있는 수치 해법을 제공하는 데 중요한 도구이다.</p>
 
   <br>

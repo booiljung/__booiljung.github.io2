@@ -98,9 +98,9 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 
     <p>강체 시뮬레이션은 물리 엔진의 핵심 구성 요소 중 하나이다. 강체(rigid body)는 변형이 없는 이상적인 물체로, 외부 힘이나 토크가 가해져도 모양과 크기가 변하지 않는다고 가정한다. 강체의 특성은 이를 정의하고 시뮬레이션하는 데 중요한 역할을한다. 이 절에서는 강체의 주요 특성에 대해 다룬다.</p>
 <h3 id="_1">질량</h3>
-<p>강체의 질량은 그 무게와 밀도를 나타낸다. 질량은 스칼라 값으로, 물체의 크기와 형태를 감안하여 결정된다. 질량 <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">m</span><script type="math/tex">m</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">m</span><script type="math/tex">m</script></span></script></span>은 물체의 중심에 모든 질량이 집중되어 있다고 가정할 수 있는 질량 중심(center of mass)에 배치된다.</p>
+<p>강체의 질량은 그 무게와 밀도를 나타낸다. 질량은 스칼라 값으로, 물체의 크기와 형태를 감안하여 결정된다. 질량 <span class="arithmatex"><span class="MathJax_Preview">m</span><script type="math/tex">m</script></span>은 물체의 중심에 모든 질량이 집중되어 있다고 가정할 수 있는 질량 중심(center of mass)에 배치된다.</p>
 <h3 id="_2">질량 중심</h3>
-<p>질량 중심은 강체의 무게가 균형을 이루는 점이다. 질량 중심은 강체의 질량 분포에 따라 달라지며, 일반적으로 강체의 기하학적 중심과 일치한다. 질량 중심 <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{c}</span><script type="math/tex">\mathbf{c}</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{c}</span><script type="math/tex">\mathbf{c}</script></span></script></span> 위치는 벡터로 표현된다.</p>
+<p>질량 중심은 강체의 무게가 균형을 이루는 점이다. 질량 중심은 강체의 질량 분포에 따라 달라지며, 일반적으로 강체의 기하학적 중심과 일치한다. 질량 중심 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{c}</span><script type="math/tex">\mathbf{c}</script></span> 위치는 벡터로 표현된다.</p>
 <div class="arithmatex">
 <div class="MathJax_Preview">
 \mathbf{c} = \frac{1}{M} \sum_{i} m_{i} \mathbf{r}_{i}
@@ -109,9 +109,9 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 \mathbf{c} = \frac{1}{M} \sum_{i} m_{i} \mathbf{r}_{i}
 </script>
 </div>
-<p>여기서 <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">M</span><script type="math/tex">M</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">M</span><script type="math/tex">M</script></span></script></span>은 전체 질량, <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">m_{i}</span><script type="math/tex">m_{i}</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">m_{i}</span><script type="math/tex">m_{i}</script></span></script></span>는 개별 파티클의 질량, <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{r}_{i}</span><script type="math/tex">\mathbf{r}_{i}</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{r}_{i}</span><script type="math/tex">\mathbf{r}_{i}</script></span></script></span>는 각 파티클의 위치 벡터이다.</p>
+<p>여기서 <span class="arithmatex"><span class="MathJax_Preview">M</span><script type="math/tex">M</script></span>은 전체 질량, <span class="arithmatex"><span class="MathJax_Preview">m_{i}</span><script type="math/tex">m_{i}</script></span>는 개별 파티클의 질량, <span class="arithmatex"><span class="MathJax_Preview">\mathbf{r}_{i}</span><script type="math/tex">\mathbf{r}_{i}</script></span>는 각 파티클의 위치 벡터이다.</p>
 <h3 id="_3">관성 모멘트</h3>
-<p>관성 모멘트는 물체가 회전하는 데 저항하는 정도를 나타내는 물리량이다. 강체의 회전 운동을 기술하는 데 중요한 역할을 한다. 관성 모멘트는 일반적으로 3x3 대칭 행렬 <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{I}</span><script type="math/tex">\mathbf{I}</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{I}</span><script type="math/tex">\mathbf{I}</script></span></script></span>로 표현된다.</p>
+<p>관성 모멘트는 물체가 회전하는 데 저항하는 정도를 나타내는 물리량이다. 강체의 회전 운동을 기술하는 데 중요한 역할을 한다. 관성 모멘트는 일반적으로 3x3 대칭 행렬 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{I}</span><script type="math/tex">\mathbf{I}</script></span>로 표현된다.</p>
 <div class="arithmatex">
 <div class="MathJax_Preview">
 \mathbf{I} = \begin{bmatrix} 
@@ -128,7 +128,7 @@ I_{xz} & I_{yz} & I_{zz}
 \end{bmatrix}
 </script>
 </div>
-<p>여기서 <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">I_{xx}</span><script type="math/tex">I_{xx}</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">I_{xx}</span><script type="math/tex">I_{xx}</script></span></script></span>, <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">I_{yy}</span><script type="math/tex">I_{yy}</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">I_{yy}</span><script type="math/tex">I_{yy}</script></span></script></span>, <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">I_{zz}</span><script type="math/tex">I_{zz}</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">I_{zz}</span><script type="math/tex">I_{zz}</script></span></script></span>는 관성 모멘트의 주요 대각선 성분이며, <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">I_{xy}</span><script type="math/tex">I_{xy}</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">I_{xy}</span><script type="math/tex">I_{xy}</script></span></script></span>, <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">I_{xz}</span><script type="math/tex">I_{xz}</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">I_{xz}</span><script type="math/tex">I_{xz}</script></span></script></span>, <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">I_{yz}</span><script type="math/tex">I_{yz}</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">I_{yz}</span><script type="math/tex">I_{yz}</script></span></script></span>는 서로 다른 축간의 관성 모멘트를 나타낸다.</p>
+<p>여기서 <span class="arithmatex"><span class="MathJax_Preview">I_{xx}</span><script type="math/tex">I_{xx}</script></span>, <span class="arithmatex"><span class="MathJax_Preview">I_{yy}</span><script type="math/tex">I_{yy}</script></span>, <span class="arithmatex"><span class="MathJax_Preview">I_{zz}</span><script type="math/tex">I_{zz}</script></span>는 관성 모멘트의 주요 대각선 성분이며, <span class="arithmatex"><span class="MathJax_Preview">I_{xy}</span><script type="math/tex">I_{xy}</script></span>, <span class="arithmatex"><span class="MathJax_Preview">I_{xz}</span><script type="math/tex">I_{xz}</script></span>, <span class="arithmatex"><span class="MathJax_Preview">I_{yz}</span><script type="math/tex">I_{yz}</script></span>는 서로 다른 축간의 관성 모멘트를 나타낸다.</p>
 <h3 id="_4">관성 모멘트 텐서의 변환</h3>
 <p>관성 모멘트 텐서는 강체가 회전할 때 변환된다. 고정된 공간에서의 관성 모멘트 텐서를 계산하려면 물체의 현재 회전 상태를 반영해야 한다.</p>
 <div class="arithmatex">
@@ -139,9 +139,9 @@ I_{xz} & I_{yz} & I_{zz}
 \mathbf{I}^\prime = \mathbf{R} \mathbf{I} \mathbf{R}^T
 </script>
 </div>
-<p>여기서 <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{I}^\prime</span><script type="math/tex">\mathbf{I}^\prime</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{I}^\prime</span><script type="math/tex">\mathbf{I}^\prime</script></span></script></span>은 회전 후의 관성 모멘트 텐서, <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{R}</span><script type="math/tex">\mathbf{R}</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{R}</span><script type="math/tex">\mathbf{R}</script></span></script></span>은 회전 행렬이다.</p>
+<p>여기서 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{I}^\prime</span><script type="math/tex">\mathbf{I}^\prime</script></span>은 회전 후의 관성 모멘트 텐서, <span class="arithmatex"><span class="MathJax_Preview">\mathbf{R}</span><script type="math/tex">\mathbf{R}</script></span>은 회전 행렬이다.</p>
 <h3 id="_5">각속도</h3>
-<p>각속도 <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{\omega}</span><script type="math/tex">\mathbf{\omega}</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{\omega}</span><script type="math/tex">\mathbf{\omega}</script></span></script></span>는 강체의 회전 속도를 나타내는 벡터이다. 각속도는 강체의 특정 축을 기준으로 하는 회전 속도를 기술한다. 각속도와 관성 모멘트 텐서를 통해 각운동량 <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{L}</span><script type="math/tex">\mathbf{L}</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{L}</span><script type="math/tex">\mathbf{L}</script></span></script></span>을 계산할 수 있다.</p>
+<p>각속도 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{\omega}</span><script type="math/tex">\mathbf{\omega}</script></span>는 강체의 회전 속도를 나타내는 벡터이다. 각속도는 강체의 특정 축을 기준으로 하는 회전 속도를 기술한다. 각속도와 관성 모멘트 텐서를 통해 각운동량 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{L}</span><script type="math/tex">\mathbf{L}</script></span>을 계산할 수 있다.</p>
 <div class="arithmatex">
 <div class="MathJax_Preview">
 \mathbf{L} = \mathbf{I} \mathbf{\omega}
@@ -151,7 +151,7 @@ I_{xz} & I_{yz} & I_{zz}
 </script>
 </div>
 <h3 id="_6">각가속도</h3>
-<p>각가속도 <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{\alpha}</span><script type="math/tex">\mathbf{\alpha}</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{\alpha}</span><script type="math/tex">\mathbf{\alpha}</script></span></script></span>는 강체의 회전 운동이 시간이 지남에 따라 어떻게 변하는지를 나타내는 물리량이다. 각가속도는 각속도의 시간에 따른 미분으로 얻어진다.</p>
+<p>각가속도 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{\alpha}</span><script type="math/tex">\mathbf{\alpha}</script></span>는 강체의 회전 운동이 시간이 지남에 따라 어떻게 변하는지를 나타내는 물리량이다. 각가속도는 각속도의 시간에 따른 미분으로 얻어진다.</p>
 <div class="arithmatex">
 <div class="MathJax_Preview">
 \mathbf{\alpha} = \frac{d\mathbf{\omega}}{dt}
@@ -161,7 +161,7 @@ I_{xz} & I_{yz} & I_{zz}
 </script>
 </div>
 <h3 id="_7">외부 힘과 토크</h3>
-<p>강체에 외부 힘 <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{F}</span><script type="math/tex">\mathbf{F}</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{F}</span><script type="math/tex">\mathbf{F}</script></span></script></span>와 토크 <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{\tau}</span><script type="math/tex">\mathbf{\tau}</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{\tau}</span><script type="math/tex">\mathbf{\tau}</script></span></script></span>가 가해지면 강체의 선운동과 회전운동이 변화한다. 외부 힘은 강체의 질량 중심에 작용하며 선운동을 생성하고, 토크는 강체의 회전 운동을 생성한다.</p>
+<p>강체에 외부 힘 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{F}</span><script type="math/tex">\mathbf{F}</script></span>와 토크 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{\tau}</span><script type="math/tex">\mathbf{\tau}</script></span>가 가해지면 강체의 선운동과 회전운동이 변화한다. 외부 힘은 강체의 질량 중심에 작용하며 선운동을 생성하고, 토크는 강체의 회전 운동을 생성한다.</p>
 <div class="arithmatex">
 <div class="MathJax_Preview">
 \mathbf{F} = m \mathbf{a}
@@ -178,7 +178,7 @@ I_{xz} & I_{yz} & I_{zz}
 \mathbf{\tau} = \mathbf{I} \mathbf{\alpha}
 </script>
 </div>
-<p>여기서 <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{a}</span><script type="math/tex">\mathbf{a}</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{a}</span><script type="math/tex">\mathbf{a}</script></span></script></span>은 가속도이다.</p>
+<p>여기서 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{a}</span><script type="math/tex">\mathbf{a}</script></span>은 가속도이다.</p>
 
   <br>
     

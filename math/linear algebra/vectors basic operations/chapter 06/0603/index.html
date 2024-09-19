@@ -102,8 +102,8 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 
     <p>벡터의 정규화는 주어진 벡터의 방향은 유지하면서 크기(길이)를 1로 만드는 과정이다. 이를 통해 우리는 단위 벡터를 얻을 수 있다.</p>
 <h3 id="_1">벡터의 크기</h3>
-<p>임의의 벡터 <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{v}</span><script type="math/tex">\mathbf{v}</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{v}</span><script type="math/tex">\mathbf{v}</script></span></script></span>가 주어졌다고 가정하겠다. 이 벡터는 여러 성분으로 이루어질 수 있다. 예를 들어, 2차원 벡터 <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{v} = [v_x, v_y]</span><script type="math/tex">\mathbf{v} = [v_x, v_y]</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{v} = [v_x, v_y]</span><script type="math/tex">\mathbf{v} = [v_x, v_y]</script></span></script></span>와 3차원 벡터 <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{v} = [v_x, v_y, v_z]</span><script type="math/tex">\mathbf{v} = [v_x, v_y, v_z]</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{v} = [v_x, v_y, v_z]</span><script type="math/tex">\mathbf{v} = [v_x, v_y, v_z]</script></span></script></span>가 있다.</p>
-<p>벡터의 크기(또는 길이)는 각 성분의 제곱의 합의 제곱근으로 나타낼 수 있다. 수학적으로 벡터 <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{v} = [v_1, v_2, ..., v_n]</span><script type="math/tex">\mathbf{v} = [v_1, v_2, ..., v_n]</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{v} = [v_1, v_2, ..., v_n]</span><script type="math/tex">\mathbf{v} = [v_1, v_2, ..., v_n]</script></span></script></span>의 크기 <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">\|\mathbf{v}\|</span><script type="math/tex">\|\mathbf{v}\|</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">\|\mathbf{v}\|</span><script type="math/tex">\|\mathbf{v}\|</script></span></script></span>는 다음과 같이 정의된다:</p>
+<p>임의의 벡터 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{v}</span><script type="math/tex">\mathbf{v}</script></span>가 주어졌다고 가정하겠다. 이 벡터는 여러 성분으로 이루어질 수 있다. 예를 들어, 2차원 벡터 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{v} = [v_x, v_y]</span><script type="math/tex">\mathbf{v} = [v_x, v_y]</script></span>와 3차원 벡터 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{v} = [v_x, v_y, v_z]</span><script type="math/tex">\mathbf{v} = [v_x, v_y, v_z]</script></span>가 있다.</p>
+<p>벡터의 크기(또는 길이)는 각 성분의 제곱의 합의 제곱근으로 나타낼 수 있다. 수학적으로 벡터 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{v} = [v_1, v_2, ..., v_n]</span><script type="math/tex">\mathbf{v} = [v_1, v_2, ..., v_n]</script></span>의 크기 <span class="arithmatex"><span class="MathJax_Preview">\|\mathbf{v}\|</span><script type="math/tex">\|\mathbf{v}\|</script></span>는 다음과 같이 정의된다:</p>
 <div class="arithmatex">
 <div class="MathJax_Preview">
 \|\mathbf{v}\| = \sqrt{v_1^2 + v_2^2 + ... + v_n^2}
@@ -113,7 +113,7 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 </script>
 </div>
 <h3 id="_2">벡터의 정규화 과정</h3>
-<p>벡터 <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{v}</span><script type="math/tex">\mathbf{v}</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{v}</span><script type="math/tex">\mathbf{v}</script></span></script></span>를 정규화하는 과정은 <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{v}</span><script type="math/tex">\mathbf{v}</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{v}</span><script type="math/tex">\mathbf{v}</script></span></script></span>의 각 성분을 <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">\|\mathbf{v}\|</span><script type="math/tex">\|\mathbf{v}\|</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">\|\mathbf{v}\|</span><script type="math/tex">\|\mathbf{v}\|</script></span></script></span>로 나누는 것으로 이루어진다. 이를 통해 우리는 크기가 1인 벡터, 즉 단위 벡터 <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{u}</span><script type="math/tex">\mathbf{u}</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{u}</span><script type="math/tex">\mathbf{u}</script></span></script></span>를 얻게 된다:</p>
+<p>벡터 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{v}</span><script type="math/tex">\mathbf{v}</script></span>를 정규화하는 과정은 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{v}</span><script type="math/tex">\mathbf{v}</script></span>의 각 성분을 <span class="arithmatex"><span class="MathJax_Preview">\|\mathbf{v}\|</span><script type="math/tex">\|\mathbf{v}\|</script></span>로 나누는 것으로 이루어진다. 이를 통해 우리는 크기가 1인 벡터, 즉 단위 벡터 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{u}</span><script type="math/tex">\mathbf{u}</script></span>를 얻게 된다:</p>
 <div class="arithmatex">
 <div class="MathJax_Preview">
 \mathbf{u} = \frac{\mathbf{v}}{\|\mathbf{v}\|}
@@ -122,7 +122,7 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 \mathbf{u} = \frac{\mathbf{v}}{\|\mathbf{v}\|}
 </script>
 </div>
-<p>좀 더 구체적으로,  <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{v} = [v_x, v_y]</span><script type="math/tex">\mathbf{v} = [v_x, v_y]</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{v} = [v_x, v_y]</span><script type="math/tex">\mathbf{v} = [v_x, v_y]</script></span></script></span> 일 경우 단위 벡터 <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{u}</span><script type="math/tex">\mathbf{u}</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{u}</span><script type="math/tex">\mathbf{u}</script></span></script></span>는 다음과 같이 계산된다:</p>
+<p>좀 더 구체적으로,  <span class="arithmatex"><span class="MathJax_Preview">\mathbf{v} = [v_x, v_y]</span><script type="math/tex">\mathbf{v} = [v_x, v_y]</script></span> 일 경우 단위 벡터 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{u}</span><script type="math/tex">\mathbf{u}</script></span>는 다음과 같이 계산된다:</p>
 <div class="arithmatex">
 <div class="MathJax_Preview">
 \mathbf{u} = \left[\frac{v_x}{\|\mathbf{v}\|}, \frac{v_y}{\|\mathbf{v}\|}\right]
@@ -131,7 +131,7 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 \mathbf{u} = \left[\frac{v_x}{\|\mathbf{v}\|}, \frac{v_y}{\|\mathbf{v}\|}\right]
 </script>
 </div>
-<p>3차원 벡터 <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{v} = [v_x, v_y, v_z]</span><script type="math/tex">\mathbf{v} = [v_x, v_y, v_z]</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{v} = [v_x, v_y, v_z]</span><script type="math/tex">\mathbf{v} = [v_x, v_y, v_z]</script></span></script></span>의 경우 단위 벡터 <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{u}</span><script type="math/tex">\mathbf{u}</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{u}</span><script type="math/tex">\mathbf{u}</script></span></script></span>는 다음과 같이 계산된다:</p>
+<p>3차원 벡터 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{v} = [v_x, v_y, v_z]</span><script type="math/tex">\mathbf{v} = [v_x, v_y, v_z]</script></span>의 경우 단위 벡터 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{u}</span><script type="math/tex">\mathbf{u}</script></span>는 다음과 같이 계산된다:</p>
 <div class="arithmatex">
 <div class="MathJax_Preview">
 \mathbf{u} = \left[\frac{v_x}{\|\mathbf{v}\|}, \frac{v_y}{\|\mathbf{v}\|}, \frac{v_z}{\|\mathbf{v}\|}\right]
@@ -143,9 +143,9 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 <h3 id="_3">예제</h3>
 <p>다음은 벡터를 정규화하는 과정을 실제로 수행해보는 예제이다.</p>
 <h4 id="2">2차원 벡터 예제</h4>
-<p>주어진 벡터 <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{v} = [3, 4]</span><script type="math/tex">\mathbf{v} = [3, 4]</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{v} = [3, 4]</span><script type="math/tex">\mathbf{v} = [3, 4]</script></span></script></span>를 정규화해보겠다.</p>
+<p>주어진 벡터 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{v} = [3, 4]</span><script type="math/tex">\mathbf{v} = [3, 4]</script></span>를 정규화해보겠다.</p>
 <ol>
-<li>벡터 <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{v}</span><script type="math/tex">\mathbf{v}</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{v}</span><script type="math/tex">\mathbf{v}</script></span></script></span>의 크기를 구한다:</li>
+<li>벡터 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{v}</span><script type="math/tex">\mathbf{v}</script></span>의 크기를 구한다:</li>
 </ol>
 <p>$$
    |\mathbf{v}| = \sqrt{3^2 + 4^2} = \sqrt{9 + 16} = \sqrt{25} = 5</p>
@@ -157,9 +157,9 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
    \mathbf{u} = \left[\frac{3}{5}, \frac{4}{5}\right] = [0.6, 0.8]</p>
 <p>$$</p>
 <h4 id="3">3차원 벡터 예제</h4>
-<p>주어진 벡터 <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{v} = [1, 2, 2]</span><script type="math/tex">\mathbf{v} = [1, 2, 2]</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{v} = [1, 2, 2]</span><script type="math/tex">\mathbf{v} = [1, 2, 2]</script></span></script></span>를 정규화해보겠다.</p>
+<p>주어진 벡터 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{v} = [1, 2, 2]</span><script type="math/tex">\mathbf{v} = [1, 2, 2]</script></span>를 정규화해보겠다.</p>
 <ol>
-<li>벡터 <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{v}</span><script type="math/tex">\mathbf{v}</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{v}</span><script type="math/tex">\mathbf{v}</script></span></script></span>의 크기를 구한다:</li>
+<li>벡터 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{v}</span><script type="math/tex">\mathbf{v}</script></span>의 크기를 구한다:</li>
 </ol>
 <p>$$
    |\mathbf{v}| = \sqrt{1^2 + 2^2 + 2^2} = \sqrt{1 + 4 + 4} = \sqrt{9} = 3</p>
@@ -181,7 +181,7 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 <h3 id="_8">벡터 정규화의 주의사항</h3>
 <p>벡터 정규화가 유용하지만 몇 가지 주의사항도 있다. 특히 벡터의 크기가 0인 경우 정규화할 수 없다는 점을 유의해야 한다.</p>
 <h4 id="0">벡터의 크기가 0인 경우</h4>
-<p>만약 벡터 <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{v}</span><script type="math/tex">\mathbf{v}</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{v}</span><script type="math/tex">\mathbf{v}</script></span></script></span>의 크기가 0이라면, 그 벡터는 모든 성분이 0이라는 의미이다. 이 경우에는 벡터를 정규화할 수 없다. 수학적으로 <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">\frac{0}{0}</span><script type="math/tex">\frac{0}{0}</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">\frac{0}{0}</span><script type="math/tex">\frac{0}{0}</script></span></script></span>은 정의되지 않기 때문이다. 따라서 정규화 과정에서는 우선 벡터의 크기가 0인지 확인하는 것이 중요하다.</p>
+<p>만약 벡터 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{v}</span><script type="math/tex">\mathbf{v}</script></span>의 크기가 0이라면, 그 벡터는 모든 성분이 0이라는 의미이다. 이 경우에는 벡터를 정규화할 수 없다. 수학적으로 <span class="arithmatex"><span class="MathJax_Preview">\frac{0}{0}</span><script type="math/tex">\frac{0}{0}</script></span>은 정의되지 않기 때문이다. 따라서 정규화 과정에서는 우선 벡터의 크기가 0인지 확인하는 것이 중요하다.</p>
 <h3 id="python">구현 예제 (Python 코드)</h3>
 <p>다음은 벡터를 정규화하는 파이썬 코드 예제이다.</p>
 <pre><code class="language-python">import numpy as np

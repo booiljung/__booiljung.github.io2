@@ -115,7 +115,7 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 <li><strong>병렬 Pivoting</strong>: Pivoting 전략을 병렬화하여 수치적 안정성을 유지하면서도 병렬 처리의 효율성을 극대화한다.</li>
 </ol>
 <h3 id="_2">행렬 블록 분해</h3>
-<p>행렬 블록 분해에서는 큰 행렬을 여러 작은 블록으로 나누고, 각 블록을 독립적으로 LU 분해한다. 예를 들어, $$ \mathbf{A} $$ 행렬을 다음과 같이 나눌 수 있다:</p>
+<p>행렬 블록 분해에서는 큰 행렬을 여러 작은 블록으로 나누고, 각 블록을 독립적으로 LU 분해한다. 예를 들어, <span class="arithmatex"><span class="MathJax_Preview">\mathbf{A}</span><script type="math/tex">\mathbf{A}</script></span> 행렬을 다음과 같이 나눌 수 있다:</p>
 <div class="arithmatex">
 <div class="MathJax_Preview">
 \mathbf{A} = \begin{pmatrix}
@@ -130,9 +130,9 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 \end{pmatrix}
 </script>
 </div>
-<p>이 때, 각 블록 $$ \mathbf{A}_{ij} $$는 병렬적으로 LU 분해될 수 있다. 이 방법은 행렬의 크기가 클수록 효과적이며, 각 블록이 서로 독립적인 계산을 할 수 있어 병렬화의 이점을 극대화할 수 있다.</p>
+<p>이 때, 각 블록 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{A}_{ij}</span><script type="math/tex">\mathbf{A}_{ij}</script></span>는 병렬적으로 LU 분해될 수 있다. 이 방법은 행렬의 크기가 클수록 효과적이며, 각 블록이 서로 독립적인 계산을 할 수 있어 병렬화의 이점을 극대화할 수 있다.</p>
 <h3 id="wavefront">Wavefront 병렬화</h3>
-<p>Wavefront 병렬화는 행렬 요소 간의 종속성을 고려하여 병렬화 가능한 영역을 최대한 활용하는 방법이다. 예를 들어, $$ \mathbf{A} $$의 $$ (i,j) $$ 위치의 요소를 계산할 때, $$ i $$와 $$ j $$의 이전 행과 열의 계산이 필요하다. 이러한 종속성을 분석하여 최대한의 병렬 작업을 수행할 수 있도록 계산의 순서를 재배치한다.</p>
+<p>Wavefront 병렬화는 행렬 요소 간의 종속성을 고려하여 병렬화 가능한 영역을 최대한 활용하는 방법이다. 예를 들어, <span class="arithmatex"><span class="MathJax_Preview">\mathbf{A}</span><script type="math/tex">\mathbf{A}</script></span>의 <span class="arithmatex"><span class="MathJax_Preview">(i,j)</span><script type="math/tex">(i,j)</script></span> 위치의 요소를 계산할 때, <span class="arithmatex"><span class="MathJax_Preview">i</span><script type="math/tex">i</script></span>와 <span class="arithmatex"><span class="MathJax_Preview">j</span><script type="math/tex">j</script></span>의 이전 행과 열의 계산이 필요하다. 이러한 종속성을 분석하여 최대한의 병렬 작업을 수행할 수 있도록 계산의 순서를 재배치한다.</p>
 <p>Wavefront 병렬화는 행렬의 특정 영역에서 병렬 계산을 집중적으로 수행할 수 있도록 하여 전체 분해 과정을 효율적으로 만든다.</p>
 <h3 id="pivoting">병렬 Pivoting</h3>
 <p>LU 분해에서의 Pivoting은 병렬화의 중요한 도전 과제 중 하나이다. Partial Pivoting 또는 Complete Pivoting을 사용하면 수치적 안정성이 향상되지만, 이는 병렬 처리 시 병목 현상을 유발할 수 있다.</p>

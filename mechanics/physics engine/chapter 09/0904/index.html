@@ -125,17 +125,17 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 </script>
 </div>
 <p>여기서:
-- <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{u}</span><script type="math/tex">\mathbf{u}</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{u}</span><script type="math/tex">\mathbf{u}</script></span></script></span>: 유체의 속도 벡터
-- <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">t</span><script type="math/tex">t</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">t</span><script type="math/tex">t</script></span></script></span>: 시간
-- <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">\rho</span><script type="math/tex">\rho</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">\rho</span><script type="math/tex">\rho</script></span></script></span>: 유체의 밀도
-- <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">p</span><script type="math/tex">p</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">p</span><script type="math/tex">p</script></span></script></span>: 압력
-- <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">\nu</span><script type="math/tex">\nu</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">\nu</span><script type="math/tex">\nu</script></span></script></span>: 점성 계수
-- <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{f}</span><script type="math/tex">\mathbf{f}</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{f}</span><script type="math/tex">\mathbf{f}</script></span></script></span>: 외부 힘</p>
+- <span class="arithmatex"><span class="MathJax_Preview">\mathbf{u}</span><script type="math/tex">\mathbf{u}</script></span>: 유체의 속도 벡터
+- <span class="arithmatex"><span class="MathJax_Preview">t</span><script type="math/tex">t</script></span>: 시간
+- <span class="arithmatex"><span class="MathJax_Preview">\rho</span><script type="math/tex">\rho</script></span>: 유체의 밀도
+- <span class="arithmatex"><span class="MathJax_Preview">p</span><script type="math/tex">p</script></span>: 압력
+- <span class="arithmatex"><span class="MathJax_Preview">\nu</span><script type="math/tex">\nu</script></span>: 점성 계수
+- <span class="arithmatex"><span class="MathJax_Preview">\mathbf{f}</span><script type="math/tex">\mathbf{f}</script></span>: 외부 힘</p>
 <p>이 방정식은 유체가 시간에 따라 어떻게 움직이는지를 기술한다.</p>
 <h3 id="_2">공간 이산화</h3>
 <p>격자 기반 유체 시뮬레이션은 유체 공간을 이산 격자로 나누어 숫자 계산을 용이하게 한다. 격자를 생성할 때는 공간을 작은 셀로 나누며, 각 셀은 유체의 물리적 특성을 가진 작은 박스로 상정된다.</p>
 <h3 id="_3">시간 이산화</h3>
-<p>유체의 움직임을 시뮬레이션하기 위해 시간도 이산화한다. 이는 시간을 작은 시간 간격 <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">\Delta t</span><script type="math/tex">\Delta t</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">\Delta t</span><script type="math/tex">\Delta t</script></span></script></span>로 나누고, 각 시간 간격 동안 유체의 변화를 계산함으로써 이루어진다. 시간 이산화는 다음과 같이 나타낼 수 있다:</p>
+<p>유체의 움직임을 시뮬레이션하기 위해 시간도 이산화한다. 이는 시간을 작은 시간 간격 <span class="arithmatex"><span class="MathJax_Preview">\Delta t</span><script type="math/tex">\Delta t</script></span>로 나누고, 각 시간 간격 동안 유체의 변화를 계산함으로써 이루어진다. 시간 이산화는 다음과 같이 나타낼 수 있다:</p>
 <div class="arithmatex">
 <div class="MathJax_Preview">
 \mathbf{u}^{n+1} = \mathbf{u}^n + \Delta t \cdot \left( -(\mathbf{u}^n \cdot \nabla) \mathbf{u}^n - \frac{1}{\rho}\nabla p^n + \nu \nabla^2 \mathbf{u}^n + \mathbf{f}^n \right)
@@ -144,7 +144,7 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 \mathbf{u}^{n+1} = \mathbf{u}^n + \Delta t \cdot \left( -(\mathbf{u}^n \cdot \nabla) \mathbf{u}^n - \frac{1}{\rho}\nabla p^n + \nu \nabla^2 \mathbf{u}^n + \mathbf{f}^n \right)
 </script>
 </div>
-<p>여기서 <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{u}^n</span><script type="math/tex">\mathbf{u}^n</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{u}^n</span><script type="math/tex">\mathbf{u}^n</script></span></script></span>은 시간 <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">n \Delta t</span><script type="math/tex">n \Delta t</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">n \Delta t</span><script type="math/tex">n \Delta t</script></span></script></span>에서의 속도이다.</p>
+<p>여기서 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{u}^n</span><script type="math/tex">\mathbf{u}^n</script></span>은 시간 <span class="arithmatex"><span class="MathJax_Preview">n \Delta t</span><script type="math/tex">n \Delta t</script></span>에서의 속도이다.</p>
 <h3 id="_4">경계 조건</h3>
 <p>격자 기반 유체 시뮬레이션에서는 경계 조건도 중요하다. 경계 조건은 유체가 격자의 가장자리에서 어떻게 행동해야 하는지를 결정한다. 일반적인 경계 조건에는 다음이 포함된다:
 1. <strong>디리클레 경계 조건</strong>: 고정된 값을 가지는 경계 조건
@@ -213,7 +213,7 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 \frac{\partial \phi}{\partial t} + (\mathbf{u} \cdot \nabla) \phi = 0
 </script>
 </div>
-<p>여기서 <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">\phi</span><script type="math/tex">\phi</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">\phi</span><script type="math/tex">\phi</script></span></script></span>는 유체 내의 어떤 물질의 농도 또는 다른 특성을 나타낸다. 아드벡션 방정식을 푸는 데 사용되는 알고리즘에는 Semi-Lagrangian 방법 등이 포함된다.</p>
+<p>여기서 <span class="arithmatex"><span class="MathJax_Preview">\phi</span><script type="math/tex">\phi</script></span>는 유체 내의 어떤 물질의 농도 또는 다른 특성을 나타낸다. 아드벡션 방정식을 푸는 데 사용되는 알고리즘에는 Semi-Lagrangian 방법 등이 포함된다.</p>
 <h3 id="_11">보존 법칙</h3>
 <p>유체 시뮬레이션에서는 질량, 운동량, 에너지 등의 보존 법칙이 중요하다. 보존 법칙을 올바르게 구현하는 것은 시뮬레이션의 정확도와 안정성을 보장하는 데 필수적이다.</p>
 <h3 id="_12">응용 분야</h3>

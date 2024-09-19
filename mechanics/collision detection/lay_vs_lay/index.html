@@ -92,24 +92,24 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 <h3 id="_1">선분 충돌 검사 과정</h3>
 <h4 id="1">1. 선분 정의</h4>
 <p>두 개의 선분을 다음과 같이 정의한다:
-- 첫 번째 선분 <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">AB</span><script type="math/tex">AB</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">AB</span><script type="math/tex">AB</script></span></script></span>: 점 <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">A(x_1, y_1)</span><script type="math/tex">A(x_1, y_1)</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">A(x_1, y_1)</span><script type="math/tex">A(x_1, y_1)</script></span></script></span>와 점 <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">B(x_2, y_2)</span><script type="math/tex">B(x_2, y_2)</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">B(x_2, y_2)</span><script type="math/tex">B(x_2, y_2)</script></span></script></span>를 연결한 선분.
-- 두 번째 선분 <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">CD</span><script type="math/tex">CD</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">CD</span><script type="math/tex">CD</script></span></script></span>: 점 <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">C(x_3, y_3)</span><script type="math/tex">C(x_3, y_3)</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">C(x_3, y_3)</span><script type="math/tex">C(x_3, y_3)</script></span></script></span>와 점 <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">D(x_4, y_4)</span><script type="math/tex">D(x_4, y_4)</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">D(x_4, y_4)</span><script type="math/tex">D(x_4, y_4)</script></span></script></span>를 연결한 선분.</p>
+- 첫 번째 선분 <span class="arithmatex"><span class="MathJax_Preview">AB</span><script type="math/tex">AB</script></span>: 점 <span class="arithmatex"><span class="MathJax_Preview">A(x_1, y_1)</span><script type="math/tex">A(x_1, y_1)</script></span>와 점 <span class="arithmatex"><span class="MathJax_Preview">B(x_2, y_2)</span><script type="math/tex">B(x_2, y_2)</script></span>를 연결한 선분.
+- 두 번째 선분 <span class="arithmatex"><span class="MathJax_Preview">CD</span><script type="math/tex">CD</script></span>: 점 <span class="arithmatex"><span class="MathJax_Preview">C(x_3, y_3)</span><script type="math/tex">C(x_3, y_3)</script></span>와 점 <span class="arithmatex"><span class="MathJax_Preview">D(x_4, y_4)</span><script type="math/tex">D(x_4, y_4)</script></span>를 연결한 선분.</p>
 <h4 id="2">2. 벡터 계산</h4>
 <p>각 선분의 벡터는 다음과 같이 계산된다:
-- $$ \overrightarrow{AB} = (x_2 - x_1, y_2 - y_1) $$
-- $$ \overrightarrow{CD} = (x_4 - x_3, y_4 - y_3) $$</p>
+- <span class="arithmatex"><span class="MathJax_Preview">\overrightarrow{AB} = (x_2 - x_1, y_2 - y_1)</span><script type="math/tex">\overrightarrow{AB} = (x_2 - x_1, y_2 - y_1)</script></span>
+- <span class="arithmatex"><span class="MathJax_Preview">\overrightarrow{CD} = (x_4 - x_3, y_4 - y_3)</span><script type="math/tex">\overrightarrow{CD} = (x_4 - x_3, y_4 - y_3)</script></span></p>
 <h4 id="3">3. 교차 여부 확인</h4>
 <p>선분이 교차하는지 확인하기 위해 <strong>외적(Cross Product)</strong> 을 사용한다. 외적을 통해 한 선분이 다른 선분의 양쪽에 있는지를 확인할 수 있다. 이를 위해 다음 절차를 따른다:</p>
 <h5 id="31">3.1. 외적 계산</h5>
 <p>두 선분의 시작점과 끝점이 서로 반대쪽에 있는지 확인하기 위해 네 개의 외적을 계산한다:
-- $$ \text{cross}(A, B, C) = (x_2 - x_1)(y_3 - y_1) - (y_2 - y_1)(x_3 - x_1) $$
-- $$ \text{cross}(A, B, D) = (x_2 - x_1)(y_4 - y_1) - (y_2 - y_1)(x_4 - x_1) $$
-- $$ \text{cross}(C, D, A) = (x_4 - x_3)(y_1 - y_3) - (y_4 - y_3)(x_1 - x_3) $$
-- $$ \text{cross}(C, D, B) = (x_4 - x_3)(y_2 - y_3) - (y_4 - y_3)(x_2 - x_3) $$</p>
+- <span class="arithmatex"><span class="MathJax_Preview">\text{cross}(A, B, C) = (x_2 - x_1)(y_3 - y_1) - (y_2 - y_1)(x_3 - x_1)</span><script type="math/tex">\text{cross}(A, B, C) = (x_2 - x_1)(y_3 - y_1) - (y_2 - y_1)(x_3 - x_1)</script></span>
+- <span class="arithmatex"><span class="MathJax_Preview">\text{cross}(A, B, D) = (x_2 - x_1)(y_4 - y_1) - (y_2 - y_1)(x_4 - x_1)</span><script type="math/tex">\text{cross}(A, B, D) = (x_2 - x_1)(y_4 - y_1) - (y_2 - y_1)(x_4 - x_1)</script></span>
+- <span class="arithmatex"><span class="MathJax_Preview">\text{cross}(C, D, A) = (x_4 - x_3)(y_1 - y_3) - (y_4 - y_3)(x_1 - x_3)</span><script type="math/tex">\text{cross}(C, D, A) = (x_4 - x_3)(y_1 - y_3) - (y_4 - y_3)(x_1 - x_3)</script></span>
+- <span class="arithmatex"><span class="MathJax_Preview">\text{cross}(C, D, B) = (x_4 - x_3)(y_2 - y_3) - (y_4 - y_3)(x_2 - x_3)</span><script type="math/tex">\text{cross}(C, D, B) = (x_4 - x_3)(y_2 - y_3) - (y_4 - y_3)(x_2 - x_3)</script></span></p>
 <h5 id="32">3.2. 교차 조건</h5>
 <p>두 선분이 교차하려면 아래 조건이 모두 성립해야 한다:
-- $$ \text{cross}(A, B, C) \times \text{cross}(A, B, D) &lt; 0 $$
-- $$ \text{cross}(C, D, A) \times \text{cross}(C, D, B) &lt; 0 $$</p>
+- <span class="arithmatex"><span class="MathJax_Preview">\text{cross}(A, B, C) \times \text{cross}(A, B, D) &lt; 0</span><script type="math/tex">\text{cross}(A, B, C) \times \text{cross}(A, B, D) < 0</script></span>
+- <span class="arithmatex"><span class="MathJax_Preview">\text{cross}(C, D, A) \times \text{cross}(C, D, B) &lt; 0</span><script type="math/tex">\text{cross}(C, D, A) \times \text{cross}(C, D, B) < 0</script></span></p>
 <p>위 조건이 만족되면, 두 선분은 교차하는 것으로 판단할 수 있다.</p>
 <h4 id="4">4. 결론</h4>
 <ul>

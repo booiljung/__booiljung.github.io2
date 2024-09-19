@@ -105,8 +105,8 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 </script>
 </div>
 <p>여기서 
-- $$ \mu_s $$는 정지 마찰 계수 (coefficient of static friction),
-- $$ \mathbf{N} $$은 법선력 (normal force)이다.</p>
+- <span class="arithmatex"><span class="MathJax_Preview">\mu_s</span><script type="math/tex">\mu_s</script></span>는 정지 마찰 계수 (coefficient of static friction),
+- <span class="arithmatex"><span class="MathJax_Preview">\mathbf{N}</span><script type="math/tex">\mathbf{N}</script></span>은 법선력 (normal force)이다.</p>
 <p>운동 마찰력은 다음과 같이 표현된다:</p>
 <div class="arithmatex">
 <div class="MathJax_Preview">
@@ -117,9 +117,9 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 </script>
 </div>
 <p>여기서 
-- $$ \mu_k $$는 운동 마찰 계수 (coefficient of kinetic friction)이다.</p>
+- <span class="arithmatex"><span class="MathJax_Preview">\mu_k</span><script type="math/tex">\mu_k</script></span>는 운동 마찰 계수 (coefficient of kinetic friction)이다.</p>
 <h3 id="_2">반발 계수의 개념 및 적용</h3>
-<p>반발 계수 (Coefficient of Restitution, $$ e $$)는 충돌 후 두 물체의 상대 속도의 비율을 나타내는 값이다. 이는 물체의 운동량 보존과 에너지 손실을 설명하는데 중요한 역할을 한다. 반발 계수는 다음과 같이 정의된다:</p>
+<p>반발 계수 (Coefficient of Restitution, <span class="arithmatex"><span class="MathJax_Preview">e</span><script type="math/tex">e</script></span>)는 충돌 후 두 물체의 상대 속도의 비율을 나타내는 값이다. 이는 물체의 운동량 보존과 에너지 손실을 설명하는데 중요한 역할을 한다. 반발 계수는 다음과 같이 정의된다:</p>
 <div class="arithmatex">
 <div class="MathJax_Preview">
  e = \frac{|\mathbf{v}_2' - \mathbf{v}_1'|}{|\mathbf{v}_1 - \mathbf{v}_2|} 
@@ -129,11 +129,11 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 </script>
 </div>
 <p>여기서 
-- $$ \mathbf{v}_1 $$과 $$ \mathbf{v}_2 $$는 충돌 전 물체 1과 2의 속도이고,
-- $$ \mathbf{v}_1' $$과 $$ \mathbf{v}_2' $$는 충돌 후 물체 1과 2의 속도이다.</p>
+- <span class="arithmatex"><span class="MathJax_Preview">\mathbf{v}_1</span><script type="math/tex">\mathbf{v}_1</script></span>과 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{v}_2</span><script type="math/tex">\mathbf{v}_2</script></span>는 충돌 전 물체 1과 2의 속도이고,
+- <span class="arithmatex"><span class="MathJax_Preview">\mathbf{v}_1'</span><script type="math/tex">\mathbf{v}_1'</script></span>과 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{v}_2'</span><script type="math/tex">\mathbf{v}_2'</script></span>는 충돌 후 물체 1과 2의 속도이다.</p>
 <p>반발 계수의 범위는 0에서 1 사이이다.
-- $$ e = 1 $$일 경우, 충돌은 완전히 탄성 충돌이며 에너지 손실이 없다.
-- $$ e = 0 $$일 경우, 충돌은 완전히 비탄성 충돌이며 최대 에너지 손실이 발생한다.</p>
+- <span class="arithmatex"><span class="MathJax_Preview">e = 1</span><script type="math/tex">e = 1</script></span>일 경우, 충돌은 완전히 탄성 충돌이며 에너지 손실이 없다.
+- <span class="arithmatex"><span class="MathJax_Preview">e = 0</span><script type="math/tex">e = 0</script></span>일 경우, 충돌은 완전히 비탄성 충돌이며 최대 에너지 손실이 발생한다.</p>
 <h3 id="_3">충돌 후 속도의 계산</h3>
 <p>충돌 후 속도는 반발 계수를 적용하여 계산할 수 있다. 두 물체가 충돌하는 경우, 다음의 두 방정식이 성립한다:</p>
 <ol>
@@ -176,7 +176,7 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 </script>
 </div>
 <p>여기서
-- $$ m_1 $$과 $$ m_2 $$는 물체 1과 물체 2의 질량이다.</p>
+- <span class="arithmatex"><span class="MathJax_Preview">m_1</span><script type="math/tex">m_1</script></span>과 <span class="arithmatex"><span class="MathJax_Preview">m_2</span><script type="math/tex">m_2</script></span>는 물체 1과 물체 2의 질량이다.</p>
 <h3 id="_4">운동 마찰력의 계산</h3>
 <p>운동 마찰력은 충돌 후 물체의 운동을 제어하는 데 중요한 요소이다. 운동 마찰력은 물체가 움직이는 방향과 반대 방향으로 작용하며 그 크기는 다음과 같다:</p>
 <div class="arithmatex">
@@ -187,14 +187,14 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
  |\mathbf{F}_k| = \mu_k |\mathbf{N}| 
 </script>
 </div>
-<p>여기서 다시 $$ \mu_k $$는 운동 마찰 계수, $$ \mathbf{N} $$은 법선력이다. 마찰력의 방향을 계산하기 위해, 운동 방향과 역방향을 확인해야 한다.</p>
+<p>여기서 다시 <span class="arithmatex"><span class="MathJax_Preview">\mu_k</span><script type="math/tex">\mu_k</script></span>는 운동 마찰 계수, <span class="arithmatex"><span class="MathJax_Preview">\mathbf{N}</span><script type="math/tex">\mathbf{N}</script></span>은 법선력이다. 마찰력의 방향을 계산하기 위해, 운동 방향과 역방향을 확인해야 한다.</p>
 <h3 id="_5">운동 마찰력과 속도 감소</h3>
 <p>운동 마찰력은 물체의 속도를 감소시키는 역할을 한다. 마찰력이 운동에 주는 영향을 계산하기 위해, Newton의 두 번째 법칙과 마찰력의 식을 사용한다. 마찰력은 움직이는 물체의 속도를 늦추며 이는 물체의 감속으로 이어진다.</p>
 <h4 id="_6">예제 문제</h4>
 <ol>
-<li><strong>질량 5kg의 상자가 평평한 바닥을 따라 움직이고 있으며, 마찰 계수는 <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">\mu_k = 0.4</span><script type="math/tex">\mu_k = 0.4</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">\mu_k = 0.4</span><script type="math/tex">\mu_k = 0.4</script></span></script></span>이다. 상자의 초기 속도는 10m/s이다. 감속률을 구하고 상자가 멈출 때까지의 시간을 계산하라.</strong></li>
+<li><strong>질량 5kg의 상자가 평평한 바닥을 따라 움직이고 있으며, 마찰 계수는 <span class="arithmatex"><span class="MathJax_Preview">\mu_k = 0.4</span><script type="math/tex">\mu_k = 0.4</script></span>이다. 상자의 초기 속도는 10m/s이다. 감속률을 구하고 상자가 멈출 때까지의 시간을 계산하라.</strong></li>
 </ol>
-<p>먼저, 운동 마찰력 (<span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{F}_k</span><script type="math/tex">\mathbf{F}_k</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{F}_k</span><script type="math/tex">\mathbf{F}_k</script></span></script></span>)을 구한다:</p>
+<p>먼저, 운동 마찰력 (<span class="arithmatex"><span class="MathJax_Preview">\mathbf{F}_k</span><script type="math/tex">\mathbf{F}_k</script></span>)을 구한다:</p>
 <div class="arithmatex">
 <div class="MathJax_Preview">
  \mathbf{F}_k = \mu_k \mathbf{N} 
@@ -203,7 +203,7 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
  \mathbf{F}_k = \mu_k \mathbf{N} 
 </script>
 </div>
-<p>여기서, 법선력 (<span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{N}</span><script type="math/tex">\mathbf{N}</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{N}</span><script type="math/tex">\mathbf{N}</script></span></script></span>)은 상자의 무게 (<span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{W}</span><script type="math/tex">\mathbf{W}</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{W}</span><script type="math/tex">\mathbf{W}</script></span></script></span>)와 동일하므로:</p>
+<p>여기서, 법선력 (<span class="arithmatex"><span class="MathJax_Preview">\mathbf{N}</span><script type="math/tex">\mathbf{N}</script></span>)은 상자의 무게 (<span class="arithmatex"><span class="MathJax_Preview">\mathbf{W}</span><script type="math/tex">\mathbf{W}</script></span>)와 동일하므로:</p>
 <div class="arithmatex">
 <div class="MathJax_Preview">
  \mathbf{N} = m \cdot \mathbf{g} = 5 \, \text{kg} \cdot 9.8 \, \text{m/s}^2 = 49 \, \text{N} 
@@ -221,7 +221,7 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
  \mathbf{F}_k = 0.4 \cdot 49 \, \text{N} = 19.6 \, \text{N} 
 </script>
 </div>
-<p>다음으로, 감속률 (<span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{a}</span><script type="math/tex">\mathbf{a}</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{a}</span><script type="math/tex">\mathbf{a}</script></span></script></span>)을 구한다. Newton의 두 번째 법칙 (<span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{F} = m \cdot \mathbf{a}</span><script type="math/tex">\mathbf{F} = m \cdot \mathbf{a}</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{F} = m \cdot \mathbf{a}</span><script type="math/tex">\mathbf{F} = m \cdot \mathbf{a}</script></span></script></span>)을 사용하여:</p>
+<p>다음으로, 감속률 (<span class="arithmatex"><span class="MathJax_Preview">\mathbf{a}</span><script type="math/tex">\mathbf{a}</script></span>)을 구한다. Newton의 두 번째 법칙 (<span class="arithmatex"><span class="MathJax_Preview">\mathbf{F} = m \cdot \mathbf{a}</span><script type="math/tex">\mathbf{F} = m \cdot \mathbf{a}</script></span>)을 사용하여:</p>
 <div class="arithmatex">
 <div class="MathJax_Preview">
  \mathbf{a} = \frac{\mathbf{F}_k}{m} = \frac{19.6 \, \text{N}}{5 \, \text{kg}} = 3.92 \, \text{m/s}^2 
@@ -230,7 +230,7 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
  \mathbf{a} = \frac{\mathbf{F}_k}{m} = \frac{19.6 \, \text{N}}{5 \, \text{kg}} = 3.92 \, \text{m/s}^2 
 </script>
 </div>
-<p>상자는 감속하며 움직임을 멈추게 된다. 감속시간 (<span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">t</span><script type="math/tex">t</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">t</span><script type="math/tex">t</script></span></script></span>)을 구하기 위해 kinematic equation을 사용한다:</p>
+<p>상자는 감속하며 움직임을 멈추게 된다. 감속시간 (<span class="arithmatex"><span class="MathJax_Preview">t</span><script type="math/tex">t</script></span>)을 구하기 위해 kinematic equation을 사용한다:</p>
 <div class="arithmatex">
 <div class="MathJax_Preview">
  v_f = v_i + \mathbf{a} \cdot t 
@@ -239,7 +239,7 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
  v_f = v_i + \mathbf{a} \cdot t 
 </script>
 </div>
-<p>여기서 <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">v_f = 0</span><script type="math/tex">v_f = 0</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">v_f = 0</span><script type="math/tex">v_f = 0</script></span></script></span>이고 <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">v_i = 10 \, \text{m/s}</span><script type="math/tex">v_i = 10 \, \text{m/s}</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">v_i = 10 \, \text{m/s}</span><script type="math/tex">v_i = 10 \, \text{m/s}</script></span></script></span>이므로:</p>
+<p>여기서 <span class="arithmatex"><span class="MathJax_Preview">v_f = 0</span><script type="math/tex">v_f = 0</script></span>이고 <span class="arithmatex"><span class="MathJax_Preview">v_i = 10 \, \text{m/s}</span><script type="math/tex">v_i = 10 \, \text{m/s}</script></span>이므로:</p>
 <div class="arithmatex">
 <div class="MathJax_Preview">
  0 = 10 \, \text{m/s} - 3.92 \, \text{m/s}^2 \cdot t 

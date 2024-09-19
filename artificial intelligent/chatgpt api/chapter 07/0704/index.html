@@ -122,10 +122,10 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 <p>\mathbf{L}<em>{prompt} = \mathbf{L}</em>{input} + \mathbf{L}_{context}</p>
 <p>$$</p>
 <p>여기서,<br />
-<span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{L}_{prompt}</span><script type="math/tex">\mathbf{L}_{prompt}</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{L}_{prompt}</span><script type="math/tex">\mathbf{L}_{prompt}</script></span></script></span>는 전체 프롬프트의 토큰 수,<br />
-<span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{L}_{input}</span><script type="math/tex">\mathbf{L}_{input}</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{L}_{input}</span><script type="math/tex">\mathbf{L}_{input}</script></span></script></span>는 사용자 입력에 대한 토큰 수,<br />
-<span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{L}_{context}</span><script type="math/tex">\mathbf{L}_{context}</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{L}_{context}</span><script type="math/tex">\mathbf{L}_{context}</script></span></script></span>는 필요한 문맥에 대한 토큰 수이다.</p>
-<p>프롬프트 최적화에서는 <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{L}_{prompt}</span><script type="math/tex">\mathbf{L}_{prompt}</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{L}_{prompt}</span><script type="math/tex">\mathbf{L}_{prompt}</script></span></script></span>를 최소화하면서도 필요한 정보를 충분히 포함시켜야 한다.</p>
+<span class="arithmatex"><span class="MathJax_Preview">\mathbf{L}_{prompt}</span><script type="math/tex">\mathbf{L}_{prompt}</script></span>는 전체 프롬프트의 토큰 수,<br />
+<span class="arithmatex"><span class="MathJax_Preview">\mathbf{L}_{input}</span><script type="math/tex">\mathbf{L}_{input}</script></span>는 사용자 입력에 대한 토큰 수,<br />
+<span class="arithmatex"><span class="MathJax_Preview">\mathbf{L}_{context}</span><script type="math/tex">\mathbf{L}_{context}</script></span>는 필요한 문맥에 대한 토큰 수이다.</p>
+<p>프롬프트 최적화에서는 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{L}_{prompt}</span><script type="math/tex">\mathbf{L}_{prompt}</script></span>를 최소화하면서도 필요한 정보를 충분히 포함시켜야 한다.</p>
 <h3 id="_3">명확한 지시사항 제공</h3>
 <p>명확하고 구체적인 지시사항은 모델이 더 일관되고 신뢰할 수 있는 출력을 생성하도록 돕는다. 예를 들어, "제품 설명을 작성해줘"라는 모호한 요청보다는 "신발 제품의 특징을 포함한 설명을 50자 내외로 작성해줘"라는 요청이 더 명확하다. 지시사항을 최적화할 때는 다음을 고려한다:</p>
 <ul>
@@ -151,9 +151,9 @@ response = openai.Completion.create(
 <p>\mathbf{C}<em>{new} = \mathbf{C}</em>{previous} + \mathbf{R}_{previous}</p>
 <p>$$</p>
 <p>여기서,<br />
-<span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{C}_{new}</span><script type="math/tex">\mathbf{C}_{new}</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{C}_{new}</span><script type="math/tex">\mathbf{C}_{new}</script></span></script></span>는 새로운 대화의 문맥,<br />
-<span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{C}_{previous}</span><script type="math/tex">\mathbf{C}_{previous}</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{C}_{previous}</span><script type="math/tex">\mathbf{C}_{previous}</script></span></script></span>는 이전 대화의 문맥,<br />
-<span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{R}_{previous}</span><script type="math/tex">\mathbf{R}_{previous}</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{R}_{previous}</span><script type="math/tex">\mathbf{R}_{previous}</script></span></script></span>는 이전 응답을 의미한다.</p>
+<span class="arithmatex"><span class="MathJax_Preview">\mathbf{C}_{new}</span><script type="math/tex">\mathbf{C}_{new}</script></span>는 새로운 대화의 문맥,<br />
+<span class="arithmatex"><span class="MathJax_Preview">\mathbf{C}_{previous}</span><script type="math/tex">\mathbf{C}_{previous}</script></span>는 이전 대화의 문맥,<br />
+<span class="arithmatex"><span class="MathJax_Preview">\mathbf{R}_{previous}</span><script type="math/tex">\mathbf{R}_{previous}</script></span>는 이전 응답을 의미한다.</p>
 <p>문맥을 효율적으로 관리하기 위해서는 필요한 대화만 유지하고 불필요한 부분은 생략해야 한다.</p>
 <h3 id="_5">다양한 파라미터 조합</h3>
 <p>ChatGPT API는 여러 가지 파라미터를 제공하여 프롬프트의 출력을 제어할 수 있다. 중요한 파라미터는 다음과 같다:</p>
@@ -211,10 +211,10 @@ response = openai.Completion.create(
 <p>A_{accuracy} = \frac{\text{Correct Outputs}}{\text{Total Outputs}}</p>
 <p>$$</p>
 <p>여기서,<br />
-<span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">T_{response}</span><script type="math/tex">T_{response}</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">T_{response}</span><script type="math/tex">T_{response}</script></span></script></span>는 평균 응답 시간,<br />
-<span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">t_i</span><script type="math/tex">t_i</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">t_i</span><script type="math/tex">t_i</script></span></script></span>는 각 요청의 응답 시간,<br />
-<span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">A_{accuracy}</span><script type="math/tex">A_{accuracy}</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">A_{accuracy}</span><script type="math/tex">A_{accuracy}</script></span></script></span>는 정확도이다.</p>
-<p>프롬프트 최적화를 통해 응답 시간 <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">T_{response}</span><script type="math/tex">T_{response}</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">T_{response}</span><script type="math/tex">T_{response}</script></span></script></span>를 줄이고, 정확도 <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">A_{accuracy}</span><script type="math/tex">A_{accuracy}</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">A_{accuracy}</span><script type="math/tex">A_{accuracy}</script></span></script></span>를 향상시킬 수 있다. 실질적으로는 최적화된 프롬프트가 더 짧은 시간에 정확한 결과를 반환하는 경향이 있다.</p>
+<span class="arithmatex"><span class="MathJax_Preview">T_{response}</span><script type="math/tex">T_{response}</script></span>는 평균 응답 시간,<br />
+<span class="arithmatex"><span class="MathJax_Preview">t_i</span><script type="math/tex">t_i</script></span>는 각 요청의 응답 시간,<br />
+<span class="arithmatex"><span class="MathJax_Preview">A_{accuracy}</span><script type="math/tex">A_{accuracy}</script></span>는 정확도이다.</p>
+<p>프롬프트 최적화를 통해 응답 시간 <span class="arithmatex"><span class="MathJax_Preview">T_{response}</span><script type="math/tex">T_{response}</script></span>를 줄이고, 정확도 <span class="arithmatex"><span class="MathJax_Preview">A_{accuracy}</span><script type="math/tex">A_{accuracy}</script></span>를 향상시킬 수 있다. 실질적으로는 최적화된 프롬프트가 더 짧은 시간에 정확한 결과를 반환하는 경향이 있다.</p>
 <h3 id="_8">프롬프트 최적화의 한계</h3>
 <p>최적화된 프롬프트가 항상 완벽한 결과를 도출하는 것은 아니다. 다음과 같은 한계 사항을 고려해야 한다.</p>
 <ol>

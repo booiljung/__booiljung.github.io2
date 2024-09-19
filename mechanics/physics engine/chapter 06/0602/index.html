@@ -101,7 +101,7 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 <li><strong>구성 요소</strong>: OBB는 중심점, 3개의 축(오브젝트의 로컬 축), 그리고 각 축에 대한 반경으로 구성된다.</li>
 </ul>
 <h3 id="obb_1">OBB의 수학적 표현</h3>
-<p>OBB는 중심 <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{c}</span><script type="math/tex">\mathbf{c}</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{c}</span><script type="math/tex">\mathbf{c}</script></span></script></span>, 축 <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{u}_i</span><script type="math/tex">\mathbf{u}_i</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{u}_i</span><script type="math/tex">\mathbf{u}_i</script></span></script></span>, 그리고 반경 <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">r_i</span><script type="math/tex">r_i</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">r_i</span><script type="math/tex">r_i</script></span></script></span>로 정의된다. 각 축 <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{u}_i</span><script type="math/tex">\mathbf{u}_i</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{u}_i</span><script type="math/tex">\mathbf{u}_i</script></span></script></span>는 정규화된 기준 벡터이다:</p>
+<p>OBB는 중심 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{c}</span><script type="math/tex">\mathbf{c}</script></span>, 축 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{u}_i</span><script type="math/tex">\mathbf{u}_i</script></span>, 그리고 반경 <span class="arithmatex"><span class="MathJax_Preview">r_i</span><script type="math/tex">r_i</script></span>로 정의된다. 각 축 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{u}_i</span><script type="math/tex">\mathbf{u}_i</script></span>는 정규화된 기준 벡터이다:</p>
 <div class="arithmatex">
 <div class="MathJax_Preview">
 OBB = (\mathbf{c}, \mathbf{u}_1, \mathbf{u}_2, \mathbf{u}_3, r_1, r_2, r_3)
@@ -111,18 +111,18 @@ OBB = (\mathbf{c}, \mathbf{u}_1, \mathbf{u}_2, \mathbf{u}_3, r_1, r_2, r_3)
 </script>
 </div>
 <ul>
-<li><span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{c}</span><script type="math/tex">\mathbf{c}</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{c}</span><script type="math/tex">\mathbf{c}</script></span></script></span> : OBB의 중심</li>
-<li><span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{u}_i</span><script type="math/tex">\mathbf{u}_i</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{u}_i</span><script type="math/tex">\mathbf{u}_i</script></span></script></span> : OBB의 축 (정규화된 벡터)</li>
-<li><span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">r_i</span><script type="math/tex">r_i</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">r_i</span><script type="math/tex">r_i</script></span></script></span> : 각 축에 대한 반경 (스케일 값)</li>
+<li><span class="arithmatex"><span class="MathJax_Preview">\mathbf{c}</span><script type="math/tex">\mathbf{c}</script></span> : OBB의 중심</li>
+<li><span class="arithmatex"><span class="MathJax_Preview">\mathbf{u}_i</span><script type="math/tex">\mathbf{u}_i</script></span> : OBB의 축 (정규화된 벡터)</li>
+<li><span class="arithmatex"><span class="MathJax_Preview">r_i</span><script type="math/tex">r_i</script></span> : 각 축에 대한 반경 (스케일 값)</li>
 </ul>
 <h3 id="_1">충돌 감지 알고리즘</h3>
 <h4 id="separating-axis-theorem-sat">Separating Axis Theorem (SAT)</h4>
 <p>SAT는 두 물체가 충돌하지 않음을 증명할 수 있는 방법을 제시한다. SAT에 따르면, 두 물체가 충돌하지 않으려면 충돌하지 않는 간격을 갖는 축이 적어도 하나 존재해야 한다.</p>
 <p>OBB 간의 충돌 감지에서는 총 15개의 축을 검토한다:</p>
 <ol>
-<li>각 OBB의 3개의 축 (<span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{u}_{A1}, \mathbf{u}_{A2}, \mathbf{u}_{A3}</span><script type="math/tex">\mathbf{u}_{A1}, \mathbf{u}_{A2}, \mathbf{u}_{A3}</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{u}_{A1}, \mathbf{u}_{A2}, \mathbf{u}_{A3}</span><script type="math/tex">\mathbf{u}_{A1}, \mathbf{u}_{A2}, \mathbf{u}_{A3}</script></span></script></span>)</li>
-<li>각 OBB의 3개의 축 (<span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{u}_{B1}, \mathbf{u}_{B2}, \mathbf{u}_{B3}</span><script type="math/tex">\mathbf{u}_{B1}, \mathbf{u}_{B2}, \mathbf{u}_{B3}</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{u}_{B1}, \mathbf{u}_{B2}, \mathbf{u}_{B3}</span><script type="math/tex">\mathbf{u}_{B1}, \mathbf{u}_{B2}, \mathbf{u}_{B3}</script></span></script></span>)</li>
-<li>각 OBB의 모든 축과 다른 OBB의 각 축의 외적 (<span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{u}_{A_i} \times \mathbf{u}_{B_j}</span><script type="math/tex">\mathbf{u}_{A_i} \times \mathbf{u}_{B_j}</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{u}_{A_i} \times \mathbf{u}_{B_j}</span><script type="math/tex">\mathbf{u}_{A_i} \times \mathbf{u}_{B_j}</script></span></script></span>)</li>
+<li>각 OBB의 3개의 축 (<span class="arithmatex"><span class="MathJax_Preview">\mathbf{u}_{A1}, \mathbf{u}_{A2}, \mathbf{u}_{A3}</span><script type="math/tex">\mathbf{u}_{A1}, \mathbf{u}_{A2}, \mathbf{u}_{A3}</script></span>)</li>
+<li>각 OBB의 3개의 축 (<span class="arithmatex"><span class="MathJax_Preview">\mathbf{u}_{B1}, \mathbf{u}_{B2}, \mathbf{u}_{B3}</span><script type="math/tex">\mathbf{u}_{B1}, \mathbf{u}_{B2}, \mathbf{u}_{B3}</script></span>)</li>
+<li>각 OBB의 모든 축과 다른 OBB의 각 축의 외적 (<span class="arithmatex"><span class="MathJax_Preview">\mathbf{u}_{A_i} \times \mathbf{u}_{B_j}</span><script type="math/tex">\mathbf{u}_{A_i} \times \mathbf{u}_{B_j}</script></span>)</li>
 </ol>
 <h4 id="sat">SAT 적용</h4>
 <p>구체적으로, SAT를 적용하여 두 OBB의 충돌을 체크하려면 다음 단계를 따른다:</p>
@@ -130,14 +130,14 @@ OBB = (\mathbf{c}, \mathbf{u}_1, \mathbf{u}_2, \mathbf{u}_3, r_1, r_2, r_3)
 <li>
 <p><strong>축과 변환 계산</strong>:</p>
 <p>1.1. 각 OBB의 축 벡터를 획득한다.
-1.2. 두 OBB의 중심 간의 벡터 <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{t} = \mathbf{c}_B - \mathbf{c}_A</span><script type="math/tex">\mathbf{t} = \mathbf{c}_B - \mathbf{c}_A</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{t} = \mathbf{c}_B - \mathbf{c}_A</span><script type="math/tex">\mathbf{t} = \mathbf{c}_B - \mathbf{c}_A</script></span></script></span>를 계산한다.
-1.3. <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{t}</span><script type="math/tex">\mathbf{t}</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{t}</span><script type="math/tex">\mathbf{t}</script></span></script></span>를 OBB-A의 로컬 좌표계로 변환한다.</p>
+1.2. 두 OBB의 중심 간의 벡터 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{t} = \mathbf{c}_B - \mathbf{c}_A</span><script type="math/tex">\mathbf{t} = \mathbf{c}_B - \mathbf{c}_A</script></span>를 계산한다.
+1.3. <span class="arithmatex"><span class="MathJax_Preview">\mathbf{t}</span><script type="math/tex">\mathbf{t}</script></span>를 OBB-A의 로컬 좌표계로 변환한다.</p>
 </li>
 <li>
 <p><strong>축 투영</strong>:</p>
 <p>2.1. 모든 15개의 축에 대해 해당 OBB의 반경을 각 축에 투영시켜 간격을 계산한다.
 2.2. 다른 OBB에 대해서도 동일한 계산을 수행한다.</p>
-<p>각 축 <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{a}_i</span><script type="math/tex">\mathbf{a}_i</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{a}_i</span><script type="math/tex">\mathbf{a}_i</script></span></script></span>에 투영된 OBB의 반경은 다음과 같다:</p>
+<p>각 축 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{a}_i</span><script type="math/tex">\mathbf{a}_i</script></span>에 투영된 OBB의 반경은 다음과 같다:</p>
 </li>
 </ol>
 <p>$$

@@ -116,11 +116,11 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 </script>
 </div>
 <p>여기서:
-- <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">\rho_i</span><script type="math/tex">\rho_i</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">\rho_i</span><script type="math/tex">\rho_i</script></span></script></span>는 입자 <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">i</span><script type="math/tex">i</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">i</span><script type="math/tex">i</script></span></script></span>의 밀도
-- <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">m_j</span><script type="math/tex">m_j</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">m_j</span><script type="math/tex">m_j</script></span></script></span>는 입자 <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">j</span><script type="math/tex">j</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">j</span><script type="math/tex">j</script></span></script></span>의 질량
-- <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">W(\mathbf{r_i} - \mathbf{r_j}, h)</span><script type="math/tex">W(\mathbf{r_i} - \mathbf{r_j}, h)</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">W(\mathbf{r_i} - \mathbf{r_j}, h)</span><script type="math/tex">W(\mathbf{r_i} - \mathbf{r_j}, h)</script></span></script></span>는 입자 <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">i</span><script type="math/tex">i</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">i</span><script type="math/tex">i</script></span></script></span>와 입자 <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">j</span><script type="math/tex">j</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">j</span><script type="math/tex">j</script></span></script></span> 사이의 거리 및 스무딩 길이 <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">h</span><script type="math/tex">h</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">h</span><script type="math/tex">h</script></span></script></span>를 이용한 커널 함수</p>
+- <span class="arithmatex"><span class="MathJax_Preview">\rho_i</span><script type="math/tex">\rho_i</script></span>는 입자 <span class="arithmatex"><span class="MathJax_Preview">i</span><script type="math/tex">i</script></span>의 밀도
+- <span class="arithmatex"><span class="MathJax_Preview">m_j</span><script type="math/tex">m_j</script></span>는 입자 <span class="arithmatex"><span class="MathJax_Preview">j</span><script type="math/tex">j</script></span>의 질량
+- <span class="arithmatex"><span class="MathJax_Preview">W(\mathbf{r_i} - \mathbf{r_j}, h)</span><script type="math/tex">W(\mathbf{r_i} - \mathbf{r_j}, h)</script></span>는 입자 <span class="arithmatex"><span class="MathJax_Preview">i</span><script type="math/tex">i</script></span>와 입자 <span class="arithmatex"><span class="MathJax_Preview">j</span><script type="math/tex">j</script></span> 사이의 거리 및 스무딩 길이 <span class="arithmatex"><span class="MathJax_Preview">h</span><script type="math/tex">h</script></span>를 이용한 커널 함수</p>
 <h4 id="_3">커널 함수</h4>
-<p>커널 함수 <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">W(\mathbf{r}, h)</span><script type="math/tex">W(\mathbf{r}, h)</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">W(\mathbf{r}, h)</span><script type="math/tex">W(\mathbf{r}, h)</script></span></script></span>는 두 입자 사이의 거리에 따라 가중치를 제공하며, 전체 유체의 매끄러운 분포를 보장한다. 자주 사용되는 커널 함수의 예는 Poly6 커널, Spiky 커널 등이 있다.</p>
+<p>커널 함수 <span class="arithmatex"><span class="MathJax_Preview">W(\mathbf{r}, h)</span><script type="math/tex">W(\mathbf{r}, h)</script></span>는 두 입자 사이의 거리에 따라 가중치를 제공하며, 전체 유체의 매끄러운 분포를 보장한다. 자주 사용되는 커널 함수의 예는 Poly6 커널, Spiky 커널 등이 있다.</p>
 <div class="arithmatex">
 <div class="MathJax_Preview">
 W(r, h) = \alpha \left( 1 - \frac{r^2}{h^2} \right)^3 \text{ for } 0 \le r \le h
@@ -130,9 +130,9 @@ W(r, h) = \alpha \left( 1 - \frac{r^2}{h^2} \right)^3 \text{ for } 0 \le r \le h
 </script>
 </div>
 <p>여기서:
-- <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">\alpha</span><script type="math/tex">\alpha</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">\alpha</span><script type="math/tex">\alpha</script></span></script></span>는 정규화 상수
-- <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">r = \|\mathbf{r_i} - \mathbf{r_j}\|</span><script type="math/tex">r = \|\mathbf{r_i} - \mathbf{r_j}\|</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">r = \|\mathbf{r_i} - \mathbf{r_j}\|</span><script type="math/tex">r = \|\mathbf{r_i} - \mathbf{r_j}\|</script></span></script></span>
-- <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">h</span><script type="math/tex">h</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">h</span><script type="math/tex">h</script></span></script></span>는 스무딩 길이</p>
+- <span class="arithmatex"><span class="MathJax_Preview">\alpha</span><script type="math/tex">\alpha</script></span>는 정규화 상수
+- <span class="arithmatex"><span class="MathJax_Preview">r = \|\mathbf{r_i} - \mathbf{r_j}\|</span><script type="math/tex">r = \|\mathbf{r_i} - \mathbf{r_j}\|</script></span>
+- <span class="arithmatex"><span class="MathJax_Preview">h</span><script type="math/tex">h</script></span>는 스무딩 길이</p>
 <h3 id="_4">힘 계산</h3>
 <p>입자 사이의 힘 계산은 네비에-스토크스 방정식을 기반으로 하며, 압력과 점성, 외부 힘을 포함하여 시뮬레이션 된다.</p>
 <h4 id="_5">압력 힘</h4>
@@ -145,7 +145,7 @@ W(r, h) = \alpha \left( 1 - \frac{r^2}{h^2} \right)^3 \text{ for } 0 \le r \le h
 \mathbf{f_i}^{pressure} = -\sum_{j} m_j \left(\frac{p_i}{\rho_i^2} + \frac{p_j}{\rho_j^2}\right) \nabla W(\mathbf{r_i} - \mathbf{r_j}, h)
 </script>
 </div>
-<p>여기서 <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">p_i</span><script type="math/tex">p_i</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">p_i</span><script type="math/tex">p_i</script></span></script></span>는 입자 <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">i</span><script type="math/tex">i</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">i</span><script type="math/tex">i</script></span></script></span>의 압력이다. 압력은 종종 상태 방정식을 사용하여 계산된다:</p>
+<p>여기서 <span class="arithmatex"><span class="MathJax_Preview">p_i</span><script type="math/tex">p_i</script></span>는 입자 <span class="arithmatex"><span class="MathJax_Preview">i</span><script type="math/tex">i</script></span>의 압력이다. 압력은 종종 상태 방정식을 사용하여 계산된다:</p>
 <div class="arithmatex">
 <div class="MathJax_Preview">
 p_i = k (\rho_i - \rho_0)
@@ -154,7 +154,7 @@ p_i = k (\rho_i - \rho_0)
 p_i = k (\rho_i - \rho_0)
 </script>
 </div>
-<p>여기서 <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">k</span><script type="math/tex">k</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">k</span><script type="math/tex">k</script></span></script></span>는 상수, <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">\rho_0</span><script type="math/tex">\rho_0</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">\rho_0</span><script type="math/tex">\rho_0</script></span></script></span>는 기준 밀도이다.</p>
+<p>여기서 <span class="arithmatex"><span class="MathJax_Preview">k</span><script type="math/tex">k</script></span>는 상수, <span class="arithmatex"><span class="MathJax_Preview">\rho_0</span><script type="math/tex">\rho_0</script></span>는 기준 밀도이다.</p>
 <h4 id="_6">점성 힘</h4>
 <p>점성 힘은 유체 내의 마찰력을 나타내며, 다음과 같이 계산된다:</p>
 <div class="arithmatex">
@@ -166,8 +166,8 @@ p_i = k (\rho_i - \rho_0)
 </script>
 </div>
 <p>여기서:
-- <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">\mu</span><script type="math/tex">\mu</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">\mu</span><script type="math/tex">\mu</script></span></script></span>는 점성 계수
-- <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{v_i}</span><script type="math/tex">\mathbf{v_i}</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{v_i}</span><script type="math/tex">\mathbf{v_i}</script></span></script></span>는 입자 <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">i</span><script type="math/tex">i</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">i</span><script type="math/tex">i</script></span></script></span>의 속도</p>
+- <span class="arithmatex"><span class="MathJax_Preview">\mu</span><script type="math/tex">\mu</script></span>는 점성 계수
+- <span class="arithmatex"><span class="MathJax_Preview">\mathbf{v_i}</span><script type="math/tex">\mathbf{v_i}</script></span>는 입자 <span class="arithmatex"><span class="MathJax_Preview">i</span><script type="math/tex">i</script></span>의 속도</p>
 <h4 id="_7">외부 힘</h4>
 <p>외부 힘은 중력과 같은 외부 요인에 의해 발생하며, 다음과 같이 표현된다:</p>
 <div class="arithmatex">
@@ -178,7 +178,7 @@ p_i = k (\rho_i - \rho_0)
 \mathbf{f_i}^{external} = \mathbf{g} \cdot m_i
 </script>
 </div>
-<p>여기서 <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{g}</span><script type="math/tex">\mathbf{g}</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{g}</span><script type="math/tex">\mathbf{g}</script></span></script></span>는 중력 가속도이다.</p>
+<p>여기서 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{g}</span><script type="math/tex">\mathbf{g}</script></span>는 중력 가속도이다.</p>
 <h3 id="_8">입자 업데이트</h3>
 <p>각 입자의 위치와 속도는 시간에 따라 업데이트 된다. 이를 위해 시간 적분 방법이 사용된다. 가장 일반적인 방법은 다음과 같다:</p>
 <h4 id="_9">시간 적분</h4>
@@ -194,7 +194,7 @@ p_i = k (\rho_i - \rho_0)
 \mathbf{v_i}^{t+\Delta t} = \mathbf{v_i}^t + \Delta t \cdot \frac{\mathbf{f_i}}{m_i}
 </script>
 </div>
-<p>여기서 <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{f_i}</span><script type="math/tex">\mathbf{f_i}</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{f_i}</span><script type="math/tex">\mathbf{f_i}</script></span></script></span>는 전체 힘(압력, 점성, 외부 힘의 합)이다.</p>
+<p>여기서 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{f_i}</span><script type="math/tex">\mathbf{f_i}</script></span>는 전체 힘(압력, 점성, 외부 힘의 합)이다.</p>
 <ol>
 <li><strong>위치 업데이트</strong>:</li>
 </ol>
@@ -220,7 +220,7 @@ p_i = k (\rho_i - \rho_0)
 \mathbf{f_i}^{boundary} = \sum_{j \in boundary} k \cdot (\mathbf{r_i} - \mathbf{r_j})
 </script>
 </div>
-<p>여기서 <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">k</span><script type="math/tex">k</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">k</span><script type="math/tex">k</script></span></script></span>는 경계 반발 상수이다.</p>
+<p>여기서 <span class="arithmatex"><span class="MathJax_Preview">k</span><script type="math/tex">k</script></span>는 경계 반발 상수이다.</p>
 <h3 id="_13">응용 및 한계</h3>
 <h4 id="_14">응용</h4>
 <p>SPH는 다음과 같은 다양한 응용 분야에서 사용된다:

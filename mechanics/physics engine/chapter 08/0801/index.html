@@ -126,14 +126,14 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 \mathbf{F} = -k (\mathbf{x} - \mathbf{l})
 </script>
 </div>
-<p>여기서 <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">k</span><script type="math/tex">k</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">k</span><script type="math/tex">k</script></span></script></span>는 스프링 상수, <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{x}</span><script type="math/tex">\mathbf{x}</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{x}</span><script type="math/tex">\mathbf{x}</script></span></script></span>는 스프링의 현재 길이, <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{l}</span><script type="math/tex">\mathbf{l}</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{l}</span><script type="math/tex">\mathbf{l}</script></span></script></span>는 스프링의 자연 길이다.</p>
+<p>여기서 <span class="arithmatex"><span class="MathJax_Preview">k</span><script type="math/tex">k</script></span>는 스프링 상수, <span class="arithmatex"><span class="MathJax_Preview">\mathbf{x}</span><script type="math/tex">\mathbf{x}</script></span>는 스프링의 현재 길이, <span class="arithmatex"><span class="MathJax_Preview">\mathbf{l}</span><script type="math/tex">\mathbf{l}</script></span>는 스프링의 자연 길이다.</p>
 <h4 id="fem">유한 요소법 (FEM)</h4>
 <p>유한 요소법(Finite Element Method, FEM)은 공학에서 널리 쓰이는 수치 해석 기법으로, 연체 시뮬레이션에 매우 효과적으로 적용될 수 있다. 물체를 작은 유한 요소들로 분할하고, 각 요소의 변형을 수학적으로 모델링한다.</p>
 <ul>
 <li><strong>분할</strong>: 물체를 삼각형 또는 사면체와 같은 작은 요소들로 분할.</li>
 <li><strong>변형 모델링</strong>: 각 요소의 변형을 탄성 이론에 기반하여 계산.</li>
 </ul>
-<p>FEM에서는 연체의 변형 에너지를 최소화하는 문제를 풀어야 한다. 요소의 스트레인 <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">\boldsymbol{\varepsilon}</span><script type="math/tex">\boldsymbol{\varepsilon}</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">\boldsymbol{\varepsilon}</span><script type="math/tex">\boldsymbol{\varepsilon}</script></span></script></span>과 스트레스 <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">\boldsymbol{\sigma}</span><script type="math/tex">\boldsymbol{\sigma}</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">\boldsymbol{\sigma}</span><script type="math/tex">\boldsymbol{\sigma}</script></span></script></span>는 다음과 같이 표현된다:</p>
+<p>FEM에서는 연체의 변형 에너지를 최소화하는 문제를 풀어야 한다. 요소의 스트레인 <span class="arithmatex"><span class="MathJax_Preview">\boldsymbol{\varepsilon}</span><script type="math/tex">\boldsymbol{\varepsilon}</script></span>과 스트레스 <span class="arithmatex"><span class="MathJax_Preview">\boldsymbol{\sigma}</span><script type="math/tex">\boldsymbol{\sigma}</script></span>는 다음과 같이 표현된다:</p>
 <div class="arithmatex">
 <div class="MathJax_Preview">
 \boldsymbol{\sigma} = \mathbf{D} \boldsymbol{\varepsilon}
@@ -142,14 +142,14 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 \boldsymbol{\sigma} = \mathbf{D} \boldsymbol{\varepsilon}
 </script>
 </div>
-<p>여기서 <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{D}</span><script type="math/tex">\mathbf{D}</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{D}</span><script type="math/tex">\mathbf{D}</script></span></script></span>는 재료의 특성을 나타내는 행렬이다.</p>
+<p>여기서 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{D}</span><script type="math/tex">\mathbf{D}</script></span>는 재료의 특성을 나타내는 행렬이다.</p>
 <h4 id="_3">스마 차법</h4>
 <p>스마 차법(Smooth Particle Hydrodynamics, SPH)은 입자 기반의 유체 시뮬레이션 기법으로, 연체 모델링에도 적용 가능하다. 이 기법에서는 물체를 작은 입자들로 분할하고, 각 입자의 상호작용을 통해 물리적 특성을 모델링한다.</p>
 <ul>
 <li><strong>입자 분할</strong>: 물체를 작은 입자들로 분할.</li>
 <li><strong>입자 간의 상호작용</strong>: 각 입자의 움직임과 상호작용을 통해 전체 물체의 변형을 모델링.</li>
 </ul>
-<p>입자 간의 힘 <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{F}</span><script type="math/tex">\mathbf{F}</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">\mathbf{F}</span><script type="math/tex">\mathbf{F}</script></span></script></span>는 거리 함수 <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">W(\mathbf{r})</span><script type="math/tex">W(\mathbf{r})</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">W(\mathbf{r})</span><script type="math/tex">W(\mathbf{r})</script></span></script></span>에 의해 결정된다:</p>
+<p>입자 간의 힘 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{F}</span><script type="math/tex">\mathbf{F}</script></span>는 거리 함수 <span class="arithmatex"><span class="MathJax_Preview">W(\mathbf{r})</span><script type="math/tex">W(\mathbf{r})</script></span>에 의해 결정된다:</p>
 <div class="arithmatex">
 <div class="MathJax_Preview">
 \mathbf{F} = -\nabla W(\mathbf{r})

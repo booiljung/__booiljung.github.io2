@@ -152,7 +152,7 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 \text{대기 시간} = \text{기본 대기 시간} \times 2^n
 </script>
 </div>
-<p>여기서 $$ n $$은 실패 횟수이다.</p>
+<p>여기서 <span class="arithmatex"><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span>은 실패 횟수이다.</p>
 <h3 id="4">4. 배치 요청 처리</h3>
 <p>대규모 데이터 처리를 위해 API 요청을 배치로 묶어서 처리할 수 있다. 한 번에 많은 데이터를 처리하는 대신, 작은 단위로 나누어 API에 보냄으로써 Rate Limit을 초과하지 않도록 할 수 있다. 이 방식은 특히 데이터 처리량이 많을 때 유용하며, 다음과 같은 방식으로 구현할 수 있다:</p>
 <ul>
