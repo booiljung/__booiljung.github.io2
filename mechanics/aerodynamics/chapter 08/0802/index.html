@@ -120,10 +120,12 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 \mathbf{F} = m \mathbf{a}
 </script>
 </div>
-<p>여기서,
-- <span class="arithmatex"><span class="MathJax_Preview">\mathbf{F}</span><script type="math/tex">\mathbf{F}</script></span>는 항공기에 작용하는 외력 벡터,
-- <span class="arithmatex"><span class="MathJax_Preview">m</span><script type="math/tex">m</script></span>은 항공기의 질량,
-- <span class="arithmatex"><span class="MathJax_Preview">\mathbf{a}</span><script type="math/tex">\mathbf{a}</script></span>는 항공기의 질량 중심의 가속도 벡터이다.</p>
+<p>여기서,</p>
+<ul>
+<li><span class="arithmatex"><span class="MathJax_Preview">\mathbf{F}</span><script type="math/tex">\mathbf{F}</script></span>는 항공기에 작용하는 외력 벡터,</li>
+<li><span class="arithmatex"><span class="MathJax_Preview">m</span><script type="math/tex">m</script></span>은 항공기의 질량,</li>
+<li><span class="arithmatex"><span class="MathJax_Preview">\mathbf{a}</span><script type="math/tex">\mathbf{a}</script></span>는 항공기의 질량 중심의 가속도 벡터이다.</li>
+</ul>
 <h4 id="_5">회전 운동</h4>
 <div class="arithmatex">
 <div class="MathJax_Preview">
@@ -133,11 +135,13 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 \mathbf{M} = \mathbf{I} \boldsymbol{\dot{\omega}} + \boldsymbol{\omega} \times (\mathbf{I} \boldsymbol{\omega})
 </script>
 </div>
-<p>여기서,
-- <span class="arithmatex"><span class="MathJax_Preview">\mathbf{M}</span><script type="math/tex">\mathbf{M}</script></span>은 항공기에 작용하는 외력 모멘트 벡터,
-- <span class="arithmatex"><span class="MathJax_Preview">\mathbf{I}</span><script type="math/tex">\mathbf{I}</script></span>는 항공기의 관성 행렬,
-- <span class="arithmatex"><span class="MathJax_Preview">\boldsymbol{\omega}</span><script type="math/tex">\boldsymbol{\omega}</script></span>는 항공기의 각속도 벡터,
-- <span class="arithmatex"><span class="MathJax_Preview">\boldsymbol{\dot{\omega}}</span><script type="math/tex">\boldsymbol{\dot{\omega}}</script></span>는 각가속도 벡터이다.</p>
+<p>여기서,</p>
+<ul>
+<li><span class="arithmatex"><span class="MathJax_Preview">\mathbf{M}</span><script type="math/tex">\mathbf{M}</script></span>은 항공기에 작용하는 외력 모멘트 벡터,</li>
+<li><span class="arithmatex"><span class="MathJax_Preview">\mathbf{I}</span><script type="math/tex">\mathbf{I}</script></span>는 항공기의 관성 행렬,</li>
+<li><span class="arithmatex"><span class="MathJax_Preview">\boldsymbol{\omega}</span><script type="math/tex">\boldsymbol{\omega}</script></span>는 항공기의 각속도 벡터,</li>
+<li><span class="arithmatex"><span class="MathJax_Preview">\boldsymbol{\dot{\omega}}</span><script type="math/tex">\boldsymbol{\dot{\omega}}</script></span>는 각가속도 벡터이다.</li>
+</ul>
 <h2 id="_6">공기역학적 모델링</h2>
 <p>항공기의 공기역학적 특성을 모델링하기 위해서는 공기역학적 힘과 모멘트를 계산할 필요가 있다. 공기역학적 힘은 주로 양력, 항력, 측력을 포함하며, 이들은 공기역학적 계수와 항공기의 속도, 공기 밀도 등에 따라 달라진다.</p>
 <h3 id="_7">양력과 항력</h3>
@@ -158,12 +162,14 @@ D = \frac{1}{2} \rho V^2 S C_D
 D = \frac{1}{2} \rho V^2 S C_D
 </script>
 </div>
-<p>여기서,
-- <span class="arithmatex"><span class="MathJax_Preview">\rho</span><script type="math/tex">\rho</script></span>는 공기 밀도,
-- <span class="arithmatex"><span class="MathJax_Preview">V</span><script type="math/tex">V</script></span>는 항공기의 속도,
-- <span class="arithmatex"><span class="MathJax_Preview">S</span><script type="math/tex">S</script></span>는 날개의 면적,
-- <span class="arithmatex"><span class="MathJax_Preview">C_L</span><script type="math/tex">C_L</script></span>는 양력 계수,
-- <span class="arithmatex"><span class="MathJax_Preview">C_D</span><script type="math/tex">C_D</script></span>는 항력 계수이다.</p>
+<p>여기서,</p>
+<ul>
+<li><span class="arithmatex"><span class="MathJax_Preview">\rho</span><script type="math/tex">\rho</script></span>는 공기 밀도,</li>
+<li><span class="arithmatex"><span class="MathJax_Preview">V</span><script type="math/tex">V</script></span>는 항공기의 속도,</li>
+<li><span class="arithmatex"><span class="MathJax_Preview">S</span><script type="math/tex">S</script></span>는 날개의 면적,</li>
+<li><span class="arithmatex"><span class="MathJax_Preview">C_L</span><script type="math/tex">C_L</script></span>는 양력 계수,</li>
+<li><span class="arithmatex"><span class="MathJax_Preview">C_D</span><script type="math/tex">C_D</script></span>는 항력 계수이다.</li>
+</ul>
 <h3 id="_8">모멘트</h3>
 <p>모멘트는 항공기의 각 축에 대해 발생하는 회전력을 나타내며, 피치 모멘트(<span class="arithmatex"><span class="MathJax_Preview">M</span><script type="math/tex">M</script></span>), 롤 모멘트(<span class="arithmatex"><span class="MathJax_Preview">L</span><script type="math/tex">L</script></span>), 요 모멘트(<span class="arithmatex"><span class="MathJax_Preview">N</span><script type="math/tex">N</script></span>)가 있다. 이들은 다음과 같이 표현된다.</p>
 <div class="arithmatex">
@@ -190,10 +196,12 @@ N = \frac{1}{2} \rho V^2 S b C_n
 N = \frac{1}{2} \rho V^2 S b C_n
 </script>
 </div>
-<p>여기서,
-- <span class="arithmatex"><span class="MathJax_Preview">\bar{c}</span><script type="math/tex">\bar{c}</script></span>는 평균 공력 코드 길이,
-- <span class="arithmatex"><span class="MathJax_Preview">b</span><script type="math/tex">b</script></span>는 날개의 폭,
-- <span class="arithmatex"><span class="MathJax_Preview">C_m</span><script type="math/tex">C_m</script></span>, <span class="arithmatex"><span class="MathJax_Preview">C_l</span><script type="math/tex">C_l</script></span>, <span class="arithmatex"><span class="MathJax_Preview">C_n</span><script type="math/tex">C_n</script></span>는 각각 피치, 롤, 요 모멘트 계수이다.</p>
+<p>여기서,</p>
+<ul>
+<li><span class="arithmatex"><span class="MathJax_Preview">\bar{c}</span><script type="math/tex">\bar{c}</script></span>는 평균 공력 코드 길이,</li>
+<li><span class="arithmatex"><span class="MathJax_Preview">b</span><script type="math/tex">b</script></span>는 날개의 폭,</li>
+<li><span class="arithmatex"><span class="MathJax_Preview">C_m</span><script type="math/tex">C_m</script></span>, <span class="arithmatex"><span class="MathJax_Preview">C_l</span><script type="math/tex">C_l</script></span>, <span class="arithmatex"><span class="MathJax_Preview">C_n</span><script type="math/tex">C_n</script></span>는 각각 피치, 롤, 요 모멘트 계수이다.</li>
+</ul>
 <h2 id="_9">추진력 모델링</h2>
 <p>항공기의 추진력은 주로 엔진에 의해 발생하며, 이는 항공기의 속도와 고도에 따라 달라진다. 추진력을 모델링하기 위해서는 엔진의 추력 곡선과 연료 소비 곡선을 사용한다.</p>
 <h3 id="_10">엔진 추력</h3>
@@ -232,10 +240,12 @@ y_{n+1} = y_n + h f(t_n, y_n)
 y_{n+1} = y_n + h f(t_n, y_n)
 </script>
 </div>
-<p>여기서,
-- <span class="arithmatex"><span class="MathJax_Preview">y_n</span><script type="math/tex">y_n</script></span>은 <span class="arithmatex"><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span>번째 시간 단계에서의 상태 변수,
-- <span class="arithmatex"><span class="MathJax_Preview">h</span><script type="math/tex">h</script></span>는 시간 간격,
-- <span class="arithmatex"><span class="MathJax_Preview">f(t_n, y_n)</span><script type="math/tex">f(t_n, y_n)</script></span>은 미분 방정식의 우변이다.</p>
+<p>여기서,</p>
+<ul>
+<li><span class="arithmatex"><span class="MathJax_Preview">y_n</span><script type="math/tex">y_n</script></span>은 <span class="arithmatex"><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span>번째 시간 단계에서의 상태 변수,</li>
+<li><span class="arithmatex"><span class="MathJax_Preview">h</span><script type="math/tex">h</script></span>는 시간 간격,</li>
+<li><span class="arithmatex"><span class="MathJax_Preview">f(t_n, y_n)</span><script type="math/tex">f(t_n, y_n)</script></span>은 미분 방정식의 우변이다.</li>
+</ul>
 <h4 id="-">룽게-쿠타 방법</h4>
 <p>룽게-쿠타 방법은 보다 높은 정확도를 제공하는 수치 적분 기법으로, 4차 룽게-쿠타 방법이 가장 많이 사용된다. 4차 룽게-쿠타 방법은 다음과 같이 계산된다.</p>
 <div class="arithmatex">

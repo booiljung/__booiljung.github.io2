@@ -124,17 +124,21 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
  D = \frac{1}{2} \rho v^2 S C_D 
 </script>
 </div>
-<p>여기서,
-- <span class="arithmatex"><span class="MathJax_Preview">\rho</span><script type="math/tex">\rho</script></span>: 공기 밀도
-- <span class="arithmatex"><span class="MathJax_Preview">v</span><script type="math/tex">v</script></span>: 비행체의 속도
-- <span class="arithmatex"><span class="MathJax_Preview">S</span><script type="math/tex">S</script></span>: 날개 면적
-- <span class="arithmatex"><span class="MathJax_Preview">C_L</span><script type="math/tex">C_L</script></span>: 양력 계수
-- <span class="arithmatex"><span class="MathJax_Preview">C_D</span><script type="math/tex">C_D</script></span>: 항력 계수</p>
+<p>여기서,</p>
+<ul>
+<li><span class="arithmatex"><span class="MathJax_Preview">\rho</span><script type="math/tex">\rho</script></span>: 공기 밀도</li>
+<li><span class="arithmatex"><span class="MathJax_Preview">v</span><script type="math/tex">v</script></span>: 비행체의 속도</li>
+<li><span class="arithmatex"><span class="MathJax_Preview">S</span><script type="math/tex">S</script></span>: 날개 면적</li>
+<li><span class="arithmatex"><span class="MathJax_Preview">C_L</span><script type="math/tex">C_L</script></span>: 양력 계수</li>
+<li><span class="arithmatex"><span class="MathJax_Preview">C_D</span><script type="math/tex">C_D</script></span>: 항력 계수</li>
+</ul>
 <h2 id="_3">양력 계수와 항력 계수</h2>
 <h3 id="c_lc_l">양력 계수 (<span class="arithmatex"><span class="MathJax_Preview">C_L</span><script type="math/tex">C_L</script></span>)</h3>
-<p>양력 계수는 다음과 같은 요소에 의해 결정된다:
-- 날개의 형상
-- 받음각 (angle of attack, <span class="arithmatex"><span class="MathJax_Preview">\alpha</span><script type="math/tex">\alpha</script></span>)</p>
+<p>양력 계수는 다음과 같은 요소에 의해 결정된다:</p>
+<ul>
+<li>날개의 형상</li>
+<li>받음각 (angle of attack, <span class="arithmatex"><span class="MathJax_Preview">\alpha</span><script type="math/tex">\alpha</script></span>)</li>
+</ul>
 <p>양력 계수는 일반적으로 받음각과 비례한다. 예를 들어, 항공기 날개의 양력 계수는 다음과 같은 식으로 근사할 수 있다:</p>
 <div class="arithmatex">
 <div class="MathJax_Preview">
@@ -146,9 +150,11 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 </div>
 <p>여기서 <span class="arithmatex"><span class="MathJax_Preview">C_{L0}</span><script type="math/tex">C_{L0}</script></span>는 받음각이 0도일 때의 양력 계수이다.</p>
 <h3 id="c_dc_d">항력 계수 (<span class="arithmatex"><span class="MathJax_Preview">C_D</span><script type="math/tex">C_D</script></span>)</h3>
-<p>항력 계수는 두 가지 주요 성분으로 구성된다:
-1. 유도 항력 (induced drag): 양력 생성에 따른 항력
-2. 마찰 항력 (parasitic drag): 표면 마찰에 의한 항력</p>
+<p>항력 계수는 두 가지 주요 성분으로 구성된다:</p>
+<ol>
+<li>유도 항력 (induced drag): 양력 생성에 따른 항력</li>
+<li>마찰 항력 (parasitic drag): 표면 마찰에 의한 항력</li>
+</ol>
 <p>항력 계수는 다음과 같이 표현할 수 있다:</p>
 <div class="arithmatex">
 <div class="MathJax_Preview">
@@ -158,10 +164,12 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
  C_D = C_{D0} + \left( \frac{C_L^2}{\pi e AR} \right) 
 </script>
 </div>
-<p>여기서,
-- <span class="arithmatex"><span class="MathJax_Preview">C_{D0}</span><script type="math/tex">C_{D0}</script></span>: 기본 항력 계수
-- <span class="arithmatex"><span class="MathJax_Preview">e</span><script type="math/tex">e</script></span>: Oswald efficiency factor
-- <span class="arithmatex"><span class="MathJax_Preview">AR</span><script type="math/tex">AR</script></span>: 날개 종횡비 (aspect ratio)</p>
+<p>여기서,</p>
+<ul>
+<li><span class="arithmatex"><span class="MathJax_Preview">C_{D0}</span><script type="math/tex">C_{D0}</script></span>: 기본 항력 계수</li>
+<li><span class="arithmatex"><span class="MathJax_Preview">e</span><script type="math/tex">e</script></span>: Oswald efficiency factor</li>
+<li><span class="arithmatex"><span class="MathJax_Preview">AR</span><script type="math/tex">AR</script></span>: 날개 종횡비 (aspect ratio)</li>
+</ul>
 <h2 id="aspect-ratio">종횡비 (Aspect Ratio)</h2>
 <p>날개의 종횡비 (aspect ratio, <span class="arithmatex"><span class="MathJax_Preview">AR</span><script type="math/tex">AR</script></span>)는 날개의 길이와 폭의 비율로 정의된다. 이는 다음과 같은 식으로 표현된다:</p>
 <div class="arithmatex">
@@ -172,16 +180,20 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
  AR = \frac{b^2}{S} 
 </script>
 </div>
-<p>여기서,
-- <span class="arithmatex"><span class="MathJax_Preview">b</span><script type="math/tex">b</script></span>: 날개의 폭 (wing span)
-- <span class="arithmatex"><span class="MathJax_Preview">S</span><script type="math/tex">S</script></span>: 날개의 면적</p>
+<p>여기서,</p>
+<ul>
+<li><span class="arithmatex"><span class="MathJax_Preview">b</span><script type="math/tex">b</script></span>: 날개의 폭 (wing span)</li>
+<li><span class="arithmatex"><span class="MathJax_Preview">S</span><script type="math/tex">S</script></span>: 날개의 면적</li>
+</ul>
 <p>종횡비가 높을수록 유도 항력이 감소하며, 이는 공기역학적 효율성을 높이는 데 기여한다.</p>
 <h2 id="_4">설계 고려사항</h2>
 <h3 id="_5">형상 설계</h3>
-<p>날개의 형상은 양력과 항력에 큰 영향을 미친다. 일반적으로 다음과 같은 형상 요소를 고려한다:
-- 날개의 두께
-- 곡률
-- 끝단 형상 (wingtip design)</p>
+<p>날개의 형상은 양력과 항력에 큰 영향을 미친다. 일반적으로 다음과 같은 형상 요소를 고려한다:</p>
+<ul>
+<li>날개의 두께</li>
+<li>곡률</li>
+<li>끝단 형상 (wingtip design)</li>
+</ul>
 <h3 id="_6">표면 마찰</h3>
 <p>표면 마찰은 항력의 주요 원인 중 하나이다. 이를 최소화하기 위해 매끄러운 표면 처리가 필요하다.</p>
 <h3 id="_7">안정성과 제어</h3>

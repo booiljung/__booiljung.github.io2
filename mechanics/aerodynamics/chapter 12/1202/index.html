@@ -160,29 +160,43 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 <p>$$</p>
 <p>L = \frac{1}{2} \rho v^2 S C_L 
 $$</p>
-<p>여기서:
-- <span class="arithmatex"><span class="MathJax_Preview">\rho</span><script type="math/tex">\rho</script></span>는 공기 밀도
-- <span class="arithmatex"><span class="MathJax_Preview">v</span><script type="math/tex">v</script></span>는 비행 속도
-- <span class="arithmatex"><span class="MathJax_Preview">S</span><script type="math/tex">S</script></span>는 날개 면적
-- <span class="arithmatex"><span class="MathJax_Preview">C_L</span><script type="math/tex">C_L</script></span>는 양력 계수</p>
+<p>여기서:</p>
+<ul>
+<li><span class="arithmatex"><span class="MathJax_Preview">\rho</span><script type="math/tex">\rho</script></span>는 공기 밀도</li>
+<li><span class="arithmatex"><span class="MathJax_Preview">v</span><script type="math/tex">v</script></span>는 비행 속도</li>
+<li><span class="arithmatex"><span class="MathJax_Preview">S</span><script type="math/tex">S</script></span>는 날개 면적</li>
+<li><span class="arithmatex"><span class="MathJax_Preview">C_L</span><script type="math/tex">C_L</script></span>는 양력 계수</li>
+</ul>
 <h4 id="drag-dd">항력 (Drag, <span class="arithmatex"><span class="MathJax_Preview">D</span><script type="math/tex">D</script></span>) 계산</h4>
 <p>$$</p>
 <p>D = \frac{1}{2} \rho v^2 S C_D 
 $$</p>
-<p>여기서:
-- <span class="arithmatex"><span class="MathJax_Preview">C_D</span><script type="math/tex">C_D</script></span>는 항력 계수</p>
+<p>여기서:</p>
+<ul>
+<li><span class="arithmatex"><span class="MathJax_Preview">C_D</span><script type="math/tex">C_D</script></span>는 항력 계수</li>
+</ul>
 <h4 id="_2">양력/항력 비</h4>
 <p>$$</p>
 <p>\frac{L}{D} = \frac{C_L}{C_D} 
 $$</p>
 <h3 id="_3">최적화 문제</h3>
 <p>날개 설계에서 최적화를 통해 여러 목표를 달성한다. 예를 들어, 항력을 최소화하거나 양력/항력 비를 최대화하는 문제는 다음과 같은 형태로 정리될 수 있다:</p>
-<p>$$</p>
-<p>\min D = \min \left( \frac{1}{2} \rho v^2 S C_D \right)
-$$</p>
-<p>$$</p>
-<p>\max \frac{L}{D} = \max \left( \frac{C_L}{C_D} \right)
-$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+\min D = \min \left( \frac{1}{2} \rho v^2 S C_D \right)
+</div>
+<script type="math/tex; mode=display">
+\min D = \min \left( \frac{1}{2} \rho v^2 S C_D \right)
+</script>
+</div>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+\max \frac{L}{D} = \max \left( \frac{C_L}{C_D} \right)
+</div>
+<script type="math/tex; mode=display">
+\max \frac{L}{D} = \max \left( \frac{C_L}{C_D} \right)
+</script>
+</div>
 <p>이 외에도 다양한 최적화 기법이 사용된다.</p>
 <h3 id="_4">날개 설계의 진보적 기법</h3>
 <p>현대 항공기 날개 설계에는 여러 진보적 기술과 기법이 활용되고 있다. 이들 기술은 항공기의 성능을 향상시키고, 비용을 절감하며, 환경 영향을 최소화하는 데 중요한 역할을 한다.</p>
