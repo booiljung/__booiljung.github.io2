@@ -52,7 +52,7 @@
           ]},
           {title: "\ube4c\ub4dc \uc2dc\uc2a4\ud15c \ucd5c\uc801\ud654", url: "#_10", children: [
               {title: "\ubcd1\ub82c \ube4c\ub4dc", url: "#_11" },
-              {title: "\uc778\ud06c\ub9ac\uba58\ud0c8 \ube4c\ub4dc", url: "#_12" },
+              {title: "\uc810\uc9c4\uc801 \ube4c\ub4dc", url: "#_12" },
               {title: "\uce90\uc2dc \uc0ac\uc6a9", url: "#_13" },
           ]},
         ];
@@ -184,8 +184,8 @@ source ~/.bashrc
 <pre><code class="language-bash">colcon build --parallel-workers 4
 </code></pre>
 <p>위 명령어는 4개의 CPU 코어만을 사용하여 병렬로 빌드를 수행한다. 이 옵션은 빌드 시간이 길거나 시스템 리소스를 절약해야 할 때 유용하다.</p>
-<h4 id="_12">인크리멘탈 빌드</h4>
-<p>대규모 프로젝트에서 모든 패키지를 다시 빌드하는 것은 시간이 많이 걸린다. 이를 해결하기 위해 colcon은 인크리멘탈 빌드를 지원한다. <code>--merge-install</code> 옵션을 사용하면 설치 디렉토리를 병합하여 변경된 패키지만을 다시 빌드할 수 있다.</p>
+<h4 id="_12">점진적 빌드</h4>
+<p>대규모 프로젝트에서 모든 패키지를 다시 빌드하는 것은 시간이 많이 걸린다. 이를 해결하기 위해 colcon은 점진적 빌드를 지원한다. <code>--merge-install</code> 옵션을 사용하면 설치 디렉토리를 병합하여 변경된 패키지만을 다시 빌드할 수 있다.</p>
 <pre><code class="language-bash">colcon build --merge-install
 </code></pre>
 <p>이 옵션을 사용하면 이전에 빌드된 패키지들을 다시 빌드하지 않고, 변경된 패키지만 빌드할 수 있다.</p>
