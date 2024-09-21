@@ -173,7 +173,7 @@ self.declare_parameter('namespace2.shared_param', 'value2')
 <p>위 코드에서는 <code>'namespace1'</code>과 <code>'namespace2'</code>라는 네임스페이스를 사용하여 각각 다른 값을 가진 파라미터를 선언하였다. 이를 통해 서로 다른 노드에서 같은 이름의 파라미터를 사용하더라도 값이 충돌하지 않는다.</p>
 <h4 id="52">5.2. 네임스페이스를 통한 파라미터 그룹화</h4>
 <p>네임스페이스는 파라미터를 논리적으로 그룹화할 때 유용하다. 예를 들어, 동일한 기능을 수행하는 여러 노드가 있을 때, 각각의 노드는 자신의 네임스페이스 내에서 파라미터를 선언하고 관리할 수 있다.</p>
-<p>Mermaid 다이어그램을 사용하여 파라미터가 네임스페이스를 통해 어떻게 관리되는지 시각화할 수 있다.</p>
+<p>다이어그램을 사용하여 파라미터가 네임스페이스를 통해 어떻게 관리되는지 시각화할 수 있다.</p>
 <div class="mermaid">graph TD;
     A[Global Parameter Server] --&gt; B[Namespace 1 - Node 1];
     A --&gt; C[Namespace 2 - Node 2];

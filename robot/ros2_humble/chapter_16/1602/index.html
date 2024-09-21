@@ -197,7 +197,7 @@ param_value = self.get_parameter('robot_namespace.robot_speed').get_parameter_va
 <li><strong>네트워크 지연</strong>: 분산된 시스템에서 노드 간 파라미터 상호작용 시 네트워크 지연이 발생할 수 있으며, 이를 최소화하기 위한 네트워크 QoS 설정이 필요하다.</li>
 <li><strong>충돌 관리</strong>: 여러 노드가 동시에 동일한 파라미터를 수정하려고 할 때 충돌이 발생할 수 있다. 이를 방지하기 위한 충돌 감지 및 해결 메커니즘이 필요하다.</li>
 </ul>
-<p>Mermaid 다이어그램을 활용하여 파라미터 상호작용 흐름을 시각적으로 표현할 수 있다.</p>
+<p>다이어그램을 활용하여 파라미터 상호작용 흐름을 시각적으로 표현할 수 있다.</p>
 <div class="mermaid">graph TD
     A[노드 A] --&gt;|파라미터 요청| B[파라미터 서버]
     B --&gt;|파라미터 응답| A

@@ -304,7 +304,7 @@ except (tf2_ros.LookupException, tf2_ros.ConnectivityException, tf2_ros.Extrapol
 </code></pre>
 <p>이 명령을 실행하면 TF2의 좌표 변환 트리를 시각화한 PDF 파일을 생성할 수 있다. 이를 통해 각 좌표계 간의 변환 관계를 쉽게 파악할 수 있다.</p>
 <h4 id="tf2">TF2 트리의 예시</h4>
-<p>Mermaid 다이어그램을 활용하여 간단한 좌표 변환 체인을 시각화하면 다음과 같다:</p>
+<p>다이어그램을 활용하여 간단한 좌표 변환 체인을 시각화하면 다음과 같다:</p>
 <div class="mermaid">graph LR
     A[base_link] --&gt; B[camera_link]
     B --&gt; C[sensor_link]

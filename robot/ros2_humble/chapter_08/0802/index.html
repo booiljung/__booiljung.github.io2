@@ -94,7 +94,7 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 <li><strong>execute</strong>: 목표가 수락되었을 때 실제로 작업을 수행하는 함수이다.</li>
 <li><strong>handle_accepted</strong>: 목표가 수락되었을 때 이를 처리하는 콜백 함수이다.</li>
 </ol>
-<p>액션 서버의 전반적인 구조를 아래와 같은 mermaid 다이어그램으로 나타낼 수 있다.</p>
+<p>액션 서버의 전반적인 구조를 아래와 같은 다이어그램으로 나타낼 수 있다.</p>
 <div class="mermaid">sequenceDiagram
     participant Client
     participant ActionServer
@@ -256,7 +256,7 @@ private:
 </code></pre>
 <h3 id="_9">피드백 및 결과 처리 과정</h3>
 <p>액션 클라이언트는 목표가 실행되는 동안 서버로부터 주기적으로 피드백을 받는다. 피드백은 <code>feedback_callback</code> 함수에서 처리되며, 결과는 <code>result_callback</code> 함수에서 최종적으로 처리된다.</p>
-<p>피드백 및 결과 처리 과정을 아래 mermaid 다이어그램으로 나타낼 수 있다.</p>
+<p>피드백 및 결과 처리 과정을 아래 다이어그램으로 나타낼 수 있다.</p>
 <div class="mermaid">sequenceDiagram
     participant Client
     participant ActionServer
