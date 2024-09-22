@@ -44,11 +44,21 @@
               {title: "\uc5ed\uc6b4\ub3d9\ud559 \uc54c\uace0\ub9ac\uc998 \uad6c\ud604", url: "#_5" },
               {title: "\uc608\uc81c \ucf54\ub4dc: \uac04\ub2e8\ud55c \uc5ed\uc6b4\ub3d9\ud559 \uad6c\ud604", url: "#_6" },
           ]},
-          {title: "\ub9e4\ub2c8\ud4f0\ub808\uc774\ud130 \uc2dc\ubbac\ub808\uc774\uc158 (\uacc4\uc18d)", url: "#_7", children: [
-              {title: "\ub3d9\uc5ed\ud559 \uc2dc\ubbac\ub808\uc774\uc158", url: "#_8" },
-              {title: "\ucda9\ub3cc \uac10\uc9c0 \ubc0f \ubc18\uc751", url: "#_12" },
-              {title: "\uc13c\uc11c \ub370\uc774\ud130 \ud1b5\ud569", url: "#_15" },
-              {title: "\ub9e4\ub2c8\ud4f0\ub808\uc774\ud130\uc758 \uacbd\ub85c \uacc4\ud68d", url: "#_17" },
+          {title: "\ub3d9\uc5ed\ud559 \uc2dc\ubbac\ub808\uc774\uc158", url: "#_7", children: [
+              {title: "\ub77c\uadf8\ub791\uc9c0\uc548 \uc5ed\ud559", url: "#_8" },
+              {title: "\ub3d9\uc5ed\ud559 \ubc29\uc815\uc2dd\uc758 \uc801\uc6a9", url: "#_9" },
+              {title: "\uc608\uc81c \ucf54\ub4dc: \ub3d9\uc5ed\ud559 \uae30\ubc18 \uc870\uc778\ud2b8 \uc81c\uc5b4", url: "#_10" },
+          ]},
+          {title: "\ucda9\ub3cc \uac10\uc9c0 \ubc0f \ubc18\uc751", url: "#_11", children: [
+              {title: "\ucda9\ub3cc \uac10\uc9c0 \uc124\uc815", url: "#_12" },
+              {title: "\uc608\uc81c \ucf54\ub4dc: \ucda9\ub3cc \uc774\ubca4\ud2b8 \ucc98\ub9ac", url: "#_13" },
+          ]},
+          {title: "\uc13c\uc11c \ub370\uc774\ud130 \ud1b5\ud569", url: "#_14", children: [
+              {title: "\uadfc\uc811 \uc13c\uc11c \uc2dc\ubbac\ub808\uc774\uc158", url: "#_15" },
+          ]},
+          {title: "\ub9e4\ub2c8\ud4f0\ub808\uc774\ud130\uc758 \uacbd\ub85c \uacc4\ud68d", url: "#_16", children: [
+              {title: "\uacbd\ub85c \uacc4\ud68d \uc54c\uace0\ub9ac\uc998", url: "#_17" },
+              {title: "\uc608\uc81c \ucf54\ub4dc: \uc9c1\uc120 \uacbd\ub85c \uacc4\ud68d", url: "#_18" },
           ]},
         ];
 
@@ -178,11 +188,9 @@ public class InverseKinematics : MonoBehaviour
 }
 </code></pre>
 <p>이 코드는 매우 간단한 역운동학 예제로, 실제 매니퓰레이터의 복잡한 움직임을 구현하려면 더 정교한 알고리즘이 필요하다. 그러나 기본 개념을 이해하는 데 도움이 된다.</p>
-<p>[계속]</p>
-<h1 id="_7">매니퓰레이터 시뮬레이션 (계속)</h1>
-<h3 id="_8">동역학 시뮬레이션</h3>
+<h3 id="_7">동역학 시뮬레이션</h3>
 <p>매니퓰레이터의 동적 거동을 정확하게 시뮬레이션하기 위해서는 물리 기반의 동역학 모델을 구현해야 한다. 이는 매니퓰레이터의 조인트에 작용하는 힘과 토크를 계산하고, 각 링크의 가속도와 속도를 결정하는 과정을 포함한다.</p>
-<h4 id="_9">라그랑지안 역학</h4>
+<h4 id="_8">라그랑지안 역학</h4>
 <p>라그랑지안 역학은 매니퓰레이터의 동역학을 모델링하는 데 널리 사용되는 방법이다. 라그랑지안 <span class="arithmatex"><span class="MathJax_Preview">L</span><script type="math/tex">L</script></span>은 운동 에너지 <span class="arithmatex"><span class="MathJax_Preview">T</span><script type="math/tex">T</script></span>와 위치 에너지 <span class="arithmatex"><span class="MathJax_Preview">V</span><script type="math/tex">V</script></span>의 차이로 정의된다:</p>
 <p>$$</p>
 <p>L = T - V</p>
@@ -195,9 +203,9 @@ public class InverseKinematics : MonoBehaviour
 - <span class="arithmatex"><span class="MathJax_Preview">\theta_i</span><script type="math/tex">\theta_i</script></span>는 <span class="arithmatex"><span class="MathJax_Preview">i</span><script type="math/tex">i</script></span>번째 조인트의 각도
 - <span class="arithmatex"><span class="MathJax_Preview">\dot{\theta}_i</span><script type="math/tex">\dot{\theta}_i</script></span>는 <span class="arithmatex"><span class="MathJax_Preview">i</span><script type="math/tex">i</script></span>번째 조인트의 각속도
 - <span class="arithmatex"><span class="MathJax_Preview">\tau_i</span><script type="math/tex">\tau_i</script></span>는 <span class="arithmatex"><span class="MathJax_Preview">i</span><script type="math/tex">i</script></span>번째 조인트에 작용하는 토크</p>
-<h4 id="_10">동역학 방정식의 적용</h4>
+<h4 id="_9">동역학 방정식의 적용</h4>
 <p>매니퓰레이터의 각 링크에 대해 운동 에너지와 위치 에너지를 계산하고, 이를 라그랑지안에 대입하여 각 조인트에 대한 동역학 방정식을 도출한다. Unity에서는 이러한 방정식을 스크립트로 구현하여 조인트의 움직임을 제어할 수 있다.</p>
-<h4 id="_11">예제 코드: 동역학 기반 조인트 제어</h4>
+<h4 id="_10">예제 코드: 동역학 기반 조인트 제어</h4>
 <pre><code class="language-csharp">using UnityEngine;
 
 public class DynamicsController : MonoBehaviour
@@ -223,15 +231,15 @@ public class DynamicsController : MonoBehaviour
 }
 </code></pre>
 <p>이 코드는 비례-미분(PD) 제어기를 사용하여 조인트의 각도를 원하는 값으로 제어한다. 실제 동역학을 구현하려면 힘과 토크의 정확한 계산이 필요하다.</p>
-<h3 id="_12">충돌 감지 및 반응</h3>
+<h3 id="_11">충돌 감지 및 반응</h3>
 <p>매니퓰레이터 시뮬레이션에서 충돌 감지는 중요한 요소이다. Unity의 물리 엔진을 활용하여 매니퓰레이터의 링크 간, 링크와 환경 간의 충돌을 감지하고 적절히 반응할 수 있다.</p>
-<h4 id="_13">충돌 감지 설정</h4>
+<h4 id="_12">충돌 감지 설정</h4>
 <ol>
 <li><strong>Collider 추가:</strong> 매니퓰레이터의 각 링크에 Collider 컴포넌트를 추가하여 충돌을 감지할 수 있도록 한다. 일반적으로 BoxCollider, SphereCollider, CapsuleCollider 등이 사용된다.</li>
 <li><strong>Rigidbody 설정:</strong> 물리적 상호작용을 위해 각 링크에 Rigidbody 컴포넌트를 추가하고, 필요한 경우 Kinematic 옵션을 설정한다.</li>
 <li><strong>충돌 반응:</strong> 충돌이 발생했을 때의 반응을 정의한다. 예를 들어, 충돌 시 로봇의 움직임을 멈추거나, 충돌 지점에 힘을 가하는 등의 처리를 할 수 있다.</li>
 </ol>
-<h4 id="_14">예제 코드: 충돌 이벤트 처리</h4>
+<h4 id="_13">예제 코드: 충돌 이벤트 처리</h4>
 <pre><code class="language-csharp">using UnityEngine;
 
 public class CollisionHandler : MonoBehaviour
@@ -244,9 +252,9 @@ public class CollisionHandler : MonoBehaviour
 }
 </code></pre>
 <p>이 코드는 충돌이 발생했을 때 콘솔에 로그를 출력하는 간단한 예제이다. 실제 응용에서는 충돌에 따른 로봇의 반응을 정의할 수 있다.</p>
-<h3 id="_15">센서 데이터 통합</h3>
+<h3 id="_14">센서 데이터 통합</h3>
 <p>매니퓰레이터 시뮬레이션에서 센서 데이터를 통합하여 로봇의 상태를 모니터링하고 제어하는 것이 중요하다. 예를 들어, 근접 센서, 힘 토크 센서 등을 사용하여 로봇의 상호작용을 보다 정밀하게 제어할 수 있다.</p>
-<h4 id="_16">근접 센서 시뮬레이션</h4>
+<h4 id="_15">근접 센서 시뮬레이션</h4>
 <p>근접 센서는 매니퓰레이터가 물체에 접근할 때 거리를 측정하는 데 사용된다. Unity에서는 Raycast를 사용하여 근접 센서를 시뮬레이션할 수 있다.</p>
 <pre><code class="language-csharp">using UnityEngine;
 
@@ -266,16 +274,16 @@ public class ProximitySensor : MonoBehaviour
 }
 </code></pre>
 <p>이 코드는 매니퓰레이터의 전방에 Ray를 쏴서 일정 범위 내의 물체를 감지한다. 감지된 물체의 이름과 거리를 로그로 출력한다.</p>
-<h3 id="_17">매니퓰레이터의 경로 계획</h3>
+<h3 id="_16">매니퓰레이터의 경로 계획</h3>
 <p>매니퓰레이터가 특정 작업을 수행하기 위해 경로를 계획하는 과정은 시뮬레이션에서 중요한 부분이다. 경로 계획 알고리즘을 구현하여 로봇이 충돌 없이 목표 지점으로 이동할 수 있도록 한다.</p>
-<h4 id="_18">경로 계획 알고리즘</h4>
+<h4 id="_17">경로 계획 알고리즘</h4>
 <p>대표적인 경로 계획 알고리즘으로는 다음과 같은 것들이 있다:</p>
 <ul>
 <li><strong>직선 경로 계획:</strong> 간단한 직선 경로를 따라 이동하는 방법이다.</li>
 <li><strong>자유 공간 탐색:</strong> 장애물이 있는 환경에서 자유롭게 이동할 수 있는 경로를 탐색한다.</li>
 <li><strong>최적 경로 계획:</strong> 최소 시간, 최소 에너지 등 최적의 조건을 만족하는 경로를 찾는다.</li>
 </ul>
-<h4 id="_19">예제 코드: 직선 경로 계획</h4>
+<h4 id="_18">예제 코드: 직선 경로 계획</h4>
 <pre><code class="language-csharp">using UnityEngine;
 
 public class PathPlanner : MonoBehaviour

@@ -43,8 +43,6 @@
           {title: "Alchemy API\uc758 \uc8fc\uc694 \ud568\uc218 \ubc0f \uadf8 \uc0ac\uc6a9 \uc608\uc81c", url: "#alchemy-api_2", children: [
               {title: "rt_task_create", url: "#rt_task_create" },
               {title: "rt_task_start", url: "#rt_task_start" },
-          ]},
-          {title: "Alchemy API\uc758 \uc8fc\uc694 \ud568\uc218 \ubc0f \uadf8 \uc0ac\uc6a9 \uc608\uc81c (\uacc4\uc18d)", url: "#alchemy-api_3", children: [
               {title: "rt_task_sleep", url: "#rt_task_sleep" },
               {title: "rt_sem_create", url: "#rt_sem_create" },
               {title: "rt_sem_p\uc640 rt_sem_v", url: "#rt_sem_p-rt_sem_v" },
@@ -223,7 +221,6 @@ rt_task_create(&amp;my_task, &quot;MyTask&quot;, 0, 50, 0);
 
 rt_task_start(&amp;my_task, &amp;task_entry, NULL);
 </code></pre>
-<h2 id="alchemy-api_3">Alchemy API의 주요 함수 및 그 사용 예제 (계속)</h2>
 <h3 id="rt_task_sleep"><code>rt_task_sleep</code></h3>
 <p>특정 시간 동안 현재 실행 중인 스레드를 일시 중지하는 함수이다. <code>rt_timer_ns2ticks</code> 함수와 함께 사용하면 나노초 단위의 정밀한 대기 시간을 지정할 수 있다.</p>
 <pre><code class="language-c">#include &lt;alchemy/timer.h&gt;

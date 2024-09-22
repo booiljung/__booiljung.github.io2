@@ -150,7 +150,7 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 \mathbf{P}_{k|k-1} = \mathbf{F}_{k} \mathbf{P}_{k-1|k-1} \mathbf{F}_{k}^{T} + \mathbf{Q}_{k}
 </script>
 </div>
-<p>여기서 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{F}_{k}</span><script type="math/tex">\mathbf{F}_{k}</script></span>는 상태 벡터의 야코비안 행렬, <span class="arithmatex"><span class="MathJax_Preview">\mathbf{Q}_{k}</span><script type="math/tex">\mathbf{Q}_{k}</script></span>는 시스템 노이즈 공분산 행렬이다.</p>
+<p>여기서 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{F}_{k}</span><script type="math/tex">\mathbf{F}_{k}</script></span>는 상태 벡터의 야코비 행렬, <span class="arithmatex"><span class="MathJax_Preview">\mathbf{Q}_{k}</span><script type="math/tex">\mathbf{Q}_{k}</script></span>는 시스템 노이즈 공분산 행렬이다.</p>
 <ol>
 <li><strong>업데이트 단계</strong>: 각 센서로부터 측정된 데이터를 기반으로 예측된 상태를 업데이트한다. 특정 센서 <span class="arithmatex"><span class="MathJax_Preview">i</span><script type="math/tex">i</script></span>에 대한 잔차(residual) <span class="arithmatex"><span class="MathJax_Preview">\mathbf{y}_{k}^{(i)}</span><script type="math/tex">\mathbf{y}_{k}^{(i)}</script></span>는 다음과 같이 정의된다.</li>
 </ol>
@@ -171,7 +171,7 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 \mathbf{S}_{k}^{(i)} = \mathbf{H}_{k}^{(i)} \mathbf{P}_{k|k-1} \mathbf{H}_{k}^{(i)T} + \mathbf{R}_{k}^{(i)}
 </script>
 </div>
-<p>여기서 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{H}_{k}^{(i)}</span><script type="math/tex">\mathbf{H}_{k}^{(i)}</script></span>는 센서 <span class="arithmatex"><span class="MathJax_Preview">i</span><script type="math/tex">i</script></span>에 대한 관측 모델의 야코비안 행렬, <span class="arithmatex"><span class="MathJax_Preview">\mathbf{R}_{k}^{(i)}</span><script type="math/tex">\mathbf{R}_{k}^{(i)}</script></span>는 해당 센서의 측정 잡음 공분산 행렬이다.</p>
+<p>여기서 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{H}_{k}^{(i)}</span><script type="math/tex">\mathbf{H}_{k}^{(i)}</script></span>는 센서 <span class="arithmatex"><span class="MathJax_Preview">i</span><script type="math/tex">i</script></span>에 대한 관측 모델의 야코비 행렬, <span class="arithmatex"><span class="MathJax_Preview">\mathbf{R}_{k}^{(i)}</span><script type="math/tex">\mathbf{R}_{k}^{(i)}</script></span>는 해당 센서의 측정 잡음 공분산 행렬이다.</p>
 <h3 id="_5">칼만 이득 계산</h3>
 <p>센서 융합에서 중요한 부분은 각 센서의 측정값에 얼마나 신뢰를 두고 업데이트할 것인가를 결정하는 <strong>칼만 이득(Kalman Gain)</strong>이다. 이는 예측된 상태를 센서로부터의 새로운 측정값으로 업데이트할 때, 그 측정값이 얼마나 중요한지를 나타내는 값이다. 특정 센서 <span class="arithmatex"><span class="MathJax_Preview">i</span><script type="math/tex">i</script></span>에 대한 칼만 이득은 다음과 같이 계산된다.</p>
 <div class="arithmatex">

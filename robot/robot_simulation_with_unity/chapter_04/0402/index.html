@@ -43,14 +43,12 @@
               {title: "\ucda9\ub3cc \uac10\uc9c0 \uc124\uc815", url: "#_6" },
               {title: "\ucda9\ub3cc \ubb3c\ub9ac \uc124\uc815", url: "#_7" },
               {title: "\ucda9\ub3cc \ucc98\ub9ac \ucd5c\uc801\ud654", url: "#_8" },
-          ]},
-          {title: "\ucda9\ub3cc \ucc98\ub9ac \ucd5c\uc801\ud654 (\uacc4\uc18d)", url: "#_9", children: [
               {title: "\uc5f0\uc18d \ucda9\ub3cc \uac10\uc9c0 (Continuous Collision Detection)", url: "#continuous-collision-detection" },
               {title: "\ud2b8\ub9ac\uac70(Collider Trigger) \uc0ac\uc6a9", url: "#collider-trigger" },
-              {title: "\ucda9\ub3cc \ub808\uc774\uc5b4 \ubc0f \ucda9\ub3cc \ub9e4\ud2b8\ub9ad\uc2a4", url: "#_10" },
-              {title: "\ubb3c\ub9ac \uc131\ub2a5 \ucd5c\uc801\ud654 \ud301", url: "#_11" },
+              {title: "\ucda9\ub3cc \ub808\uc774\uc5b4 \ubc0f \ucda9\ub3cc \ub9e4\ud2b8\ub9ad\uc2a4", url: "#_9" },
+              {title: "\ubb3c\ub9ac \uc131\ub2a5 \ucd5c\uc801\ud654 \ud301", url: "#_10" },
           ]},
-          {title: "\uc608\uc81c: \ub85c\ubd07\uacfc \uc9c0\uba74 \uac04\uc758 \ucda9\ub3cc \ucc98\ub9ac", url: "#_12", children: [
+          {title: "\uc608\uc81c: \ub85c\ubd07\uacfc \uc9c0\uba74 \uac04\uc758 \ucda9\ub3cc \ucc98\ub9ac", url: "#_11", children: [
           ]},
         ];
 
@@ -237,7 +235,6 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 <li><strong>Collider 간소화</strong>:</li>
 <li>복잡한 메시 콜라이더 대신 기본 도형 콜라이더를 사용하여 계산 부담을 줄이다.</li>
 </ul>
-<h3 id="_9">충돌 처리 최적화 (계속)</h3>
 <h4 id="continuous-collision-detection">연속 충돌 감지 (Continuous Collision Detection)</h4>
 <p>기본적으로 Unity의 물리 엔진은 <strong>불연속 충돌 감지(Discrete Collision Detection)</strong> 방식을 사용한다. 이는 프레임 간 물체의 위치를 확인하여 충돌을 감지하는 방식으로, 고속으로 이동하는 물체가 충돌을 놓칠 수 있는 단점이 있다. 이를 해결하기 위해 <strong>연속 충돌 감지(Continuous Collision Detection)</strong> 방식을 사용할 수 있다.</p>
 <ul>
@@ -296,7 +293,7 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
       // 추가 로직 구현
   }
   ```</p>
-<h4 id="_10">충돌 레이어 및 충돌 매트릭스</h4>
+<h4 id="_9">충돌 레이어 및 충돌 매트릭스</h4>
 <p>충돌 레이어를 사용하면 특정 레이어에 속한 물체 간의 충돌을 활성화하거나 비활성화할 수 있다. 이는 시뮬레이션의 성능을 최적화하고, 불필요한 충돌 계산을 줄이는 데 유용하다.</p>
 <ul>
 <li><strong>레이어 설정 방법</strong>:</li>
@@ -322,7 +319,7 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 <ul>
 <li>예를 들어, 로봇과 환경 레이어 간의 충돌만 활성화하고, 로봇 간의 충돌은 비활성화할 수 있다.</li>
 </ul>
-<h4 id="_11">물리 성능 최적화 팁</h4>
+<h4 id="_10">물리 성능 최적화 팁</h4>
 <ul>
 <li>
 <p><strong>단순한 콜라이더 사용</strong>:
@@ -345,7 +342,7 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
   물체의 거리에 따라 콜라이더의 복잡성을 조절하여 성능을 향상시킬 수 있다.</p>
 </li>
 </ul>
-<h3 id="_12">예제: 로봇과 지면 간의 충돌 처리</h3>
+<h3 id="_11">예제: 로봇과 지면 간의 충돌 처리</h3>
 <p>로봇이 지면과 충돌하여 안정적으로 서 있을 수 있도록 설정하는 예제를 살펴보겠다.</p>
 <ol>
 <li><strong>지면 설정</strong>:</li>

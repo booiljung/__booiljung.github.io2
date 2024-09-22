@@ -42,8 +42,6 @@
           {title: "\uc608\uc81c: QR \ubd84\ud574\uc758 \uc2e4\uc81c \uacc4\uc0b0", url: "#qr_1", children: [
               {title: "\uc608\uc81c", url: "#_1" },
           ]},
-          {title: "\uc608\uc81c (\uacc4\uc18d)", url: "#_2", children: [
-          ]},
           {title: "\uc77c\ubc18\uc801\uc778 QR \ubd84\ud574 \uc54c\uace0\ub9ac\uc998", url: "#qr_2", children: [
           ]},
           {title: "\uc218\uc815\ub41c \uadf8\ub78c-\uc288\ubbf8\ud2b8 \ubc29\ubc95", url: "#-_1", children: [
@@ -277,7 +275,6 @@ r_{23} = \mathbf{q}_2^\top \mathbf{a}_3 = \frac{1}{\sqrt{2}} \begin{bmatrix} 0 \
 = \begin{bmatrix} 1 \\ 2 \\ 0 \end{bmatrix} - \begin{bmatrix} 1 \\ 1 \\ 1 \end{bmatrix} + \begin{bmatrix} 0 \\ -1 \\ 1 \end{bmatrix} = \begin{bmatrix} 0 \\ 0 \\ 0 \end{bmatrix}
 </script>
 </div>
-<h3 id="_2">예제 (계속)</h3>
 <p>이전 단계에서 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{q}_3</span><script type="math/tex">\mathbf{q}_3</script></span>가 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{0}</span><script type="math/tex">\mathbf{0}</script></span> 벡터가 되었기 때문에, 이 벡터는 더 이상 유효한 직교 벡터로 사용할 수 없다. 따라서 이 경우에는 QR 분해 과정에서 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{A}</span><script type="math/tex">\mathbf{A}</script></span>가 완전 계수(rank-deficient)인 상황을 나타낸다. 이런 경우에는 QR 분해 과정이 멈추며, 행렬 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{R}</span><script type="math/tex">\mathbf{R}</script></span>은 정사각 행렬이 아닌 더 작은 크기의 상삼각 행렬이 된다.</p>
 <p>이 예제는 QR 분해를 수행할 때 발생할 수 있는 특수한 상황을 잘 보여준다. 따라서, <span class="arithmatex"><span class="MathJax_Preview">\mathbf{A}</span><script type="math/tex">\mathbf{A}</script></span>가 완전 계수가 아닌 경우, 즉 행렬의 열들이 선형 독립이 아닌 경우에는 QR 분해의 결과가 달라질 수 있다.</p>
 <h3 id="qr_2">일반적인 QR 분해 알고리즘</h3>

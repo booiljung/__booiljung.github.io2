@@ -42,15 +42,13 @@
           {title: "\uc6d0\uac70\ub9ac \ud798(Long-range Forces)", url: "#long-range-forces", children: [
               {title: "\uc911\ub825", url: "#_4" },
               {title: "\uc804\uc790\uae30\ub825", url: "#_5" },
+              {title: "\uc2a4\ud504\ub9c1 \ud798", url: "#_6" },
           ]},
-          {title: "\uc6d0\uac70\ub9ac \ud798 (\uacc4\uc18d)", url: "#_6", children: [
-              {title: "\uc2a4\ud504\ub9c1 \ud798", url: "#_7" },
-          ]},
-          {title: "\ud798\uc758 \ud569\ub825 \uacc4\uc0b0", url: "#_8", children: [
+          {title: "\ud798\uc758 \ud569\ub825 \uacc4\uc0b0", url: "#_7", children: [
           ]},
           {title: "\uc2dc\uac04\uc801 \ud1b5\ud569 (Time Integration)", url: "#time-integration", children: [
-              {title: "\uc624\uc77c\ub7ec \ubc29\ubc95", url: "#_9" },
-              {title: "\uc0c1\ubc18 \uc624\uc77c\ub7ec \ubc29\ubc95", url: "#_10" },
+              {title: "\uc624\uc77c\ub7ec \ubc29\ubc95", url: "#_8" },
+              {title: "\uc0c1\ubc18 \uc624\uc77c\ub7ec \ubc29\ubc95", url: "#_9" },
               {title: "\ub8fd\uac8c-\ucfe0\ud0c0 \ubc29\ubc95", url: "#-" },
           ]},
         ];
@@ -173,8 +171,7 @@ F_{\text{운동}} = \mu_k N
 </script>
 </div>
 <p>여기서 <span class="arithmatex"><span class="MathJax_Preview">k_e</span><script type="math/tex">k_e</script></span>는 쿨롱 상수, <span class="arithmatex"><span class="MathJax_Preview">q_1</span><script type="math/tex">q_1</script></span>과 <span class="arithmatex"><span class="MathJax_Preview">q_2</span><script type="math/tex">q_2</script></span>는 두 전하량이다.</p>
-<h3 id="_6">원거리 힘 (계속)</h3>
-<h4 id="_7">스프링 힘</h4>
+<h4 id="_6">스프링 힘</h4>
 <p>스프링 힘은 후크의 법칙 (Hooke's Law)으로 표현되며, 스프링이 변형될 때 발생하는 복원력을 설명한다. 스프링 힘은 변형량에 비례하여 발생하며, 다음과 같이 표현된다:</p>
 <div class="arithmatex">
 <div class="MathJax_Preview">
@@ -203,7 +200,7 @@ F_{\text{운동}} = \mu_k N
 \mathbf{F}_{\text{스프링 전체}} = -k \mathbf{x} - b \mathbf{v}
 </script>
 </div>
-<h3 id="_8">힘의 합력 계산</h3>
+<h3 id="_7">힘의 합력 계산</h3>
 <p>다양한 힘들이 물체에 작용할 경우, 이들을 벡터적으로 합하여 합력(Net Force) 를 계산한다. 각 힘은 벡터로 표현되며, 물체에 작용하는 모든 힘을 더하면 전체 합력을 얻을 수 있다:</p>
 <div class="arithmatex">
 <div class="MathJax_Preview">
@@ -215,7 +212,7 @@ F_{\text{운동}} = \mu_k N
 </div>
 <h3 id="time-integration">시간적 통합 (Time Integration)</h3>
 <p>물리 엔진에서 힘이 작용하는 동안 객체의 상태(위치와 속도) 변화를 계산하기 위해 시간적 통합 방법이 사용된다. 가장 일반적인 통합 방법으로는 오일러 방법(Euler Method), 상반 오일러 방법(Semi-implicit Euler Method), 그리고 룽게-쿠타 방법(Runge-Kutta Method) 등이 있다.</p>
-<h4 id="_9">오일러 방법</h4>
+<h4 id="_8">오일러 방법</h4>
 <p>오일러 방법은 가장 간단한 방법 중 하나로, 다음과 같이 작성된다:</p>
 <div class="arithmatex">
 <div class="MathJax_Preview">
@@ -234,7 +231,7 @@ F_{\text{운동}} = \mu_k N
 </script>
 </div>
 <p>여기서 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{v}</span><script type="math/tex">\mathbf{v}</script></span>는 속도, <span class="arithmatex"><span class="MathJax_Preview">\mathbf{x}</span><script type="math/tex">\mathbf{x}</script></span>는 위치, <span class="arithmatex"><span class="MathJax_Preview">m</span><script type="math/tex">m</script></span>은 물체의 질량, <span class="arithmatex"><span class="MathJax_Preview">\mathbf{F}_{\text{합력}}</span><script type="math/tex">\mathbf{F}_{\text{합력}}</script></span>는 합력이다.</p>
-<h4 id="_10">상반 오일러 방법</h4>
+<h4 id="_9">상반 오일러 방법</h4>
 <p>상반 오일러 방법은 안정성을 더욱 향상시키기 위해 속도와 위치를 시간 간격 <span class="arithmatex"><span class="MathJax_Preview">\Delta t</span><script type="math/tex">\Delta t</script></span>로 교대로 업데이트한다.</p>
 <div class="arithmatex">
 <div class="MathJax_Preview">

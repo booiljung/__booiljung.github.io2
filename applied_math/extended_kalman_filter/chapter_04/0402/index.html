@@ -43,7 +43,7 @@
           ]},
           {title: "\uce7c\ub9cc \uc774\ub4dd\uc758 \ucd08\uae30\ud654", url: "#_5", children: [
           ]},
-          {title: "\uc57c\ucf54\ube44\uc548 \ud589\ub82c\uc758 \ucd08\uae30\ud654", url: "#_6", children: [
+          {title: "\uc57c\ucf54\ube44 \ud589\ub82c\uc758 \ucd08\uae30\ud654", url: "#_6", children: [
           ]},
           {title: "\uc0c1\ud0dc \uc804\uc774 \ud589\ub82c\uc758 \ucd08\uae30\ud654", url: "#_7", children: [
           ]},
@@ -189,10 +189,10 @@ r_1 & 0 & \dots & 0 \\
 \mathbf{K} = \mathbf{P} \mathbf{H}^\top \left(\mathbf{H} \mathbf{P} \mathbf{H}^\top + \mathbf{R}\right)^{-1}
 </script>
 </div>
-<p>여기서 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{H}</span><script type="math/tex">\mathbf{H}</script></span>는 측정 모델의 야코비안 행렬을 나타내며, 이 행렬은 상태 벡터를 측정 값으로 매핑하는 비선형 함수의 선형 근사이다.</p>
-<h3 id="_6">야코비안 행렬의 초기화</h3>
-<p>확장 칼만 필터는 비선형 시스템을 다루기 때문에, 시스템의 상태 변수를 측정 값으로 매핑하는 모델도 비선형일 수 있다. 이때, 측정 모델의 야코비안 행렬 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{H}</span><script type="math/tex">\mathbf{H}</script></span>는 상태 변수의 작은 변화에 따른 측정 값의 변화를 나타내는 선형 근사 행렬이다.</p>
-<p>야코비안 행렬은 상태 벡터 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{x}</span><script type="math/tex">\mathbf{x}</script></span>의 각 성분에 대한 측정 모델 함수 <span class="arithmatex"><span class="MathJax_Preview">h(\mathbf{x})</span><script type="math/tex">h(\mathbf{x})</script></span>의 편미분으로 정의되며, 다음과 같은 형태를 갖는다:</p>
+<p>여기서 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{H}</span><script type="math/tex">\mathbf{H}</script></span>는 측정 모델의 야코비 행렬을 나타내며, 이 행렬은 상태 벡터를 측정 값으로 매핑하는 비선형 함수의 선형 근사이다.</p>
+<h3 id="_6">야코비 행렬의 초기화</h3>
+<p>확장 칼만 필터는 비선형 시스템을 다루기 때문에, 시스템의 상태 변수를 측정 값으로 매핑하는 모델도 비선형일 수 있다. 이때, 측정 모델의 야코비 행렬 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{H}</span><script type="math/tex">\mathbf{H}</script></span>는 상태 변수의 작은 변화에 따른 측정 값의 변화를 나타내는 선형 근사 행렬이다.</p>
+<p>야코비 행렬은 상태 벡터 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{x}</span><script type="math/tex">\mathbf{x}</script></span>의 각 성분에 대한 측정 모델 함수 <span class="arithmatex"><span class="MathJax_Preview">h(\mathbf{x})</span><script type="math/tex">h(\mathbf{x})</script></span>의 편미분으로 정의되며, 다음과 같은 형태를 갖는다:</p>
 <div class="arithmatex">
 <div class="MathJax_Preview">
 \mathbf{H} = \frac{\partial h(\mathbf{x})}{\partial \mathbf{x}} = \begin{bmatrix} \frac{\partial h_1}{\partial x_1} &amp; \frac{\partial h_1}{\partial x_2} &amp; \dots &amp; \frac{\partial h_1}{\partial x_n} \\
@@ -209,7 +209,7 @@ r_1 & 0 & \dots & 0 \\
 \end{bmatrix}
 </script>
 </div>
-<p>초기화 단계에서 야코비안 행렬 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{H}</span><script type="math/tex">\mathbf{H}</script></span>는 시스템의 상태와 측정 모델에 따라 적절하게 설정되어야 한다. 이 행렬은 측정 단계에서 필수적으로 사용되며, 시스템의 비선형성을 적절히 반영하여 필터가 정확하게 동작하도록 돕는다.</p>
+<p>초기화 단계에서 야코비 행렬 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{H}</span><script type="math/tex">\mathbf{H}</script></span>는 시스템의 상태와 측정 모델에 따라 적절하게 설정되어야 한다. 이 행렬은 측정 단계에서 필수적으로 사용되며, 시스템의 비선형성을 적절히 반영하여 필터가 정확하게 동작하도록 돕는다.</p>
 <h3 id="_7">상태 전이 행렬의 초기화</h3>
 <p>상태 전이 행렬 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{F}</span><script type="math/tex">\mathbf{F}</script></span>는 시스템의 상태가 시간에 따라 어떻게 변화하는지를 나타내는 행렬이다. 이는 시스템의 동적 모델을 기반으로 정의되며, 다음과 같이 상태 벡터에 대한 상태 전이 함수 <span class="arithmatex"><span class="MathJax_Preview">f(\mathbf{x}, \mathbf{u})</span><script type="math/tex">f(\mathbf{x}, \mathbf{u})</script></span>의 편미분으로 구성된다:</p>
 <div class="arithmatex">

@@ -45,7 +45,7 @@
           ]},
           {title: "5. \uc218\uce58\uc801 \uc624\ucc28 \uac10\uc18c \uae30\ubc95", url: "#5", children: [
               {title: "1. \ud589\ub82c \uc5ed\ud589\ub82c \uacc4\uc0b0\uc758 \uc548\uc815\ud654", url: "#1_1" },
-              {title: "2. \uc57c\ucf54\ube44\uc548 \uacc4\uc0b0\uc758 \uc815\ubc00\ub3c4 \ud5a5\uc0c1", url: "#2_1" },
+              {title: "2. \uc57c\ucf54\ube44 \uacc4\uc0b0\uc758 \uc815\ubc00\ub3c4 \ud5a5\uc0c1", url: "#2_1" },
               {title: "3. \uc218\uce58 \uc548\uc815\uc131\uc744 \uc704\ud55c \uc2a4\ucf00\uc77c\ub9c1", url: "#3_1" },
           ]},
           {title: "6. \uc120\ud615\ud654 \uc624\ucc28 \ucd5c\uc18c\ud654", url: "#6", children: [
@@ -146,8 +146,8 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 </div>
 <p>여기서 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{I}</span><script type="math/tex">\mathbf{I}</script></span>는 항등 행렬이며, <span class="arithmatex"><span class="MathJax_Preview">\epsilon</span><script type="math/tex">\epsilon</script></span>은 매우 작은 양의 실수이다.</p>
 <h4 id="2">2. 상태 전이 행렬의 선형화</h4>
-<p>확장 칼만 필터에서는 상태 전이 함수가 비선형이므로, 이를 선형화하기 위해 테일러 급수를 이용하여 1차 미분 값인 야코비안 행렬을 계산한다. 이때, 상태 전이 행렬 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{F}</span><script type="math/tex">\mathbf{F}</script></span>와 관측 행렬 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{H}</span><script type="math/tex">\mathbf{H}</script></span>의 계산이 정확해야 한다.</p>
-<p>상태 전이 함수 <span class="arithmatex"><span class="MathJax_Preview">f(\mathbf{x})</span><script type="math/tex">f(\mathbf{x})</script></span>에 대한 야코비안 행렬 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{F}</span><script type="math/tex">\mathbf{F}</script></span>는 다음과 같이 계산된다.</p>
+<p>확장 칼만 필터에서는 상태 전이 함수가 비선형이므로, 이를 선형화하기 위해 테일러 급수를 이용하여 1차 미분 값인 야코비 행렬을 계산한다. 이때, 상태 전이 행렬 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{F}</span><script type="math/tex">\mathbf{F}</script></span>와 관측 행렬 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{H}</span><script type="math/tex">\mathbf{H}</script></span>의 계산이 정확해야 한다.</p>
+<p>상태 전이 함수 <span class="arithmatex"><span class="MathJax_Preview">f(\mathbf{x})</span><script type="math/tex">f(\mathbf{x})</script></span>에 대한 야코비 행렬 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{F}</span><script type="math/tex">\mathbf{F}</script></span>는 다음과 같이 계산된다.</p>
 <div class="arithmatex">
 <div class="MathJax_Preview">
 \mathbf{F} = \frac{\partial f(\mathbf{x})}{\partial \mathbf{x}} \bigg|_{\mathbf{x} = \mathbf{x}_{k-1}}
@@ -156,7 +156,7 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 \mathbf{F} = \frac{\partial f(\mathbf{x})}{\partial \mathbf{x}} \bigg|_{\mathbf{x} = \mathbf{x}_{k-1}}
 </script>
 </div>
-<p>이 야코비안 행렬을 정확하게 계산하지 않으면 필터의 성능이 크게 저하될 수 있으며, 수치적 오차가 축적될 수 있다. 따라서 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{F}</span><script type="math/tex">\mathbf{F}</script></span>와 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{H}</span><script type="math/tex">\mathbf{H}</script></span>의 계산 과정에서 수치적 오류를 최소화하기 위한 기법들이 필요하다.</p>
+<p>이 야코비 행렬을 정확하게 계산하지 않으면 필터의 성능이 크게 저하될 수 있으며, 수치적 오차가 축적될 수 있다. 따라서 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{F}</span><script type="math/tex">\mathbf{F}</script></span>와 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{H}</span><script type="math/tex">\mathbf{H}</script></span>의 계산 과정에서 수치적 오류를 최소화하기 위한 기법들이 필요하다.</p>
 <h3 id="3">3. 시간 갱신 단계의 안정화</h3>
 <p>확장 칼만 필터의 시간 갱신 단계는 상태 변수와 공분산 행렬의 예측을 포함한다. 시간 갱신 단계에서 상태 변수 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{x}_k</span><script type="math/tex">\mathbf{x}_k</script></span>와 공분산 행렬 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{P}_k</span><script type="math/tex">\mathbf{P}_k</script></span>는 다음과 같이 업데이트된다.</p>
 <div class="arithmatex">
@@ -220,7 +220,7 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 </li>
 </ul>
 <h3 id="5">5. 수치적 오차 감소 기법</h3>
-<p>확장 칼만 필터의 계산 과정에서 발생할 수 있는 수치적 오차를 최소화하는 것이 필수적이다. 특히, 행렬의 곱셈, 야코비안 계산, 역행렬 계산 등에서 오차가 발생할 가능성이 높다. 수치적 안정성을 유지하기 위한 몇 가지 기법을 살펴보자.</p>
+<p>확장 칼만 필터의 계산 과정에서 발생할 수 있는 수치적 오차를 최소화하는 것이 필수적이다. 특히, 행렬의 곱셈, 야코비 계산, 역행렬 계산 등에서 오차가 발생할 가능성이 높다. 수치적 안정성을 유지하기 위한 몇 가지 기법을 살펴보자.</p>
 <h4 id="1_1">1. 행렬 역행렬 계산의 안정화</h4>
 <p>칼만 이득 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{K}_k</span><script type="math/tex">\mathbf{K}_k</script></span>를 계산할 때, 행렬 <span class="arithmatex"><span class="MathJax_Preview">\left( \mathbf{H}_k \mathbf{P}_k \mathbf{H}_k^T + \mathbf{R}_k \right)^{-1}</span><script type="math/tex">\left( \mathbf{H}_k \mathbf{P}_k \mathbf{H}_k^T + \mathbf{R}_k \right)^{-1}</script></span>의 역행렬을 구하는 과정에서 수치적 오차가 발생할 수 있다. 이를 안정화하기 위한 방법은 다음과 같다.</p>
 <ul>
@@ -238,11 +238,11 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 <ul>
 <li><strong>역행렬 근사</strong>: 역행렬 대신 근사 기법을 사용하여 수치적 불안정을 방지할 수 있다. 이를 위해 반복적인 기법을 통해 근사값을 얻는 방법도 있다.</li>
 </ul>
-<h4 id="2_1">2. 야코비안 계산의 정밀도 향상</h4>
-<p>확장 칼만 필터는 비선형 함수의 선형화에 의존하므로, 야코비안 행렬을 정확하게 계산하는 것이 매우 중요하다. 잘못된 야코비안 계산은 필터의 성능을 크게 저하시킬 수 있다. 야코비안 계산의 정밀도를 높이는 방법은 다음과 같다.</p>
+<h4 id="2_1">2. 야코비 계산의 정밀도 향상</h4>
+<p>확장 칼만 필터는 비선형 함수의 선형화에 의존하므로, 야코비 행렬을 정확하게 계산하는 것이 매우 중요하다. 잘못된 야코비 계산은 필터의 성능을 크게 저하시킬 수 있다. 야코비 계산의 정밀도를 높이는 방법은 다음과 같다.</p>
 <ul>
 <li>
-<p><strong>수치 미분 대신 해석적 미분 사용</strong>: 야코비안 행렬을 구할 때, 수치 미분을 사용하면 오차가 발생할 수 있다. 가능한 경우, 해석적 미분을 사용하여 보다 정확한 야코비안 행렬을 구하는 것이 바람직하다.</p>
+<p><strong>수치 미분 대신 해석적 미분 사용</strong>: 야코비 행렬을 구할 때, 수치 미분을 사용하면 오차가 발생할 수 있다. 가능한 경우, 해석적 미분을 사용하여 보다 정확한 야코비 행렬을 구하는 것이 바람직하다.</p>
 </li>
 <li>
 <p><strong>중심 차분법</strong>: 수치 미분을 사용해야 하는 경우, 전진 차분법이나 후진 차분법 대신 중심 차분법을 사용하여 오차를 줄일 수 있다. 중심 차분법은 다음과 같이 계산된다.</p>
@@ -289,9 +289,9 @@ f(\mathbf{x}) \approx f(\mathbf{x}_0) + \nabla f(\mathbf{x}_0) (\mathbf{x} - \ma
 f(\mathbf{x}) \approx f(\mathbf{x}_0) + \nabla f(\mathbf{x}_0) (\mathbf{x} - \mathbf{x}_0) + \frac{1}{2} (\mathbf{x} - \mathbf{x}_0)^T \mathbf{H}_f (\mathbf{x} - \mathbf{x}_0)
 </script>
 </div>
-<p>여기서 <span class="arithmatex"><span class="MathJax_Preview">\nabla f(\mathbf{x}_0)</span><script type="math/tex">\nabla f(\mathbf{x}_0)</script></span>는 함수 <span class="arithmatex"><span class="MathJax_Preview">f(\mathbf{x})</span><script type="math/tex">f(\mathbf{x})</script></span>의 야코비안이고, <span class="arithmatex"><span class="MathJax_Preview">\mathbf{H}_f</span><script type="math/tex">\mathbf{H}_f</script></span>는 해시안(Hessian) 행렬이다.</p>
+<p>여기서 <span class="arithmatex"><span class="MathJax_Preview">\nabla f(\mathbf{x}_0)</span><script type="math/tex">\nabla f(\mathbf{x}_0)</script></span>는 함수 <span class="arithmatex"><span class="MathJax_Preview">f(\mathbf{x})</span><script type="math/tex">f(\mathbf{x})</script></span>의 야코비이고, <span class="arithmatex"><span class="MathJax_Preview">\mathbf{H}_f</span><script type="math/tex">\mathbf{H}_f</script></span>는 해시안(Hessian) 행렬이다.</p>
 <ul>
-<li><strong>비선형 함수의 미분 가능성</strong>: 비선형 함수가 미분 불가능하거나 야코비안이 비연속적인 경우, 근사 오차가 크게 발생할 수 있다. 따라서 비선형 함수를 선택할 때는 가능한 미분 가능하고 연속적인 함수를 사용하는 것이 바람직하다.</li>
+<li><strong>비선형 함수의 미분 가능성</strong>: 비선형 함수가 미분 불가능하거나 야코비이 비연속적인 경우, 근사 오차가 크게 발생할 수 있다. 따라서 비선형 함수를 선택할 때는 가능한 미분 가능하고 연속적인 함수를 사용하는 것이 바람직하다.</li>
 </ul>
 <h4 id="2_2">2. 선형화 간격의 최적화</h4>
 <p>확장 칼만 필터에서 비선형 시스템을 선형화할 때, 시스템의 상태 변화에 따라 일정 주기로 선형화를 수행한다. 이때 선형화 간격이 적절하지 않으면 선형화 오차가 발생할 수 있다.</p>

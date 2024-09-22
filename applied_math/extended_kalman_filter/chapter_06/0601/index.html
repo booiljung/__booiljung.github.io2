@@ -282,11 +282,11 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 - <span class="arithmatex"><span class="MathJax_Preview">\| \cdot \|</span><script type="math/tex">\| \cdot \|</script></span>는 유클리드 거리</p>
 <p>추적 오차는 시간에 따라 변할 수 있으며, 이를 평가하여 필터의 실시간 성능을 판단할 수 있다. 오차가 일정하거나 감소하면 필터가 안정적으로 작동하고 있음을 의미한다. 추적 오차가 커지면 필터의 추정에 문제가 있을 수 있음을 나타낸다.</p>
 <h3 id="computational-complexity">계산 복잡도 (Computational Complexity)</h3>
-<p>확장 칼만 필터의 성능을 평가할 때, 계산 복잡도는 매우 중요한 요소다. 비선형 시스템의 특성상, 필터는 선형화 과정과 야코비안 행렬 계산 등 많은 계산을 요구한다. 따라서 알고리즘의 계산 복잡도를 분석하고 최적화하는 것이 필터의 실시간 성능을 평가하는 데 필요하다.</p>
+<p>확장 칼만 필터의 성능을 평가할 때, 계산 복잡도는 매우 중요한 요소다. 비선형 시스템의 특성상, 필터는 선형화 과정과 야코비 행렬 계산 등 많은 계산을 요구한다. 따라서 알고리즘의 계산 복잡도를 분석하고 최적화하는 것이 필터의 실시간 성능을 평가하는 데 필요하다.</p>
 <p>확장 칼만 필터의 계산 복잡도는 크게 다음 두 가지 요소에 의해 결정된다.</p>
 <ol>
 <li>
-<p><strong>상태 전이와 선형화</strong>: 상태 전이 함수와 측정 함수의 야코비안 계산은 필터의 성능에 중요한 영향을 미치며, 이 계산은 시스템의 상태 차원 <span class="arithmatex"><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span>에 따라 복잡도가 달라진다. 야코비안 계산의 복잡도는 <span class="arithmatex"><span class="MathJax_Preview">O(n^2)</span><script type="math/tex">O(n^2)</script></span>으로, 시스템의 상태 변수 수가 증가할수록 계산 시간이 기하급수적으로 늘어난다.</p>
+<p><strong>상태 전이와 선형화</strong>: 상태 전이 함수와 측정 함수의 야코비 계산은 필터의 성능에 중요한 영향을 미치며, 이 계산은 시스템의 상태 차원 <span class="arithmatex"><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span>에 따라 복잡도가 달라진다. 야코비 계산의 복잡도는 <span class="arithmatex"><span class="MathJax_Preview">O(n^2)</span><script type="math/tex">O(n^2)</script></span>으로, 시스템의 상태 변수 수가 증가할수록 계산 시간이 기하급수적으로 늘어난다.</p>
 </li>
 <li>
 <p><strong>오차 공분산 행렬의 업데이트</strong>: 오차 공분산 행렬 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{P}</span><script type="math/tex">\mathbf{P}</script></span>의 업데이트 단계에서는 행렬의 곱셈과 덧셈이 포함되므로 복잡도는 <span class="arithmatex"><span class="MathJax_Preview">O(n^3)</span><script type="math/tex">O(n^3)</script></span>이다. 시스템이 복잡해질수록 이 단계에서의 연산 시간이 중요하게 작용한다.</p>

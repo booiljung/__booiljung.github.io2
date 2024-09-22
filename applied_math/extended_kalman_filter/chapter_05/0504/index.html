@@ -111,7 +111,7 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 </li>
 <li>
 <p><strong>계산 시간</strong><br />
-   확장 칼만 필터는 비선형 시스템을 선형화하기 위해 야코비안 행렬을 계산한다. 이러한 계산은 고차원의 시스템에서는 시간이 많이 소요되며, 실시간 처리를 위해서는 이 계산 시간을 줄이는 것이 필수적이다.</p>
+   확장 칼만 필터는 비선형 시스템을 선형화하기 위해 야코비 행렬을 계산한다. 이러한 계산은 고차원의 시스템에서는 시간이 많이 소요되며, 실시간 처리를 위해서는 이 계산 시간을 줄이는 것이 필수적이다.</p>
 </li>
 <li>
 <p><strong>통신 지연</strong><br />
@@ -121,14 +121,14 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 <h3 id="2">2. 실시간 성능 최적화를 위한 알고리즘 수정</h3>
 <p>실시간 시스템에서의 확장 칼만 필터의 적용은 수학적 정확성과 처리 속도 사이의 균형을 맞추는 것이 중요하다. 이를 위한 몇 가지 최적화 방법은 다음과 같다:</p>
 <ol>
-<li><strong>야코비안 근사화</strong><br />
-   매 필터링 단계에서 야코비안 행렬을 계산하는 대신, 근사화 기법을 사용하여 계산 시간을 줄일 수 있다. 이 방법은 일부 정확도를 희생할 수 있지만, 실시간 성능을 개선할 수 있다. 예를 들어, 테일러 급수의 고차항을 무시하고, 1차 근사를 사용하는 방법이 있다.</li>
+<li><strong>야코비 근사화</strong><br />
+   매 필터링 단계에서 야코비 행렬을 계산하는 대신, 근사화 기법을 사용하여 계산 시간을 줄일 수 있다. 이 방법은 일부 정확도를 희생할 수 있지만, 실시간 성능을 개선할 수 있다. 예를 들어, 테일러 급수의 고차항을 무시하고, 1차 근사를 사용하는 방법이 있다.</li>
 </ol>
-<p>야코비안 행렬은 상태 벡터 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{x}</span><script type="math/tex">\mathbf{x}</script></span>의 변화에 따른 시스템 함수 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{f}(\mathbf{x})</span><script type="math/tex">\mathbf{f}(\mathbf{x})</script></span>의 변화율을 나타낸다:</p>
+<p>야코비 행렬은 상태 벡터 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{x}</span><script type="math/tex">\mathbf{x}</script></span>의 변화에 따른 시스템 함수 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{f}(\mathbf{x})</span><script type="math/tex">\mathbf{f}(\mathbf{x})</script></span>의 변화율을 나타낸다:</p>
 <p>$$
    \mathbf{F}_k = \frac{\partial \mathbf{f}(\mathbf{x}_k, \mathbf{u}_k)}{\partial \mathbf{x}_k}</p>
 <p>$$</p>
-<p>여기서, <span class="arithmatex"><span class="MathJax_Preview">\mathbf{F}_k</span><script type="math/tex">\mathbf{F}_k</script></span>는 시스템의 상태 전이 야코비안 행렬이며, <span class="arithmatex"><span class="MathJax_Preview">\mathbf{x}_k</span><script type="math/tex">\mathbf{x}_k</script></span>는 상태 벡터, <span class="arithmatex"><span class="MathJax_Preview">\mathbf{u}_k</span><script type="math/tex">\mathbf{u}_k</script></span>는 제어 입력 벡터이다. 근사화 방법을 사용하면 이 계산을 단순화할 수 있다.</p>
+<p>여기서, <span class="arithmatex"><span class="MathJax_Preview">\mathbf{F}_k</span><script type="math/tex">\mathbf{F}_k</script></span>는 시스템의 상태 전이 야코비 행렬이며, <span class="arithmatex"><span class="MathJax_Preview">\mathbf{x}_k</span><script type="math/tex">\mathbf{x}_k</script></span>는 상태 벡터, <span class="arithmatex"><span class="MathJax_Preview">\mathbf{u}_k</span><script type="math/tex">\mathbf{u}_k</script></span>는 제어 입력 벡터이다. 근사화 방법을 사용하면 이 계산을 단순화할 수 있다.</p>
 <ol>
 <li><strong>상태 축소 기법</strong><br />
    상태 벡터의 크기를 줄이면 계산 속도를 개선할 수 있다. 모든 상태 변수가 필수적인 것은 아니므로, 일부 불필요한 상태 변수는 필터링 과정에서 제외할 수 있다. 예를 들어, 매우 느리게 변화하는 상태 변수는 필터링 주기마다 계산할 필요가 없을 수 있다.</li>
@@ -199,7 +199,7 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 <ol>
 <li>
 <p><strong>행렬 계산의 병렬화</strong><br />
-   확장 칼만 필터에서 발생하는 행렬 연산은 병렬 처리가 가능한 부분이 많다. 특히, 행렬 곱셈과 야코비안 계산은 멀티코어 프로세서나 GPU를 활용하여 병렬화할 수 있다. 이를 통해 계산 속도를 크게 개선할 수 있다.</p>
+   확장 칼만 필터에서 발생하는 행렬 연산은 병렬 처리가 가능한 부분이 많다. 특히, 행렬 곱셈과 야코비 계산은 멀티코어 프로세서나 GPU를 활용하여 병렬화할 수 있다. 이를 통해 계산 속도를 크게 개선할 수 있다.</p>
 </li>
 <li>
 <p><strong>희소 행렬 활용</strong><br />

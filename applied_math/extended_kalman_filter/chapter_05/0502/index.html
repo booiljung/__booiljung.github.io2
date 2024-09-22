@@ -48,7 +48,7 @@
           ]},
           {title: "\ud655\uc7a5 \uce7c\ub9cc \ud544\ud130\uc758 \uc131\ub2a5 \ucd5c\uc801\ud654", url: "#_9", children: [
               {title: "1. \uc0c1\ud0dc \ubcc0\uc218\uc640 \ub178\uc774\uc988\uc758 \uc815\ud655\ud55c \ubaa8\ub378\ub9c1", url: "#1" },
-              {title: "2. \uc57c\ucf54\ube44\uc548 \ud589\ub82c\uc758 \uc815\ud655\ud55c \uacc4\uc0b0", url: "#2" },
+              {title: "2. \uc57c\ucf54\ube44 \ud589\ub82c\uc758 \uc815\ud655\ud55c \uacc4\uc0b0", url: "#2" },
               {title: "3. \ud544\ud130\uc758 \uc218\uce58\uc801 \uc548\uc815\uc131", url: "#3" },
               {title: "4. \uc2e4\uc2dc\uac04 \ucc98\ub9ac \uc694\uad6c\uc0ac\ud56d", url: "#4" },
           ]},
@@ -154,7 +154,7 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 </script>
 </div>
 <p>여기서,
-- <span class="arithmatex"><span class="MathJax_Preview">\mathbf{F}_{k-1} = \frac{\partial f}{\partial \mathbf{x}}\bigg|_{\hat{\mathbf{x}}_{k-1|k-1}}</span><script type="math/tex">\mathbf{F}_{k-1} = \frac{\partial f}{\partial \mathbf{x}}\bigg|_{\hat{\mathbf{x}}_{k-1|k-1}}</script></span>는 상태 전이 함수 <span class="arithmatex"><span class="MathJax_Preview">f(\cdot)</span><script type="math/tex">f(\cdot)</script></span>의 야코비안이다.
+- <span class="arithmatex"><span class="MathJax_Preview">\mathbf{F}_{k-1} = \frac{\partial f}{\partial \mathbf{x}}\bigg|_{\hat{\mathbf{x}}_{k-1|k-1}}</span><script type="math/tex">\mathbf{F}_{k-1} = \frac{\partial f}{\partial \mathbf{x}}\bigg|_{\hat{\mathbf{x}}_{k-1|k-1}}</script></span>는 상태 전이 함수 <span class="arithmatex"><span class="MathJax_Preview">f(\cdot)</span><script type="math/tex">f(\cdot)</script></span>의 야코비이다.
 - <span class="arithmatex"><span class="MathJax_Preview">\mathbf{P}_{k|k-1}</span><script type="math/tex">\mathbf{P}_{k|k-1}</script></span>는 예측된 오차 공분산 행렬이다.
 - <span class="arithmatex"><span class="MathJax_Preview">\mathbf{Q}_{k-1}</span><script type="math/tex">\mathbf{Q}_{k-1}</script></span>는 시스템 노이즈의 공분산 행렬이다.</p>
 <h4 id="_5">갱신 단계</h4>
@@ -186,7 +186,7 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 </script>
 </div>
 <p>여기서,
-- <span class="arithmatex"><span class="MathJax_Preview">\mathbf{H}_k = \frac{\partial h}{\partial \mathbf{x}}\bigg|_{\hat{\mathbf{x}}_{k|k-1}}</span><script type="math/tex">\mathbf{H}_k = \frac{\partial h}{\partial \mathbf{x}}\bigg|_{\hat{\mathbf{x}}_{k|k-1}}</script></span>는 측정 함수 <span class="arithmatex"><span class="MathJax_Preview">h(\cdot)</span><script type="math/tex">h(\cdot)</script></span>의 야코비안이다.
+- <span class="arithmatex"><span class="MathJax_Preview">\mathbf{H}_k = \frac{\partial h}{\partial \mathbf{x}}\bigg|_{\hat{\mathbf{x}}_{k|k-1}}</span><script type="math/tex">\mathbf{H}_k = \frac{\partial h}{\partial \mathbf{x}}\bigg|_{\hat{\mathbf{x}}_{k|k-1}}</script></span>는 측정 함수 <span class="arithmatex"><span class="MathJax_Preview">h(\cdot)</span><script type="math/tex">h(\cdot)</script></span>의 야코비이다.
 - <span class="arithmatex"><span class="MathJax_Preview">\mathbf{R}_k</span><script type="math/tex">\mathbf{R}_k</script></span>는 측정 노이즈의 공분산 행렬이다.</p>
 <p>최종적으로 칼만 이득 <span class="arithmatex"><span class="MathJax_Preview">K_k</span><script type="math/tex">K_k</script></span>는 다음과 같이 계산된다.</p>
 <div class="arithmatex">
@@ -268,21 +268,21 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 <p>$$
   \mathbf{R}_k = E[\mathbf{v}_k \mathbf{v}_k^T]</p>
 <p>$$</p>
-<h4 id="2">2. 야코비안 행렬의 정확한 계산</h4>
-<p>확장 칼만 필터에서 비선형 시스템을 선형화하기 위해 사용되는 야코비안 행렬 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{F}_k</span><script type="math/tex">\mathbf{F}_k</script></span>와 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{H}_k</span><script type="math/tex">\mathbf{H}_k</script></span>는 시스템 및 측정 함수의 정확한 선형 근사를 제공해야 한다. 이러한 야코비안 행렬은 각 상태 변수에 대한 미분으로 구할 수 있으며, 잘못된 선형화는 필터의 성능을 저하시킬 수 있다.</p>
+<h4 id="2">2. 야코비 행렬의 정확한 계산</h4>
+<p>확장 칼만 필터에서 비선형 시스템을 선형화하기 위해 사용되는 야코비 행렬 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{F}_k</span><script type="math/tex">\mathbf{F}_k</script></span>와 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{H}_k</span><script type="math/tex">\mathbf{H}_k</script></span>는 시스템 및 측정 함수의 정확한 선형 근사를 제공해야 한다. 이러한 야코비 행렬은 각 상태 변수에 대한 미분으로 구할 수 있으며, 잘못된 선형화는 필터의 성능을 저하시킬 수 있다.</p>
 <ul>
-<li><strong>상태 전이 함수의 야코비안 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{F}_k</span><script type="math/tex">\mathbf{F}_k</script></span>:</strong></li>
+<li><strong>상태 전이 함수의 야코비 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{F}_k</span><script type="math/tex">\mathbf{F}_k</script></span>:</strong></li>
 </ul>
 <p>$$
   \mathbf{F}<em>k = \frac{\partial f}{\partial \mathbf{x}}\bigg|</em>{\hat{\mathbf{x}}_{k|k-1}}</p>
 <p>$$</p>
 <ul>
-<li><strong>측정 함수의 야코비안 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{H}_k</span><script type="math/tex">\mathbf{H}_k</script></span>:</strong></li>
+<li><strong>측정 함수의 야코비 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{H}_k</span><script type="math/tex">\mathbf{H}_k</script></span>:</strong></li>
 </ul>
 <p>$$
   \mathbf{H}<em>k = \frac{\partial h}{\partial \mathbf{x}}\bigg|</em>{\hat{\mathbf{x}}_{k|k-1}}</p>
 <p>$$</p>
-<p>야코비안 행렬의 계산에서 수치적 불안정성이 발생할 수 있으므로, 계산 과정에서의 수치 안정성도 고려해야 한다.</p>
+<p>야코비 행렬의 계산에서 수치적 불안정성이 발생할 수 있으므로, 계산 과정에서의 수치 안정성도 고려해야 한다.</p>
 <h4 id="3">3. 필터의 수치적 안정성</h4>
 <p>확장 칼만 필터의 반복적인 계산 과정에서 발생할 수 있는 수치적 불안정성을 방지하기 위한 다양한 방법들이 적용될 수 있다. 예를 들어, 칼만 이득 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{K}_k</span><script type="math/tex">\mathbf{K}_k</script></span>를 계산할 때, 오차 공분산 행렬 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{P}_k</span><script type="math/tex">\mathbf{P}_k</script></span>가 음수가 되는 경우가 발생하지 않도록 조정이 필요하다.</p>
 <p>또한, 센서 노이즈의 공분산 행렬이 적절하게 설정되지 않은 경우, 필터의 성능이 급격히 저하될 수 있다. 이때 필터의 안정성을 확보하기 위한 몇 가지 방법들이 있다.</p>
@@ -297,9 +297,9 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 <li><strong>게인 클리핑:</strong> 칼만 이득 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{K}_k</span><script type="math/tex">\mathbf{K}_k</script></span>가 너무 커질 경우, 필터가 과하게 반응할 수 있다. 이때 칼만 이득의 크기를 제한하는 게인 클리핑 기법을 사용할 수 있다.</li>
 </ul>
 <h4 id="4">4. 실시간 처리 요구사항</h4>
-<p>항법 시스템은 실시간으로 데이터를 처리해야 하므로 확장 칼만 필터의 계산 복잡성을 줄이는 것이 중요하다. 특히, 필터의 상태 업데이트 단계에서 야코비안 행렬의 계산이 복잡해질 수 있는데, 이를 최적화하기 위한 방법들이 존재한다.</p>
+<p>항법 시스템은 실시간으로 데이터를 처리해야 하므로 확장 칼만 필터의 계산 복잡성을 줄이는 것이 중요하다. 특히, 필터의 상태 업데이트 단계에서 야코비 행렬의 계산이 복잡해질 수 있는데, 이를 최적화하기 위한 방법들이 존재한다.</p>
 <ul>
-<li><strong>야코비안 근사:</strong> 정확한 야코비안을 계산하는 대신, 수치적으로 근사된 야코비안을 사용할 수 있다. 이는 계산 시간을 줄이면서도 충분한 정확도를 제공할 수 있는 방법이다.</li>
+<li><strong>야코비 근사:</strong> 정확한 야코비을 계산하는 대신, 수치적으로 근사된 야코비을 사용할 수 있다. 이는 계산 시간을 줄이면서도 충분한 정확도를 제공할 수 있는 방법이다.</li>
 </ul>
 <p>$$
   \mathbf{F}<em>k \approx \mathbf{F}</em>{k-1}</p>

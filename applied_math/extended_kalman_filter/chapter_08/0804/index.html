@@ -186,7 +186,7 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 </script>
 </div>
 <p>여기서,
-- <span class="arithmatex"><span class="MathJax_Preview">\mathbf{F}_k = \frac{\partial f}{\partial \mathbf{x}}\bigg|_{\mathbf{x} = \mathbf{\hat{x}}_{k-1|k-1}}</span><script type="math/tex">\mathbf{F}_k = \frac{\partial f}{\partial \mathbf{x}}\bigg|_{\mathbf{x} = \mathbf{\hat{x}}_{k-1|k-1}}</script></span>는 상태 전이 함수의 야코비안 행렬,
+- <span class="arithmatex"><span class="MathJax_Preview">\mathbf{F}_k = \frac{\partial f}{\partial \mathbf{x}}\bigg|_{\mathbf{x} = \mathbf{\hat{x}}_{k-1|k-1}}</span><script type="math/tex">\mathbf{F}_k = \frac{\partial f}{\partial \mathbf{x}}\bigg|_{\mathbf{x} = \mathbf{\hat{x}}_{k-1|k-1}}</script></span>는 상태 전이 함수의 야코비 행렬,
 - <span class="arithmatex"><span class="MathJax_Preview">\mathbf{Q}_k</span><script type="math/tex">\mathbf{Q}_k</script></span>는 시스템 노이즈 공분산 행렬이다.</p>
 <h4 id="_7">업데이트 단계</h4>
 <p>업데이트 단계에서는 측정 데이터를 바탕으로 예측된 상태를 수정한다:</p>
@@ -218,7 +218,7 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 </script>
 </div>
 <p>여기서,
-- <span class="arithmatex"><span class="MathJax_Preview">\mathbf{H}_k = \frac{\partial h}{\partial \mathbf{x}}\bigg|_{\mathbf{x} = \mathbf{\hat{x}}_{k|k-1}}</span><script type="math/tex">\mathbf{H}_k = \frac{\partial h}{\partial \mathbf{x}}\bigg|_{\mathbf{x} = \mathbf{\hat{x}}_{k|k-1}}</script></span>는 측정 함수의 야코비안 행렬,
+- <span class="arithmatex"><span class="MathJax_Preview">\mathbf{H}_k = \frac{\partial h}{\partial \mathbf{x}}\bigg|_{\mathbf{x} = \mathbf{\hat{x}}_{k|k-1}}</span><script type="math/tex">\mathbf{H}_k = \frac{\partial h}{\partial \mathbf{x}}\bigg|_{\mathbf{x} = \mathbf{\hat{x}}_{k|k-1}}</script></span>는 측정 함수의 야코비 행렬,
 - <span class="arithmatex"><span class="MathJax_Preview">\mathbf{R}_k</span><script type="math/tex">\mathbf{R}_k</script></span>는 측정 잡음 공분산 행렬이다.</p>
 <h3 id="_8">확장 칼만 필터의 실제 적용</h3>
 <p>산업용 로봇 제어에서 EKF를 적용할 때, 가장 중요한 것은 실제 환경에서 센서로부터 수집한 데이터를 통해 상태 추정의 정확도를 높이는 것이다. 예를 들어, 로봇 팔의 끝단 위치를 정확히 추정하는 것이 중요하며, 이를 위해 각도와 각속도 측정 값을 활용하여 시스템의 상태를 지속적으로 추정하고 수정하는 방식이 사용된다.</p>
@@ -276,7 +276,7 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 </li>
 <li>
 <p><strong>효율적인 수치 계산</strong><br />
-   EKF의 핵심 연산인 야코비안 행렬의 계산과 공분산 행렬의 업데이트는 매우 중요한 연산이다. 이러한 연산을 효율적으로 구현하기 위해 병렬 계산 기법이나 고성능 수학 라이브러리를 활용할 수 있다. 예를 들어, 행렬 연산이 많은 부분에서 병렬 처리가 가능하도록 알고리즘을 최적화할 수 있다.</p>
+   EKF의 핵심 연산인 야코비 행렬의 계산과 공분산 행렬의 업데이트는 매우 중요한 연산이다. 이러한 연산을 효율적으로 구현하기 위해 병렬 계산 기법이나 고성능 수학 라이브러리를 활용할 수 있다. 예를 들어, 행렬 연산이 많은 부분에서 병렬 처리가 가능하도록 알고리즘을 최적화할 수 있다.</p>
 </li>
 <li>
 <p><strong>하드웨어 가속</strong><br />
@@ -339,7 +339,7 @@ public:
         F_.setIdentity(state_size, state_size);  // 상태 전이 행렬
         Q_.setIdentity(state_size, state_size);  // 시스템 노이즈 공분산
         R_.setIdentity(measurement_size, measurement_size);  // 측정 노이즈 공분산
-        H_.setZero(measurement_size, state_size);  // 측정 함수의 야코비안 초기화
+        H_.setZero(measurement_size, state_size);  // 측정 함수의 야코비 초기화
         B_.setZero(state_size, control_size);  // 제어 입력 행렬 초기화
     }
 
@@ -395,7 +395,7 @@ private:
     Eigen::MatrixXd P_;  // 오차 공분산 행렬
     Eigen::MatrixXd F_;  // 상태 전이 행렬
     Eigen::MatrixXd Q_;  // 시스템 노이즈 공분산 행렬
-    Eigen::MatrixXd H_;  // 측정 함수의 야코비안
+    Eigen::MatrixXd H_;  // 측정 함수의 야코비
     Eigen::MatrixXd R_;  // 측정 노이즈 공분산 행렬
     Eigen::MatrixXd B_;  // 제어 입력 행렬
 };

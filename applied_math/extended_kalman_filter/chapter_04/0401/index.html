@@ -130,7 +130,7 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 </script>
 </div>
 <p>여기서:
-- <span class="arithmatex"><span class="MathJax_Preview">\mathbf{F}_{k-1} = \frac{\partial f}{\partial \mathbf{x}} \Bigg|_{\hat{\mathbf{x}}_{k-1|k-1}, \mathbf{u}_{k-1}}</span><script type="math/tex">\mathbf{F}_{k-1} = \frac{\partial f}{\partial \mathbf{x}} \Bigg|_{\hat{\mathbf{x}}_{k-1|k-1}, \mathbf{u}_{k-1}}</script></span>는 상태 전이 함수의 야코비안 행렬이다.
+- <span class="arithmatex"><span class="MathJax_Preview">\mathbf{F}_{k-1} = \frac{\partial f}{\partial \mathbf{x}} \Bigg|_{\hat{\mathbf{x}}_{k-1|k-1}, \mathbf{u}_{k-1}}</span><script type="math/tex">\mathbf{F}_{k-1} = \frac{\partial f}{\partial \mathbf{x}} \Bigg|_{\hat{\mathbf{x}}_{k-1|k-1}, \mathbf{u}_{k-1}}</script></span>는 상태 전이 함수의 야코비 행렬이다.
 - <span class="arithmatex"><span class="MathJax_Preview">\mathbf{P}_{k-1|k-1}</span><script type="math/tex">\mathbf{P}_{k-1|k-1}</script></span>는 이전 시점의 오차 공분산 행렬이다.
 - <span class="arithmatex"><span class="MathJax_Preview">\mathbf{Q}_{k-1}</span><script type="math/tex">\mathbf{Q}_{k-1}</script></span>는 시스템 노이즈의 공분산 행렬이다.</p>
 <h3 id="_2">측정 업데이트 단계</h3>
@@ -157,7 +157,7 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 </script>
 </div>
 <p>여기서:
-- <span class="arithmatex"><span class="MathJax_Preview">\mathbf{H}_{k} = \frac{\partial h}{\partial \mathbf{x}} \Bigg|_{\hat{\mathbf{x}}_{k|k-1}}</span><script type="math/tex">\mathbf{H}_{k} = \frac{\partial h}{\partial \mathbf{x}} \Bigg|_{\hat{\mathbf{x}}_{k|k-1}}</script></span>는 측정 함수의 야코비안 행렬이다.
+- <span class="arithmatex"><span class="MathJax_Preview">\mathbf{H}_{k} = \frac{\partial h}{\partial \mathbf{x}} \Bigg|_{\hat{\mathbf{x}}_{k|k-1}}</span><script type="math/tex">\mathbf{H}_{k} = \frac{\partial h}{\partial \mathbf{x}} \Bigg|_{\hat{\mathbf{x}}_{k|k-1}}</script></span>는 측정 함수의 야코비 행렬이다.
 - <span class="arithmatex"><span class="MathJax_Preview">\mathbf{R}_{k}</span><script type="math/tex">\mathbf{R}_{k}</script></span>는 측정 노이즈의 공분산 행렬이다.</p>
 <p>갱신된 상태 추정값 <span class="arithmatex"><span class="MathJax_Preview">\hat{\mathbf{x}}_{k|k}</span><script type="math/tex">\hat{\mathbf{x}}_{k|k}</script></span>는 다음과 같이 계산된다:</p>
 <div class="arithmatex">
@@ -180,7 +180,7 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 <h3 id="_3">알고리즘의 수렴 조건</h3>
 <p>확장 칼만 필터가 정상적으로 작동하기 위해서는 몇 가지 수렴 조건이 필요하다. 이러한 조건들은 필터가 상태를 정확하게 추정하고 오차 공분산 행렬이 수렴하도록 보장하는 데 필수적이다.</p>
 <h4 id="1">1. 상태 전이 모델과 측정 모델의 적절한 선형화</h4>
-<p>확장 칼만 필터는 비선형 시스템을 선형화하여 상태를 추정한다. 이 과정에서 야코비안 행렬을 계산하는데, 이 선형화 과정이 적절하지 않으면 필터의 성능이 저하될 수 있다. 따라서, 선형화는 시스템의 실제 동작을 충분히 근사할 수 있을 정도로 정확해야 한다. 선형화가 과도하게 단순화될 경우, 필터는 수렴하지 않거나 부정확한 추정을 제공할 수 있다.</p>
+<p>확장 칼만 필터는 비선형 시스템을 선형화하여 상태를 추정한다. 이 과정에서 야코비 행렬을 계산하는데, 이 선형화 과정이 적절하지 않으면 필터의 성능이 저하될 수 있다. 따라서, 선형화는 시스템의 실제 동작을 충분히 근사할 수 있을 정도로 정확해야 한다. 선형화가 과도하게 단순화될 경우, 필터는 수렴하지 않거나 부정확한 추정을 제공할 수 있다.</p>
 <h4 id="2">2. 초기 추정값의 설정</h4>
 <p>확장 칼만 필터의 성능은 초기 추정값에 크게 의존한다. 초기 상태 추정값 <span class="arithmatex"><span class="MathJax_Preview">\hat{\mathbf{x}}_{0|0}</span><script type="math/tex">\hat{\mathbf{x}}_{0|0}</script></span>과 초기 오차 공분산 행렬 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{P}_{0|0}</span><script type="math/tex">\mathbf{P}_{0|0}</script></span>이 잘못 설정되면, 필터가 불안정해지거나 수렴하지 않을 수 있다. 초기화는 가능한 한 실제 상태에 근접하게 설정해야 하며, 초기 오차 공분산은 불확실성에 비례해 설정하는 것이 중요하다.</p>
 <h4 id="3">3. 프로세스 및 측정 노이즈의 공분산 설정</h4>
@@ -195,10 +195,10 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 </ol>
 <p>이 과정을 매 시간 스텝마다 반복하여 필터는 지속적으로 상태를 추정하게 된다.</p>
 <h3 id="_5">계산 비용과 최적화</h3>
-<p>확장 칼만 필터의 계산 비용은 상태 벡터의 차원과 비선형 시스템의 복잡도에 의해 결정된다. 특히, 야코비안 행렬의 계산과 역행렬 연산은 계산 비용을 증가시키는 요인이 될 수 있다. 계산 비용을 줄이기 위한 방법으로는 다음과 같은 전략을 고려할 수 있다:</p>
+<p>확장 칼만 필터의 계산 비용은 상태 벡터의 차원과 비선형 시스템의 복잡도에 의해 결정된다. 특히, 야코비 행렬의 계산과 역행렬 연산은 계산 비용을 증가시키는 요인이 될 수 있다. 계산 비용을 줄이기 위한 방법으로는 다음과 같은 전략을 고려할 수 있다:</p>
 <ol>
 <li><strong>상태 벡터 축소</strong>: 불필요한 변수는 상태 벡터에서 제외하여 계산량을 줄일 수 있다.</li>
-<li><strong>야코비안 행렬 근사</strong>: 정확한 야코비안 행렬 대신 근사값을 사용할 수 있다. 다만, 이 경우 필터 성능이 저하될 수 있으므로 신중한 고려가 필요하다.</li>
+<li><strong>야코비 행렬 근사</strong>: 정확한 야코비 행렬 대신 근사값을 사용할 수 있다. 다만, 이 경우 필터 성능이 저하될 수 있으므로 신중한 고려가 필요하다.</li>
 <li><strong>역행렬 계산 최적화</strong>: 역행렬 계산을 효율적으로 처리하기 위한 방법들을 사용할 수 있다. 예를 들어, 행렬이 대칭 행렬일 경우 치올레스키 분해(Cholesky decomposition)를 사용하면 계산 비용을 줄일 수 있다.</li>
 </ol>
 

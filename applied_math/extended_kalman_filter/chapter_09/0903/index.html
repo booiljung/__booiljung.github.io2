@@ -150,7 +150,7 @@ p_{11} & 0      & \cdots & 0 \\
 \mathbf{x}_{k|k-1} = \mathbf{f}(\mathbf{x}_{k-1})
 </script>
 </div>
-<p>공분산 행렬의 예측은 야코비안 행렬 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{F}</span><script type="math/tex">\mathbf{F}</script></span>를 사용하여 계산된다. 야코비안 행렬은 상태 전이 함수 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{f}(\mathbf{x})</span><script type="math/tex">\mathbf{f}(\mathbf{x})</script></span>의 편미분으로 구성되며 다음과 같이 정의된다:</p>
+<p>공분산 행렬의 예측은 야코비 행렬 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{F}</span><script type="math/tex">\mathbf{F}</script></span>를 사용하여 계산된다. 야코비 행렬은 상태 전이 함수 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{f}(\mathbf{x})</span><script type="math/tex">\mathbf{f}(\mathbf{x})</script></span>의 편미분으로 구성되며 다음과 같이 정의된다:</p>
 <div class="arithmatex">
 <div class="MathJax_Preview">
 \mathbf{F} = \frac{\partial \mathbf{f}}{\partial \mathbf{x}} \Bigg|_{\mathbf{x}_{k-1}}
@@ -188,7 +188,7 @@ p_{11} & 0      & \cdots & 0 \\
 \mathbf{y}_k = \mathbf{z}_k - \mathbf{z}_{k|k-1}
 </script>
 </div>
-<p>측정 오차 공분산 행렬 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{S}_k</span><script type="math/tex">\mathbf{S}_k</script></span>는 야코비안 행렬 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{H}_k</span><script type="math/tex">\mathbf{H}_k</script></span>와 측정 노이즈 공분산 행렬 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{R}_k</span><script type="math/tex">\mathbf{R}_k</script></span>를 사용하여 계산된다:</p>
+<p>측정 오차 공분산 행렬 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{S}_k</span><script type="math/tex">\mathbf{S}_k</script></span>는 야코비 행렬 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{H}_k</span><script type="math/tex">\mathbf{H}_k</script></span>와 측정 노이즈 공분산 행렬 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{R}_k</span><script type="math/tex">\mathbf{R}_k</script></span>를 사용하여 계산된다:</p>
 <div class="arithmatex">
 <div class="MathJax_Preview">
 \mathbf{S}_k = \mathbf{H}_k \mathbf{P}_{k|k-1} \mathbf{H}_k^T + \mathbf{R}_k
@@ -259,7 +259,7 @@ def predict(x, P, Q):
     # 상태 예측
     x_pred = f(x)
 
-    # 상태 전이 함수의 야코비안 행렬
+    # 상태 전이 함수의 야코비 행렬
     F = np.array([[1, 0, 1, 0], 
                   [0, 1, 0, 1], 
                   [0, 0, 1, 0], 
@@ -279,7 +279,7 @@ x_pred, P_pred = predict(x, P, Q)
 def h(x):
     return np.array([x[0], x[1]])  # 측정값은 위치(x_position, y_position)
 
-# 측정 함수의 야코비안 행렬
+# 측정 함수의 야코비 행렬
 H = np.array([[1, 0, 0, 0], 
               [0, 1, 0, 0]])
 
@@ -311,7 +311,7 @@ def update(x_pred, P_pred, z, H, R):
 # 상태 및 공분산 업데이트 수행
 x_update, P_update = update(x_pred, P_pred, z, H, R)
 </code></pre>
-<p>위의 코드는 간단한 선형 모델을 바탕으로 확장 칼만 필터를 구현한 예시이다. 비선형 시스템에 대한 실제 확장 칼만 필터는 상태 전이 함수 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{f}(\mathbf{x})</span><script type="math/tex">\mathbf{f}(\mathbf{x})</script></span>와 측정 함수 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{h}(\mathbf{x})</span><script type="math/tex">\mathbf{h}(\mathbf{x})</script></span>가 비선형이므로, 야코비안 행렬을 구하는 과정이 필수적이다.</p>
+<p>위의 코드는 간단한 선형 모델을 바탕으로 확장 칼만 필터를 구현한 예시이다. 비선형 시스템에 대한 실제 확장 칼만 필터는 상태 전이 함수 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{f}(\mathbf{x})</span><script type="math/tex">\mathbf{f}(\mathbf{x})</script></span>와 측정 함수 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{h}(\mathbf{x})</span><script type="math/tex">\mathbf{h}(\mathbf{x})</script></span>가 비선형이므로, 야코비 행렬을 구하는 과정이 필수적이다.</p>
 
   <br>
     

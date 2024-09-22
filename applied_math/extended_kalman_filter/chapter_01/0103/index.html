@@ -192,7 +192,7 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 </div>
 <p>여기서, <span class="arithmatex"><span class="MathJax_Preview">\mathbf{h}(\mathbf{x}_k)</span><script type="math/tex">\mathbf{h}(\mathbf{x}_k)</script></span>는 상태 벡터 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{x}_k</span><script type="math/tex">\mathbf{x}_k</script></span>와 측정 벡터 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{z}_k</span><script type="math/tex">\mathbf{z}_k</script></span> 간의 비선형 관계를 나타내며, <span class="arithmatex"><span class="MathJax_Preview">\mathbf{v}_k</span><script type="math/tex">\mathbf{v}_k</script></span>는 측정 잡음이다.</p>
 <h3 id="_3">비선형 시스템에서의 선형화</h3>
-<p>비선형 시스템에서 칼만 필터를 적용하려면, 비선형 함수 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{f}</span><script type="math/tex">\mathbf{f}</script></span>와 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{h}</span><script type="math/tex">\mathbf{h}</script></span>를 선형화해야 한다. 이를 위해 EKF는 테일러 급수의 1차 항을 사용하여 선형 근사를 수행한다. 이 과정에서 야코비안 행렬을 계산하여 시스템을 선형화한다.</p>
+<p>비선형 시스템에서 칼만 필터를 적용하려면, 비선형 함수 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{f}</span><script type="math/tex">\mathbf{f}</script></span>와 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{h}</span><script type="math/tex">\mathbf{h}</script></span>를 선형화해야 한다. 이를 위해 EKF는 테일러 급수의 1차 항을 사용하여 선형 근사를 수행한다. 이 과정에서 야코비 행렬을 계산하여 시스템을 선형화한다.</p>
 <ol>
 <li><strong>상태 전이의 선형화</strong>:</li>
 </ol>
@@ -204,7 +204,7 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 \mathbf{A}_k = \frac{\partial \mathbf{f}}{\partial \mathbf{x}} \bigg|_{\mathbf{x} = \mathbf{x}_{k|k-1}}
 </script>
 </div>
-<p>여기서 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{A}_k</span><script type="math/tex">\mathbf{A}_k</script></span>는 상태 전이 행렬의 야코비안이다.</p>
+<p>여기서 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{A}_k</span><script type="math/tex">\mathbf{A}_k</script></span>는 상태 전이 행렬의 야코비이다.</p>
 <ol>
 <li><strong>측정의 선형화</strong>:</li>
 </ol>
@@ -216,7 +216,7 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 \mathbf{H}_k = \frac{\partial \mathbf{h}}{\partial \mathbf{x}} \bigg|_{\mathbf{x} = \mathbf{x}_{k|k-1}}
 </script>
 </div>
-<p><span class="arithmatex"><span class="MathJax_Preview">\mathbf{H}_k</span><script type="math/tex">\mathbf{H}_k</script></span>는 측정 모델의 야코비안 행렬이다.</p>
+<p><span class="arithmatex"><span class="MathJax_Preview">\mathbf{H}_k</span><script type="math/tex">\mathbf{H}_k</script></span>는 측정 모델의 야코비 행렬이다.</p>
 <h3 id="_4">확장 칼만 필터의 예측 단계</h3>
 <p>EKF의 예측 단계는 비선형 상태 전이 함수 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{f}(\mathbf{x}_k, \mathbf{u}_k)</span><script type="math/tex">\mathbf{f}(\mathbf{x}_k, \mathbf{u}_k)</script></span>를 사용하여 상태 벡터와 공분산 행렬을 예측하는 과정이다. 비선형 시스템의 경우 다음과 같은 수식을 사용한다:</p>
 <ol>

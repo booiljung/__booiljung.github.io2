@@ -114,7 +114,7 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 </ol>
 <h3 id="_3">수치적 미분 대신 차분 기법</h3>
 <p>확장 칼만 필터는 비선형 시스템을 다루기 때문에 선형화 과정에서 수치적 미분을 사용하는 경우가 있다. 그러나 수치적 미분은 오차를 크게 증폭시킬 수 있으며, 필터의 수치적 안정성에 악영향을 미칠 수 있다. 이를 해결하기 위한 방법으로 차분 기법을 사용하는 것이 더 수치적으로 안정적인 대안이 될 수 있다.</p>
-<p>중앙 차분(Central Difference)은 수치 미분 대신 사용할 수 있는 대표적인 기법으로, 다음과 같은 방식으로 상태 전이 함수나 측정 함수의 야코비안 행렬을 근사할 수 있다.</p>
+<p>중앙 차분(Central Difference)은 수치 미분 대신 사용할 수 있는 대표적인 기법으로, 다음과 같은 방식으로 상태 전이 함수나 측정 함수의 야코비 행렬을 근사할 수 있다.</p>
 <div class="arithmatex">
 <div class="MathJax_Preview">
 \mathbf{F} \approx \frac{f(\mathbf{x} + \epsilon) - f(\mathbf{x} - \epsilon)}{2\epsilon}
@@ -154,11 +154,11 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 \mathbf{P}_{k|k-1} = \mathbf{F}_k \mathbf{P}_{k-1|k-1} \mathbf{F}_k^{\top} + \mathbf{Q}_k
 </script>
 </div>
-<p>여기서 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{F}_k</span><script type="math/tex">\mathbf{F}_k</script></span>는 상태 전이 함수의 야코비안 행렬, <span class="arithmatex"><span class="MathJax_Preview">\mathbf{Q}_k</span><script type="math/tex">\mathbf{Q}_k</script></span>는 시스템 노이즈 공분산 행렬이다.</p>
+<p>여기서 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{F}_k</span><script type="math/tex">\mathbf{F}_k</script></span>는 상태 전이 함수의 야코비 행렬, <span class="arithmatex"><span class="MathJax_Preview">\mathbf{Q}_k</span><script type="math/tex">\mathbf{Q}_k</script></span>는 시스템 노이즈 공분산 행렬이다.</p>
 <p>이 과정에서 수치적 안정성을 유지하려면 다음 사항을 고려해야 한다.</p>
 <ol>
 <li>
-<p><strong>야코비안 행렬의 정확한 계산</strong>: 야코비안 행렬 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{F}_k</span><script type="math/tex">\mathbf{F}_k</script></span>는 예측 단계에서 매우 중요한 역할을 하므로, 정확하게 계산해야 한다. 앞서 언급한 차분 기법을 사용하거나 미리 정의된 함수의 기울기를 사용하는 방법을 고려할 수 있다.</p>
+<p><strong>야코비 행렬의 정확한 계산</strong>: 야코비 행렬 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{F}_k</span><script type="math/tex">\mathbf{F}_k</script></span>는 예측 단계에서 매우 중요한 역할을 하므로, 정확하게 계산해야 한다. 앞서 언급한 차분 기법을 사용하거나 미리 정의된 함수의 기울기를 사용하는 방법을 고려할 수 있다.</p>
 </li>
 <li>
 <p><strong>잡음 공분산 행렬의 적절한 설정</strong>: 시스템 노이즈 공분산 행렬 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{Q}_k</span><script type="math/tex">\mathbf{Q}_k</script></span>는 필터의 예측 오차를 반영하므로, 시스템에 맞게 적절하게 설정되어야 한다. 만약 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{Q}_k</span><script type="math/tex">\mathbf{Q}_k</script></span>가 너무 크면 필터가 지나치게 불안정해지고, 반대로 너무 작으면 필터가 새로운 측정값에 과도하게 의존하게 된다.</p>
@@ -191,7 +191,7 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 \mathbf{P}_{k|k} = \left( \mathbf{I} - \mathbf{K}_k \mathbf{H}_k \right) \mathbf{P}_{k|k-1}
 </script>
 </div>
-<p>여기서 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{K}_k</span><script type="math/tex">\mathbf{K}_k</script></span>는 칼만 이득, <span class="arithmatex"><span class="MathJax_Preview">\mathbf{H}_k</span><script type="math/tex">\mathbf{H}_k</script></span>는 측정 모델의 야코비안 행렬, <span class="arithmatex"><span class="MathJax_Preview">\mathbf{R}_k</span><script type="math/tex">\mathbf{R}_k</script></span>는 측정 잡음 공분산 행렬이다.</p>
+<p>여기서 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{K}_k</span><script type="math/tex">\mathbf{K}_k</script></span>는 칼만 이득, <span class="arithmatex"><span class="MathJax_Preview">\mathbf{H}_k</span><script type="math/tex">\mathbf{H}_k</script></span>는 측정 모델의 야코비 행렬, <span class="arithmatex"><span class="MathJax_Preview">\mathbf{R}_k</span><script type="math/tex">\mathbf{R}_k</script></span>는 측정 잡음 공분산 행렬이다.</p>
 <ol>
 <li>
 <p><strong>칼만 이득 계산의 수치적 안정성</strong>: 칼만 이득 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{K}_k</span><script type="math/tex">\mathbf{K}_k</script></span>를 계산할 때, 특히 행렬의 역행렬 계산에서 수치적 불안정성이 발생할 수 있다. 이를 방지하기 위해 <strong>수치적 안정성이 보장된 역행렬 계산 방법</strong>을 사용하는 것이 좋다. 대표적인 방법으로 <strong>Singular Value Decomposition (SVD)</strong> 혹은 <strong>QR 분해</strong>가 있다.</p>

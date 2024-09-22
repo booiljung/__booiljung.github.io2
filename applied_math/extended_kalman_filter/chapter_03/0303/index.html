@@ -35,7 +35,7 @@
         var pageToc = [
           {title: "\uce21\uc815\uac12 \ubaa8\ub378", url: "#_top", children: [
           ]},
-          {title: "\uc57c\ucf54\ube44\uc548 \uacc4\uc0b0", url: "#_2", children: [
+          {title: "\uc57c\ucf54\ube44 \uacc4\uc0b0", url: "#_2", children: [
           ]},
           {title: "\uce7c\ub9cc \uc774\ub4dd \uacc4\uc0b0", url: "#_3", children: [
           ]},
@@ -103,8 +103,8 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 </script>
 </div>
 <p>여기서 <span class="arithmatex"><span class="MathJax_Preview">h(\mathbf{x}_k)</span><script type="math/tex">h(\mathbf{x}_k)</script></span>는 비선형 측정 함수이고, <span class="arithmatex"><span class="MathJax_Preview">\mathbf{v}_k</span><script type="math/tex">\mathbf{v}_k</script></span>는 측정 노이즈이다. 측정 노이즈는 공분산이 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{R}_k</span><script type="math/tex">\mathbf{R}_k</script></span>인 가우시안 분포를 따른다.</p>
-<h3 id="_2">야코비안 계산</h3>
-<p>비선형 시스템에서는 측정 함수 <span class="arithmatex"><span class="MathJax_Preview">h(\mathbf{x}_k)</span><script type="math/tex">h(\mathbf{x}_k)</script></span>가 선형이 아니므로, 이를 선형화하기 위해 테일러 급수를 사용한다. 이때 야코비안 행렬 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{H}_k</span><script type="math/tex">\mathbf{H}_k</script></span>는 다음과 같이 정의된다.</p>
+<h3 id="_2">야코비 계산</h3>
+<p>비선형 시스템에서는 측정 함수 <span class="arithmatex"><span class="MathJax_Preview">h(\mathbf{x}_k)</span><script type="math/tex">h(\mathbf{x}_k)</script></span>가 선형이 아니므로, 이를 선형화하기 위해 테일러 급수를 사용한다. 이때 야코비 행렬 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{H}_k</span><script type="math/tex">\mathbf{H}_k</script></span>는 다음과 같이 정의된다.</p>
 <div class="arithmatex">
 <div class="MathJax_Preview">
 \mathbf{H}_k = \frac{\partial h(\mathbf{x})}{\partial \mathbf{x}} \bigg|_{\mathbf{x} = \hat{\mathbf{x}}_{k}^{-}}
@@ -113,7 +113,7 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 \mathbf{H}_k = \frac{\partial h(\mathbf{x})}{\partial \mathbf{x}} \bigg|_{\mathbf{x} = \hat{\mathbf{x}}_{k}^{-}}
 </script>
 </div>
-<p>여기서 <span class="arithmatex"><span class="MathJax_Preview">\hat{\mathbf{x}}_{k}^{-}</span><script type="math/tex">\hat{\mathbf{x}}_{k}^{-}</script></span>는 업데이트 전의 추정 상태이다. 야코비안 행렬 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{H}_k</span><script type="math/tex">\mathbf{H}_k</script></span>는 실제로 측정 모델을 선형화하여 칼만 이득 계산에 사용된다.</p>
+<p>여기서 <span class="arithmatex"><span class="MathJax_Preview">\hat{\mathbf{x}}_{k}^{-}</span><script type="math/tex">\hat{\mathbf{x}}_{k}^{-}</script></span>는 업데이트 전의 추정 상태이다. 야코비 행렬 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{H}_k</span><script type="math/tex">\mathbf{H}_k</script></span>는 실제로 측정 모델을 선형화하여 칼만 이득 계산에 사용된다.</p>
 <h3 id="_3">칼만 이득 계산</h3>
 <p>업데이트 단계에서 중요한 역할을 하는 것이 칼만 이득 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{K}_k</span><script type="math/tex">\mathbf{K}_k</script></span>이다. 칼만 이득은 상태 추정 오차와 측정 오차 사이의 최적 비율을 결정한다. 칼만 이득은 다음과 같이 계산된다.</p>
 <div class="arithmatex">
@@ -127,7 +127,7 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 <p>여기서:
 - <span class="arithmatex"><span class="MathJax_Preview">\mathbf{P}_k^{-}</span><script type="math/tex">\mathbf{P}_k^{-}</script></span>는 업데이트 전의 오차 공분산 행렬이다.
 - <span class="arithmatex"><span class="MathJax_Preview">\mathbf{R}_k</span><script type="math/tex">\mathbf{R}_k</script></span>는 측정 노이즈 공분산 행렬이다.
-- <span class="arithmatex"><span class="MathJax_Preview">\mathbf{H}_k</span><script type="math/tex">\mathbf{H}_k</script></span>는 위에서 계산한 야코비안 행렬이다.</p>
+- <span class="arithmatex"><span class="MathJax_Preview">\mathbf{H}_k</span><script type="math/tex">\mathbf{H}_k</script></span>는 위에서 계산한 야코비 행렬이다.</p>
 <p>칼만 이득은 측정값과 예측값 사이의 불확실성을 조정하는 역할을 한다.</p>
 <h3 id="_4">상태 추정 업데이트</h3>
 <p>칼만 이득 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{K}_k</span><script type="math/tex">\mathbf{K}_k</script></span>를 사용하여 예측된 상태를 측정값을 기반으로 업데이트한다. 업데이트된 상태 <span class="arithmatex"><span class="MathJax_Preview">\hat{\mathbf{x}}_k</span><script type="math/tex">\hat{\mathbf{x}}_k</script></span>는 다음과 같이 계산된다.</p>
@@ -166,7 +166,7 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 <p>여기서:
 - <span class="arithmatex"><span class="MathJax_Preview">\mathbf{I}</span><script type="math/tex">\mathbf{I}</script></span>는 항등 행렬이다.
 - <span class="arithmatex"><span class="MathJax_Preview">\mathbf{K}_k</span><script type="math/tex">\mathbf{K}_k</script></span>는 칼만 이득이다.
-- <span class="arithmatex"><span class="MathJax_Preview">\mathbf{H}_k</span><script type="math/tex">\mathbf{H}_k</script></span>는 측정 모델의 야코비안 행렬이다.
+- <span class="arithmatex"><span class="MathJax_Preview">\mathbf{H}_k</span><script type="math/tex">\mathbf{H}_k</script></span>는 측정 모델의 야코비 행렬이다.
 - <span class="arithmatex"><span class="MathJax_Preview">\mathbf{P}_k^{-}</span><script type="math/tex">\mathbf{P}_k^{-}</script></span>는 업데이트 전의 오차 공분산 행렬이다.</p>
 <p>이 수식은 업데이트 후 상태의 불확실성을 줄이는 과정이다. <span class="arithmatex"><span class="MathJax_Preview">\mathbf{K}_k \mathbf{H}_k</span><script type="math/tex">\mathbf{K}_k \mathbf{H}_k</script></span> 항은 측정값이 반영된 후 상태 추정의 불확실성을 줄이는 역할을 한다.</p>
 

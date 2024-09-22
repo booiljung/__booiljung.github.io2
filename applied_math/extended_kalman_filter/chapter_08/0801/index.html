@@ -242,7 +242,7 @@ a_k
 </script>
 </div>
 <p>여기서:
-- <span class="arithmatex"><span class="MathJax_Preview">\mathbf{F}_k = \frac{\partial f}{\partial \mathbf{x}} \bigg|_{\hat{\mathbf{x}}_{k|k}, \mathbf{u}_k}</span><script type="math/tex">\mathbf{F}_k = \frac{\partial f}{\partial \mathbf{x}} \bigg|_{\hat{\mathbf{x}}_{k|k}, \mathbf{u}_k}</script></span>는 상태 전이 함수의 야코비안 행렬이다.
+- <span class="arithmatex"><span class="MathJax_Preview">\mathbf{F}_k = \frac{\partial f}{\partial \mathbf{x}} \bigg|_{\hat{\mathbf{x}}_{k|k}, \mathbf{u}_k}</span><script type="math/tex">\mathbf{F}_k = \frac{\partial f}{\partial \mathbf{x}} \bigg|_{\hat{\mathbf{x}}_{k|k}, \mathbf{u}_k}</script></span>는 상태 전이 함수의 야코비 행렬이다.
 - <span class="arithmatex"><span class="MathJax_Preview">\mathbf{Q}_k</span><script type="math/tex">\mathbf{Q}_k</script></span>는 시스템 노이즈 공분산 행렬이다.</p>
 <h3 id="_7">업데이트 단계</h3>
 <p>업데이트 단계에서는 예측된 상태를 실제 관측된 센서 데이터와 비교하여 상태를 수정한다. 자율 주행 차량에서는 다양한 센서로부터 관측된 데이터를 활용하여 상태 추정의 정확성을 높인다. 업데이트 단계에서 관측 데이터에 따라 상태 벡터와 공분산 행렬이 다음과 같이 수정된다:</p>
@@ -257,7 +257,7 @@ a_k
 </script>
 </div>
 <p>여기서:
-- <span class="arithmatex"><span class="MathJax_Preview">\mathbf{H}_k = \frac{\partial h}{\partial \mathbf{x}} \bigg|_{\hat{\mathbf{x}}_{k|k-1}}</span><script type="math/tex">\mathbf{H}_k = \frac{\partial h}{\partial \mathbf{x}} \bigg|_{\hat{\mathbf{x}}_{k|k-1}}</script></span>는 관측 모델의 야코비안 행렬이다.
+- <span class="arithmatex"><span class="MathJax_Preview">\mathbf{H}_k = \frac{\partial h}{\partial \mathbf{x}} \bigg|_{\hat{\mathbf{x}}_{k|k-1}}</span><script type="math/tex">\mathbf{H}_k = \frac{\partial h}{\partial \mathbf{x}} \bigg|_{\hat{\mathbf{x}}_{k|k-1}}</script></span>는 관측 모델의 야코비 행렬이다.
 - <span class="arithmatex"><span class="MathJax_Preview">\mathbf{R}_k</span><script type="math/tex">\mathbf{R}_k</script></span>는 관측 잡음 공분산 행렬이다.</p>
 <h4 id="_9">상태 벡터 업데이트</h4>
 <p>칼만 이득을 계산한 후, 실제 관측된 센서 데이터 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{z}_k</span><script type="math/tex">\mathbf{z}_k</script></span>와 예측된 관측값 <span class="arithmatex"><span class="MathJax_Preview">h(\hat{\mathbf{x}}_{k|k-1})</span><script type="math/tex">h(\hat{\mathbf{x}}_{k|k-1})</script></span>의 차이, 즉 <strong>잔차(Residual)</strong>를 이용해 상태 벡터를 업데이트한다:</p>
@@ -330,7 +330,7 @@ VectorXd f(const VectorXd&amp; x, const VectorXd&amp; u, double dt) {
     return x_next;
 }
 
-// 상태 전이 함수의 야코비안 계산
+// 상태 전이 함수의 야코비 계산
 MatrixXd calculateJacobianF(const VectorXd&amp; x, const VectorXd&amp; u, double dt) {
     MatrixXd F(state_dim, state_dim);
     double theta = x(2);
@@ -353,7 +353,7 @@ void predict(const VectorXd&amp; u, double dt) {
     // 상태 벡터 예측
     x = f(x, u, dt);
 
-    // 야코비안 행렬 계산 및 공분산 예측
+    // 야코비 행렬 계산 및 공분산 예측
     F = calculateJacobianF(x, u, dt);
     P = F * P * F.transpose() + Q;
 }
@@ -366,7 +366,7 @@ VectorXd h(const VectorXd&amp; x) {
     return z_hat;
 }
 
-// 관측 모델의 야코비안 계산
+// 관측 모델의 야코비 계산
 MatrixXd calculateJacobianH() {
     MatrixXd H(measurement_dim, state_dim);
     H.setZero();
@@ -423,12 +423,12 @@ int main() {
 <ol>
 <li><strong>상태 벡터</strong> (<code>x</code>)는 차량의 위치 <span class="arithmatex"><span class="MathJax_Preview">x</span><script type="math/tex">x</script></span>, <span class="arithmatex"><span class="MathJax_Preview">y</span><script type="math/tex">y</script></span>, 진행 방향 각도 <span class="arithmatex"><span class="MathJax_Preview">\theta</span><script type="math/tex">\theta</script></span>, 속도 <span class="arithmatex"><span class="MathJax_Preview">v</span><script type="math/tex">v</script></span>로 구성된다.</li>
 <li><strong>상태 전이 함수</strong> (<code>f</code>)는 차량의 물리적 모델에 따라 상태를 예측한다. 차량의 위치와 방향은 <span class="arithmatex"><span class="MathJax_Preview">\theta</span><script type="math/tex">\theta</script></span>, 속도 <span class="arithmatex"><span class="MathJax_Preview">v</span><script type="math/tex">v</script></span>, 조향 각도 <span class="arithmatex"><span class="MathJax_Preview">\phi</span><script type="math/tex">\phi</script></span>, 가속도 <span class="arithmatex"><span class="MathJax_Preview">a</span><script type="math/tex">a</script></span>에 따라 계산된다.</li>
-<li><strong>상태 전이 행렬의 야코비안</strong> (<code>F</code>)은 비선형 상태 전이를 선형 근사하기 위한 행렬이다.</li>
+<li><strong>상태 전이 행렬의 야코비</strong> (<code>F</code>)은 비선형 상태 전이를 선형 근사하기 위한 행렬이다.</li>
 <li><strong>예측 단계</strong>는 상태 벡터와 공분산 행렬을 예측하는 단계이다.</li>
 <li><strong>업데이트 단계</strong>는 실제 센서 데이터(GPS)를 사용하여 상태 벡터와 공분산 행렬을 수정한다.</li>
 <li><strong>칼만 이득</strong> (<code>K</code>)을 통해 잔차를 기반으로 상태 벡터를 업데이트하고, 공분산 행렬을 갱신한다.</li>
 </ol>
-<p>이 코드는 자율 주행 차량에서 확장 칼만 필터를 구현하는 예제이다. IMU와 같은 다른 센서 데이터를 추가하는 경우, 관측 모델과 해당 야코비안 행렬을 확장하면 된다.</p>
+<p>이 코드는 자율 주행 차량에서 확장 칼만 필터를 구현하는 예제이다. IMU와 같은 다른 센서 데이터를 추가하는 경우, 관측 모델과 해당 야코비 행렬을 확장하면 된다.</p>
 
   <br>
     

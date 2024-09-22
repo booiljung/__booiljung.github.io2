@@ -53,23 +53,21 @@
           ]},
           {title: "\uc13c\uc11c \ub370\uc774\ud130 \ud1b5\ud569", url: "#_8", children: [
               {title: "\uc13c\uc11c \uc885\ub958\ubcc4 \ub9e4\ud551", url: "#_9" },
-          ]},
-          {title: "\uc13c\uc11c \ub370\uc774\ud130 \ud1b5\ud569 (\uacc4\uc18d)", url: "#_10", children: [
-              {title: "\uc13c\uc11c \ub370\uc774\ud130 \ucc98\ub9ac", url: "#_11" },
+              {title: "\uc13c\uc11c \ub370\uc774\ud130 \ucc98\ub9ac", url: "#_10" },
           ]},
           {title: "\ud2b8\ub79c\uc2a4\ubbf8\uc158(Transmission) \ub9e4\ud551", url: "#transmission", children: [
-              {title: "\ud2b8\ub79c\uc2a4\ubbf8\uc158 \uc885\ub958", url: "#_12" },
-              {title: "\ud2b8\ub79c\uc2a4\ubbf8\uc158 \uad6c\ud604 \uc608\uc2dc", url: "#_13" },
+              {title: "\ud2b8\ub79c\uc2a4\ubbf8\uc158 \uc885\ub958", url: "#_11" },
+              {title: "\ud2b8\ub79c\uc2a4\ubbf8\uc158 \uad6c\ud604 \uc608\uc2dc", url: "#_12" },
           ]},
           {title: "\uc7ac\uc9c8(Material) \ubc0f \uc678\uad00 \uc124\uc815", url: "#material", children: [
-              {title: "\uc7ac\uc9c8 \ub9e4\ud551", url: "#_14" },
-              {title: "\ud14d\uc2a4\ucc98 \ub9e4\ud551", url: "#_15" },
+              {title: "\uc7ac\uc9c8 \ub9e4\ud551", url: "#_13" },
+              {title: "\ud14d\uc2a4\ucc98 \ub9e4\ud551", url: "#_14" },
           ]},
-          {title: "\uc560\ub2c8\uba54\uc774\uc158 \ubc0f \ub3d9\uc791 \uc124\uc815", url: "#_16", children: [
-              {title: "\ucd08\uae30 \uc0c1\ud0dc \uc124\uc815", url: "#_17" },
-              {title: "\ub3d9\uc801 \uc560\ub2c8\uba54\uc774\uc158", url: "#_18" },
+          {title: "\uc560\ub2c8\uba54\uc774\uc158 \ubc0f \ub3d9\uc791 \uc124\uc815", url: "#_15", children: [
+              {title: "\ucd08\uae30 \uc0c1\ud0dc \uc124\uc815", url: "#_16" },
+              {title: "\ub3d9\uc801 \uc560\ub2c8\uba54\uc774\uc158", url: "#_17" },
           ]},
-          {title: "\ucd5c\uc885 \uac80\uc99d \ubc0f \ud14c\uc2a4\ud2b8", url: "#_19", children: [
+          {title: "\ucd5c\uc885 \uac80\uc99d \ubc0f \ud14c\uc2a4\ud2b8", url: "#_18", children: [
           ]},
         ];
 
@@ -246,9 +244,8 @@ Camera camera = gameObject.AddComponent&lt;Camera&gt;();
 camera.fieldOfView = 60f;
 camera.aspect = 16f / 9f;
 </code></pre>
-<h3 id="_10">센서 데이터 통합 (계속)</h3>
 <p>센서 데이터 통합은 로봇 시뮬레이션의 현실성을 높이는 중요한 단계이다. URDF에 정의된 다양한 센서를 Unity 환경에 정확하게 구현하기 위해 추가적인 설정과 스크립팅이 필요하다.</p>
-<h4 id="_11">센서 데이터 처리</h4>
+<h4 id="_10">센서 데이터 처리</h4>
 <p>센서에서 생성된 데이터는 로봇의 제어 및 환경 인식에 활용된다. Unity에서는 센서 데이터를 실시간으로 처리하여 로봇의 동작에 반영해야 한다. 이를 위해 다음과 같은 단계를 거친다:</p>
 <ol>
 <li><strong>데이터 캡처</strong>: 센서에서 생성된 데이터를 실시간으로 캡처한다.</li>
@@ -283,12 +280,12 @@ void UpdateLiDARData()
 </code></pre>
 <h3 id="transmission">트랜스미션(Transmission) 매핑</h3>
 <p>URDF 파일에서 <strong>transmission</strong> 요소는 로봇의 구동 시스템을 정의한다. 이는 주로 전동기와 같은 액추에이터가 조인트에 힘을 전달하는 방식을 설명한다. Unity로 변환할 때는 이러한 트랜스미션을 물리적으로 구현하거나 제어 스크립트를 통해 시뮬레이션해야 한다.</p>
-<h4 id="_12">트랜스미션 종류</h4>
+<h4 id="_11">트랜스미션 종류</h4>
 <ul>
 <li><strong>전동기 기반 트랜스미션</strong>: 전동기의 회전 속도를 조인트의 회전 속도로 변환.</li>
 <li><strong>유압/공압 트랜스미션</strong>: 유체의 압력을 이용한 힘 전달.</li>
 </ul>
-<h4 id="_13">트랜스미션 구현 예시</h4>
+<h4 id="_12">트랜스미션 구현 예시</h4>
 <p>전동기 기반 트랜스미션을 Unity에서 구현하는 예시는 다음과 같다:</p>
 <pre><code class="language-csharp">// 예시: 전동기 기반 조인트 제어
 public class MotorController : MonoBehaviour
@@ -324,7 +321,7 @@ public class MotorController : MonoBehaviour
 </code></pre>
 <h3 id="material">재질(Material) 및 외관 설정</h3>
 <p>URDF 파일에는 로봇의 각 링크에 대한 재질과 외관 정보가 포함될 수 있다. Unity에서는 이러한 정보를 활용하여 로봇의 시각적 요소를 설정한다.</p>
-<h4 id="_14">재질 매핑</h4>
+<h4 id="_13">재질 매핑</h4>
 <p>URDF에서 정의된 머티리얼 속성(색상, 텍스처 등)은 Unity의 머티리얼 시스템으로 매핑된다. 이를 통해 로봇의 시각적 일관성을 유지할 수 있다.</p>
 <pre><code class="language-csharp">// 예시: 머티리얼 적용
 void ApplyMaterial(GameObject link, string materialName)
@@ -340,7 +337,7 @@ void ApplyMaterial(GameObject link, string materialName)
     }
 }
 </code></pre>
-<h4 id="_15">텍스처 매핑</h4>
+<h4 id="_14">텍스처 매핑</h4>
 <p>로봇의 외관을 더욱 현실감 있게 만들기 위해 텍스처를 적용할 수 있다. URDF에 정의된 텍스처 파일을 Unity의 텍스처 자원으로 가져와서 링크에 적용한다.</p>
 <pre><code class="language-csharp">// 예시: 텍스처 적용
 void ApplyTexture(GameObject link, string texturePath)
@@ -356,9 +353,9 @@ void ApplyTexture(GameObject link, string texturePath)
     }
 }
 </code></pre>
-<h3 id="_16">애니메이션 및 동작 설정</h3>
+<h3 id="_15">애니메이션 및 동작 설정</h3>
 <p>URDF 파일에는 로봇의 초기 상태와 기본 동작에 대한 정보가 포함될 수 있다. Unity에서는 이러한 동작을 애니메이션 클립이나 스크립트를 통해 구현한다.</p>
-<h4 id="_17">초기 상태 설정</h4>
+<h4 id="_16">초기 상태 설정</h4>
 <p>로봇의 각 조인트의 초기 위치와 회전 상태를 설정하여 시뮬레이션 시작 시 로봇이 올바른 자세를 유지하도록 한다.</p>
 <pre><code class="language-csharp">// 예시: 초기 조인트 상태 설정
 void SetInitialJointStates()
@@ -370,7 +367,7 @@ void SetInitialJointStates()
     }
 }
 </code></pre>
-<h4 id="_18">동적 애니메이션</h4>
+<h4 id="_17">동적 애니메이션</h4>
 <p>로봇의 움직임을 실시간으로 애니메이션화하기 위해 애니메이션 컨트롤러를 설정하거나 스크립트를 통해 조인트를 제어한다.</p>
 <pre><code class="language-csharp">// 예시: 실시간 애니메이션 제어
 void AnimateJoint(float targetAngle)
@@ -384,7 +381,7 @@ void AnimateJoint(float targetAngle)
     }
 }
 </code></pre>
-<h3 id="_19">최종 검증 및 테스트</h3>
+<h3 id="_18">최종 검증 및 테스트</h3>
 <p>URDF에서 Unity로의 변환이 완료된 후, 로봇 모델이 정확하게 구현되었는지 검증하는 단계가 필요하다. 이를 위해 다음과 같은 테스트를 수행한다:</p>
 <ol>
 <li><strong>구조 확인</strong>: 모든 링크와 조인트가 올바르게 매핑되었는지 확인한다.</li>

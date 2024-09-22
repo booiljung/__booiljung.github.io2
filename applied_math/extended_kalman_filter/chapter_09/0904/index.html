@@ -104,13 +104,13 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 <p>$$
    \mathbf{x}<em>{k|k-1} = f(\mathbf{x}</em>{k-1})</p>
 <p>$$</p>
-<p>여기서 <span class="arithmatex"><span class="MathJax_Preview">f(\cdot)</span><script type="math/tex">f(\cdot)</script></span>는 상태 전이 함수이다. 예측 단계에서는 이 함수의 정확한 선형화와 시간 업데이트가 중요하다. 수식적으로, 야코비안 행렬 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{F}_k</span><script type="math/tex">\mathbf{F}_k</script></span>가 잘못 계산되면, 전체 필터의 성능이 저하될 수 있다. 야코비안 행렬의 계산 과정을 디버깅할 때는, 수치 미분을 활용해 계산된 값과 비교하는 방법이 유용하다.</p>
+<p>여기서 <span class="arithmatex"><span class="MathJax_Preview">f(\cdot)</span><script type="math/tex">f(\cdot)</script></span>는 상태 전이 함수이다. 예측 단계에서는 이 함수의 정확한 선형화와 시간 업데이트가 중요하다. 수식적으로, 야코비 행렬 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{F}_k</span><script type="math/tex">\mathbf{F}_k</script></span>가 잘못 계산되면, 전체 필터의 성능이 저하될 수 있다. 야코비 행렬의 계산 과정을 디버깅할 때는, 수치 미분을 활용해 계산된 값과 비교하는 방법이 유용하다.</p>
 <p>$$
    \mathbf{F}<em>k = \frac{\partial f}{\partial \mathbf{x}} \bigg|</em>{\mathbf{x}_{k-1}}</p>
 <p>$$</p>
 <ol>
 <li><strong>갱신 단계 디버깅</strong>
-   갱신 단계에서는 관측치와 예측치 사이의 차이를 보정하는 과정이 중요하다. 이를 위해 관측 모델 <span class="arithmatex"><span class="MathJax_Preview">h(\cdot)</span><script type="math/tex">h(\cdot)</script></span>의 선형화가 적절하게 이루어져야 하며, 야코비안 행렬 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{H}_k</span><script type="math/tex">\mathbf{H}_k</script></span>를 올바르게 계산해야 한다. 이 단계에서 문제가 발생하면, 필터의 보정 성능이 크게 저하된다.</li>
+   갱신 단계에서는 관측치와 예측치 사이의 차이를 보정하는 과정이 중요하다. 이를 위해 관측 모델 <span class="arithmatex"><span class="MathJax_Preview">h(\cdot)</span><script type="math/tex">h(\cdot)</script></span>의 선형화가 적절하게 이루어져야 하며, 야코비 행렬 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{H}_k</span><script type="math/tex">\mathbf{H}_k</script></span>를 올바르게 계산해야 한다. 이 단계에서 문제가 발생하면, 필터의 보정 성능이 크게 저하된다.</li>
 </ol>
 <p>갱신 식은 다음과 같다:</p>
 <p>$$

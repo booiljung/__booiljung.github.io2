@@ -144,7 +144,7 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 \mathbf{f}(\mathbf{x}) \approx \mathbf{f}(\mathbf{x}_0) + \mathbf{F}_1 (\mathbf{x} - \mathbf{x}_0) + \frac{1}{2} (\mathbf{x} - \mathbf{x}_0)^\top \mathbf{F}_2 (\mathbf{x} - \mathbf{x}_0)
 </script>
 </div>
-<p>여기서 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{F}_1</span><script type="math/tex">\mathbf{F}_1</script></span>은 야코비안 행렬, <span class="arithmatex"><span class="MathJax_Preview">\mathbf{F}_2</span><script type="math/tex">\mathbf{F}_2</script></span>는 헤시안 행렬이다. 이를 통해 1차 근사보다 더 정확한 상태 추정이 가능해진다. 이러한 방법은 고차 비선형 시스템의 상태 추정을 더욱 정밀하게 할 수 있도록 돕는다.</p>
+<p>여기서 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{F}_1</span><script type="math/tex">\mathbf{F}_1</script></span>은 야코비 행렬, <span class="arithmatex"><span class="MathJax_Preview">\mathbf{F}_2</span><script type="math/tex">\mathbf{F}_2</script></span>는 헤시안 행렬이다. 이를 통해 1차 근사보다 더 정확한 상태 추정이 가능해진다. 이러한 방법은 고차 비선형 시스템의 상태 추정을 더욱 정밀하게 할 수 있도록 돕는다.</p>
 <h3 id="_5">확장 칼만 필터의 병렬 처리 기법</h3>
 <p>확장 칼만 필터의 계산 복잡도를 줄이기 위해 병렬 처리 기법을 적용하는 연구도 활발하다. 특히, 고성능 컴퓨팅 환경에서 확장 칼만 필터의 예측 및 업데이트 단계를 병렬화함으로써 실시간 처리 성능을 향상시키는 방안이 제시되고 있다. </p>
 <p>병렬 처리 기법에서는 필터의 예측 단계에서 발생하는 행렬 연산을 병렬로 나누어 처리할 수 있다. 예를 들어, 오차 공분산 행렬 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{P}_k</span><script type="math/tex">\mathbf{P}_k</script></span>의 전파는 다음과 같은 수식을 따른다:</p>

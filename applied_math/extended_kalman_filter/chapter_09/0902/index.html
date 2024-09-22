@@ -121,8 +121,8 @@ P_pred = F @ P @ F.T + Q
 </code></pre>
 <p>여기서 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{F}</span><script type="math/tex">\mathbf{F}</script></span>는 상태 전이 행렬, <span class="arithmatex"><span class="MathJax_Preview">\mathbf{B}</span><script type="math/tex">\mathbf{B}</script></span>는 제어 입력 행렬, <span class="arithmatex"><span class="MathJax_Preview">\mathbf{Q}</span><script type="math/tex">\mathbf{Q}</script></span>는 시스템 노이즈 공분산 행렬이다.</p>
 <h4 id="2-scipy">2. SciPy</h4>
-<p><strong>SciPy</strong>는 고급 수치 계산을 위한 Python 라이브러리로, 최적화, 선형 대수, 적분, 미분방정식 풀이 등의 기능을 제공한다. 특히 SciPy의 최적화 함수는 확장 칼만 필터의 비선형 문제를 해결하는 데 유용하다. 예를 들어, 비선형 시스템에서의 상태 추정 과정에서 필요한 야코비안 행렬을 수치적으로 계산할 수 있다.</p>
-<p>야코비안 행렬 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{J}</span><script type="math/tex">\mathbf{J}</script></span>는 다음과 같이 정의된다:</p>
+<p><strong>SciPy</strong>는 고급 수치 계산을 위한 Python 라이브러리로, 최적화, 선형 대수, 적분, 미분방정식 풀이 등의 기능을 제공한다. 특히 SciPy의 최적화 함수는 확장 칼만 필터의 비선형 문제를 해결하는 데 유용하다. 예를 들어, 비선형 시스템에서의 상태 추정 과정에서 필요한 야코비 행렬을 수치적으로 계산할 수 있다.</p>
+<p>야코비 행렬 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{J}</span><script type="math/tex">\mathbf{J}</script></span>는 다음과 같이 정의된다:</p>
 <div class="arithmatex">
 <div class="MathJax_Preview">
 \mathbf{J} = \frac{\partial \mathbf{h}}{\partial \mathbf{x}} = \begin{bmatrix} \frac{\partial h_1}{\partial x_1} &amp; \frac{\partial h_1}{\partial x_2} &amp; \dots &amp; \frac{\partial h_1}{\partial x_n} \\ \frac{\partial h_2}{\partial x_1} &amp; \frac{\partial h_2}{\partial x_2} &amp; \dots &amp; \frac{\partial h_2}{\partial x_n} \\ \vdots &amp; \vdots &amp; \ddots &amp; \vdots \\ \frac{\partial h_m}{\partial x_1} &amp; \frac{\partial h_m}{\partial x_2} &amp; \dots &amp; \frac{\partial h_m}{\partial x_n} \end{bmatrix}
@@ -131,7 +131,7 @@ P_pred = F @ P @ F.T + Q
 \mathbf{J} = \frac{\partial \mathbf{h}}{\partial \mathbf{x}} = \begin{bmatrix} \frac{\partial h_1}{\partial x_1} & \frac{\partial h_1}{\partial x_2} & \dots & \frac{\partial h_1}{\partial x_n} \\ \frac{\partial h_2}{\partial x_1} & \frac{\partial h_2}{\partial x_2} & \dots & \frac{\partial h_2}{\partial x_n} \\ \vdots & \vdots & \ddots & \vdots \\ \frac{\partial h_m}{\partial x_1} & \frac{\partial h_m}{\partial x_2} & \dots & \frac{\partial h_m}{\partial x_n} \end{bmatrix}
 </script>
 </div>
-<p>SciPy는 이러한 행렬을 효율적으로 계산할 수 있도록 도와준다. 야코비안 행렬은 상태 추정 과정에서 관측 모델의 선형화를 위해 필수적이다.</p>
+<p>SciPy는 이러한 행렬을 효율적으로 계산할 수 있도록 도와준다. 야코비 행렬은 상태 추정 과정에서 관측 모델의 선형화를 위해 필수적이다.</p>
 <h3 id="3-matplotlib">3. Matplotlib</h3>
 <p><strong>Matplotlib</strong>는 데이터를 시각적으로 표현하는 데 매우 유용한 Python 라이브러리이다. 확장 칼만 필터의 성능을 평가하고 결과를 시각적으로 확인하기 위해 주로 사용된다. 예를 들어, 시간에 따른 상태 변수의 변화를 그래프로 나타내거나, 추정값과 실제값의 차이를 시각화하여 필터의 정확성을 평가할 수 있다.</p>
 <p>추정된 상태 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{x}_k</span><script type="math/tex">\mathbf{x}_k</script></span>와 실제 상태 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{x}_{true}</span><script type="math/tex">\mathbf{x}_{true}</script></span>의 차이를 그래프로 표현하면 다음과 같은 방식으로 수행된다:</p>
@@ -155,8 +155,8 @@ plt.show()
 </code></pre>
 <p>이와 같이, 필터의 성능을 쉽게 분석하고 시각화할 수 있다. Matplotlib를 사용하면 확장 칼만 필터의 결과가 어떻게 변화하는지 직관적으로 이해할 수 있다.</p>
 <h4 id="4-pytorch">4. PyTorch</h4>
-<p><strong>PyTorch</strong>는 주로 딥러닝에 사용되는 프레임워크지만, 확장 칼만 필터의 구현에서도 유용하게 사용될 수 있다. PyTorch는 자동 미분 기능을 제공하므로, 비선형 시스템의 야코비안 계산을 쉽게 처리할 수 있다.</p>
-<p>비선형 함수 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{f}(\mathbf{x})</span><script type="math/tex">\mathbf{f}(\mathbf{x})</script></span>의 야코비안을 자동 미분을 통해 계산하는 예시는 다음과 같다:</p>
+<p><strong>PyTorch</strong>는 주로 딥러닝에 사용되는 프레임워크지만, 확장 칼만 필터의 구현에서도 유용하게 사용될 수 있다. PyTorch는 자동 미분 기능을 제공하므로, 비선형 시스템의 야코비 계산을 쉽게 처리할 수 있다.</p>
+<p>비선형 함수 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{f}(\mathbf{x})</span><script type="math/tex">\mathbf{f}(\mathbf{x})</script></span>의 야코비을 자동 미분을 통해 계산하는 예시는 다음과 같다:</p>
 <pre><code class="language-python">import torch
 
 # 상태 변수 정의
@@ -165,12 +165,12 @@ x = torch.tensor([1.0, 2.0], requires_grad=True)
 # 비선형 함수 정의
 f = x[0]**2 + torch.sin(x[1])
 
-# 자동 미분을 통한 야코비안 계산
+# 자동 미분을 통한 야코비 계산
 f.backward()
 jacobian = x.grad
 print(jacobian)
 </code></pre>
-<p>이처럼 PyTorch의 자동 미분 기능을 활용하면, 비선형 시스템에서의 야코비안 계산이 매우 간편해진다. 이는 확장 칼만 필터에서 비선형 모델을 다루는 데 큰 장점이 된다.</p>
+<p>이처럼 PyTorch의 자동 미분 기능을 활용하면, 비선형 시스템에서의 야코비 계산이 매우 간편해진다. 이는 확장 칼만 필터에서 비선형 모델을 다루는 데 큰 장점이 된다.</p>
 <h4 id="5-c-eigen">5. C++ Eigen 라이브러리</h4>
 <p>확장 칼만 필터는 Python 외에도 C++ 환경에서 구현될 수 있다. 이때 주로 사용하는 라이브러리가 <strong>Eigen</strong>이다. Eigen은 벡터와 행렬 연산에 최적화된 C++ 템플릿 라이브러리로, 실시간 시스템에서 확장 칼만 필터를 빠르고 효율적으로 구현하는 데 널리 사용된다.</p>
 <p>Eigen을 사용하여 상태 벡터와 공분산 행렬을 정의하고 연산하는 예시는 다음과 같다:</p>

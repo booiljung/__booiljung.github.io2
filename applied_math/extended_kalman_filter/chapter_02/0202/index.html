@@ -130,8 +130,8 @@ f(\mathbf{x}) \approx f(\mathbf{x}_0) + \mathbf{J}_f(\mathbf{x}_0) (\mathbf{x} -
 </div>
 <p>여기서:
 - <span class="arithmatex"><span class="MathJax_Preview">f(\mathbf{x}_0)</span><script type="math/tex">f(\mathbf{x}_0)</script></span>는 상태 벡터 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{x}_0</span><script type="math/tex">\mathbf{x}_0</script></span>에서의 함수 값이다.
-- <span class="arithmatex"><span class="MathJax_Preview">\mathbf{J}_f(\mathbf{x}_0)</span><script type="math/tex">\mathbf{J}_f(\mathbf{x}_0)</script></span>는 함수 <span class="arithmatex"><span class="MathJax_Preview">f(\mathbf{x})</span><script type="math/tex">f(\mathbf{x})</script></span>의 야코비안 행렬(Jacobian Matrix)로, 각 변수에 대한 편미분으로 이루어져 있다.</p>
-<p>야코비안 행렬은 다음과 같이 정의된다.</p>
+- <span class="arithmatex"><span class="MathJax_Preview">\mathbf{J}_f(\mathbf{x}_0)</span><script type="math/tex">\mathbf{J}_f(\mathbf{x}_0)</script></span>는 함수 <span class="arithmatex"><span class="MathJax_Preview">f(\mathbf{x})</span><script type="math/tex">f(\mathbf{x})</script></span>의 야코비 행렬(Jacobian Matrix)로, 각 변수에 대한 편미분으로 이루어져 있다.</p>
+<p>야코비 행렬은 다음과 같이 정의된다.</p>
 <div class="arithmatex">
 <div class="MathJax_Preview">
 \mathbf{J}_f(\mathbf{x}_0) = \frac{\partial f(\mathbf{x})}{\partial \mathbf{x}} \bigg|_{\mathbf{x} = \mathbf{x}_0}
@@ -149,7 +149,7 @@ h(\mathbf{x}) \approx h(\mathbf{x}_0) + \mathbf{J}_h(\mathbf{x}_0) (\mathbf{x} -
 h(\mathbf{x}) \approx h(\mathbf{x}_0) + \mathbf{J}_h(\mathbf{x}_0) (\mathbf{x} - \mathbf{x}_0)
 </script>
 </div>
-<p>여기서 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{J}_h(\mathbf{x}_0)</span><script type="math/tex">\mathbf{J}_h(\mathbf{x}_0)</script></span>는 측정 함수 <span class="arithmatex"><span class="MathJax_Preview">h(\mathbf{x})</span><script type="math/tex">h(\mathbf{x})</script></span>에 대한 야코비안 행렬이다.</p>
+<p>여기서 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{J}_h(\mathbf{x}_0)</span><script type="math/tex">\mathbf{J}_h(\mathbf{x}_0)</script></span>는 측정 함수 <span class="arithmatex"><span class="MathJax_Preview">h(\mathbf{x})</span><script type="math/tex">h(\mathbf{x})</script></span>에 대한 야코비 행렬이다.</p>
 <h3 id="_4">선형화 후 시스템 표현</h3>
 <p>테일러 급수의 1차 근사를 통해 비선형 시스템을 선형화한 후, 이를 선형 칼만 필터(Kalman Filter)의 형태로 바꿀 수 있다. 선형화된 시스템의 상태 전이 방정식과 측정 방정식은 다음과 같이 나타낼 수 있다.</p>
 <div class="arithmatex">
@@ -169,8 +169,8 @@ h(\mathbf{x}) \approx h(\mathbf{x}_0) + \mathbf{J}_h(\mathbf{x}_0) (\mathbf{x} -
 </script>
 </div>
 <p>여기서:
-- <span class="arithmatex"><span class="MathJax_Preview">\mathbf{F}_{k-1} = \mathbf{J}_f(\mathbf{x}_{k-1})</span><script type="math/tex">\mathbf{F}_{k-1} = \mathbf{J}_f(\mathbf{x}_{k-1})</script></span>는 상태 전이 함수의 야코비안이다.
-- <span class="arithmatex"><span class="MathJax_Preview">\mathbf{H}_k = \mathbf{J}_h(\mathbf{x}_k)</span><script type="math/tex">\mathbf{H}_k = \mathbf{J}_h(\mathbf{x}_k)</script></span>는 측정 함수의 야코비안이다.
+- <span class="arithmatex"><span class="MathJax_Preview">\mathbf{F}_{k-1} = \mathbf{J}_f(\mathbf{x}_{k-1})</span><script type="math/tex">\mathbf{F}_{k-1} = \mathbf{J}_f(\mathbf{x}_{k-1})</script></span>는 상태 전이 함수의 야코비이다.
+- <span class="arithmatex"><span class="MathJax_Preview">\mathbf{H}_k = \mathbf{J}_h(\mathbf{x}_k)</span><script type="math/tex">\mathbf{H}_k = \mathbf{J}_h(\mathbf{x}_k)</script></span>는 측정 함수의 야코비이다.
 - <span class="arithmatex"><span class="MathJax_Preview">\mathbf{B}_{k-1}</span><script type="math/tex">\mathbf{B}_{k-1}</script></span>는 제어 입력에 대한 상태 전이 행렬이다.</p>
 <p>이러한 선형화된 시스템을 이용하면, 확장 칼만 필터의 예측 및 업데이트 단계에서 상태와 오차 공분산을 계산할 수 있다.</p>
 

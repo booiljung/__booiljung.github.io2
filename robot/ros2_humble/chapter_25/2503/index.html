@@ -597,34 +597,60 @@ I_\text{solar}
 <h4 id="ros2_7">자율 수중 탐사 로봇에서의 ROS2 활용</h4>
 <p>자율 수중 탐사 로봇(AUV: Autonomous Underwater Vehicle)은 해양 환경에서 자율적으로 이동하며, 해양 자원을 탐사하거나 환경 모니터링을 수행한다. ROS2는 이러한 AUV 시스템에서 여러 센서 데이터를 실시간으로 처리하고, 제어 신호를 전달하는 데 필수적인 플랫폼으로 활용된다.</p>
 <p>AUV의 상태는 상태 벡터 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{x}_\text{AUV}</span><script type="math/tex">\mathbf{x}_\text{AUV}</script></span>로 정의할 수 있다.</p>
-<p>$$</p>
-<p>\mathbf{x}_\text{AUV} = 
+<div class="arithmatex">
+<div class="MathJax_Preview">
+\mathbf{x}_\text{AUV} = 
 \begin{bmatrix}
-x \
-y \
-z \
-\theta \
-\phi \
-\psi \
-v_x \
-v_y \
+x \\
+y \\
+z \\
+\theta \\
+\phi \\
+\psi \\
+v_x \\
+v_y \\
 v_z
-\end{bmatrix}</p>
-<p>$$</p>
+\end{bmatrix}
+</div>
+<script type="math/tex; mode=display">
+\mathbf{x}_\text{AUV} = 
+\begin{bmatrix}
+x \\
+y \\
+z \\
+\theta \\
+\phi \\
+\psi \\
+v_x \\
+v_y \\
+v_z
+\end{bmatrix}
+</script>
+</div>
 <p>여기서 <span class="arithmatex"><span class="MathJax_Preview">x, y, z</span><script type="math/tex">x, y, z</script></span>는 AUV의 위치를 나타내고, <span class="arithmatex"><span class="MathJax_Preview">\theta, \phi, \psi</span><script type="math/tex">\theta, \phi, \psi</script></span>는 롤, 피치, 요의 자세 각도, <span class="arithmatex"><span class="MathJax_Preview">v_x, v_y, v_z</span><script type="math/tex">v_x, v_y, v_z</script></span>는 각 축에 대한 속도를 나타낸다. ROS2는 이러한 상태 데이터를 실시간으로 수집하고 처리하여 AUV가 자율적으로 탐사를 수행할 수 있도록 지원한다.</p>
 <h4 id="_17">경로 계획 및 장애물 회피</h4>
 <p>AUV는 해양 환경에서 자율적으로 이동해야 하며, 이 과정에서 경로 계획과 장애물 회피가 중요한 역할을 한다. ROS2의 네비게이션 스택을 사용하면 AUV는 실시간으로 최적 경로를 계산하고, 해저 지형이나 장애물을 피해 안전하게 이동할 수 있다.</p>
 <p>경로 계획은 비용 함수 <span class="arithmatex"><span class="MathJax_Preview">f(\mathbf{p})</span><script type="math/tex">f(\mathbf{p})</script></span>를 최소화하는 방식으로 정의된다.</p>
-<p>$$</p>
-<p>\min f(\mathbf{p}) = \sum_{i=1}^{n} d_i + \sum_{j=1}^{m} \text{obstacle_cost}_j</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+\min f(\mathbf{p}) = \sum_{i=1}^{n} d_i + \sum_{j=1}^{m} \text{obstacle\_cost}_j
+</div>
+<script type="math/tex; mode=display">
+\min f(\mathbf{p}) = \sum_{i=1}^{n} d_i + \sum_{j=1}^{m} \text{obstacle\_cost}_j
+</script>
+</div>
 <p>여기서 <span class="arithmatex"><span class="MathJax_Preview">d_i</span><script type="math/tex">d_i</script></span>는 경로 구간의 거리, <span class="arithmatex"><span class="MathJax_Preview">\text{obstacle\_cost}_j</span><script type="math/tex">\text{obstacle\_cost}_j</script></span>는 경로 상의 장애물 회피 비용을 의미한다. ROS2는 이러한 비용 함수에 따라 경로를 실시간으로 최적화하여, AUV가 해양 탐사 중 장애물에 부딪히지 않고 안전하게 이동할 수 있도록 한다.</p>
 <h4 id="_18">실시간 데이터 처리 및 센서 통합</h4>
 <p>AUV는 다양한 센서로부터 데이터를 수집하여 해양 환경을 탐사한다. 센서로는 소나, 카메라, IMU, GPS 등이 있으며, 이들 데이터를 통합하여 AUV의 위치를 추정하고 경로를 보정한다. ROS2는 이러한 센서 데이터를 실시간으로 처리하고, 퍼블리셔-서브스크라이버 모델을 통해 다른 모듈로 전달한다.</p>
 <p>AUV의 센서 데이터 통합을 위한 상태 벡터 업데이트는 다음과 같은 식으로 표현된다.</p>
-<p>$$</p>
-<p>\mathbf{x}<em>\text{AUV}^\text{new} = \mathbf{x}</em>\text{AUV}^\text{old} + \Delta t \cdot \mathbf{v}_\text{AUV} + \text{sensor_correction}</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+\mathbf{x}_\text{AUV}^\text{new} = \mathbf{x}_\text{AUV}^\text{old} + \Delta t \cdot \mathbf{v}_\text{AUV} + \text{sensor\_correction}
+</div>
+<script type="math/tex; mode=display">
+\mathbf{x}_\text{AUV}^\text{new} = \mathbf{x}_\text{AUV}^\text{old} + \Delta t \cdot \mathbf{v}_\text{AUV} + \text{sensor\_correction}
+</script>
+</div>
 <p>여기서 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{v}_\text{AUV}</span><script type="math/tex">\mathbf{v}_\text{AUV}</script></span>는 AUV의 속도, <span class="arithmatex"><span class="MathJax_Preview">\text{sensor\_correction}</span><script type="math/tex">\text{sensor\_correction}</script></span>은 센서 데이터를 기반으로 한 보정 항이다. ROS2는 이 데이터를 실시간으로 반영하여 AUV가 정확한 위치와 자세로 탐사를 수행할 수 있도록 한다.</p>
 <h4 id="_19">통신 지연 문제 해결</h4>
 <p>해양 환경에서는 통신 지연이나 신호 손실이 자주 발생한다. ROS2는 이러한 문제를 해결하기 위해 QoS(품질 서비스) 정책을 제공하여, 통신 지연이 발생하더라도 중요한 데이터를 우선적으로 처리하고 데이터 손실을 최소화할 수 있도록 지원한다.</p>
@@ -632,15 +658,26 @@ v_z
 <h4 id="_20">해양 자원 탐사 및 데이터 수집</h4>
 <p>ROS2는 해양 자원 탐사에서 수집된 데이터를 효율적으로 처리하고 저장할 수 있는 분산 시스템을 제공한다. AUV가 수집한 데이터는 ROS2의 퍼블리셔-서브스크라이버 모델을 통해 분산 처리되어, 실시간으로 분석되거나 저장된다.</p>
 <p>AUV가 탐사한 데이터는 상태 벡터 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{x}_\text{resource}</span><script type="math/tex">\mathbf{x}_\text{resource}</script></span>로 표현된다.</p>
-<p>$$</p>
-<p>\mathbf{x}_\text{resource} = 
+<div class="arithmatex">
+<div class="MathJax_Preview">
+\mathbf{x}_\text{resource} = 
 \begin{bmatrix}
-\text{location} \
-\text{depth} \
-\text{composition} \
+\text{location} \\
+\text{depth} \\
+\text{composition} \\
 \text{temperature}
-\end{bmatrix}</p>
-<p>$$</p>
+\end{bmatrix}
+</div>
+<script type="math/tex; mode=display">
+\mathbf{x}_\text{resource} = 
+\begin{bmatrix}
+\text{location} \\
+\text{depth} \\
+\text{composition} \\
+\text{temperature}
+\end{bmatrix}
+</script>
+</div>
 <p>여기서 위치, 깊이, 구성 성분, 온도 등의 데이터는 해양 자원 탐사 결과를 나타낸다. ROS2는 이러한 데이터를 실시간으로 처리하여, 탐사 중인 해양 자원의 상태를 분석하고 지상 기지로 전송한다.</p>
 
   <br>

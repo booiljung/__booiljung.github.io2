@@ -125,7 +125,7 @@ f(\mathbf{x}_k, \mathbf{u}_k) \approx f(\hat{\mathbf{x}}_k, \mathbf{u}_k) + \fra
 f(\mathbf{x}_k, \mathbf{u}_k) \approx f(\hat{\mathbf{x}}_k, \mathbf{u}_k) + \frac{\partial f}{\partial \mathbf{x}} \Big|_{\mathbf{x} = \hat{\mathbf{x}}_k} (\mathbf{x}_k - \hat{\mathbf{x}}_k)
 </script>
 </div>
-<p>여기서 <span class="arithmatex"><span class="MathJax_Preview">\frac{\partial f}{\partial \mathbf{x}}</span><script type="math/tex">\frac{\partial f}{\partial \mathbf{x}}</script></span>는 시스템 모델 <span class="arithmatex"><span class="MathJax_Preview">f</span><script type="math/tex">f</script></span>의 야코비안 행렬이다.</p>
+<p>여기서 <span class="arithmatex"><span class="MathJax_Preview">\frac{\partial f}{\partial \mathbf{x}}</span><script type="math/tex">\frac{\partial f}{\partial \mathbf{x}}</script></span>는 시스템 모델 <span class="arithmatex"><span class="MathJax_Preview">f</span><script type="math/tex">f</script></span>의 야코비 행렬이다.</p>
 <p>관측 모델도 마찬가지로 선형화된다:</p>
 <div class="arithmatex">
 <div class="MathJax_Preview">
@@ -138,7 +138,7 @@ h(\mathbf{x}_k) \approx h(\hat{\mathbf{x}}_k) + \frac{\partial h}{\partial \math
 <p>이와 같이 선형화를 통해 칼만 필터를 확장하여 적용할 수 있는 기반을 마련한다.</p>
 <h3 id="_3">비선형 시스템에서의 오차 공분산 예측</h3>
 <p>확장 칼만 필터에서는 비선형 시스템의 오차 공분산을 선형화된 시스템을 바탕으로 예측해야 한다. 오차 공분산 행렬 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{P}_k</span><script type="math/tex">\mathbf{P}_k</script></span>는 시스템 상태 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{x}_k</span><script type="math/tex">\mathbf{x}_k</script></span>의 추정 오차를 나타내는 중요한 요소이며, 확장 칼만 필터에서 오차 공분산의 예측은 다음과 같이 이루어진다.</p>
-<p>비선형 시스템에서 오차 공분산을 예측하기 위해, 시스템 모델 <span class="arithmatex"><span class="MathJax_Preview">f(\mathbf{x}_k, \mathbf{u}_k)</span><script type="math/tex">f(\mathbf{x}_k, \mathbf{u}_k)</script></span>를 선형화한 야코비안 행렬 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{F}_k</span><script type="math/tex">\mathbf{F}_k</script></span>를 사용한다. 야코비안 행렬 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{F}_k</span><script type="math/tex">\mathbf{F}_k</script></span>는 다음과 같이 정의된다:</p>
+<p>비선형 시스템에서 오차 공분산을 예측하기 위해, 시스템 모델 <span class="arithmatex"><span class="MathJax_Preview">f(\mathbf{x}_k, \mathbf{u}_k)</span><script type="math/tex">f(\mathbf{x}_k, \mathbf{u}_k)</script></span>를 선형화한 야코비 행렬 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{F}_k</span><script type="math/tex">\mathbf{F}_k</script></span>를 사용한다. 야코비 행렬 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{F}_k</span><script type="math/tex">\mathbf{F}_k</script></span>는 다음과 같이 정의된다:</p>
 <div class="arithmatex">
 <div class="MathJax_Preview">
 \mathbf{F}_k = \frac{\partial f}{\partial \mathbf{x}} \Big|_{\mathbf{x} = \hat{\mathbf{x}}_k}
@@ -147,7 +147,7 @@ h(\mathbf{x}_k) \approx h(\hat{\mathbf{x}}_k) + \frac{\partial h}{\partial \math
 \mathbf{F}_k = \frac{\partial f}{\partial \mathbf{x}} \Big|_{\mathbf{x} = \hat{\mathbf{x}}_k}
 </script>
 </div>
-<p>이 야코비안 행렬을 사용하여, 상태 오차 공분산의 예측 단계는 다음과 같이 표현할 수 있다:</p>
+<p>이 야코비 행렬을 사용하여, 상태 오차 공분산의 예측 단계는 다음과 같이 표현할 수 있다:</p>
 <div class="arithmatex">
 <div class="MathJax_Preview">
 \mathbf{P}_{k+1|k} = \mathbf{F}_k \mathbf{P}_k \mathbf{F}_k^\top + \mathbf{Q}_k
@@ -162,7 +162,7 @@ h(\mathbf{x}_k) \approx h(\hat{\mathbf{x}}_k) + \frac{\partial h}{\partial \math
 - <span class="arithmatex"><span class="MathJax_Preview">\mathbf{Q}_k</span><script type="math/tex">\mathbf{Q}_k</script></span>는 시스템 노이즈 공분산 행렬이다.</p>
 <p>이 예측 단계는 시스템 상태의 불확실성을 미래로 전파하는 역할을 하며, 비선형성을 고려한 오차 공분산의 선형화된 예측을 수행한다.</p>
 <h3 id="_4">비선형 시스템에서의 관측 업데이트</h3>
-<p>비선형 시스템에서 관측 업데이트 단계는 관측 모델 <span class="arithmatex"><span class="MathJax_Preview">h(\mathbf{x}_k)</span><script type="math/tex">h(\mathbf{x}_k)</script></span>를 선형화한 후, 야코비안 행렬 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{H}_k</span><script type="math/tex">\mathbf{H}_k</script></span>를 사용하여 진행된다. 관측 모델의 야코비안 행렬 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{H}_k</span><script type="math/tex">\mathbf{H}_k</script></span>는 다음과 같이 정의된다:</p>
+<p>비선형 시스템에서 관측 업데이트 단계는 관측 모델 <span class="arithmatex"><span class="MathJax_Preview">h(\mathbf{x}_k)</span><script type="math/tex">h(\mathbf{x}_k)</script></span>를 선형화한 후, 야코비 행렬 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{H}_k</span><script type="math/tex">\mathbf{H}_k</script></span>를 사용하여 진행된다. 관측 모델의 야코비 행렬 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{H}_k</span><script type="math/tex">\mathbf{H}_k</script></span>는 다음과 같이 정의된다:</p>
 <div class="arithmatex">
 <div class="MathJax_Preview">
 \mathbf{H}_k = \frac{\partial h}{\partial \mathbf{x}} \Big|_{\mathbf{x} = \hat{\mathbf{x}}_k}

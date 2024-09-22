@@ -67,7 +67,7 @@
               {title: "\ubaa8\ub378\ub9c1 \ubd88\ud655\uc2e4\uc131\uc5d0 \ub300\ud55c \ub300\ucc98 \ubc29\ubc95", url: "#_22" },
           ]},
           {title: "\uacc4\uc0b0 \ubcf5\uc7a1\uc131\uacfc \uc2e4\uc2dc\uac04 \uc131\ub2a5", url: "#_23", children: [
-              {title: "\uc57c\ucf54\ube44\uc548 \ud589\ub82c\uc758 \uacc4\uc0b0", url: "#_24" },
+              {title: "\uc57c\ucf54\ube44 \ud589\ub82c\uc758 \uacc4\uc0b0", url: "#_24" },
               {title: "\ud544\ud130\uc758 \uacc4\uc0b0 \ube44\uc6a9", url: "#_25" },
               {title: "\uc2e4\uc2dc\uac04 \uc131\ub2a5 \uac1c\uc120\uc744 \uc704\ud55c \uc811\uadfc\ubc95", url: "#_26" },
           ]},
@@ -186,7 +186,7 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 \mathbf{P}_k = \mathbf{F}_{k-1} \mathbf{P}_{k-1} \mathbf{F}_{k-1}^T + \mathbf{Q}_{k-1}
 </script>
 </div>
-<p>비선형 시스템에서는 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{F}_{k-1}</span><script type="math/tex">\mathbf{F}_{k-1}</script></span> 대신 <strong>비선형적인 상태 전이 함수의 야코비안</strong>(Jacobian) <span class="arithmatex"><span class="MathJax_Preview">\mathbf{J}_{\mathbf{f}}</span><script type="math/tex">\mathbf{J}_{\mathbf{f}}</script></span>을 사용하여 근사화를 시도할 수 있다. 그러나 야코비안 행렬은 본질적으로 근사치이기 때문에, 이는 오차 공분산의 계산에 불확실성을 도입하게 된다. 이로 인해 리카티 방정식의 결과가 필터의 안정성을 보장하지 못할 수 있다.</p>
+<p>비선형 시스템에서는 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{F}_{k-1}</span><script type="math/tex">\mathbf{F}_{k-1}</script></span> 대신 <strong>비선형적인 상태 전이 함수의 야코비</strong>(Jacobian) <span class="arithmatex"><span class="MathJax_Preview">\mathbf{J}_{\mathbf{f}}</span><script type="math/tex">\mathbf{J}_{\mathbf{f}}</script></span>을 사용하여 근사화를 시도할 수 있다. 그러나 야코비 행렬은 본질적으로 근사치이기 때문에, 이는 오차 공분산의 계산에 불확실성을 도입하게 된다. 이로 인해 리카티 방정식의 결과가 필터의 안정성을 보장하지 못할 수 있다.</p>
 <h3 id="_6">근사화 기법의 한계</h3>
 <p>비선형 시스템에서 칼만 필터를 적용하기 위해 사용되는 주요 방법 중 하나는 <strong>선형화(Linearization)</strong> 기법이다. 가장 일반적으로 사용되는 선형화 기법은 <strong>테일러 급수 전개(Taylor Series Expansion)</strong>를 통한 근사화이다. 이 방법은 비선형 함수를 첫 번째 또는 두 번째 미분 항까지 전개하여 선형적으로 근사화하는 방법이다.</p>
 <h4 id="_7">일차 테일러 전개에 의한 선형화</h4>
@@ -194,7 +194,7 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 <p>$$</p>
 <p>\mathbf{f}(\mathbf{x}<em>{k-1}) \approx \mathbf{f}(\mathbf{\hat{x}}</em>{k-1}) + \mathbf{J}<em>{\mathbf{f}} (\mathbf{x}</em>{k-1} - \mathbf{\hat{x}}_{k-1})</p>
 <p>$$</p>
-<p>여기서 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{\hat{x}}_{k-1}</span><script type="math/tex">\mathbf{\hat{x}}_{k-1}</script></span>는 상태 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{x}_{k-1}</span><script type="math/tex">\mathbf{x}_{k-1}</script></span>의 추정치이며, <span class="arithmatex"><span class="MathJax_Preview">\mathbf{J}_{\mathbf{f}}</span><script type="math/tex">\mathbf{J}_{\mathbf{f}}</script></span>는 함수 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{f}</span><script type="math/tex">\mathbf{f}</script></span>의 야코비안(Jacobian) 행렬이다. 이 행렬은 상태 변수들에 대한 부분 도함수들로 구성되며, 비선형 시스템의 특정 지점에서의 선형 근사를 제공한다.</p>
+<p>여기서 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{\hat{x}}_{k-1}</span><script type="math/tex">\mathbf{\hat{x}}_{k-1}</script></span>는 상태 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{x}_{k-1}</span><script type="math/tex">\mathbf{x}_{k-1}</script></span>의 추정치이며, <span class="arithmatex"><span class="MathJax_Preview">\mathbf{J}_{\mathbf{f}}</span><script type="math/tex">\mathbf{J}_{\mathbf{f}}</script></span>는 함수 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{f}</span><script type="math/tex">\mathbf{f}</script></span>의 야코비(Jacobian) 행렬이다. 이 행렬은 상태 변수들에 대한 부분 도함수들로 구성되며, 비선형 시스템의 특정 지점에서의 선형 근사를 제공한다.</p>
 <p>이러한 선형화 과정은 본질적으로 근사적이기 때문에, 근사화가 정확하지 않을 경우 필터 성능이 크게 저하될 수 있다. 특히, 비선형성이 강한 시스템에서는 테일러 급수의 고차항을 무시함으로 인해 발생하는 오차가 매우 커질 수 있다. 이는 상태 추정 오차의 증가로 이어지고, 필터의 정확도와 신뢰성을 저하시킬 수 있다.</p>
 <h4 id="_8">근사화의 전파 오류</h4>
 <p>선형화 기법에서 발생하는 근사화 오차는 시간이 지남에 따라 누적되고 전파된다. 예를 들어, 각 필터링 단계에서의 작은 오차는 이후 단계에서 비선형 시스템의 특성에 의해 확대될 수 있다. 특히, 비선형 시스템에서의 상호작용 효과는 예상하지 못한 방향으로 오차를 확대할 수 있다.</p>
@@ -265,9 +265,9 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 </ul>
 <h3 id="_23">계산 복잡성과 실시간 성능</h3>
 <p>비선형 시스템에서 칼만 필터를 적용할 때 발생하는 또 다른 주요 문제는 <strong>계산 복잡성</strong>이다. 비선형 시스템은 일반적으로 계산 요구 사항이 매우 높기 때문에, 실시간 성능을 유지하는 것이 어려울 수 있다.</p>
-<h4 id="_24">야코비안 행렬의 계산</h4>
-<p>비선형 시스템에서 상태 전이 함수와 관측 함수의 선형화를 위해 야코비안 행렬을 계산해야 한다. 이 행렬은 상태 변수에 대한 각 함수의 편미분으로 이루어지며, 시스템의 차원이 클수록 계산 복잡도가 기하급수적으로 증가한다.</p>
-<p>야코비안 행렬의 계산은 필터의 각 반복마다 수행되어야 하므로, 실시간 애플리케이션에서는 큰 부담이 될 수 있다. 특히, 높은 차원의 시스템이나 복잡한 비선형 함수의 경우, 이 계산이 필터의 실시간 성능을 크게 저하시킬 수 있다.</p>
+<h4 id="_24">야코비 행렬의 계산</h4>
+<p>비선형 시스템에서 상태 전이 함수와 관측 함수의 선형화를 위해 야코비 행렬을 계산해야 한다. 이 행렬은 상태 변수에 대한 각 함수의 편미분으로 이루어지며, 시스템의 차원이 클수록 계산 복잡도가 기하급수적으로 증가한다.</p>
+<p>야코비 행렬의 계산은 필터의 각 반복마다 수행되어야 하므로, 실시간 애플리케이션에서는 큰 부담이 될 수 있다. 특히, 높은 차원의 시스템이나 복잡한 비선형 함수의 경우, 이 계산이 필터의 실시간 성능을 크게 저하시킬 수 있다.</p>
 <h4 id="_25">필터의 계산 비용</h4>
 <p>비선형 시스템에서 필터의 계산 비용은 다음과 같은 요인들에 의해 증가할 수 있다:</p>
 <ul>
@@ -279,7 +279,7 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 <p>비선형 시스템에서 칼만 필터의 실시간 성능을 개선하기 위해 다양한 접근법이 존재한다:</p>
 <ul>
 <li><strong>차원 축소(Dimensionality Reduction)</strong>: 상태 공간의 차원을 줄여서 필터의 계산 부담을 감소시킬 수 있다. 예를 들어, 주성분 분석(PCA) 또는 특징 추출(feature extraction) 기법을 사용하여 필터링 과정에서 필요한 최소한의 상태 변수만을 사용하도록 할 수 있다.</li>
-<li><strong>효율적인 선형화 기법</strong>: 야코비안 행렬 계산의 복잡성을 줄이기 위해 효율적인 선형화 기법을 사용할 수 있다. 예를 들어, 비선형 함수의 일부를 근사화하거나, 특정 구간에서만 선형화를 수행하는 방법이 있다.</li>
+<li><strong>효율적인 선형화 기법</strong>: 야코비 행렬 계산의 복잡성을 줄이기 위해 효율적인 선형화 기법을 사용할 수 있다. 예를 들어, 비선형 함수의 일부를 근사화하거나, 특정 구간에서만 선형화를 수행하는 방법이 있다.</li>
 <li><strong>병렬 처리 및 하드웨어 가속</strong>: 필터의 계산을 병렬 처리하거나, GPU와 같은 하드웨어 가속을 활용하여 실시간 성능을 개선할 수 있다. 이는 특히, 고차원 시스템이나 복잡한 비선형 시스템에서 유용할 수 있다.</li>
 </ul>
 <p>비선형 시스템에서 칼만 필터를 적용할 때 이러한 계산 복잡성과 실시간 성능 문제를 충분히 고려하지 않으면, 필터의 실제 사용 가능성에 심각한 제약이 생길 수 있다.</p>

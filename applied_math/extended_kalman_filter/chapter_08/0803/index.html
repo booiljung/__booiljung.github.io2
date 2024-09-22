@@ -122,7 +122,7 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 - <span class="arithmatex"><span class="MathJax_Preview">\omega(t)</span><script type="math/tex">\omega(t)</script></span>는 시간 <span class="arithmatex"><span class="MathJax_Preview">t</span><script type="math/tex">t</script></span>에서의 각속도,
 - <span class="arithmatex"><span class="MathJax_Preview">a(t)</span><script type="math/tex">a(t)</script></span>는 시간 <span class="arithmatex"><span class="MathJax_Preview">t</span><script type="math/tex">t</script></span>에서의 선형 가속도이다.</p>
 <h3 id="_2">확장 칼만 필터 적용</h3>
-<p>모바일 로봇의 비선형 시스템을 선형화하기 위해, 확장 칼만 필터는 상태 예측을 테일러 급수를 통해 1차 근사로 나타낸다. 이는 야코비안 행렬을 사용하여 선형화를 수행하는 과정이다. 예측 단계에서 사용할 시스템 모델의 선형화는 다음과 같다:</p>
+<p>모바일 로봇의 비선형 시스템을 선형화하기 위해, 확장 칼만 필터는 상태 예측을 테일러 급수를 통해 1차 근사로 나타낸다. 이는 야코비 행렬을 사용하여 선형화를 수행하는 과정이다. 예측 단계에서 사용할 시스템 모델의 선형화는 다음과 같다:</p>
 <div class="arithmatex">
 <div class="MathJax_Preview">
 \mathbf{F}(t) = \frac{\partial \mathbf{f}(\mathbf{x}(t))}{\partial \mathbf{x}(t)}
@@ -131,8 +131,8 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 \mathbf{F}(t) = \frac{\partial \mathbf{f}(\mathbf{x}(t))}{\partial \mathbf{x}(t)}
 </script>
 </div>
-<p>이때 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{F}(t)</span><script type="math/tex">\mathbf{F}(t)</script></span>는 상태 벡터의 변화율에 대한 야코비안 행렬로, 시스템의 동적 특성을 선형 근사한 것이다.</p>
-<p>모바일 로봇의 시스템 모델에서 야코비안 행렬 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{F}(t)</span><script type="math/tex">\mathbf{F}(t)</script></span>은 다음과 같은 형태를 가진다:</p>
+<p>이때 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{F}(t)</span><script type="math/tex">\mathbf{F}(t)</script></span>는 상태 벡터의 변화율에 대한 야코비 행렬로, 시스템의 동적 특성을 선형 근사한 것이다.</p>
+<p>모바일 로봇의 시스템 모델에서 야코비 행렬 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{F}(t)</span><script type="math/tex">\mathbf{F}(t)</script></span>은 다음과 같은 형태를 가진다:</p>
 <div class="arithmatex">
 <div class="MathJax_Preview">
 \mathbf{F}(t) = \begin{bmatrix} 
@@ -151,7 +151,7 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 \end{bmatrix}
 </script>
 </div>
-<p>이 야코비안 행렬은 확장 칼만 필터의 예측 단계에서 상태 추정을 위한 필수 요소이다. 이를 바탕으로 오차 공분산 행렬 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{P}(t)</span><script type="math/tex">\mathbf{P}(t)</script></span>을 업데이트할 수 있다.</p>
+<p>이 야코비 행렬은 확장 칼만 필터의 예측 단계에서 상태 추정을 위한 필수 요소이다. 이를 바탕으로 오차 공분산 행렬 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{P}(t)</span><script type="math/tex">\mathbf{P}(t)</script></span>을 업데이트할 수 있다.</p>
 <h3 id="_3">상태 예측 및 업데이트</h3>
 <p>확장 칼만 필터의 예측 단계는 다음과 같이 정의된다:</p>
 <div class="arithmatex">
@@ -186,7 +186,7 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 - <span class="arithmatex"><span class="MathJax_Preview">\mathbf{z}(t)</span><script type="math/tex">\mathbf{z}(t)</script></span>는 <span class="arithmatex"><span class="MathJax_Preview">t</span><script type="math/tex">t</script></span> 시점에서의 측정 벡터,
 - <span class="arithmatex"><span class="MathJax_Preview">\mathbf{h}(\mathbf{x}(t))</span><script type="math/tex">\mathbf{h}(\mathbf{x}(t))</script></span>는 상태 벡터와 관련된 측정 함수,
 - <span class="arithmatex"><span class="MathJax_Preview">\mathbf{v}(t)</span><script type="math/tex">\mathbf{v}(t)</script></span>는 측정 잡음 벡터이다.</p>
-<p>측정 함수 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{h}(\mathbf{x}(t))</span><script type="math/tex">\mathbf{h}(\mathbf{x}(t))</script></span>의 선형화는 야코비안 행렬 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{H}(t)</span><script type="math/tex">\mathbf{H}(t)</script></span>로 나타낼 수 있다:</p>
+<p>측정 함수 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{h}(\mathbf{x}(t))</span><script type="math/tex">\mathbf{h}(\mathbf{x}(t))</script></span>의 선형화는 야코비 행렬 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{H}(t)</span><script type="math/tex">\mathbf{H}(t)</script></span>로 나타낼 수 있다:</p>
 <div class="arithmatex">
 <div class="MathJax_Preview">
 \mathbf{H}(t) = \frac{\partial \mathbf{h}(\mathbf{x}(t))}{\partial \mathbf{x}(t)}
@@ -204,7 +204,7 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 \mathbf{h}(\mathbf{x}(t)) = \begin{bmatrix} x(t) \\ y(t) \\ \theta(t) \end{bmatrix}
 </script>
 </div>
-<p>따라서 야코비안 행렬 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{H}(t)</span><script type="math/tex">\mathbf{H}(t)</script></span>은 다음과 같다:</p>
+<p>따라서 야코비 행렬 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{H}(t)</span><script type="math/tex">\mathbf{H}(t)</script></span>은 다음과 같다:</p>
 <div class="arithmatex">
 <div class="MathJax_Preview">
 \mathbf{H}(t) = \begin{bmatrix} 
@@ -288,7 +288,7 @@ MatrixXd predictCovariance(const MatrixXd&amp; P_prev, const VectorXd&amp; x_pre
     double theta = x_prev(2);
     double v = x_prev(3);
 
-    // 야코비안 행렬 F 계산
+    // 야코비 행렬 F 계산
     F &lt;&lt; 1, 0, -v * sin(theta) * dt, cos(theta) * dt,
          0, 1,  v * cos(theta) * dt, sin(theta) * dt,
          0, 0, 1, 0,
@@ -369,7 +369,7 @@ int main() {
 </code></pre>
 <ol>
 <li><strong>상태 예측 (Predict State):</strong> <code>predictState</code> 함수는 모바일 로봇의 상태를 예측하는 함수이다. 선형 속도 <span class="arithmatex"><span class="MathJax_Preview">v</span><script type="math/tex">v</script></span>와 방향각 <span class="arithmatex"><span class="MathJax_Preview">\theta</span><script type="math/tex">\theta</script></span>를 사용하여 위치 <span class="arithmatex"><span class="MathJax_Preview">(x, y)</span><script type="math/tex">(x, y)</script></span>를 예측한다.</li>
-<li><strong>오차 공분산 예측 (Predict Covariance):</strong> <code>predictCovariance</code> 함수는 예측된 상태의 오차 공분산 행렬을 계산한다. 이는 시스템의 야코비안 행렬 <span class="arithmatex"><span class="MathJax_Preview">F</span><script type="math/tex">F</script></span>를 기반으로 계산된다.</li>
+<li><strong>오차 공분산 예측 (Predict Covariance):</strong> <code>predictCovariance</code> 함수는 예측된 상태의 오차 공분산 행렬을 계산한다. 이는 시스템의 야코비 행렬 <span class="arithmatex"><span class="MathJax_Preview">F</span><script type="math/tex">F</script></span>를 기반으로 계산된다.</li>
 <li><strong>칼만 이득 계산 (Kalman Gain):</strong> <code>computeKalmanGain</code> 함수는 측정 행렬 <span class="arithmatex"><span class="MathJax_Preview">H</span><script type="math/tex">H</script></span>와 오차 공분산 행렬을 사용하여 칼만 이득을 계산한다.</li>
 <li><strong>상태 업데이트 (Update State):</strong> <code>updateState</code> 함수는 예측된 상태를 측정값을 사용하여 업데이트한다. 이는 예측값과 측정값의 차이(측정 오차)를 기반으로 한다.</li>
 <li><strong>오차 공분산 업데이트 (Update Covariance):</strong> <code>updateCovariance</code> 함수는 칼만 이득을 사용하여 오차 공분산 행렬을 업데이트한다.</li>

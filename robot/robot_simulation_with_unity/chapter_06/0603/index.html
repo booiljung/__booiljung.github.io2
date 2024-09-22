@@ -45,15 +45,13 @@
           ]},
           {title: "\uc131\ub2a5 \ucd5c\uc801\ud654", url: "#_6", children: [
           ]},
-          {title: "\uc2e4\uc2dc\uac04 \ub85c\ubd07 \ucee8\ud2b8\ub864 \uad6c\ud604 (\uacc4\uc18d)", url: "#_7", children: [
+          {title: "\uc774\ubca4\ud2b8 \uae30\ubc18 \uc81c\uc5b4", url: "#_7", children: [
           ]},
-          {title: "\uc774\ubca4\ud2b8 \uae30\ubc18 \uc81c\uc5b4", url: "#_8", children: [
+          {title: "\ub3d9\uc2dc\uc131 \ubc0f \uba40\ud2f0\uc2a4\ub808\ub529", url: "#_8", children: [
           ]},
-          {title: "\ub3d9\uc2dc\uc131 \ubc0f \uba40\ud2f0\uc2a4\ub808\ub529", url: "#_9", children: [
+          {title: "\uc2e4\uc2dc\uac04 \ub370\uc774\ud130 \uc2dc\uac01\ud654", url: "#_9", children: [
           ]},
-          {title: "\uc2e4\uc2dc\uac04 \ub370\uc774\ud130 \uc2dc\uac01\ud654", url: "#_10", children: [
-          ]},
-          {title: "\uc5d0\ub7ec \ucc98\ub9ac \ubc0f \uc608\uc678 \uad00\ub9ac", url: "#_11", children: [
+          {title: "\uc5d0\ub7ec \ucc98\ub9ac \ubc0f \uc608\uc678 \uad00\ub9ac", url: "#_10", children: [
           ]},
         ];
 
@@ -264,8 +262,7 @@ void ComputeControl(float deltaTime)
     rb.AddForce(transform.forward * control);
 }
 </code></pre>
-<h3 id="_7">실시간 로봇 컨트롤 구현 (계속)</h3>
-<h3 id="_8">이벤트 기반 제어</h3>
+<h3 id="_7">이벤트 기반 제어</h3>
 <p>실시간 로봇 컨트롤은 주로 주기적인 업데이트에 의존하지만, 특정 이벤트에 반응하여 제어를 수행해야 하는 경우도 많다. 예를 들어, 장애물이 감지되었을 때 즉각적으로 회피 동작을 수행하거나, 특정 센서 입력에 따라 로봇의 동작 방식을 변경할 수 있다. Unity에서는 이벤트 기반 프로그래밍을 통해 이러한 동작을 구현할 수 있다.</p>
 <pre><code class="language-csharp">public class RobotController : MonoBehaviour
 {
@@ -314,7 +311,7 @@ void ComputeControl(float deltaTime)
     }
 }
 </code></pre>
-<h3 id="_9">동시성 및 멀티스레딩</h3>
+<h3 id="_8">동시성 및 멀티스레딩</h3>
 <p>실시간 로봇 컨트롤에서는 여러 작업이 동시에 이루어질 수 있다. 예를 들어, 센서 데이터 처리, 제어 알고리즘 실행, 액추에이터 명령 전송 등이 동시에 진행되어야 할 수 있다. Unity는 메인 스레드에서 대부분의 작업을 처리하지만, 일부 작업은 별도의 스레드에서 실행하여 성능을 향상시킬 수 있다.</p>
 <pre><code class="language-csharp">using System.Threading;
 using UnityEngine;
@@ -383,7 +380,7 @@ public class RobotController : MonoBehaviour
     }
 }
 </code></pre>
-<h3 id="_10">실시간 데이터 시각화</h3>
+<h3 id="_9">실시간 데이터 시각화</h3>
 <p>실시간으로 로봇의 상태를 모니터링하고 디버깅하기 위해 데이터 시각화는 매우 중요하다. Unity에서는 UI 요소를 활용하여 센서 데이터, 제어 신호, 로봇의 상태 등을 시각적으로 표시할 수 있다.</p>
 <pre><code class="language-csharp">using UnityEngine;
 using UnityEngine.UI;
@@ -423,7 +420,7 @@ public class RobotController : MonoBehaviour
     }
 }
 </code></pre>
-<h3 id="_11">에러 처리 및 예외 관리</h3>
+<h3 id="_10">에러 처리 및 예외 관리</h3>
 <p>실시간 로봇 컨트롤에서는 예상치 못한 상황이나 오류가 발생할 수 있다. 이러한 상황에 대비하여 적절한 에러 처리 및 예외 관리가 필요하다. Unity에서는 <code>try-catch</code> 블록을 사용하여 예외를 처리하고, 로봇의 안전을 보장할 수 있는 로직을 구현할 수 있다.</p>
 <pre><code class="language-csharp">public class RobotController : MonoBehaviour
 {

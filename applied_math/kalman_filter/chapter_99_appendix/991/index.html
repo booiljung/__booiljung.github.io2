@@ -724,7 +724,7 @@ p(\mathbf{x}_k | \mathbf{z}_{1:k}) = \frac{p(\mathbf{z}_k | \mathbf{x}_k) p(\mat
 </div>
 <p>여기서 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{f}</span><script type="math/tex">\mathbf{f}</script></span>와 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{h}</span><script type="math/tex">\mathbf{h}</script></span>는 각각 시스템의 상태 전이와 관측 방정식을 나타내는 비선형 함수이다. 이러한 시스템에 대해, 칼만 필터는 보통 확장 칼만 필터(Extended Kalman Filter, EKF)로 확장된다.</p>
 <p><strong>선형화 방법:</strong>
-비선형 함수 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{f}</span><script type="math/tex">\mathbf{f}</script></span>와 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{h}</span><script type="math/tex">\mathbf{h}</script></span>는 테일러 급수를 사용하여 선형화되며, 이 과정에서 야코비안(Jacobian) 행렬이 사용된다.</p>
+비선형 함수 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{f}</span><script type="math/tex">\mathbf{f}</script></span>와 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{h}</span><script type="math/tex">\mathbf{h}</script></span>는 테일러 급수를 사용하여 선형화되며, 이 과정에서 야코비(Jacobian) 행렬이 사용된다.</p>
 <div class="arithmatex">
 <div class="MathJax_Preview">
 \mathbf{A}_k = \frac{\partial \mathbf{f}}{\partial \mathbf{x}} \bigg|_{\hat{\mathbf{x}}_{k-1|k-1}, \mathbf{u}_{k-1}}

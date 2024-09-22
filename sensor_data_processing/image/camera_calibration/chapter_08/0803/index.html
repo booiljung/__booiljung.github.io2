@@ -148,7 +148,7 @@ Z = \frac{f \cdot B}{d}
 - <span class="arithmatex"><span class="MathJax_Preview">f</span><script type="math/tex">f</script></span>는 카메라의 초점 거리,
 - <span class="arithmatex"><span class="MathJax_Preview">B</span><script type="math/tex">B</script></span>는 두 카메라 간의 베이스라인(카메라 간 거리),
 - <span class="arithmatex"><span class="MathJax_Preview">d</span><script type="math/tex">d</script></span>는 시차이다.</p>
-<p>이 식을 통해 시차가 클수록 깊이가 작고, 시차가 작을수록 깊이가 크다는 것을 알 수 있다. [계속]</p>
+<p>이 식을 통해 시차가 클수록 깊이가 작고, 시차가 작을수록 깊이가 크다는 것을 알 수 있다.</p>
 <h3 id="epipolar-geometry">에피폴라 기하학 (Epipolar Geometry)</h3>
 <p>스테레오 카메라에서 깊이를 추정할 때, 두 카메라 간의 기하학적 관계는 매우 중요한 역할을 한다. 이 관계를 설명하는 기본 개념이 <strong>에피폴라 기하학</strong>이다. 두 카메라에서 3D 공간의 한 점이 각 카메라의 이미지 평면에 투영될 때, 이 두 점이 위치하는 직선상의 관계를 에피폴라 기하학이 설명한다.</p>
 <p>두 카메라가 동일한 3D 점 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{P}</span><script type="math/tex">\mathbf{P}</script></span>를 바라볼 때, 각 카메라에서 투영된 2D 이미지 좌표는 각각 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{p}_1</span><script type="math/tex">\mathbf{p}_1</script></span>과 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{p}_2</span><script type="math/tex">\mathbf{p}_2</script></span>이다. 이때 에피폴라 기하학은 각 투영점이 이미지 평면 상에서 속하는 선, 즉 <strong>에피폴라 선</strong>(epipolar line)과의 관계를 다룬다. 에피폴라 선은 두 카메라의 상대적 위치에 따라 달라지며, 에피폴라 기하학을 통해 깊이 추정 알고리즘을 효율적으로 구현할 수 있다.</p>

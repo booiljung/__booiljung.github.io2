@@ -46,13 +46,11 @@
           {title: "\uc81c\uc57d \uc870\uac74\uc758 \uc801\uc808\ud55c \uc0ac\uc6a9", url: "#_4", children: [
               {title: "1. Over-constraint", url: "#1-over-constraint" },
               {title: "2. Under-constraint", url: "#2-under-constraint" },
-          ]},
-          {title: "\uc81c\uc57d \uc870\uac74\uc758 \uc801\uc808\ud55c \uc0ac\uc6a9 (\uacc4\uc18d)", url: "#_5", children: [
               {title: "1. \ub3c5\ub9bd \uc81c\uc57d \uc870\uac74\uc758 \uc2dd\ubcc4", url: "#1_1" },
               {title: "2. \ube14\ub85d \ub300\uac01\ud654 \ubc29\ubc95", url: "#2_1" },
               {title: "3. \ud574\uc11d\uc801 \ud574\uacb0 \ubc29\ubc95\uacfc \uc218\uce58\uc801 \ud574\uacb0 \ubc29\ubc95", url: "#3" },
           ]},
-          {title: "\uc81c\uc57d \uc870\uac74\uc758 \uc751\uc6a9", url: "#_6", children: [
+          {title: "\uc81c\uc57d \uc870\uac74\uc758 \uc751\uc6a9", url: "#_5", children: [
               {title: "1. \ub85c\ubd07 \uacf5\ud559", url: "#1_2" },
               {title: "2. \ud56d\uacf5\uc6b0\uc8fc \uacf5\ud559", url: "#2_2" },
               {title: "3. \uc0dd\uccb4\uc5ed\ud559", url: "#3_1" },
@@ -160,7 +158,6 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 <p>너무 많은 제약 조건을 사용하면 시스템이 고정되어 움직이지 않게 된다. 이는 해석 및 설계 단계에서 주의해야 할 중요한 사항이다. </p>
 <h4 id="2-under-constraint">2. Under-constraint</h4>
 <p>너무 적은 제약 조건을 사용하면 시스템이 원하는 대로 작동하지 않을 수 있다. 자유도가 너무 높아져 제어할 수 없는 상태가 될 수 있다.</p>
-<h3 id="_5">제약 조건의 적절한 사용 (계속)</h3>
 <p>제약 조건을 적절하게 사용하는 방법은 다음과 같다:</p>
 <h4 id="1_1">1. 독립 제약 조건의 식별</h4>
 <p>모델에 포함될 모든 제약 조건이 독립적인지 확인해야 한다. 독립 제약 조건은 그 자체로 완전한 정보를 제공하며 다른 제약 조건에 의해 종속되지 않는다. </p>
@@ -168,7 +165,7 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 <p>복잡한 시스템에서는 제약 조건을 부분적으로 그룹화하여 블록 대각화하는 것이 유용하다. 이를 통해 큰 제약 문제를 더 작은 부분 문제로 나누어 해결할 수 있다.</p>
 <h4 id="3">3. 해석적 해결 방법과 수치적 해결 방법</h4>
 <p>제약 조건 문제는 대개 연립방정식으로 표현되므로, 이를 해석적으로 혹은 수치적으로 푸는 방법을 고려해야 한다. 소규모 문제는 해석적 해법을 사용할 수 있지만, 대규모 문제는 수치적 해법이 더 적절할 수 있다.</p>
-<h3 id="_6">제약 조건의 응용</h3>
+<h3 id="_5">제약 조건의 응용</h3>
 <p>제약 조건은 다양한 분야에서 활용될 수 있다. 몇 가지 주요 응용 분야는 다음과 같다:</p>
 <h4 id="1_2">1. 로봇 공학</h4>
 <p>로봇의 팔이 특정 궤적을 따라 움직이기 위해서는 여러 제약 조건이 필요하다. 예를 들어, 로봇 팔의 각 조인트가 일정한 각도 범위 내에서 움직이도록 제약 조건을 설정할 수 있다.</p>

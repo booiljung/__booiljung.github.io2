@@ -37,7 +37,7 @@
           ]},
           {title: "\uc624\ucc28 \uacf5\ubd84\uc0b0 \uc608\uce21", url: "#_2", children: [
           ]},
-          {title: "\uc57c\ucf54\ube44\uc548 \ud589\ub82c \uacc4\uc0b0", url: "#_3", children: [
+          {title: "\uc57c\ucf54\ube44 \ud589\ub82c \uacc4\uc0b0", url: "#_3", children: [
           ]},
           {title: "\uc0c1\ud0dc \ubca1\ud130\uc758 \uc608\uce21", url: "#_4", children: [
           ]},
@@ -125,10 +125,10 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 </div>
 <p>여기서:
 - <span class="arithmatex"><span class="MathJax_Preview">\mathbf{P}_k</span><script type="math/tex">\mathbf{P}_k</script></span>는 예측된 상태 벡터의 오차 공분산 행렬
-- <span class="arithmatex"><span class="MathJax_Preview">\mathbf{F}_{k-1}</span><script type="math/tex">\mathbf{F}_{k-1}</script></span>는 상태 전이 함수 <span class="arithmatex"><span class="MathJax_Preview">f(\mathbf{x}_{k-1}, \mathbf{u}_{k-1})</span><script type="math/tex">f(\mathbf{x}_{k-1}, \mathbf{u}_{k-1})</script></span>의 야코비안 행렬
+- <span class="arithmatex"><span class="MathJax_Preview">\mathbf{F}_{k-1}</span><script type="math/tex">\mathbf{F}_{k-1}</script></span>는 상태 전이 함수 <span class="arithmatex"><span class="MathJax_Preview">f(\mathbf{x}_{k-1}, \mathbf{u}_{k-1})</span><script type="math/tex">f(\mathbf{x}_{k-1}, \mathbf{u}_{k-1})</script></span>의 야코비 행렬
 - <span class="arithmatex"><span class="MathJax_Preview">\mathbf{Q}_{k-1}</span><script type="math/tex">\mathbf{Q}_{k-1}</script></span>는 시스템 노이즈 공분산 행렬</p>
-<h3 id="_3">야코비안 행렬 계산</h3>
-<p>확장 칼만 필터는 선형 칼만 필터와 달리 비선형 시스템을 다루기 때문에 상태 전이 함수 <span class="arithmatex"><span class="MathJax_Preview">f(\mathbf{x}, \mathbf{u})</span><script type="math/tex">f(\mathbf{x}, \mathbf{u})</script></span>에 대해 선형화가 필요하다. 이 선형화는 야코비안 행렬을 통해 이루어진다. 야코비안 행렬 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{F}_{k-1}</span><script type="math/tex">\mathbf{F}_{k-1}</script></span>은 다음과 같이 정의된다.</p>
+<h3 id="_3">야코비 행렬 계산</h3>
+<p>확장 칼만 필터는 선형 칼만 필터와 달리 비선형 시스템을 다루기 때문에 상태 전이 함수 <span class="arithmatex"><span class="MathJax_Preview">f(\mathbf{x}, \mathbf{u})</span><script type="math/tex">f(\mathbf{x}, \mathbf{u})</script></span>에 대해 선형화가 필요하다. 이 선형화는 야코비 행렬을 통해 이루어진다. 야코비 행렬 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{F}_{k-1}</span><script type="math/tex">\mathbf{F}_{k-1}</script></span>은 다음과 같이 정의된다.</p>
 <div class="arithmatex">
 <div class="MathJax_Preview">
 \mathbf{F}_{k-1} = \frac{\partial f(\mathbf{x}, \mathbf{u})}{\partial \mathbf{x}} \bigg|_{\mathbf{x} = \mathbf{x}_{k-1}, \mathbf{u} = \mathbf{u}_{k-1}}

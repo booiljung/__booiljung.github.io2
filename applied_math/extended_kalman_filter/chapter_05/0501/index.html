@@ -122,16 +122,16 @@ y \
 - <span class="arithmatex"><span class="MathJax_Preview">h(\mathbf{x}_k)</span><script type="math/tex">h(\mathbf{x}_k)</script></span>는 상태와 센서 관측을 연결하는 비선형 함수
 - <span class="arithmatex"><span class="MathJax_Preview">\mathbf{v}_k</span><script type="math/tex">\mathbf{v}_k</script></span>는 관측 잡음 벡터로, 잡음 공분산 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{R}_k</span><script type="math/tex">\mathbf{R}_k</script></span>를 따른다.</p>
 <h4 id="_4">선형화 과정</h4>
-<p>EKF의 핵심은 비선형 시스템을 선형화하여 칼만 필터의 이론을 적용하는 데 있다. 이를 위해 테일러 급수를 이용한 선형화가 필요하다. 상태 전이 함수 <span class="arithmatex"><span class="MathJax_Preview">f(\mathbf{x}_k, \mathbf{u}_k)</span><script type="math/tex">f(\mathbf{x}_k, \mathbf{u}_k)</script></span>와 관측 함수 <span class="arithmatex"><span class="MathJax_Preview">h(\mathbf{x}_k)</span><script type="math/tex">h(\mathbf{x}_k)</script></span>는 각각 야코비안 행렬을 통해 선형화된다.</p>
-<p>상태 전이 함수의 야코비안 행렬 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{F}_k</span><script type="math/tex">\mathbf{F}_k</script></span>는 다음과 같이 정의된다:</p>
+<p>EKF의 핵심은 비선형 시스템을 선형화하여 칼만 필터의 이론을 적용하는 데 있다. 이를 위해 테일러 급수를 이용한 선형화가 필요하다. 상태 전이 함수 <span class="arithmatex"><span class="MathJax_Preview">f(\mathbf{x}_k, \mathbf{u}_k)</span><script type="math/tex">f(\mathbf{x}_k, \mathbf{u}_k)</script></span>와 관측 함수 <span class="arithmatex"><span class="MathJax_Preview">h(\mathbf{x}_k)</span><script type="math/tex">h(\mathbf{x}_k)</script></span>는 각각 야코비 행렬을 통해 선형화된다.</p>
+<p>상태 전이 함수의 야코비 행렬 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{F}_k</span><script type="math/tex">\mathbf{F}_k</script></span>는 다음과 같이 정의된다:</p>
 <p>$$</p>
 <p>\mathbf{F}<em>k = \frac{\partial f}{\partial \mathbf{x}} \bigg|</em>{\mathbf{x} = \hat{\mathbf{x}}_k}</p>
 <p>$$</p>
-<p>관측 함수의 야코비안 행렬 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{H}_k</span><script type="math/tex">\mathbf{H}_k</script></span>는 다음과 같다:</p>
+<p>관측 함수의 야코비 행렬 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{H}_k</span><script type="math/tex">\mathbf{H}_k</script></span>는 다음과 같다:</p>
 <p>$$</p>
 <p>\mathbf{H}<em>k = \frac{\partial h}{\partial \mathbf{x}} \bigg|</em>{\mathbf{x} = \hat{\mathbf{x}}_k}</p>
 <p>$$</p>
-<p>이러한 야코비안 행렬을 이용해 확장 칼만 필터는 다음과 같은 단계로 상태를 추정한다.</p>
+<p>이러한 야코비 행렬을 이용해 확장 칼만 필터는 다음과 같은 단계로 상태를 추정한다.</p>
 <h4 id="_5">예측 단계</h4>
 <p>예측 단계에서는 이전 상태를 바탕으로 새로운 상태를 예측한다. 예측된 상태는 다음과 같이 계산된다:</p>
 <p>$$</p>

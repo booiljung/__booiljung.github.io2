@@ -39,7 +39,7 @@
           ]},
           {title: "\ube44\uc120\ud615 \ucd5c\uc801\ud654 \uae30\ubc95", url: "#_2", children: [
           ]},
-          {title: "\ubaa9\uc801 \ud568\uc218\uc640 \uc57c\ucf54\ube44\uc548 \uacc4\uc0b0", url: "#_3", children: [
+          {title: "\ubaa9\uc801 \ud568\uc218\uc640 \uc57c\ucf54\ube44 \uacc4\uc0b0", url: "#_3", children: [
           ]},
           {title: "Gauss-Newton \ubc29\ubc95", url: "#gauss-newton", children: [
           ]},
@@ -141,8 +141,8 @@ E(\mathbf{x}) = \sum_{i=1}^{N} \lVert \mathbf{m}_i - \hat{\mathbf{m}}_i \rVert^2
 <li>반복적으로 파라미터를 업데이트하며, 오류가 최소화될 때까지 과정을 반복한다.</li>
 </ol>
 <p>비선형 최적화의 핵심은 목적 함수의 2차 도함수(헤시안)를 사용하는 것이며, 이는 파라미터 공간에서의 곡률 정보를 제공하여 더 효율적인 탐색이 가능하게 한다.</p>
-<h3 id="_3">목적 함수와 야코비안 계산</h3>
-<p>비선형 최적화 과정에서 중요한 역할을 하는 것은 목적 함수 <span class="arithmatex"><span class="MathJax_Preview">f(\mathbf{x})</span><script type="math/tex">f(\mathbf{x})</script></span>의 미분, 즉 야코비안(Jacobian)이다. 야코비안은 목적 함수의 기울기 정보를 제공하며, 최적화 알고리즘이 파라미터를 갱신할 때 사용된다. 야코비안 행렬 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{J}</span><script type="math/tex">\mathbf{J}</script></span>는 다음과 같이 정의된다:</p>
+<h3 id="_3">목적 함수와 야코비 계산</h3>
+<p>비선형 최적화 과정에서 중요한 역할을 하는 것은 목적 함수 <span class="arithmatex"><span class="MathJax_Preview">f(\mathbf{x})</span><script type="math/tex">f(\mathbf{x})</script></span>의 미분, 즉 야코비(Jacobian)이다. 야코비은 목적 함수의 기울기 정보를 제공하며, 최적화 알고리즘이 파라미터를 갱신할 때 사용된다. 야코비 행렬 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{J}</span><script type="math/tex">\mathbf{J}</script></span>는 다음과 같이 정의된다:</p>
 <div class="arithmatex">
 <div class="MathJax_Preview">
 \mathbf{J} = \frac{\partial \mathbf{r}}{\partial \mathbf{x}}
@@ -151,7 +151,7 @@ E(\mathbf{x}) = \sum_{i=1}^{N} \lVert \mathbf{m}_i - \hat{\mathbf{m}}_i \rVert^2
 \mathbf{J} = \frac{\partial \mathbf{r}}{\partial \mathbf{x}}
 </script>
 </div>
-<p>여기서 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{r}</span><script type="math/tex">\mathbf{r}</script></span>은 재투영 오류 <span class="arithmatex"><span class="MathJax_Preview">r_i</span><script type="math/tex">r_i</script></span> 벡터의 집합이고, <span class="arithmatex"><span class="MathJax_Preview">\mathbf{x}</span><script type="math/tex">\mathbf{x}</script></span>는 최적화할 변수 벡터이다. 야코비안 행렬은 각 관측된 포인트에 대한 파라미터의 미분을 포함하며, 파라미터를 갱신하는 과정에서 매우 중요한 정보를 제공한다.</p>
+<p>여기서 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{r}</span><script type="math/tex">\mathbf{r}</script></span>은 재투영 오류 <span class="arithmatex"><span class="MathJax_Preview">r_i</span><script type="math/tex">r_i</script></span> 벡터의 집합이고, <span class="arithmatex"><span class="MathJax_Preview">\mathbf{x}</span><script type="math/tex">\mathbf{x}</script></span>는 최적화할 변수 벡터이다. 야코비 행렬은 각 관측된 포인트에 대한 파라미터의 미분을 포함하며, 파라미터를 갱신하는 과정에서 매우 중요한 정보를 제공한다.</p>
 <h3 id="gauss-newton">Gauss-Newton 방법</h3>
 <p>Gauss-Newton 방법은 비선형 최적화에서 자주 사용되는 기법 중 하나이다. 이 방법은 목적 함수가 선형화될 수 있는 상황에서 주로 사용되며, 목적 함수의 2차 도함수인 헤시안(Hessian)을 근사하여 계산한다.</p>
 <p>Gauss-Newton 방법에서의 업데이트 공식은 다음과 같다:</p>
@@ -163,7 +163,7 @@ E(\mathbf{x}) = \sum_{i=1}^{N} \lVert \mathbf{m}_i - \hat{\mathbf{m}}_i \rVert^2
 \mathbf{x}_{k+1} = \mathbf{x}_k - (\mathbf{J}^\top \mathbf{J})^{-1} \mathbf{J}^\top \mathbf{r}
 </script>
 </div>
-<p>여기서 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{x}_k</span><script type="math/tex">\mathbf{x}_k</script></span>는 <span class="arithmatex"><span class="MathJax_Preview">k</span><script type="math/tex">k</script></span>-번째 반복에서의 파라미터 벡터, <span class="arithmatex"><span class="MathJax_Preview">\mathbf{J}</span><script type="math/tex">\mathbf{J}</script></span>는 야코비안, <span class="arithmatex"><span class="MathJax_Preview">\mathbf{r}</span><script type="math/tex">\mathbf{r}</script></span>는 재투영 오류 벡터이다. 이 공식은 새로운 파라미터 벡터를 갱신하는 데 사용되며, 목적 함수 <span class="arithmatex"><span class="MathJax_Preview">E(\mathbf{x})</span><script type="math/tex">E(\mathbf{x})</script></span>를 최소화하는 방향으로 파라미터를 조정한다.</p>
+<p>여기서 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{x}_k</span><script type="math/tex">\mathbf{x}_k</script></span>는 <span class="arithmatex"><span class="MathJax_Preview">k</span><script type="math/tex">k</script></span>-번째 반복에서의 파라미터 벡터, <span class="arithmatex"><span class="MathJax_Preview">\mathbf{J}</span><script type="math/tex">\mathbf{J}</script></span>는 야코비, <span class="arithmatex"><span class="MathJax_Preview">\mathbf{r}</span><script type="math/tex">\mathbf{r}</script></span>는 재투영 오류 벡터이다. 이 공식은 새로운 파라미터 벡터를 갱신하는 데 사용되며, 목적 함수 <span class="arithmatex"><span class="MathJax_Preview">E(\mathbf{x})</span><script type="math/tex">E(\mathbf{x})</script></span>를 최소화하는 방향으로 파라미터를 조정한다.</p>
 <p>Gauss-Newton 방법은 비교적 간단한 구조를 가지며, 계산 효율이 높다는 장점이 있다. 하지만 이 방법은 헤시안이 정확하지 않은 경우 수렴하지 않을 수 있다는 단점이 있다.</p>
 <h3 id="levenberg-marquardt">Levenberg-Marquardt 방법</h3>
 <p>Levenberg-Marquardt 방법은 Gauss-Newton 방법의 단점을 보완하기 위해 고안된 알고리즘이다. 이 방법은 Gauss-Newton 방법과 그라디언트 디센트(Gradient Descent) 방법을 결합하여, 보다 안정적인 수렴을 보장한다. 이 방법은 특히 초기 파라미터 추정이 부정확할 때 유용하다.</p>

@@ -151,7 +151,7 @@ z_k
 <p>$$</p>
 <p>\mathbf{P}<em>{k+1|k} = \mathbf{F}_k \mathbf{P}</em>{k|k} \mathbf{F}_k^\top + \mathbf{Q}_k</p>
 <p>$$</p>
-<p>여기서, <span class="arithmatex"><span class="MathJax_Preview">\mathbf{P}_{k+1|k}</span><script type="math/tex">\mathbf{P}_{k+1|k}</script></span>는 예측된 오차 공분산 행렬, <span class="arithmatex"><span class="MathJax_Preview">\mathbf{F}_k</span><script type="math/tex">\mathbf{F}_k</script></span>는 시스템 모델의 야코비안 행렬이며, <span class="arithmatex"><span class="MathJax_Preview">\mathbf{Q}_k</span><script type="math/tex">\mathbf{Q}_k</script></span>는 시스템 노이즈 공분산 행렬이다. <span class="arithmatex"><span class="MathJax_Preview">\mathbf{F}_k</span><script type="math/tex">\mathbf{F}_k</script></span>는 시스템 모델을 상태 변수에 대해 선형화한 것으로, 다음과 같이 계산된다:</p>
+<p>여기서, <span class="arithmatex"><span class="MathJax_Preview">\mathbf{P}_{k+1|k}</span><script type="math/tex">\mathbf{P}_{k+1|k}</script></span>는 예측된 오차 공분산 행렬, <span class="arithmatex"><span class="MathJax_Preview">\mathbf{F}_k</span><script type="math/tex">\mathbf{F}_k</script></span>는 시스템 모델의 야코비 행렬이며, <span class="arithmatex"><span class="MathJax_Preview">\mathbf{Q}_k</span><script type="math/tex">\mathbf{Q}_k</script></span>는 시스템 노이즈 공분산 행렬이다. <span class="arithmatex"><span class="MathJax_Preview">\mathbf{F}_k</span><script type="math/tex">\mathbf{F}_k</script></span>는 시스템 모델을 상태 변수에 대해 선형화한 것으로, 다음과 같이 계산된다:</p>
 <p>$$</p>
 <p>\mathbf{F}_k = \frac{\partial f(\mathbf{x}_k, \mathbf{u}_k)}{\partial \mathbf{x}_k}</p>
 <p>$$</p>
@@ -161,7 +161,7 @@ z_k
 <p>$$</p>
 <p>\mathbf{K}<em>k = \mathbf{P}</em>{k+1|k} \mathbf{H}<em>k^\top (\mathbf{H}_k \mathbf{P}</em>{k+1|k} \mathbf{H}_k^\top + \mathbf{R}_k)^{-1}</p>
 <p>$$</p>
-<p>여기서, <span class="arithmatex"><span class="MathJax_Preview">\mathbf{K}_k</span><script type="math/tex">\mathbf{K}_k</script></span>는 칼만 이득, <span class="arithmatex"><span class="MathJax_Preview">\mathbf{H}_k</span><script type="math/tex">\mathbf{H}_k</script></span>는 측정 모델의 야코비안 행렬이며, <span class="arithmatex"><span class="MathJax_Preview">\mathbf{R}_k</span><script type="math/tex">\mathbf{R}_k</script></span>는 측정 노이즈 공분산 행렬이다. <span class="arithmatex"><span class="MathJax_Preview">\mathbf{H}_k</span><script type="math/tex">\mathbf{H}_k</script></span>는 다음과 같이 측정 모델을 상태 변수에 대해 선형화하여 계산된다:</p>
+<p>여기서, <span class="arithmatex"><span class="MathJax_Preview">\mathbf{K}_k</span><script type="math/tex">\mathbf{K}_k</script></span>는 칼만 이득, <span class="arithmatex"><span class="MathJax_Preview">\mathbf{H}_k</span><script type="math/tex">\mathbf{H}_k</script></span>는 측정 모델의 야코비 행렬이며, <span class="arithmatex"><span class="MathJax_Preview">\mathbf{R}_k</span><script type="math/tex">\mathbf{R}_k</script></span>는 측정 노이즈 공분산 행렬이다. <span class="arithmatex"><span class="MathJax_Preview">\mathbf{H}_k</span><script type="math/tex">\mathbf{H}_k</script></span>는 다음과 같이 측정 모델을 상태 변수에 대해 선형화하여 계산된다:</p>
 <p>$$</p>
 <p>\mathbf{H}_k = \frac{\partial h(\mathbf{x}_k)}{\partial \mathbf{x}_k}</p>
 <p>$$</p>
