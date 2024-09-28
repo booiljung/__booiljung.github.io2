@@ -33,17 +33,17 @@
       var is_top_frame = false;
         
         var pageToc = [
-          {title: "1. \uc120\ud615 \uc2dc\uc2a4\ud15c\uc758 \uc815\uc758", url: "#_top", children: [
+          {title: "\uc120\ud615 \uc2dc\uc2a4\ud15c\uc758 \uc815\uc758", url: "#_top", children: [
           ]},
-          {title: "2. \ube44\uc120\ud615 \uc2dc\uc2a4\ud15c\uc758 \uc815\uc758", url: "#2", children: [
+          {title: "\ube44\uc120\ud615 \uc2dc\uc2a4\ud15c\uc758 \uc815\uc758", url: "#_2", children: [
           ]},
-          {title: "3. \uc120\ud615 \uc2dc\uc2a4\ud15c\uacfc \ube44\uc120\ud615 \uc2dc\uc2a4\ud15c\uc758 \uc218\ud559\uc801 \uc608", url: "#3", children: [
-              {title: "\uc120\ud615 \uc2dc\uc2a4\ud15c\uc758 \uc608", url: "#_1" },
-              {title: "\ube44\uc120\ud615 \uc2dc\uc2a4\ud15c\uc758 \uc608", url: "#_2" },
+          {title: "\uc120\ud615 \uc2dc\uc2a4\ud15c\uacfc \ube44\uc120\ud615 \uc2dc\uc2a4\ud15c\uc758 \uc218\ud559\uc801 \uc608", url: "#_3", children: [
+              {title: "\uc120\ud615 \uc2dc\uc2a4\ud15c\uc758 \uc608", url: "#_4" },
+              {title: "\ube44\uc120\ud615 \uc2dc\uc2a4\ud15c\uc758 \uc608", url: "#_5" },
           ]},
-          {title: "4. \uc120\ud615 \uc2dc\uc2a4\ud15c\uc758 \ud574\uc11d \ubc29\ubc95", url: "#4", children: [
+          {title: "\uc120\ud615 \uc2dc\uc2a4\ud15c\uc758 \ud574\uc11d \ubc29\ubc95", url: "#_6", children: [
           ]},
-          {title: "5. \ube44\uc120\ud615 \uc2dc\uc2a4\ud15c\uc758 \ud574\uc11d \ubc29\ubc95", url: "#5", children: [
+          {title: "\ube44\uc120\ud615 \uc2dc\uc2a4\ud15c\uc758 \ud574\uc11d \ubc29\ubc95", url: "#_7", children: [
           ]},
         ];
 
@@ -94,7 +94,20 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 
     
 
-    <h3 id="1">1. 선형 시스템의 정의</h3>
+    <div class="toc">
+<ul>
+<li><a href="#_1">선형 시스템의 정의</a></li>
+<li><a href="#_2">비선형 시스템의 정의</a></li>
+<li><a href="#_3">선형 시스템과 비선형 시스템의 수학적 예</a><ul>
+<li><a href="#_4">선형 시스템의 예</a></li>
+<li><a href="#_5">비선형 시스템의 예</a></li>
+</ul>
+</li>
+<li><a href="#_6">선형 시스템의 해석 방법</a></li>
+<li><a href="#_7">비선형 시스템의 해석 방법</a></li>
+</ul>
+</div>
+<h3 id="_1">선형 시스템의 정의</h3>
 <p>선형 시스템은 기본적으로 두 가지 중요한 특성을 만족하는 시스템이다: <strong>중첩 원리</strong>와 <strong>동차성</strong>이다. 중첩 원리는 입력이 합해질 때 그에 대응하는 출력도 합해지는 성질을 의미하며, 동차성은 입력이 일정 배율로 증가하면 출력도 동일한 배율로 증가하는 성질을 의미한다.</p>
 <p>수학적으로, 선형 시스템은 아래의 조건을 만족하는 시스템이다.</p>
 <ul>
@@ -110,7 +123,7 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
   \mathcal{H}(\alpha u(t)) = \alpha \mathcal{H}(u(t))</p>
 <p>$$</p>
 <p>여기서 <span class="arithmatex"><span class="MathJax_Preview">\mathcal{H}</span><script type="math/tex">\mathcal{H}</script></span>는 시스템의 전달 함수를 의미하고, <span class="arithmatex"><span class="MathJax_Preview">u(t)</span><script type="math/tex">u(t)</script></span>는 시스템에 입력되는 신호, <span class="arithmatex"><span class="MathJax_Preview">y(t)</span><script type="math/tex">y(t)</script></span>는 시스템의 출력이다.</p>
-<h3 id="2">2. 비선형 시스템의 정의</h3>
+<h3 id="_2">비선형 시스템의 정의</h3>
 <p>비선형 시스템은 중첩 원리와 동차성을 만족하지 않는 시스템을 말한다. 다시 말해, 두 입력의 합에 대해 출력이 그 각각의 출력의 합이 아니거나, 입력의 크기가 변할 때 출력이 비선형적으로 반응하는 경우 비선형 시스템이 된다.</p>
 <p>비선형 시스템은 다음과 같은 비선형 성질을 가질 수 있다.</p>
 <ul>
@@ -126,8 +139,8 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 1. <strong>포화 시스템 (Saturation)</strong>: 시스템의 출력이 일정 범위를 넘어서면 더 이상 증가하지 않는 시스템이다.
 2. <strong>데드존 (Dead Zone)</strong>: 입력이 특정 범위 안에서는 출력이 발생하지 않는 시스템이다.</p>
 <p>비선형 시스템은 선형 시스템과 달리 해석이 복잡하고, 일반적으로 라플라스 변환이나 전달 함수로 단순하게 표현할 수 없는 경우가 많다.</p>
-<h3 id="3">3. 선형 시스템과 비선형 시스템의 수학적 예</h3>
-<h4 id="_1">선형 시스템의 예</h4>
+<h3 id="_3">선형 시스템과 비선형 시스템의 수학적 예</h3>
+<h4 id="_4">선형 시스템의 예</h4>
 <p>선형 시스템은 주로 미분 방정식으로 표현되며, 예를 들어 다음과 같은 1차 미분 방정식을 생각할 수 있다.</p>
 <div class="arithmatex">
 <div class="MathJax_Preview">
@@ -138,7 +151,7 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 </script>
 </div>
 <p>여기서, <span class="arithmatex"><span class="MathJax_Preview">\mathbf{x}(t)</span><script type="math/tex">\mathbf{x}(t)</script></span>는 상태 벡터, <span class="arithmatex"><span class="MathJax_Preview">u(t)</span><script type="math/tex">u(t)</script></span>는 입력, <span class="arithmatex"><span class="MathJax_Preview">a</span><script type="math/tex">a</script></span>와 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{b}</span><script type="math/tex">\mathbf{b}</script></span>는 시스템의 상수 또는 행렬이다. 이 방정식은 선형 시스템의 특성을 만족한다. 각 입력에 대한 출력의 합이 동일하고, 입력이 스칼라 상수로 배가 되면 출력도 동일하게 배가 된다.</p>
-<h4 id="_2">비선형 시스템의 예</h4>
+<h4 id="_5">비선형 시스템의 예</h4>
 <p>비선형 시스템은 아래와 같이 비선형 미분 방정식으로 표현될 수 있다.</p>
 <div class="arithmatex">
 <div class="MathJax_Preview">
@@ -149,7 +162,7 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 </script>
 </div>
 <p>이 시스템은 <span class="arithmatex"><span class="MathJax_Preview">\sin(\mathbf{x}(t))</span><script type="math/tex">\sin(\mathbf{x}(t))</script></span>와 같은 비선형 함수가 포함되어 있어, 입력과 출력 사이의 관계가 비선형적이다. 이 경우, 중첩 원리가 성립하지 않으며, 입력이 스칼라 배율로 증폭되더라도 출력이 동일하게 증폭되지 않는다.</p>
-<h3 id="4">4. 선형 시스템의 해석 방법</h3>
+<h3 id="_6">선형 시스템의 해석 방법</h3>
 <p>선형 시스템은 주로 <strong>전달 함수</strong>나 <strong>상태 공간 표현</strong>으로 나타내며, 이를 통해 다양한 해석을 수행할 수 있다.</p>
 <ul>
 <li><strong>전달 함수</strong>: 시스템의 입력과 출력 사이의 비율을 나타내는 함수이다. 선형 시스템의 경우, 라플라스 변환을 사용하여 시간 영역에서 주파수 영역으로 변환한 후, 전달 함수를 구할 수 있다.</li>
@@ -167,7 +180,7 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
   \mathbf{y}(t) = C\mathbf{x}(t) + D\mathbf{u}(t)</p>
 <p>$$</p>
 <p>여기서 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{x}(t)</span><script type="math/tex">\mathbf{x}(t)</script></span>는 상태 벡터, <span class="arithmatex"><span class="MathJax_Preview">\mathbf{u}(t)</span><script type="math/tex">\mathbf{u}(t)</script></span>는 입력, <span class="arithmatex"><span class="MathJax_Preview">\mathbf{y}(t)</span><script type="math/tex">\mathbf{y}(t)</script></span>는 출력, 그리고 <span class="arithmatex"><span class="MathJax_Preview">A</span><script type="math/tex">A</script></span>, <span class="arithmatex"><span class="MathJax_Preview">B</span><script type="math/tex">B</script></span>, <span class="arithmatex"><span class="MathJax_Preview">C</span><script type="math/tex">C</script></span>, <span class="arithmatex"><span class="MathJax_Preview">D</span><script type="math/tex">D</script></span>는 시스템을 나타내는 행렬들이다.</p>
-<h3 id="5">5. 비선형 시스템의 해석 방법</h3>
+<h3 id="_7">비선형 시스템의 해석 방법</h3>
 <p>비선형 시스템은 선형 시스템과 달리, 비선형 방정식 때문에 해석이 훨씬 복잡하다. 일반적인 비선형 시스템 해석 방법에는 다음과 같은 기법들이 있다.</p>
 <ul>
 <li><strong>선형화</strong>: 시스템의 특정 작업점(작동 점)에서 비선형 시스템을 선형 시스템으로 근사하는 방법이다. 이는 시스템의 작은 범위에서의 동작을 분석하는데 유용하다. 예를 들어, 아래와 같이 선형화할 수 있다.</li>

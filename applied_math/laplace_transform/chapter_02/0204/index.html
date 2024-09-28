@@ -1,0 +1,666 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+  
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    
+    <link rel="canonical" href="https://booiljung.github.io/applied_math/laplace_transform/chapter_02/0204/">
+    <link rel="shortcut icon" href="../../../../img/favicon.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <title>미분 및 적분의 라플라스 변환 - 실험 도서관</title>
+    <link href="../../../../css/bootstrap-3.3.7.min.css" rel="stylesheet">
+    <link href="../../../../css/font-awesome-4.7.0.css" rel="stylesheet">
+    <link href="../../../../css/base.css" rel="stylesheet">
+    <link rel="stylesheet" href="../../../../css/highlight.css">
+    <link href="../../../../css/custom.css" rel="stylesheet">
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+
+    <script src="../../../../js/jquery-3.2.1.min.js"></script>
+    <script src="../../../../js/bootstrap-3.3.7.min.js"></script>
+    <script src="../../../../js/highlight.pack.js"></script>
+    
+    <base target="_top">
+    <script>
+      var base_url = '../../../..';
+      var is_top_frame = false;
+        
+        var pageToc = [
+          {title: "\ubbf8\ubd84\uc758 \ub77c\ud50c\ub77c\uc2a4 \ubcc0\ud658", url: "#_top", children: [
+              {title: "1\ucc28 \ubbf8\ubd84\uc758 \ub77c\ud50c\ub77c\uc2a4 \ubcc0\ud658", url: "#1" },
+              {title: "2\ucc28 \ubbf8\ubd84\uc758 \ub77c\ud50c\ub77c\uc2a4 \ubcc0\ud658", url: "#2" },
+              {title: "3\ucc28 \ubbf8\ubd84\uc758 \ub77c\ud50c\ub77c\uc2a4 \ubcc0\ud658", url: "#3" },
+              {title: "\uc77c\ubc18\uc801\uc778 n\ucc28 \ubbf8\ubd84\uc758 \ub77c\ud50c\ub77c\uc2a4 \ubcc0\ud658", url: "#n" },
+          ]},
+          {title: "\uc801\ubd84\uc758 \ub77c\ud50c\ub77c\uc2a4 \ubcc0\ud658", url: "#_2", children: [
+              {title: "\uae30\ubcf8 \uac1c\ub150", url: "#_3" },
+              {title: "\uc801\ubd84\uc5d0 \ub300\ud55c \ub77c\ud50c\ub77c\uc2a4 \ubcc0\ud658 \uacf5\uc2dd\uc758 \uc758\ubbf8", url: "#_4" },
+              {title: "\uc801\ubd84\uc758 \ub77c\ud50c\ub77c\uc2a4 \ubcc0\ud658 \uc751\uc6a9", url: "#_5" },
+              {title: "\uc608\uc81c 3: \uc801\ubd84 \uc81c\uc5b4\uae30", url: "#3_1" },
+              {title: "\uc801\ubd84\uc758 \ub77c\ud50c\ub77c\uc2a4 \ubcc0\ud658\uc758 \ucd94\uac00 \uc131\uc9c8", url: "#_6" },
+              {title: "\ud569\uc131\uacf1 \uc815\ub9ac", url: "#_7" },
+              {title: "\uc801\ubd84 \ub77c\ud50c\ub77c\uc2a4 \ubcc0\ud658\uc758 \uc2dc\uc2a4\ud15c \ud574\uc11d", url: "#_8" },
+          ]},
+          {title: "\ubbf8\ubd84 \ubc0f \uc801\ubd84\uc744 \uc774\uc6a9\ud55c \ud568\uc218 \ud574\uc11d", url: "#_10", children: [
+              {title: "\ubbf8\ubd84\uc758 \ub77c\ud50c\ub77c\uc2a4 \ubcc0\ud658", url: "#_11" },
+              {title: "\uc801\ubd84\uc758 \ub77c\ud50c\ub77c\uc2a4 \ubcc0\ud658", url: "#_12" },
+              {title: "\uace0\ucc28 \ubbf8\ubd84\uacfc \uc801\ubd84\uc758 \ub77c\ud50c\ub77c\uc2a4 \ubcc0\ud658", url: "#_13" },
+              {title: "\ubbf8\ubd84 \ubc0f \uc801\ubd84\uc744 \ud1b5\ud55c \uc2dc\uc2a4\ud15c \ud574\uc11d", url: "#_14" },
+              {title: "\ub77c\ud50c\ub77c\uc2a4 \ubcc0\ud658\uc744 \ud65c\uc6a9\ud55c \uc801\ubd84 \ubc29\uc815\uc2dd\uc758 \ud574\uc11d", url: "#_15" },
+          ]},
+          {title: "\uc801\ubd84 \ubc29\uc815\uc2dd\uc5d0\uc11c\uc758 \ub77c\ud50c\ub77c\uc2a4 \ubcc0\ud658", url: "#_16", children: [
+              {title: "\uae30\ubcf8 \uc801\ubd84 \ubc29\uc815\uc2dd", url: "#_17" },
+              {title: "\ub77c\ud50c\ub77c\uc2a4 \ubcc0\ud658 \uc801\uc6a9", url: "#_18" },
+              {title: "\uc801\ubd84 \ubc29\uc815\uc2dd\uc758 \uc8fc\ud30c\uc218 \uc751\ub2f5", url: "#_19" },
+              {title: "\uc801\ubd84 \ubc29\uc815\uc2dd\uc758 \uc751\uc6a9", url: "#_20" },
+          ]},
+          {title: "\ubbf8\ubd84 \ubc0f \uc801\ubd84 \uc5f0\uc0b0\uc758 \ub77c\ud50c\ub77c\uc2a4 \ubcc0\ud658 \uc694\uc57d", url: "#_21", children: [
+              {title: "\uc801\ubd84 \uc5f0\uc0b0\uc758 \ub77c\ud50c\ub77c\uc2a4 \ubcc0\ud658 \uc694\uc57d", url: "#_22" },
+          ]},
+        ];
+
+    </script>
+    <script src="../../../../js/base.js"></script>
+      <script src="../../../../js/google_analytics.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+      <script src="https://www.googletagmanager.com/gtag/js?id=G-3F4LHCTF88"></script> 
+</head>
+
+<body>
+<script>
+if (is_top_frame) { $('body').addClass('wm-top-page'); }
+</script>
+
+
+
+<div class="container-fluid wm-page-content">
+  <a name="_top"></a>
+    
+
+    
+    
+      
+    
+
+  <div class="row wm-article-nav-buttons" role="navigation" aria-label="navigation">
+    
+    <div class="wm-article-nav pull-right">
+      <a href="../0205/" class="btn btn-xs btn-default pull-right">
+        Next
+        <i class="fa fa-chevron-right" aria-hidden="true"></i>
+      </a>
+      <a href="../0205/" class="btn btn-xs btn-link">
+        스케일링 정리
+      </a>
+    </div>
+    
+    <div class="wm-article-nav">
+      <a href="../0203/" class="btn btn-xs btn-default pull-left">
+        <i class="fa fa-chevron-left" aria-hidden="true"></i>
+        Previous</a><a href="../0203/" class="btn btn-xs btn-link">
+        시프트 정리 (시간 시프트, 주파수 시프트)
+      </a>
+    </div>
+    
+  </div>
+
+    
+
+    <h3 id="_1">미분의 라플라스 변환</h3>
+<p>라플라스 변환을 이용하면 미분 방정식을 대수 방정식으로 변환할 수 있다. 이는 시간 영역에서 미분을 다루기 어려운 문제를 주파수 영역에서 쉽게 해결할 수 있게 해 준다. 본 소제에서는 함수의 미분에 대한 라플라스 변환의 기본 개념과 이를 활용한 여러 사례들을 살펴보자.</p>
+<h4 id="1">1차 미분의 라플라스 변환</h4>
+<p>함수 <span class="arithmatex"><span class="MathJax_Preview">f(t)</span><script type="math/tex">f(t)</script></span>의 1차 미분에 대한 라플라스 변환은 다음과 같이 정의된다.<br />
+라플라스 변환의 정의에 따라:</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+\mathcal{L}\{f'(t)\} = \int_0^\infty e^{-st} f'(t) dt
+</div>
+<script type="math/tex; mode=display">
+\mathcal{L}\{f'(t)\} = \int_0^\infty e^{-st} f'(t) dt
+</script>
+</div>
+<p>부분 적분을 적용하면:</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+\mathcal{L}\{f'(t)\} = s \mathcal{L}\{f(t)\} - f(0)
+</div>
+<script type="math/tex; mode=display">
+\mathcal{L}\{f'(t)\} = s \mathcal{L}\{f(t)\} - f(0)
+</script>
+</div>
+<p>따라서, 1차 미분에 대한 라플라스 변환은 다음과 같은 식으로 표현된다:</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+\mathcal{L}\{f'(t)\} = s F(s) - f(0)
+</div>
+<script type="math/tex; mode=display">
+\mathcal{L}\{f'(t)\} = s F(s) - f(0)
+</script>
+</div>
+<p>여기서 <span class="arithmatex"><span class="MathJax_Preview">F(s)</span><script type="math/tex">F(s)</script></span>는 함수 <span class="arithmatex"><span class="MathJax_Preview">f(t)</span><script type="math/tex">f(t)</script></span>의 라플라스 변환이며, <span class="arithmatex"><span class="MathJax_Preview">f(0)</span><script type="math/tex">f(0)</script></span>는 함수 <span class="arithmatex"><span class="MathJax_Preview">f(t)</span><script type="math/tex">f(t)</script></span>의 초기값이다.</p>
+<h4 id="2">2차 미분의 라플라스 변환</h4>
+<p>마찬가지로, 함수 <span class="arithmatex"><span class="MathJax_Preview">f(t)</span><script type="math/tex">f(t)</script></span>의 2차 미분에 대한 라플라스 변환은 다음과 같이 표현된다.<br />
+우선, 라플라스 변환의 정의에 따라 2차 미분에 대해 생각해보면:</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+\mathcal{L}\{f''(t)\} = \int_0^\infty e^{-st} f''(t) dt
+</div>
+<script type="math/tex; mode=display">
+\mathcal{L}\{f''(t)\} = \int_0^\infty e^{-st} f''(t) dt
+</script>
+</div>
+<p>부분 적분을 두 번 적용하면:</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+\mathcal{L}\{f''(t)\} = s^2 F(s) - s f(0) - f'(0)
+</div>
+<script type="math/tex; mode=display">
+\mathcal{L}\{f''(t)\} = s^2 F(s) - s f(0) - f'(0)
+</script>
+</div>
+<p>따라서, 2차 미분에 대한 라플라스 변환은 다음과 같이 요약된다:</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+\mathcal{L}\{f''(t)\} = s^2 F(s) - s f(0) - f'(0)
+</div>
+<script type="math/tex; mode=display">
+\mathcal{L}\{f''(t)\} = s^2 F(s) - s f(0) - f'(0)
+</script>
+</div>
+<p>여기서 <span class="arithmatex"><span class="MathJax_Preview">f'(0)</span><script type="math/tex">f'(0)</script></span>는 함수 <span class="arithmatex"><span class="MathJax_Preview">f(t)</span><script type="math/tex">f(t)</script></span>의 첫 번째 미분의 초기값이다.</p>
+<h4 id="3">3차 미분의 라플라스 변환</h4>
+<p>이제 함수 <span class="arithmatex"><span class="MathJax_Preview">f(t)</span><script type="math/tex">f(t)</script></span>의 3차 미분에 대한 라플라스 변환을 살펴보자. 정의에 따라:</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+\mathcal{L}\{f'''(t)\} = \int_0^\infty e^{-st} f'''(t) dt
+</div>
+<script type="math/tex; mode=display">
+\mathcal{L}\{f'''(t)\} = \int_0^\infty e^{-st} f'''(t) dt
+</script>
+</div>
+<p>부분 적분을 세 번 적용하면:</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+\mathcal{L}\{f'''(t)\} = s^3 F(s) - s^2 f(0) - s f'(0) - f''(0)
+</div>
+<script type="math/tex; mode=display">
+\mathcal{L}\{f'''(t)\} = s^3 F(s) - s^2 f(0) - s f'(0) - f''(0)
+</script>
+</div>
+<p>따라서, 3차 미분에 대한 라플라스 변환은 다음과 같다:</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+\mathcal{L}\{f'''(t)\} = s^3 F(s) - s^2 f(0) - s f'(0) - f''(0)
+</div>
+<script type="math/tex; mode=display">
+\mathcal{L}\{f'''(t)\} = s^3 F(s) - s^2 f(0) - s f'(0) - f''(0)
+</script>
+</div>
+<p>여기서 <span class="arithmatex"><span class="MathJax_Preview">f''(0)</span><script type="math/tex">f''(0)</script></span>는 함수 <span class="arithmatex"><span class="MathJax_Preview">f(t)</span><script type="math/tex">f(t)</script></span>의 두 번째 미분의 초기값이다.</p>
+<h4 id="n">일반적인 n차 미분의 라플라스 변환</h4>
+<p>일반적으로 함수 <span class="arithmatex"><span class="MathJax_Preview">f(t)</span><script type="math/tex">f(t)</script></span>의 n차 미분에 대한 라플라스 변환은 다음과 같이 표현된다:</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+\mathcal{L}\{f^{(n)}(t)\} = s^n F(s) - s^{n-1} f(0) - s^{n-2} f'(0) - \dots - f^{(n-1)}(0)
+</div>
+<script type="math/tex; mode=display">
+\mathcal{L}\{f^{(n)}(t)\} = s^n F(s) - s^{n-1} f(0) - s^{n-2} f'(0) - \dots - f^{(n-1)}(0)
+</script>
+</div>
+<p>이 식은 미분의 차수가 높아질수록, 그에 비례하는 초기 조건들이 추가되는 구조를 보여준다. 이를 통해 복잡한 미분 방정식에서 초기 조건을 명시적으로 고려할 수 있다.</p>
+<h3 id="_2">적분의 라플라스 변환</h3>
+<p>라플라스 변환에서 적분은 미분과 마찬가지로 중요한 역할을 하며, 다양한 시스템의 동작을 분석하는 데 필수적인 도구이다. 적분의 라플라스 변환은 함수의 변환을 이용하여 적분에 대한 정보를 주파수 영역에서 해석할 수 있게 해준다.</p>
+<h4 id="_3">기본 개념</h4>
+<p>라플라스 변환에서 적분은 주어진 함수 <span class="arithmatex"><span class="MathJax_Preview">f(t)</span><script type="math/tex">f(t)</script></span>에 대해 아래와 같은 방식으로 정의할 수 있다. 함수 <span class="arithmatex"><span class="MathJax_Preview">f(t)</span><script type="math/tex">f(t)</script></span>의 적분을 정의한 후, 그에 대한 라플라스 변환을 계산한다.</p>
+<p>주어진 <span class="arithmatex"><span class="MathJax_Preview">f(t)</span><script type="math/tex">f(t)</script></span>에 대한 적분은 다음과 같다:</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+F(t) = \int_0^t f(\tau) d\tau
+</div>
+<script type="math/tex; mode=display">
+F(t) = \int_0^t f(\tau) d\tau
+</script>
+</div>
+<p>이를 라플라스 변환하면, 아래와 같은 식을 얻게 된다:</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+\mathcal{L}\{F(t)\} = \mathcal{L}\left\{\int_0^t f(\tau) d\tau \right\}
+</div>
+<script type="math/tex; mode=display">
+\mathcal{L}\{F(t)\} = \mathcal{L}\left\{\int_0^t f(\tau) d\tau \right\}
+</script>
+</div>
+<p>라플라스 변환의 성질을 활용하면, 위의 식은 다음과 같은 형태로 변환된다:</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+\mathcal{L}\left\{\int_0^t f(\tau) d\tau \right\} = \frac{1}{s} \mathcal{L}\{f(t)\}
+</div>
+<script type="math/tex; mode=display">
+\mathcal{L}\left\{\int_0^t f(\tau) d\tau \right\} = \frac{1}{s} \mathcal{L}\{f(t)\}
+</script>
+</div>
+<p>즉, 적분의 라플라스 변환은 원래 함수 <span class="arithmatex"><span class="MathJax_Preview">f(t)</span><script type="math/tex">f(t)</script></span>의 라플라스 변환을 <span class="arithmatex"><span class="MathJax_Preview">s</span><script type="math/tex">s</script></span>로 나눈 형태로 주어진다. 이것이 적분에 대한 라플라스 변환의 기본 공식이다.</p>
+<h4 id="_4">적분에 대한 라플라스 변환 공식의 의미</h4>
+<p>라플라스 변환을 통해 적분을 처리하는 것은 시간 영역에서의 누적된 변화를 주파수 영역에서 표현하는 방법이다. 특히, 이 공식은 적분이 주파수 영역에서 낮은 주파수 성분을 강조하는 역할을 한다는 것을 의미한다. </p>
+<p>이는 시스템 분석에서 중요한 정보를 제공한다. 적분이 주파수 영역에서 어떤 영향을 미치는지에 대해 구체적으로 분석할 수 있다. </p>
+<p>다음 단계에서는 이 공식을 실제 시스템 분석에 적용하는 방법과 응용 예제를 살펴보자. </p>
+<h4 id="_5">적분의 라플라스 변환 응용</h4>
+<p>적분의 라플라스 변환 공식을 다양한 시스템에 적용할 수 있다. 예를 들어, 제어 시스템에서의 적분 동작은 필수적인 요소로, 이를 라플라스 변환을 통해 분석할 수 있다.</p>
+<h5 id="1_1">예제 1: 적분기를 통한 시스템 해석</h5>
+<p>제어 시스템에서 적분기는 입력 신호를 시간에 대해 적분하여 출력하는 장치이다. 이는 흔히 속도 제어나 위치 제어에서 사용되며, 적분기의 라플라스 변환을 통해 시스템의 동작을 분석할 수 있다.</p>
+<p>적분기를 라플라스 변환으로 나타내면 다음과 같다. 입력 신호를 <span class="arithmatex"><span class="MathJax_Preview">u(t)</span><script type="math/tex">u(t)</script></span>, 출력 신호를 <span class="arithmatex"><span class="MathJax_Preview">y(t)</span><script type="math/tex">y(t)</script></span>라 하면, 적분기를 거친 출력 신호는 다음과 같이 정의된다:</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+y(t) = \int_0^t u(\tau) d\tau
+</div>
+<script type="math/tex; mode=display">
+y(t) = \int_0^t u(\tau) d\tau
+</script>
+</div>
+<p>이 식을 라플라스 변환하면:</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+\mathcal{L}\{y(t)\} = \mathcal{L}\left\{\int_0^t u(\tau) d\tau \right\} = \frac{1}{s} \mathcal{L}\{u(t)\}
+</div>
+<script type="math/tex; mode=display">
+\mathcal{L}\{y(t)\} = \mathcal{L}\left\{\int_0^t u(\tau) d\tau \right\} = \frac{1}{s} \mathcal{L}\{u(t)\}
+</script>
+</div>
+<p>즉, 적분기의 라플라스 변환은 <span class="arithmatex"><span class="MathJax_Preview">\frac{1}{s}</span><script type="math/tex">\frac{1}{s}</script></span>로 나타나며, 이는 시스템이 입력 신호의 적분을 수행하고 있음을 의미한다.</p>
+<h5 id="2_1">예제 2: 전기 회로에서의 적분 동작</h5>
+<p>전기 회로에서 적분 동작은 주로 커패시터에서 발생한다. 커패시터는 전류를 적분하여 전압을 출력하는 특성을 갖는다. 이를 라플라스 변환을 사용하여 분석할 수 있다.</p>
+<p>커패시터에서 전류 <span class="arithmatex"><span class="MathJax_Preview">i(t)</span><script type="math/tex">i(t)</script></span>와 전압 <span class="arithmatex"><span class="MathJax_Preview">v(t)</span><script type="math/tex">v(t)</script></span> 사이의 관계는 다음과 같다:</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+v(t) = \frac{1}{C} \int_0^t i(\tau) d\tau
+</div>
+<script type="math/tex; mode=display">
+v(t) = \frac{1}{C} \int_0^t i(\tau) d\tau
+</script>
+</div>
+<p>이 식을 라플라스 변환하면:</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+\mathcal{L}\{v(t)\} = \frac{1}{sC} \mathcal{L}\{i(t)\}
+</div>
+<script type="math/tex; mode=display">
+\mathcal{L}\{v(t)\} = \frac{1}{sC} \mathcal{L}\{i(t)\}
+</script>
+</div>
+<p>즉, 커패시터의 라플라스 변환은 <span class="arithmatex"><span class="MathJax_Preview">\frac{1}{sC}</span><script type="math/tex">\frac{1}{sC}</script></span>로 표현되며, 이는 주파수 영역에서 커패시터의 저항이 <span class="arithmatex"><span class="MathJax_Preview">\frac{1}{sC}</span><script type="math/tex">\frac{1}{sC}</script></span>임을 나타낸다. 이를 통해 커패시터가 저주파 성분을 통과시키고 고주파 성분을 차단하는 필터 역할을 한다는 사실을 알 수 있다.</p>
+<h4 id="3_1">예제 3: 적분 제어기</h4>
+<p>적분 제어기는 제어 시스템에서 오차를 시간에 대해 적분하여 누적된 오차를 보상하는 역할을 한다. 적분 제어기의 출력은 다음과 같이 주어진다:</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+u(t) = K_i \int_0^t e(\tau) d\tau
+</div>
+<script type="math/tex; mode=display">
+u(t) = K_i \int_0^t e(\tau) d\tau
+</script>
+</div>
+<p>여기서 <span class="arithmatex"><span class="MathJax_Preview">K_i</span><script type="math/tex">K_i</script></span>는 적분 이득, <span class="arithmatex"><span class="MathJax_Preview">e(t)</span><script type="math/tex">e(t)</script></span>는 오차 신호이다. 이를 라플라스 변환하면:</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+\mathcal{L}\{u(t)\} = \frac{K_i}{s} \mathcal{L}\{e(t)\}
+</div>
+<script type="math/tex; mode=display">
+\mathcal{L}\{u(t)\} = \frac{K_i}{s} \mathcal{L}\{e(t)\}
+</script>
+</div>
+<p>이 식은 적분 제어기의 동작을 주파수 영역에서 해석할 수 있게 해준다. 주파수 영역에서 <span class="arithmatex"><span class="MathJax_Preview">\frac{K_i}{s}</span><script type="math/tex">\frac{K_i}{s}</script></span>는 적분 동작을 수행하며, 이를 통해 적분 제어기가 시스템에 미치는 영향을 분석할 수 있다.</p>
+<h4 id="_6">적분의 라플라스 변환의 추가 성질</h4>
+<p>적분의 라플라스 변환에서 중요한 또 다른 성질은 <strong>합성곱 정리</strong>이다. 합성곱 정리는 시간 영역에서의 두 함수의 합성곱이 주파수 영역에서는 곱셈으로 변환된다는 것을 의미한다.</p>
+<h4 id="_7">합성곱 정리</h4>
+<p>시간 영역에서 두 함수 <span class="arithmatex"><span class="MathJax_Preview">f(t)</span><script type="math/tex">f(t)</script></span>와 <span class="arithmatex"><span class="MathJax_Preview">g(t)</span><script type="math/tex">g(t)</script></span>의 합성곱은 다음과 같이 정의된다:</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+(f * g)(t) = \int_0^t f(\tau) g(t - \tau) d\tau
+</div>
+<script type="math/tex; mode=display">
+(f * g)(t) = \int_0^t f(\tau) g(t - \tau) d\tau
+</script>
+</div>
+<p>이 식을 라플라스 변환하면 다음과 같은 결과를 얻을 수 있다:</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+\mathcal{L}\{(f * g)(t)\} = \mathcal{L}\{f(t)\} \cdot \mathcal{L}\{g(t)\}
+</div>
+<script type="math/tex; mode=display">
+\mathcal{L}\{(f * g)(t)\} = \mathcal{L}\{f(t)\} \cdot \mathcal{L}\{g(t)\}
+</script>
+</div>
+<p>즉, 시간 영역에서의 합성곱은 주파수 영역에서는 두 함수의 곱으로 변환된다. 이 성질은 시스템의 동작을 주파수 영역에서 분석하는 데 매우 유용하다. 시스템에서 입력과 출력의 관계를 라플라스 변환을 통해 간단히 표현할 수 있기 때문이다.</p>
+<h4 id="_8">적분 라플라스 변환의 시스템 해석</h4>
+<p>이제 적분 라플라스 변환을 이용해 시스템 해석에 적용하는 방법을 살펴보자. 시스템 해석에서는 주로 미분 방정식 형태로 주어지는 시스템을 주파수 영역에서 표현하고, 그 결과를 통해 시스템의 거동을 예측한다.</p>
+<h5 id="1_2">예제: 1차 시스템의 적분 분석</h5>
+<p>1차 시스템을 예로 들어보겠다. 1차 시스템은 다음과 같은 미분 방정식으로 나타낼 수 있다:</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+\tau \frac{dy(t)}{dt} + y(t) = K u(t)
+</div>
+<script type="math/tex; mode=display">
+\tau \frac{dy(t)}{dt} + y(t) = K u(t)
+</script>
+</div>
+<p>여기서 <span class="arithmatex"><span class="MathJax_Preview">\tau</span><script type="math/tex">\tau</script></span>는 시간 상수, <span class="arithmatex"><span class="MathJax_Preview">K</span><script type="math/tex">K</script></span>는 시스템의 이득, <span class="arithmatex"><span class="MathJax_Preview">u(t)</span><script type="math/tex">u(t)</script></span>는 입력, <span class="arithmatex"><span class="MathJax_Preview">y(t)</span><script type="math/tex">y(t)</script></span>는 출력이다.</p>
+<p>이 식을 라플라스 변환하면:</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+\tau s Y(s) + Y(s) = K U(s)
+</div>
+<script type="math/tex; mode=display">
+\tau s Y(s) + Y(s) = K U(s)
+</script>
+</div>
+<p>이를 정리하면:</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+Y(s) = \frac{K}{\tau s + 1} U(s)
+</div>
+<script type="math/tex; mode=display">
+Y(s) = \frac{K}{\tau s + 1} U(s)
+</script>
+</div>
+<p>이 식은 주파수 영역에서 시스템의 출력이 입력의 라플라스 변환에 의해 조정된다는 것을 보여준다. 적분 동작을 포함한 시스템 해석을 주파수 영역에서 처리하는 방식이다.</p>
+<h5 id="_9">적분을 포함한 전달 함수</h5>
+<p>시스템에서 적분기를 포함한 전달 함수는 일반적으로 <span class="arithmatex"><span class="MathJax_Preview">\frac{1}{s}</span><script type="math/tex">\frac{1}{s}</script></span> 형태로 나타나며, 시스템이 특정 주파수에서 어떻게 동작하는지 분석할 수 있게 해준다. 이는 시스템이 저주파 대역에서 큰 영향을 받고, 고주파 대역에서 감소하는 효과를 준다. 이러한 성질은 시스템 제어 설계에서 중요한 역할을 한다.</p>
+<h3 id="_10">미분 및 적분을 이용한 함수 해석</h3>
+<h4 id="_11">미분의 라플라스 변환</h4>
+<p>라플라스 변환의 중요한 성질 중 하나는 미분 방정식을 대수적인 방정식으로 변환하는 능력이다. 이것은 주로 미분의 라플라스 변환을 이용하여 이루어진다. 함수 <span class="arithmatex"><span class="MathJax_Preview">f(t)</span><script type="math/tex">f(t)</script></span>의 1차 미분 <span class="arithmatex"><span class="MathJax_Preview">\frac{d}{dt} f(t)</span><script type="math/tex">\frac{d}{dt} f(t)</script></span>의 라플라스 변환은 다음과 같다:</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+\mathcal{L} \left\{ \frac{d}{dt} f(t) \right\} = s F(s) - f(0)
+</div>
+<script type="math/tex; mode=display">
+\mathcal{L} \left\{ \frac{d}{dt} f(t) \right\} = s F(s) - f(0)
+</script>
+</div>
+<p>여기서:
+- <span class="arithmatex"><span class="MathJax_Preview">F(s) = \mathcal{L}\{f(t)\}</span><script type="math/tex">F(s) = \mathcal{L}\{f(t)\}</script></span>는 <span class="arithmatex"><span class="MathJax_Preview">f(t)</span><script type="math/tex">f(t)</script></span>의 라플라스 변환이다.
+- <span class="arithmatex"><span class="MathJax_Preview">s</span><script type="math/tex">s</script></span>는 복소수 <span class="arithmatex"><span class="MathJax_Preview">s = \sigma + j\omega</span><script type="math/tex">s = \sigma + j\omega</script></span>를 나타낸다.
+- <span class="arithmatex"><span class="MathJax_Preview">f(0)</span><script type="math/tex">f(0)</script></span>는 <span class="arithmatex"><span class="MathJax_Preview">t = 0</span><script type="math/tex">t = 0</script></span>에서의 초기값이다.</p>
+<p>이 식은 1차 미분을 포함한 선형 미분 방정식의 해를 구할 때 유용하게 쓰이다. 초기값 <span class="arithmatex"><span class="MathJax_Preview">f(0)</span><script type="math/tex">f(0)</script></span>가 라플라스 변환식에 포함되므로 초기조건을 명시적으로 고려할 수 있다.</p>
+<p>더 나아가, 함수 <span class="arithmatex"><span class="MathJax_Preview">f(t)</span><script type="math/tex">f(t)</script></span>의 2차 미분 <span class="arithmatex"><span class="MathJax_Preview">\frac{d^2}{dt^2} f(t)</span><script type="math/tex">\frac{d^2}{dt^2} f(t)</script></span>의 라플라스 변환은 다음과 같이 표현된다:</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+\mathcal{L} \left\{ \frac{d^2}{dt^2} f(t) \right\} = s^2 F(s) - s f(0) - f'(0)
+</div>
+<script type="math/tex; mode=display">
+\mathcal{L} \left\{ \frac{d^2}{dt^2} f(t) \right\} = s^2 F(s) - s f(0) - f'(0)
+</script>
+</div>
+<p>여기서:
+- <span class="arithmatex"><span class="MathJax_Preview">f'(0)</span><script type="math/tex">f'(0)</script></span>는 <span class="arithmatex"><span class="MathJax_Preview">t = 0</span><script type="math/tex">t = 0</script></span>에서의 1차 미분값이다.</p>
+<p>이 식은 2차 미분을 포함한 방정식에 적용되며, 역시 초기조건을 명확히 다룰 수 있다.</p>
+<h4 id="_12">적분의 라플라스 변환</h4>
+<p>적분에 대한 라플라스 변환은 미분과는 반대로 해석된다. 즉, 함수 <span class="arithmatex"><span class="MathJax_Preview">f(t)</span><script type="math/tex">f(t)</script></span>의 적분 <span class="arithmatex"><span class="MathJax_Preview">\int_0^t f(\tau) d\tau</span><script type="math/tex">\int_0^t f(\tau) d\tau</script></span>의 라플라스 변환은 다음과 같이 주어진다:</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+\mathcal{L} \left\{ \int_0^t f(\tau) d\tau \right\} = \frac{1}{s} F(s)
+</div>
+<script type="math/tex; mode=display">
+\mathcal{L} \left\{ \int_0^t f(\tau) d\tau \right\} = \frac{1}{s} F(s)
+</script>
+</div>
+<p>여기서:
+- <span class="arithmatex"><span class="MathJax_Preview">\int_0^t f(\tau) d\tau</span><script type="math/tex">\int_0^t f(\tau) d\tau</script></span>는 함수 <span class="arithmatex"><span class="MathJax_Preview">f(t)</span><script type="math/tex">f(t)</script></span>의 적분을 나타낸다.</p>
+<p>적분을 라플라스 변환으로 표현할 때 주파수 도메인에서는 함수가 <span class="arithmatex"><span class="MathJax_Preview">\frac{1}{s}</span><script type="math/tex">\frac{1}{s}</script></span>에 의해 나누어진다. 이 특성은 선형 시스템의 응답을 해석할 때 자주 사용되며, 적분 방정식의 해를 구할 때 유용하다.</p>
+<h4 id="_13">고차 미분과 적분의 라플라스 변환</h4>
+<p>고차 미분 <span class="arithmatex"><span class="MathJax_Preview">\frac{d^n}{dt^n} f(t)</span><script type="math/tex">\frac{d^n}{dt^n} f(t)</script></span>의 라플라스 변환은 일반적으로 다음과 같이 주어진다:</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+\mathcal{L} \left\{ \frac{d^n}{dt^n} f(t) \right\} = s^n F(s) - s^{n-1} f(0) - s^{n-2} f'(0) - \cdots - f^{(n-1)}(0)
+</div>
+<script type="math/tex; mode=display">
+\mathcal{L} \left\{ \frac{d^n}{dt^n} f(t) \right\} = s^n F(s) - s^{n-1} f(0) - s^{n-2} f'(0) - \cdots - f^{(n-1)}(0)
+</script>
+</div>
+<p>여기서:
+- <span class="arithmatex"><span class="MathJax_Preview">f^{(n-1)}(0)</span><script type="math/tex">f^{(n-1)}(0)</script></span>는 <span class="arithmatex"><span class="MathJax_Preview">t = 0</span><script type="math/tex">t = 0</script></span>에서의 <span class="arithmatex"><span class="MathJax_Preview">(n-1)</span><script type="math/tex">(n-1)</script></span>차 미분값이다.</p>
+<p>고차 미분의 라플라스 변환은 초기조건을 점진적으로 포함하여 복잡한 미분 방정식의 해석을 용이하게 한다. 마찬가지로, 고차 적분 역시 라플라스 변환을 적용하여 표현할 수 있다. </p>
+<p>고차 적분 <span class="arithmatex"><span class="MathJax_Preview">\int_0^t \int_0^{\tau_1} \cdots \int_0^{\tau_{n-1}} f(\tau_n) d\tau_n \cdots d\tau_1</span><script type="math/tex">\int_0^t \int_0^{\tau_1} \cdots \int_0^{\tau_{n-1}} f(\tau_n) d\tau_n \cdots d\tau_1</script></span>의 라플라스 변환은 다음과 같다:</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+\mathcal{L} \left\{ \int_0^t \int_0^{\tau_1} \cdots \int_0^{\tau_{n-1}} f(\tau_n) d\tau_n \cdots d\tau_1 \right\} = \frac{1}{s^n} F(s)
+</div>
+<script type="math/tex; mode=display">
+\mathcal{L} \left\{ \int_0^t \int_0^{\tau_1} \cdots \int_0^{\tau_{n-1}} f(\tau_n) d\tau_n \cdots d\tau_1 \right\} = \frac{1}{s^n} F(s)
+</script>
+</div>
+<p>이 식은 함수의 여러 차수의 적분을 쉽게 다루는 데 사용된다. 특히, 선형 시스템의 누적 응답을 계산할 때 자주 사용된다.</p>
+<h4 id="_14">미분 및 적분을 통한 시스템 해석</h4>
+<p>미분 및 적분의 라플라스 변환 성질을 이용하면 시스템 해석이 훨씬 간단해진다. 특히, 선형 미분 방정식이 시스템을 설명할 때 라플라스 변환은 강력한 도구가 된다. </p>
+<h5 id="1_3">1차 미분 방정식을 이용한 시스템 해석</h5>
+<p>1차 미분 방정식은 일반적으로 다음과 같이 주어진다:</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+\frac{d}{dt} y(t) + a y(t) = u(t)
+</div>
+<script type="math/tex; mode=display">
+\frac{d}{dt} y(t) + a y(t) = u(t)
+</script>
+</div>
+<p>여기서:
+- <span class="arithmatex"><span class="MathJax_Preview">y(t)</span><script type="math/tex">y(t)</script></span>는 시스템의 출력이고, <span class="arithmatex"><span class="MathJax_Preview">u(t)</span><script type="math/tex">u(t)</script></span>는 입력이다.
+- <span class="arithmatex"><span class="MathJax_Preview">a</span><script type="math/tex">a</script></span>는 상수 계수이다.</p>
+<p>이 방정식의 양변에 라플라스 변환을 적용하면 다음과 같은 대수적인 방정식을 얻게 된다:</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+s Y(s) - y(0) + a Y(s) = U(s)
+</div>
+<script type="math/tex; mode=display">
+s Y(s) - y(0) + a Y(s) = U(s)
+</script>
+</div>
+<p>이를 정리하면:</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+(s + a) Y(s) = U(s) + y(0)
+</div>
+<script type="math/tex; mode=display">
+(s + a) Y(s) = U(s) + y(0)
+</script>
+</div>
+<p>따라서, 시스템의 전달 함수 <span class="arithmatex"><span class="MathJax_Preview">H(s)</span><script type="math/tex">H(s)</script></span>는 다음과 같이 정의된다:</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+H(s) = \frac{Y(s)}{U(s)} = \frac{1}{s + a}
+</div>
+<script type="math/tex; mode=display">
+H(s) = \frac{Y(s)}{U(s)} = \frac{1}{s + a}
+</script>
+</div>
+<p>이 전달 함수는 시스템의 시간 영역에서의 동작을 주파수 영역에서 해석하는 데 도움이 된다. 또한, 초기 조건 <span class="arithmatex"><span class="MathJax_Preview">y(0)</span><script type="math/tex">y(0)</script></span>을 고려하여 시스템의 응답을 구할 수 있다.</p>
+<h5 id="2_2">2차 미분 방정식을 이용한 시스템 해석</h5>
+<p>2차 미분 방정식은 더욱 복잡한 시스템을 설명한다. 일반적인 2차 미분 방정식은 다음과 같다:</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+\frac{d^2}{dt^2} y(t) + b \frac{d}{dt} y(t) + c y(t) = u(t)
+</div>
+<script type="math/tex; mode=display">
+\frac{d^2}{dt^2} y(t) + b \frac{d}{dt} y(t) + c y(t) = u(t)
+</script>
+</div>
+<p>여기서:
+- <span class="arithmatex"><span class="MathJax_Preview">b</span><script type="math/tex">b</script></span>와 <span class="arithmatex"><span class="MathJax_Preview">c</span><script type="math/tex">c</script></span>는 상수 계수이다.</p>
+<p>이 방정식의 양변에 라플라스 변환을 적용하면:</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+s^2 Y(s) - s y(0) - y'(0) + b(s Y(s) - y(0)) + c Y(s) = U(s)
+</div>
+<script type="math/tex; mode=display">
+s^2 Y(s) - s y(0) - y'(0) + b(s Y(s) - y(0)) + c Y(s) = U(s)
+</script>
+</div>
+<p>이를 정리하면:</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+(s^2 + bs + c) Y(s) = U(s) + s y(0) + y'(0) + b y(0)
+</div>
+<script type="math/tex; mode=display">
+(s^2 + bs + c) Y(s) = U(s) + s y(0) + y'(0) + b y(0)
+</script>
+</div>
+<p>이 식에서 시스템의 전달 함수 <span class="arithmatex"><span class="MathJax_Preview">H(s)</span><script type="math/tex">H(s)</script></span>는 다음과 같이 표현된다:</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+H(s) = \frac{Y(s)}{U(s)} = \frac{1}{s^2 + bs + c}
+</div>
+<script type="math/tex; mode=display">
+H(s) = \frac{Y(s)}{U(s)} = \frac{1}{s^2 + bs + c}
+</script>
+</div>
+<p>이와 같이 2차 미분 방정식을 주파수 영역으로 변환하면, 시스템의 응답을 구체적으로 분석할 수 있다. 특히, 시스템의 자연 진동수와 감쇠 비율을 확인하는 데 유용하다.</p>
+<h4 id="_15">라플라스 변환을 활용한 적분 방정식의 해석</h4>
+<p>적분 방정식 또한 라플라스 변환을 통해 간단히 해석할 수 있다. 적분 방정식의 예로, 다음과 같은 시스템을 고려할 수 있다:</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+y(t) = \int_0^t u(\tau) d\tau
+</div>
+<script type="math/tex; mode=display">
+y(t) = \int_0^t u(\tau) d\tau
+</script>
+</div>
+<p>이 식에 라플라스 변환을 적용하면:</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+Y(s) = \frac{1}{s} U(s)
+</div>
+<script type="math/tex; mode=display">
+Y(s) = \frac{1}{s} U(s)
+</script>
+</div>
+<p>따라서, 전달 함수 <span class="arithmatex"><span class="MathJax_Preview">H(s)</span><script type="math/tex">H(s)</script></span>는 다음과 같이 나타낼 수 있다:</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+H(s) = \frac{Y(s)}{U(s)} = \frac{1}{s}
+</div>
+<script type="math/tex; mode=display">
+H(s) = \frac{Y(s)}{U(s)} = \frac{1}{s}
+</script>
+</div>
+<p>이 전달 함수는 적분 시스템의 성질을 나타내며, 이러한 시스템은 주로 누적 응답을 다루는 데 사용된다.</p>
+<h3 id="_16">적분 방정식에서의 라플라스 변환</h3>
+<p>적분 방정식은 시스템의 누적된 응답을 나타내며, 주로 축적된 양을 표현하는 데 사용된다. 라플라스 변환을 이용하면 적분 방정식을 주파수 영역으로 변환하여 해석할 수 있다. </p>
+<h4 id="_17">기본 적분 방정식</h4>
+<p>적분 방정식의 가장 기본적인 형태는 다음과 같다:</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+y(t) = \int_0^t u(\tau) d\tau
+</div>
+<script type="math/tex; mode=display">
+y(t) = \int_0^t u(\tau) d\tau
+</script>
+</div>
+<p>이 적분 방정식은 시간 영역에서 입력 <span class="arithmatex"><span class="MathJax_Preview">u(t)</span><script type="math/tex">u(t)</script></span>에 대해 출력 <span class="arithmatex"><span class="MathJax_Preview">y(t)</span><script type="math/tex">y(t)</script></span>가 어떻게 변하는지 보여준다. 이 방정식은 시스템의 출력이 입력 신호의 누적 값으로 이루어짐을 나타낸다. </p>
+<h4 id="_18">라플라스 변환 적용</h4>
+<p>적분 방정식에 라플라스 변환을 적용하면 적분 연산이 더 단순해진다. 라플라스 변환의 성질 중 하나는 적분이 주파수 영역에서는 간단한 나눗셈으로 변환된다는 것이다. 위의 식에 라플라스 변환을 적용하면 다음과 같이 표현된다:</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+\mathcal{L} \left\{ y(t) \right\} = \mathcal{L} \left\{ \int_0^t u(\tau) d\tau \right\}
+</div>
+<script type="math/tex; mode=display">
+\mathcal{L} \left\{ y(t) \right\} = \mathcal{L} \left\{ \int_0^t u(\tau) d\tau \right\}
+</script>
+</div>
+<p>이를 라플라스 변환의 정의에 따라 풀면:</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+Y(s) = \frac{1}{s} U(s)
+</div>
+<script type="math/tex; mode=display">
+Y(s) = \frac{1}{s} U(s)
+</script>
+</div>
+<p>여기서:
+- <span class="arithmatex"><span class="MathJax_Preview">Y(s)</span><script type="math/tex">Y(s)</script></span>는 출력 <span class="arithmatex"><span class="MathJax_Preview">y(t)</span><script type="math/tex">y(t)</script></span>의 라플라스 변환이다.
+- <span class="arithmatex"><span class="MathJax_Preview">U(s)</span><script type="math/tex">U(s)</script></span>는 입력 <span class="arithmatex"><span class="MathJax_Preview">u(t)</span><script type="math/tex">u(t)</script></span>의 라플라스 변환이다.</p>
+<p>이 식은 주파수 영역에서 적분 연산이 <span class="arithmatex"><span class="MathJax_Preview">\frac{1}{s}</span><script type="math/tex">\frac{1}{s}</script></span>로 표현된다는 중요한 사실을 보여준다. 즉, 시간 영역에서 적분이 수행되는 시스템은 주파수 영역에서 <span class="arithmatex"><span class="MathJax_Preview">\frac{1}{s}</span><script type="math/tex">\frac{1}{s}</script></span>로 처리된다. 이는 적분 시스템의 해석을 단순화하고, 시스템의 응답을 계산할 때 유용하게 사용된다.</p>
+<h4 id="_19">적분 방정식의 주파수 응답</h4>
+<p>라플라스 변환을 통해 적분 방정식을 분석할 때, 시스템의 주파수 응답을 확인할 수 있다. 주파수 영역에서 적분 방정식은 <span class="arithmatex"><span class="MathJax_Preview">\frac{1}{s}</span><script type="math/tex">\frac{1}{s}</script></span> 형태로 나타나며, 이는 저주파수에서 큰 값으로 증가하고 고주파수에서 작은 값으로 감소하는 시스템의 성질을 나타낸다.</p>
+<p>이러한 성질은 저주파수 입력에 대해서는 출력이 커지며, 고주파수 입력에 대해서는 출력이 작아짐을 의미한다. 적분 시스템은 고주파수 신호를 억제하고 저주파수 신호를 강조하는 저역통과 필터로 작동한다.</p>
+<h4 id="_20">적분 방정식의 응용</h4>
+<p>적분 방정식과 그 라플라스 변환은 다양한 물리 시스템에서 활용된다. 예를 들어, 전기 회로에서 축적된 전하를 표현하는 데 적분 방정식이 사용되며, 기계 시스템에서의 변위나 속도는 가속도의 적분으로 나타낼 수 있다. 이러한 시스템에서는 라플라스 변환을 통해 적분 방정식을 해석하여 시간 영역에서의 응답을 구할 수 있다.</p>
+<h3 id="_21">미분 및 적분 연산의 라플라스 변환 요약</h3>
+<p>미분 연산의 라플라스 변환은 시간 영역에서의 미분을 주파수 영역에서 대수적인 형태로 변환한다. 이를 통해 미분 방정식을 대수 방정식으로 바꿀 수 있으며, 시스템의 동작을 해석하는 데 유용하다. 미분 연산에 대한 라플라스 변환은 다음과 같이 요약될 수 있다:</p>
+<ul>
+<li>함수 <span class="arithmatex"><span class="MathJax_Preview">f(t)</span><script type="math/tex">f(t)</script></span>의 1차 미분에 대한 라플라스 변환:</li>
+</ul>
+<p>$$</p>
+<p>\mathcal{L} \left{ \frac{d}{dt} f(t) \right} = s F(s) - f(0)</p>
+<p>$$</p>
+<ul>
+<li>함수 <span class="arithmatex"><span class="MathJax_Preview">f(t)</span><script type="math/tex">f(t)</script></span>의 2차 미분에 대한 라플라스 변환:</li>
+</ul>
+<p>$$</p>
+<p>\mathcal{L} \left{ \frac{d^2}{dt^2} f(t) \right} = s^2 F(s) - s f(0) - f'(0)</p>
+<p>$$</p>
+<ul>
+<li>고차 미분 <span class="arithmatex"><span class="MathJax_Preview">\frac{d^n}{dt^n} f(t)</span><script type="math/tex">\frac{d^n}{dt^n} f(t)</script></span>에 대한 라플라스 변환:</li>
+</ul>
+<p>$$</p>
+<p>\mathcal{L} \left{ \frac{d^n}{dt^n} f(t) \right} = s^n F(s) - s^{n-1} f(0) - s^{n-2} f'(0) - \cdots - f^{(n-1)}(0)</p>
+<p>$$</p>
+<p>이러한 공식은 미분 방정식에 포함된 초기 조건을 주파수 영역에서 명시적으로 다룰 수 있게 해준다.</p>
+<h4 id="_22">적분 연산의 라플라스 변환 요약</h4>
+<p>적분 연산에 대한 라플라스 변환은 적분을 주파수 영역에서 함수의 분수 형태로 변환한다. 이는 적분 방정식을 라플라스 변환을 통해 해결할 수 있는 중요한 도구가 된다.</p>
+<ul>
+<li>함수 <span class="arithmatex"><span class="MathJax_Preview">f(t)</span><script type="math/tex">f(t)</script></span>의 적분 <span class="arithmatex"><span class="MathJax_Preview">\int_0^t f(\tau) d\tau</span><script type="math/tex">\int_0^t f(\tau) d\tau</script></span>에 대한 라플라스 변환:</li>
+</ul>
+<p>$$</p>
+<p>\mathcal{L} \left{ \int_0^t f(\tau) d\tau \right} = \frac{1}{s} F(s)</p>
+<p>$$</p>
+<ul>
+<li>고차 적분 <span class="arithmatex"><span class="MathJax_Preview">\int_0^t \int_0^{\tau_1} \cdots \int_0^{\tau_{n-1}} f(\tau_n) d\tau_n \cdots d\tau_1</span><script type="math/tex">\int_0^t \int_0^{\tau_1} \cdots \int_0^{\tau_{n-1}} f(\tau_n) d\tau_n \cdots d\tau_1</script></span>에 대한 라플라스 변환:</li>
+</ul>
+<p>$$</p>
+<p>\mathcal{L} \left{ \int_0^t \int_0^{\tau_1} \cdots \int_0^{\tau_{n-1}} f(\tau_n) d\tau_n \cdots d\tau_1 \right} = \frac{1}{s^n} F(s)</p>
+<p>$$</p>
+<p>적분 연산에 대한 라플라스 변환은 시스템의 누적 응답을 분석할 때 매우 유용하다. 이를 통해 시스템의 시간 영역에서의 적분을 주파수 영역에서 간단한 비례 관계로 처리할 수 있다.</p>
+
+  <br>
+    
+
+    
+    
+      
+    
+
+  <div class="row wm-article-nav-buttons" role="navigation" aria-label="navigation">
+    
+    <div class="wm-article-nav pull-right">
+      <a href="../0205/" class="btn btn-xs btn-default pull-right">
+        Next
+        <i class="fa fa-chevron-right" aria-hidden="true"></i>
+      </a>
+      <a href="../0205/" class="btn btn-xs btn-link">
+        스케일링 정리
+      </a>
+    </div>
+    
+    <div class="wm-article-nav">
+      <a href="../0203/" class="btn btn-xs btn-default pull-left">
+        <i class="fa fa-chevron-left" aria-hidden="true"></i>
+        Previous</a><a href="../0203/" class="btn btn-xs btn-link">
+        시프트 정리 (시간 시프트, 주파수 시프트)
+      </a>
+    </div>
+    
+  </div>
+
+    <br>
+</div>
+
+<footer class="container-fluid wm-page-content">
+  <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a> using <a href="https://github.com/gristlabs/mkdocs-windmill">Windmill</a> theme by Grist Labs.</p>
+</footer>
+
+</body>
+</html>
