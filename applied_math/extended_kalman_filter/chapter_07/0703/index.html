@@ -184,7 +184,7 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 <h4 id="_2">상태 불확실성의 과대/과소 추정</h4>
 <p>고차 비선형성으로 인해 발생한 상태 추정의 오차는 <strong>상태 불확실성의 과대 추정</strong> 또는 <strong>과소 추정</strong>으로 이어질 수 있다. 과대 추정은 필터가 지나치게 보수적으로 작동하여 시스템의 상태를 정확히 반영하지 못하게 만들고, 과소 추정은 필터가 시스템 상태에 대해 지나치게 확신하게 되어 잘못된 결정을 내릴 가능성을 높인다.</p>
 <h4 id="_3">예제: 비선형 항으로 인한 오차 증폭</h4>
-<p>다음과 같은 시스템을 고려해 보겠다:</p>
+<p>다음과 같은 시스템을 고려해 보자:</p>
 <div class="arithmatex">
 <div class="MathJax_Preview">
 \mathbf{x}_{k+1} = \mathbf{x}_k^2 + \sin(\mathbf{u}_k)
@@ -248,7 +248,7 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 \mathbf{H}_k = \frac{\partial h(\mathbf{x}_k)}{\partial \mathbf{x}_k}
 </script>
 </div>
-<p>하지만 측정 모델이 비선형적일 때, 1차 근사에 의한 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{H}_k</span><script type="math/tex">\mathbf{H}_k</script></span>는 시스템 상태와 측정 값 간의 비선형 관계를 제대로 설명하지 못할 수 있다. 예를 들어, 다음과 같은 측정 모델을 고려해 보겠다.</p>
+<p>하지만 측정 모델이 비선형적일 때, 1차 근사에 의한 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{H}_k</span><script type="math/tex">\mathbf{H}_k</script></span>는 시스템 상태와 측정 값 간의 비선형 관계를 제대로 설명하지 못할 수 있다. 예를 들어, 다음과 같은 측정 모델을 고려해 보자.</p>
 <div class="arithmatex">
 <div class="MathJax_Preview">
 \mathbf{z}_k = \log(\mathbf{x}_k)

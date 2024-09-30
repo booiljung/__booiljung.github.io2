@@ -217,7 +217,7 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 </div>
 <p>여기서 <span class="arithmatex"><span class="MathJax_Preview">\alpha</span><script type="math/tex">\alpha</script></span>는 함수 <span class="arithmatex"><span class="MathJax_Preview">f(t)</span><script type="math/tex">f(t)</script></span>가 증가하는 속도를 나타내는 상수이다. <span class="arithmatex"><span class="MathJax_Preview">f(t)</span><script type="math/tex">f(t)</script></span>가 지수 함수 <span class="arithmatex"><span class="MathJax_Preview">e^{at}</span><script type="math/tex">e^{at}</script></span>의 형태를 가질 때, 이 함수가 무한대로 발산하지 않도록 하기 위해서는 <span class="arithmatex"><span class="MathJax_Preview">\Re(s) &gt; a</span><script type="math/tex">\Re(s) > a</script></span>이어야 한다. 그렇지 않으면 적분이 수렴하지 않게 된다.</p>
 <h4 id="_11">예시: 지수 함수의 라플라스 변환</h4>
-<p>예를 들어, 지수 함수 <span class="arithmatex"><span class="MathJax_Preview">f(t) = e^{at}</span><script type="math/tex">f(t) = e^{at}</script></span>의 라플라스 변환을 구해 보겠다:</p>
+<p>예를 들어, 지수 함수 <span class="arithmatex"><span class="MathJax_Preview">f(t) = e^{at}</span><script type="math/tex">f(t) = e^{at}</script></span>의 라플라스 변환을 구해 보자:</p>
 <div class="arithmatex">
 <div class="MathJax_Preview">
 \mathcal{L}\{ e^{at} \} = \int_0^\infty e^{-st} e^{at} \, dt = \int_0^\infty e^{-(s-a)t} \, dt
@@ -235,7 +235,7 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 \mathcal{L}\{ e^{at} \} = \frac{1}{s-a}, \quad \Re(s) > a
 </script>
 </div>
-<p>이 조건은 <span class="arithmatex"><span class="MathJax_Preview">s</span><script type="math/tex">s</script></span>-평면에서 수렴하는 영역을 명확히 정의하며, 이 영역을 <strong>수렴 영역 (Region of Convergence, ROC)</strong>이라고 부릅니다.</p>
+<p>이 조건은 <span class="arithmatex"><span class="MathJax_Preview">s</span><script type="math/tex">s</script></span>-평면에서 수렴하는 영역을 명확히 정의하며, 이 영역을 <strong>수렴 영역 (Region of Convergence, ROC)</strong>이라고 부른다.</p>
 <h4 id="roc">수렴 영역 (ROC)의 중요성</h4>
 <p>라플라스 변환에서 수렴 영역은 매우 중요하다. 수렴 영역은 변환이 성립하는 <span class="arithmatex"><span class="MathJax_Preview">s</span><script type="math/tex">s</script></span>-평면의 범위를 정의하며, 이는 특정한 함수에 대해 라플라스 변환이 유효하게 적용될 수 있는 범위를 의미한다. 각 함수마다 ROC는 다를 수 있으며, 일반적으로 함수의 성질에 따라 <span class="arithmatex"><span class="MathJax_Preview">\Re(s)</span><script type="math/tex">\Re(s)</script></span>에 대한 조건이 달라진다.</p>
 <ul>

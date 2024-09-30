@@ -212,7 +212,7 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 <p>이 결과는 네트워크 주소 192.168.1.0과 일치하지 않으므로, 이 클라이언트는 접근이 차단된다.</p>
 <h3 id="allowusers-denyusers_1">AllowUsers와 DenyUsers의 우선 순위</h3>
 <p><code>AllowUsers</code>와 <code>DenyUsers</code>를 동시에 설정할 때의 우선순위에 대해 알아보겠다. OpenSSH는 두 설정이 모두 적용되는 경우, <code>AllowUsers</code>에 명시된 사용자가 우선된다. 즉, <code>DenyUsers</code>에 해당하는 사용자라도 <code>AllowUsers</code>에 명시된 경우에는 접근이 허용된다. 반대로, <code>AllowUsers</code>에 포함되지 않은 사용자는 <code>DenyUsers</code>에 포함되지 않더라도 접근이 차단된다.</p>
-<p>따라서 다음과 같은 설정을 했다고 가정해 보겠다.</p>
+<p>따라서 다음과 같은 설정을 했다고 가정해 보자.</p>
 <pre><code class="language-plaintext">AllowUsers user1@192.168.1.*
 DenyUsers user2@192.168.1.*
 </code></pre>

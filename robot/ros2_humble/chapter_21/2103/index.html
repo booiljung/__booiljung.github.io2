@@ -131,7 +131,7 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
    - <span class="arithmatex"><span class="MathJax_Preview">\mathbf{p}'</span><script type="math/tex">\mathbf{p}'</script></span>는 변환된 좌표계에서의 위치 벡터이다.</p>
 <ol>
 <li><strong>복합 변환</strong>:
-   실제로는 평행이동과 회전이 함께 적용되는 경우가 많다. 이를 <strong>동차 변환(homogeneous transformation)</strong>이라고 부릅니다. 다음과 같은 방식으로 표현된다:</li>
+   실제로는 평행이동과 회전이 함께 적용되는 경우가 많다. 이를 <strong>동차 변환(homogeneous transformation)</strong>이라고 부른다. 다음과 같은 방식으로 표현된다:</li>
 </ol>
 <p>$$
    \mathbf{T} = \begin{bmatrix} \mathbf{R} &amp; \mathbf{t} \ 0 &amp; 1 \end{bmatrix}</p>
@@ -184,7 +184,7 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 <p>$$</p>
 <p>세 가지 회전이 함께 사용될 수 있으며, 이를 <strong>합성 회전</strong>이라고 한다.</p>
 <h3 id="_4">합성 회전</h3>
-<p>3D 공간에서의 회전은 세 축을 기준으로 한 회전의 조합으로 이루어진다. 이를 <strong>합성 회전</strong>이라고 부릅니다. 예를 들어, 먼저 <span class="arithmatex"><span class="MathJax_Preview">z</span><script type="math/tex">z</script></span>축을 기준으로 회전한 후, <span class="arithmatex"><span class="MathJax_Preview">y</span><script type="math/tex">y</script></span>축을 기준으로 회전하고 마지막으로 <span class="arithmatex"><span class="MathJax_Preview">x</span><script type="math/tex">x</script></span>축을 기준으로 회전한다고 하면, 전체 회전 행렬 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{R}</span><script type="math/tex">\mathbf{R}</script></span>는 다음과 같이 합성된다:</p>
+<p>3D 공간에서의 회전은 세 축을 기준으로 한 회전의 조합으로 이루어진다. 이를 <strong>합성 회전</strong>이라고 부른다. 예를 들어, 먼저 <span class="arithmatex"><span class="MathJax_Preview">z</span><script type="math/tex">z</script></span>축을 기준으로 회전한 후, <span class="arithmatex"><span class="MathJax_Preview">y</span><script type="math/tex">y</script></span>축을 기준으로 회전하고 마지막으로 <span class="arithmatex"><span class="MathJax_Preview">x</span><script type="math/tex">x</script></span>축을 기준으로 회전한다고 하면, 전체 회전 행렬 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{R}</span><script type="math/tex">\mathbf{R}</script></span>는 다음과 같이 합성된다:</p>
 <div class="arithmatex">
 <div class="MathJax_Preview">
 \mathbf{R} = \mathbf{R}_x(\theta_x) \mathbf{R}_y(\theta_y) \mathbf{R}_z(\theta_z)

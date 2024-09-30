@@ -147,7 +147,7 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 </code></pre>
 <p>위 코드에서는 <code>T</code>가 <code>num</code> 타입을 상속하는 타입만 올 수 있도록 제한하였다. 즉, <code>NumberBox&lt;int&gt;</code>나 <code>NumberBox&lt;double&gt;</code>은 허용되지만, <code>NumberBox&lt;String&gt;</code>은 컴파일 오류를 발생시킨다.</p>
 <h3 id="_5">제너릭 클래스와 타입 안전성</h3>
-<p>제너릭 클래스를 사용하면 코드에서 타입에 대한 안전성을 확보할 수 있다. 이는 특히 다양한 데이터 타입을 처리해야 하는 클래스에서 유용하다. 예를 들어, 다음과 같이 제너릭 타입을 사용하지 않은 경우와 제너릭을 사용한 경우를 비교해 보겠다.</p>
+<p>제너릭 클래스를 사용하면 코드에서 타입에 대한 안전성을 확보할 수 있다. 이는 특히 다양한 데이터 타입을 처리해야 하는 클래스에서 유용하다. 예를 들어, 다음과 같이 제너릭 타입을 사용하지 않은 경우와 제너릭을 사용한 경우를 비교해 보자.</p>
 <p>제너릭을 사용하지 않은 코드:</p>
 <pre><code class="language-dart">class NonGenericBox {
   var value;

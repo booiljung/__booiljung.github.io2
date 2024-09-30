@@ -204,7 +204,7 @@ s = \sigma + j\omega
 <p>일면적 라플라스 변환은 많은 공학적 문제에서 주로 사용되는데, 그 이유는 실세계의 시스템에서 함수가 주로 <span class="arithmatex"><span class="MathJax_Preview">t = 0</span><script type="math/tex">t = 0</script></span>에서 시작하여 이후 시간에만 의미를 갖는 경우가 많기 때문이다. 예를 들어, 제어 시스템의 입력 신호나 회로의 전류는 보통 시간 0 이후부터만 의미가 있다.</p>
 <p>라플라스 변환에서 식의 <span class="arithmatex"><span class="MathJax_Preview">-st</span><script type="math/tex">-st</script></span>는 시간 영역에서 주파수 영역으로 변환될 때의 핵심 요소이다. 이를 이해하기 위해 각 부분을 살펴보겠다.</p>
 <h4 id="e-ste-st"><span class="arithmatex"><span class="MathJax_Preview">e^{-st}</span><script type="math/tex">e^{-st}</script></span>의 의미</h4>
-<p><span class="arithmatex"><span class="MathJax_Preview">e^{-st}</span><script type="math/tex">e^{-st}</script></span>는 변환의 핵심 요소로, <strong>변환 커널</strong>이라고 부릅니다. 이 요소는 시간 함수 <span class="arithmatex"><span class="MathJax_Preview">f(t)</span><script type="math/tex">f(t)</script></span>가 주파수 영역으로 변환될 때 어떤 방식으로 영향을 받는지를 설명한다. 이때 <span class="arithmatex"><span class="MathJax_Preview">s</span><script type="math/tex">s</script></span>는 일반적으로 복소수로 표현되며 <span class="arithmatex"><span class="MathJax_Preview">s = \sigma + j\omega</span><script type="math/tex">s = \sigma + j\omega</script></span>로 나뉜다.</p>
+<p><span class="arithmatex"><span class="MathJax_Preview">e^{-st}</span><script type="math/tex">e^{-st}</script></span>는 변환의 핵심 요소로, <strong>변환 커널</strong>이라고 부른다. 이 요소는 시간 함수 <span class="arithmatex"><span class="MathJax_Preview">f(t)</span><script type="math/tex">f(t)</script></span>가 주파수 영역으로 변환될 때 어떤 방식으로 영향을 받는지를 설명한다. 이때 <span class="arithmatex"><span class="MathJax_Preview">s</span><script type="math/tex">s</script></span>는 일반적으로 복소수로 표현되며 <span class="arithmatex"><span class="MathJax_Preview">s = \sigma + j\omega</span><script type="math/tex">s = \sigma + j\omega</script></span>로 나뉜다.</p>
 <h5 id="sigmasigma"><strong>실수부 <span class="arithmatex"><span class="MathJax_Preview">\sigma</span><script type="math/tex">\sigma</script></span></strong></h5>
 <ul>
 <li><span class="arithmatex"><span class="MathJax_Preview">e^{-\sigma t}</span><script type="math/tex">e^{-\sigma t}</script></span>: 시간에 따라 함수가 <strong>감쇠(damping)</strong>하는 정도를 나타낸다.</li>
@@ -1006,7 +1006,7 @@ e^{t} & \text{if } t < 0
 \mathcal{L}\{f(t)\} = \int_{-\infty}^{0} e^{t} e^{-st} dt + \int_{0}^{\infty} e^{-t} e^{-st} dt
 </script>
 </div>
-<p>이제 각 구간에 대해 적분을 계산해 보겠다.</p>
+<p>이제 각 구간에 대해 적분을 계산해 보자.</p>
 <h4 id="t-0t_1">음의 시간 구간 (<span class="arithmatex"><span class="MathJax_Preview">t &lt; 0</span><script type="math/tex">t < 0</script></span>)에서의 적분</h4>
 <p>첫 번째 구간은 <span class="arithmatex"><span class="MathJax_Preview">t &lt; 0</span><script type="math/tex">t < 0</script></span>에서의 적분이다:</p>
 <div class="arithmatex">

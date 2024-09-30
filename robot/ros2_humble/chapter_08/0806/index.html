@@ -138,7 +138,7 @@ if __name__ == '__main__':
 </code></pre>
 <p>이 예제는 <strong>피보나치</strong> 수열을 계산하는 액션 서버를 보여준다. 클라이언트가 특정 목표인 <code>order</code>를 요청하면 서버는 해당 <code>order</code>에 맞는 피보나치 수열을 계산하고, 그 과정을 <strong>Feedback</strong> 메시지로 클라이언트에 전송한다. 작업이 완료되면 서버는 <strong>Result</strong>로 최종 수열을 반환한다.</p>
 <h3 id="python_1">액션 클라이언트 구현 예제 (Python)</h3>
-<p>이제, 위의 서버와 통신할 클라이언트를 구현해 보겠다. 클라이언트는 액션 서버에 목표를 보내고, 서버로부터 피드백과 결과를 받는다.</p>
+<p>이제, 위의 서버와 통신할 클라이언트를 구현해 보자. 클라이언트는 액션 서버에 목표를 보내고, 서버로부터 피드백과 결과를 받는다.</p>
 <pre><code class="language-python">import rclpy
 from rclpy.action import ActionClient
 from rclpy.node import Node
