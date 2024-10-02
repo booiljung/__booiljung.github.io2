@@ -35,18 +35,18 @@
         var pageToc = [
           {title: "GNSS \uc704\uc131 \ub124\ud2b8\uc6cc\ud06c \uac1c\uc694", url: "#_top", children: [
           ]},
-          {title: "1. \uc6b0\uc8fc\ubd80\ubb38(Space Segment)", url: "#1-space-segment", children: [
+          {title: "\uc6b0\uc8fc\ubd80\ubb38(Space Segment)", url: "#space-segment", children: [
               {title: "\uc704\uc131 \uada4\ub3c4 \ubc0f \ubc30\uce58", url: "#_1" },
               {title: "\uada4\ub3c4 \uc124\uacc4", url: "#_2" },
               {title: "\uada4\ub3c4 \uc124\uacc4\uc758 \uae30\uc900", url: "#_3" },
           ]},
-          {title: "2. \uc9c0\uc0c1\ubd80\ubb38(Ground Segment)", url: "#2-ground-segment", children: [
+          {title: "\uc9c0\uc0c1\ubd80\ubb38(Ground Segment)", url: "#ground-segment", children: [
           ]},
-          {title: "3. \uc0ac\uc6a9\uc790\ubd80\ubb38(User Segment)", url: "#3-user-segment", children: [
+          {title: "\uc0ac\uc6a9\uc790\ubd80\ubb38(User Segment)", url: "#user-segment", children: [
               {title: "\uc0bc\ubcc0\uce21\ub7c9(Trilateration) \uc6d0\ub9ac", url: "#trilateration" },
           ]},
-          {title: "4. \uc704\uc131 \uc2e0\ud638\uc758 \uad6c\uc870", url: "#4", children: [
-              {title: "\uc2e0\ud638 \uc8fc\ud30c\uc218 \ub300\uc5ed", url: "#_4" },
+          {title: "\uc704\uc131 \uc2e0\ud638\uc758 \uad6c\uc870", url: "#_4", children: [
+              {title: "\uc2e0\ud638 \uc8fc\ud30c\uc218 \ub300\uc5ed", url: "#_5" },
               {title: "\ucf54\ub4dc \ubd84\ud560 \ub2e4\uc911 \uc811\uc18d(CDMA)", url: "#cdma" },
           ]},
         ];
@@ -101,7 +101,7 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
     <h3 id="gnss">GNSS 위성 네트워크 개요</h3>
 <p>GNSS 위성 시스템은 지구 주위를 도는 다수의 위성으로 구성되어 있으며, 이 위성들은 일정한 궤도를 따라 지구를 주기적으로 회전하며 GNSS 수신기에 신호를 전달한다. GNSS 위성 시스템의 주요 역할은 지리적 위치를 정확히 계산하기 위한 신호를 보내는 것이다. 위성들은 신호를 발신하고, 수신기들은 이 신호를 처리하여 자신의 위치, 속도, 시간 등을 계산한다.</p>
 <p>GNSS 위성 네트워크는 크게 <strong>우주부문(Space Segment)</strong>, <strong>지상부문(Ground Segment)</strong>, 그리고 <strong>사용자부문(User Segment)</strong>으로 나뉜다. 이 세 부문은 서로 상호작용하여 정확한 위치 계산을 가능하게 한다.</p>
-<h3 id="1-space-segment">1. 우주부문(Space Segment)</h3>
+<h3 id="space-segment">우주부문(Space Segment)</h3>
 <p>우주부문은 지구 궤도를 도는 GNSS 위성 자체로 구성된다. 위성들은 다음과 같은 역할을 수행한다:</p>
 <ul>
 <li><strong>정확한 위치 정보 전송</strong>: 각 GNSS 위성은 자신의 궤도에서 정기적으로 위치 정보를 전송한다. 이 위치 정보는 정확한 시간 동기화가 되어 있으며, 이를 통해 수신기는 해당 위성까지의 거리를 계산할 수 있다.</li>
@@ -129,7 +129,7 @@ r(t) = \mathbf{r}_0 + \mathbf{v}_0 t + \frac{1}{2} \mathbf{a} t^2
 - <strong>궤도 고도</strong>: 궤도 고도는 위성이 지구에서 얼마나 멀리 떨어져 있는지 결정하며, GNSS 위성은 중궤도에 위치한다.
 - <strong>궤도 경사각</strong>: 위성의 궤도 경사각은 위성이 적도에 대해 형성하는 각도로, 전 세계적으로 균등하게 신호를 보내기 위한 중요한 요소이다.
 - <strong>궤도 주기</strong>: 궤도 주기는 위성이 지구를 한 바퀴 도는 데 걸리는 시간을 의미하며, GNSS 위성은 약 12시간 주기를 갖는다.</p>
-<h3 id="2-ground-segment">2. 지상부문(Ground Segment)</h3>
+<h3 id="ground-segment">지상부문(Ground Segment)</h3>
 <p>지상부문은 위성의 운영 및 유지보수를 담당하는 지상국으로 구성된다. 지상국은 다음과 같은 역할을 한다:</p>
 <ul>
 <li><strong>위성의 위치 모니터링</strong>: 지상국은 각 GNSS 위성의 궤도를 지속적으로 모니터링하여 궤도의 미세한 변화를 추적하고, 이를 수정한다.</li>
@@ -137,7 +137,7 @@ r(t) = \mathbf{r}_0 + \mathbf{v}_0 t + \frac{1}{2} \mathbf{a} t^2
 <li><strong>데이터 전송 및 업데이트</strong>: 지상국은 위성의 상태 정보를 받아 이를 GNSS 사용자들에게 제공한다.</li>
 </ul>
 <p>GNSS 시스템에서 지상부문은 위성의 정확한 위치와 시간 동기화를 보장하는 중요한 역할을 하며, 이를 통해 위치 측정의 정확도가 크게 향상된다.</p>
-<h3 id="3-user-segment">3. 사용자부문(User Segment)</h3>
+<h3 id="user-segment">사용자부문(User Segment)</h3>
 <p>사용자부문은 GNSS 수신기와 이를 활용하는 사용자 시스템으로 구성된다. GNSS 수신기는 다양한 형태로 존재하며, 일반적으로 위치, 속도, 그리고 시간 정보를 제공하는 기능을 가진다. 이 부문은 GNSS 시스템이 실제로 활용되는 부분으로, 수신기는 다음과 같은 요소를 포함한다:</p>
 <ul>
 <li><strong>안테나</strong>: GNSS 위성 신호를 수신하는 장치로, 일반적으로 다방향성 안테나(Omni-directional antenna)가 사용된다. 이 안테나는 다양한 각도에서 오는 신호를 모두 수신할 수 있도록 설계된다.</li>
@@ -176,9 +176,9 @@ d_i = c \cdot \Delta t_i
 - <span class="arithmatex"><span class="MathJax_Preview">(x_i, y_i, z_i)</span><script type="math/tex">(x_i, y_i, z_i)</script></span>는 위성 <span class="arithmatex"><span class="MathJax_Preview">i</span><script type="math/tex">i</script></span>의 위치 좌표,
 - <span class="arithmatex"><span class="MathJax_Preview">d_i</span><script type="math/tex">d_i</script></span>는 위성 <span class="arithmatex"><span class="MathJax_Preview">i</span><script type="math/tex">i</script></span>까지의 거리이다.</p>
 <p>이 방정식들은 다수의 위성에 대해 정리되며, 최소 4개의 위성 신호를 수신하여 정확한 3차원 좌표를 계산할 수 있다.</p>
-<h3 id="4">4. 위성 신호의 구조</h3>
+<h3 id="_4">위성 신호의 구조</h3>
 <p>GNSS 시스템의 중요한 부분 중 하나는 각 위성이 전송하는 신호의 구조이다. GNSS 신호는 여러 주파수 대역에서 전송되며, 각 신호는 고유의 코드와 데이터를 포함하고 있다. 수신기는 이러한 신호를 기반으로 위성의 신호 도달 시간을 측정하고, 이를 바탕으로 위치를 계산한다.</p>
-<h4 id="_4">신호 주파수 대역</h4>
+<h4 id="_5">신호 주파수 대역</h4>
 <p>위성에서 발신되는 신호는 주로 L밴드에서 전송된다. 각 GNSS 시스템은 서로 다른 주파수를 사용하며, 이로 인해 수신기는 특정 주파수 대역에 맞게 설계되어야 한다.</p>
 <p>GNSS 신호는 크게 <strong>항법 메시지(Navigation Message)</strong>와 <strong>코드</strong>로 구성된다. 항법 메시지는 위성의 위치 정보와 궤도 정보, 시간 동기화 데이터를 포함하고 있으며, 코드는 위성 간의 신호 구분을 위해 사용된다.</p>
 <h4 id="cdma">코드 분할 다중 접속(CDMA)</h4>
