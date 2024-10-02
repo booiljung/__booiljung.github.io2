@@ -140,24 +140,34 @@ OBB = (\mathbf{c}, \mathbf{u}_1, \mathbf{u}_2, \mathbf{u}_3, r_1, r_2, r_3)
 <p>각 축 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{a}_i</span><script type="math/tex">\mathbf{a}_i</script></span>에 투영된 OBB의 반경은 다음과 같다:</p>
 </li>
 </ol>
-<p>$$
-    R_A = r_{A1} |\mathbf{u}<em>{A1} \cdot \mathbf{a}_i| + r</em>{A2} |\mathbf{u}<em>{A2} \cdot \mathbf{a}_i| + r</em>{A3} |\mathbf{u}_{A3} \cdot \mathbf{a}_i|</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+    R_A = r_{A1} |\mathbf{u}_{A1} \cdot \mathbf{a}_i| + r_{A2} |\mathbf{u}_{A2} \cdot \mathbf{a}_i| + r_{A3} |\mathbf{u}_{A3} \cdot \mathbf{a}_i|
+</div>
+<script type="math/tex; mode=display">
+    R_A = r_{A1} |\mathbf{u}_{A1} \cdot \mathbf{a}_i| + r_{A2} |\mathbf{u}_{A2} \cdot \mathbf{a}_i| + r_{A3} |\mathbf{u}_{A3} \cdot \mathbf{a}_i|
+</script>
+</div>
 <pre><code>반대로, OBB-B의 반경 투영 값은:
 </code></pre>
 <p>​  <br />
 $$
-    R_B = r_{B1} |\mathbf{u}<em>{B1} \cdot \mathbf{a}_i| + r</em>{B2} |\mathbf{u}<em>{B2} \cdot \mathbf{a}_i| + r</em>{B3} |\mathbf{u}_{B3} \cdot \mathbf{a}_i|</p>
-<p>$$</p>
+    R_B = r_{B1} |\mathbf{u}<em>{B1} \cdot \mathbf{a}_i| + r</em>{B2} |\mathbf{u}<em>{B2} \cdot \mathbf{a}_i| + r</em>{B3} |\mathbf{u}_{B3} \cdot \mathbf{a}_i|
+$$</p>
 <ol>
 <li>
 <p><strong>충돌 여부 결정</strong>:</p>
 <p>충돌 여부를 다음 조건을 통해 판단한다:</p>
 </li>
 </ol>
-<p>$$
-    |\mathbf{t} \cdot \mathbf{a}_i| &gt; R_A + R_B</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+    |\mathbf{t} \cdot \mathbf{a}_i| &gt; R_A + R_B
+</div>
+<script type="math/tex; mode=display">
+    |\mathbf{t} \cdot \mathbf{a}_i| > R_A + R_B
+</script>
+</div>
 <pre><code>위의 조건을 만족하는 축이 하나라도 있다면, 두 OBB는 충돌하지 않는다.
 </code></pre>
 <h3 id="obb_2">OBB 충돌 감지의 계산 효율성</h3>

@@ -92,19 +92,32 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 <ol>
 <li><strong>가우시안 분포</strong>: 측정 잡음은 평균이 0이고, 공분산 행렬이 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{R}_k</span><script type="math/tex">\mathbf{R}_k</script></span>인 다변량 가우시안 분포를 따른다. </li>
 </ol>
-<p>$$
-   \mathbf{v}_k \sim \mathcal{N}(0, \mathbf{R}_k)</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+   \mathbf{v}_k \sim \mathcal{N}(0, \mathbf{R}_k)
+</div>
+<script type="math/tex; mode=display">
+   \mathbf{v}_k \sim \mathcal{N}(0, \mathbf{R}_k)
+</script>
+</div>
 <p>여기서 <span class="arithmatex"><span class="MathJax_Preview">\mathcal{N}(0, \mathbf{R}_k)</span><script type="math/tex">\mathcal{N}(0, \mathbf{R}_k)</script></span>는 평균이 0이고, 공분산 행렬이 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{R}_k</span><script type="math/tex">\mathbf{R}_k</script></span>인 다변량 가우시안 분포를 나타낸다.</p>
 <ol>
 <li><strong>공분산 행렬 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{R}_k</span><script type="math/tex">\mathbf{R}_k</script></span></strong>: <span class="arithmatex"><span class="MathJax_Preview">\mathbf{R}_k</span><script type="math/tex">\mathbf{R}_k</script></span>는 잡음의 강도를 나타내며, 각 측정값에 대한 불확실성을 정의한다. 이 행렬은 보통 다음과 같은 형태를 갖는다:</li>
 </ol>
-<p>$$
+<div class="arithmatex">
+<div class="MathJax_Preview">
    \mathbf{R}_k = \begin{bmatrix}
-   \sigma_x^2 &amp; 0 \
+   \sigma_x^2 &amp; 0 \\
    0 &amp; \sigma_y^2
-   \end{bmatrix}</p>
-<p>$$</p>
+   \end{bmatrix}
+</div>
+<script type="math/tex; mode=display">
+   \mathbf{R}_k = \begin{bmatrix}
+   \sigma_x^2 & 0 \\
+   0 & \sigma_y^2
+   \end{bmatrix}
+</script>
+</div>
 <p>여기서 <span class="arithmatex"><span class="MathJax_Preview">\sigma_x^2</span><script type="math/tex">\sigma_x^2</script></span>와 <span class="arithmatex"><span class="MathJax_Preview">\sigma_y^2</span><script type="math/tex">\sigma_y^2</script></span>는 각각 <span class="arithmatex"><span class="MathJax_Preview">x</span><script type="math/tex">x</script></span>와 <span class="arithmatex"><span class="MathJax_Preview">y</span><script type="math/tex">y</script></span> 위치 측정값의 분산(즉, 잡음의 강도)을 나타낸다. 이 값들은 실험적 데이터나 시스템의 특성을 기반으로 설정된다.</p>
 <ol>
 <li><strong>랜덤 변수 생성</strong>: 실제 구현에서는 컴퓨터에서 사용할 수 있는 난수 생성기를 이용해 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{R}_k</span><script type="math/tex">\mathbf{R}_k</script></span>의 공분산 행렬에 기반한 가우시안 분포를 따르는 무작위 값을 생성한다.</li>

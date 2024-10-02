@@ -95,9 +95,14 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
     <p>LU 분해와 Cholesky 분해는 모두 행렬을 분해하여 선형 시스템을 효율적으로 해결하는 데 사용되는 중요한 기법이다. 그러나 두 방법은 사용하는 조건과 알고리즘이 다르며, 그 결과 활용하는 상황이 다르다. 이 섹션에서는 LU 분해와 Cholesky 분해의 차이점, Cholesky 분해의 원리, 그리고 이들 간의 비교를 통해 각 기법이 어떤 상황에서 더 적합한지 살펴보겠다.</p>
 <h3 id="cholesky">Cholesky 분해의 개요</h3>
 <p>Cholesky 분해는 대칭적이고 양의 정부호(Positive Definite)인 행렬을 분해하는 데 사용된다. 주어진 행렬 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{A}</span><script type="math/tex">\mathbf{A}</script></span>가 대칭적이고 양의 정부호라면, <span class="arithmatex"><span class="MathJax_Preview">\mathbf{A}</span><script type="math/tex">\mathbf{A}</script></span>는 다음과 같이 분해될 수 있다:</p>
-<p>$$</p>
-<p>\mathbf{A} = \mathbf{L} \mathbf{L}^\top</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+\mathbf{A} = \mathbf{L} \mathbf{L}^\top
+</div>
+<script type="math/tex; mode=display">
+\mathbf{A} = \mathbf{L} \mathbf{L}^\top
+</script>
+</div>
 <p>여기서 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{L}</span><script type="math/tex">\mathbf{L}</script></span>은 하삼각 행렬(Lower Triangular Matrix)이고, <span class="arithmatex"><span class="MathJax_Preview">\mathbf{L}^\top</span><script type="math/tex">\mathbf{L}^\top</script></span>는 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{L}</span><script type="math/tex">\mathbf{L}</script></span>의 전치 행렬(Transpose Matrix)이다.</p>
 <h3 id="lu-cholesky">LU 분해와 Cholesky 분해의 차이점</h3>
 <ol>

@@ -155,9 +155,14 @@ state.add_message(&quot;user&quot;, &quot;How's the weather today?&quot;)
 <h3 id="_4">상태 전이와 대화 흐름</h3>
 <p>상태 전이(State Transition)는 특정 입력에 따라 시스템의 상태가 어떻게 변화하는지를 정의한다. 이를 통해 복잡한 대화 흐름을 체계적으로 관리할 수 있다. 상태 전이를 정의하기 위해 상태 머신을 설계할 수 있으며, 각 상태는 고유한 행동과 출력을 가질 수 있다.</p>
 <p>수학적으로 상태 전이는 다음과 같이 표현할 수 있다.</p>
-<p>$$</p>
-<p>s_{t+1} = \delta(s_t, a_t)</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+s_{t+1} = \delta(s_t, a_t)
+</div>
+<script type="math/tex; mode=display">
+s_{t+1} = \delta(s_t, a_t)
+</script>
+</div>
 <p>여기서:
 - <span class="arithmatex"><span class="MathJax_Preview">s_t</span><script type="math/tex">s_t</script></span>는 현재 상태를 나타내고,
 - <span class="arithmatex"><span class="MathJax_Preview">a_t</span><script type="math/tex">a_t</script></span>는 현재 상태에서의 입력(사용자 입력)을 나타낸다.
@@ -184,9 +189,14 @@ print(response)
 <h3 id="_5">상태 유지 및 업데이트</h3>
 <p>대화형 애플리케이션에서 상태 관리를 효율적으로 하기 위해서는 상태의 지속적인 업데이트와 상태 간 전이가 필요하다. 이를 위해 각 상태에 대한 상태 전이 함수를 정의하고, 이 함수가 다양한 입력에 따라 다른 상태로 전이되도록 한다.</p>
 <p>상태 업데이트는 주로 사용자의 의도(intention) 또는 특정 조건이 만족될 때 발생한다. 상태 업데이트와 관련된 수학적 모델은 다음과 같이 표현할 수 있다.</p>
-<p>$$</p>
-<p>\mathbf{S}_{t+1} = f(\mathbf{S}_t, \mathbf{X}_t)</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+\mathbf{S}_{t+1} = f(\mathbf{S}_t, \mathbf{X}_t)
+</div>
+<script type="math/tex; mode=display">
+\mathbf{S}_{t+1} = f(\mathbf{S}_t, \mathbf{X}_t)
+</script>
+</div>
 <p>여기서:
 - <span class="arithmatex"><span class="MathJax_Preview">\mathbf{S}_t</span><script type="math/tex">\mathbf{S}_t</script></span>는 현재 상태 벡터를 나타내고,
 - <span class="arithmatex"><span class="MathJax_Preview">\mathbf{X}_t</span><script type="math/tex">\mathbf{X}_t</script></span>는 현재 입력 벡터를 나타낸다.

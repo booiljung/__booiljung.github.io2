@@ -173,18 +173,28 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 <h4 id="aes">AES 대칭키 암호화 방식</h4>
 <p>암호화 방식으로는 주로 <strong>AES</strong>(Advanced Encryption Standard) 대칭키 방식이 사용된다. AES는 빠르고 효율적인 암호화 알고리즘으로, 특히 실시간 통신에 적합하다. 대칭키 방식에서는 하나의 키를 사용하여 데이터를 암호화하고 복호화한다. 이 키는 세션 키 생성 과정에서 노드 간에 안전하게 공유된다.</p>
 <p>AES 암호화는 다음의 수식을 따른다:</p>
-<p>$$</p>
-<p>\mathbf{C} = E(\mathbf{K}, \mathbf{M})</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+\mathbf{C} = E(\mathbf{K}, \mathbf{M})
+</div>
+<script type="math/tex; mode=display">
+\mathbf{C} = E(\mathbf{K}, \mathbf{M})
+</script>
+</div>
 <p>여기서:
 - <span class="arithmatex"><span class="MathJax_Preview">\mathbf{C}</span><script type="math/tex">\mathbf{C}</script></span>는 암호화된 데이터(암호문),
 - <span class="arithmatex"><span class="MathJax_Preview">E</span><script type="math/tex">E</script></span>는 암호화 함수,
 - <span class="arithmatex"><span class="MathJax_Preview">\mathbf{K}</span><script type="math/tex">\mathbf{K}</script></span>는 대칭키(세션 키),
 - <span class="arithmatex"><span class="MathJax_Preview">\mathbf{M}</span><script type="math/tex">\mathbf{M}</script></span>은 원본 데이터(평문)이다.</p>
 <p>복호화는 다음과 같은 수식을 따른다:</p>
-<p>$$</p>
-<p>\mathbf{M} = D(\mathbf{K}, \mathbf{C})</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+\mathbf{M} = D(\mathbf{K}, \mathbf{C})
+</div>
+<script type="math/tex; mode=display">
+\mathbf{M} = D(\mathbf{K}, \mathbf{C})
+</script>
+</div>
 <p>여기서:
 - <span class="arithmatex"><span class="MathJax_Preview">D</span><script type="math/tex">D</script></span>는 복호화 함수이다.</p>
 <h3 id="integrity">무결성(Integrity)</h3>
@@ -192,9 +202,14 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 <h4 id="_2">해시 함수</h4>
 <p>무결성을 보장하기 위해 주로 해시 함수가 사용되며, 해시 함수는 입력 데이터의 임의 크기를 고정된 크기의 해시 값으로 변환하는 함수다. 일반적으로 SHA-256 같은 해시 함수가 사용되며, 이를 통해 데이터의 손상 여부를 확인할 수 있다.</p>
 <p>해시 함수 <span class="arithmatex"><span class="MathJax_Preview">H</span><script type="math/tex">H</script></span>는 다음과 같은 수식을 따른다:</p>
-<p>$$</p>
-<p>\mathbf{H} = H(\mathbf{M})</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+\mathbf{H} = H(\mathbf{M})
+</div>
+<script type="math/tex; mode=display">
+\mathbf{H} = H(\mathbf{M})
+</script>
+</div>
 <p>여기서:
 - <span class="arithmatex"><span class="MathJax_Preview">\mathbf{H}</span><script type="math/tex">\mathbf{H}</script></span>는 데이터 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{M}</span><script type="math/tex">\mathbf{M}</script></span>에 대해 생성된 해시 값이다.</p>
 <h4 id="_3">무결성 검증 과정</h4>
@@ -205,9 +220,14 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 <li>수신자는 암호화된 데이터를 복호화한 후, 동일한 해시 함수를 사용하여 데이터를 해시한다.</li>
 <li>송신자가 보낸 해시 값과 수신자가 계산한 해시 값이 일치하는지 비교하여 데이터의 무결성을 검증한다.</li>
 </ol>
-<p>$$</p>
-<p>H(\mathbf{M}) = H(\mathbf{M'})</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+H(\mathbf{M}) = H(\mathbf{M'})
+</div>
+<script type="math/tex; mode=display">
+H(\mathbf{M}) = H(\mathbf{M'})
+</script>
+</div>
 <p>여기서:
 - <span class="arithmatex"><span class="MathJax_Preview">\mathbf{M}</span><script type="math/tex">\mathbf{M}</script></span>은 송신자가 보낸 원본 데이터,
 - <span class="arithmatex"><span class="MathJax_Preview">\mathbf{M'}</span><script type="math/tex">\mathbf{M'}</script></span>는 수신자가 받은 데이터이다.</p>

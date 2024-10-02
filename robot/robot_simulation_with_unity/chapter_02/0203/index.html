@@ -312,9 +312,14 @@ public class CollisionSound : MonoBehaviour
 <ul>
 <li><strong>Gravity (중력)</strong>: 중력 벡터를 설정하여 시뮬레이션 내의 모든 객체에 영향을 미치는 중력의 방향과 크기를 정의한다.</li>
 </ul>
-<p>$$
-\mathbf{Gravity} = (0, -9.81, 0)</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+\mathbf{Gravity} = (0, -9.81, 0)
+</div>
+<script type="math/tex; mode=display">
+\mathbf{Gravity} = (0, -9.81, 0)
+</script>
+</div>
 <p>기본값은 지구의 중력 가속도인 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{Gravity} = (0, -9.81, 0)</span><script type="math/tex">\mathbf{Gravity} = (0, -9.81, 0)</script></span>이다. 필요에 따라 중력의 크기나 방향을 변경할 수 있다.</p>
 <ul>
 <li>
@@ -352,19 +357,24 @@ $$
    \text{Layer Collision Matrix} = 
    \begin{bmatrix}
    \text{Layer 1} &amp; \text{Layer 2} &amp; \cdots &amp; \text{Layer N} \
-   \end{bmatrix}</p>
+   \end{bmatrix}
+$$</p>
 </li>
 </ol>
-<p>$$</p>
 <p>예를 들어, 로봇과 환경 객체가 충돌하지 않도록 설정할 수 있다.</p>
 <h4 id="time-settings">물리 시간 설정(Time Settings)</h4>
 <p>물리 시뮬레이션의 정확성과 성능은 시간 설정에 크게 의존한다. Unity는 고정된 시간 간격으로 물리 연산을 수행하며, 이를 통해 일관된 시뮬레이션을 보장한다.</p>
 <ul>
 <li><strong>Fixed Timestep (고정된 시간 간격)</strong>: 물리 업데이트가 호출되는 시간 간격을 설정한다. 기본값은 0.02초(50 FPS)로, 필요에 따라 조정할 수 있다.</li>
 </ul>
-<p>$$
-\text{Fixed Timestep} = 0.02 \, \text{초}</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+\text{Fixed Timestep} = 0.02 \, \text{초}
+</div>
+<script type="math/tex; mode=display">
+\text{Fixed Timestep} = 0.02 \, \text{초}
+</script>
+</div>
 <p>시간 간격을 줄이면 물리 시뮬레이션의 정확도가 증가하지만 성능 부담이 커진다. 반대로 시간을 늘리면 성능은 향상되지만 시뮬레이션의 정확도가 떨어질 수 있다.</p>
 <ul>
 <li><strong>Maximum Allowed Timestep (허용 최대 시간 간격)</strong>: 한 프레임에서 처리할 수 있는 최대 물리 시간 간격을 설정한다. 이 값을 초과하면 시뮬레이션이 보간된다.</li>

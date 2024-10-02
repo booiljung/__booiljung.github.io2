@@ -125,21 +125,41 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 <h3 id="1">1. 암호화 기법</h3>
 <h4 id="_3">대칭키 암호화</h4>
 <p>대칭키 암호화는 송신자와 수신자가 동일한 암호화 키를 사용하는 방식이다. 대표적인 알고리즘으로는 AES가 있다.</p>
-<p>$$</p>
-<p>C = E_k(M)</p>
-<p>$$</p>
-<p>$$</p>
-<p>M = D_k(C)</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+C = E_k(M)
+</div>
+<script type="math/tex; mode=display">
+C = E_k(M)
+</script>
+</div>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+M = D_k(C)
+</div>
+<script type="math/tex; mode=display">
+M = D_k(C)
+</script>
+</div>
 <p>여기서 <span class="arithmatex"><span class="MathJax_Preview">C</span><script type="math/tex">C</script></span>는 암호문, <span class="arithmatex"><span class="MathJax_Preview">M</span><script type="math/tex">M</script></span>은 평문, <span class="arithmatex"><span class="MathJax_Preview">E_k</span><script type="math/tex">E_k</script></span>는 암호화 함수, <span class="arithmatex"><span class="MathJax_Preview">D_k</span><script type="math/tex">D_k</script></span>는 복호화 함수, <span class="arithmatex"><span class="MathJax_Preview">k</span><script type="math/tex">k</script></span>는 대칭키를 의미한다.</p>
 <h4 id="_4">비대칭키 암호화</h4>
 <p>비대칭키 암호화는 서로 다른 두 개의 키(공개키와 개인키)를 사용하는 방식이다. 대표적인 알고리즘으로는 RSA가 있다.</p>
-<p>$$</p>
-<p>C = E_{k_{pub}}(M)</p>
-<p>$$</p>
-<p>$$</p>
-<p>M = D_{k_{priv}}(C)</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+C = E_{k_{pub}}(M)
+</div>
+<script type="math/tex; mode=display">
+C = E_{k_{pub}}(M)
+</script>
+</div>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+M = D_{k_{priv}}(C)
+</div>
+<script type="math/tex; mode=display">
+M = D_{k_{priv}}(C)
+</script>
+</div>
 <p>여기서 <span class="arithmatex"><span class="MathJax_Preview">k_{pub}</span><script type="math/tex">k_{pub}</script></span>는 공개키, <span class="arithmatex"><span class="MathJax_Preview">k_{priv}</span><script type="math/tex">k_{priv}</script></span>는 개인키를 의미한다.</p>
 <h3 id="2_1">2. 인증</h3>
 <h4 id="_5">디지털 서명</h4>

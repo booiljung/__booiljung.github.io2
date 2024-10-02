@@ -159,25 +159,50 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 <ol>
 <li><strong>예측 단계 (Prediction Step):</strong></li>
 </ol>
-<p>$$
-   \mathbf{x}<em>{k|k-1} = \mathbf{F} \mathbf{x}</em>{k-1|k-1} + \mathbf{B} \mathbf{u}_k</p>
-<p>$$</p>
-<p>$$
-   \mathbf{P}<em>{k|k-1} = \mathbf{F} \mathbf{P}</em>{k-1|k-1} \mathbf{F}^T + \mathbf{Q}</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+   \mathbf{x}_{k|k-1} = \mathbf{F} \mathbf{x}_{k-1|k-1} + \mathbf{B} \mathbf{u}_k
+</div>
+<script type="math/tex; mode=display">
+   \mathbf{x}_{k|k-1} = \mathbf{F} \mathbf{x}_{k-1|k-1} + \mathbf{B} \mathbf{u}_k
+</script>
+</div>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+   \mathbf{P}_{k|k-1} = \mathbf{F} \mathbf{P}_{k-1|k-1} \mathbf{F}^T + \mathbf{Q}
+</div>
+<script type="math/tex; mode=display">
+   \mathbf{P}_{k|k-1} = \mathbf{F} \mathbf{P}_{k-1|k-1} \mathbf{F}^T + \mathbf{Q}
+</script>
+</div>
 <p>여기서, <span class="arithmatex"><span class="MathJax_Preview">\mathbf{x}</span><script type="math/tex">\mathbf{x}</script></span>는 상태 벡터, <span class="arithmatex"><span class="MathJax_Preview">\mathbf{P}</span><script type="math/tex">\mathbf{P}</script></span>는 공분산 행렬, <span class="arithmatex"><span class="MathJax_Preview">\mathbf{F}</span><script type="math/tex">\mathbf{F}</script></span>는 상태 전이 행렬, <span class="arithmatex"><span class="MathJax_Preview">\mathbf{B}</span><script type="math/tex">\mathbf{B}</script></span>는 제어 입력 행렬, <span class="arithmatex"><span class="MathJax_Preview">\mathbf{u}</span><script type="math/tex">\mathbf{u}</script></span>는 제어 입력, <span class="arithmatex"><span class="MathJax_Preview">\mathbf{Q}</span><script type="math/tex">\mathbf{Q}</script></span>는 과정 노이즈 공분산 행렬이다.</p>
 <ol>
 <li><strong>갱신 단계 (Update Step):</strong></li>
 </ol>
-<p>$$
-   \mathbf{K}<em>k = \mathbf{P}</em>{k|k-1} \mathbf{H}^T (\mathbf{H} \mathbf{P}_{k|k-1} \mathbf{H}^T + \mathbf{R})^{-1}</p>
-<p>$$</p>
-<p>$$
-   \mathbf{x}<em>{k|k} = \mathbf{x}</em>{k|k-1} + \mathbf{K}<em>k (\mathbf{z}_k - \mathbf{H} \mathbf{x}</em>{k|k-1})</p>
-<p>$$</p>
-<p>$$
-   \mathbf{P}<em>{k|k} = (\mathbf{I} - \mathbf{K}_k \mathbf{H}) \mathbf{P}</em>{k|k-1}</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+   \mathbf{K}_k = \mathbf{P}_{k|k-1} \mathbf{H}^T (\mathbf{H} \mathbf{P}_{k|k-1} \mathbf{H}^T + \mathbf{R})^{-1}
+</div>
+<script type="math/tex; mode=display">
+   \mathbf{K}_k = \mathbf{P}_{k|k-1} \mathbf{H}^T (\mathbf{H} \mathbf{P}_{k|k-1} \mathbf{H}^T + \mathbf{R})^{-1}
+</script>
+</div>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+   \mathbf{x}_{k|k} = \mathbf{x}_{k|k-1} + \mathbf{K}_k (\mathbf{z}_k - \mathbf{H} \mathbf{x}_{k|k-1})
+</div>
+<script type="math/tex; mode=display">
+   \mathbf{x}_{k|k} = \mathbf{x}_{k|k-1} + \mathbf{K}_k (\mathbf{z}_k - \mathbf{H} \mathbf{x}_{k|k-1})
+</script>
+</div>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+   \mathbf{P}_{k|k} = (\mathbf{I} - \mathbf{K}_k \mathbf{H}) \mathbf{P}_{k|k-1}
+</div>
+<script type="math/tex; mode=display">
+   \mathbf{P}_{k|k} = (\mathbf{I} - \mathbf{K}_k \mathbf{H}) \mathbf{P}_{k|k-1}
+</script>
+</div>
 <p>여기서, <span class="arithmatex"><span class="MathJax_Preview">\mathbf{K}</span><script type="math/tex">\mathbf{K}</script></span>는 칼만 이득, <span class="arithmatex"><span class="MathJax_Preview">\mathbf{H}</span><script type="math/tex">\mathbf{H}</script></span>는 측정 행렬, <span class="arithmatex"><span class="MathJax_Preview">\mathbf{z}</span><script type="math/tex">\mathbf{z}</script></span>는 측정값, <span class="arithmatex"><span class="MathJax_Preview">\mathbf{R}</span><script type="math/tex">\mathbf{R}</script></span>는 측정 노이즈 공분산 행렬이다.</p>
 <h4 id="ekf">확장 칼만 필터 (EKF)</h4>
 <p>EKF는 비선형 시스템에서 센서 데이터를 처리하는 데 사용된다. 비선형 시스템에서는 상태 전이 및 관측 방정식이 선형이 아닐 수 있으므로, 선형 근사화 과정을 통해 필터링을 진행한다.</p>
@@ -185,26 +210,51 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 <li><strong>예측 단계:</strong>
    비선형 상태 전이 방정식을 다음과 같이 선형화하여 예측한다.</li>
 </ol>
-<p>$$
-   \mathbf{x}<em>{k|k-1} = f(\mathbf{x}</em>{k-1}, \mathbf{u}_k)</p>
-<p>$$</p>
-<p>$$
-   \mathbf{P}<em>{k|k-1} = \mathbf{F}_k \mathbf{P}</em>{k-1|k-1} \mathbf{F}_k^T + \mathbf{Q}_k</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+   \mathbf{x}_{k|k-1} = f(\mathbf{x}_{k-1}, \mathbf{u}_k)
+</div>
+<script type="math/tex; mode=display">
+   \mathbf{x}_{k|k-1} = f(\mathbf{x}_{k-1}, \mathbf{u}_k)
+</script>
+</div>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+   \mathbf{P}_{k|k-1} = \mathbf{F}_k \mathbf{P}_{k-1|k-1} \mathbf{F}_k^T + \mathbf{Q}_k
+</div>
+<script type="math/tex; mode=display">
+   \mathbf{P}_{k|k-1} = \mathbf{F}_k \mathbf{P}_{k-1|k-1} \mathbf{F}_k^T + \mathbf{Q}_k
+</script>
+</div>
 <p>여기서, <span class="arithmatex"><span class="MathJax_Preview">f</span><script type="math/tex">f</script></span>는 비선형 상태 전이 함수, <span class="arithmatex"><span class="MathJax_Preview">\mathbf{F}_k</span><script type="math/tex">\mathbf{F}_k</script></span>는 이 함수에 대한 야코비 행렬이다.</p>
 <ol>
 <li><strong>갱신 단계:</strong>
    비선형 관측 방정식을 선형화하여 갱신한다.</li>
 </ol>
-<p>$$
-   \mathbf{K}<em>k = \mathbf{P}</em>{k|k-1} \mathbf{H}<em>k^T (\mathbf{H}_k \mathbf{P}</em>{k|k-1} \mathbf{H}_k^T + \mathbf{R}_k)^{-1}</p>
-<p>$$</p>
-<p>$$
-   \mathbf{x}<em>{k|k} = \mathbf{x}</em>{k|k-1} + \mathbf{K}<em>k (\mathbf{z}_k - h(\mathbf{x}</em>{k|k-1}))</p>
-<p>$$</p>
-<p>$$
-   \mathbf{P}<em>{k|k} = (\mathbf{I} - \mathbf{K}_k \mathbf{H}_k) \mathbf{P}</em>{k|k-1}</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+   \mathbf{K}_k = \mathbf{P}_{k|k-1} \mathbf{H}_k^T (\mathbf{H}_k \mathbf{P}_{k|k-1} \mathbf{H}_k^T + \mathbf{R}_k)^{-1}
+</div>
+<script type="math/tex; mode=display">
+   \mathbf{K}_k = \mathbf{P}_{k|k-1} \mathbf{H}_k^T (\mathbf{H}_k \mathbf{P}_{k|k-1} \mathbf{H}_k^T + \mathbf{R}_k)^{-1}
+</script>
+</div>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+   \mathbf{x}_{k|k} = \mathbf{x}_{k|k-1} + \mathbf{K}_k (\mathbf{z}_k - h(\mathbf{x}_{k|k-1}))
+</div>
+<script type="math/tex; mode=display">
+   \mathbf{x}_{k|k} = \mathbf{x}_{k|k-1} + \mathbf{K}_k (\mathbf{z}_k - h(\mathbf{x}_{k|k-1}))
+</script>
+</div>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+   \mathbf{P}_{k|k} = (\mathbf{I} - \mathbf{K}_k \mathbf{H}_k) \mathbf{P}_{k|k-1}
+</div>
+<script type="math/tex; mode=display">
+   \mathbf{P}_{k|k} = (\mathbf{I} - \mathbf{K}_k \mathbf{H}_k) \mathbf{P}_{k|k-1}
+</script>
+</div>
 <p>여기서, <span class="arithmatex"><span class="MathJax_Preview">h</span><script type="math/tex">h</script></span>는 비선형 관측 함수, <span class="arithmatex"><span class="MathJax_Preview">\mathbf{H}_k</span><script type="math/tex">\mathbf{H}_k</script></span>는 이 함수에 대한 야코비 행렬이다.</p>
 <h3 id="6-ros2">6. ROS2에서의 센서 데이터 통합</h3>
 <p>ROS2에서 센서 데이터 통합은 주로 퍼블리셔-서브스크라이버 모델을 통해 이루어진다. 각 센서는 퍼블리셔를 통해 데이터를 발행하고, 이를 수신하는 서브스크라이버 노드는 다양한 필터링 및 퓨전 알고리즘을 통해 데이터를 처리한 후 결과를 퍼블리싱한다.</p>

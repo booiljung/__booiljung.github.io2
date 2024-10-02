@@ -284,9 +284,14 @@ Q(\mathbf{x}, \mathbf{u}) = \mathbb{E} \left[ \sum_{t=0}^{T} r_t \mid \mathbf{x}
 <li><strong>작업 분할 및 할당(Task Allocation)</strong>: 협동 로봇 시스템에서 각각의 로봇에게 적합한 작업을 분배하는 과정이다. 이는 작업의 중요도, 로봇의 능력, 로봇 간의 거리 등 다양한 요소를 고려하여 이루어진다.</li>
 </ol>
 <p>예를 들어, 로봇 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{R}_1, \mathbf{R}_2, \mathbf{R}_3</span><script type="math/tex">\mathbf{R}_1, \mathbf{R}_2, \mathbf{R}_3</script></span>가 각각 할당된 작업을 다음과 같이 정의할 수 있다:</p>
-<p>$$
-   \mathbf{T}<em>i = {\mathbf{t}</em>{i,1}, \mathbf{t}<em>{i,2}, \dots, \mathbf{t}</em>{i,n}}</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+   \mathbf{T}_i = \{\mathbf{t}_{i,1}, \mathbf{t}_{i,2}, \dots, \mathbf{t}_{i,n}\}
+</div>
+<script type="math/tex; mode=display">
+   \mathbf{T}_i = \{\mathbf{t}_{i,1}, \mathbf{t}_{i,2}, \dots, \mathbf{t}_{i,n}\}
+</script>
+</div>
 <p>여기서 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{T}_i</span><script type="math/tex">\mathbf{T}_i</script></span>는 로봇 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{R}_i</span><script type="math/tex">\mathbf{R}_i</script></span>에게 할당된 작업 세트, <span class="arithmatex"><span class="MathJax_Preview">\mathbf{t}_{i,j}</span><script type="math/tex">\mathbf{t}_{i,j}</script></span>는 로봇이 수행해야 할 개별 작업을 나타낸다.</p>
 <ol>
 <li><strong>경로 계획 및 충돌 회피(Path Planning and Collision Avoidance)</strong>: 각 로봇이 작업을 수행하는 과정에서 충돌을 피하기 위한 경로 계획을 수립해야 한다. 여러 로봇이 동일한 공간에서 작업할 때, 경로 최적화는 매우 중요하다.</li>

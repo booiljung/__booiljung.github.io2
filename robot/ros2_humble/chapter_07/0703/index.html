@@ -122,9 +122,14 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 <li><strong>Reliable</strong>: 메시지가 반드시 전달되도록 보장한다. 이는 데이터 손실이 허용되지 않는 상황에 적합하며, 네트워크 지연이나 재전송을 통해 메시지 손실을 방지한다.</li>
 </ul>
 <p>예를 들어, 노드 <span class="arithmatex"><span class="MathJax_Preview">A</span><script type="math/tex">A</script></span>가 퍼블리셔로, 노드 <span class="arithmatex"><span class="MathJax_Preview">B</span><script type="math/tex">B</script></span>가 서브스크라이버일 때, Reliable 설정을 사용하면, 네트워크 지연이 발생하더라도 노드 <span class="arithmatex"><span class="MathJax_Preview">B</span><script type="math/tex">B</script></span>는 결국 모든 메시지를 수신하게 된다. 이를 수식으로 나타내면 다음과 같다:</p>
-<p>$$
-  \text{Received Message} = \text{Sent Message}, \quad \forall t \in [t_0, t_1]</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+  \text{Received Message} = \text{Sent Message}, \quad \forall t \in [t_0, t_1]
+</div>
+<script type="math/tex; mode=display">
+  \text{Received Message} = \text{Sent Message}, \quad \forall t \in [t_0, t_1]
+</script>
+</div>
 <ul>
 <li><strong>Best Effort</strong>: 네트워크 상태에 따라 메시지가 손실될 수 있지만 가능한 한 빠르게 전달한다. 성능이 중요한 상황에서 적합하다.</li>
 </ul>
@@ -157,13 +162,22 @@ P_{\text{loss}} \propto f(N)
 <li><strong>정의</strong>: 데드라인 시간 <span class="arithmatex"><span class="MathJax_Preview">\tau</span><script type="math/tex">\tau</script></span> 내에 퍼블리셔로부터 메시지가 전달되지 않을 경우, 서브스크라이버는 이를 위반으로 처리한다.</li>
 </ul>
 <p>수식으로 나타내면, 주어진 시간 <span class="arithmatex"><span class="MathJax_Preview">t</span><script type="math/tex">t</script></span>에서 서브스크라이버가 메시지를 수신했는지를 판단하는 기준은 다음과 같다:</p>
-<p>$$
+<div class="arithmatex">
+<div class="MathJax_Preview">
   \text{Deadline Violation} =
   \begin{cases} 
-  1, &amp; \text{if } t_{\text{received}} &gt; t_{\text{sent}} + \tau \
+  1, &amp; \text{if } t_{\text{received}} &gt; t_{\text{sent}} + \tau \\
   0, &amp; \text{if } t_{\text{received}} \leq t_{\text{sent}} + \tau 
-  \end{cases}</p>
-<p>$$</p>
+  \end{cases}
+</div>
+<script type="math/tex; mode=display">
+  \text{Deadline Violation} =
+  \begin{cases} 
+  1, & \text{if } t_{\text{received}} > t_{\text{sent}} + \tau \\
+  0, & \text{if } t_{\text{received}} \leq t_{\text{sent}} + \tau 
+  \end{cases}
+</script>
+</div>
 <p>여기서 <span class="arithmatex"><span class="MathJax_Preview">t_{\text{received}}</span><script type="math/tex">t_{\text{received}}</script></span>는 서브스크라이버가 메시지를 수신한 시간, <span class="arithmatex"><span class="MathJax_Preview">t_{\text{sent}}</span><script type="math/tex">t_{\text{sent}}</script></span>는 퍼블리셔가 메시지를 전송한 시간, 그리고 <span class="arithmatex"><span class="MathJax_Preview">\tau</span><script type="math/tex">\tau</script></span>는 데드라인 시간이다.</p>
 <h4 id="_1">실사용 예제</h4>
 <p>데드라인을 사용하면, 주기적으로 데이터를 수집하고 전달하는 센서 노드에서 특정 시간 간격마다 데이터가 수신되었는지 확인할 수 있다. 예를 들어, 환경 센서 노드가 100ms마다 데이터를 전송하도록 설정했다면, 서브스크라이버는 데드라인이 100ms로 설정된 상태에서 데이터를 수신해야 한다.</p>
@@ -197,9 +211,14 @@ P_{\text{loss}} \propto f(N)
 <li><strong>Keep Last</strong>: 마지막으로 전송된 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{k}</span><script type="math/tex">\mathbf{k}</script></span>개의 메시지만 유지한다. 과거 메시지 중 마지막 <span class="arithmatex"><span class="MathJax_Preview">k</span><script type="math/tex">k</script></span>개의 메시지를 저장하는 방식으로, <span class="arithmatex"><span class="MathJax_Preview">k</span><script type="math/tex">k</script></span>는 사용자가 설정할 수 있다.</li>
 </ul>
 <p>이를 수식으로 나타내면, <span class="arithmatex"><span class="MathJax_Preview">\mathbf{M}_{\text{history}}</span><script type="math/tex">\mathbf{M}_{\text{history}}</script></span>는 마지막 <span class="arithmatex"><span class="MathJax_Preview">k</span><script type="math/tex">k</script></span>개의 메시지로 구성된다:</p>
-<p>$$
-  \mathbf{M}<em>{\text{history}} = { \mathbf{M}</em>{t-1}, \mathbf{M}<em>{t-2}, \dots, \mathbf{M}</em>{t-k} }</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+  \mathbf{M}_{\text{history}} = \{ \mathbf{M}_{t-1}, \mathbf{M}_{t-2}, \dots, \mathbf{M}_{t-k} \}
+</div>
+<script type="math/tex; mode=display">
+  \mathbf{M}_{\text{history}} = \{ \mathbf{M}_{t-1}, \mathbf{M}_{t-2}, \dots, \mathbf{M}_{t-k} \}
+</script>
+</div>
 <ul>
 <li><strong>Keep All</strong>: 모든 메시지를 유지하며, 이는 메모리 자원을 많이 소모할 수 있다.</li>
 </ul>
@@ -208,13 +227,23 @@ P_{\text{loss}} \propto f(N)
 <ul>
 <li>예를 들어, <span class="arithmatex"><span class="MathJax_Preview">k = 10</span><script type="math/tex">k = 10</script></span>으로 설정된 경우, 퍼블리셔는 최근 10개의 메시지만 유지한다. 메시지가 새로 들어올 때마다 가장 오래된 메시지는 삭제되고 새로운 메시지가 추가된다. 이를 수식으로 표현하면 다음과 같다:</li>
 </ul>
-<p>$$
-  \mathbf{M}<em>{\text{history}} = { \mathbf{M}</em>{t-1}, \mathbf{M}<em>{t-2}, \dots, \mathbf{M}</em>{t-k} }, \quad k = 10</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+  \mathbf{M}_{\text{history}} = \{ \mathbf{M}_{t-1}, \mathbf{M}_{t-2}, \dots, \mathbf{M}_{t-k} \}, \quad k = 10
+</div>
+<script type="math/tex; mode=display">
+  \mathbf{M}_{\text{history}} = \{ \mathbf{M}_{t-1}, \mathbf{M}_{t-2}, \dots, \mathbf{M}_{t-k} \}, \quad k = 10
+</script>
+</div>
 <p>메시지 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{M}_t</span><script type="math/tex">\mathbf{M}_t</script></span>가 새로 수신되면, 다음과 같이 업데이트된다:</p>
-<p>$$
-  \mathbf{M}<em>{\text{history}} = { \mathbf{M}_t, \mathbf{M}</em>{t-1}, \dots, \mathbf{M}_{t-k+1} }</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+  \mathbf{M}_{\text{history}} = \{ \mathbf{M}_t, \mathbf{M}_{t-1}, \dots, \mathbf{M}_{t-k+1} \}
+</div>
+<script type="math/tex; mode=display">
+  \mathbf{M}_{\text{history}} = \{ \mathbf{M}_t, \mathbf{M}_{t-1}, \dots, \mathbf{M}_{t-k+1} \}
+</script>
+</div>
 <p>따라서 깊이는 데이터의 손실을 방지하면서 메모리 사용량을 제어하는 데 중요한 역할을 한다.</p>
 <h3 id="deadline-liveliness">Deadline과 Liveliness 간의 상호작용</h3>
 <p>QoS 정책에서 <strong>Deadline</strong>과 <strong>Liveliness</strong>는 종종 함께 사용된다. 노드 간의 메시지 통신에서 퍼블리셔의 상태가 중요할 때, 데드라인과 생존성 정책을 결합하면 메시지가 일정한 시간 간격으로 전달되고 퍼블리셔의 상태가 유지되는지 확인할 수 있다.</p>
@@ -222,13 +251,22 @@ P_{\text{loss}} \propto f(N)
 <li>예를 들어, 특정 시간 <span class="arithmatex"><span class="MathJax_Preview">\tau</span><script type="math/tex">\tau</script></span> 이내에 메시지를 수신하지 못하거나 생존 신호가 오지 않으면 시스템은 퍼블리셔가 비활성 상태에 있거나 문제가 발생했다고 판단할 수 있다.</li>
 </ul>
 <p>두 개의 조건을 결합한 수식은 다음과 같다:</p>
-<p>$$
+<div class="arithmatex">
+<div class="MathJax_Preview">
   \text{System Status} =
   \begin{cases}
-  \text{Alive}, &amp; \text{if } t_{\text{received}} \leq t_{\text{sent}} + \tau \text{ and } t_{\text{last heartbeat}} \leq t_0 + \lambda \
+  \text{Alive}, &amp; \text{if } t_{\text{received}} \leq t_{\text{sent}} + \tau \text{ and } t_{\text{last heartbeat}} \leq t_0 + \lambda \\
   \text{Failed}, &amp; \text{otherwise}
-  \end{cases}</p>
-<p>$$</p>
+  \end{cases}
+</div>
+<script type="math/tex; mode=display">
+  \text{System Status} =
+  \begin{cases}
+  \text{Alive}, & \text{if } t_{\text{received}} \leq t_{\text{sent}} + \tau \text{ and } t_{\text{last heartbeat}} \leq t_0 + \lambda \\
+  \text{Failed}, & \text{otherwise}
+  \end{cases}
+</script>
+</div>
 <h3 id="qos_3">QoS 설정에 따른 성능 영향</h3>
 <p>각 QoS 정책은 시스템의 성능과 자원 사용에 영향을 미친다. 예를 들어, <strong>Reliable</strong> 설정은 메시지 손실을 방지하지만 네트워크 트래픽이 증가하고, <strong>Best Effort</strong> 설정은 성능을 우선시하나 메시지 손실이 발생할 수 있다. 따라서, 애플리케이션의 특성에 따라 적절한 QoS 설정이 필요하다.</p>
 <h4 id="_2">네트워크 환경과의 상호작용</h4>

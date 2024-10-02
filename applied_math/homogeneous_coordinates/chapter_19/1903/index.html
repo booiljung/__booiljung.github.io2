@@ -170,33 +170,60 @@ z_\text{screen} &= z_\text{viewport}
 <ol>
 <li><strong>NDC로 변환</strong>:</li>
 </ol>
-<p>$$
+<div class="arithmatex">
+<div class="MathJax_Preview">
    \begin{aligned}
-   x_\text{ndc} &amp;= \frac{0.5}{1.0} = 0.5 \
-   y_\text{ndc} &amp;= \frac{0.5}{1.0} = 0.5 \
+   x_\text{ndc} &amp;= \frac{0.5}{1.0} = 0.5 \\
+   y_\text{ndc} &amp;= \frac{0.5}{1.0} = 0.5 \\
    z_\text{ndc} &amp;= \frac{0.5}{1.0} = 0.5
-   \end{aligned}</p>
-<p>$$</p>
+   \end{aligned}
+</div>
+<script type="math/tex; mode=display">
+   \begin{aligned}
+   x_\text{ndc} &= \frac{0.5}{1.0} = 0.5 \\
+   y_\text{ndc} &= \frac{0.5}{1.0} = 0.5 \\
+   z_\text{ndc} &= \frac{0.5}{1.0} = 0.5
+   \end{aligned}
+</script>
+</div>
 <ol>
 <li><strong>뷰포트 좌표로 변환</strong>:</li>
 </ol>
-<p>$$
+<div class="arithmatex">
+<div class="MathJax_Preview">
    \begin{aligned}
-   x_\text{viewport} &amp;= \left(\frac{0.5 + 1}{2}\right) \cdot 800 + 0 = 0.75 \cdot 800 = 600 \
-   y_\text{viewport} &amp;= \left(\frac{0.5 + 1}{2}\right) \cdot 600 + 0 = 0.75 \cdot 600 = 450 \
+   x_\text{viewport} &amp;= \left(\frac{0.5 + 1}{2}\right) \cdot 800 + 0 = 0.75 \cdot 800 = 600 \\
+   y_\text{viewport} &amp;= \left(\frac{0.5 + 1}{2}\right) \cdot 600 + 0 = 0.75 \cdot 600 = 450 \\
    z_\text{viewport} &amp;= \left(\frac{0.5 + 1}{2}\right) = 0.75
-   \end{aligned}</p>
-<p>$$</p>
+   \end{aligned}
+</div>
+<script type="math/tex; mode=display">
+   \begin{aligned}
+   x_\text{viewport} &= \left(\frac{0.5 + 1}{2}\right) \cdot 800 + 0 = 0.75 \cdot 800 = 600 \\
+   y_\text{viewport} &= \left(\frac{0.5 + 1}{2}\right) \cdot 600 + 0 = 0.75 \cdot 600 = 450 \\
+   z_\text{viewport} &= \left(\frac{0.5 + 1}{2}\right) = 0.75
+   \end{aligned}
+</script>
+</div>
 <ol>
 <li><strong>화면 좌표계로 변환</strong>:</li>
 </ol>
-<p>$$
+<div class="arithmatex">
+<div class="MathJax_Preview">
    \begin{aligned}
-   x_\text{screen} &amp;= 600 \
-   y_\text{screen} &amp;= 450 \
+   x_\text{screen} &amp;= 600 \\
+   y_\text{screen} &amp;= 450 \\
    z_\text{screen} &amp;= 0.75
-   \end{aligned}</p>
-<p>$$</p>
+   \end{aligned}
+</div>
+<script type="math/tex; mode=display">
+   \begin{aligned}
+   x_\text{screen} &= 600 \\
+   y_\text{screen} &= 450 \\
+   z_\text{screen} &= 0.75
+   \end{aligned}
+</script>
+</div>
 <p>따라서 클립 공간에서 시작한 점 <span class="arithmatex"><span class="MathJax_Preview">(0.5, 0.5, 0.5, 1.0)</span><script type="math/tex">(0.5, 0.5, 0.5, 1.0)</script></span>은 결국 화면 좌표계에서 <span class="arithmatex"><span class="MathJax_Preview">(600, 450, 0.75)</span><script type="math/tex">(600, 450, 0.75)</script></span>로 변환된다.</p>
 <hr />
 <p>동차 좌표계에서 화면 좌표계로의 변환은 그래픽스 파이프라인의 중요한 부분이다. 이 변환 과정은 다양한 공간 변환과 좌표계를 포함하며, 최종적으로 그래픽 요소를 화면에 정확하게 렌더링하는 데 필수적이다. 이해를 돕기 위한 예제를 통해 이러한 변환의 실제 적용 방법을 보여드렸다.</p>

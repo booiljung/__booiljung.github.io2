@@ -169,9 +169,14 @@ print(&quot;NumPy의 solve 함수로 계산한 해 x:\n&quot;, x_direct)
 <li>행렬 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{A}</span><script type="math/tex">\mathbf{A}</script></span>를 LU 분해하여 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{L}</span><script type="math/tex">\mathbf{L}</script></span>과 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{U}</span><script type="math/tex">\mathbf{U}</script></span>를 구한다.</li>
 <li><span class="arithmatex"><span class="MathJax_Preview">\mathbf{A}^{-1}</span><script type="math/tex">\mathbf{A}^{-1}</script></span>의 각 열은 다음의 선형 시스템을 통해 구할 수 있다:</li>
 </ol>
-<p>$$
-   \mathbf{A} \mathbf{x}_i = \mathbf{e}_i</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+   \mathbf{A} \mathbf{x}_i = \mathbf{e}_i
+</div>
+<script type="math/tex; mode=display">
+   \mathbf{A} \mathbf{x}_i = \mathbf{e}_i
+</script>
+</div>
 <p>여기서 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{e}_i</span><script type="math/tex">\mathbf{e}_i</script></span>는 표준 기저 벡터이다. 즉, <span class="arithmatex"><span class="MathJax_Preview">\mathbf{e}_i</span><script type="math/tex">\mathbf{e}_i</script></span>는 <span class="arithmatex"><span class="MathJax_Preview">i</span><script type="math/tex">i</script></span>-번째 요소만 1이고 나머지는 0인 벡터이다.
 3. 각 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{x}_i</span><script type="math/tex">\mathbf{x}_i</script></span>는 LU 분해를 사용하여 Forward Substitution과 Backward Substitution을 통해 구할 수 있다.
 4. 이렇게 구한 모든 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{x}_i</span><script type="math/tex">\mathbf{x}_i</script></span>를 열벡터로 하여 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{A}^{-1}</span><script type="math/tex">\mathbf{A}^{-1}</script></span>을 구성한다.</p>

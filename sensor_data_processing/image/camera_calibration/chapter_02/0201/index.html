@@ -103,21 +103,35 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 <p>카메라 모델은 크게 두 가지 매트릭스로 나뉜다:
 1. <strong>외부 파라미터(Extrinsic Parameters):</strong> 카메라 좌표계를 월드 좌표계로 변환하는 매트릭스로, 회전 매트릭스 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{R}</span><script type="math/tex">\mathbf{R}</script></span>와 변환 벡터 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{t}</span><script type="math/tex">\mathbf{t}</script></span>로 표현된다.</p>
 <p>월드 좌표계에서의 3D 점 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{X}_w</span><script type="math/tex">\mathbf{X}_w</script></span>를 카메라 좌표계에서의 3D 점 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{X}_c</span><script type="math/tex">\mathbf{X}_c</script></span>로 변환하는 식은 다음과 같다:</p>
-<p>$$
-   \mathbf{X}_c = \mathbf{R}\mathbf{X}_w + \mathbf{t}</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+   \mathbf{X}_c = \mathbf{R}\mathbf{X}_w + \mathbf{t}
+</div>
+<script type="math/tex; mode=display">
+   \mathbf{X}_c = \mathbf{R}\mathbf{X}_w + \mathbf{t}
+</script>
+</div>
 <p>여기서 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{R}</span><script type="math/tex">\mathbf{R}</script></span>은 <span class="arithmatex"><span class="MathJax_Preview">3 \times 3</span><script type="math/tex">3 \times 3</script></span> 회전 매트릭스이고, <span class="arithmatex"><span class="MathJax_Preview">\mathbf{t}</span><script type="math/tex">\mathbf{t}</script></span>는 <span class="arithmatex"><span class="MathJax_Preview">3 \times 1</span><script type="math/tex">3 \times 1</script></span> 변환 벡터이다.</p>
 <ol>
 <li><strong>내부 파라미터(Intrinsic Parameters):</strong> 카메라 내부의 특성을 정의하는 매트릭스로, 초점 거리(focal length), 주점(principal point), 픽셀 비율 등의 요소로 구성된다.</li>
 </ol>
 <p>카메라 내부 파라미터를 나타내는 매트릭스 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{K}</span><script type="math/tex">\mathbf{K}</script></span>는 다음과 같은 형태를 갖는다:</p>
-<p>$$
+<div class="arithmatex">
+<div class="MathJax_Preview">
    \mathbf{K} = \begin{bmatrix}
-   f_x &amp; 0 &amp; c_x \
-   0 &amp; f_y &amp; c_y \
+   f_x &amp; 0 &amp; c_x \\
+   0 &amp; f_y &amp; c_y \\
    0 &amp; 0 &amp; 1
-   \end{bmatrix}</p>
-<p>$$</p>
+   \end{bmatrix}
+</div>
+<script type="math/tex; mode=display">
+   \mathbf{K} = \begin{bmatrix}
+   f_x & 0 & c_x \\
+   0 & f_y & c_y \\
+   0 & 0 & 1
+   \end{bmatrix}
+</script>
+</div>
 <p>여기서 <span class="arithmatex"><span class="MathJax_Preview">f_x</span><script type="math/tex">f_x</script></span>와 <span class="arithmatex"><span class="MathJax_Preview">f_y</span><script type="math/tex">f_y</script></span>는 각각 <span class="arithmatex"><span class="MathJax_Preview">x</span><script type="math/tex">x</script></span> 축과 <span class="arithmatex"><span class="MathJax_Preview">y</span><script type="math/tex">y</script></span> 축 방향의 초점 거리이고, <span class="arithmatex"><span class="MathJax_Preview">c_x</span><script type="math/tex">c_x</script></span>와 <span class="arithmatex"><span class="MathJax_Preview">c_y</span><script type="math/tex">c_y</script></span>는 주점 좌표이다.</p>
 <h3 id="_2">투영</h3>
 <p>투영은 3D 공간에서의 점을 2D 이미지 평면으로 변환하는 과정을 말한다. 이 과정에서, 먼저 3D 점은 카메라 좌표계로 변환되고, 이후에 2D 이미지 평면으로 투영된다.</p>
@@ -214,15 +228,25 @@ y_u = y_d + [p_1 (r^2 + 2 y_d^2) + 2 p_2 x_d y_d]
 <ol>
 <li>3D 점 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{X}_w</span><script type="math/tex">\mathbf{X}_w</script></span>를 카메라 좌표계로 변환:</li>
 </ol>
-<p>$$
-   \mathbf{X}_c = \mathbf{R} \mathbf{X}_w + \mathbf{t}</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+   \mathbf{X}_c = \mathbf{R} \mathbf{X}_w + \mathbf{t}
+</div>
+<script type="math/tex; mode=display">
+   \mathbf{X}_c = \mathbf{R} \mathbf{X}_w + \mathbf{t}
+</script>
+</div>
 <ol>
 <li>카메라 내부 파라미터를 적용하여 2D 이미지 좌표를 계산:</li>
 </ol>
-<p>$$
-   \mathbf{x} = \mathbf{K} \mathbf{X}_c</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+   \mathbf{x} = \mathbf{K} \mathbf{X}_c
+</div>
+<script type="math/tex; mode=display">
+   \mathbf{x} = \mathbf{K} \mathbf{X}_c
+</script>
+</div>
 <p>이 과정에서 Radial 왜곡과 Tangential 왜곡을 보정하려면, 위에서 설명한 왜곡 보정 수식을 추가로 적용해야 한다.</p>
 
   <br>

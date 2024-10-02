@@ -167,9 +167,14 @@ float[] GetLidarData()
 </code></pre>
 <h3 id="_4">제어 알고리즘 구현</h3>
 <p>실시간 컨트롤을 위해서는 효과적인 제어 알고리즘이 필요하다. 대표적으로 PID 제어기가 많이 사용된다. PID 제어기는 비례(Proportional), 적분(Integral), 미분(Derivative) 요소를 사용하여 오차를 최소화한다.</p>
-<p>$$</p>
-<p>u(t) = K_p e(t) + K_i \int_{0}^{t} e(\tau) d\tau + K_d \frac{de(t)}{dt}</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+u(t) = K_p e(t) + K_i \int_{0}^{t} e(\tau) d\tau + K_d \frac{de(t)}{dt}
+</div>
+<script type="math/tex; mode=display">
+u(t) = K_p e(t) + K_i \int_{0}^{t} e(\tau) d\tau + K_d \frac{de(t)}{dt}
+</script>
+</div>
 <p>여기서 <span class="arithmatex"><span class="MathJax_Preview">u(t)</span><script type="math/tex">u(t)</script></span>는 제어 입력, <span class="arithmatex"><span class="MathJax_Preview">e(t)</span><script type="math/tex">e(t)</script></span>는 목표값과 현재값의 오차, <span class="arithmatex"><span class="MathJax_Preview">K_p</span><script type="math/tex">K_p</script></span>, <span class="arithmatex"><span class="MathJax_Preview">K_i</span><script type="math/tex">K_i</script></span>, <span class="arithmatex"><span class="MathJax_Preview">K_d</span><script type="math/tex">K_d</script></span>는 각각 비례, 적분, 미분 이득이다.</p>
 <pre><code class="language-csharp">public class PIDController
 {

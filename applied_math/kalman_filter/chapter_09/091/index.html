@@ -123,9 +123,14 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 <ul>
 <li><strong>상태 벡터</strong>:  </li>
 </ul>
-<p>$$
-  \mathbf{x}_{k} \in \mathbb{R}^n</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+  \mathbf{x}_{k} \in \mathbb{R}^n
+</div>
+<script type="math/tex; mode=display">
+  \mathbf{x}_{k} \in \mathbb{R}^n
+</script>
+</div>
 <p>상태 벡터는 시스템의 현재 상태를 나타낸다.</p>
 <ul>
 <li><strong>상태 추정</strong>:<br />
@@ -136,17 +141,27 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 <li><strong>정보 행렬</strong> (<span class="arithmatex"><span class="MathJax_Preview">\mathbf{Y}_{k}</span><script type="math/tex">\mathbf{Y}_{k}</script></span>)<br />
   정보 행렬은 오차 공분산 행렬의 역행렬로 정의된다.</li>
 </ul>
-<p>$$
-  \mathbf{Y}<em>{k} = \mathbf{P}</em>{k}^{-1}</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+  \mathbf{Y}_{k} = \mathbf{P}_{k}^{-1}
+</div>
+<script type="math/tex; mode=display">
+  \mathbf{Y}_{k} = \mathbf{P}_{k}^{-1}
+</script>
+</div>
 <p>이 행렬은 상태 추정의 불확실성에 대한 정보를 포함하며, 정보 필터에서 중요한 역할을 한다.</p>
 <ul>
 <li><strong>정보 벡터</strong> (<span class="arithmatex"><span class="MathJax_Preview">\mathbf{y}_{k}</span><script type="math/tex">\mathbf{y}_{k}</script></span>)<br />
   정보 벡터는 상태 추정의 정보와 상태 벡터의 관계를 나타낸다.</li>
 </ul>
-<p>$$
-  \mathbf{y}<em>{k} = \mathbf{P}</em>{k}^{-1} \mathbf{\hat{x}}_{k}</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+  \mathbf{y}_{k} = \mathbf{P}_{k}^{-1} \mathbf{\hat{x}}_{k}
+</div>
+<script type="math/tex; mode=display">
+  \mathbf{y}_{k} = \mathbf{P}_{k}^{-1} \mathbf{\hat{x}}_{k}
+</script>
+</div>
 <p>여기서 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{\hat{x}}_{k}</span><script type="math/tex">\mathbf{\hat{x}}_{k}</script></span>는 상태 벡터의 추정치이다.</p>
 <h3 id="_4">정보 필터의 알고리즘</h3>
 <p>정보 필터는 칼만 필터와 유사한 두 가지 주요 단계를 포함한다: <strong>시간 갱신</strong>과 <strong>측정 갱신</strong>. 하지만, 이 과정에서 정보 행렬과 정보 벡터를 사용한다는 점에서 차이가 있다.</p>
@@ -155,31 +170,51 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 <ol>
 <li><strong>예측된 정보 행렬</strong> (<span class="arithmatex"><span class="MathJax_Preview">\mathbf{Y}_{k|k-1}</span><script type="math/tex">\mathbf{Y}_{k|k-1}</script></span>):</li>
 </ol>
-<p>$$
-   \mathbf{Y}<em>{k|k-1} = \left(\mathbf{F}</em>{k} \mathbf{Y}<em>{k-1} \mathbf{F}</em>{k}^{\top} + \mathbf{Q}_{k}\right)^{-1}</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+   \mathbf{Y}_{k|k-1} = \left(\mathbf{F}_{k} \mathbf{Y}_{k-1} \mathbf{F}_{k}^{\top} + \mathbf{Q}_{k}\right)^{-1}
+</div>
+<script type="math/tex; mode=display">
+   \mathbf{Y}_{k|k-1} = \left(\mathbf{F}_{k} \mathbf{Y}_{k-1} \mathbf{F}_{k}^{\top} + \mathbf{Q}_{k}\right)^{-1}
+</script>
+</div>
 <p>여기서 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{F}_{k}</span><script type="math/tex">\mathbf{F}_{k}</script></span>는 상태 전이 행렬, <span class="arithmatex"><span class="MathJax_Preview">\mathbf{Q}_{k}</span><script type="math/tex">\mathbf{Q}_{k}</script></span>는 시스템 노이즈 공분산 행렬이다.</p>
 <ol>
 <li><strong>예측된 정보 벡터</strong> (<span class="arithmatex"><span class="MathJax_Preview">\mathbf{y}_{k|k-1}</span><script type="math/tex">\mathbf{y}_{k|k-1}</script></span>):</li>
 </ol>
-<p>$$
-   \mathbf{y}<em>{k|k-1} = \mathbf{Y}</em>{k|k-1} \mathbf{F}<em>{k} \mathbf{y}</em>{k-1}</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+   \mathbf{y}_{k|k-1} = \mathbf{Y}_{k|k-1} \mathbf{F}_{k} \mathbf{y}_{k-1}
+</div>
+<script type="math/tex; mode=display">
+   \mathbf{y}_{k|k-1} = \mathbf{Y}_{k|k-1} \mathbf{F}_{k} \mathbf{y}_{k-1}
+</script>
+</div>
 <h4 id="_6">측정 갱신 단계</h4>
 <p>측정 갱신 단계에서는 새로운 측정치를 반영하여 정보 행렬과 정보 벡터를 업데이트한다.</p>
 <ol>
 <li><strong>정보 행렬의 갱신</strong>:</li>
 </ol>
-<p>$$
-   \mathbf{Y}<em>{k} = \mathbf{Y}</em>{k|k-1} + \mathbf{H}<em>{k}^{\top} \mathbf{R}</em>{k}^{-1} \mathbf{H}_{k}</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+   \mathbf{Y}_{k} = \mathbf{Y}_{k|k-1} + \mathbf{H}_{k}^{\top} \mathbf{R}_{k}^{-1} \mathbf{H}_{k}
+</div>
+<script type="math/tex; mode=display">
+   \mathbf{Y}_{k} = \mathbf{Y}_{k|k-1} + \mathbf{H}_{k}^{\top} \mathbf{R}_{k}^{-1} \mathbf{H}_{k}
+</script>
+</div>
 <p>여기서 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{H}_{k}</span><script type="math/tex">\mathbf{H}_{k}</script></span>는 관측 행렬, <span class="arithmatex"><span class="MathJax_Preview">\mathbf{R}_{k}</span><script type="math/tex">\mathbf{R}_{k}</script></span>는 측정 잡음 공분산 행렬이다.</p>
 <ol>
 <li><strong>정보 벡터의 갱신</strong>:</li>
 </ol>
-<p>$$
-   \mathbf{y}<em>{k} = \mathbf{y}</em>{k|k-1} + \mathbf{H}<em>{k}^{\top} \mathbf{R}</em>{k}^{-1} \mathbf{z}_{k}</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+   \mathbf{y}_{k} = \mathbf{y}_{k|k-1} + \mathbf{H}_{k}^{\top} \mathbf{R}_{k}^{-1} \mathbf{z}_{k}
+</div>
+<script type="math/tex; mode=display">
+   \mathbf{y}_{k} = \mathbf{y}_{k|k-1} + \mathbf{H}_{k}^{\top} \mathbf{R}_{k}^{-1} \mathbf{z}_{k}
+</script>
+</div>
 <p>여기서 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{z}_{k}</span><script type="math/tex">\mathbf{z}_{k}</script></span>는 현재 측정값이다.</p>
 <h3 id="_7">정보 필터의 특성과 장점</h3>
 <p>정보 필터는 특히 고차원 문제나 분산 네트워크 환경에서 다음과 같은 장점을 가진다.</p>

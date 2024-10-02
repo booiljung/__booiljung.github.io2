@@ -123,13 +123,23 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
    동적 객체는 중력이나 외부 힘에 의해 움직이는 객체이다. 이들은 물리 엔진을 통해 시뮬레이션되며, 로봇과 상호작용할 때 실시간으로 물리적 반응을 보이다. 예를 들어, 시뮬레이션 내에서 로봇이 밀 수 있는 상자나 움직이는 장애물 등이 동적 객체에 해당한다.</li>
 </ol>
 <p>동적 객체의 경우, 질량(<span class="arithmatex"><span class="MathJax_Preview">m</span><script type="math/tex">m</script></span>) 및 관성 모멘트(<span class="arithmatex"><span class="MathJax_Preview">\mathbf{I}</span><script type="math/tex">\mathbf{I}</script></span>)와 같은 물리적 특성을 정의해야 한다. 이는 객체가 물리적인 힘을 받았을 때 어떻게 반응할지를 결정한다.</p>
-<p>$$
-   \mathbf{F} = m \cdot \mathbf{a}</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+   \mathbf{F} = m \cdot \mathbf{a}
+</div>
+<script type="math/tex; mode=display">
+   \mathbf{F} = m \cdot \mathbf{a}
+</script>
+</div>
 <p>위 식에서 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{F}</span><script type="math/tex">\mathbf{F}</script></span>는 가해진 힘, <span class="arithmatex"><span class="MathJax_Preview">m</span><script type="math/tex">m</script></span>은 객체의 질량, <span class="arithmatex"><span class="MathJax_Preview">\mathbf{a}</span><script type="math/tex">\mathbf{a}</script></span>는 가속도를 나타낸다. 관성 모멘트는 각 운동에 관한 특성을 결정하며, 이는 다음과 같이 정의된다.</p>
-<p>$$
-   \mathbf{\tau} = \mathbf{I} \cdot \mathbf{\alpha}</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+   \mathbf{\tau} = \mathbf{I} \cdot \mathbf{\alpha}
+</div>
+<script type="math/tex; mode=display">
+   \mathbf{\tau} = \mathbf{I} \cdot \mathbf{\alpha}
+</script>
+</div>
 <p>여기서 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{\tau}</span><script type="math/tex">\mathbf{\tau}</script></span>는 토크, <span class="arithmatex"><span class="MathJax_Preview">\mathbf{I}</span><script type="math/tex">\mathbf{I}</script></span>는 관성 모멘트, <span class="arithmatex"><span class="MathJax_Preview">\mathbf{\alpha}</span><script type="math/tex">\mathbf{\alpha}</script></span>는 각 가속도를 의미한다.</p>
 <h3 id="gazebo">Gazebo에서 객체 추가</h3>
 <p>Gazebo에서는 환경 객체를 추가하기 위해 여러 가지 방법을 제공한다. 가장 일반적인 방법은 <strong>SDF 파일</strong>이나 <strong>URDF 파일</strong>을 사용하여 객체를 정의한 뒤, 이를 Gazebo에 불러오는 것이다. 객체를 추가할 때는 다음의 세 가지 주요 요소를 고려해야 한다:</p>
@@ -181,9 +191,14 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 <li><strong>질량과 관성</strong>
    객체의 질량은 그 무게와 물리적인 반응에 직접적인 영향을 미친다. 로봇이 특정 객체에 충돌했을 때, 그 객체의 질량에 따라 충돌 후의 움직임이 달라진다. 관성 모멘트는 객체의 회전에 대한 저항을 결정하는 요소로, 다음과 같이 정의된다.</li>
 </ol>
-<p>$$
-   \mathbf{I} = \int_V \rho(\mathbf{r}) (\mathbf{r} \cdot \mathbf{r}) dV</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+   \mathbf{I} = \int_V \rho(\mathbf{r}) (\mathbf{r} \cdot \mathbf{r}) dV
+</div>
+<script type="math/tex; mode=display">
+   \mathbf{I} = \int_V \rho(\mathbf{r}) (\mathbf{r} \cdot \mathbf{r}) dV
+</script>
+</div>
 <p>여기서 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{I}</span><script type="math/tex">\mathbf{I}</script></span>는 관성 모멘트, <span class="arithmatex"><span class="MathJax_Preview">\rho(\mathbf{r})</span><script type="math/tex">\rho(\mathbf{r})</script></span>는 위치 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{r}</span><script type="math/tex">\mathbf{r}</script></span>에서의 밀도, <span class="arithmatex"><span class="MathJax_Preview">V</span><script type="math/tex">V</script></span>는 부피를 나타낸다.</p>
 <ol>
 <li><strong>마찰력</strong>
@@ -229,17 +244,27 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 <li><strong>카메라 센서와 객체 상호작용</strong><br />
    카메라가 환경 객체와 상호작용할 때는 주로 카메라의 <strong>시야각</strong>과 객체의 <strong>위치</strong>가 중요한 요소가 된다. 카메라의 시야각(<span class="arithmatex"><span class="MathJax_Preview">\theta</span><script type="math/tex">\theta</script></span>)은 로봇의 현재 위치와 회전에 따라 객체가 카메라에 잡힐지 여부를 결정한다. 카메라가 특정 객체를 감지할 수 있는지 여부는 객체의 위치 벡터(<span class="arithmatex"><span class="MathJax_Preview">\mathbf{p}_{obj}</span><script type="math/tex">\mathbf{p}_{obj}</script></span>)와 카메라의 위치 벡터(<span class="arithmatex"><span class="MathJax_Preview">\mathbf{p}_{cam}</span><script type="math/tex">\mathbf{p}_{cam}</script></span>)의 차이 벡터를 사용해 계산할 수 있다.</li>
 </ol>
-<p>$$
-   \cos \theta = \frac{\mathbf{p}<em>{obj} - \mathbf{p}</em>{cam}}{|\mathbf{p}<em>{obj} - \mathbf{p}</em>{cam}|}</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+   \cos \theta = \frac{\mathbf{p}_{obj} - \mathbf{p}_{cam}}{|\mathbf{p}_{obj} - \mathbf{p}_{cam}|}
+</div>
+<script type="math/tex; mode=display">
+   \cos \theta = \frac{\mathbf{p}_{obj} - \mathbf{p}_{cam}}{|\mathbf{p}_{obj} - \mathbf{p}_{cam}|}
+</script>
+</div>
 <p>이 식에서 <span class="arithmatex"><span class="MathJax_Preview">\theta</span><script type="math/tex">\theta</script></span>가 카메라의 최대 시야각 범위 내에 있으면, 객체는 카메라에 의해 감지된다.</p>
 <ol>
 <li><strong>LIDAR와 객체 상호작용</strong><br />
    LIDAR는 레이저를 사용해 주변 객체와의 거리를 측정하는 센서로, 환경 객체와의 충돌 방지나 경로 계획에 유용하다. LIDAR는 레이저 빔을 발사하고 객체에 반사된 신호를 감지하여 거리를 계산한다. LIDAR의 상호작용은 다음과 같은 기본 원리를 따른다:</li>
 </ol>
-<p>$$
-   d = \frac{c \cdot t}{2}</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+   d = \frac{c \cdot t}{2}
+</div>
+<script type="math/tex; mode=display">
+   d = \frac{c \cdot t}{2}
+</script>
+</div>
 <p>여기서 <span class="arithmatex"><span class="MathJax_Preview">d</span><script type="math/tex">d</script></span>는 측정된 거리, <span class="arithmatex"><span class="MathJax_Preview">c</span><script type="math/tex">c</script></span>는 빛의 속도, <span class="arithmatex"><span class="MathJax_Preview">t</span><script type="math/tex">t</script></span>는 신호가 왕복하는 데 걸린 시간이다. LIDAR가 감지한 객체가 로봇의 경로 상에 있을 경우, 로봇은 충돌을 피하거나 경로를 변경할 수 있다.</p>
 <h4 id="_7">물리 엔진에서의 상호작용 설정</h4>
 <p>환경 객체와 로봇이 물리적으로 상호작용할 때, Gazebo는 물리 엔진을 사용하여 힘과 토크를 계산한다. 이러한 상호작용은 객체가 충돌할 때 발생하는 힘, 로봇이 특정 힘을 가할 때 객체가 어떻게 반응하는지를 포함한다.</p>
@@ -247,17 +272,27 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 <li><strong>힘의 상호작용</strong><br />
    로봇이 환경 객체에 힘을 가할 때, 물리 엔진은 그 힘에 따른 객체의 운동을 계산한다. 예를 들어, 로봇이 박스를 밀 때 박스가 어떻게 이동하는지는 다음의 운동 방정식을 사용하여 계산된다:</li>
 </ol>
-<p>$$
-   \mathbf{F}<em>{ext} = m \cdot \mathbf{a}</em>{obj}</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+   \mathbf{F}_{ext} = m \cdot \mathbf{a}_{obj}
+</div>
+<script type="math/tex; mode=display">
+   \mathbf{F}_{ext} = m \cdot \mathbf{a}_{obj}
+</script>
+</div>
 <p>여기서 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{F}_{ext}</span><script type="math/tex">\mathbf{F}_{ext}</script></span>는 로봇이 가한 외부 힘, <span class="arithmatex"><span class="MathJax_Preview">m</span><script type="math/tex">m</script></span>은 객체의 질량, <span class="arithmatex"><span class="MathJax_Preview">\mathbf{a}_{obj}</span><script type="math/tex">\mathbf{a}_{obj}</script></span>는 객체의 가속도이다. 로봇이 박스를 미는 경우, 이 힘을 바탕으로 박스는 이동하고, 가속도는 외부 힘의 크기와 질량에 따라 결정된다.</p>
 <ol>
 <li><strong>마찰력과 상호작용</strong><br />
    로봇이 환경 객체를 이동시키거나 상호작용할 때, 마찰력은 중요한 요소이다. 마찰력은 객체가 이동하는 데 필요한 힘을 증가시키거나 감소시킬 수 있다. Gazebo에서 마찰력은 다음과 같이 정의된다:</li>
 </ol>
-<p>$$
-   F_{f} = \mu \cdot F_{n}</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+   F_{f} = \mu \cdot F_{n}
+</div>
+<script type="math/tex; mode=display">
+   F_{f} = \mu \cdot F_{n}
+</script>
+</div>
 <p>여기서 <span class="arithmatex"><span class="MathJax_Preview">F_{f}</span><script type="math/tex">F_{f}</script></span>는 마찰력, <span class="arithmatex"><span class="MathJax_Preview">\mu</span><script type="math/tex">\mu</script></span>는 마찰 계수, <span class="arithmatex"><span class="MathJax_Preview">F_{n}</span><script type="math/tex">F_{n}</script></span>은 법선 방향의 힘이다. 로봇이 객체를 밀 때, 마찰 계수가 높을수록 더 큰 힘이 필요하며, 낮을수록 적은 힘으로 객체를 이동시킬 수 있다.</p>
 <h3 id="_8">환경 객체와 로봇의 동적 상호작용</h3>
 <p>로봇과 환경 객체 간의 동적 상호작용은 시뮬레이션에서 매우 중요한 역할을 한다. 로봇이 움직이거나 외부 힘을 가할 때, 객체와의 충돌 또는 상호작용이 물리적으로 적절하게 처리되어야 시뮬레이션의 신뢰성이 높아진다.</p>
@@ -265,17 +300,27 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 <li><strong>충돌 처리</strong><br />
    로봇이 환경 객체와 충돌하면, 충돌 후의 물리적 결과는 두 객체의 질량과 속도에 따라 결정된다. 충돌이 발생한 순간의 속도 변화는 <strong>충격량</strong>을 사용하여 계산할 수 있다.</li>
 </ol>
-<p>$$
-   \Delta \mathbf{p} = \mathbf{F}_{collision} \cdot \Delta t</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+   \Delta \mathbf{p} = \mathbf{F}_{collision} \cdot \Delta t
+</div>
+<script type="math/tex; mode=display">
+   \Delta \mathbf{p} = \mathbf{F}_{collision} \cdot \Delta t
+</script>
+</div>
 <p>여기서 <span class="arithmatex"><span class="MathJax_Preview">\Delta \mathbf{p}</span><script type="math/tex">\Delta \mathbf{p}</script></span>는 충돌 후의 운동량 변화, <span class="arithmatex"><span class="MathJax_Preview">\mathbf{F}_{collision}</span><script type="math/tex">\mathbf{F}_{collision}</script></span>은 충돌 시 발생한 힘, <span class="arithmatex"><span class="MathJax_Preview">\Delta t</span><script type="math/tex">\Delta t</script></span>는 충돌이 발생한 시간 간격이다. Gazebo는 이러한 충돌을 처리하고 객체의 위치와 속도를 실시간으로 업데이트한다.</p>
 <ol>
 <li><strong>토크와 회전 상호작용</strong><br />
    로봇이 특정 객체에 회전력을 가할 경우, 객체는 그 힘에 의해 회전하게 된다. 이는 토크와 각 가속도의 관계로 설명된다.</li>
 </ol>
-<p>$$
-   \mathbf{\tau} = \mathbf{I} \cdot \mathbf{\alpha}</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+   \mathbf{\tau} = \mathbf{I} \cdot \mathbf{\alpha}
+</div>
+<script type="math/tex; mode=display">
+   \mathbf{\tau} = \mathbf{I} \cdot \mathbf{\alpha}
+</script>
+</div>
 <p>여기서 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{\tau}</span><script type="math/tex">\mathbf{\tau}</script></span>는 가해진 토크, <span class="arithmatex"><span class="MathJax_Preview">\mathbf{I}</span><script type="math/tex">\mathbf{I}</script></span>는 객체의 관성 모멘트, <span class="arithmatex"><span class="MathJax_Preview">\mathbf{\alpha}</span><script type="math/tex">\mathbf{\alpha}</script></span>는 각 가속도이다. 토크가 큰 경우 객체는 빠르게 회전하며, 관성 모멘트가 클수록 회전에 대한 저항이 커진다.</p>
 <ol>
 <li><strong>환경 객체와의 충돌 방지</strong><br />

@@ -105,9 +105,14 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 <li><strong>수치적으로 안정된 행렬 연산</strong>: 공분산 행렬의 업데이트 과정에서 수치적 오차를 줄이기 위해서는 행렬 연산에 대한 수치적 안정성을 확보해야 한다. 이는 행렬 분해 방법(예: 치올레스키 분해)을 통해 공분산 행렬을 계산하거나 업데이트할 때 더 높은 수치적 안정성을 제공할 수 있다.</li>
 </ol>
 <p>예를 들어, 공분산 행렬 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{P}</span><script type="math/tex">\mathbf{P}</script></span>를 업데이트하는 과정에서 직접적인 곱셈 대신 치올레스키 분해를 활용하여 다음과 같이 계산할 수 있다.</p>
-<p>$$
-   \mathbf{P} = \mathbf{L}\mathbf{L}^{\top}</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+   \mathbf{P} = \mathbf{L}\mathbf{L}^{\top}
+</div>
+<script type="math/tex; mode=display">
+   \mathbf{P} = \mathbf{L}\mathbf{L}^{\top}
+</script>
+</div>
 <p>여기서 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{L}</span><script type="math/tex">\mathbf{L}</script></span>은 공분산 행렬의 치올레스키 분해된 하삼각 행렬이다. 이를 통해 공분산 행렬의 양의 정부호성을 더 쉽게 유지할 수 있다.</p>
 <ol>
 <li><strong>작은 값 클리핑(Clipping)</strong>: 공분산 행렬의 고유값 중 음수나 너무 작은 값을 가지는 요소가 있다면, 해당 값을 일정 임계치 이상으로 클리핑(잘라내는) 방법도 수치적 안정성을 높이는 데 유용하다. 이는 공분산 행렬이 음의 고유값을 갖지 않도록 보장하는 간단한 방법이다.</li>

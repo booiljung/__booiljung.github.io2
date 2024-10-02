@@ -106,9 +106,14 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 <ul>
 <li><strong>Formula</strong>:  </li>
 </ul>
-<p>$$</p>
-<p>P(x) = \frac{\exp\left(\frac{z(x)}{T}\right)}{\sum_{x'} \exp\left(\frac{z(x')}{T}\right)}</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+  P(x) = \frac{\exp\left(\frac{z(x)}{T}\right)}{\sum_{x'} \exp\left(\frac{z(x')}{T}\right)}
+</div>
+<script type="math/tex; mode=display">
+  P(x) = \frac{\exp\left(\frac{z(x)}{T}\right)}{\sum_{x'} \exp\left(\frac{z(x')}{T}\right)}
+</script>
+</div>
 <p>여기서 <span class="arithmatex"><span class="MathJax_Preview">P(x)</span><script type="math/tex">P(x)</script></span>는 다음 단어로 선택될 확률을 의미하며, <span class="arithmatex"><span class="MathJax_Preview">z(x)</span><script type="math/tex">z(x)</script></span>는 단어 <span class="arithmatex"><span class="MathJax_Preview">x</span><script type="math/tex">x</script></span>의 로짓(logit) 값이다. <span class="arithmatex"><span class="MathJax_Preview">T</span><script type="math/tex">T</script></span>는 temperature 파라미터이다.</p>
 <ul>
 <li><strong>Example</strong>:
@@ -165,9 +170,14 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 <li><strong>Formula</strong>:<br />
   반복된 단어의 확률을 감소시키는 데 사용된다.</li>
 </ul>
-<p>$$</p>
-<p>P(x) \propto \frac{1}{1 + \text{count}(x) \cdot \lambda}</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+  P(x) \propto \frac{1}{1 + \text{count}(x) \cdot \lambda}
+</div>
+<script type="math/tex; mode=display">
+  P(x) \propto \frac{1}{1 + \text{count}(x) \cdot \lambda}
+</script>
+</div>
 <p>여기서 <span class="arithmatex"><span class="MathJax_Preview">\text{count}(x)</span><script type="math/tex">\text{count}(x)</script></span>는 단어 <span class="arithmatex"><span class="MathJax_Preview">x</span><script type="math/tex">x</script></span>의 등장 횟수이며, <span class="arithmatex"><span class="MathJax_Preview">\lambda</span><script type="math/tex">\lambda</script></span>는 frequency penalty 파라미터이다.</p>
 <ul>
 <li><strong>Example</strong>:
@@ -186,9 +196,14 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 <li><strong>Formula</strong>:<br />
   단어의 등장 여부에 따라 그 확률을 증가시키거나 감소시킨다.</li>
 </ul>
-<p>$$</p>
-<p>P(x) \propto \left(1 + \lambda \cdot \mathbf{1}(x \text{ is present})\right)</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+  P(x) \propto \left(1 + \lambda \cdot \mathbf{1}(x \text{ is present})\right)
+</div>
+<script type="math/tex; mode=display">
+  P(x) \propto \left(1 + \lambda \cdot \mathbf{1}(x \text{ is present})\right)
+</script>
+</div>
 <p>여기서 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{1}(x \text{ is present})</span><script type="math/tex">\mathbf{1}(x \text{ is present})</script></span>는 단어 <span class="arithmatex"><span class="MathJax_Preview">x</span><script type="math/tex">x</script></span>가 이미 텍스트에 존재하는지 여부를 나타내는 지시 함수이며, <span class="arithmatex"><span class="MathJax_Preview">\lambda</span><script type="math/tex">\lambda</script></span>는 presence penalty 파라미터이다.</p>
 <ul>
 <li><strong>Example</strong>:
@@ -250,9 +265,14 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 <p><strong>Formula</strong>:</p>
 </li>
 </ul>
-<p>$$</p>
-<p>P(x) = \frac{\exp(z(x) + \text{logit_bias}(x))}{\sum_{x'} \exp(z(x') + \text{logit_bias}(x'))}</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+  P(x) = \frac{\exp(z(x) + \text{logit\_bias}(x))}{\sum_{x'} \exp(z(x') + \text{logit\_bias}(x'))}
+</div>
+<script type="math/tex; mode=display">
+  P(x) = \frac{\exp(z(x) + \text{logit\_bias}(x))}{\sum_{x'} \exp(z(x') + \text{logit\_bias}(x'))}
+</script>
+</div>
 <p>여기서 <span class="arithmatex"><span class="MathJax_Preview">\text{logit\_bias}(x)</span><script type="math/tex">\text{logit\_bias}(x)</script></span>는 특정 토큰 <span class="arithmatex"><span class="MathJax_Preview">x</span><script type="math/tex">x</script></span>에 적용된 로그 확률 편향이다.</p>
 <ul>
 <li><strong>Example</strong>:

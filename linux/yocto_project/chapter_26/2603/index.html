@@ -101,9 +101,14 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 <li><strong>모든 작업의 주기를 고려한 LCM(최소 공배수) 계산:</strong></li>
 </ol>
 <p>시스템에 있는 모든 작업의 주기를 고려해 최소 공배수를 계산하면 스케줄링 주기를 결정할 수 있다. 예를 들어, 두 작업 <span class="arithmatex"><span class="MathJax_Preview">T_1</span><script type="math/tex">T_1</script></span>, <span class="arithmatex"><span class="MathJax_Preview">T_2</span><script type="math/tex">T_2</script></span>가 각 <span class="arithmatex"><span class="MathJax_Preview">\tau_1</span><script type="math/tex">\tau_1</script></span>, <span class="arithmatex"><span class="MathJax_Preview">\tau_2</span><script type="math/tex">\tau_2</script></span>의 주기를 가지고 있다면 전체 주기는 <span class="arithmatex"><span class="MathJax_Preview">\mathrm{LCM}(\tau_1, \tau_2)</span><script type="math/tex">\mathrm{LCM}(\tau_1, \tau_2)</script></span>로 표현된다.</p>
-<p>$$
-   \mathrm{LCM}(\tau_1, \tau_2) = \frac{\tau_1 \cdot \tau_2}{\gcd(\tau_1, \tau_2)}</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+   \mathrm{LCM}(\tau_1, \tau_2) = \frac{\tau_1 \cdot \tau_2}{\gcd(\tau_1, \tau_2)}
+</div>
+<script type="math/tex; mode=display">
+   \mathrm{LCM}(\tau_1, \tau_2) = \frac{\tau_1 \cdot \tau_2}{\gcd(\tau_1, \tau_2)}
+</script>
+</div>
 <ol>
 <li><strong>정적 우선순위 스케줄링:</strong></li>
 </ol>

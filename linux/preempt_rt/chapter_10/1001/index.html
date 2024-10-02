@@ -208,9 +208,14 @@ R = T_C + T_Q
 <p>실시간 시스템에서 성능 병목을 식별하고 해결하기 위해, 수학적 모델링을 통해 응답 시간을 분석하는 것이 매우 중요하다. 여기에서는 주기적 태스크와 비주기적 태스크의 응답 시간을 수학적으로 모델링하는 방법을 설명한다.</p>
 <h4 id="1_2">1. <strong>주기적 태스크의 응답 시간</strong></h4>
 <p>주기적 태스크는 일정한 간격으로 반복되는 작업을 말하며, 각 주기 안에서 태스크가 완료되어야 한다. 주기적 태스크 <span class="arithmatex"><span class="MathJax_Preview">\tau_i</span><script type="math/tex">\tau_i</script></span>의 응답 시간 <span class="arithmatex"><span class="MathJax_Preview">R_i</span><script type="math/tex">R_i</script></span>은 다음과 같이 계산된다:</p>
-<p>$$</p>
-<p>R_i = C_i + \sum_{j \in \text{hp}(i)} \left\lceil \frac{R_i}{T_j} \right\rceil C_j</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+R_i = C_i + \sum_{j \in \text{hp}(i)} \left\lceil \frac{R_i}{T_j} \right\rceil C_j
+</div>
+<script type="math/tex; mode=display">
+R_i = C_i + \sum_{j \in \text{hp}(i)} \left\lceil \frac{R_i}{T_j} \right\rceil C_j
+</script>
+</div>
 <p>여기서:</p>
 <ul>
 <li><span class="arithmatex"><span class="MathJax_Preview">C_i</span><script type="math/tex">C_i</script></span>: 태스크 <span class="arithmatex"><span class="MathJax_Preview">\tau_i</span><script type="math/tex">\tau_i</script></span>의 실행 시간</li>
@@ -222,18 +227,28 @@ R = T_C + T_Q
 <h4 id="2_3">2. <strong>비주기적 태스크의 응답 시간</strong></h4>
 <p>비주기적 태스크는 주기적으로 발생하지 않으며, 외부 이벤트에 의해 트리거된다. 비주기적 태스크의 응답 시간은 일반적으로 큐잉 이론을 사용하여 모델링할 수 있다.</p>
 <p>비주기적 태스크의 평균 응답 시간 <span class="arithmatex"><span class="MathJax_Preview">R</span><script type="math/tex">R</script></span>은 다음과 같이 계산할 수 있다:</p>
-<p>$$</p>
-<p>R = W + \frac{1}{\mu}</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+R = W + \frac{1}{\mu}
+</div>
+<script type="math/tex; mode=display">
+R = W + \frac{1}{\mu}
+</script>
+</div>
 <p>여기서:</p>
 <ul>
 <li><span class="arithmatex"><span class="MathJax_Preview">W</span><script type="math/tex">W</script></span>: 평균 대기 시간</li>
 <li><span class="arithmatex"><span class="MathJax_Preview">\mu</span><script type="math/tex">\mu</script></span>: 서비스율 (단위 시간당 처리 가능한 태스크의 수)</li>
 </ul>
 <p>대기 시간 <span class="arithmatex"><span class="MathJax_Preview">W</span><script type="math/tex">W</script></span>는 대기열의 길이와 서비스율에 따라 달라지며, 이는 아래의 리틀의 법칙(Little's Law)을 사용하여 계산할 수 있다:</p>
-<p>$$</p>
-<p>W = \frac{L}{\lambda}</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+W = \frac{L}{\lambda}
+</div>
+<script type="math/tex; mode=display">
+W = \frac{L}{\lambda}
+</script>
+</div>
 <p>여기서:</p>
 <ul>
 <li><span class="arithmatex"><span class="MathJax_Preview">L</span><script type="math/tex">L</script></span>: 평균 대기열 길이</li>

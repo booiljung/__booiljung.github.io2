@@ -216,34 +216,59 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 </li>
 <li>상태 예측:</li>
 </ol>
-<p>$$
-     \mathbf{\hat{x}}<em>k^- = \mathbf{F}_k \mathbf{\hat{x}}</em>{k-1} + \mathbf{B}_k \mathbf{u}_k</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+     \mathbf{\hat{x}}_k^- = \mathbf{F}_k \mathbf{\hat{x}}_{k-1} + \mathbf{B}_k \mathbf{u}_k
+</div>
+<script type="math/tex; mode=display">
+     \mathbf{\hat{x}}_k^- = \mathbf{F}_k \mathbf{\hat{x}}_{k-1} + \mathbf{B}_k \mathbf{u}_k
+</script>
+</div>
 <ul>
 <li>오차 공분산 예측:</li>
 </ul>
-<p>$$
-     \mathbf{P}<em>k^- = \mathbf{F}_k \mathbf{P}</em>{k-1} \mathbf{F}_k^\top + \mathbf{Q}_k</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+     \mathbf{P}_k^- = \mathbf{F}_k \mathbf{P}_{k-1} \mathbf{F}_k^\top + \mathbf{Q}_k
+</div>
+<script type="math/tex; mode=display">
+     \mathbf{P}_k^- = \mathbf{F}_k \mathbf{P}_{k-1} \mathbf{F}_k^\top + \mathbf{Q}_k
+</script>
+</div>
 <ol>
 <li><strong>측정 갱신 (갱신 단계)</strong>:</li>
 <li>칼만 이득 계산:</li>
 </ol>
-<p>$$
-     \mathbf{K}_k = \mathbf{P}_k^- \mathbf{H}_k^\top \left(\mathbf{H}_k \mathbf{P}_k^- \mathbf{H}_k^\top + \mathbf{R}_k\right)^{-1}</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+     \mathbf{K}_k = \mathbf{P}_k^- \mathbf{H}_k^\top \left(\mathbf{H}_k \mathbf{P}_k^- \mathbf{H}_k^\top + \mathbf{R}_k\right)^{-1}
+</div>
+<script type="math/tex; mode=display">
+     \mathbf{K}_k = \mathbf{P}_k^- \mathbf{H}_k^\top \left(\mathbf{H}_k \mathbf{P}_k^- \mathbf{H}_k^\top + \mathbf{R}_k\right)^{-1}
+</script>
+</div>
 <ul>
 <li>상태 갱신:</li>
 </ul>
-<p>$$
-     \mathbf{\hat{x}}_k = \mathbf{\hat{x}}_k^- + \mathbf{K}_k \left(\mathbf{z}_k - \mathbf{H}_k \mathbf{\hat{x}}_k^-\right)</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+     \mathbf{\hat{x}}_k = \mathbf{\hat{x}}_k^- + \mathbf{K}_k \left(\mathbf{z}_k - \mathbf{H}_k \mathbf{\hat{x}}_k^-\right)
+</div>
+<script type="math/tex; mode=display">
+     \mathbf{\hat{x}}_k = \mathbf{\hat{x}}_k^- + \mathbf{K}_k \left(\mathbf{z}_k - \mathbf{H}_k \mathbf{\hat{x}}_k^-\right)
+</script>
+</div>
 <ul>
 <li>오차 공분산 갱신:</li>
 </ul>
-<p>$$
-     \mathbf{P}_k = \left(\mathbf{I} - \mathbf{K}_k \mathbf{H}_k\right) \mathbf{P}_k^-</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+     \mathbf{P}_k = \left(\mathbf{I} - \mathbf{K}_k \mathbf{H}_k\right) \mathbf{P}_k^-
+</div>
+<script type="math/tex; mode=display">
+     \mathbf{P}_k = \left(\mathbf{I} - \mathbf{K}_k \mathbf{H}_k\right) \mathbf{P}_k^-
+</script>
+</div>
 <h3 id="_6">수렴성과 안정성에 대한 고려</h3>
 <p>칼만 필터 알고리즘이 정상적으로 작동하기 위해서는 필터의 수렴성과 안정성에 대한 고려가 필요하다. 이 과정은 주로 리카티 방정식(Riccati Equation)의 해에 의해 결정된다. 수렴성을 보장하기 위해서는 시스템의 관측 가능성(Observability)과 제어 가능성(Controllability)이 중요한 역할을 한다.</p>
 <ol>
@@ -336,16 +361,26 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 <ul>
 <li><strong>제어 가능성(Controllability)</strong>: 시스템이 어떤 초기 상태에서든지 주어진 입력 신호에 의해 원하는 상태로 제어될 수 있는지를 나타내는 속성이다. 이는 상태 전이 행렬 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{F}_k</span><script type="math/tex">\mathbf{F}_k</script></span>와 제어 입력 행렬 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{B}_k</span><script type="math/tex">\mathbf{B}_k</script></span>의 조합에 의해 결정된다. 제어 가능성을 보장하려면 다음 조건이 만족되어야 한다:</li>
 </ul>
-<p>$$
-  \text{rank}([\mathbf{B}_k, \mathbf{F}_k\mathbf{B}_k, \mathbf{F}_k^2\mathbf{B}_k, \dots, \mathbf{F}_k^{n-1}\mathbf{B}_k]) = n</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+  \text{rank}([\mathbf{B}_k, \mathbf{F}_k\mathbf{B}_k, \mathbf{F}_k^2\mathbf{B}_k, \dots, \mathbf{F}_k^{n-1}\mathbf{B}_k]) = n
+</div>
+<script type="math/tex; mode=display">
+  \text{rank}([\mathbf{B}_k, \mathbf{F}_k\mathbf{B}_k, \mathbf{F}_k^2\mathbf{B}_k, \dots, \mathbf{F}_k^{n-1}\mathbf{B}_k]) = n
+</script>
+</div>
 <p>여기서 <span class="arithmatex"><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span>은 상태 벡터 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{x}_k</span><script type="math/tex">\mathbf{x}_k</script></span>의 차원이다.</p>
 <ul>
 <li><strong>관측 가능성(Observability)</strong>: 시스템의 상태를 관측 가능한 데이터로부터 정확하게 추정할 수 있는지를 나타내는 속성이다. 이는 상태 전이 행렬 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{F}_k</span><script type="math/tex">\mathbf{F}_k</script></span>와 관측 행렬 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{H}_k</span><script type="math/tex">\mathbf{H}_k</script></span>에 의해 결정된다. 관측 가능성을 보장하기 위해서는 다음 조건이 필요하다:</li>
 </ul>
-<p>$$
-  \text{rank}([\mathbf{H}_k^\top, \mathbf{H}_k^\top\mathbf{F}_k^\top, \mathbf{H}_k^\top(\mathbf{F}_k^\top)^2, \dots, \mathbf{H}_k^\top(\mathbf{F}_k^\top)^{n-1}]) = n</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+  \text{rank}([\mathbf{H}_k^\top, \mathbf{H}_k^\top\mathbf{F}_k^\top, \mathbf{H}_k^\top(\mathbf{F}_k^\top)^2, \dots, \mathbf{H}_k^\top(\mathbf{F}_k^\top)^{n-1}]) = n
+</div>
+<script type="math/tex; mode=display">
+  \text{rank}([\mathbf{H}_k^\top, \mathbf{H}_k^\top\mathbf{F}_k^\top, \mathbf{H}_k^\top(\mathbf{F}_k^\top)^2, \dots, \mathbf{H}_k^\top(\mathbf{F}_k^\top)^{n-1}]) = n
+</script>
+</div>
 <p>이 두 조건이 모두 만족될 때, 칼만 필터는 시스템의 상태를 정확하게 추정할 수 있으며, 시간이 지남에 따라 필터의 성능이 안정적으로 유지된다.</p>
 <h3 id="_16">노이즈 특성과 칼만 필터의 반응</h3>
 <p>칼만 필터는 시스템 노이즈 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{w}_k</span><script type="math/tex">\mathbf{w}_k</script></span>와 측정 노이즈 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{v}_k</span><script type="math/tex">\mathbf{v}_k</script></span>가 가우시안 분포를 따른다고 가정한다. 이때, 노이즈의 공분산 행렬 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{Q}_k</span><script type="math/tex">\mathbf{Q}_k</script></span>와 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{R}_k</span><script type="math/tex">\mathbf{R}_k</script></span>는 필터의 성능에 직접적인 영향을 미친다.</p>
@@ -404,9 +439,14 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 <ul>
 <li><strong>평균 제곱 오차(Mean Squared Error, MSE)</strong>: 추정된 상태와 실제 상태 간의 차이 제곱의 평균값을 계산하여 필터의 정확성을 평가한다.</li>
 </ul>
-<p>$$</p>
-<p>\text{MSE} = \frac{1}{N} \sum_{k=1}^{N} |\mathbf{x}_k - \mathbf{\hat{x}}_k|^2</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+  \text{MSE} = \frac{1}{N} \sum_{k=1}^{N} \|\mathbf{x}_k - \mathbf{\hat{x}}_k\|^2
+</div>
+<script type="math/tex; mode=display">
+  \text{MSE} = \frac{1}{N} \sum_{k=1}^{N} \|\mathbf{x}_k - \mathbf{\hat{x}}_k\|^2
+</script>
+</div>
 <p>여기서 <span class="arithmatex"><span class="MathJax_Preview">N</span><script type="math/tex">N</script></span>은 전체 데이터의 수이다.</p>
 <ul>
 <li><strong>추정 오차 공분산</strong>: 오차 공분산 행렬 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{P}_k</span><script type="math/tex">\mathbf{P}_k</script></span>의 대각 성분을 분석하여 필터의 신뢰 구간을 평가한다. 작은 값일수록 필터의 추정이 더 정확함을 나타낸다.</li>

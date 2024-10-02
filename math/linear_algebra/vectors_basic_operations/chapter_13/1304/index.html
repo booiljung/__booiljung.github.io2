@@ -98,47 +98,87 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 <p>성분 분해는 물리학에서 물체의 운동을 분석할 때 유용하게 사용된다. 예를 들어, 어떤 물체가 기울어진 평면에서 이동하는 경우, 물체에 가해지는 힘들을 평행 성분과 수직 성분으로 분해하여 분석할 수 있다.</p>
 <h4 id="_2">예시: 경사면에서의 물체 운동</h4>
 <p>기울어진 평면에서 물체가 중력에 의해 내려오는 경우, 중력 힘 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{F}_g</span><script type="math/tex">\mathbf{F}_g</script></span>는 기울어진 평면에 평행한 성분 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{F}_{\parallel}</span><script type="math/tex">\mathbf{F}_{\parallel}</script></span>과 수직인 성분 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{F}_{\perp}</span><script type="math/tex">\mathbf{F}_{\perp}</script></span>으로 분해될 수 있다. </p>
-<p>$$</p>
-<p>\mathbf{F}_g = m \mathbf{g}</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+\mathbf{F}_g = m \mathbf{g}
+</div>
+<script type="math/tex; mode=display">
+\mathbf{F}_g = m \mathbf{g}
+</script>
+</div>
 <p>그림을 사용해 벡터 성분을 직각삼각형으로 나타낼 수 있다. 여기서 <span class="arithmatex"><span class="MathJax_Preview">\theta</span><script type="math/tex">\theta</script></span>는 기울어진 평면과 수평 면 사이의 각도이다. </p>
 <p>평행 성분과 수직 성분은 다음과 같이 계산된다:</p>
-<p>$$</p>
-<p>\mathbf{F}_\parallel = m g \sin(\theta)</p>
-<p>$$</p>
-<p>$$</p>
-<p>\mathbf{F}_\perp = m g \cos(\theta)</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+\mathbf{F}_\parallel = m g \sin(\theta)
+</div>
+<script type="math/tex; mode=display">
+\mathbf{F}_\parallel = m g \sin(\theta)
+</script>
+</div>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+\mathbf{F}_\perp = m g \cos(\theta)
+</div>
+<script type="math/tex; mode=display">
+\mathbf{F}_\perp = m g \cos(\theta)
+</script>
+</div>
 <h3 id="_3">그래픽스 및 컴퓨터 비전</h3>
 <p>벡터 성분 분해는 컴퓨터 그래픽스와 컴퓨터 비전에서 필수적인 역할을 한다. 3D 그래픽 렌더링, 물체 인식 및 트래킹에서 벡터 분해가 많이 사용된다.</p>
 <h4 id="_4">예시: 표면의 법선 벡터 계산</h4>
 <p>3D 모델의 표면에서 법선 벡터 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{N}</span><script type="math/tex">\mathbf{N}</script></span>를 계산하기 위해, 각 면의 벡터 성분 분해가 필요하다. 법선 벡터는 표면의 각 지점에서 직각 방향으로 위치하며, 이 벡터를 적절히 계산하고 노멀라이즈(normalize)해야 한다.</p>
 <p>법선 벡터 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{N}</span><script type="math/tex">\mathbf{N}</script></span>는 다음과 같이 계산될 수 있다. 두 벡터 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{v}_1</span><script type="math/tex">\mathbf{v}_1</script></span>과 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{v}_2</span><script type="math/tex">\mathbf{v}_2</script></span>가 있을 때:</p>
-<p>$$</p>
-<p>\mathbf{N} = \mathbf{v}_1 \times \mathbf{v}_2</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+\mathbf{N} = \mathbf{v}_1 \times \mathbf{v}_2
+</div>
+<script type="math/tex; mode=display">
+\mathbf{N} = \mathbf{v}_1 \times \mathbf{v}_2
+</script>
+</div>
 <h3 id="_5">전자기학에서의 응용</h3>
 <p>성분 분해는 전자기학에서도 널리 사용된다. 전기장과 자기장 벡터를 구현하고, 회로나 전기기기 내의 필드를 분석할 때 도움을 준다.</p>
 <h4 id="_6">예시: 전기장과 자기장</h4>
 <p>어떤 전하 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{q}</span><script type="math/tex">\mathbf{q}</script></span>에 의해 생성된 전기장 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{E}</span><script type="math/tex">\mathbf{E}</script></span>는 다음과 같이 성분 분해될 수 있다:</p>
-<p>$$</p>
-<p>\mathbf{E} = \mathbf{E}_x \mathbf{i} + \mathbf{E}_y \mathbf{j} + \mathbf{E}_z \mathbf{k}</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+\mathbf{E} = \mathbf{E}_x \mathbf{i} + \mathbf{E}_y \mathbf{j} + \mathbf{E}_z \mathbf{k}
+</div>
+<script type="math/tex; mode=display">
+\mathbf{E} = \mathbf{E}_x \mathbf{i} + \mathbf{E}_y \mathbf{j} + \mathbf{E}_z \mathbf{k}
+</script>
+</div>
 <p>이와 유사하게, 자기장 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{B}</span><script type="math/tex">\mathbf{B}</script></span>도 같은 방식으로 표현된다:</p>
-<p>$$</p>
-<p>\mathbf{B} = \mathbf{B}_x \mathbf{i} + \mathbf{B}_y \mathbf{j} + \mathbf{B}_z \mathbf{k}</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+\mathbf{B} = \mathbf{B}_x \mathbf{i} + \mathbf{B}_y \mathbf{j} + \mathbf{B}_z \mathbf{k}
+</div>
+<script type="math/tex; mode=display">
+\mathbf{B} = \mathbf{B}_x \mathbf{i} + \mathbf{B}_y \mathbf{j} + \mathbf{B}_z \mathbf{k}
+</script>
+</div>
 <h3 id="_7">항공우주공학에서의 응용</h3>
 <p>항공우주공학에서 비행기의 운동 방정식은 다양한 벡터 성분으로 분해되어 복잡한 문제를 이해하고 해결하는 데 도움을 준다. 비행기의 속도, 가속도, 바람의 영향, 중력 등을 각각의 성분으로 나누어 분석할 수 있다.</p>
 <h4 id="_8">예시: 비행기의 속도와 가속도 분석</h4>
 <p>비행기의 공기 역학을 분석할 때 속도 벡터 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{v}</span><script type="math/tex">\mathbf{v}</script></span>는 종종 지구의 표면에 대해 성분 분해된다. 속도 성분은 <span class="arithmatex"><span class="MathJax_Preview">x</span><script type="math/tex">x</script></span>, <span class="arithmatex"><span class="MathJax_Preview">y</span><script type="math/tex">y</script></span>, <span class="arithmatex"><span class="MathJax_Preview">z</span><script type="math/tex">z</script></span> 방향으로 나눌 수 있다:</p>
-<p>$$</p>
-<p>\mathbf{v} = v_x \mathbf{i} + v_y \mathbf{j} + v_z \mathbf{k}</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+\mathbf{v} = v_x \mathbf{i} + v_y \mathbf{j} + v_z \mathbf{k}
+</div>
+<script type="math/tex; mode=display">
+\mathbf{v} = v_x \mathbf{i} + v_y \mathbf{j} + v_z \mathbf{k}
+</script>
+</div>
 <p>이와 같이 가속도 벡터 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{a}</span><script type="math/tex">\mathbf{a}</script></span>도 성분으로 나누어 분석된다:</p>
-<p>$$</p>
-<p>\mathbf{a} = a_x \mathbf{i} + a_y \mathbf{j} + a_z \mathbf{k}</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+\mathbf{a} = a_x \mathbf{i} + a_y \mathbf{j} + a_z \mathbf{k}
+</div>
+<script type="math/tex; mode=display">
+\mathbf{a} = a_x \mathbf{i} + a_y \mathbf{j} + a_z \mathbf{k}
+</script>
+</div>
 <p>이를 통해 각 성분의 기여도를 독립적으로 분석할 수 있으며, 이를 통해 더욱 정밀한 모델링과 예측이 가능해진다. 예를 들어, 공기 저항이나 양력, 중력의 영향을 각각 따로 계산할 수 있으며 이를 종합하여 비행기의 실제 운동을 예측할 수 있다.</p>
 <hr />
 <p>벡터 성분 분해는 물리학, 공학, 컴퓨터 그래픽스 등 다양한 분야에서 매우 유용한 도구이다. 이를 통해 복잡한 문제를 더 쉽게 이해하고 해결할 수 있으며, 각 성분의 독립적인 분석을 통해 더 정밀한 결과를 얻을 수 있다. </p>

@@ -121,9 +121,14 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 <p><strong>갱신</strong>: 새로운 행렬 <strong><span class="arithmatex"><span class="MathJax_Preview">\mathbf{A}_{k+1}</span><script type="math/tex">\mathbf{A}_{k+1}</script></span></strong>를 다음과 같이 갱신한다:</p>
 </li>
 </ol>
-<p>$$
-   \mathbf{A}_{k+1} = \mathbf{R}_k \mathbf{Q}_k</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+   \mathbf{A}_{k+1} = \mathbf{R}_k \mathbf{Q}_k
+</div>
+<script type="math/tex; mode=display">
+   \mathbf{A}_{k+1} = \mathbf{R}_k \mathbf{Q}_k
+</script>
+</div>
 <p>이 과정은 <strong><span class="arithmatex"><span class="MathJax_Preview">\mathbf{A}_{k+1} = \mathbf{Q}_k^\top \mathbf{A}_k \mathbf{Q}_k</span><script type="math/tex">\mathbf{A}_{k+1} = \mathbf{Q}_k^\top \mathbf{A}_k \mathbf{Q}_k</script></span></strong>로도 볼 수 있으며, 이는 유사 행렬 변환에 해당한다.</p>
 <ol>
 <li><strong>수렴 검사</strong>: <strong><span class="arithmatex"><span class="MathJax_Preview">\mathbf{A}_k</span><script type="math/tex">\mathbf{A}_k</script></span></strong>가 대각 행렬에 충분히 가까워질 때까지 위 과정을 반복한다. 이때 대각 원소들이 <strong><span class="arithmatex"><span class="MathJax_Preview">\mathbf{A}</span><script type="math/tex">\mathbf{A}</script></span></strong>의 고유값에 수렴하게 된다.</li>

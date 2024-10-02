@@ -204,13 +204,23 @@ Z = \frac{f \cdot B}{d}
 </ol>
 <p>확장 칼만 필터의 상태 예측 및 갱신 식은 다음과 같다.</p>
 <p><strong>상태 예측</strong>:</p>
-<p>$$
-   \mathbf{x}_{k+1} = \mathbf{A} \mathbf{x}_k + \mathbf{B} \mathbf{u}_k + \mathbf{w}_k</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+   \mathbf{x}_{k+1} = \mathbf{A} \mathbf{x}_k + \mathbf{B} \mathbf{u}_k + \mathbf{w}_k
+</div>
+<script type="math/tex; mode=display">
+   \mathbf{x}_{k+1} = \mathbf{A} \mathbf{x}_k + \mathbf{B} \mathbf{u}_k + \mathbf{w}_k
+</script>
+</div>
 <p><strong>상태 갱신</strong>:</p>
-<p>$$
-   \mathbf{x}<em>k = \mathbf{x}</em>{k+1} + \mathbf{K}<em>k (\mathbf{z}_k - \mathbf{H} \mathbf{x}</em>{k+1})</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+   \mathbf{x}_k = \mathbf{x}_{k+1} + \mathbf{K}_k (\mathbf{z}_k - \mathbf{H} \mathbf{x}_{k+1})
+</div>
+<script type="math/tex; mode=display">
+   \mathbf{x}_k = \mathbf{x}_{k+1} + \mathbf{K}_k (\mathbf{z}_k - \mathbf{H} \mathbf{x}_{k+1})
+</script>
+</div>
 <p>여기서,<br />
 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{x}_k</span><script type="math/tex">\mathbf{x}_k</script></span>는 시스템의 상태 벡터,<br />
 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{A}</span><script type="math/tex">\mathbf{A}</script></span>는 상태 전이 행렬,<br />

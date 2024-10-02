@@ -133,27 +133,39 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 </li>
 <li>흐름의 총량을 최대화하는 문제는 다음과 같은 목적 함수를 갖는다:</li>
 </ol>
-<p>$$</p>
-<pre><code> \text{maximize } z = \sum_{(s, j) \in E} f_{sj} - \sum_{(j, t) \in E} f_{jt}
-</code></pre>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+     \text{maximize } z = \sum_{(s, j) \in E} f_{sj} - \sum_{(j, t) \in E} f_{jt}
+</div>
+<script type="math/tex; mode=display">
+     \text{maximize } z = \sum_{(s, j) \in E} f_{sj} - \sum_{(j, t) \in E} f_{jt}
+</script>
+</div>
 <pre><code> 여기서 $s$는 출발점, $t$는 목표점이다.
 </code></pre>
 <ol>
 <li><strong>제약 조건</strong>:</li>
 <li>각 노드에서 흐름 보존 조건:</li>
 </ol>
-<p>$$</p>
-<pre><code> \sum_{(i, j) \in E} f_{ij} - \sum_{(j, k) \in E} f_{jk} = 0 \quad \forall j \in V \setminus \{s, t\}
-</code></pre>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+     \sum_{(i, j) \in E} f_{ij} - \sum_{(j, k) \in E} f_{jk} = 0 \quad \forall j \in V \setminus \{s, t\}
+</div>
+<script type="math/tex; mode=display">
+     \sum_{(i, j) \in E} f_{ij} - \sum_{(j, k) \in E} f_{jk} = 0 \quad \forall j \in V \setminus \{s, t\}
+</script>
+</div>
 <ul>
 <li>용량 제약 조건:</li>
 </ul>
-<p>$$</p>
-<pre><code> 0 \leq f_{ij} \leq c_{ij} \quad \forall (i, j) \in E
-</code></pre>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+     0 \leq f_{ij} \leq c_{ij} \quad \forall (i, j) \in E
+</div>
+<script type="math/tex; mode=display">
+     0 \leq f_{ij} \leq c_{ij} \quad \forall (i, j) \in E
+</script>
+</div>
 <h3 id="_3">알고리즘</h3>
 <p>네트워크 흐름 문제를 해결하기 위한 알고리즘에는 여러 가지가 있으며, 대표적으로 다음과 같은 방법들이 있다:</p>
 <ul>
@@ -201,31 +213,53 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 <p>목적 함수:</p>
 </li>
 </ol>
-<p>$$</p>
-<p>\text{maximize } z = f_{BD} + f_{CD}</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+   \text{maximize } z = f_{BD} + f_{CD}
+</div>
+<script type="math/tex; mode=display">
+   \text{maximize } z = f_{BD} + f_{CD}
+</script>
+</div>
 <ol>
 <li>제약 조건:</li>
 <li>흐름 보존:</li>
 </ol>
-<p>$$</p>
-<pre><code> f_{AB} + f_{AC} = 0
-</code></pre>
-<p>$$</p>
-<p>$$</p>
-<pre><code> f_{AB} - f_{BD} = 0
-</code></pre>
-<p>$$</p>
-<p>$$</p>
-<pre><code> f_{AC} - f_{CD} = 0
-</code></pre>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+     f_{AB} + f_{AC} = 0
+</div>
+<script type="math/tex; mode=display">
+     f_{AB} + f_{AC} = 0
+</script>
+</div>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+     f_{AB} - f_{BD} = 0
+</div>
+<script type="math/tex; mode=display">
+     f_{AB} - f_{BD} = 0
+</script>
+</div>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+     f_{AC} - f_{CD} = 0
+</div>
+<script type="math/tex; mode=display">
+     f_{AC} - f_{CD} = 0
+</script>
+</div>
 <ol>
 <li>용량 제약:</li>
 </ol>
-<p>$$</p>
-<p>0 \leq f_{AB} \leq 10, \quad 0 \leq f_{AC} \leq 5, \quad 0 \leq f_{BD} \leq 15, \quad 0 \leq f_{CD} \leq 10</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+   0 \leq f_{AB} \leq 10, \quad 0 \leq f_{AC} \leq 5, \quad 0 \leq f_{BD} \leq 15, \quad 0 \leq f_{CD} \leq 10
+</div>
+<script type="math/tex; mode=display">
+   0 \leq f_{AB} \leq 10, \quad 0 \leq f_{AC} \leq 5, \quad 0 \leq f_{BD} \leq 15, \quad 0 \leq f_{CD} \leq 10
+</script>
+</div>
 <p>이 예제를 통해 간단한 네트워크 흐름 문제를 정의하고, 흐름을 최적화하기 위한 수학적 모델을 세울 수 있다.</p>
 <h3 id="_13">해결 방법</h3>
 <p>위에서 제시한 예제를 해결하기 위해, 네트워크 흐름 문제를 단체법(Simplex Method) 또는 에드몬드-카프 알고리즘을 사용하여 접근할 수 있다. 여기서는 에드몬드-카프 알고리즘을 사용하여 문제를 해결해 보자.</p>
@@ -233,15 +267,25 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 <ol>
 <li><strong>초기화</strong>: 모든 흐름 변수를 0으로 초기화한다.</li>
 </ol>
-<p>$$</p>
-<p>f_{AB} = 0, \quad f_{AC} = 0, \quad f_{BD} = 0, \quad f_{CD} = 0</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+   f_{AB} = 0, \quad f_{AC} = 0, \quad f_{BD} = 0, \quad f_{CD} = 0
+</div>
+<script type="math/tex; mode=display">
+   f_{AB} = 0, \quad f_{AC} = 0, \quad f_{BD} = 0, \quad f_{CD} = 0
+</script>
+</div>
 <ol>
 <li><strong>잔여 용량 계산</strong>: 각 엣지의 잔여 용량을 계산한다. 잔여 용량은 다음과 같이 정의된다:</li>
 </ol>
-<p>$$</p>
-<p>r_{ij} = c_{ij} - f_{ij}</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+   r_{ij} = c_{ij} - f_{ij}
+</div>
+<script type="math/tex; mode=display">
+   r_{ij} = c_{ij} - f_{ij}
+</script>
+</div>
 <ol>
 <li><strong>경로 찾기</strong>: BFS를 사용하여 출발점 <span class="arithmatex"><span class="MathJax_Preview">A</span><script type="math/tex">A</script></span>에서 목표점 <span class="arithmatex"><span class="MathJax_Preview">D</span><script type="math/tex">D</script></span>까지의 경로를 찾는다. 찾은 경로가 다음과 같다고 가정해봅시다:</li>
 <li>
@@ -251,13 +295,23 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 <p><strong>흐름 업데이트</strong>: 경로를 통해 흐름을 업데이트한다. 해당 경로에서 잔여 용량의 최솟값을 구하여 흐름을 증가시킨다. 예를 들어,</p>
 </li>
 </ol>
-<p>$$</p>
-<p>\text{최소 잔여 용량} = \min(r_{AB}, r_{BD}) = \min(10, 15) = 10</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+   \text{최소 잔여 용량} = \min(r_{AB}, r_{BD}) = \min(10, 15) = 10
+</div>
+<script type="math/tex; mode=display">
+   \text{최소 잔여 용량} = \min(r_{AB}, r_{BD}) = \min(10, 15) = 10
+</script>
+</div>
 <p>따라서, 각 엣지의 흐름을 업데이트한다:</p>
-<p>$$</p>
-<p>f_{AB} = 10, \quad f_{BD} = 10</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+   f_{AB} = 10, \quad f_{BD} = 10
+</div>
+<script type="math/tex; mode=display">
+   f_{AB} = 10, \quad f_{BD} = 10
+</script>
+</div>
 <ol>
 <li>
 <p><strong>반복</strong>: 흐름을 업데이트한 후, 잔여 용량을 다시 계산하고, 목표점까지의 새로운 경로를 찾아 반복한다.</p>

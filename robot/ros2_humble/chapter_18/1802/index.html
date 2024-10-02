@@ -156,9 +156,14 @@ int main(int argc, char *argv[])
 </ul>
 <h4 id="3">3. 수식 관련</h4>
 <p>만약 퍼블리싱 데이터가 단순한 텍스트가 아닌 벡터 데이터를 포함할 경우, 벡터 형태의 데이터를 다룰 수 있다. 예를 들어, <span class="arithmatex"><span class="MathJax_Preview">\mathbf{v} \in \mathbb{R}^3</span><script type="math/tex">\mathbf{v} \in \mathbb{R}^3</script></span>인 3차원 벡터 데이터를 퍼블리싱할 수 있다.</p>
-<p>$$</p>
-<p>\mathbf{v} = \begin{bmatrix} x \ y \ z \end{bmatrix}</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+\mathbf{v} = \begin{bmatrix} x \\ y \\ z \end{bmatrix}
+</div>
+<script type="math/tex; mode=display">
+\mathbf{v} = \begin{bmatrix} x \\ y \\ z \end{bmatrix}
+</script>
+</div>
 <p>여기서 <span class="arithmatex"><span class="MathJax_Preview">x</span><script type="math/tex">x</script></span>, <span class="arithmatex"><span class="MathJax_Preview">y</span><script type="math/tex">y</script></span>, <span class="arithmatex"><span class="MathJax_Preview">z</span><script type="math/tex">z</script></span>는 각각 퍼블리싱할 실수 값이다.</p>
 <h3 id="subscriber">서브스크라이버 (Subscriber) 구현</h3>
 <p>서브스크라이버는 퍼블리셔가 발행한 데이터를 받아 처리하는 역할을 한다. 퍼블리셔와 마찬가지로 <code>rclcpp</code> 라이브러리를 사용하여 서브스크라이버를 구현할 수 있다.</p>
@@ -200,9 +205,14 @@ int main(int argc, char *argv[])
 </ul>
 <h4 id="3_1">3. 수식 관련</h4>
 <p>만약 수신된 데이터가 벡터 데이터인 경우, 이를 처리할 수 있다. 예를 들어, 수신된 벡터 데이터를 처리할 수 있으며, 데이터는 다음과 같은 3차원 벡터일 수 있다.</p>
-<p>$$</p>
-<p>\mathbf{v} = \begin{bmatrix} x \ y \ z \end{bmatrix}</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+\mathbf{v} = \begin{bmatrix} x \\ y \\ z \end{bmatrix}
+</div>
+<script type="math/tex; mode=display">
+\mathbf{v} = \begin{bmatrix} x \\ y \\ z \end{bmatrix}
+</script>
+</div>
 <p>데이터는 각 축의 좌표로 해석되며, 수신 후 처리 로직에서 사용될 수 있다.</p>
 <h3 id="service">서비스 (Service) 구현</h3>
 <p>서비스는 요청(request)과 응답(response)으로 이루어진 통신 방식이다. ROS2에서 서비스는 서버와 클라이언트 구조로 동작하며, 서버는 클라이언트의 요청을 받아 처리하고, 클라이언트는 서버에 요청을 보내는 역할을 한다. 이를 구현하기 위해 <code>rclcpp</code>를 사용하여 C++로 서비스 서버와 클라이언트를 구현할 수 있다.</p>
@@ -248,9 +258,14 @@ int main(int argc, char *argv[])
 </ul>
 <h4 id="3_2">3. 수식 관련</h4>
 <p>요청에서 받은 값 <span class="arithmatex"><span class="MathJax_Preview">a</span><script type="math/tex">a</script></span>와 <span class="arithmatex"><span class="MathJax_Preview">b</span><script type="math/tex">b</script></span>는 각각 정수이며, 서버는 이 두 값을 더하여 응답으로 돌려준다.</p>
-<p>$$</p>
-<p>\text{sum} = a + b</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+\text{sum} = a + b
+</div>
+<script type="math/tex; mode=display">
+\text{sum} = a + b
+</script>
+</div>
 <p>여기서 <span class="arithmatex"><span class="MathJax_Preview">a, b \in \mathbb{Z}</span><script type="math/tex">a, b \in \mathbb{Z}</script></span>이며, 결과는 요청된 값의 합계이다.</p>
 <h4 id="4">4. 서비스 클라이언트 구현</h4>
 <p>클라이언트는 서버에 요청을 보내고 응답을 받는 역할을 한다.</p>
@@ -297,9 +312,14 @@ int main(int argc, char *argv[])
 </ul>
 <h4 id="6">6. 수식 관련</h4>
 <p>클라이언트에서 서버에 보낸 요청은 다음과 같다.</p>
-<p>$$</p>
-<p>a = 5, \quad b = 3</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+a = 5, \quad b = 3
+</div>
+<script type="math/tex; mode=display">
+a = 5, \quad b = 3
+</script>
+</div>
 <p>서버는 이 값을 받아 더한 결과 <span class="arithmatex"><span class="MathJax_Preview">\text{sum} = 8</span><script type="math/tex">\text{sum} = 8</script></span>을 응답으로 반환한다.</p>
 <h3 id="action">액션 (Action) 구현</h3>
 <p>액션은 장시간 수행되는 작업을 비동기적으로 처리할 수 있도록 도와주는 통신 방식이다. 액션은 액션 서버(Action Server)와 액션 클라이언트(Action Client)로 구성되며, 상태(State)와 피드백(Feedback)을 통해 작업의 진행 상황을 모니터링할 수 있다. 이를 통해 작업이 완료될 때까지 기다리거나 중간에 피드백을 받을 수 있다.</p>
@@ -398,9 +418,14 @@ int main(int argc, char *argv[])
 </ul>
 <h4 id="3_3">3. 수식 관련</h4>
 <p>피보나치 수열은 다음과 같은 재귀적인 수식으로 정의된다.</p>
-<p>$$</p>
-<p>F(0) = 0, \quad F(1) = 1, \quad F(n) = F(n-1) + F(n-2) \quad \text{for } n \geq 2</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+F(0) = 0, \quad F(1) = 1, \quad F(n) = F(n-1) + F(n-2) \quad \text{for } n \geq 2
+</div>
+<script type="math/tex; mode=display">
+F(0) = 0, \quad F(1) = 1, \quad F(n) = F(n-1) + F(n-2) \quad \text{for } n \geq 2
+</script>
+</div>
 <p>액션 서버는 이러한 피보나치 수열을 계산하여 클라이언트에게 피드백을 제공한다.</p>
 <h4 id="4_1">4. 액션 클라이언트 구현</h4>
 <p>클라이언트는 서버에 작업을 요청하고, 그 작업의 진행 상황을 실시간으로 모니터링할 수 있다.</p>

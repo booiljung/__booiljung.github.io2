@@ -251,9 +251,14 @@ int main() {
 <h3 id="_10">실시간 신호의 처리 지연</h3>
 <p>실시간 신호는 가능하면 즉시 처리되어야 하지만, 시스템 부하나 스레드의 상태에 따라 처리 지연이 발생할 수 있다. 이 지연은 신호가 큐에 추가된 후 스레드가 이를 처리할 때까지의 시간을 의미한다. Preempt RT 패치를 적용한 시스템에서는 이러한 지연을 최소화하기 위해 여러 최적화 기법이 사용된다.</p>
 <p>지연 시간 <span class="arithmatex"><span class="MathJax_Preview">T_{delay}</span><script type="math/tex">T_{delay}</script></span>는 다음과 같이 나타낼 수 있다:</p>
-<p>$$</p>
-<p>T_{delay} = T_{enqueue} + T_{dequeue} + T_{process}</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+T_{delay} = T_{enqueue} + T_{dequeue} + T_{process}
+</div>
+<script type="math/tex; mode=display">
+T_{delay} = T_{enqueue} + T_{dequeue} + T_{process}
+</script>
+</div>
 <p>여기서 <span class="arithmatex"><span class="MathJax_Preview">T_{enqueue}</span><script type="math/tex">T_{enqueue}</script></span>는 신호가 큐에 추가되는 시간, <span class="arithmatex"><span class="MathJax_Preview">T_{dequeue}</span><script type="math/tex">T_{dequeue}</script></span>는 큐에서 신호가 꺼내지는 시간, 그리고 <span class="arithmatex"><span class="MathJax_Preview">T_{process}</span><script type="math/tex">T_{process}</script></span>는 신호 처리에 소요되는 시간이다. 이 지연 시간을 줄이기 위해서는 각 요소의 최적화가 필요하다.</p>
 <h3 id="_11">실시간 신호의 최적화 전략</h3>
 <ol>

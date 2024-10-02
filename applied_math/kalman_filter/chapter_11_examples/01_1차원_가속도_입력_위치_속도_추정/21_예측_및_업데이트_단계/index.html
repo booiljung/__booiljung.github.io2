@@ -92,16 +92,26 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 <ol>
 <li><strong>상태 예측:</strong> 이전 상태 추정치 <span class="arithmatex"><span class="MathJax_Preview">\hat{\mathbf{x}}_{k-1|k-1}</span><script type="math/tex">\hat{\mathbf{x}}_{k-1|k-1}</script></span>를 이용해 다음 시간 <span class="arithmatex"><span class="MathJax_Preview">k</span><script type="math/tex">k</script></span>에서의 상태 <span class="arithmatex"><span class="MathJax_Preview">\hat{\mathbf{x}}_{k|k-1}</span><script type="math/tex">\hat{\mathbf{x}}_{k|k-1}</script></span>를 예측한다.</li>
 </ol>
-<p>$$
-   \hat{\mathbf{x}}<em>{k|k-1} = \mathbf{F} \hat{\mathbf{x}}</em>{k-1|k-1} + \mathbf{B} \mathbf{u}_{k-1}</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+   \hat{\mathbf{x}}_{k|k-1} = \mathbf{F} \hat{\mathbf{x}}_{k-1|k-1} + \mathbf{B} \mathbf{u}_{k-1}
+</div>
+<script type="math/tex; mode=display">
+   \hat{\mathbf{x}}_{k|k-1} = \mathbf{F} \hat{\mathbf{x}}_{k-1|k-1} + \mathbf{B} \mathbf{u}_{k-1}
+</script>
+</div>
 <p>여기서 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{F}</span><script type="math/tex">\mathbf{F}</script></span>는 상태 전이 행렬(State Transition Matrix), <span class="arithmatex"><span class="MathJax_Preview">\mathbf{B}</span><script type="math/tex">\mathbf{B}</script></span>는 입력 제어 행렬(Control Input Matrix), <span class="arithmatex"><span class="MathJax_Preview">\mathbf{u}_{k-1}</span><script type="math/tex">\mathbf{u}_{k-1}</script></span>는 입력 제어가다.</p>
 <ol>
 <li><strong>공분산 예측:</strong> 예측된 상태에 대한 불확실성을 나타내는 공분산 행렬 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{P}_{k|k-1}</span><script type="math/tex">\mathbf{P}_{k|k-1}</script></span>를 계산한다. 이는 이전 공분산 행렬 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{P}_{k-1|k-1}</span><script type="math/tex">\mathbf{P}_{k-1|k-1}</script></span>과 시스템의 잡음 특성에 따라 갱신된다.</li>
 </ol>
-<p>$$
-   \mathbf{P}<em>{k|k-1} = \mathbf{F} \mathbf{P}</em>{k-1|k-1} \mathbf{F}^{T} + \mathbf{Q}</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+   \mathbf{P}_{k|k-1} = \mathbf{F} \mathbf{P}_{k-1|k-1} \mathbf{F}^{T} + \mathbf{Q}
+</div>
+<script type="math/tex; mode=display">
+   \mathbf{P}_{k|k-1} = \mathbf{F} \mathbf{P}_{k-1|k-1} \mathbf{F}^{T} + \mathbf{Q}
+</script>
+</div>
 <p>여기서 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{Q}</span><script type="math/tex">\mathbf{Q}</script></span>는 시스템 노이즈 공분산(Process Noise Covariance) 행렬이다.</p>
 <p>예측 단계에서는 주어진 동적 모델을 통해 상태가 어떻게 변화할지를 예상하는 것이 핵심이다. 이 단계에서는 실제 측정값은 사용되지 않으며, 오직 이전 상태와 시스템 모델을 기반으로 예측이 이루어진다.</p>
 <h3 id="update-step">업데이트 단계 (Update Step)</h3>
@@ -109,23 +119,38 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 <ol>
 <li><strong>칼만 이득(Kalman Gain) 계산:</strong> 측정값의 신뢰도를 반영하여, 예측값을 얼마나 수정할지를 결정하는 칼만 이득 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{K}_{k}</span><script type="math/tex">\mathbf{K}_{k}</script></span>를 계산한다.</li>
 </ol>
-<p>$$
-   \mathbf{K}<em>{k} = \mathbf{P}</em>{k|k-1} \mathbf{H}^{T} \left(\mathbf{H} \mathbf{P}_{k|k-1} \mathbf{H}^{T} + \mathbf{R}\right)^{-1}</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+   \mathbf{K}_{k} = \mathbf{P}_{k|k-1} \mathbf{H}^{T} \left(\mathbf{H} \mathbf{P}_{k|k-1} \mathbf{H}^{T} + \mathbf{R}\right)^{-1}
+</div>
+<script type="math/tex; mode=display">
+   \mathbf{K}_{k} = \mathbf{P}_{k|k-1} \mathbf{H}^{T} \left(\mathbf{H} \mathbf{P}_{k|k-1} \mathbf{H}^{T} + \mathbf{R}\right)^{-1}
+</script>
+</div>
 <p>여기서 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{H}</span><script type="math/tex">\mathbf{H}</script></span>는 측정 행렬(Measurement Matrix), <span class="arithmatex"><span class="MathJax_Preview">\mathbf{R}</span><script type="math/tex">\mathbf{R}</script></span>은 측정 잡음 공분산(Measurement Noise Covariance) 행렬이다.</p>
 <ol>
 <li><strong>상태 업데이트:</strong> 예측된 상태 <span class="arithmatex"><span class="MathJax_Preview">\hat{\mathbf{x}}_{k|k-1}</span><script type="math/tex">\hat{\mathbf{x}}_{k|k-1}</script></span>를 측정값 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{z}_{k}</span><script type="math/tex">\mathbf{z}_{k}</script></span>를 반영하여 업데이트한다. </li>
 </ol>
-<p>$$
-   \hat{\mathbf{x}}<em>{k|k} = \hat{\mathbf{x}}</em>{k|k-1} + \mathbf{K}<em>{k} \left(\mathbf{z}</em>{k} - \mathbf{H} \hat{\mathbf{x}}_{k|k-1}\right)</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+   \hat{\mathbf{x}}_{k|k} = \hat{\mathbf{x}}_{k|k-1} + \mathbf{K}_{k} \left(\mathbf{z}_{k} - \mathbf{H} \hat{\mathbf{x}}_{k|k-1}\right)
+</div>
+<script type="math/tex; mode=display">
+   \hat{\mathbf{x}}_{k|k} = \hat{\mathbf{x}}_{k|k-1} + \mathbf{K}_{k} \left(\mathbf{z}_{k} - \mathbf{H} \hat{\mathbf{x}}_{k|k-1}\right)
+</script>
+</div>
 <p>여기서 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{z}_{k} - \hat{\mathbf{x}}_{k|k-1}</span><script type="math/tex">\mathbf{z}_{k} - \hat{\mathbf{x}}_{k|k-1}</script></span>는 잔차(Residual)로, 예측과 실제 측정값의 차이를 나타낸다.</p>
 <ol>
 <li><strong>공분산 업데이트:</strong> 상태 추정에 대한 불확실성도 함께 갱신된다. 갱신된 공분산 행렬 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{P}_{k|k}</span><script type="math/tex">\mathbf{P}_{k|k}</script></span>는 다음과 같이 계산된다:</li>
 </ol>
-<p>$$
-   \mathbf{P}<em>{k|k} = \left(\mathbf{I} - \mathbf{K}</em>{k} \mathbf{H}\right) \mathbf{P}_{k|k-1}</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+   \mathbf{P}_{k|k} = \left(\mathbf{I} - \mathbf{K}_{k} \mathbf{H}\right) \mathbf{P}_{k|k-1}
+</div>
+<script type="math/tex; mode=display">
+   \mathbf{P}_{k|k} = \left(\mathbf{I} - \mathbf{K}_{k} \mathbf{H}\right) \mathbf{P}_{k|k-1}
+</script>
+</div>
 <p>여기서 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{I}</span><script type="math/tex">\mathbf{I}</script></span>는 항등 행렬(Identity Matrix)이다.</p>
 <p>업데이트 단계에서는 예측된 상태에 대해 측정된 데이터를 반영하여 추정치를 보다 정확하게 조정한다. 이 과정을 통해 칼만 필터는 예측만으로는 얻을 수 없는 정확도를 달성하게 된다.</p>
 

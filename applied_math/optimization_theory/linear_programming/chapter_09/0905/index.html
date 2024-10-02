@@ -112,18 +112,28 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 <p>대규모 문제에서 내부점 방법을 적용하기 위해서는 효율적인 알고리즘 설계가 필요하다. 이는 주로 다음과 같은 측면에서 고려된다.</p>
 <h3 id="51">5.1. 대규모 행렬 연산 최적화</h3>
 <p>내부점 방법에서는 매 반복 회차마다 대규모의 선형 시스템을 풀어야 한다. 이 과정에서 대규모 행렬 연산을 최적화하는 것이 매우 중요하다. 특히, 내부점 방법에서 많이 사용되는 쿼지 뉴턴(quasi-Newton) 방법은 대규모의 행렬을 직접적으로 다루지 않고 근사적으로 처리하는 방식으로, 다음과 같은 수식을 사용한다.</p>
-<p>$$</p>
-<p>\mathbf{H}^{(k+1)} = \mathbf{H}^{(k)} + \frac{\Delta \mathbf{y} \Delta \mathbf{y}^\top}{\Delta \mathbf{y}^\top \Delta \mathbf{s}} - \frac{\mathbf{H}^{(k)} \Delta \mathbf{s} \Delta \mathbf{s}^\top \mathbf{H}^{(k)}}{\Delta \mathbf{s}^\top \mathbf{H}^{(k)} \Delta \mathbf{s}}</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+\mathbf{H}^{(k+1)} = \mathbf{H}^{(k)} + \frac{\Delta \mathbf{y} \Delta \mathbf{y}^\top}{\Delta \mathbf{y}^\top \Delta \mathbf{s}} - \frac{\mathbf{H}^{(k)} \Delta \mathbf{s} \Delta \mathbf{s}^\top \mathbf{H}^{(k)}}{\Delta \mathbf{s}^\top \mathbf{H}^{(k)} \Delta \mathbf{s}}
+</div>
+<script type="math/tex; mode=display">
+\mathbf{H}^{(k+1)} = \mathbf{H}^{(k)} + \frac{\Delta \mathbf{y} \Delta \mathbf{y}^\top}{\Delta \mathbf{y}^\top \Delta \mathbf{s}} - \frac{\mathbf{H}^{(k)} \Delta \mathbf{s} \Delta \mathbf{s}^\top \mathbf{H}^{(k)}}{\Delta \mathbf{s}^\top \mathbf{H}^{(k)} \Delta \mathbf{s}}
+</script>
+</div>
 <p>여기서:
 - <span class="arithmatex"><span class="MathJax_Preview">\mathbf{H}^{(k)}</span><script type="math/tex">\mathbf{H}^{(k)}</script></span>는 k번째 단계에서의 헤시안(Hessian) 근사,
 - <span class="arithmatex"><span class="MathJax_Preview">\Delta \mathbf{y}</span><script type="math/tex">\Delta \mathbf{y}</script></span>와 <span class="arithmatex"><span class="MathJax_Preview">\Delta \mathbf{s}</span><script type="math/tex">\Delta \mathbf{s}</script></span>는 각각 두 연속 단계 사이의 목적 함수 변화량과 변수 변화량을 나타낸다.</p>
 <p>이 방법은 행렬의 희소성과 대규모 문제에서의 연산 효율성을 극대화하는 데 기여한다.</p>
 <h3 id="52-multiple-central-paths">5.2. 다중 중심 경로(Multiple Central Paths)</h3>
 <p>대규모 문제에서 내부점 방법은 중심 경로(central path)를 따라 진행되는데, 이때 여러 개의 중심 경로를 고려하는 다중 중심 경로 방법이 유용할 수 있다. 다중 중심 경로는 대규모 문제의 특성에 따라 여러 경로를 동시에 추적함으로써 더 빠르게 수렴할 수 있도록 도와준다. 이 방법은 다음과 같은 수식으로 표현될 수 있다.</p>
-<p>$$</p>
-<p>\mathbf{x}(\mu) = \arg \min_{\mathbf{x}} \left( \mathbf{c}^\top \mathbf{x} + \mu \sum_{i=1}^n \log(x_i) \right)</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+\mathbf{x}(\mu) = \arg \min_{\mathbf{x}} \left( \mathbf{c}^\top \mathbf{x} + \mu \sum_{i=1}^n \log(x_i) \right)
+</div>
+<script type="math/tex; mode=display">
+\mathbf{x}(\mu) = \arg \min_{\mathbf{x}} \left( \mathbf{c}^\top \mathbf{x} + \mu \sum_{i=1}^n \log(x_i) \right)
+</script>
+</div>
 <p>여기서 <span class="arithmatex"><span class="MathJax_Preview">\mu</span><script type="math/tex">\mu</script></span>는 내부점에서의 페널티 파라미터를 나타내며, 이를 조절하여 중심 경로를 다중으로 생성할 수 있다.</p>
 <h3 id="53">5.3. 병렬 계산의 활용</h3>
 <p>대규모 문제를 해결하기 위해서는 병렬 계산 기법을 사용하는 것도 중요한 요소이다. 내부점 방법의 반복 회차는 서로 독립적인 부분 문제로 나눌 수 있기 때문에, 병렬 계산을 통해 계산 속도를 크게 향상시킬 수 있다. 특히 병렬 계산이 가능한 최신 CPU 및 GPU 아키텍처에서 내부점 방법의 효율성을 더욱 높일 수 있다.</p>
@@ -134,43 +144,57 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 <p>대규모 문제에서 내부점 방법의 수렴성은 중요한 요소이다. 내부점 방법은 문제의 규모가 커질수록 수렴 속도에 영향을 받기 때문에, 수렴성을 개선하기 위한 다양한 기술이 연구되고 있다.</p>
 <h3 id="61-primal-dual-approach">6.1. 프리멀-듀얼 접근법 (Primal-Dual Approach)</h3>
 <p>프리멀-듀얼 내부점 방법은 대규모 선형계획 문제에서 널리 사용되는 기법 중 하나이다. 이 방법은 프리멀 문제와 듀얼 문제를 동시에 풀어, 두 문제의 해가 수렴하도록 한다. 프리멀-듀얼 내부점 방법의 기본 수식은 다음과 같다.</p>
-<p>$$</p>
 <div class="arithmatex">
-<div class="MathJax_Preview">\begin{aligned}
+<div class="MathJax_Preview">
+\begin{aligned}
     &amp; \text{Minimize} \quad \mathbf{c}^\top \mathbf{x}, \\
     &amp; \text{Subject to} \quad \mathbf{A} \mathbf{x} = \mathbf{b}, \quad \mathbf{x} \geq 0
-\end{aligned}</div>
-<script type="math/tex; mode=display">\begin{aligned}
+\end{aligned}
+</div>
+<script type="math/tex; mode=display">
+\begin{aligned}
     & \text{Minimize} \quad \mathbf{c}^\top \mathbf{x}, \\
     & \text{Subject to} \quad \mathbf{A} \mathbf{x} = \mathbf{b}, \quad \mathbf{x} \geq 0
-\end{aligned}</script>
+\end{aligned}
+</script>
 </div>
-<p>$$</p>
-<p>$$</p>
 <div class="arithmatex">
-<div class="MathJax_Preview">\begin{aligned}
+<div class="MathJax_Preview">
+\begin{aligned}
     &amp; \text{Maximize} \quad \mathbf{b}^\top \mathbf{y}, \\
     &amp; \text{Subject to} \quad \mathbf{A}^\top \mathbf{y} \leq \mathbf{c}
-\end{aligned}</div>
-<script type="math/tex; mode=display">\begin{aligned}
+\end{aligned}
+</div>
+<script type="math/tex; mode=display">
+\begin{aligned}
     & \text{Maximize} \quad \mathbf{b}^\top \mathbf{y}, \\
     & \text{Subject to} \quad \mathbf{A}^\top \mathbf{y} \leq \mathbf{c}
-\end{aligned}</script>
+\end{aligned}
+</script>
 </div>
-<p>$$</p>
 <p>여기서 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{x}</span><script type="math/tex">\mathbf{x}</script></span>는 프리멀 문제의 해를, <span class="arithmatex"><span class="MathJax_Preview">\mathbf{y}</span><script type="math/tex">\mathbf{y}</script></span>는 듀얼 문제의 해를 나타낸다. 프리멀-듀얼 내부점 방법은 다음과 같은 두 가지 조건을 만족시키며 수렴한다.</p>
 <ol>
 <li><strong>프리멀-듀얼 갭(Primal-Dual Gap)</strong>이 0에 수렴할 것:</li>
 </ol>
-<p>$$</p>
-<p>\mathbf{c}^\top \mathbf{x} - \mathbf{b}^\top \mathbf{y} \to 0</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+   \mathbf{c}^\top \mathbf{x} - \mathbf{b}^\top \mathbf{y} \to 0
+</div>
+<script type="math/tex; mode=display">
+   \mathbf{c}^\top \mathbf{x} - \mathbf{b}^\top \mathbf{y} \to 0
+</script>
+</div>
 <ol>
 <li><strong>프리멀, 듀얼, 그리고 슬랙 조건</strong>이 모두 충족될 것:</li>
 </ol>
-<p>$$</p>
-<p>\mathbf{A} \mathbf{x} = \mathbf{b}, \quad \mathbf{A}^\top \mathbf{y} + \mathbf{s} = \mathbf{c}, \quad \mathbf{x}, \mathbf{s} \geq 0</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+   \mathbf{A} \mathbf{x} = \mathbf{b}, \quad \mathbf{A}^\top \mathbf{y} + \mathbf{s} = \mathbf{c}, \quad \mathbf{x}, \mathbf{s} \geq 0
+</div>
+<script type="math/tex; mode=display">
+   \mathbf{A} \mathbf{x} = \mathbf{b}, \quad \mathbf{A}^\top \mathbf{y} + \mathbf{s} = \mathbf{c}, \quad \mathbf{x}, \mathbf{s} \geq 0
+</script>
+</div>
 <p>이 방법을 통해 프리멀 문제와 듀얼 문제가 동시에 최적화되어 수렴 속도가 향상된다.</p>
 <h3 id="62">6.2. 선형 시스템 해법의 개선</h3>
 <p>내부점 방법의 핵심 단계 중 하나는 반복적인 선형 시스템의 해를 구하는 과정이다. 특히 대규모 문제에서는 이 과정이 매우 많은 계산을 요구하게 된다. 이를 개선하기 위한 여러 가지 방법이 있으며, 그중 하나는 직교화(Orthogonalization)와 축소 차원 기법(Dimension Reduction)이다. 이러한 방법을 통해 수치 안정성을 높이고 계산 비용을 줄일 수 있다.</p>
@@ -178,30 +202,50 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 <p>직교화는 선형 시스템을 풀 때 발생하는 수치적인 불안정을 방지하는 방법 중 하나이다. 선형 시스템의 해를 구하는 과정에서 행렬의 열이나 행이 선형적으로 종속되는 경우가 많을 수 있다. 이러한 경우 직교화 기법을 사용하여 종속성을 제거하고, 행렬을 더 안정적으로 만들 수 있다.</p>
 <h4 id="_2">차원 축소 기법</h4>
 <p>대규모 문제에서는 차원 축소 기법을 사용하여 문제의 크기를 줄일 수 있다. 차원 축소 기법은 문제의 해 공간을 축소하여 계산해야 할 변수의 수를 줄이는 방식으로, 이때 사용되는 대표적인 방법으로는 주성분 분석(PCA, Principal Component Analysis)이 있다.</p>
-<p>$$</p>
-<p>\mathbf{X}' = \mathbf{U}^\top \mathbf{X}</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+\mathbf{X}' = \mathbf{U}^\top \mathbf{X}
+</div>
+<script type="math/tex; mode=display">
+\mathbf{X}' = \mathbf{U}^\top \mathbf{X}
+</script>
+</div>
 <p>여기서 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{X}</span><script type="math/tex">\mathbf{X}</script></span>는 원본 데이터 행렬이고, <span class="arithmatex"><span class="MathJax_Preview">\mathbf{U}</span><script type="math/tex">\mathbf{U}</script></span>는 축소된 차원을 나타내는 변환 행렬이다.</p>
 <h3 id="63">6.3. 수렴 기준 조정</h3>
 <p>대규모 문제에서 내부점 방법이 수렴하는 데 필요한 기준은 문제의 특성에 따라 달라질 수 있다. 일반적으로 내부점 방법에서는 다음과 같은 수렴 기준을 사용한다.</p>
 <ul>
 <li><strong>프리멀 잔차(Primal Residual)</strong>: </li>
 </ul>
-<p>$$</p>
-<p>r_p = \mathbf{A} \mathbf{x} - \mathbf{b}</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+  r_p = \mathbf{A} \mathbf{x} - \mathbf{b}
+</div>
+<script type="math/tex; mode=display">
+  r_p = \mathbf{A} \mathbf{x} - \mathbf{b}
+</script>
+</div>
 <ul>
 <li><strong>듀얼 잔차(Dual Residual)</strong>: </li>
 </ul>
-<p>$$</p>
-<p>r_d = \mathbf{A}^\top \mathbf{y} + \mathbf{s} - \mathbf{c}</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+  r_d = \mathbf{A}^\top \mathbf{y} + \mathbf{s} - \mathbf{c}
+</div>
+<script type="math/tex; mode=display">
+  r_d = \mathbf{A}^\top \mathbf{y} + \mathbf{s} - \mathbf{c}
+</script>
+</div>
 <ul>
 <li><strong>갭 크기(Gap Size)</strong>:</li>
 </ul>
-<p>$$</p>
-<p>\text{Gap} = \mathbf{x}^\top \mathbf{s}</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+  \text{Gap} = \mathbf{x}^\top \mathbf{s}
+</div>
+<script type="math/tex; mode=display">
+  \text{Gap} = \mathbf{x}^\top \mathbf{s}
+</script>
+</div>
 <p>이러한 기준들은 대규모 문제에서 빠르고 정확한 수렴을 위해 조정될 수 있다. 특히 갭 크기는 대규모 문제에서 매우 작은 값으로 유지되어야 하며, 프리멀과 듀얼 잔차도 일정한 임계값 이하로 떨어져야 최적 해에 도달할 수 있다.</p>
 <h3 id="7">7. 대규모 문제에서의 메모리 관리 및 데이터 저장 기법</h3>
 <p>대규모 선형계획 문제는 매우 큰 크기의 행렬을 포함하며, 이를 효율적으로 처리하기 위해 메모리 관리와 데이터 저장 기법이 중요하다. 내부점 방법을 사용하여 대규모 문제를 해결할 때 메모리 사용량을 줄이기 위한 몇 가지 주요 전략이 있다.</p>
@@ -212,15 +256,26 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 <li><strong>압축 열 저장(Compressed Column Storage, CCS)</strong>:</li>
 <li>행렬의 각 열에 대해 비영 요소의 위치와 값을 압축하여 저장한다.</li>
 </ul>
-<p>$$</p>
-<p>\mathbf{A} =
+<div class="arithmatex">
+<div class="MathJax_Preview">
+\mathbf{A} =
 \begin{pmatrix}
-0 &amp; 1 &amp; 0 &amp; 0 \
-3 &amp; 0 &amp; 0 &amp; 0 \
-0 &amp; 0 &amp; 2 &amp; 0 \
+0 &amp; 1 &amp; 0 &amp; 0 \\
+3 &amp; 0 &amp; 0 &amp; 0 \\
+0 &amp; 0 &amp; 2 &amp; 0 \\
 0 &amp; 0 &amp; 0 &amp; 4
-\end{pmatrix}</p>
-<p>$$</p>
+\end{pmatrix}
+</div>
+<script type="math/tex; mode=display">
+\mathbf{A} =
+\begin{pmatrix}
+0 & 1 & 0 & 0 \\
+3 & 0 & 0 & 0 \\
+0 & 0 & 2 & 0 \\
+0 & 0 & 0 & 4
+\end{pmatrix}
+</script>
+</div>
 <p>위와 같은 행렬을 CCS 방식으로 저장하면 비영 요소의 값과 해당 열에서의 위치 정보만 저장하므로, 메모리 사용량을 줄일 수 있다.</p>
 <ul>
 <li><strong>압축 행 저장(Compressed Row Storage, CRS)</strong>:</li>
@@ -228,14 +283,24 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 </ul>
 <h3 id="72-block-structure">7.2. 블록 구조 활용 (Block Structure)</h3>
 <p>대규모 문제는 종종 블록 구조를 가지고 있다. 블록 구조란 제약 조건 행렬이나 목적 함수 행렬이 여러 개의 작은 블록으로 나누어질 수 있는 경우를 말한다. 이러한 구조를 활용하면 계산을 병렬화하거나 메모리 관리에서 효율성을 높일 수 있다.</p>
-<p>$$</p>
-<p>\mathbf{A} =
+<div class="arithmatex">
+<div class="MathJax_Preview">
+\mathbf{A} =
 \begin{bmatrix}
-\mathbf{A}_1 &amp; \mathbf{0} &amp; \mathbf{0} \
-\mathbf{0} &amp; \mathbf{A}_2 &amp; \mathbf{0} \
+\mathbf{A}_1 &amp; \mathbf{0} &amp; \mathbf{0} \\
+\mathbf{0} &amp; \mathbf{A}_2 &amp; \mathbf{0} \\
 \mathbf{0} &amp; \mathbf{0} &amp; \mathbf{A}_3
-\end{bmatrix}</p>
-<p>$$</p>
+\end{bmatrix}
+</div>
+<script type="math/tex; mode=display">
+\mathbf{A} =
+\begin{bmatrix}
+\mathbf{A}_1 & \mathbf{0} & \mathbf{0} \\
+\mathbf{0} & \mathbf{A}_2 & \mathbf{0} \\
+\mathbf{0} & \mathbf{0} & \mathbf{A}_3
+\end{bmatrix}
+</script>
+</div>
 <p>위와 같은 블록 대각 행렬(Block Diagonal Matrix)은 각 블록을 독립적으로 계산할 수 있기 때문에, 병렬 처리나 메모리 최적화에 유리한다. 각 블록이 독립적으로 해결 가능한 하위 문제를 나타내므로, 전체 문제를 작은 문제로 분할할 수 있다.</p>
 <h3 id="73-parallel-and-distributed-computing">7.3. 병렬 처리와 분산 계산 (Parallel and Distributed Computing)</h3>
 <p>대규모 선형계획 문제를 풀 때는 병렬 처리와 분산 계산을 효과적으로 활용할 수 있다. 특히 내부점 방법은 각 반복 과정이 일정 부분 독립적이기 때문에 병렬 처리가 가능하며, 여러 프로세서나 컴퓨팅 노드를 사용하여 계산 시간을 크게 줄일 수 있다.</p>
@@ -246,18 +311,28 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 <p>이러한 기술들은 특히 클라우드 환경이나 고성능 컴퓨팅(High-Performance Computing, HPC) 환경에서 많이 사용되며, 대규모 문제의 해결 시간을 크게 단축할 수 있다.</p>
 <h3 id="74-precision-adjustment">7.4. 정밀도 조정 (Precision Adjustment)</h3>
 <p>대규모 문제를 해결할 때, 계산의 정확도를 어느 정도 조정하는 것이 필요할 수 있다. 일반적으로 내부점 방법은 매우 높은 정밀도로 계산을 진행하지만, 대규모 문제에서는 이로 인해 계산 시간이 급격히 증가할 수 있다. 따라서 경우에 따라 정밀도를 적절히 조정하여 계산 시간을 줄이는 것이 유리할 수 있다.</p>
-<p>$$</p>
-<p>\mathbf{x}^* = \mathbf{x} + \epsilon</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+\mathbf{x}^* = \mathbf{x} + \epsilon
+</div>
+<script type="math/tex; mode=display">
+\mathbf{x}^* = \mathbf{x} + \epsilon
+</script>
+</div>
 <p>여기서 <span class="arithmatex"><span class="MathJax_Preview">\epsilon</span><script type="math/tex">\epsilon</script></span>은 작은 오차로, 허용 가능한 정밀도 범위 내에서 해결할 수 있다. 이 방식은 대규모 문제에서 해가 매우 민감하지 않다면 계산 시간을 크게 줄일 수 있는 방법이다.</p>
 <h3 id="8">8. 대규모 문제에 대한 내부점 방법의 확장과 변형</h3>
 <p>대규모 문제를 다루기 위한 내부점 방법의 확장과 변형은 다양한 방식으로 이루어진다. 특히 다차원 문제나 복합 구조의 선형계획 문제를 해결하는 데 있어 내부점 방법을 효과적으로 적용하기 위해서는 기존 알고리즘을 확장하거나 변형하는 기술이 중요하다.</p>
 <h3 id="81-primal-dual-path-following-methods">8.1. 프리멀-듀얼 경로 추적 방법 (Primal-Dual Path-Following Methods)</h3>
 <p>프리멀-듀얼 경로 추적 방법은 대규모 문제에서 내부점 방법의 성능을 높이기 위한 대표적인 확장 방법이다. 이 방법은 프리멀 문제와 듀얼 문제를 동시에 해결하면서, 경로 추적을 통해 점진적으로 최적 해에 도달하는 방식을 사용한다. 이때 경로 추적은 프리멀-듀얼 갭을 줄여 나가는 방식으로 이루어진다.</p>
 <p>프리멀-듀얼 내부점 방법에서의 업데이트 방식은 다음과 같다.</p>
-<p>$$</p>
-<p>\mathbf{x}^{(k+1)} = \mathbf{x}^{(k)} + \alpha \Delta \mathbf{x}, \quad \mathbf{y}^{(k+1)} = \mathbf{y}^{(k)} + \alpha \Delta \mathbf{y}, \quad \mathbf{s}^{(k+1)} = \mathbf{s}^{(k)} + \alpha \Delta \mathbf{s}</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+\mathbf{x}^{(k+1)} = \mathbf{x}^{(k)} + \alpha \Delta \mathbf{x}, \quad \mathbf{y}^{(k+1)} = \mathbf{y}^{(k)} + \alpha \Delta \mathbf{y}, \quad \mathbf{s}^{(k+1)} = \mathbf{s}^{(k)} + \alpha \Delta \mathbf{s}
+</div>
+<script type="math/tex; mode=display">
+\mathbf{x}^{(k+1)} = \mathbf{x}^{(k)} + \alpha \Delta \mathbf{x}, \quad \mathbf{y}^{(k+1)} = \mathbf{y}^{(k)} + \alpha \Delta \mathbf{y}, \quad \mathbf{s}^{(k+1)} = \mathbf{s}^{(k)} + \alpha \Delta \mathbf{s}
+</script>
+</div>
 <p>여기서:
 - <span class="arithmatex"><span class="MathJax_Preview">\mathbf{x}, \mathbf{y}, \mathbf{s}</span><script type="math/tex">\mathbf{x}, \mathbf{y}, \mathbf{s}</script></span>는 각각 프리멀 변수, 듀얼 변수, 슬랙 변수,
 - <span class="arithmatex"><span class="MathJax_Preview">\alpha</span><script type="math/tex">\alpha</script></span>는 스텝 크기(step size),
@@ -270,28 +345,48 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 <ul>
 <li><strong>예측 단계</strong>: 큰 스텝을 사용하여 빠르게 해를 추정한다.</li>
 </ul>
-<p>$$</p>
-<p>\mathbf{x}^{\text{predict}} = \mathbf{x}^{(k)} + \alpha \Delta \mathbf{x}</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+  \mathbf{x}^{\text{predict}} = \mathbf{x}^{(k)} + \alpha \Delta \mathbf{x}
+</div>
+<script type="math/tex; mode=display">
+  \mathbf{x}^{\text{predict}} = \mathbf{x}^{(k)} + \alpha \Delta \mathbf{x}
+</script>
+</div>
 <ul>
 <li><strong>수정 단계</strong>: 예측한 해를 바탕으로 더 작은 스텝을 사용하여 수정한다.</li>
 </ul>
-<p>$$</p>
-<p>\mathbf{x}^{(k+1)} = \mathbf{x}^{\text{predict}} + \beta \Delta \mathbf{x}^{\text{correct}}</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+  \mathbf{x}^{(k+1)} = \mathbf{x}^{\text{predict}} + \beta \Delta \mathbf{x}^{\text{correct}}
+</div>
+<script type="math/tex; mode=display">
+  \mathbf{x}^{(k+1)} = \mathbf{x}^{\text{predict}} + \beta \Delta \mathbf{x}^{\text{correct}}
+</script>
+</div>
 <p>이 기법은 각 회차의 스텝 수를 줄여 계산 속도를 높이지만, 정확도를 유지할 수 있는 장점이 있다.</p>
 <h4 id="exponential-reduction">지수 감소 기법 (Exponential Reduction)</h4>
 <p>지수 감소 기법은 경로 추적 과정에서 프리멀-듀얼 갭을 줄이는 데 사용된다. 이 기법은 반복 회차마다 갭이 지수적으로 감소하도록 유도하는 방식으로, 대규모 문제에서도 빠른 수렴을 도모한다. 예를 들어, 프리멀-듀얼 갭이 다음과 같이 지수적으로 줄어든다.</p>
-<p>$$</p>
-<p>\text{Gap}^{(k+1)} = \rho \cdot \text{Gap}^{(k)}, \quad \rho &lt; 1</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+\text{Gap}^{(k+1)} = \rho \cdot \text{Gap}^{(k)}, \quad \rho &lt; 1
+</div>
+<script type="math/tex; mode=display">
+\text{Gap}^{(k+1)} = \rho \cdot \text{Gap}^{(k)}, \quad \rho < 1
+</script>
+</div>
 <p>이 방식은 갭이 매우 작은 값에 빠르게 수렴할 수 있도록 하여, 대규모 문제에서도 효과적인 해를 구할 수 있다.</p>
 <h3 id="83-preconditioning-techniques">8.3. 사전 조건화 기법 (Preconditioning Techniques)</h3>
 <p>사전 조건화 기법은 대규모 문제에서 선형 시스템을 더 빠르고 정확하게 풀기 위해 사용된다. 사전 조건화는 선형 시스템의 조건 수(condition number)를 개선하여, 수치적으로 더 안정적인 결과를 얻는 데 도움을 준다.</p>
 <p>대표적인 사전 조건화 기법으로는 <strong>불완전 LU 분해(Incomplete LU Decomposition, ILU)</strong>가 있다. 이 기법은 원본 행렬을 다음과 같이 분해하여 근사 해를 구하는 방식이다.</p>
-<p>$$</p>
-<p>\mathbf{A} \approx \mathbf{L} \mathbf{U}</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+\mathbf{A} \approx \mathbf{L} \mathbf{U}
+</div>
+<script type="math/tex; mode=display">
+\mathbf{A} \approx \mathbf{L} \mathbf{U}
+</script>
+</div>
 <p>여기서:
 - <span class="arithmatex"><span class="MathJax_Preview">\mathbf{L}</span><script type="math/tex">\mathbf{L}</script></span>은 하삼각 행렬(lower triangular matrix),
 - <span class="arithmatex"><span class="MathJax_Preview">\mathbf{U}</span><script type="math/tex">\mathbf{U}</script></span>은 상삼각 행렬(upper triangular matrix)이다.</p>
@@ -300,20 +395,22 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 <p>대규모 네트워크 최적화 문제는 선형계획법의 주요 응용 분야 중 하나이다. 특히, 내부점 방법은 대규모 네트워크 흐름 문제나 교통 네트워크 문제와 같은 복잡한 문제에 적용되어 효과적인 해결책을 제공한다.</p>
 <h3 id="91-network-flow-problems">9.1. 네트워크 흐름 문제(Network Flow Problems)</h3>
 <p>네트워크 흐름 문제는 선형계획법에서 중요한 응용 사례로, 내부점 방법을 통해 대규모 네트워크의 흐름을 최적화할 수 있다. 대표적인 네트워크 흐름 문제는 다음과 같이 표현된다.</p>
-<p>$$</p>
 <div class="arithmatex">
-<div class="MathJax_Preview">\begin{aligned}
+<div class="MathJax_Preview">
+\begin{aligned}
     \text{Minimize} \quad &amp; \mathbf{c}^\top \mathbf{x} \\
     \text{Subject to} \quad &amp; \mathbf{A}_f \mathbf{x} = \mathbf{b}_f, \\
     &amp; \mathbf{x} \geq 0
-\end{aligned}</div>
-<script type="math/tex; mode=display">\begin{aligned}
+\end{aligned}
+</div>
+<script type="math/tex; mode=display">
+\begin{aligned}
     \text{Minimize} \quad & \mathbf{c}^\top \mathbf{x} \\
     \text{Subject to} \quad & \mathbf{A}_f \mathbf{x} = \mathbf{b}_f, \\
     & \mathbf{x} \geq 0
-\end{aligned}</script>
+\end{aligned}
+</script>
 </div>
-<p>$$</p>
 <p>여기서:
 - <span class="arithmatex"><span class="MathJax_Preview">\mathbf{A}_f</span><script type="math/tex">\mathbf{A}_f</script></span>는 네트워크의 흐름 제약을 나타내는 희소 행렬(Sparse Matrix),
 - <span class="arithmatex"><span class="MathJax_Preview">\mathbf{b}_f</span><script type="math/tex">\mathbf{b}_f</script></span>는 공급 및 수요 노드의 벡터,
@@ -322,20 +419,22 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 <h3 id="92-multistage-network-problems">9.2. 다중 단계 네트워크 문제 (Multistage Network Problems)</h3>
 <p>다중 단계 네트워크 문제는 여러 시간 또는 단계에 걸쳐 최적화가 이루어지는 문제로, 교통 시스템, 물류 네트워크 등에서 자주 등장한다. 이러한 문제는 각 단계에서 네트워크 흐름을 최적화하면서도 전체 시스템의 장기적인 최적화를 달성해야 하는 복잡한 특성을 가지고 있다.</p>
 <p>다중 단계 네트워크 문제의 수식 표현은 다음과 같다.</p>
-<p>$$</p>
 <div class="arithmatex">
-<div class="MathJax_Preview">\begin{aligned}
+<div class="MathJax_Preview">
+\begin{aligned}
     \text{Minimize} \quad &amp; \sum_{t=1}^{T} \mathbf{c}_t^\top \mathbf{x}_t \\
     \text{Subject to} \quad &amp; \mathbf{A}_t \mathbf{x}_t = \mathbf{b}_t, \quad t = 1, \dots, T \\
     &amp; \mathbf{x}_t \geq 0, \quad t = 1, \dots, T
-\end{aligned}</div>
-<script type="math/tex; mode=display">\begin{aligned}
+\end{aligned}
+</div>
+<script type="math/tex; mode=display">
+\begin{aligned}
     \text{Minimize} \quad & \sum_{t=1}^{T} \mathbf{c}_t^\top \mathbf{x}_t \\
     \text{Subject to} \quad & \mathbf{A}_t \mathbf{x}_t = \mathbf{b}_t, \quad t = 1, \dots, T \\
     & \mathbf{x}_t \geq 0, \quad t = 1, \dots, T
-\end{aligned}</script>
+\end{aligned}
+</script>
 </div>
-<p>$$</p>
 <p>여기서:
 - <span class="arithmatex"><span class="MathJax_Preview">T</span><script type="math/tex">T</script></span>는 총 단계 수,
 - <span class="arithmatex"><span class="MathJax_Preview">\mathbf{c}_t</span><script type="math/tex">\mathbf{c}_t</script></span>는 t번째 단계에서의 비용 벡터,
@@ -358,13 +457,23 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 <p>내부점 방법의 시간 복잡도는 다음과 같은 주요 요소들에 의해 결정된다.</p>
 <h4 id="number-of-iterations">반복 회차 수 (Number of Iterations)</h4>
 <p>내부점 방법은 일반적으로 반복적으로 해를 개선해 나가는 방식이다. 각 반복 회차에서의 시간 복잡도는 보통 다음과 같이 표현된다.</p>
-<p>$$</p>
-<p>O(m^3)</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+O(m^3)
+</div>
+<script type="math/tex; mode=display">
+O(m^3)
+</script>
+</div>
 <p>여기서 <span class="arithmatex"><span class="MathJax_Preview">m</span><script type="math/tex">m</script></span>은 제약 조건의 수이다. 대규모 네트워크 문제에서 <span class="arithmatex"><span class="MathJax_Preview">m</span><script type="math/tex">m</script></span>은 매우 클 수 있기 때문에 반복 회차마다 발생하는 연산 비용이 상당히 커질 수 있다. 하지만 내부점 방법은 일반적으로 적은 수의 반복 회차만 필요하므로, 전체 시간 복잡도는 다음과 같이 나타낼 수 있다.</p>
-<p>$$</p>
-<p>O(n m^2)</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+O(n m^2)
+</div>
+<script type="math/tex; mode=display">
+O(n m^2)
+</script>
+</div>
 <p>여기서 <span class="arithmatex"><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span>은 변수의 수이다. 이 수식은 네트워크 문제에서 희소 행렬을 사용하여 최적화할 때 개선될 수 있으며, 내부점 방법이 네트워크 문제에 효과적으로 사용되는 이유 중 하나이다.</p>
 <h3 id="95">9.5. 내부점 방법의 병렬화 및 시간 단축</h3>
 <p>대규모 네트워크 문제에서 내부점 방법의 성능을 높이기 위한 중요한 기법 중 하나는 병렬화이다. 병렬화를 통해 각 반복 회차에서 발생하는 계산을 여러 프로세서 또는 코어로 나누어 수행할 수 있다.</p>

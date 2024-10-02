@@ -174,24 +174,49 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 <ol>
 <li><strong>시간 갱신 (Time Update):</strong> 기존 상태 추정과 오차 공분산 행렬을 이용하여 다음 상태에 대한 예측을 수행한다.</li>
 </ol>
-<p>$$
-   \hat{\mathbf{x}}<em>{k|k-1} = \mathbf{F}</em>{k-1} \hat{\mathbf{x}}_{k-1}</p>
-<p>$$</p>
-<p>$$
-   \mathbf{P}<em>{k|k-1} = \mathbf{F}</em>{k-1} \mathbf{P}<em>{k-1} \mathbf{F}</em>{k-1}^\top + \mathbf{Q}_{k-1}</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+   \hat{\mathbf{x}}_{k|k-1} = \mathbf{F}_{k-1} \hat{\mathbf{x}}_{k-1}
+</div>
+<script type="math/tex; mode=display">
+   \hat{\mathbf{x}}_{k|k-1} = \mathbf{F}_{k-1} \hat{\mathbf{x}}_{k-1}
+</script>
+</div>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+   \mathbf{P}_{k|k-1} = \mathbf{F}_{k-1} \mathbf{P}_{k-1} \mathbf{F}_{k-1}^\top + \mathbf{Q}_{k-1}
+</div>
+<script type="math/tex; mode=display">
+   \mathbf{P}_{k|k-1} = \mathbf{F}_{k-1} \mathbf{P}_{k-1} \mathbf{F}_{k-1}^\top + \mathbf{Q}_{k-1}
+</script>
+</div>
 <ol>
 <li><strong>측정 갱신 (Measurement Update):</strong> 예측된 상태를 바탕으로 실제 측정을 반영하여 상태 추정을 갱신한다.</li>
 </ol>
-<p>$$
-   \mathbf{K}<em>k = \mathbf{P}</em>{k|k-1} \mathbf{H}<em>k^\top (\mathbf{H}_k \mathbf{P}</em>{k|k-1} \mathbf{H}_k^\top + \mathbf{R}_k)^{-1}</p>
-<p>$$</p>
-<p>$$
-   \hat{\mathbf{x}}<em>k = \hat{\mathbf{x}}</em>{k|k-1} + \mathbf{K}<em>k (\mathbf{z}_k - \mathbf{H}_k \hat{\mathbf{x}}</em>{k|k-1})</p>
-<p>$$</p>
-<p>$$
-   \mathbf{P}<em>k = (\mathbf{I} - \mathbf{K}_k \mathbf{H}_k) \mathbf{P}</em>{k|k-1}</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+   \mathbf{K}_k = \mathbf{P}_{k|k-1} \mathbf{H}_k^\top (\mathbf{H}_k \mathbf{P}_{k|k-1} \mathbf{H}_k^\top + \mathbf{R}_k)^{-1}
+</div>
+<script type="math/tex; mode=display">
+   \mathbf{K}_k = \mathbf{P}_{k|k-1} \mathbf{H}_k^\top (\mathbf{H}_k \mathbf{P}_{k|k-1} \mathbf{H}_k^\top + \mathbf{R}_k)^{-1}
+</script>
+</div>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+   \hat{\mathbf{x}}_k = \hat{\mathbf{x}}_{k|k-1} + \mathbf{K}_k (\mathbf{z}_k - \mathbf{H}_k \hat{\mathbf{x}}_{k|k-1})
+</div>
+<script type="math/tex; mode=display">
+   \hat{\mathbf{x}}_k = \hat{\mathbf{x}}_{k|k-1} + \mathbf{K}_k (\mathbf{z}_k - \mathbf{H}_k \hat{\mathbf{x}}_{k|k-1})
+</script>
+</div>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+   \mathbf{P}_k = (\mathbf{I} - \mathbf{K}_k \mathbf{H}_k) \mathbf{P}_{k|k-1}
+</div>
+<script type="math/tex; mode=display">
+   \mathbf{P}_k = (\mathbf{I} - \mathbf{K}_k \mathbf{H}_k) \mathbf{P}_{k|k-1}
+</script>
+</div>
 <ol>
 <li><strong>잡음 공분산 행렬 업데이트:</strong> 필터링 과정에서 수집된 정보를 바탕으로 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{Q}_k</span><script type="math/tex">\mathbf{Q}_k</script></span>와 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{R}_k</span><script type="math/tex">\mathbf{R}_k</script></span>를 적응적으로 갱신한다. 이 업데이트는 필터의 특성에 따라 다르게 구현될 수 있으며, 실시간 성능 모니터링과 분석을 통해 조정된다.</li>
 </ol>
@@ -215,9 +240,14 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 <ul>
 <li><strong>평균 제곱 오차 (Mean Squared Error, MSE):</strong> 상태 추정 오차의 평균 제곱값을 계산하여 필터의 정확성을 평가한다.</li>
 </ul>
-<p>$$
-  \text{MSE} = \frac{1}{N} \sum_{k=1}^{N} (\mathbf{x}_k - \hat{\mathbf{x}}_k)^\top (\mathbf{x}_k - \hat{\mathbf{x}}_k)</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+  \text{MSE} = \frac{1}{N} \sum_{k=1}^{N} (\mathbf{x}_k - \hat{\mathbf{x}}_k)^\top (\mathbf{x}_k - \hat{\mathbf{x}}_k)
+</div>
+<script type="math/tex; mode=display">
+  \text{MSE} = \frac{1}{N} \sum_{k=1}^{N} (\mathbf{x}_k - \hat{\mathbf{x}}_k)^\top (\mathbf{x}_k - \hat{\mathbf{x}}_k)
+</script>
+</div>
 <p>MSE는 필터가 얼마나 정확하게 상태를 추정하는지를 나타내며, 값이 작을수록 필터의 성능이 우수함을 의미한다.</p>
 <ul>
 <li><strong>혁신 벡터의 통계적 특성:</strong> 혁신 벡터 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{y}_k = \mathbf{z}_k - \mathbf{H}_k \hat{\mathbf{x}}_k</span><script type="math/tex">\mathbf{y}_k = \mathbf{z}_k - \mathbf{H}_k \hat{\mathbf{x}}_k</script></span>는 예상된 측정과 실제 측정 간의 차이를 나타내며, 이 벡터의 통계적 특성을 분석하여 필터의 성능을 평가할 수 있다. 이상적으로, 혁신 벡터는 평균이 0이고, 공분산이 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{S}_k</span><script type="math/tex">\mathbf{S}_k</script></span>인 가우시안 분포를 따라야 한다.</li>

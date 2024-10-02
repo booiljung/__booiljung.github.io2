@@ -118,9 +118,14 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 <li><strong>기계 학습 기초</strong>: 기본적인 회귀, 분류, 클러스터링 등 기계 학습 모델을 학습하고, 이를 ChatGPT와 같은 생성 모델의 맥락에서 어떻게 활용할 수 있을지 생각해 본다.</li>
 </ul>
 <p>대표적인 모델인 선형 회귀는 다음과 같은 수식으로 표현된다:</p>
-<p>$$</p>
-<p>y = \mathbf{X} \beta + \epsilon</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+  y = \mathbf{X} \beta + \epsilon
+</div>
+<script type="math/tex; mode=display">
+  y = \mathbf{X} \beta + \epsilon
+</script>
+</div>
 <p>여기서 <strong><span class="arithmatex"><span class="MathJax_Preview">\mathbf{X}</span><script type="math/tex">\mathbf{X}</script></span></strong>는 입력 벡터, <strong><span class="arithmatex"><span class="MathJax_Preview">\beta</span><script type="math/tex">\beta</script></span></strong>는 계수 벡터, <strong><span class="arithmatex"><span class="MathJax_Preview">\epsilon</span><script type="math/tex">\epsilon</script></span></strong>은 오차 항이다.</p>
 <h3 id="3">3. 데이터 과학 및 분석 기법 학습</h3>
 <p>ChatGPT API는 텍스트 생성을 넘어, 다양한 데이터 과학 작업에 사용할 수 있다. API와 Python을 활용하여 데이터를 처리하고 분석하는 능력을 키우는 것이 중요하다. 권장 학습 내용은 다음과 같다.</p>
@@ -128,9 +133,14 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 <li><strong>데이터 전처리</strong>: Pandas, NumPy와 같은 라이브러리를 사용하여 데이터를 정리하고, 분석에 적합한 형태로 가공하는 방법을 배운다.</li>
 </ul>
 <p>데이터 전처리의 한 예로, 결측값이 포함된 <strong><span class="arithmatex"><span class="MathJax_Preview">\mathbf{X}</span><script type="math/tex">\mathbf{X}</script></span></strong> 행렬에서 결측값을 채우는 방법은 다음과 같이 표현될 수 있다.</p>
-<p>$$</p>
-<p>\mathbf{X}<em>{ij} = \text{mean of column } j \text{ if } \mathbf{X}</em>{ij} \text{ is missing}</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+  \mathbf{X}_{ij} = \text{mean of column } j \text{ if } \mathbf{X}_{ij} \text{ is missing}
+</div>
+<script type="math/tex; mode=display">
+  \mathbf{X}_{ij} = \text{mean of column } j \text{ if } \mathbf{X}_{ij} \text{ is missing}
+</script>
+</div>
 <ul>
 <li>
 <p><strong>통계 분석</strong>: 기본적인 통계 기법을 학습하여 API가 생성하는 텍스트의 특성을 수량적으로 분석할 수 있다. 예를 들어, 생성된 텍스트에서 특정 단어의 출현 빈도를 분석하거나, 생성된 응답의 길이를 통계적으로 분석할 수 있다.</p>
@@ -158,9 +168,14 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 <li><strong>Transformer 구조</strong>: GPT 모델이 사용하는 Transformer 구조에 대해 학습한다. 특히, <strong><span class="arithmatex"><span class="MathJax_Preview">\mathbf{Q}</span><script type="math/tex">\mathbf{Q}</script></span></strong>, <strong><span class="arithmatex"><span class="MathJax_Preview">\mathbf{K}</span><script type="math/tex">\mathbf{K}</script></span></strong>, <strong><span class="arithmatex"><span class="MathJax_Preview">\mathbf{V}</span><script type="math/tex">\mathbf{V}</script></span></strong> 벡터로 구성된 어텐션 메커니즘은 GPT의 핵심 요소이다.</li>
 </ul>
 <p>어텐션 메커니즘의 수식은 다음과 같이 표현된다:</p>
-<p>$$</p>
-<p>\text{Attention}(\mathbf{Q}, \mathbf{K}, \mathbf{V}) = \text{softmax} \left( \frac{\mathbf{Q} \mathbf{K}^T}{\sqrt{d_k}} \right) \mathbf{V}</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+  \text{Attention}(\mathbf{Q}, \mathbf{K}, \mathbf{V}) = \text{softmax} \left( \frac{\mathbf{Q} \mathbf{K}^T}{\sqrt{d_k}} \right) \mathbf{V}
+</div>
+<script type="math/tex; mode=display">
+  \text{Attention}(\mathbf{Q}, \mathbf{K}, \mathbf{V}) = \text{softmax} \left( \frac{\mathbf{Q} \mathbf{K}^T}{\sqrt{d_k}} \right) \mathbf{V}
+</script>
+</div>
 <p>여기서 <strong><span class="arithmatex"><span class="MathJax_Preview">\mathbf{Q}</span><script type="math/tex">\mathbf{Q}</script></span></strong>는 쿼리 벡터, <strong><span class="arithmatex"><span class="MathJax_Preview">\mathbf{K}</span><script type="math/tex">\mathbf{K}</script></span></strong>는 키 벡터, <strong><span class="arithmatex"><span class="MathJax_Preview">\mathbf{V}</span><script type="math/tex">\mathbf{V}</script></span></strong>는 값 벡터, <strong><span class="arithmatex"><span class="MathJax_Preview">d_k</span><script type="math/tex">d_k</script></span></strong>는 키 벡터의 차원이다.</p>
 <ul>
 <li>

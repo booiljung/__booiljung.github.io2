@@ -180,9 +180,14 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 <ul>
 <li>상태 전이 중 특정 조건 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{C}_{ij}</span><script type="math/tex">\mathbf{C}_{ij}</script></span>가 충족되면:</li>
 </ul>
-<p>$$
-  \mathbf{S}<em>i \xrightarrow{\mathbf{C}</em>{ij}} \mathbf{S}_j</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+  \mathbf{S}_i \xrightarrow{\mathbf{C}_{ij}} \mathbf{S}_j
+</div>
+<script type="math/tex; mode=display">
+  \mathbf{S}_i \xrightarrow{\mathbf{C}_{ij}} \mathbf{S}_j
+</script>
+</div>
 <p>여기서 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{S}_i</span><script type="math/tex">\mathbf{S}_i</script></span>는 현재 상태, <span class="arithmatex"><span class="MathJax_Preview">\mathbf{S}_j</span><script type="math/tex">\mathbf{S}_j</script></span>는 전이할 목표 상태, <span class="arithmatex"><span class="MathJax_Preview">\mathbf{C}_{ij}</span><script type="math/tex">\mathbf{C}_{ij}</script></span>는 상태 전이를 위한 조건이다.</p>
 <p>예를 들어, 노드가 <code>inactive</code> 상태에 있을 때, 활성화를 위한 조건이 충족되면 다음과 같은 상태 전이가 발생한다:</p>
 <div class="arithmatex">
@@ -205,9 +210,14 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 </li>
 </ol>
 <p>상태 전이 실패를 수학적으로 표현하면 다음과 같다:</p>
-<p>$$
-   \mathbf{S}<em>i \xrightarrow{\mathbf{C}</em>{ij} \, \text{실패}} \mathbf{S}_i</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+   \mathbf{S}_i \xrightarrow{\mathbf{C}_{ij} \, \text{실패}} \mathbf{S}_i
+</div>
+<script type="math/tex; mode=display">
+   \mathbf{S}_i \xrightarrow{\mathbf{C}_{ij} \, \text{실패}} \mathbf{S}_i
+</script>
+</div>
 <p>즉, 현재 상태 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{S}_i</span><script type="math/tex">\mathbf{S}_i</script></span>에서 다른 상태로의 전이 조건 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{C}_{ij}</span><script type="math/tex">\mathbf{C}_{ij}</script></span>가 충족되지 않으면 상태는 변화하지 않고 그대로 유지된다.</p>
 <ol>
 <li>
@@ -218,9 +228,14 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 </li>
 </ol>
 <p>이를 수학적으로 표현하면 다음과 같다:</p>
-<p>$$
-   \mathbf{S}<em>i \xrightarrow{\mathbf{C}</em>{ij}} \mathbf{S}_j \quad \text{(예외 발생 시)} \quad \mathbf{S}_j \xrightarrow{\mathbf{rollback}} \mathbf{S}_i</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+   \mathbf{S}_i \xrightarrow{\mathbf{C}_{ij}} \mathbf{S}_j \quad \text{(예외 발생 시)} \quad \mathbf{S}_j \xrightarrow{\mathbf{rollback}} \mathbf{S}_i
+</div>
+<script type="math/tex; mode=display">
+   \mathbf{S}_i \xrightarrow{\mathbf{C}_{ij}} \mathbf{S}_j \quad \text{(예외 발생 시)} \quad \mathbf{S}_j \xrightarrow{\mathbf{rollback}} \mathbf{S}_i
+</script>
+</div>
 <p>즉, 예외가 발생하면 다시 이전 상태로 돌아가서 시스템이 비정상 상태에 빠지지 않도록 처리한다.</p>
 <h3 id="_8">상태 전이와 이벤트 기반 구조</h3>
 <p>ROS2의 생명주기 노드는 이벤트 기반 구조를 따른다. 즉, 상태 전이는 외부 이벤트나 명령에 의해 트리거되며, 상태 전이는 즉시 이루어지지 않고 해당 명령이 처리되는 동안 적절한 시간을 기다리게 된다. 이러한 이벤트 기반 구조는 실시간 시스템에서 노드가 비정상적으로 작동하지 않도록 도와준다.</p>

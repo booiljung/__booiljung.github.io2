@@ -139,21 +139,46 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 <li><strong>출력 게이트</strong>: 최종 출력에 얼마나 많은 정보를 반영할지 결정한다.</li>
 </ul>
 <p>LSTM에서 사용하는 수식은 다음과 같다:</p>
-<p>$$</p>
-<p>\mathbf{f}<em>t = \sigma(\mathbf{W}_f \cdot [\mathbf{h}</em>{t-1}, \mathbf{x}_t] + \mathbf{b}_f)</p>
-<p>$$</p>
-<p>$$</p>
-<p>\mathbf{i}<em>t = \sigma(\mathbf{W}_i \cdot [\mathbf{h}</em>{t-1}, \mathbf{x}_t] + \mathbf{b}_i)</p>
-<p>$$</p>
-<p>$$</p>
-<p>\mathbf{C}<em>t = \mathbf{f}_t \mathbf{C}</em>{t-1} + \mathbf{i}<em>t \tanh(\mathbf{W}_C \cdot [\mathbf{h}</em>{t-1}, \mathbf{x}_t] + \mathbf{b}_C)</p>
-<p>$$</p>
-<p>$$</p>
-<p>\mathbf{o}<em>t = \sigma(\mathbf{W}_o \cdot [\mathbf{h}</em>{t-1}, \mathbf{x}_t] + \mathbf{b}_o)</p>
-<p>$$</p>
-<p>$$</p>
-<p>\mathbf{h}_t = \mathbf{o}_t \tanh(\mathbf{C}_t)</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+\mathbf{f}_t = \sigma(\mathbf{W}_f \cdot [\mathbf{h}_{t-1}, \mathbf{x}_t] + \mathbf{b}_f)
+</div>
+<script type="math/tex; mode=display">
+\mathbf{f}_t = \sigma(\mathbf{W}_f \cdot [\mathbf{h}_{t-1}, \mathbf{x}_t] + \mathbf{b}_f)
+</script>
+</div>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+\mathbf{i}_t = \sigma(\mathbf{W}_i \cdot [\mathbf{h}_{t-1}, \mathbf{x}_t] + \mathbf{b}_i)
+</div>
+<script type="math/tex; mode=display">
+\mathbf{i}_t = \sigma(\mathbf{W}_i \cdot [\mathbf{h}_{t-1}, \mathbf{x}_t] + \mathbf{b}_i)
+</script>
+</div>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+\mathbf{C}_t = \mathbf{f}_t \mathbf{C}_{t-1} + \mathbf{i}_t \tanh(\mathbf{W}_C \cdot [\mathbf{h}_{t-1}, \mathbf{x}_t] + \mathbf{b}_C)
+</div>
+<script type="math/tex; mode=display">
+\mathbf{C}_t = \mathbf{f}_t \mathbf{C}_{t-1} + \mathbf{i}_t \tanh(\mathbf{W}_C \cdot [\mathbf{h}_{t-1}, \mathbf{x}_t] + \mathbf{b}_C)
+</script>
+</div>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+\mathbf{o}_t = \sigma(\mathbf{W}_o \cdot [\mathbf{h}_{t-1}, \mathbf{x}_t] + \mathbf{b}_o)
+</div>
+<script type="math/tex; mode=display">
+\mathbf{o}_t = \sigma(\mathbf{W}_o \cdot [\mathbf{h}_{t-1}, \mathbf{x}_t] + \mathbf{b}_o)
+</script>
+</div>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+\mathbf{h}_t = \mathbf{o}_t \tanh(\mathbf{C}_t)
+</div>
+<script type="math/tex; mode=display">
+\mathbf{h}_t = \mathbf{o}_t \tanh(\mathbf{C}_t)
+</script>
+</div>
 <p>여기서:
 - <span class="arithmatex"><span class="MathJax_Preview">\mathbf{f}_t</span><script type="math/tex">\mathbf{f}_t</script></span>는 망각 게이트의 활성화 함수,
 - <span class="arithmatex"><span class="MathJax_Preview">\mathbf{i}_t</span><script type="math/tex">\mathbf{i}_t</script></span>는 입력 게이트,
@@ -172,9 +197,14 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 </ol>
 <h4 id="222">2.2.2 스파스 컨볼루션 연산</h4>
 <p>스파스 컨볼루션은 전통적인 CNN의 필터링 작업과 유사하게, 활성화된 이벤트 데이터에만 필터를 적용한다. 일반적인 컨볼루션 연산은 다음과 같이 표현된다:</p>
-<p>$$</p>
-<p>\mathbf{y} = \mathbf{W} * \mathbf{x}</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+\mathbf{y} = \mathbf{W} * \mathbf{x}
+</div>
+<script type="math/tex; mode=display">
+\mathbf{y} = \mathbf{W} * \mathbf{x}
+</script>
+</div>
 <p>여기서:
 - <span class="arithmatex"><span class="MathJax_Preview">\mathbf{x}</span><script type="math/tex">\mathbf{x}</script></span>는 입력 데이터(이벤트 데이터),
 - <span class="arithmatex"><span class="MathJax_Preview">\mathbf{W}</span><script type="math/tex">\mathbf{W}</script></span>는 필터(가중치),
@@ -193,9 +223,14 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 <p>네트워크는 서로 다른 해상도의 데이터를 동시에 처리할 수 있도록 설계되며, 각 해상도의 출력 결과를 합치는 방식으로 학습이 진행된다.</p>
 <h4 id="232-">2.3.2 멀티-스케일 피처 맵</h4>
 <p>멀티-스케일 처리의 핵심은 서로 다른 스케일에서 추출된 피처 맵을 결합하는 것이다. 각 스케일에서 추출된 피처는 고유한 정보를 포함하고 있으므로, 이러한 피처들을 효과적으로 결합하여 전체적인 이해도를 높일 수 있다. 멀티-스케일 피처 맵의 결합은 주로 다음과 같은 방식으로 이루어진다:</p>
-<p>$$</p>
-<p>\mathbf{F}<em>{multi} = \sum</em>{i=1}^{n} \alpha_i \mathbf{F}_i</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+\mathbf{F}_{multi} = \sum_{i=1}^{n} \alpha_i \mathbf{F}_i
+</div>
+<script type="math/tex; mode=display">
+\mathbf{F}_{multi} = \sum_{i=1}^{n} \alpha_i \mathbf{F}_i
+</script>
+</div>
 <p>여기서:
 - <span class="arithmatex"><span class="MathJax_Preview">\mathbf{F}_i</span><script type="math/tex">\mathbf{F}_i</script></span>는 각 스케일에서 추출된 피처 맵,
 - <span class="arithmatex"><span class="MathJax_Preview">\alpha_i</span><script type="math/tex">\alpha_i</script></span>는 각 피처 맵의 가중치이다.</p>

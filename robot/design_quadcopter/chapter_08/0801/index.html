@@ -152,15 +152,25 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 <h3 id="_11">링크의 성능 평가</h3>
 <h4 id="snr">신호 대 잡음비 (SNR)</h4>
 <p>신호 대 잡음비(SNR)는 통신 링크의 성능을 평가하는 중요한 지표이다. SNR은 다음과 같이 정의된다:</p>
-<p>$$</p>
-<p>\text{SNR} = \frac{P_s}{P_n}</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+\text{SNR} = \frac{P_s}{P_n}
+</div>
+<script type="math/tex; mode=display">
+\text{SNR} = \frac{P_s}{P_n}
+</script>
+</div>
 <p>여기서 <span class="arithmatex"><span class="MathJax_Preview">P_s</span><script type="math/tex">P_s</script></span>는 신호의 전력이고, <span class="arithmatex"><span class="MathJax_Preview">P_n</span><script type="math/tex">P_n</script></span>는 잡음의 전력이다. SNR 값이 높을수록 통신의 질이 좋다.</p>
 <h4 id="_12">데이터 전송률</h4>
 <p>데이터 전송률은 단위 시간당 전송되는 데이터의 양을 의미하며, bps (bits per second) 단위로 측정된다. 데이터 전송률은 다음과 같이 계산할 수 있다:</p>
-<p>$$</p>
-<p>R = B \cdot \log_2 (1 + \text{SNR})</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+R = B \cdot \log_2 (1 + \text{SNR})
+</div>
+<script type="math/tex; mode=display">
+R = B \cdot \log_2 (1 + \text{SNR})
+</script>
+</div>
 <p>여기서 <span class="arithmatex"><span class="MathJax_Preview">R</span><script type="math/tex">R</script></span>은 데이터 전송률, <span class="arithmatex"><span class="MathJax_Preview">B</span><script type="math/tex">B</script></span>는 대역폭이다.</p>
 <h3 id="_13">통신 링크의 설계 고려사항</h3>
 <h4 id="_14">전파 모델링</h4>

@@ -143,15 +143,25 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 <ol>
 <li><strong>대각선 원소 확인</strong>:</li>
 </ol>
-<p>$$
-   \mathbf{L}<em>{ii} = \sqrt{\max(\mathbf{A}</em>{ii} - \sum_{k=1}^{i-1} \mathbf{L}_{ik}^2, \epsilon)}</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+   \mathbf{L}_{ii} = \sqrt{\max(\mathbf{A}_{ii} - \sum_{k=1}^{i-1} \mathbf{L}_{ik}^2, \epsilon)}
+</div>
+<script type="math/tex; mode=display">
+   \mathbf{L}_{ii} = \sqrt{\max(\mathbf{A}_{ii} - \sum_{k=1}^{i-1} \mathbf{L}_{ik}^2, \epsilon)}
+</script>
+</div>
 <ol>
 <li><strong>행렬 원소 갱신</strong>:</li>
 </ol>
-<p>$$
-   \mathbf{L}<em>{ij} = \frac{1}{\mathbf{L}</em>{ii}} \left( \mathbf{A}<em>{ij} - \sum</em>{k=1}^{i-1} \mathbf{L}<em>{ik} \mathbf{L}</em>{jk} \right) \quad \text{for} \quad j &gt; i</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+   \mathbf{L}_{ij} = \frac{1}{\mathbf{L}_{ii}} \left( \mathbf{A}_{ij} - \sum_{k=1}^{i-1} \mathbf{L}_{ik} \mathbf{L}_{jk} \right) \quad \text{for} \quad j &gt; i
+</div>
+<script type="math/tex; mode=display">
+   \mathbf{L}_{ij} = \frac{1}{\mathbf{L}_{ii}} \left( \mathbf{A}_{ij} - \sum_{k=1}^{i-1} \mathbf{L}_{ik} \mathbf{L}_{jk} \right) \quad \text{for} \quad j > i
+</script>
+</div>
 <p>위의 수식을 이용해, 양의 값이 보장되며, 최소 오차를 가지는 근사적인 분해가 가능한다.</p>
 <h3 id="_5">활용 및 응용</h3>
 <ol>

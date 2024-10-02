@@ -108,9 +108,9 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 <ul>
 <li><strong>정의</strong>: 행렬 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{A}</span><script type="math/tex">\mathbf{A}</script></span>의 조건수 <span class="arithmatex"><span class="MathJax_Preview">\kappa(\mathbf{A})</span><script type="math/tex">\kappa(\mathbf{A})</script></span>는 다음과 같이 정의된다.
 $$
-  \kappa(\mathbf{A}) = |\mathbf{A}| \cdot |\mathbf{A}^{-1}|</li>
+  \kappa(\mathbf{A}) = |\mathbf{A}| \cdot |\mathbf{A}^{-1}|
+$$</li>
 </ul>
-<p>$$</p>
 <p>여기서, <span class="arithmatex"><span class="MathJax_Preview">\|\mathbf{A}\|</span><script type="math/tex">\|\mathbf{A}\|</script></span>는 행렬 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{A}</span><script type="math/tex">\mathbf{A}</script></span>의 어떤 벡터 노름이다.</p>
 <h3 id="_3">반올림 오차의 증폭</h3>
 <p>Cholesky 분해는 아래와 같은 형태로 이루어진다.</p>
@@ -193,9 +193,14 @@ $$
 <ol>
 <li><strong>LU 분해</strong>: 비대칭 행렬을 하삼각 행렬과 상삼각 행렬의 곱으로 표현하는 LU 분해를 사용할 수 있다.</li>
 </ol>
-<p>$$
-   \mathbf{A} = \mathbf{L}\mathbf{U}</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+   \mathbf{A} = \mathbf{L}\mathbf{U}
+</div>
+<script type="math/tex; mode=display">
+   \mathbf{A} = \mathbf{L}\mathbf{U}
+</script>
+</div>
 <ol>
 <li>
 <p><strong>QR 분해</strong>: <span class="arithmatex"><span class="MathJax_Preview">\mathbf{A} = \mathbf{QR}</span><script type="math/tex">\mathbf{A} = \mathbf{QR}</script></span> 형태로 표현할 수 있는 QR 분해도 유효한 대안이다.</p>
@@ -204,9 +209,14 @@ $$
 <p><strong>SVD (Singular Value Decomposition)</strong>: 특이값 분해를 통해 행렬을 보다 일반적인 형태로 분해할 수 있다.</p>
 </li>
 </ol>
-<p>$$
-   \mathbf{A} = \mathbf{U}\mathbf{\Sigma}\mathbf{V}^T</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+   \mathbf{A} = \mathbf{U}\mathbf{\Sigma}\mathbf{V}^T
+</div>
+<script type="math/tex; mode=display">
+   \mathbf{A} = \mathbf{U}\mathbf{\Sigma}\mathbf{V}^T
+</script>
+</div>
 <h2 id="_12">계산 복잡도 및 실용적 어려움</h2>
 <p>Cholesky 분해의 또 다른 한계는 계산 복잡도와 실용적 어려움에 있다.</p>
 <h3 id="_13">시간 복잡도</h3>

@@ -90,29 +90,54 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 <h3 id="_2">수학적 모델링</h3>
 <p>할당 문제는 <span class="arithmatex"><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span>개의 자원과 <span class="arithmatex"><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span>개의 작업이 있을 때, 비용 행렬 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{C}</span><script type="math/tex">\mathbf{C}</script></span>가 주어진다고 가정한다. 이때 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{C}</span><script type="math/tex">\mathbf{C}</script></span>의 각 원소 <span class="arithmatex"><span class="MathJax_Preview">c_{ij}</span><script type="math/tex">c_{ij}</script></span>는 자원 <span class="arithmatex"><span class="MathJax_Preview">i</span><script type="math/tex">i</script></span>가 작업 <span class="arithmatex"><span class="MathJax_Preview">j</span><script type="math/tex">j</script></span>에 할당될 때 발생하는 비용을 의미한다.</p>
 <p>할당 문제의 수학적 모델은 다음과 같다:</p>
-<p>$$</p>
-<p>\min \sum_{i=1}^{n} \sum_{j=1}^{n} c_{ij} x_{ij}</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+\min \sum_{i=1}^{n} \sum_{j=1}^{n} c_{ij} x_{ij}
+</div>
+<script type="math/tex; mode=display">
+\min \sum_{i=1}^{n} \sum_{j=1}^{n} c_{ij} x_{ij}
+</script>
+</div>
 <p>여기서:
 - <span class="arithmatex"><span class="MathJax_Preview">x_{ij} \in \{0, 1\}</span><script type="math/tex">x_{ij} \in \{0, 1\}</script></span>: 자원 <span class="arithmatex"><span class="MathJax_Preview">i</span><script type="math/tex">i</script></span>가 작업 <span class="arithmatex"><span class="MathJax_Preview">j</span><script type="math/tex">j</script></span>에 할당되면 <span class="arithmatex"><span class="MathJax_Preview">x_{ij} = 1</span><script type="math/tex">x_{ij} = 1</script></span>, 그렇지 않으면 <span class="arithmatex"><span class="MathJax_Preview">x_{ij} = 0</span><script type="math/tex">x_{ij} = 0</script></span>.</p>
 <p>제약 조건은 다음과 같다:</p>
-<p>$$</p>
-<p>\sum_{i=1}^{n} x_{ij} = 1 \quad \forall j = 1, 2, \dots, n \quad \text{(각 작업은 하나의 자원에만 할당)}</p>
-<p>$$</p>
-<p>$$</p>
-<p>\sum_{j=1}^{n} x_{ij} = 1 \quad \forall i = 1, 2, \dots, n \quad \text{(각 자원은 하나의 작업에만 할당)}</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+\sum_{i=1}^{n} x_{ij} = 1 \quad \forall j = 1, 2, \dots, n \quad \text{(각 작업은 하나의 자원에만 할당)}
+</div>
+<script type="math/tex; mode=display">
+\sum_{i=1}^{n} x_{ij} = 1 \quad \forall j = 1, 2, \dots, n \quad \text{(각 작업은 하나의 자원에만 할당)}
+</script>
+</div>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+\sum_{j=1}^{n} x_{ij} = 1 \quad \forall i = 1, 2, \dots, n \quad \text{(각 자원은 하나의 작업에만 할당)}
+</div>
+<script type="math/tex; mode=display">
+\sum_{j=1}^{n} x_{ij} = 1 \quad \forall i = 1, 2, \dots, n \quad \text{(각 자원은 하나의 작업에만 할당)}
+</script>
+</div>
 <p>이러한 제약 조건은 각 자원과 각 작업이 모두 1대1로 할당되도록 보장한다.</p>
 <h3 id="_3">비용 행렬의 예시</h3>
 <p>비용 행렬 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{C}</span><script type="math/tex">\mathbf{C}</script></span>는 다음과 같이 나타낼 수 있다:</p>
-<p>$$</p>
-<p>\mathbf{C} = \begin{pmatrix}
-c_{11} &amp; c_{12} &amp; \cdots &amp; c_{1n} \
-c_{21} &amp; c_{22} &amp; \cdots &amp; c_{2n} \
-\vdots &amp; \vdots &amp; \ddots &amp; \vdots \
+<div class="arithmatex">
+<div class="MathJax_Preview">
+\mathbf{C} = \begin{pmatrix}
+c_{11} &amp; c_{12} &amp; \cdots &amp; c_{1n} \\
+c_{21} &amp; c_{22} &amp; \cdots &amp; c_{2n} \\
+\vdots &amp; \vdots &amp; \ddots &amp; \vdots \\
 c_{n1} &amp; c_{n2} &amp; \cdots &amp; c_{nn}
-\end{pmatrix}</p>
-<p>$$</p>
+\end{pmatrix}
+</div>
+<script type="math/tex; mode=display">
+\mathbf{C} = \begin{pmatrix}
+c_{11} & c_{12} & \cdots & c_{1n} \\
+c_{21} & c_{22} & \cdots & c_{2n} \\
+\vdots & \vdots & \ddots & \vdots \\
+c_{n1} & c_{n2} & \cdots & c_{nn}
+\end{pmatrix}
+</script>
+</div>
 <p>각 <span class="arithmatex"><span class="MathJax_Preview">c_{ij}</span><script type="math/tex">c_{ij}</script></span>는 자원 <span class="arithmatex"><span class="MathJax_Preview">i</span><script type="math/tex">i</script></span>가 작업 <span class="arithmatex"><span class="MathJax_Preview">j</span><script type="math/tex">j</script></span>에 할당될 때의 비용을 나타낸다. 최적의 할당은 이 비용 행렬을 바탕으로 이루어진다.</p>
 <h3 id="_4">헝가리안 알고리즘 개요</h3>
 <p>할당 문제를 해결하는 대표적인 방법 중 하나는 <strong>헝가리안 알고리즘</strong>(Hungarian Algorithm)이다. 이 알고리즘은 다항 시간 내에 최적 해를 찾을 수 있는 알고리즘으로, 각 자원과 작업 간의 비용을 바탕으로 최적의 할당 방식을 결정한다.</p>

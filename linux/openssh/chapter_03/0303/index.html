@@ -121,9 +121,14 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 <li>서버는 <span class="arithmatex"><span class="MathJax_Preview">(g^a \mod p)^b \mod p</span><script type="math/tex">(g^a \mod p)^b \mod p</script></span>를 계산하여 동일한 공유 비밀 <span class="arithmatex"><span class="MathJax_Preview">K</span><script type="math/tex">K</script></span>를 생성한다.</li>
 </ol>
 <p>이 때, 공유된 비밀 <span class="arithmatex"><span class="MathJax_Preview">K</span><script type="math/tex">K</script></span>는 다음과 같이 표현된다:</p>
-<p>$$</p>
-<p>K = (g^b \mod p)^a \mod p = (g^a \mod p)^b \mod p</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+K = (g^b \mod p)^a \mod p = (g^a \mod p)^b \mod p
+</div>
+<script type="math/tex; mode=display">
+K = (g^b \mod p)^a \mod p = (g^a \mod p)^b \mod p
+</script>
+</div>
 <p>이를 통해 클라이언트와 서버는 안전하게 동일한 비밀 키를 공유하게 된다.</p>
 <h3 id="_2">암호화</h3>
 <p>키 교환이 완료된 후, SSH 프로토콜은 세션 암호화를 위해 다양한 대칭 키 암호화 알고리즘을 사용한다. 주로 사용되는 암호화 알고리즘은 다음과 같다:</p>
@@ -142,9 +147,14 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 <li><strong>AddRoundKey:</strong> 라운드 키와 현재 상태를 XOR 연산한다.</li>
 </ol>
 <p>AES의 암호화 과정은 다음과 같이 표현할 수 있다:</p>
-<p>$$</p>
-<p>\mathbf{C} = E(\mathbf{K}, \mathbf{P})</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+\mathbf{C} = E(\mathbf{K}, \mathbf{P})
+</div>
+<script type="math/tex; mode=display">
+\mathbf{C} = E(\mathbf{K}, \mathbf{P})
+</script>
+</div>
 <p>여기서, 
 - <span class="arithmatex"><span class="MathJax_Preview">\mathbf{C}</span><script type="math/tex">\mathbf{C}</script></span>는 암호문,
 - <span class="arithmatex"><span class="MathJax_Preview">E</span><script type="math/tex">E</script></span>는 암호화 함수,
@@ -154,9 +164,14 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 <h3 id="mac">메시지 인증 코드 (MAC)</h3>
 <p>SSH 프로토콜에서 <strong>메시지 인증 코드(MAC)</strong>는 데이터의 무결성을 확인하는 데 사용된다. MAC은 전송된 데이터가 도중에 변조되지 않았음을 보장한다. 클라이언트와 서버는 데이터를 송수신할 때 각각 데이터를 암호화한 후, MAC을 계산하여 이 데이터를 함께 전송한다. 수신 측에서는 같은 방식으로 MAC을 계산하여 두 값이 일치하는지 확인함으로써 데이터의 무결성을 확인한다.</p>
 <p>MAC 계산을 위한 일반적인 과정은 다음과 같다:</p>
-<p>$$</p>
-<p>\mathbf{MAC} = H(\mathbf{K}_{mac}, \mathbf{M})</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+\mathbf{MAC} = H(\mathbf{K}_{mac}, \mathbf{M})
+</div>
+<script type="math/tex; mode=display">
+\mathbf{MAC} = H(\mathbf{K}_{mac}, \mathbf{M})
+</script>
+</div>
 <p>여기서,
 - <span class="arithmatex"><span class="MathJax_Preview">\mathbf{MAC}</span><script type="math/tex">\mathbf{MAC}</script></span>은 계산된 메시지 인증 코드,
 - <span class="arithmatex"><span class="MathJax_Preview">H</span><script type="math/tex">H</script></span>는 해시 함수,
@@ -171,9 +186,14 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 <li>해시 함수 <span class="arithmatex"><span class="MathJax_Preview">H</span><script type="math/tex">H</script></span>를 사용하여 MAC을 계산한다.</li>
 </ol>
 <p>HMAC는 기본적으로 해시 함수를 두 번 사용하는 구조로 설계되었다:</p>
-<p>$$</p>
-<p>HMAC(\mathbf{K}<em>{mac}, \mathbf{M}) = H((\mathbf{K}</em>{mac} \oplus \mathbf{opad}) \parallel H((\mathbf{K}_{mac} \oplus \mathbf{ipad}) \parallel \mathbf{M}))</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+HMAC(\mathbf{K}_{mac}, \mathbf{M}) = H((\mathbf{K}_{mac} \oplus \mathbf{opad}) \parallel H((\mathbf{K}_{mac} \oplus \mathbf{ipad}) \parallel \mathbf{M}))
+</div>
+<script type="math/tex; mode=display">
+HMAC(\mathbf{K}_{mac}, \mathbf{M}) = H((\mathbf{K}_{mac} \oplus \mathbf{opad}) \parallel H((\mathbf{K}_{mac} \oplus \mathbf{ipad}) \parallel \mathbf{M}))
+</script>
+</div>
 <p>여기서,
 - <span class="arithmatex"><span class="MathJax_Preview">\oplus</span><script type="math/tex">\oplus</script></span>는 XOR 연산,
 - <span class="arithmatex"><span class="MathJax_Preview">\mathbf{opad}</span><script type="math/tex">\mathbf{opad}</script></span>는 외부 패딩(0x5c가 반복된 값),

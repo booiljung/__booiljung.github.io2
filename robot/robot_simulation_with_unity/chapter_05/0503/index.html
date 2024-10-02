@@ -274,9 +274,14 @@ private float gaussianNoise(float mean, float stdDev)
 <p>여기서 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{n}_a</span><script type="math/tex">\mathbf{n}_a</script></span>와 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{n}_\omega</span><script type="math/tex">\mathbf{n}_\omega</script></span>는 가우시안 노이즈, <span class="arithmatex"><span class="MathJax_Preview">\mathbf{b}_a</span><script type="math/tex">\mathbf{b}_a</script></span>와 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{b}_\omega</span><script type="math/tex">\mathbf{b}_\omega</script></span>는 바이어스 노이즈이다.</p>
 <h3 id="gps">GPS 센서</h3>
 <p>GPS(Global Positioning System) 센서는 로봇의 위치를 외부 환경에서 추정하는 데 사용된다. GPS 센서의 노이즈는 주로 위치 측정의 정확도에 영향을 미치며, 다양한 요인에 의해 발생할 수 있다. GPS 센서 노이즈 모델링에는 다음과 같은 요소들이 포함된다:</p>
-<p>$$</p>
-<p>\mathbf{p}<em>{\text{GPS}} = \mathbf{p}</em>{\text{true}} + \mathbf{n}_{\text{GPS}}</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+\mathbf{p}_{\text{GPS}} = \mathbf{p}_{\text{true}} + \mathbf{n}_{\text{GPS}}
+</div>
+<script type="math/tex; mode=display">
+\mathbf{p}_{\text{GPS}} = \mathbf{p}_{\text{true}} + \mathbf{n}_{\text{GPS}}
+</script>
+</div>
 <p>여기서 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{p}_{\text{GPS}}</span><script type="math/tex">\mathbf{p}_{\text{GPS}}</script></span>는 GPS 센서에서 측정된 위치, <span class="arithmatex"><span class="MathJax_Preview">\mathbf{p}_{\text{true}}</span><script type="math/tex">\mathbf{p}_{\text{true}}</script></span>는 실제 위치, <span class="arithmatex"><span class="MathJax_Preview">\mathbf{n}_{\text{GPS}}</span><script type="math/tex">\mathbf{n}_{\text{GPS}}</script></span>는 GPS 노이즈이다. GPS 노이즈는 주로 가우시안 분포를 따르지만, 환경에 따라 비가우시안 노이즈가 발생할 수 있다.</p>
 <h4 id="gps_1">GPS 노이즈 구현 예제</h4>
 <p>Unity에서 GPS 노이즈를 구현하기 위해서는 위치 데이터에 가우시안 노이즈를 추가하는 방식으로 접근할 수 있다. 다음은 C#을 사용하여 GPS 노이즈를 추가하는 예제이다.</p>
@@ -314,9 +319,14 @@ public class GPSNoise
 <p>이 스크립트는 실제 위치에 가우시안 노이즈를 추가하여 GPS 센서의 측정값을 시뮬레이션한다. <code>stdDev</code> 파라미터를 조정하여 노이즈의 표준 편차를 설정할 수 있다.</p>
 <h3 id="ultrasonic">초음파(Ultrasonic) 센서</h3>
 <p>초음파 센서는 물체와의 거리를 측정하는 데 사용되며, 주로 로봇의 장애물 감지에 활용된다. 초음파 센서의 노이즈는 거리 측정의 정확도에 영향을 미치며, 주로 다음과 같은 형태로 나타난다:</p>
-<p>$$</p>
-<p>d_{\text{US}} = d_{\text{true}} + n_{\text{US}}</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+d_{\text{US}} = d_{\text{true}} + n_{\text{US}}
+</div>
+<script type="math/tex; mode=display">
+d_{\text{US}} = d_{\text{true}} + n_{\text{US}}
+</script>
+</div>
 <p>여기서 <span class="arithmatex"><span class="MathJax_Preview">d_{\text{US}}</span><script type="math/tex">d_{\text{US}}</script></span>는 초음파 센서에서 측정된 거리, <span class="arithmatex"><span class="MathJax_Preview">d_{\text{true}}</span><script type="math/tex">d_{\text{true}}</script></span>는 실제 거리, <span class="arithmatex"><span class="MathJax_Preview">n_{\text{US}}</span><script type="math/tex">n_{\text{US}}</script></span>는 초음파 센서 노이즈이다. 초음파 노이즈는 주로 가우시안 노이즈로 모델링되지만, 반사 표면의 특성에 따라 비가우시안 노이즈가 발생할 수 있다.</p>
 <h4 id="_8">초음파 센서 노이즈 구현 예제</h4>
 <p>Unity에서 초음파 센서 노이즈를 구현하기 위해서는 거리 데이터에 가우시안 노이즈를 추가한다. 다음은 C#을 사용한 구현 예제이다.</p>
@@ -352,9 +362,14 @@ public class UltrasonicNoise
 <p>이 스크립트는 초음파 센서의 실제 거리 측정값에 가우시안 노이즈를 추가하여 시뮬레이션한다. <code>stdDev</code> 파라미터를 통해 노이즈의 표준 편차를 설정할 수 있다.</p>
 <h3 id="_9">온도 센서</h3>
 <p>온도 센서는 로봇의 환경 온도를 측정하는 데 사용된다. 온도 센서의 노이즈는 주로 다음과 같이 모델링된다:</p>
-<p>$$</p>
-<p>T_{\text{measured}} = T_{\text{true}} + n_T</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+T_{\text{measured}} = T_{\text{true}} + n_T
+</div>
+<script type="math/tex; mode=display">
+T_{\text{measured}} = T_{\text{true}} + n_T
+</script>
+</div>
 <p>여기서 <span class="arithmatex"><span class="MathJax_Preview">T_{\text{measured}}</span><script type="math/tex">T_{\text{measured}}</script></span>는 측정된 온도, <span class="arithmatex"><span class="MathJax_Preview">T_{\text{true}}</span><script type="math/tex">T_{\text{true}}</script></span>는 실제 온도, <span class="arithmatex"><span class="MathJax_Preview">n_T</span><script type="math/tex">n_T</script></span>는 온도 센서 노이즈이다. 온도 노이즈는 주로 가우시안 분포를 따르지만, 특정 환경 조건에서는 비가우시안 노이즈가 발생할 수 있다.</p>
 <h4 id="_10">온도 센서 노이즈 구현 예제</h4>
 <p>Unity에서 온도 센서 노이즈를 구현하기 위해서는 온도 데이터에 가우시안 노이즈를 추가한다. 다음은 C#을 사용한 구현 예제이다.</p>
@@ -393,22 +408,47 @@ public class TemperatureNoise
 <h4 id="kalman-filter">칼만 필터(Kalman Filter)</h4>
 <p>칼만 필터는 센서 데이터의 노이즈를 줄이고, 여러 센서로부터의 데이터를 효율적으로 융합하기 위한 대표적인 알고리즘이다. 칼만 필터는 예측 단계와 업데이트 단계를 통해 상태 추정을 수행한다.</p>
 <p>예측 단계:</p>
-<p>$$</p>
-<p>\mathbf{\hat{x}}<em>{k|k-1} = \mathbf{A} \mathbf{\hat{x}}</em>{k-1|k-1} + \mathbf{B} \mathbf{u}_k</p>
-<p>$$</p>
-<p>$$</p>
-<p>\mathbf{P}<em>{k|k-1} = \mathbf{A} \mathbf{P}</em>{k-1|k-1} \mathbf{A}^\top + \mathbf{Q}</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+\mathbf{\hat{x}}_{k|k-1} = \mathbf{A} \mathbf{\hat{x}}_{k-1|k-1} + \mathbf{B} \mathbf{u}_k
+</div>
+<script type="math/tex; mode=display">
+\mathbf{\hat{x}}_{k|k-1} = \mathbf{A} \mathbf{\hat{x}}_{k-1|k-1} + \mathbf{B} \mathbf{u}_k
+</script>
+</div>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+\mathbf{P}_{k|k-1} = \mathbf{A} \mathbf{P}_{k-1|k-1} \mathbf{A}^\top + \mathbf{Q}
+</div>
+<script type="math/tex; mode=display">
+\mathbf{P}_{k|k-1} = \mathbf{A} \mathbf{P}_{k-1|k-1} \mathbf{A}^\top + \mathbf{Q}
+</script>
+</div>
 <p>업데이트 단계:</p>
-<p>$$</p>
-<p>\mathbf{K}<em>k = \mathbf{P}</em>{k|k-1} \mathbf{H}^\top (\mathbf{H} \mathbf{P}_{k|k-1} \mathbf{H}^\top + \mathbf{R})^{-1}</p>
-<p>$$</p>
-<p>$$</p>
-<p>\mathbf{\hat{x}}<em>{k|k} = \mathbf{\hat{x}}</em>{k|k-1} + \mathbf{K}<em>k (\mathbf{z}_k - \mathbf{H} \mathbf{\hat{x}}</em>{k|k-1})</p>
-<p>$$</p>
-<p>$$</p>
-<p>\mathbf{P}<em>{k|k} = (\mathbf{I} - \mathbf{K}_k \mathbf{H}) \mathbf{P}</em>{k|k-1}</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+\mathbf{K}_k = \mathbf{P}_{k|k-1} \mathbf{H}^\top (\mathbf{H} \mathbf{P}_{k|k-1} \mathbf{H}^\top + \mathbf{R})^{-1}
+</div>
+<script type="math/tex; mode=display">
+\mathbf{K}_k = \mathbf{P}_{k|k-1} \mathbf{H}^\top (\mathbf{H} \mathbf{P}_{k|k-1} \mathbf{H}^\top + \mathbf{R})^{-1}
+</script>
+</div>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+\mathbf{\hat{x}}_{k|k} = \mathbf{\hat{x}}_{k|k-1} + \mathbf{K}_k (\mathbf{z}_k - \mathbf{H} \mathbf{\hat{x}}_{k|k-1})
+</div>
+<script type="math/tex; mode=display">
+\mathbf{\hat{x}}_{k|k} = \mathbf{\hat{x}}_{k|k-1} + \mathbf{K}_k (\mathbf{z}_k - \mathbf{H} \mathbf{\hat{x}}_{k|k-1})
+</script>
+</div>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+\mathbf{P}_{k|k} = (\mathbf{I} - \mathbf{K}_k \mathbf{H}) \mathbf{P}_{k|k-1}
+</div>
+<script type="math/tex; mode=display">
+\mathbf{P}_{k|k} = (\mathbf{I} - \mathbf{K}_k \mathbf{H}) \mathbf{P}_{k|k-1}
+</script>
+</div>
 <p>여기서 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{\hat{x}}</span><script type="math/tex">\mathbf{\hat{x}}</script></span>는 상태 추정, <span class="arithmatex"><span class="MathJax_Preview">\mathbf{P}</span><script type="math/tex">\mathbf{P}</script></span>는 오차 공분산, <span class="arithmatex"><span class="MathJax_Preview">\mathbf{A}</span><script type="math/tex">\mathbf{A}</script></span>는 상태 전이 행렬, <span class="arithmatex"><span class="MathJax_Preview">\mathbf{B}</span><script type="math/tex">\mathbf{B}</script></span>는 제어 입력 행렬, <span class="arithmatex"><span class="MathJax_Preview">\mathbf{u}</span><script type="math/tex">\mathbf{u}</script></span>는 제어 입력, <span class="arithmatex"><span class="MathJax_Preview">\mathbf{Q}</span><script type="math/tex">\mathbf{Q}</script></span>는 시스템 노이즈 공분산, <span class="arithmatex"><span class="MathJax_Preview">\mathbf{K}</span><script type="math/tex">\mathbf{K}</script></span>는 칼만 이득, <span class="arithmatex"><span class="MathJax_Preview">\mathbf{H}</span><script type="math/tex">\mathbf{H}</script></span>는 관측 행렬, <span class="arithmatex"><span class="MathJax_Preview">\mathbf{R}</span><script type="math/tex">\mathbf{R}</script></span>은 관측 노이즈 공분산, <span class="arithmatex"><span class="MathJax_Preview">\mathbf{z}</span><script type="math/tex">\mathbf{z}</script></span>는 측정값, <span class="arithmatex"><span class="MathJax_Preview">\mathbf{I}</span><script type="math/tex">\mathbf{I}</script></span>는 항등 행렬이다.</p>
 <p>칼만 필터를 Unity에서 구현하여 여러 센서로부터의 노이즈 데이터를 효과적으로 처리할 수 있다.</p>
 <pre><code class="language-csharp">using UnityEngine;

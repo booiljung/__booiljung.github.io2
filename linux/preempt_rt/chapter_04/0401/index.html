@@ -119,9 +119,14 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 <p>우선순위를 설정할 때는 작업 간의 상호 의존성, 주기성, 그리고 작업의 중요도를 고려해야 한다.</p>
 <h3 id="3-response-time-analysis">3. <strong>응답 시간 분석 (Response Time Analysis)</strong></h3>
 <p>실시간 시스템에서는 작업이 주어진 시간 안에 완료될 수 있는지, 즉 응답 시간을 분석하는 것이 필수적이다. 응답 시간 <span class="arithmatex"><span class="MathJax_Preview">R_i</span><script type="math/tex">R_i</script></span>는 다음과 같이 계산된다:</p>
-<p>$$</p>
-<p>R_i = C_i + \sum_{j \in hp(i)} \left\lceil \frac{R_i}{T_j} \right\rceil C_j</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+R_i = C_i + \sum_{j \in hp(i)} \left\lceil \frac{R_i}{T_j} \right\rceil C_j
+</div>
+<script type="math/tex; mode=display">
+R_i = C_i + \sum_{j \in hp(i)} \left\lceil \frac{R_i}{T_j} \right\rceil C_j
+</script>
+</div>
 <p>여기서:
 - <span class="arithmatex"><span class="MathJax_Preview">R_i</span><script type="math/tex">R_i</script></span>: 작업 <span class="arithmatex"><span class="MathJax_Preview">i</span><script type="math/tex">i</script></span>의 응답 시간
 - <span class="arithmatex"><span class="MathJax_Preview">C_i</span><script type="math/tex">C_i</script></span>: 작업 <span class="arithmatex"><span class="MathJax_Preview">i</span><script type="math/tex">i</script></span>의 실행 시간

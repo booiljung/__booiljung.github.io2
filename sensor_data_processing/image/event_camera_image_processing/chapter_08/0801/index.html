@@ -164,36 +164,66 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 <ol>
 <li><strong>Forget Gate</strong>:</li>
 </ol>
-<p>$$
-   \mathbf{f}<em>t = \sigma(\mathbf{W}_f \mathbf{h}</em>{t-1} + \mathbf{W}_{x_f} \mathbf{x}_t + \mathbf{b}_f)</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+   \mathbf{f}_t = \sigma(\mathbf{W}_f \mathbf{h}_{t-1} + \mathbf{W}_{x_f} \mathbf{x}_t + \mathbf{b}_f)
+</div>
+<script type="math/tex; mode=display">
+   \mathbf{f}_t = \sigma(\mathbf{W}_f \mathbf{h}_{t-1} + \mathbf{W}_{x_f} \mathbf{x}_t + \mathbf{b}_f)
+</script>
+</div>
 <p>이 게이트는 이전 셀 상태를 얼마나 잊을지 결정한다.</p>
 <ol>
 <li><strong>Input Gate</strong>:</li>
 </ol>
-<p>$$
-   \mathbf{i}<em>t = \sigma(\mathbf{W}_i \mathbf{h}</em>{t-1} + \mathbf{W}_{x_i} \mathbf{x}_t + \mathbf{b}_i)</p>
-<p>$$</p>
-<p>$$
-   \mathbf{\tilde{C}}<em>t = \tanh(\mathbf{W}_C \mathbf{h}</em>{t-1} + \mathbf{W}_{x_C} \mathbf{x}_t + \mathbf{b}_C)</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+   \mathbf{i}_t = \sigma(\mathbf{W}_i \mathbf{h}_{t-1} + \mathbf{W}_{x_i} \mathbf{x}_t + \mathbf{b}_i)
+</div>
+<script type="math/tex; mode=display">
+   \mathbf{i}_t = \sigma(\mathbf{W}_i \mathbf{h}_{t-1} + \mathbf{W}_{x_i} \mathbf{x}_t + \mathbf{b}_i)
+</script>
+</div>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+   \mathbf{\tilde{C}}_t = \tanh(\mathbf{W}_C \mathbf{h}_{t-1} + \mathbf{W}_{x_C} \mathbf{x}_t + \mathbf{b}_C)
+</div>
+<script type="math/tex; mode=display">
+   \mathbf{\tilde{C}}_t = \tanh(\mathbf{W}_C \mathbf{h}_{t-1} + \mathbf{W}_{x_C} \mathbf{x}_t + \mathbf{b}_C)
+</script>
+</div>
 <p>이 게이트는 새로운 정보를 얼마나 업데이트할지를 결정한다.</p>
 <ol>
 <li><strong>Cell State Update</strong>:</li>
 </ol>
-<p>$$
-   \mathbf{C}<em>t = \mathbf{f}_t \odot \mathbf{C}</em>{t-1} + \mathbf{i}_t \odot \mathbf{\tilde{C}}_t</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+   \mathbf{C}_t = \mathbf{f}_t \odot \mathbf{C}_{t-1} + \mathbf{i}_t \odot \mathbf{\tilde{C}}_t
+</div>
+<script type="math/tex; mode=display">
+   \mathbf{C}_t = \mathbf{f}_t \odot \mathbf{C}_{t-1} + \mathbf{i}_t \odot \mathbf{\tilde{C}}_t
+</script>
+</div>
 <p>새로운 셀 상태는 이전 셀 상태와 현재 입력 정보를 기반으로 계산된다.</p>
 <ol>
 <li><strong>Output Gate</strong>:</li>
 </ol>
-<p>$$
-   \mathbf{o}<em>t = \sigma(\mathbf{W}_o \mathbf{h}</em>{t-1} + \mathbf{W}_{x_o} \mathbf{x}_t + \mathbf{b}_o)</p>
-<p>$$</p>
-<p>$$
-   \mathbf{h}_t = \mathbf{o}_t \odot \tanh(\mathbf{C}_t)</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+   \mathbf{o}_t = \sigma(\mathbf{W}_o \mathbf{h}_{t-1} + \mathbf{W}_{x_o} \mathbf{x}_t + \mathbf{b}_o)
+</div>
+<script type="math/tex; mode=display">
+   \mathbf{o}_t = \sigma(\mathbf{W}_o \mathbf{h}_{t-1} + \mathbf{W}_{x_o} \mathbf{x}_t + \mathbf{b}_o)
+</script>
+</div>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+   \mathbf{h}_t = \mathbf{o}_t \odot \tanh(\mathbf{C}_t)
+</div>
+<script type="math/tex; mode=display">
+   \mathbf{h}_t = \mathbf{o}_t \odot \tanh(\mathbf{C}_t)
+</script>
+</div>
 <p>이 게이트는 셀 상태를 기반으로 출력할 정보를 결정한다.</p>
 <p>이와 같은 LSTM 모델은 이벤트 스트림과 같은 비정형 데이터를 처리하는 데 적합하며, 시간의 흐름에 따른 정보를 효과적으로 학습할 수 있다.</p>
 <h3 id="spiking-neural-networks-snn">Spiking Neural Networks (SNN)</h3>
@@ -302,16 +332,26 @@ e_{ij} = \text{LeakyReLU} \left( \mathbf{a}^{\top} \left[ \mathbf{W} \mathbf{h}_
 <ol>
 <li>CNN을 통해 각 시간 단계의 이벤트 데이터를 처리하여 특징 맵을 생성:</li>
 </ol>
-<p>$$
-   \mathbf{F}_t = \text{CNN}(\mathbf{E}_t)</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+   \mathbf{F}_t = \text{CNN}(\mathbf{E}_t)
+</div>
+<script type="math/tex; mode=display">
+   \mathbf{F}_t = \text{CNN}(\mathbf{E}_t)
+</script>
+</div>
 <p>여기서 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{E}_t</span><script type="math/tex">\mathbf{E}_t</script></span>는 시간 <span class="arithmatex"><span class="MathJax_Preview">t</span><script type="math/tex">t</script></span>에서의 이벤트 데이터, <span class="arithmatex"><span class="MathJax_Preview">\mathbf{F}_t</span><script type="math/tex">\mathbf{F}_t</script></span>는 CNN을 통해 추출된 특징 맵이다.</p>
 <ol>
 <li>RNN 또는 LSTM을 통해 시간 단계별 특징 맵을 연결하여 시계열 데이터를 처리:</li>
 </ol>
-<p>$$
-   \mathbf{h}<em>t = \text{LSTM}(\mathbf{F}_t, \mathbf{h}</em>{t-1})</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+   \mathbf{h}_t = \text{LSTM}(\mathbf{F}_t, \mathbf{h}_{t-1})
+</div>
+<script type="math/tex; mode=display">
+   \mathbf{h}_t = \text{LSTM}(\mathbf{F}_t, \mathbf{h}_{t-1})
+</script>
+</div>
 <p>이와 같은 결합 모델은 이벤트 데이터의 공간적 및 시간적 패턴을 동시에 학습할 수 있어, 이벤트 기반 영상 처리에 강력한 성능을 발휘할 수 있다.</p>
 
   <br>

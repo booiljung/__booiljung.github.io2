@@ -33,7 +33,9 @@
       var is_top_frame = false;
         
         var pageToc = [
-          {title: "title: \"\uc6b0\uc8fc\uc5d0\uc11c\uc758 GNSS \ud65c\uc6a9 \uac00\ub2a5\uc131\"", url: "#_top", children: [
+          {title: "GNSS \uc2e0\ud638\uc758 \ud655\uc7a5", url: "#_top", children: [
+          ]},
+          {title: "\uc6b0\uc8fc \uacf5\uac04\uc5d0\uc11c\uc758 \uc704\uce58 \uacb0\uc815 \ubb38\uc81c", url: "#_1", children: [
           ]},
         ];
 
@@ -84,8 +86,47 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 
     
 
-    <hr />
-<h2 id="title-gnss">title: "우주에서의 GNSS 활용 가능성"</h2>
+    <p>우주에서 GNSS(Global Navigation Satellite System)를 활용하는 것은 지구 표면에서의 사용과는 여러 가지 차별점을 가지며, 주로 신호의 특성, 시스템의 정확도, 위성 궤도의 영향 등을 고려해야 한다. 아래에서는 우주 환경에서 GNSS 활용 가능성을 논의하면서, 그 주요 과제와 해결 방안, 잠재적인 이점에 대해 설명하겠다.</p>
+<h3 id="gnss">GNSS 신호의 확장</h3>
+<p>지구 표면에서의 GNSS 신호는 주로 위치 및 시간 정보를 제공하지만, 우주에서는 이러한 신호가 더 확장된 방식으로 활용될 수 있다. 이를 이해하기 위해서는 GNSS 위성이 제공하는 신호의 기본 구조를 알아야 한다.</p>
+<p>GNSS 신호는 일반적으로 지구 중력권 안에서 설계되었으며, 그 결과 우주 공간에서는 다음과 같은 문제가 발생한다.</p>
+<ul>
+<li><strong>신호 감쇠</strong>: 우주 공간으로 나아갈수록 GNSS 신호의 세기는 급격히 감소한다. 이로 인해 수신기 설계와 신호 처리 과정에서 더 민감한 장비가 요구된다.</li>
+<li><strong>도플러 효과</strong>: 위성과 우주선 간의 상대적인 속도가 매우 크기 때문에 도플러 효과가 GNSS 신호에 큰 영향을 미친다. 따라서 신호의 주파수 변동을 정확히 보정하는 기술이 필수적이다.</li>
+</ul>
+<p>이를 수식으로 표현하면, GNSS 신호의 주파수 변화는 다음과 같이 나타낼 수 있다.</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+f_{\text{obs}} = f_{\text{em}} \left( \frac{c + v_{\text{rec}}}{c + v_{\text{sat}}} \right)
+</div>
+<script type="math/tex; mode=display">
+f_{\text{obs}} = f_{\text{em}} \left( \frac{c + v_{\text{rec}}}{c + v_{\text{sat}}} \right)
+</script>
+</div>
+<p>여기서:
+- <span class="arithmatex"><span class="MathJax_Preview">f_{\text{obs}}</span><script type="math/tex">f_{\text{obs}}</script></span>는 수신된 주파수,
+- <span class="arithmatex"><span class="MathJax_Preview">f_{\text{em}}</span><script type="math/tex">f_{\text{em}}</script></span>은 송신된 주파수,
+- <span class="arithmatex"><span class="MathJax_Preview">v_{\text{rec}}</span><script type="math/tex">v_{\text{rec}}</script></span>는 수신기의 속도,
+- <span class="arithmatex"><span class="MathJax_Preview">v_{\text{sat}}</span><script type="math/tex">v_{\text{sat}}</script></span>는 위성의 속도,
+- <span class="arithmatex"><span class="MathJax_Preview">c</span><script type="math/tex">c</script></span>는 빛의 속도이다.</p>
+<h3 id="_1">우주 공간에서의 위치 결정 문제</h3>
+<p>지구 표면에서 GNSS는 위성을 통해 삼변측량 방식을 사용하여 위치를 계산한다. 그러나 우주에서는 지구 표면에서와는 다른 위치 결정 방법이 필요하다. 이는 지구 중심에서 멀어질수록 GNSS 위성 신호의 분포가 변하기 때문이다.</p>
+<p>우주 공간에서의 삼변측량을 단순화한 모델은 다음과 같이 설명할 수 있다:</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+\mathbf{r} = \mathbf{r}_{\text{sat}} + \mathbf{v}_{\text{rel}} \cdot \Delta t
+</div>
+<script type="math/tex; mode=display">
+\mathbf{r} = \mathbf{r}_{\text{sat}} + \mathbf{v}_{\text{rel}} \cdot \Delta t
+</script>
+</div>
+<p>여기서:
+- <span class="arithmatex"><span class="MathJax_Preview">\mathbf{r}</span><script type="math/tex">\mathbf{r}</script></span>는 우주선의 위치 벡터,
+- <span class="arithmatex"><span class="MathJax_Preview">\mathbf{r}_{\text{sat}}</span><script type="math/tex">\mathbf{r}_{\text{sat}}</script></span>는 위성의 위치 벡터,
+- <span class="arithmatex"><span class="MathJax_Preview">\mathbf{v}_{\text{rel}}</span><script type="math/tex">\mathbf{v}_{\text{rel}}</script></span>은 우주선과 위성 사이의 상대 속도 벡터,
+- <span class="arithmatex"><span class="MathJax_Preview">\Delta t</span><script type="math/tex">\Delta t</script></span>는 신호 전달 시간 차이다.</p>
+<p>우주에서 GNSS를 사용하여 정확한 위치를 계산하는 것은 지구에서보다 더 복잡하다. 이는 위성 신호가 지구 중심에서 멀어질수록 더 분산되기 때문이다. 또한, 우주 공간에서는 위성 간의 삼변측량 기법을 사용할 수 있는 가시 위성의 수가 지구에서보다 제한적일 수 있다.</p>
+<p>[계속]</p>
 
   <br>
     

@@ -198,9 +198,14 @@ response = openai.Completion.create(
 <p>토큰은 OpenAI 모델에서 텍스트를 처리하는 기본 단위이다. 토큰은 단어의 부분으로, 영어에서 한 단어는 보통 1~2개의 토큰으로 분할된다. 예를 들어, 단어 "ChatGPT"는 하나의 토큰이지만, 문장 "ChatGPT is amazing!"은 총 4개의 토큰으로 처리된다.</p>
 <p>API 사용 시 요청과 응답의 토큰 수는 매우 중요한 요소이다. 사용된 토큰의 양에 따라 요금이 청구되기 때문에, 이를 최적화하는 것이 필요하다.</p>
 <p>토큰의 수식으로는 다음과 같은 관계식을 정의할 수 있다:</p>
-<p>$$</p>
-<p>\text{total_tokens} = \text{prompt_tokens} + \text{completion_tokens}</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+\text{total\_tokens} = \text{prompt\_tokens} + \text{completion\_tokens}
+</div>
+<script type="math/tex; mode=display">
+\text{total\_tokens} = \text{prompt\_tokens} + \text{completion\_tokens}
+</script>
+</div>
 <p>여기서:
 - <span class="arithmatex"><span class="MathJax_Preview">\text{prompt\_tokens}</span><script type="math/tex">\text{prompt\_tokens}</script></span>: 프롬프트에 사용된 토큰 수
 - <span class="arithmatex"><span class="MathJax_Preview">\text{completion\_tokens}</span><script type="math/tex">\text{completion\_tokens}</script></span>: 모델이 생성한 응답에서 사용된 토큰 수</p>
@@ -209,9 +214,14 @@ response = openai.Completion.create(
 <p>OpenAI API에서 사용되는 GPT 모델은 <strong>Transformer</strong>라는 딥러닝 구조를 기반으로 작동한다. 이 구조는 텍스트 데이터를 토큰 단위로 처리하며, 주어진 프롬프트에 따라 텍스트를 생성한다. Transformer 모델의 주요 구성 요소는 <strong>어텐션 메커니즘</strong>으로, 이 메커니즘을 통해 문맥을 고려한 텍스트 생성을 수행한다.</p>
 <h4 id="_7">어텐션 메커니즘</h4>
 <p>Transformer의 핵심 요소인 어텐션 메커니즘은 주어진 입력 텍스트 내에서 중요한 부분을 더 잘 학습할 수 있도록 한다. 특히, GPT 모델은 <strong>셀프 어텐션(self-attention)</strong>을 사용하여 입력의 각 단어(토큰)가 문장의 다른 단어와 어떻게 연관되는지를 계산한다. 수학적으로, 어텐션 메커니즘은 다음과 같이 표현할 수 있다:</p>
-<p>$$</p>
-<p>\text{Attention}(Q, K, V) = \text{softmax}\left(\frac{QK^\top}{\sqrt{d_k}}\right)V</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+\text{Attention}(Q, K, V) = \text{softmax}\left(\frac{QK^\top}{\sqrt{d_k}}\right)V
+</div>
+<script type="math/tex; mode=display">
+\text{Attention}(Q, K, V) = \text{softmax}\left(\frac{QK^\top}{\sqrt{d_k}}\right)V
+</script>
+</div>
 <p>여기서:
 - <span class="arithmatex"><span class="MathJax_Preview">Q</span><script type="math/tex">Q</script></span>: Query 행렬
 - <span class="arithmatex"><span class="MathJax_Preview">K</span><script type="math/tex">K</script></span>: Key 행렬
@@ -221,9 +231,14 @@ response = openai.Completion.create(
 <h4 id="gpt">GPT의 작동 과정</h4>
 <p>GPT 모델은 언어 모델로서, 주어진 프롬프트에 따라 다음에 나올 단어를 예측하는 방식으로 동작한다. 이를 위해 모델은 입력된 텍스트를 일련의 토큰으로 변환한 뒤, 이 토큰의 시퀀스를 기반으로 가장 확률이 높은 다음 토큰을 예측한다. 이 과정은 오토리그레시브(autoregressive) 방식으로 진행되며, 이전에 생성된 토큰들이 다음 토큰 생성에 영향을 미친다.</p>
 <p>모델은 다음과 같은 확률 분포를 학습한다:</p>
-<p>$$</p>
-<p>P(w_i | w_1, w_2, \dots, w_{i-1})</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+P(w_i | w_1, w_2, \dots, w_{i-1})
+</div>
+<script type="math/tex; mode=display">
+P(w_i | w_1, w_2, \dots, w_{i-1})
+</script>
+</div>
 <p>여기서:
 - <span class="arithmatex"><span class="MathJax_Preview">P(w_i)</span><script type="math/tex">P(w_i)</script></span>: 시퀀스에서 <span class="arithmatex"><span class="MathJax_Preview">i</span><script type="math/tex">i</script></span>번째 단어 <span class="arithmatex"><span class="MathJax_Preview">w_i</span><script type="math/tex">w_i</script></span>가 등장할 확률
 - <span class="arithmatex"><span class="MathJax_Preview">w_1, w_2, \dots, w_{i-1}</span><script type="math/tex">w_1, w_2, \dots, w_{i-1}</script></span>: 이전에 생성된 단어들</p>
@@ -244,9 +259,14 @@ response = openai.Completion.create(
 <ol>
 <li><strong>온도(temperature)</strong>: 이 값은 0에서 1 사이의 실수 값으로, 온도가 낮을수록 모델이 더 결정론적(deterministic)으로 동작하며, 온도가 높을수록 더 다양한 결과를 생성하게 된다. 수학적으로는 확률 분포의 평탄함을 조절하는 역할을 한다.</li>
 </ol>
-<p>$$</p>
-<p>P'(w_i) = \frac{P(w_i)^{1/T}}{\sum_j P(w_j)^{1/T}}</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+P'(w_i) = \frac{P(w_i)^{1/T}}{\sum_j P(w_j)^{1/T}}
+</div>
+<script type="math/tex; mode=display">
+P'(w_i) = \frac{P(w_i)^{1/T}}{\sum_j P(w_j)^{1/T}}
+</script>
+</div>
 <p>여기서:
 - <span class="arithmatex"><span class="MathJax_Preview">P'(w_i)</span><script type="math/tex">P'(w_i)</script></span>: 재조정된 확률
 - <span class="arithmatex"><span class="MathJax_Preview">T</span><script type="math/tex">T</script></span>: 온도 값
@@ -284,9 +304,14 @@ print(&quot;Generated Response: &quot;, response_text)
 <p>OpenAI API는 <strong>사용된 토큰 수</strong>에 따라 요금이 청구된다. API 요청을 보낼 때 <strong>프롬프트에 사용된 토큰</strong>과 <strong>모델이 생성한 응답에서 사용된 토큰</strong> 모두가 비용 계산에 포함된다. 따라서, API를 효율적으로 사용하기 위해서는 토큰 수를 적절히 관리하는 것이 중요하다.</p>
 <h4 id="_14">토큰 사용 계산 방법</h4>
 <p>토큰 수는 API 사용의 중요한 지표이다. 토큰 사용량을 효율적으로 관리하는 방법을 이해하기 위해, 요청 시 사용된 토큰의 양과 응답에서 사용된 토큰의 양을 각각 살펴봐야 한다. 이 둘을 합친 값이 <strong>총 토큰 수(total_tokens)</strong>이며, 총 토큰 수가 API 사용 요금의 기준이 된다.</p>
-<p>$$</p>
-<p>\text{total_tokens} = \text{prompt_tokens} + \text{completion_tokens}</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+\text{total\_tokens} = \text{prompt\_tokens} + \text{completion\_tokens}
+</div>
+<script type="math/tex; mode=display">
+\text{total\_tokens} = \text{prompt\_tokens} + \text{completion\_tokens}
+</script>
+</div>
 <p>여기서:
 - <span class="arithmatex"><span class="MathJax_Preview">\text{prompt\_tokens}</span><script type="math/tex">\text{prompt\_tokens}</script></span>: 프롬프트에 사용된 토큰 수
 - <span class="arithmatex"><span class="MathJax_Preview">\text{completion\_tokens}</span><script type="math/tex">\text{completion\_tokens}</script></span>: 모델이 생성한 응답에서 사용된 토큰 수</p>

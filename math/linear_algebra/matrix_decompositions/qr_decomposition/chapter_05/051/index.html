@@ -178,15 +178,25 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 <p><strong><span class="arithmatex"><span class="MathJax_Preview">\mathbf{Q}^\top \mathbf{y}</span><script type="math/tex">\mathbf{Q}^\top \mathbf{y}</script></span> 계산</strong>: <span class="arithmatex"><span class="MathJax_Preview">\mathbf{Q}^\top \mathbf{y}</span><script type="math/tex">\mathbf{Q}^\top \mathbf{y}</script></span>를 계산하여, 이를 새로운 <span class="arithmatex"><span class="MathJax_Preview">p \times 1</span><script type="math/tex">p \times 1</script></span> 벡터 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{z}</span><script type="math/tex">\mathbf{z}</script></span>라고 정의한다.</p>
 </li>
 </ol>
-<p>$$
-   \mathbf{z} = \mathbf{Q}^\top \mathbf{y}</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+   \mathbf{z} = \mathbf{Q}^\top \mathbf{y}
+</div>
+<script type="math/tex; mode=display">
+   \mathbf{z} = \mathbf{Q}^\top \mathbf{y}
+</script>
+</div>
 <ol>
 <li><strong>후진 대입법</strong>: <span class="arithmatex"><span class="MathJax_Preview">\mathbf{R} \mathbf{\beta} = \mathbf{z}</span><script type="math/tex">\mathbf{R} \mathbf{\beta} = \mathbf{z}</script></span> 식에서 후진 대입법을 사용하여 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{\beta}</span><script type="math/tex">\mathbf{\beta}</script></span>를 계산한다.</li>
 </ol>
-<p>$$
-   \mathbf{\beta}<em>p = \frac{z_p}{R</em>{pp}}, \quad \mathbf{\beta}<em>{p-1} = \frac{z</em>{p-1} - R_{p-1,p} \mathbf{\beta}<em>p}{R</em>{p-1,p-1}}, \quad \dots</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+   \mathbf{\beta}_p = \frac{z_p}{R_{pp}}, \quad \mathbf{\beta}_{p-1} = \frac{z_{p-1} - R_{p-1,p} \mathbf{\beta}_p}{R_{p-1,p-1}}, \quad \dots
+</div>
+<script type="math/tex; mode=display">
+   \mathbf{\beta}_p = \frac{z_p}{R_{pp}}, \quad \mathbf{\beta}_{p-1} = \frac{z_{p-1} - R_{p-1,p} \mathbf{\beta}_p}{R_{p-1,p-1}}, \quad \dots
+</script>
+</div>
 <ol>
 <li><strong>결과 확인</strong>: 계산된 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{\beta}</span><script type="math/tex">\mathbf{\beta}</script></span> 값을 사용하여 모델의 적합성을 확인하고, 필요에 따라 모델을 수정하거나 추가 분석을 수행한다.</li>
 </ol>

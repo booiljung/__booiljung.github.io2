@@ -155,9 +155,14 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 <ul>
 <li>입력 행렬, 출력 행렬 및 추가적인 상수 메모리 공간을 모두 고려했을 때, 전체 공간 복잡도는 다음과 같이 정리할 수 있다:</li>
 </ul>
-<p>$$
-  O(n^2) + O(n^2) + O(1) = O(n^2)</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+  O(n^2) + O(n^2) + O(1) = O(n^2)
+</div>
+<script type="math/tex; mode=display">
+  O(n^2) + O(n^2) + O(1) = O(n^2)
+</script>
+</div>
 <p>따라서 Cholesky 분해 알고리즘의 전체 공간 복잡도는 <span class="arithmatex"><span class="MathJax_Preview">O(n^2)</span><script type="math/tex">O(n^2)</script></span>이다.</p>
 <hr />
 <p>Cholesky 분해 알고리즘의 전체 계산 복잡도는 <span class="arithmatex"><span class="MathJax_Preview">O(n^3)</span><script type="math/tex">O(n^3)</script></span>이며, 공간 복잡도는 <span class="arithmatex"><span class="MathJax_Preview">O(n^2)</span><script type="math/tex">O(n^2)</script></span> 이다. 이로 인해 이 알고리즘은 큰 <span class="arithmatex"><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span> 값에 대해 효율적으로 입력 데이터를 나누고 작은 <span class="arithmatex"><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span> 값에 대해서도 빠르게 계산할 수 있는 장점이 있다.</p>

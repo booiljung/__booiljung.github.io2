@@ -132,23 +132,38 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 <ul>
 <li><strong>응답 시간 (Response Time)</strong>: 시스템이 입력에 반응하는 최대 시간. 이는 실시간 시스템의 핵심 성능 지표이다.</li>
 </ul>
-<p>$$</p>
-<p>T_{response} \leq T_{max}</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+  T_{response} \leq T_{max}
+</div>
+<script type="math/tex; mode=display">
+  T_{response} \leq T_{max}
+</script>
+</div>
 <p>여기서 <span class="arithmatex"><span class="MathJax_Preview">T_{response}</span><script type="math/tex">T_{response}</script></span>는 응답 시간, <span class="arithmatex"><span class="MathJax_Preview">T_{max}</span><script type="math/tex">T_{max}</script></span>는 최대 허용 응답 시간이다.</p>
 <ul>
 <li><strong>신뢰성 (Reliability)</strong>: 시스템이 주어진 시간 동안 오류 없이 동작할 확률.</li>
 </ul>
-<p>$$</p>
-<p>R(t) = e^{-\lambda t}</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+  R(t) = e^{-\lambda t}
+</div>
+<script type="math/tex; mode=display">
+  R(t) = e^{-\lambda t}
+</script>
+</div>
 <p>여기서 <span class="arithmatex"><span class="MathJax_Preview">R(t)</span><script type="math/tex">R(t)</script></span>는 시간 <span class="arithmatex"><span class="MathJax_Preview">t</span><script type="math/tex">t</script></span>에서의 신뢰성, <span class="arithmatex"><span class="MathJax_Preview">\lambda</span><script type="math/tex">\lambda</script></span>는 고장률이다.</p>
 <ul>
 <li><strong>가용성 (Availability)</strong>: 시스템이 정상적으로 운영될 수 있는 시간의 비율.</li>
 </ul>
-<p>$$</p>
-<p>A = \frac{MTBF}{MTBF + MTTR}</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+  A = \frac{MTBF}{MTBF + MTTR}
+</div>
+<script type="math/tex; mode=display">
+  A = \frac{MTBF}{MTBF + MTTR}
+</script>
+</div>
 <p>여기서 <span class="arithmatex"><span class="MathJax_Preview">MTBF</span><script type="math/tex">MTBF</script></span>는 평균 고장 간격, <span class="arithmatex"><span class="MathJax_Preview">MTTR</span><script type="math/tex">MTTR</script></span>은 평균 수리 시간이다.</p>
 <h3 id="_3">소프트웨어 검증 및 검증</h3>
 <p>실시간 시스템의 소프트웨어는 다음과 같은 단계별 검증 및 검증 절차를 거쳐야 한다:</p>
@@ -158,9 +173,14 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 <li><strong>코드 검토 및 테스트</strong>: 소스 코드를 검토하고, 단위 테스트(Unit Test), 통합 테스트(Integration Test), 시스템 테스트(System Test)를 수행한다.</li>
 <li><strong>정형 검증(Formal Verification)</strong>: 수학적 방법을 사용하여 시스템의 정확성을 검증한다.</li>
 </ul>
-<p>$$</p>
-<p>\forall s \in S, P(s) \Rightarrow Q(s)</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+  \forall s \in S, P(s) \Rightarrow Q(s)
+</div>
+<script type="math/tex; mode=display">
+  \forall s \in S, P(s) \Rightarrow Q(s)
+</script>
+</div>
 <p>여기서 <span class="arithmatex"><span class="MathJax_Preview">S</span><script type="math/tex">S</script></span>는 시스템의 상태 집합, <span class="arithmatex"><span class="MathJax_Preview">P(s)</span><script type="math/tex">P(s)</script></span>는 전제 조건, <span class="arithmatex"><span class="MathJax_Preview">Q(s)</span><script type="math/tex">Q(s)</script></span>는 후속 조건이다.</p>
 <h3 id="_4">하드웨어 인증</h3>
 <p>하드웨어 인증도 소프트웨어와 마찬가지로 중요한 부분이다. 주요 인증 항목은 다음과 같다:</p>
@@ -180,16 +200,26 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 <ul>
 <li><strong>데이터 암호화</strong>: 데이터 전송 및 저장 시 암호화하여 무단 접근을 방지한다.</li>
 </ul>
-<p>$$</p>
-<p>C = E_k(P)</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+  C = E_k(P)
+</div>
+<script type="math/tex; mode=display">
+  C = E_k(P)
+</script>
+</div>
 <p>여기서 <span class="arithmatex"><span class="MathJax_Preview">C</span><script type="math/tex">C</script></span>는 암호문, <span class="arithmatex"><span class="MathJax_Preview">E_k</span><script type="math/tex">E_k</script></span>는 키 <span class="arithmatex"><span class="MathJax_Preview">k</span><script type="math/tex">k</script></span>를 사용한 암호화 함수, <span class="arithmatex"><span class="MathJax_Preview">P</span><script type="math/tex">P</script></span>는 평문이다.</p>
 <ul>
 <li><strong>인증 및 권한 관리</strong>: 사용자와 시스템 간의 신뢰 관계를 확인하고, 권한을 관리한다.</li>
 </ul>
-<p>$$</p>
-<p>A_{auth} = {(u, r) | u \in U \wedge r \in R}</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+  A_{auth} = \{(u, r) | u \in U \wedge r \in R\}
+</div>
+<script type="math/tex; mode=display">
+  A_{auth} = \{(u, r) | u \in U \wedge r \in R\}
+</script>
+</div>
 <p>여기서 <span class="arithmatex"><span class="MathJax_Preview">A_{auth}</span><script type="math/tex">A_{auth}</script></span>는 인증 매핑, <span class="arithmatex"><span class="MathJax_Preview">u</span><script type="math/tex">u</script></span>는 사용자, <span class="arithmatex"><span class="MathJax_Preview">r</span><script type="math/tex">r</script></span>는 권한이다.</p>
 <ul>
 <li><strong>취약점 분석 및 패치 관리</strong>: 시스템의 취약점을 주기적으로 분석하고, 필요한 패치를 적용한다.</li>

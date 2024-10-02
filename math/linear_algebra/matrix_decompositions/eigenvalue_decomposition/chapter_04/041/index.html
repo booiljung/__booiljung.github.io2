@@ -217,9 +217,14 @@ R(\mathbf{v}) = \frac{\mathbf{v}^T \mathbf{A} \mathbf{v}}{\mathbf{v}^T \mathbf{v
 <p>대수적 다중성과 기하적 다중성의 차이가 있는 경우, 고유값 문제의 해를 분석하는 데 있어 중요한 추가적인 고려 사항이 필요하다.</p>
 <h3 id="_12">슈어 정리</h3>
 <p>슈어 정리(Schur's theorem)에 따르면, 복소수 행렬 <strong><span class="arithmatex"><span class="MathJax_Preview">\mathbf{A}</span><script type="math/tex">\mathbf{A}</script></span></strong>는 유니터리 행렬 <strong><span class="arithmatex"><span class="MathJax_Preview">\mathbf{U}</span><script type="math/tex">\mathbf{U}</script></span></strong>에 의해 상삼각행렬(upper triangular matrix) <strong><span class="arithmatex"><span class="MathJax_Preview">\mathbf{T}</span><script type="math/tex">\mathbf{T}</script></span></strong>로 변환될 수 있다. 즉, 다음과 같이 표현할 수 있다:</p>
-<p>$$</p>
-<p>\mathbf{A} = \mathbf{U} \mathbf{T} \mathbf{U}^H</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+\mathbf{A} = \mathbf{U} \mathbf{T} \mathbf{U}^H
+</div>
+<script type="math/tex; mode=display">
+\mathbf{A} = \mathbf{U} \mathbf{T} \mathbf{U}^H
+</script>
+</div>
 <p>여기서 <strong><span class="arithmatex"><span class="MathJax_Preview">\mathbf{U}</span><script type="math/tex">\mathbf{U}</script></span></strong>는 유니터리 행렬이고, <strong><span class="arithmatex"><span class="MathJax_Preview">\mathbf{U}^H</span><script type="math/tex">\mathbf{U}^H</script></span></strong>는 <strong><span class="arithmatex"><span class="MathJax_Preview">\mathbf{U}</span><script type="math/tex">\mathbf{U}</script></span></strong>의 에르미트 전치 행렬이다. <strong><span class="arithmatex"><span class="MathJax_Preview">\mathbf{T}</span><script type="math/tex">\mathbf{T}</script></span></strong>의 대각 원소들은 <strong><span class="arithmatex"><span class="MathJax_Preview">\mathbf{A}</span><script type="math/tex">\mathbf{A}</script></span></strong>의 고유값들이다. 이 정리는 고유값을 계산할 때 매우 유용한 도구를 제공하며, 특히 복소수 행렬의 고유값을 다룰 때 중요하다.</p>
 <h3 id="qr">QR 알고리즘</h3>
 <p>QR 알고리즘은 고유값을 계산하는 매우 효율적인 수치적 방법이다. 이 알고리즘은 행렬 <strong><span class="arithmatex"><span class="MathJax_Preview">\mathbf{A}</span><script type="math/tex">\mathbf{A}</script></span></strong>를 QR 분해(QR decomposition)를 사용해 반복적으로 변환함으로써, 고유값을 점차적으로 대각선에 수렴시킨다. 이 과정은 다음과 같은 단계를 거친다:</p>
@@ -233,9 +238,14 @@ R(\mathbf{v}) = \frac{\mathbf{v}^T \mathbf{A} \mathbf{v}}{\mathbf{v}^T \mathbf{v
 <p>반복적 방법은 특정한 고유값과 그에 대응하는 고유벡터를 근사적으로 구하기 위한 방법이다. 대표적인 반복적 방법으로는 파워 방법(Power method)과 역파워 방법(Inverse Power method)이 있다.</p>
 <h4 id="_14">파워 방법</h4>
 <p>파워 방법은 행렬 <strong><span class="arithmatex"><span class="MathJax_Preview">\mathbf{A}</span><script type="math/tex">\mathbf{A}</script></span></strong>의 가장 큰 절대값을 가지는 고유값과 그에 대응하는 고유벡터를 찾기 위해 사용된다. 이 방법은 초기 벡터 <strong><span class="arithmatex"><span class="MathJax_Preview">\mathbf{v}_0</span><script type="math/tex">\mathbf{v}_0</script></span></strong>를 설정한 후, 다음의 반복 과정을 수행한다:</p>
-<p>$$</p>
-<p>\mathbf{v}_{k+1} = \frac{\mathbf{A} \mathbf{v}_k}{|\mathbf{A} \mathbf{v}_k|}</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+\mathbf{v}_{k+1} = \frac{\mathbf{A} \mathbf{v}_k}{\|\mathbf{A} \mathbf{v}_k\|}
+</div>
+<script type="math/tex; mode=display">
+\mathbf{v}_{k+1} = \frac{\mathbf{A} \mathbf{v}_k}{\|\mathbf{A} \mathbf{v}_k\|}
+</script>
+</div>
 <p>이 과정을 반복하면 <strong><span class="arithmatex"><span class="MathJax_Preview">\mathbf{v}_k</span><script type="math/tex">\mathbf{v}_k</script></span></strong>가 점차적으로 <strong><span class="arithmatex"><span class="MathJax_Preview">\mathbf{A}</span><script type="math/tex">\mathbf{A}</script></span></strong>의 주요 고유벡터에 수렴하며, 그에 따라 주요 고유값을 근사할 수 있다.</p>
 <h4 id="_15">역파워 방법</h4>
 <p>역파워 방법은 파워 방법과 반대로, 가장 작은 절대값을 가지는 고유값을 찾기 위해 사용된다. 이 방법은 <strong><span class="arithmatex"><span class="MathJax_Preview">(\mathbf{A} - \sigma \mathbf{I})^{-1}</span><script type="math/tex">(\mathbf{A} - \sigma \mathbf{I})^{-1}</script></span></strong>에 대해 파워 방법을 적용하여 고유값을 계산하며, 여기서 <strong><span class="arithmatex"><span class="MathJax_Preview">\sigma</span><script type="math/tex">\sigma</script></span></strong>는 시프트 값(shift value)이다.</p>

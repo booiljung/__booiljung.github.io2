@@ -106,9 +106,14 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 <p>비디오와 오디오 파일은 각각의 프레임에 <strong>타임스탬프</strong>가 부여되어 있으며, 이를 통해 스트림의 각 부분이 특정 시간에 재생되어야 함을 나타낸다.<br />
 각 프레임의 타임스탬프를 <strong>PTS (Presentation Time Stamp)</strong> 라고 한다.<br />
 다음과 같은 식으로 표현된다:</p>
-<p>$$</p>
-<p>\text{PTS}_{\text{frame}} = \frac{\text{프레임 번호}}{\text{프레임 레이트}}</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+\text{PTS}_{\text{frame}} = \frac{\text{프레임 번호}}{\text{프레임 레이트}}
+</div>
+<script type="math/tex; mode=display">
+\text{PTS}_{\text{frame}} = \frac{\text{프레임 번호}}{\text{프레임 레이트}}
+</script>
+</div>
 <p>여기서:
 - <span class="arithmatex"><span class="MathJax_Preview">\text{PTS}_{\text{frame}}</span><script type="math/tex">\text{PTS}_{\text{frame}}</script></span>은 해당 프레임의 시간 위치를 나타낸다.
 - <strong>프레임 번호</strong>는 비디오 또는 오디오 스트림의 각 프레임을 나타내는 순서 번호이다.
@@ -121,9 +126,14 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 <p>위 명령어는 두 개의 입력 파일 (비디오와 오디오)을 동기화하여 출력 파일로 병합하는 방법이다. <strong>-map</strong> 옵션을 사용하여 비디오와 오디오 스트림을 각각 선택한다.</p>
 <h3 id="4">4. 비디오와 오디오의 시간 오차 계산</h3>
 <p>동기화의 정확도를 위해서는 비디오와 오디오의 시간 오차를 계산해야 한다. 두 스트림 간의 <strong>PTS</strong> 차이를 계산하면 다음과 같다:</p>
-<p>$$</p>
-<p>\Delta t = \mathbf{PTS}<em>{\text{audio}} - \mathbf{PTS}</em>{\text{video}}</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+\Delta t = \mathbf{PTS}_{\text{audio}} - \mathbf{PTS}_{\text{video}}
+</div>
+<script type="math/tex; mode=display">
+\Delta t = \mathbf{PTS}_{\text{audio}} - \mathbf{PTS}_{\text{video}}
+</script>
+</div>
 <p>여기서:
 - <span class="arithmatex"><span class="MathJax_Preview">\Delta t</span><script type="math/tex">\Delta t</script></span>는 비디오와 오디오의 시간 차이를 나타낸다.
 - <span class="arithmatex"><span class="MathJax_Preview">\mathbf{PTS}_{\text{audio}}</span><script type="math/tex">\mathbf{PTS}_{\text{audio}}</script></span>는 오디오 프레임의 시간이다.
@@ -149,9 +159,14 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 - <strong>TIME_OFFSET</strong>은 오차 시간이며, 이를 통해 원하는 만큼의 시간 지연을 설정할 수 있다.</p>
 <h3 id="8-tb">8. 비디오 및 오디오 동기화를 위한 타임베이스(TB)</h3>
 <p>FFmpeg에서 사용되는 타임베이스는 비디오와 오디오의 프레임 간 시간차를 미세하게 조정할 때 중요한 역할을 한다. 타임베이스(TB)는 다음과 같은 수식으로 표현된다:</p>
-<p>$$</p>
-<p>TB = \frac{1}{FPS}</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+TB = \frac{1}{FPS}
+</div>
+<script type="math/tex; mode=display">
+TB = \frac{1}{FPS}
+</script>
+</div>
 <p>여기서:
 - <strong>FPS</strong>는 초당 프레임 수를 나타내는 값이다.<br />
 이 타임베이스 값은 비디오 및 오디오 프레임의 PTS 값을 계산할 때 사용되며, 정확한 동기화를 위해 FFmpeg에서 자동으로 적용된다.</p>

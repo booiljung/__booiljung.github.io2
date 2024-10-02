@@ -140,9 +140,14 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 </code></pre>
 <p>이 명령어는 입력 파일을 44.1kHz의 샘플링 레이트로 MP3 포맷으로 변환한다.</p>
 <p>수학적으로, 샘플링 레이트의 개념은 다음과 같이 정의된다.</p>
-<p>$$</p>
-<p>f_s = \frac{N_s}{T}</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+f_s = \frac{N_s}{T}
+</div>
+<script type="math/tex; mode=display">
+f_s = \frac{N_s}{T}
+</script>
+</div>
 <p>여기서 <span class="arithmatex"><span class="MathJax_Preview">N_s</span><script type="math/tex">N_s</script></span>는 1초 동안 샘플링된 데이터의 수, <span class="arithmatex"><span class="MathJax_Preview">T</span><script type="math/tex">T</script></span>는 시간(초)이다. 샘플링 레이트가 높을수록 더 많은 데이터가 수집되어 음질이 좋아지지만, 파일 크기도 커진다.</p>
 <h3 id="_4">비트레이트 설정</h3>
 <p>오디오 포맷을 변환할 때, 비트레이트 (<span class="arithmatex"><span class="MathJax_Preview">b_r</span><script type="math/tex">b_r</script></span>)는 오디오 파일의 품질과 크기에 큰 영향을 미친다. FFMPEG에서는 <code>-b:a</code> 옵션을 사용하여 오디오의 비트레이트를 설정할 수 있다. 단위는 보통 kbps로 지정한다.</p>
@@ -150,9 +155,14 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 </code></pre>
 <p>위 명령어는 입력 파일을 192kbps 비트레이트로 MP3 포맷으로 변환한다. 비트레이트가 높을수록 음질이 향상되지만, 파일 크기가 커진다.</p>
 <p>비트레이트는 다음 수식으로 나타낼 수 있다.</p>
-<p>$$</p>
-<p>b_r = \frac{S}{T}</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+b_r = \frac{S}{T}
+</div>
+<script type="math/tex; mode=display">
+b_r = \frac{S}{T}
+</script>
+</div>
 <p>여기서 <span class="arithmatex"><span class="MathJax_Preview">S</span><script type="math/tex">S</script></span>는 초당 전송되는 데이터 양(비트)이고, <span class="arithmatex"><span class="MathJax_Preview">T</span><script type="math/tex">T</script></span>는 전송 시간(초)이다. 비트레이트가 높을수록 더 많은 데이터가 전송되며, 이는 더 좋은 품질의 오디오로 이어진다.</p>
 <h3 id="_5">채널 수 변경</h3>
 <p>오디오 포맷 변환 중 채널 수 (<span class="arithmatex"><span class="MathJax_Preview">C</span><script type="math/tex">C</script></span>)도 변경할 수 있다. 모노에서 스테레오로, 혹은 스테레오에서 모노로 변환하는 것이 대표적인 예이다. 이때 <code>-ac</code> 옵션을 사용한다.</p>
@@ -185,9 +195,14 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 </ol>
 <h3 id="_8">주파수 응답과 포맷 변환</h3>
 <p>주파수 응답은 오디오 데이터의 품질을 결정하는 또 하나의 중요한 요소이다. 샘플링 레이트와 비트레이트가 주파수 응답에 영향을 미치며, 이를 수식으로 나타낼 수 있다.</p>
-<p>$$</p>
-<p>f_{\text{max}} = \frac{f_s}{2}</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+f_{\text{max}} = \frac{f_s}{2}
+</div>
+<script type="math/tex; mode=display">
+f_{\text{max}} = \frac{f_s}{2}
+</script>
+</div>
 <p>여기서 <span class="arithmatex"><span class="MathJax_Preview">f_{\text{max}}</span><script type="math/tex">f_{\text{max}}</script></span>는 샘플링 레이트에서 표현할 수 있는 최대 주파수이다. 이 이론은 나이퀴스트 정리에 근거하며, <span class="arithmatex"><span class="MathJax_Preview">f_s</span><script type="math/tex">f_s</script></span>가 높을수록 더 넓은 주파수 대역을 표현할 수 있다.</p>
 <h3 id="_9">오디오 필터 적용</h3>
 <p>오디오 포맷 변환 중 오디오 필터를 적용하여 음질을 개선하거나 특정 효과를 추가할 수 있다. FFMPEG에서는 <code>-af</code> 옵션을 사용하여 다양한 오디오 필터를 적용할 수 있다.</p>
@@ -196,41 +211,67 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 <pre><code>ffmpeg -i input.wav -af &quot;volume=0.5&quot; output.mp3
 </code></pre>
 <p>볼륨 필터는 오디오 신호의 진폭을 변경하여 적용되며, 수식으로는 다음과 같이 표현된다.</p>
-<p>$$</p>
-<p>\mathbf{y}(t) = a \cdot \mathbf{x}(t)</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+\mathbf{y}(t) = a \cdot \mathbf{x}(t)
+</div>
+<script type="math/tex; mode=display">
+\mathbf{y}(t) = a \cdot \mathbf{x}(t)
+</script>
+</div>
 <p>여기서 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{x}(t)</span><script type="math/tex">\mathbf{x}(t)</script></span>는 입력 오디오 신호, <span class="arithmatex"><span class="MathJax_Preview">\mathbf{y}(t)</span><script type="math/tex">\mathbf{y}(t)</script></span>는 필터 적용 후 출력 신호, <span class="arithmatex"><span class="MathJax_Preview">a</span><script type="math/tex">a</script></span>는 볼륨 조정 계수이다.</p>
 <h4 id="_11">고역 통과 필터</h4>
 <p>고역 통과 필터는 특정 주파수 이상의 신호만 통과시키는 필터로, <code>highpass</code> 필터를 사용하여 적용할 수 있다. 예를 들어, 300Hz 이상의 주파수만 통과시키려면 다음과 같이 설정한다.</p>
 <pre><code>ffmpeg -i input.wav -af &quot;highpass=f=300&quot; output.mp3
 </code></pre>
 <p>고역 통과 필터는 다음과 같은 수식으로 표현된다.</p>
-<p>$$</p>
-<p>H(f) = \begin{cases} 
-1 &amp; \text{if } f &gt; f_c \
+<div class="arithmatex">
+<div class="MathJax_Preview">
+H(f) = \begin{cases} 
+1 &amp; \text{if } f &gt; f_c \\
 0 &amp; \text{if } f \leq f_c
-\end{cases}</p>
-<p>$$</p>
+\end{cases}
+</div>
+<script type="math/tex; mode=display">
+H(f) = \begin{cases} 
+1 & \text{if } f > f_c \\
+0 & \text{if } f \leq f_c
+\end{cases}
+</script>
+</div>
 <p>여기서 <span class="arithmatex"><span class="MathJax_Preview">f_c</span><script type="math/tex">f_c</script></span>는 컷오프 주파수이다.</p>
 <h4 id="_12">저역 통과 필터</h4>
 <p>반대로, 저역 통과 필터는 특정 주파수 이하의 신호만 통과시킨다. <code>lowpass</code> 필터를 사용하여 적용할 수 있으며, 예를 들어 500Hz 이하의 주파수만 통과시키려면 다음과 같은 명령어를 사용한다.</p>
 <pre><code>ffmpeg -i input.wav -af &quot;lowpass=f=500&quot; output.mp3
 </code></pre>
 <p>저역 통과 필터의 수식은 다음과 같다.</p>
-<p>$$</p>
-<p>H(f) = \begin{cases} 
-1 &amp; \text{if } f \leq f_c \
+<div class="arithmatex">
+<div class="MathJax_Preview">
+H(f) = \begin{cases} 
+1 &amp; \text{if } f \leq f_c \\
 0 &amp; \text{if } f &gt; f_c
-\end{cases}</p>
-<p>$$</p>
+\end{cases}
+</div>
+<script type="math/tex; mode=display">
+H(f) = \begin{cases} 
+1 & \text{if } f \leq f_c \\
+0 & \text{if } f > f_c
+\end{cases}
+</script>
+</div>
 <h4 id="_13">리버브 효과</h4>
 <p>FFMPEG을 사용하여 리버브(잔향) 효과를 추가할 수 있다. 리버브 효과는 <code>aecho</code> 필터를 사용하여 적용되며, 예를 들어 0.8초 간격으로 0.5의 감쇠율을 가진 리버브를 추가하려면 다음과 같이 설정한다.</p>
 <pre><code>ffmpeg -i input.wav -af &quot;aecho=0.8:0.9:0.5:0.3&quot; output.mp3
 </code></pre>
 <p>리버브는 다음과 같은 수식으로 표현할 수 있다.</p>
-<p>$$</p>
-<p>\mathbf{y}(t) = \mathbf{x}(t) + \alpha \mathbf{x}(t - \tau)</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+\mathbf{y}(t) = \mathbf{x}(t) + \alpha \mathbf{x}(t - \tau)
+</div>
+<script type="math/tex; mode=display">
+\mathbf{y}(t) = \mathbf{x}(t) + \alpha \mathbf{x}(t - \tau)
+</script>
+</div>
 <p>여기서 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{x}(t)</span><script type="math/tex">\mathbf{x}(t)</script></span>는 입력 신호, <span class="arithmatex"><span class="MathJax_Preview">\mathbf{y}(t)</span><script type="math/tex">\mathbf{y}(t)</script></span>는 출력 신호, <span class="arithmatex"><span class="MathJax_Preview">\alpha</span><script type="math/tex">\alpha</script></span>는 감쇠율, <span class="arithmatex"><span class="MathJax_Preview">\tau</span><script type="math/tex">\tau</script></span>는 리버브 지연 시간이다.</p>
 <h3 id="_14">채널 매핑</h3>
 <p>FFMPEG에서는 오디오 포맷 변환 중 채널 매핑을 변경할 수 있다. 예를 들어, 스테레오 입력 파일에서 좌우 채널을 서로 바꾸려면 <code>-map_channel</code> 옵션을 사용한다.</p>

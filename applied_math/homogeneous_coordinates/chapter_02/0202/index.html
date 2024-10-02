@@ -379,49 +379,99 @@ y' = y \cdot s_y
 <ol>
 <li><strong>먼저 이동, 후에 회전</strong>:</li>
 </ol>
-<p>$$
+<div class="arithmatex">
+<div class="MathJax_Preview">
    \mathbf{T}_1 =
    \begin{bmatrix}
-   1 &amp; 0 &amp; t_x \
-   0 &amp; 1 &amp; t_y \
+   1 &amp; 0 &amp; t_x \\
+   0 &amp; 1 &amp; t_y \\
    0 &amp; 0 &amp; 1
-   \end{bmatrix}</p>
-<p>$$</p>
-<p>$$
+   \end{bmatrix}
+</div>
+<script type="math/tex; mode=display">
+   \mathbf{T}_1 =
+   \begin{bmatrix}
+   1 & 0 & t_x \\
+   0 & 1 & t_y \\
+   0 & 0 & 1
+   \end{bmatrix}
+</script>
+</div>
+<div class="arithmatex">
+<div class="MathJax_Preview">
    \mathbf{R}(\theta) =
    \begin{bmatrix}
-   \cos \theta &amp; -\sin \theta &amp; 0 \
-   \sin \theta &amp; \cos \theta &amp; 0 \
+   \cos \theta &amp; -\sin \theta &amp; 0 \\
+   \sin \theta &amp; \cos \theta &amp; 0 \\
    0 &amp; 0 &amp; 1
-   \end{bmatrix}</p>
-<p>$$</p>
+   \end{bmatrix}
+</div>
+<script type="math/tex; mode=display">
+   \mathbf{R}(\theta) =
+   \begin{bmatrix}
+   \cos \theta & -\sin \theta & 0 \\
+   \sin \theta & \cos \theta & 0 \\
+   0 & 0 & 1
+   \end{bmatrix}
+</script>
+</div>
 <p>그리고 결합 변환 행렬은:</p>
-<p>$$
-   \mathbf{C}_1 = \mathbf{R}(\theta) \mathbf{T}_1</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+   \mathbf{C}_1 = \mathbf{R}(\theta) \mathbf{T}_1
+</div>
+<script type="math/tex; mode=display">
+   \mathbf{C}_1 = \mathbf{R}(\theta) \mathbf{T}_1
+</script>
+</div>
 <ol>
 <li><strong>먼저 회전, 후에 이동</strong>:</li>
 </ol>
-<p>$$
+<div class="arithmatex">
+<div class="MathJax_Preview">
    \mathbf{T}_2 =
    \begin{bmatrix}
-   1 &amp; 0 &amp; t_x' \
-   0 &amp; 1 &amp; t_y' \
+   1 &amp; 0 &amp; t_x' \\
+   0 &amp; 1 &amp; t_y' \\
    0 &amp; 0 &amp; 1
-   \end{bmatrix}</p>
-<p>$$</p>
-<p>$$
+   \end{bmatrix}
+</div>
+<script type="math/tex; mode=display">
+   \mathbf{T}_2 =
+   \begin{bmatrix}
+   1 & 0 & t_x' \\
+   0 & 1 & t_y' \\
+   0 & 0 & 1
+   \end{bmatrix}
+</script>
+</div>
+<div class="arithmatex">
+<div class="MathJax_Preview">
    \mathbf{R}(\theta) =
    \begin{bmatrix}
-   \cos \theta &amp; -\sin \theta &amp; 0 \
-   \sin \theta &amp; \cos \theta &amp; 0 \
+   \cos \theta &amp; -\sin \theta &amp; 0 \\
+   \sin \theta &amp; \cos \theta &amp; 0 \\
    0 &amp; 0 &amp; 1
-   \end{bmatrix}</p>
-<p>$$</p>
+   \end{bmatrix}
+</div>
+<script type="math/tex; mode=display">
+   \mathbf{R}(\theta) =
+   \begin{bmatrix}
+   \cos \theta & -\sin \theta & 0 \\
+   \sin \theta & \cos \theta & 0 \\
+   0 & 0 & 1
+   \end{bmatrix}
+</script>
+</div>
 <p>그리고 결합 변환 행렬은:</p>
-<p>$$
-   \mathbf{C}_2 = \mathbf{T}_2 \mathbf{R}(\theta)</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+   \mathbf{C}_2 = \mathbf{T}_2 \mathbf{R}(\theta)
+</div>
+<script type="math/tex; mode=display">
+   \mathbf{C}_2 = \mathbf{T}_2 \mathbf{R}(\theta)
+</script>
+</div>
 <p>이처럼 동일한 변환을 수행하더라도 변환 행렬의 순서에 따라 최종 결과가 달라지게 되므로, 변환 순서를 철저히 고려하여야 한다.</p>
 
   <br>

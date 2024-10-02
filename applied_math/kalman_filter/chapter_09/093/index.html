@@ -161,28 +161,48 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 <li><strong>모델 확률 갱신</strong><br />
    이전 시간의 모델 확률 <span class="arithmatex"><span class="MathJax_Preview">\mu_i(k-1)</span><script type="math/tex">\mu_i(k-1)</script></span>를 바탕으로, 현재 시간 <span class="arithmatex"><span class="MathJax_Preview">k</span><script type="math/tex">k</script></span>에서의 모델 확률을 계산한다. 이때 모델 전환 확률 <span class="arithmatex"><span class="MathJax_Preview">\pi_{ij}</span><script type="math/tex">\pi_{ij}</script></span> (모델 <span class="arithmatex"><span class="MathJax_Preview">\mathcal{M}_i</span><script type="math/tex">\mathcal{M}_i</script></span>에서 모델 <span class="arithmatex"><span class="MathJax_Preview">\mathcal{M}_j</span><script type="math/tex">\mathcal{M}_j</script></span>로의 전환 확률)을 고려한다.</li>
 </ol>
-<p>$$
-   \mu_j(k|k-1) = \sum_{i=1}^{N} \pi_{ij} \mu_i(k-1)</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+   \mu_j(k|k-1) = \sum_{i=1}^{N} \pi_{ij} \mu_i(k-1)
+</div>
+<script type="math/tex; mode=display">
+   \mu_j(k|k-1) = \sum_{i=1}^{N} \pi_{ij} \mu_i(k-1)
+</script>
+</div>
 <ol>
 <li><strong>상태 예측 및 업데이트</strong><br />
    각 모델에 대해 칼만 필터를 적용하여 상태 예측 및 업데이트를 수행한다. 모델 <span class="arithmatex"><span class="MathJax_Preview">\mathcal{M}_j</span><script type="math/tex">\mathcal{M}_j</script></span>에 대한 상태 예측은 다음과 같이 계산된다:</li>
 </ol>
-<p>$$
-   \mathbf{\hat{x}}_j(k|k-1) = \mathbf{F}_j(k-1)\mathbf{\hat{x}}_j(k-1|k-1) + \mathbf{B}_j(k-1)\mathbf{u}(k-1)</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+   \mathbf{\hat{x}}_j(k|k-1) = \mathbf{F}_j(k-1)\mathbf{\hat{x}}_j(k-1|k-1) + \mathbf{B}_j(k-1)\mathbf{u}(k-1)
+</div>
+<script type="math/tex; mode=display">
+   \mathbf{\hat{x}}_j(k|k-1) = \mathbf{F}_j(k-1)\mathbf{\hat{x}}_j(k-1|k-1) + \mathbf{B}_j(k-1)\mathbf{u}(k-1)
+</script>
+</div>
 <p>업데이트 단계에서는 측정 값 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{y}(k)</span><script type="math/tex">\mathbf{y}(k)</script></span>를 이용하여 상태를 갱신한다.</p>
-<p>$$
-   \mathbf{\hat{x}}_j(k|k) = \mathbf{\hat{x}}_j(k|k-1) + \mathbf{K}_j(k)\left(\mathbf{y}(k) - \mathbf{H}_j(k)\mathbf{\hat{x}}_j(k|k-1)\right)</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+   \mathbf{\hat{x}}_j(k|k) = \mathbf{\hat{x}}_j(k|k-1) + \mathbf{K}_j(k)\left(\mathbf{y}(k) - \mathbf{H}_j(k)\mathbf{\hat{x}}_j(k|k-1)\right)
+</div>
+<script type="math/tex; mode=display">
+   \mathbf{\hat{x}}_j(k|k) = \mathbf{\hat{x}}_j(k|k-1) + \mathbf{K}_j(k)\left(\mathbf{y}(k) - \mathbf{H}_j(k)\mathbf{\hat{x}}_j(k|k-1)\right)
+</script>
+</div>
 <p>여기서 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{K}_j(k)</span><script type="math/tex">\mathbf{K}_j(k)</script></span>는 모델 <span class="arithmatex"><span class="MathJax_Preview">\mathcal{M}_j</span><script type="math/tex">\mathcal{M}_j</script></span>에 대한 칼만 이득이다.</p>
 <ol>
 <li><strong>모델 확률 기반의 상태 결합</strong><br />
    각 모델의 결과로부터 최종 상태 추정값을 결합한다. 결합된 상태 추정값 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{\hat{x}}(k|k)</span><script type="math/tex">\mathbf{\hat{x}}(k|k)</script></span>는 각 모델 확률을 가중치로 사용하여 계산된다.</li>
 </ol>
-<p>$$
-   \mathbf{\hat{x}}(k|k) = \sum_{j=1}^{N} \mu_j(k)\mathbf{\hat{x}}_j(k|k)</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+   \mathbf{\hat{x}}(k|k) = \sum_{j=1}^{N} \mu_j(k)\mathbf{\hat{x}}_j(k|k)
+</div>
+<script type="math/tex; mode=display">
+   \mathbf{\hat{x}}(k|k) = \sum_{j=1}^{N} \mu_j(k)\mathbf{\hat{x}}_j(k|k)
+</script>
+</div>
 <p>상태 추정 공분산 또한 마찬가지로 가중 합산하여 계산한다.</p>
 <h3 id="imm">IMM 필터의 수렴성 및 안정성</h3>
 <p>다중 모델 시스템에서 IMM 필터의 수렴성과 안정성을 보장하기 위해서는 모델 전환 확률 <span class="arithmatex"><span class="MathJax_Preview">\pi_{ij}</span><script type="math/tex">\pi_{ij}</script></span>의 설정이 중요하다. <span class="arithmatex"><span class="MathJax_Preview">\pi_{ij}</span><script type="math/tex">\pi_{ij}</script></span>는 각 모델이 현재 상태에서 다른 모델로 전환될 가능성을 나타내며, 적절히 설계되지 않을 경우 필터의 성능이 저하될 수 있다. 일반적으로 <span class="arithmatex"><span class="MathJax_Preview">\pi_{ij}</span><script type="math/tex">\pi_{ij}</script></span>는 시스템의 물리적 특성에 기반하여 실험적으로 결정된다.</p>
@@ -193,13 +213,23 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 <li><strong>상태 추정 오차(Estimation Error):</strong><br />
    각 모델에 대한 상태 추정의 정확성을 평가하는데 사용된다. 상태 추정 오차는 실제 상태 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{x}(k)</span><script type="math/tex">\mathbf{x}(k)</script></span>와 추정된 상태 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{\hat{x}}(k|k)</span><script type="math/tex">\mathbf{\hat{x}}(k|k)</script></span> 간의 차이로 정의된다.</li>
 </ol>
-<p>$$
-   \mathbf{e}(k) = \mathbf{x}(k) - \mathbf{\hat{x}}(k|k)</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+   \mathbf{e}(k) = \mathbf{x}(k) - \mathbf{\hat{x}}(k|k)
+</div>
+<script type="math/tex; mode=display">
+   \mathbf{e}(k) = \mathbf{x}(k) - \mathbf{\hat{x}}(k|k)
+</script>
+</div>
 <p>이 오차의 공분산 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{P}_e(k)</span><script type="math/tex">\mathbf{P}_e(k)</script></span>를 통해 필터의 성능을 정량적으로 평가할 수 있다.</p>
-<p>$$
-   \mathbf{P}_e(k) = \text{E}\left[\mathbf{e}(k)\mathbf{e}^\mathsf{T}(k)\right]</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+   \mathbf{P}_e(k) = \text{E}\left[\mathbf{e}(k)\mathbf{e}^\mathsf{T}(k)\right]
+</div>
+<script type="math/tex; mode=display">
+   \mathbf{P}_e(k) = \text{E}\left[\mathbf{e}(k)\mathbf{e}^\mathsf{T}(k)\right]
+</script>
+</div>
 <p>추정 오차 공분산이 작을수록 필터의 성능이 우수하다고 평가된다.</p>
 <ol>
 <li><strong>모델 확률의 변화(Model Probability Evolution):</strong><br />
@@ -291,42 +321,82 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 <p><strong>시간 갱신</strong>: 각 모델에 대해 시간 갱신 단계를 수행한다. 예를 들어, 모델 1의 상태 갱신은 다음과 같이 계산된다:</p>
 </li>
 </ol>
-<p>$$
-   \mathbf{\hat{x}}_1(k|k-1) = \mathbf{F}_1(k-1)\mathbf{\hat{x}}_1(k-1|k-1)</p>
-<p>$$</p>
-<p>$$
-   \mathbf{P}_1(k|k-1) = \mathbf{F}_1(k-1)\mathbf{P}_1(k-1|k-1)\mathbf{F}_1^\top(k-1) + \mathbf{Q}_1(k-1)</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+   \mathbf{\hat{x}}_1(k|k-1) = \mathbf{F}_1(k-1)\mathbf{\hat{x}}_1(k-1|k-1)
+</div>
+<script type="math/tex; mode=display">
+   \mathbf{\hat{x}}_1(k|k-1) = \mathbf{F}_1(k-1)\mathbf{\hat{x}}_1(k-1|k-1)
+</script>
+</div>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+   \mathbf{P}_1(k|k-1) = \mathbf{F}_1(k-1)\mathbf{P}_1(k-1|k-1)\mathbf{F}_1^\top(k-1) + \mathbf{Q}_1(k-1)
+</div>
+<script type="math/tex; mode=display">
+   \mathbf{P}_1(k|k-1) = \mathbf{F}_1(k-1)\mathbf{P}_1(k-1|k-1)\mathbf{F}_1^\top(k-1) + \mathbf{Q}_1(k-1)
+</script>
+</div>
 <p>모델 2에 대해서도 유사하게 계산한다.</p>
 <ol>
 <li><strong>측정 갱신</strong>: 각 모델에 대해 측정 갱신 단계를 수행한다. 모델 1의 상태 업데이트는 다음과 같이 이루어진다:</li>
 </ol>
-<p>$$
-   \mathbf{K}_1(k) = \mathbf{P}_1(k|k-1)\mathbf{H}_1^\top(k)\left(\mathbf{H}_1(k)\mathbf{P}_1(k|k-1)\mathbf{H}_1^\top(k) + \mathbf{R}_1(k)\right)^{-1}</p>
-<p>$$</p>
-<p>$$
-   \mathbf{\hat{x}}_1(k|k) = \mathbf{\hat{x}}_1(k|k-1) + \mathbf{K}_1(k)\left(\mathbf{y}(k) - \mathbf{H}_1(k)\mathbf{\hat{x}}_1(k|k-1)\right)</p>
-<p>$$</p>
-<p>$$
-   \mathbf{P}_1(k|k) = \left(\mathbf{I} - \mathbf{K}_1(k)\mathbf{H}_1(k)\right)\mathbf{P}_1(k|k-1)</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+   \mathbf{K}_1(k) = \mathbf{P}_1(k|k-1)\mathbf{H}_1^\top(k)\left(\mathbf{H}_1(k)\mathbf{P}_1(k|k-1)\mathbf{H}_1^\top(k) + \mathbf{R}_1(k)\right)^{-1}
+</div>
+<script type="math/tex; mode=display">
+   \mathbf{K}_1(k) = \mathbf{P}_1(k|k-1)\mathbf{H}_1^\top(k)\left(\mathbf{H}_1(k)\mathbf{P}_1(k|k-1)\mathbf{H}_1^\top(k) + \mathbf{R}_1(k)\right)^{-1}
+</script>
+</div>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+   \mathbf{\hat{x}}_1(k|k) = \mathbf{\hat{x}}_1(k|k-1) + \mathbf{K}_1(k)\left(\mathbf{y}(k) - \mathbf{H}_1(k)\mathbf{\hat{x}}_1(k|k-1)\right)
+</div>
+<script type="math/tex; mode=display">
+   \mathbf{\hat{x}}_1(k|k) = \mathbf{\hat{x}}_1(k|k-1) + \mathbf{K}_1(k)\left(\mathbf{y}(k) - \mathbf{H}_1(k)\mathbf{\hat{x}}_1(k|k-1)\right)
+</script>
+</div>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+   \mathbf{P}_1(k|k) = \left(\mathbf{I} - \mathbf{K}_1(k)\mathbf{H}_1(k)\right)\mathbf{P}_1(k|k-1)
+</div>
+<script type="math/tex; mode=display">
+   \mathbf{P}_1(k|k) = \left(\mathbf{I} - \mathbf{K}_1(k)\mathbf{H}_1(k)\right)\mathbf{P}_1(k|k-1)
+</script>
+</div>
 <p>모델 2에 대해서도 유사하게 계산한다.</p>
 <ol>
 <li><strong>모델 확률 갱신</strong>: 모델 전환 확률을 고려하여 각 모델의 확률을 갱신한다.</li>
 </ol>
-<p>$$
-   \mu_j(k|k) = \frac{\mu_j(k|k-1)p(\mathbf{y}(k)|\mathcal{M}<em>j)}{\sum</em>{i=1}^{N} \mu_i(k|k-1)p(\mathbf{y}(k)|\mathcal{M}_i)}</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+   \mu_j(k|k) = \frac{\mu_j(k|k-1)p(\mathbf{y}(k)|\mathcal{M}_j)}{\sum_{i=1}^{N} \mu_i(k|k-1)p(\mathbf{y}(k)|\mathcal{M}_i)}
+</div>
+<script type="math/tex; mode=display">
+   \mu_j(k|k) = \frac{\mu_j(k|k-1)p(\mathbf{y}(k)|\mathcal{M}_j)}{\sum_{i=1}^{N} \mu_i(k|k-1)p(\mathbf{y}(k)|\mathcal{M}_i)}
+</script>
+</div>
 <p>여기서 <span class="arithmatex"><span class="MathJax_Preview">p(\mathbf{y}(k)|\mathcal{M}_j)</span><script type="math/tex">p(\mathbf{y}(k)|\mathcal{M}_j)</script></span>는 모델 <span class="arithmatex"><span class="MathJax_Preview">\mathcal{M}_j</span><script type="math/tex">\mathcal{M}_j</script></span>에서의 측정 예측 확률이다.</p>
 <ol>
 <li><strong>상태 결합</strong>: 각 모델의 결과를 모델 확률로 가중하여 최종 상태를 계산한다.</li>
 </ol>
-<p>$$
-   \mathbf{\hat{x}}(k|k) = \sum_{j=1}^{N} \mu_j(k)\mathbf{\hat{x}}_j(k|k)</p>
-<p>$$</p>
-<p>$$
-   \mathbf{P}(k|k) = \sum_{j=1}^{N} \mu_j(k)\left(\mathbf{P}_j(k|k) + \left(\mathbf{\hat{x}}_j(k|k) - \mathbf{\hat{x}}(k|k)\right)\left(\mathbf{\hat{x}}_j(k|k) - \mathbf{\hat{x}}(k|k)\right)^\top\right)</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+   \mathbf{\hat{x}}(k|k) = \sum_{j=1}^{N} \mu_j(k)\mathbf{\hat{x}}_j(k|k)
+</div>
+<script type="math/tex; mode=display">
+   \mathbf{\hat{x}}(k|k) = \sum_{j=1}^{N} \mu_j(k)\mathbf{\hat{x}}_j(k|k)
+</script>
+</div>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+   \mathbf{P}(k|k) = \sum_{j=1}^{N} \mu_j(k)\left(\mathbf{P}_j(k|k) + \left(\mathbf{\hat{x}}_j(k|k) - \mathbf{\hat{x}}(k|k)\right)\left(\mathbf{\hat{x}}_j(k|k) - \mathbf{\hat{x}}(k|k)\right)^\top\right)
+</div>
+<script type="math/tex; mode=display">
+   \mathbf{P}(k|k) = \sum_{j=1}^{N} \mu_j(k)\left(\mathbf{P}_j(k|k) + \left(\mathbf{\hat{x}}_j(k|k) - \mathbf{\hat{x}}(k|k)\right)\left(\mathbf{\hat{x}}_j(k|k) - \mathbf{\hat{x}}(k|k)\right)^\top\right)
+</script>
+</div>
 <p>이러한 과정을 반복하여 시스템의 상태를 추정한다.</p>
 <h3 id="_11">다중 모델 선택 기준</h3>
 <p>다중 모델 접근법에서 중요한 문제 중 하나는 어떤 모델들을 선택할 것인가이다. 일반적으로 모델의 선택은 시스템의 동적 특성, 사용 가능한 데이터, 그리고 모델링 목적에 따라 결정된다. 각 모델은 시스템의 특정 운영 조건을 반영해야 하며, 가능한 모델의 집합이 시스템의 모든 동작 모드를 충분히 커버할 수 있어야 한다.</p>

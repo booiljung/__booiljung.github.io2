@@ -124,56 +124,113 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 <h3 id="_2">비율과 동차좌표</h3>
 <p>동차 좌표계에서는 실제 좌표 값을 의미하는 <span class="arithmatex"><span class="MathJax_Preview">w</span><script type="math/tex">w</script></span>와의 비율이 중요한데, 이는 다음과 같은 동차식을 통해 나타낼 수 있다.</p>
 <p>유클리드 좌표 <span class="arithmatex"><span class="MathJax_Preview">(x, y)</span><script type="math/tex">(x, y)</script></span>를 동차 좌표로 변환하려면,</p>
-<p>$$</p>
-<p>\begin{pmatrix} 
-x \ 
-y \ 
+<div class="arithmatex">
+<div class="MathJax_Preview">
+\begin{pmatrix} 
+x \\ 
+y \\ 
 1 
 \end{pmatrix} 
-$$</p>
-<p>위와 같이 표현된다. 여기서 비율은 다음과 같이 사용된다. 동차 좌표계에서,</p>
-<p>$$</p>
-<p>\mathbf{v} = 
+</div>
+<script type="math/tex; mode=display">
 \begin{pmatrix} 
-x_h \ 
-y_h \ 
+x \\ 
+y \\ 
+1 
+\end{pmatrix} 
+</script>
+</div>
+<p>위와 같이 표현된다. 여기서 비율은 다음과 같이 사용된다. 동차 좌표계에서,</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+\mathbf{v} = 
+\begin{pmatrix} 
+x_h \\ 
+y_h \\ 
 w 
 \end{pmatrix} 
-$$</p>
+</div>
+<script type="math/tex; mode=display">
+\mathbf{v} = 
+\begin{pmatrix} 
+x_h \\ 
+y_h \\ 
+w 
+\end{pmatrix} 
+</script>
+</div>
 <p>이 경우, 실제 유클리드 좌표를 얻기 위해 <span class="arithmatex"><span class="MathJax_Preview">w</span><script type="math/tex">w</script></span>로 나눠야 하며,</p>
-<p>$$</p>
-<p>\mathbf{v} = 
+<div class="arithmatex">
+<div class="MathJax_Preview">
+\mathbf{v} = 
 \begin{pmatrix} 
-x_h / w \ 
-y_h / w \ 
+x_h / w \\ 
+y_h / w \\ 
 1 
 \end{pmatrix} 
-$$</p>
-<p>$$</p>
-<p>\Rightarrow \mathbf{v} = 
+</div>
+<script type="math/tex; mode=display">
+\mathbf{v} = 
 \begin{pmatrix} 
-x \ 
-y \ 
+x_h / w \\ 
+y_h / w \\ 
 1 
 \end{pmatrix} 
-$$</p>
+</script>
+</div>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+\Rightarrow \mathbf{v} = 
+\begin{pmatrix} 
+x \\ 
+y \\ 
+1 
+\end{pmatrix} 
+</div>
+<script type="math/tex; mode=display">
+\Rightarrow \mathbf{v} = 
+\begin{pmatrix} 
+x \\ 
+y \\ 
+1 
+\end{pmatrix} 
+</script>
+</div>
 <p>따라서 동차 좌표 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{v}</span><script type="math/tex">\mathbf{v}</script></span>와 유클리드 좌표 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{u}</span><script type="math/tex">\mathbf{u}</script></span> 사이의 관계는 다음과 같다:</p>
-<p>$$</p>
-<p>\mathbf{u} = 
+<div class="arithmatex">
+<div class="MathJax_Preview">
+\mathbf{u} = 
 \begin{pmatrix} 
-x \ 
+x \\ 
 y 
 \end{pmatrix} = 
 \begin{pmatrix} 
-\frac{x_h}{w} \ 
+\frac{x_h}{w} \\ 
 \frac{y_h}{w} 
 \end{pmatrix} 
 = 
 \begin{pmatrix} 
-x_h / w \ 
+x_h / w \\ 
 y_h / w 
 \end{pmatrix} 
-$$</p>
+</div>
+<script type="math/tex; mode=display">
+\mathbf{u} = 
+\begin{pmatrix} 
+x \\ 
+y 
+\end{pmatrix} = 
+\begin{pmatrix} 
+\frac{x_h}{w} \\ 
+\frac{y_h}{w} 
+\end{pmatrix} 
+= 
+\begin{pmatrix} 
+x_h / w \\ 
+y_h / w 
+\end{pmatrix} 
+</script>
+</div>
 <p><strong>비율의 본질적 이해</strong></p>
 <p>동차 좌표에서 비율은 각 변환의 크기와 방향을 나타내는 중요한 지표가 된다. 이 비율을 통해 우리는 3D 공간에서 객체를 확장하고 축소할 수 있다.</p>
 <h3 id="_3">동차 좌표의 변환</h3>

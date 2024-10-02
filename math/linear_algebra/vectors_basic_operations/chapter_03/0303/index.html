@@ -113,21 +113,36 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 <ol>
 <li><strong>평행한 두 벡터</strong>: 만약 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{a}</span><script type="math/tex">\mathbf{a}</script></span>와 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{b}</span><script type="math/tex">\mathbf{b}</script></span>가 같은 방향(평행)이라면 <span class="arithmatex"><span class="MathJax_Preview">\theta = 0</span><script type="math/tex">\theta = 0</script></span>이며, <span class="arithmatex"><span class="MathJax_Preview">\cos 0 = 1</span><script type="math/tex">\cos 0 = 1</script></span>이므로 스칼라 곱은 최대가 된다. 이 경우</li>
 </ol>
-<p>$$
-   \mathbf{a} \cdot \mathbf{b} = |\mathbf{a}| |\mathbf{b}|</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+   \mathbf{a} \cdot \mathbf{b} = |\mathbf{a}| |\mathbf{b}|
+</div>
+<script type="math/tex; mode=display">
+   \mathbf{a} \cdot \mathbf{b} = |\mathbf{a}| |\mathbf{b}|
+</script>
+</div>
 <ol>
 <li><strong>반평행한 두 벡터</strong>: 만약 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{a}</span><script type="math/tex">\mathbf{a}</script></span>와 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{b}</span><script type="math/tex">\mathbf{b}</script></span>가 반대 방향(반평행)이라면 <span class="arithmatex"><span class="MathJax_Preview">\theta = \pi</span><script type="math/tex">\theta = \pi</script></span>이며, <span class="arithmatex"><span class="MathJax_Preview">\cos \pi = -1</span><script type="math/tex">\cos \pi = -1</script></span>이므로 스칼라 곱은 음의 최대값이 된다. 이 경우</li>
 </ol>
-<p>$$
-   \mathbf{a} \cdot \mathbf{b} = -|\mathbf{a}| |\mathbf{b}|</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+   \mathbf{a} \cdot \mathbf{b} = -|\mathbf{a}| |\mathbf{b}|
+</div>
+<script type="math/tex; mode=display">
+   \mathbf{a} \cdot \mathbf{b} = -|\mathbf{a}| |\mathbf{b}|
+</script>
+</div>
 <ol>
 <li><strong>수직인 두 벡터</strong>: 만약 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{a}</span><script type="math/tex">\mathbf{a}</script></span>와 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{b}</span><script type="math/tex">\mathbf{b}</script></span>가 수직 방향이라면 <span class="arithmatex"><span class="MathJax_Preview">\theta = \frac{\pi}{2}</span><script type="math/tex">\theta = \frac{\pi}{2}</script></span>이며, <span class="arithmatex"><span class="MathJax_Preview">\cos \frac{\pi}{2} = 0</span><script type="math/tex">\cos \frac{\pi}{2} = 0</script></span>이므로 스칼라 곱은 0이 된다. 이 경우</li>
 </ol>
-<p>$$
-   \mathbf{a} \cdot \mathbf{b} = 0</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+   \mathbf{a} \cdot \mathbf{b} = 0
+</div>
+<script type="math/tex; mode=display">
+   \mathbf{a} \cdot \mathbf{b} = 0
+</script>
+</div>
 <h3 id="_2">프로젝션과 스칼라 곱</h3>
 <p>스칼라 곱의 또 다른 중요한 기하학적 의미는 벡터의 프로젝션과 관련이 있다. 벡터 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{a}</span><script type="math/tex">\mathbf{a}</script></span>의 벡터 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{b}</span><script type="math/tex">\mathbf{b}</script></span> 위의 프로젝션인 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{proj}_\mathbf{b} \mathbf{a}</span><script type="math/tex">\mathbf{proj}_\mathbf{b} \mathbf{a}</script></span>는 다음과 같이 정의한다:</p>
 <div class="arithmatex">
@@ -169,28 +184,49 @@ W = \mathbf{F} \cdot \mathbf{d} = |\mathbf{F}| |\mathbf{d}| \cos \theta
 <ol>
 <li><strong>회전 변환</strong>: 회전 행렬 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{R}</span><script type="math/tex">\mathbf{R}</script></span>은 주어진 벡터를 특정 각도(<span class="arithmatex"><span class="MathJax_Preview">\theta</span><script type="math/tex">\theta</script></span>)만큼 회전시키는 선형 변환을 구현한다.</li>
 </ol>
-<p>$$
+<div class="arithmatex">
+<div class="MathJax_Preview">
    \mathbf{R} = \begin{pmatrix}
-   \cos \theta &amp; -\sin \theta \
+   \cos \theta &amp; -\sin \theta \\
    \sin \theta &amp; \cos \theta
-   \end{pmatrix}</p>
-<p>$$</p>
+   \end{pmatrix}
+</div>
+<script type="math/tex; mode=display">
+   \mathbf{R} = \begin{pmatrix}
+   \cos \theta & -\sin \theta \\
+   \sin \theta & \cos \theta
+   \end{pmatrix}
+</script>
+</div>
 <p>벡터 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{x}</span><script type="math/tex">\mathbf{x}</script></span>에 회전 변환을 적용하면, 벡터는 <span class="arithmatex"><span class="MathJax_Preview">\theta</span><script type="math/tex">\theta</script></span>만큼 회전한 새로운 위치에 배치된다.</p>
 <ol>
 <li><strong>스케일 변환</strong>: 스케일 행렬 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{S}</span><script type="math/tex">\mathbf{S}</script></span>는 벡터의 크기를 조정하는 변환이다.</li>
 </ol>
-<p>$$
+<div class="arithmatex">
+<div class="MathJax_Preview">
    \mathbf{S} = \begin{pmatrix}
-   s_x &amp; 0 \
+   s_x &amp; 0 \\
    0 &amp; s_y
-   \end{pmatrix}</p>
-<p>$$</p>
+   \end{pmatrix}
+</div>
+<script type="math/tex; mode=display">
+   \mathbf{S} = \begin{pmatrix}
+   s_x & 0 \\
+   0 & s_y
+   \end{pmatrix}
+</script>
+</div>
 <p>여기서 <span class="arithmatex"><span class="MathJax_Preview">s_x</span><script type="math/tex">s_x</script></span>와 <span class="arithmatex"><span class="MathJax_Preview">s_y</span><script type="math/tex">s_y</script></span>는 각각 x와 y 방향으로의 스케일링 인자이다. 벡터 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{x}</span><script type="math/tex">\mathbf{x}</script></span>에 스케일 변환을 적용하면 벡터의 각 성분은 해당하는 스케일 인자로 곱해진다.</p>
 <h2 id="_6">행렬 곱셈의 성분적 의미</h2>
 <p>두 행렬 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{A}</span><script type="math/tex">\mathbf{A}</script></span>와 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{B}</span><script type="math/tex">\mathbf{B}</script></span>를 곱할 때 결과 행렬 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{C}</span><script type="math/tex">\mathbf{C}</script></span>의 각 성분 <span class="arithmatex"><span class="MathJax_Preview">c_{ij}</span><script type="math/tex">c_{ij}</script></span>는 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{A}</span><script type="math/tex">\mathbf{A}</script></span>의 i번째 행과 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{B}</span><script type="math/tex">\mathbf{B}</script></span>의 j번째 열의 스칼라 곱으로 계산된다. 이는 다음과 같이 표현된다:</p>
-<p>$$</p>
-<p>c_{ij} = \sum_{k} a_{ik} b_{kj} 
-$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+c_{ij} = \sum_{k} a_{ik} b_{kj} 
+</div>
+<script type="math/tex; mode=display">
+c_{ij} = \sum_{k} a_{ik} b_{kj} 
+</script>
+</div>
 <p>이 식은 행렬 곱셈이 각 성분의 계산 과정을 통해 새로운 데이터 구조를 만드는 것을 의미한다. 특히, <span class="arithmatex"><span class="MathJax_Preview">\mathbf{A}</span><script type="math/tex">\mathbf{A}</script></span>가 행렬 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{B}</span><script type="math/tex">\mathbf{B}</script></span>를 변환하는 방식으로 해석될 수 있다.</p>
 <hr />
 <p>행렬 곱셈의 기하학적 의미를 이해하는 것은 선형 대수학을 공부하는 데 매우 중요하다. 이는 벡터와 공간 사이의 변환 관계를 명확히 해주며, 다양한 응용 분야에서도 중요한 역할을 한다.</p>

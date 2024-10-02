@@ -193,21 +193,36 @@ x_i = \frac{1}{U_{ii}} \left( y_i - \sum_{j=i+1}^{n} U_{ij} x_j \right) \quad \t
 <ol>
 <li><strong>LU 분해</strong>: 행렬 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{A}</span><script type="math/tex">\mathbf{A}</script></span>를 하삼각 행렬 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{L}</span><script type="math/tex">\mathbf{L}</script></span>과 상삼각 행렬 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{U}</span><script type="math/tex">\mathbf{U}</script></span>로 분해한다.</li>
 </ol>
-<p>$$
-   \mathbf{A} = \mathbf{L}\mathbf{U}</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+   \mathbf{A} = \mathbf{L}\mathbf{U}
+</div>
+<script type="math/tex; mode=display">
+   \mathbf{A} = \mathbf{L}\mathbf{U}
+</script>
+</div>
 <ol>
 <li><strong>전방 대치</strong>: <span class="arithmatex"><span class="MathJax_Preview">\mathbf{L}\mathbf{y} = \mathbf{b}</span><script type="math/tex">\mathbf{L}\mathbf{y} = \mathbf{b}</script></span>에서 중간 벡터 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{y}</span><script type="math/tex">\mathbf{y}</script></span>를 구한다.</li>
 </ol>
-<p>$$
-   y_i = b_i - \sum_{j=1}^{i-1} L_{ij} y_j \quad \text{for} \quad i = 1, 2, \ldots, n</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+   y_i = b_i - \sum_{j=1}^{i-1} L_{ij} y_j \quad \text{for} \quad i = 1, 2, \ldots, n
+</div>
+<script type="math/tex; mode=display">
+   y_i = b_i - \sum_{j=1}^{i-1} L_{ij} y_j \quad \text{for} \quad i = 1, 2, \ldots, n
+</script>
+</div>
 <ol>
 <li><strong>후방 대치</strong>: <span class="arithmatex"><span class="MathJax_Preview">\mathbf{U}\mathbf{x} = \mathbf{y}</span><script type="math/tex">\mathbf{U}\mathbf{x} = \mathbf{y}</script></span>에서 최종 해 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{x}</span><script type="math/tex">\mathbf{x}</script></span>를 구한다.</li>
 </ol>
-<p>$$
-   x_i = \frac{1}{U_{ii}} \left( y_i - \sum_{j=i+1}^{n} U_{ij} x_j \right) \quad \text{for} \quad i = n, n-1, \ldots, 1</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+   x_i = \frac{1}{U_{ii}} \left( y_i - \sum_{j=i+1}^{n} U_{ij} x_j \right) \quad \text{for} \quad i = n, n-1, \ldots, 1
+</div>
+<script type="math/tex; mode=display">
+   x_i = \frac{1}{U_{ii}} \left( y_i - \sum_{j=i+1}^{n} U_{ij} x_j \right) \quad \text{for} \quad i = n, n-1, \ldots, 1
+</script>
+</div>
 <h3 id="lu_3">LU 분해를 사용하지 않는 경우의 문제점</h3>
 <p>LU 분해를 사용하지 않고 선형 시스템을 직접 해결하려고 할 때, 예를 들어 역행렬을 계산하여 해를 구하는 방법은 실질적으로 비효율적이며 수치적으로 불안정할 수 있다. 행렬의 크기가 커질수록 이러한 문제는 더욱 심각해지며, 계산 복잡도가 매우 증가하게 된다.</p>
 <p>대안적으로, 가우스 소거법을 사용할 수 있지만, 이 경우에도 Pivoting이 없는 경우 수치적 불안정성을 야기할 수 있다. 반면 LU 분해는 이러한 문제들을 체계적으로 해결해 준다.</p>
@@ -224,21 +239,36 @@ x_i = \frac{1}{U_{ii}} \left( y_i - \sum_{j=i+1}^{n} U_{ij} x_j \right) \quad \t
 <ol>
 <li><strong>LU 분해</strong>: <span class="arithmatex"><span class="MathJax_Preview">\mathbf{A}</span><script type="math/tex">\mathbf{A}</script></span>를 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{L}</span><script type="math/tex">\mathbf{L}</script></span>과 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{U}</span><script type="math/tex">\mathbf{U}</script></span>로 분해한다.</li>
 </ol>
-<p>$$
-   \mathbf{L} = \begin{pmatrix} 1 &amp; 0 \ 0.5 &amp; 1 \end{pmatrix}, \quad \mathbf{U} = \begin{pmatrix} 2 &amp; 3 \ 0 &amp; 2.5 \end{pmatrix}</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+   \mathbf{L} = \begin{pmatrix} 1 &amp; 0 \\ 0.5 &amp; 1 \end{pmatrix}, \quad \mathbf{U} = \begin{pmatrix} 2 &amp; 3 \\ 0 &amp; 2.5 \end{pmatrix}
+</div>
+<script type="math/tex; mode=display">
+   \mathbf{L} = \begin{pmatrix} 1 & 0 \\ 0.5 & 1 \end{pmatrix}, \quad \mathbf{U} = \begin{pmatrix} 2 & 3 \\ 0 & 2.5 \end{pmatrix}
+</script>
+</div>
 <ol>
 <li><strong>전방 대치</strong>: <span class="arithmatex"><span class="MathJax_Preview">\mathbf{L}\mathbf{y} = \mathbf{b}</span><script type="math/tex">\mathbf{L}\mathbf{y} = \mathbf{b}</script></span>에서 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{y}</span><script type="math/tex">\mathbf{y}</script></span>를 구한다.</li>
 </ol>
-<p>$$
-   \mathbf{y} = \begin{pmatrix} 5 \ 3.5 \end{pmatrix}</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+   \mathbf{y} = \begin{pmatrix} 5 \\ 3.5 \end{pmatrix}
+</div>
+<script type="math/tex; mode=display">
+   \mathbf{y} = \begin{pmatrix} 5 \\ 3.5 \end{pmatrix}
+</script>
+</div>
 <ol>
 <li><strong>후방 대치</strong>: <span class="arithmatex"><span class="MathJax_Preview">\mathbf{U}\mathbf{x} = \mathbf{y}</span><script type="math/tex">\mathbf{U}\mathbf{x} = \mathbf{y}</script></span>에서 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{x}</span><script type="math/tex">\mathbf{x}</script></span>를 구한다.</li>
 </ol>
-<p>$$
-   \mathbf{x} = \begin{pmatrix} 1 \ 1 \end{pmatrix}</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+   \mathbf{x} = \begin{pmatrix} 1 \\ 1 \end{pmatrix}
+</div>
+<script type="math/tex; mode=display">
+   \mathbf{x} = \begin{pmatrix} 1 \\ 1 \end{pmatrix}
+</script>
+</div>
 <p>따라서, 최종 해는 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{x} = \begin{pmatrix} 1 \\ 1 \end{pmatrix}</span><script type="math/tex">\mathbf{x} = \begin{pmatrix} 1 \\ 1 \end{pmatrix}</script></span>이다.</p>
 <h3 id="lu_5">LU 분해의 제한점</h3>
 <p>LU 분해는 선형 시스템 해법으로 매우 유용하지만, 일부 제한점도 존재한다. 예를 들어, 행렬이 특이(singular)하거나 조건 수가 매우 클 경우 LU 분해는 제대로 작동하지 않을 수 있다. 이러한 상황에서는 다른 수치적 방법을 고려해야 한다.</p>

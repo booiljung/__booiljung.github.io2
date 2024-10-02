@@ -108,37 +108,57 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 <ul>
 <li><strong>좌표 평면에서의 벡터</strong>: 원점 <span class="arithmatex"><span class="MathJax_Preview">(0, 0)</span><script type="math/tex">(0, 0)</script></span>에서 점 <span class="arithmatex"><span class="MathJax_Preview">(x, y)</span><script type="math/tex">(x, y)</script></span>까지의 벡터는 다음과 같이 나타낼 수 있다.
 $$
-    \mathbf{v} = \begin{pmatrix} x \ y \end{pmatrix}</li>
+    \mathbf{v} = \begin{pmatrix} x \ y \end{pmatrix}
+$$</li>
 </ul>
-<p>$$</p>
 <p>여기서 <span class="arithmatex"><span class="MathJax_Preview">x</span><script type="math/tex">x</script></span>와 <span class="arithmatex"><span class="MathJax_Preview">y</span><script type="math/tex">y</script></span>는 벡터의 성분이다.</p>
 <ul>
 <li><strong>벡터의 크기</strong>: 벡터 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{v} = (x, y)</span><script type="math/tex">\mathbf{v} = (x, y)</script></span>의 크기는 다음과 같이 계산한다.</li>
 </ul>
-<p>$$
-    |\mathbf{v}| = \sqrt{x^2 + y^2}</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+    \|\mathbf{v}\| = \sqrt{x^2 + y^2}
+</div>
+<script type="math/tex; mode=display">
+    \|\mathbf{v}\| = \sqrt{x^2 + y^2}
+</script>
+</div>
 <ul>
 <li><strong>벡터의 방향</strong>: 벡터의 방향은 원점에서 벡터가 가리키는 점의 방향으로 정의된다. 이 방향은 보통 각도 <span class="arithmatex"><span class="MathJax_Preview">\theta</span><script type="math/tex">\theta</script></span>로 표현되며, <span class="arithmatex"><span class="MathJax_Preview">\theta</span><script type="math/tex">\theta</script></span>는 x축과 해당 벡터 사이의 각도이다.</li>
 </ul>
-<p>$$
-    \theta = \tan^{-1}\left(\frac{y}{x}\right)</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+    \theta = \tan^{-1}\left(\frac{y}{x}\right)
+</div>
+<script type="math/tex; mode=display">
+    \theta = \tan^{-1}\left(\frac{y}{x}\right)
+</script>
+</div>
 <h3 id="3">3차원 벡터의 표현</h3>
 <p>3차원에서 벡터는 공간 상의 두 점을 연결하는 화살표로 나타낼 수 있다.</p>
 <ul>
 <li><strong>좌표 공간에서의 벡터</strong>: 원점 <span class="arithmatex"><span class="MathJax_Preview">(0, 0, 0)</span><script type="math/tex">(0, 0, 0)</script></span>에서 점 <span class="arithmatex"><span class="MathJax_Preview">(x, y, z)</span><script type="math/tex">(x, y, z)</script></span>까지의 벡터는 다음과 같이 나타낼 수 있다.</li>
 </ul>
-<p>$$
-    \mathbf{v} = \begin{pmatrix} x \ y \ z \end{pmatrix}</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+    \mathbf{v} = \begin{pmatrix} x \\ y \\ z \end{pmatrix}
+</div>
+<script type="math/tex; mode=display">
+    \mathbf{v} = \begin{pmatrix} x \\ y \\ z \end{pmatrix}
+</script>
+</div>
 <p>여기서 <span class="arithmatex"><span class="MathJax_Preview">x</span><script type="math/tex">x</script></span>, <span class="arithmatex"><span class="MathJax_Preview">y</span><script type="math/tex">y</script></span>, <span class="arithmatex"><span class="MathJax_Preview">z</span><script type="math/tex">z</script></span>는 벡터의 성분이다.</p>
 <ul>
 <li><strong>벡터의 크기</strong>: 벡터 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{v} = (x, y, z)</span><script type="math/tex">\mathbf{v} = (x, y, z)</script></span>의 크기는 다음과 같이 계산한다.</li>
 </ul>
-<p>$$
-    |\mathbf{v}| = \sqrt{x^2 + y^2 + z^2}</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+    \|\mathbf{v}\| = \sqrt{x^2 + y^2 + z^2}
+</div>
+<script type="math/tex; mode=display">
+    \|\mathbf{v}\| = \sqrt{x^2 + y^2 + z^2}
+</script>
+</div>
 <ul>
 <li><strong>벡터의 방향</strong>: 3차원에서도 벡터의 방향을 각도로 표현할 수 있으며, 보통 두 개 이상의 각도로(<span class="arithmatex"><span class="MathJax_Preview">\theta, \phi</span><script type="math/tex">\theta, \phi</script></span>) 표현된다. 예를 들어, <span class="arithmatex"><span class="MathJax_Preview">\theta</span><script type="math/tex">\theta</script></span>는 벡터가 x축과 이루는 각도이고, <span class="arithmatex"><span class="MathJax_Preview">\phi</span><script type="math/tex">\phi</script></span>는 벡터가 xy평면과 이루는 각도이다.</li>
 </ul>
@@ -158,15 +178,25 @@ $$
 <ul>
 <li><strong>벡터 덧셈</strong>: 두 벡터 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{u}</span><script type="math/tex">\mathbf{u}</script></span>와 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{v}</span><script type="math/tex">\mathbf{v}</script></span>의 합은 두 벡터를 끝을 맞닿게 이어 하나의 새로운 벡터를 만드는 과정으로 생각할 수 있다.</li>
 </ul>
-<p>$$
-    \mathbf{u} + \mathbf{v} = \begin{pmatrix} u_x \ u_y \end{pmatrix} + \begin{pmatrix} v_x \ v_y \end{pmatrix} = \begin{pmatrix} u_x + v_x \ u_y + v_y \end{pmatrix}</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+    \mathbf{u} + \mathbf{v} = \begin{pmatrix} u_x \\ u_y \end{pmatrix} + \begin{pmatrix} v_x \\ v_y \end{pmatrix} = \begin{pmatrix} u_x + v_x \\ u_y + v_y \end{pmatrix}
+</div>
+<script type="math/tex; mode=display">
+    \mathbf{u} + \mathbf{v} = \begin{pmatrix} u_x \\ u_y \end{pmatrix} + \begin{pmatrix} v_x \\ v_y \end{pmatrix} = \begin{pmatrix} u_x + v_x \\ u_y + v_y \end{pmatrix}
+</script>
+</div>
 <ul>
 <li><strong>벡터 뺄셈</strong>: 두 벡터 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{u}</span><script type="math/tex">\mathbf{u}</script></span>와 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{v}</span><script type="math/tex">\mathbf{v}</script></span>의 차는 벡터 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{v}</span><script type="math/tex">\mathbf{v}</script></span>를 뒤집어 더하는 것으로 생각할 수 있다.</li>
 </ul>
-<p>$$
-    \mathbf{u} - \mathbf{v} = \begin{pmatrix} u_x \ u_y \end{pmatrix} - \begin{pmatrix} v_x \ v_y \end{pmatrix} = \begin{pmatrix} u_x - v_x \ u_y - v_y \end{pmatrix}</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+    \mathbf{u} - \mathbf{v} = \begin{pmatrix} u_x \\ u_y \end{pmatrix} - \begin{pmatrix} v_x \\ v_y \end{pmatrix} = \begin{pmatrix} u_x - v_x \\ u_y - v_y \end{pmatrix}
+</div>
+<script type="math/tex; mode=display">
+    \mathbf{u} - \mathbf{v} = \begin{pmatrix} u_x \\ u_y \end{pmatrix} - \begin{pmatrix} v_x \\ v_y \end{pmatrix} = \begin{pmatrix} u_x - v_x \\ u_y - v_y \end{pmatrix}
+</script>
+</div>
 <h3 id="_4">벡터의 내적과 외적</h3>
 <p>벡터 연산 중 중요한 두 가지가 내적(dot product)과 외적(cross product)이다.</p>
 <h4 id="_5">벡터의 내적</h4>

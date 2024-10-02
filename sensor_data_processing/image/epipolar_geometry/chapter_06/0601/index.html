@@ -123,17 +123,27 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 <p>에피폴라인은 다음과 같이 정의된다: 첫 번째 카메라의 이미지 평면에서의 점 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{x}_1</span><script type="math/tex">\mathbf{x}_1</script></span>을 통해 3차원 공간에서 나오는 광선이 두 번째 카메라의 이미지 평면에 투영될 때, 그 광선이 통과하는 직선을 에피폴라인이라 한다. 즉, 에피폴라인은 한 이미지에서의 점이 다른 이미지에서 나타날 수 있는 위치를 제한하는 직선이다.</p>
 <h3 id="_6">에피폴라인 방정식</h3>
 <p>에피폴라인은 기본 행렬 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{F}</span><script type="math/tex">\mathbf{F}</script></span>와 첫 번째 이미지의 점 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{x}_1</span><script type="math/tex">\mathbf{x}_1</script></span>을 사용하여 계산할 수 있다. 두 번째 이미지에서의 에피폴라인 <span class="arithmatex"><span class="MathJax_Preview">l_2</span><script type="math/tex">l_2</script></span>는 다음과 같은 수식으로 주어진다:</p>
-<p>$$</p>
-<p>\mathbf{l}_2 = \mathbf{F} \mathbf{x}_1</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+\mathbf{l}_2 = \mathbf{F} \mathbf{x}_1
+</div>
+<script type="math/tex; mode=display">
+\mathbf{l}_2 = \mathbf{F} \mathbf{x}_1
+</script>
+</div>
 <p>여기서,
 - <span class="arithmatex"><span class="MathJax_Preview">\mathbf{l}_2</span><script type="math/tex">\mathbf{l}_2</script></span>는 두 번째 이미지에서의 에피폴라인을 나타내는 직선의 방정식이다.
 - <span class="arithmatex"><span class="MathJax_Preview">\mathbf{F}</span><script type="math/tex">\mathbf{F}</script></span>는 기본 행렬이다.
 - <span class="arithmatex"><span class="MathJax_Preview">\mathbf{x}_1</span><script type="math/tex">\mathbf{x}_1</script></span>은 첫 번째 이미지에서의 점의 동차 좌표이다.</p>
 <p>마찬가지로, 첫 번째 이미지에서의 에피폴라인 <span class="arithmatex"><span class="MathJax_Preview">l_1</span><script type="math/tex">l_1</script></span>은 다음과 같이 구할 수 있다:</p>
-<p>$$</p>
-<p>\mathbf{l}_1 = \mathbf{F}^\top \mathbf{x}_2</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+\mathbf{l}_1 = \mathbf{F}^\top \mathbf{x}_2
+</div>
+<script type="math/tex; mode=display">
+\mathbf{l}_1 = \mathbf{F}^\top \mathbf{x}_2
+</script>
+</div>
 <p>여기서,
 - <span class="arithmatex"><span class="MathJax_Preview">\mathbf{l}_1</span><script type="math/tex">\mathbf{l}_1</script></span>은 첫 번째 이미지에서의 에피폴라인을 나타내는 직선의 방정식이다.
 - <span class="arithmatex"><span class="MathJax_Preview">\mathbf{F}^\top</span><script type="math/tex">\mathbf{F}^\top</script></span>은 기본 행렬의 전치 행렬이다.

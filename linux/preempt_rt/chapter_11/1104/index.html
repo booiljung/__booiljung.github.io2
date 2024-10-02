@@ -121,21 +121,41 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 </ul>
 <h3 id="_2">타임라인 분석의 수학적 표현</h3>
 <p>타임라인 분석을 위한 수학적 모델은 시스템의 각 태스크 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{T}_i</span><script type="math/tex">\mathbf{T}_i</script></span>와 그들의 시작 및 종료 시간을 정의하는 것으로 시작된다. 태스크 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{T}_i</span><script type="math/tex">\mathbf{T}_i</script></span>의 시작 시간과 종료 시간은 각각 <span class="arithmatex"><span class="MathJax_Preview">S_i</span><script type="math/tex">S_i</script></span>와 <span class="arithmatex"><span class="MathJax_Preview">E_i</span><script type="math/tex">E_i</script></span>로 정의된다.</p>
-<p>$$</p>
-<p>\mathbf{T}_i = {S_i, E_i} </p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+\mathbf{T}_i = \{S_i, E_i\} 
+</div>
+<script type="math/tex; mode=display">
+\mathbf{T}_i = \{S_i, E_i\} 
+</script>
+</div>
 <p>여기서, <span class="arithmatex"><span class="MathJax_Preview">S_i</span><script type="math/tex">S_i</script></span>는 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{T}_i</span><script type="math/tex">\mathbf{T}_i</script></span>의 시작 시간을 나타내며, <span class="arithmatex"><span class="MathJax_Preview">E_i</span><script type="math/tex">E_i</script></span>는 종료 시간을 나타낸다. 각 태스크는 특정 주기로 반복될 수 있으며, 이를 위해 주기 <span class="arithmatex"><span class="MathJax_Preview">P_i</span><script type="math/tex">P_i</script></span>를 정의할 수 있다.</p>
-<p>$$</p>
-<p>\mathbf{T}_i = {S_i + n \cdot P_i, E_i + n \cdot P_i } \quad n = 0, 1, 2, \dots</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+\mathbf{T}_i = \{S_i + n \cdot P_i, E_i + n \cdot P_i \} \quad n = 0, 1, 2, \dots
+</div>
+<script type="math/tex; mode=display">
+\mathbf{T}_i = \{S_i + n \cdot P_i, E_i + n \cdot P_i \} \quad n = 0, 1, 2, \dots
+</script>
+</div>
 <p>또한, 각 태스크의 실행 시간 <span class="arithmatex"><span class="MathJax_Preview">C_i</span><script type="math/tex">C_i</script></span>는 다음과 같이 정의된다.</p>
-<p>$$</p>
-<p>C_i = E_i - S_i</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+C_i = E_i - S_i
+</div>
+<script type="math/tex; mode=display">
+C_i = E_i - S_i
+</script>
+</div>
 <p>이와 함께, 실시간 시스템에서 중요한 지표는 각 태스크의 응답 시간 <span class="arithmatex"><span class="MathJax_Preview">R_i</span><script type="math/tex">R_i</script></span>이다. 응답 시간은 태스크가 준비 상태에 들어간 순간부터 그 태스크가 완료될 때까지 걸리는 시간이다. <span class="arithmatex"><span class="MathJax_Preview">\mathbf{T}_i</span><script type="math/tex">\mathbf{T}_i</script></span>의 응답 시간은 아래와 같이 정의할 수 있다.</p>
-<p>$$</p>
-<p>R_i = E_i - R_s</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+R_i = E_i - R_s
+</div>
+<script type="math/tex; mode=display">
+R_i = E_i - R_s
+</script>
+</div>
 <p>여기서 <span class="arithmatex"><span class="MathJax_Preview">R_s</span><script type="math/tex">R_s</script></span>는 태스크가 준비 상태에 들어간 시간을 의미한다.</p>
 <h3 id="_3">타임라인에서의 문제 탐지</h3>
 <p>타임라인 분석을 통해 발견할 수 있는 일반적인 문제는 다음과 같다.</p>

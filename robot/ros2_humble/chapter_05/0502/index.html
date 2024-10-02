@@ -145,16 +145,26 @@ R = \frac{R_\text{total}}{N}
 <h3 id="scalability">확장성 (Scalability)</h3>
 <p>멀티 노드의 가장 큰 장점 중 하나는 확장성이다. 시스템이 커지거나 더 많은 기능을 추가해야 할 때, 노드를 추가하여 시스템을 확장할 수 있다. 각 노드는 특정 역할을 맡아 분리되어 있기 때문에, 시스템의 복잡도가 증가하더라도 효율적으로 관리할 수 있다.</p>
 <p>멀티 노드 시스템의 확장성을 수학적으로 설명할 때, 시스템 내의 노드 수를 <span class="arithmatex"><span class="MathJax_Preview">N</span><script type="math/tex">N</script></span>, 각 노드가 수행하는 작업량을 <span class="arithmatex"><span class="MathJax_Preview">W</span><script type="math/tex">W</script></span>라고 하면, 전체 작업량 <span class="arithmatex"><span class="MathJax_Preview">W_{total}</span><script type="math/tex">W_{total}</script></span>은 다음과 같이 표현될 수 있다:</p>
-<p>$$</p>
-<p>W_{total} = N \times W</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+W_{total} = N \times W
+</div>
+<script type="math/tex; mode=display">
+W_{total} = N \times W
+</script>
+</div>
 <p>따라서 노드 수가 증가하면 전체 시스템의 작업량도 증가하지만, 이를 노드 간에 적절히 분산시켜야 성능 저하 없이 확장이 가능한다. 그러나 너무 많은 노드가 존재할 경우에는 오히려 통신 및 자원 관리에 있어서 병목현상이 발생할 수 있다.</p>
 <h4 id="_5">네트워크 병목</h4>
 <p>노드 수가 증가하면 각 노드 간의 데이터 전송 요구가 많아지기 때문에, 네트워크 병목이 발생할 가능성이 있다. 특히 많은 양의 데이터를 전송하는 퍼블리셔-서브스크라이버 구조에서는 대역폭을 효율적으로 관리하는 것이 중요하다.</p>
 <p>네트워크 병목을 수식으로 표현하면, 네트워크 대역폭 <span class="arithmatex"><span class="MathJax_Preview">B</span><script type="math/tex">B</script></span>와 각 노드가 전송하는 데이터의 양 <span class="arithmatex"><span class="MathJax_Preview">D_i</span><script type="math/tex">D_i</script></span>가 있을 때, 노드 간의 총 전송 데이터 양이 대역폭을 초과하는 상황은 다음과 같이 나타낼 수 있다:</p>
-<p>$$</p>
-<p>\sum_{i=1}^{N} D_i &gt; B</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+\sum_{i=1}^{N} D_i &gt; B
+</div>
+<script type="math/tex; mode=display">
+\sum_{i=1}^{N} D_i > B
+</script>
+</div>
 <p>이 경우, 멀티 노드 환경에서는 QoS(품질 서비스) 설정을 통해 각 노드 간의 통신 우선순위를 관리하거나, 대역폭을 조절하여 병목 현상을 완화할 수 있다.</p>
 <h3 id="_6">멀티 노드의 이점</h3>
 <p>멀티 노드는 특히 다음과 같은 이점을 제공한다:</p>

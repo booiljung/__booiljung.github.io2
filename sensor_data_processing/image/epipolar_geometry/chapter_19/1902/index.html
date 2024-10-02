@@ -108,17 +108,27 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 <li><strong>가우시안 블러(필터):</strong>
    가우시안 블러는 이미지를 스무딩하여 노이즈를 줄이기 위한 필터이다. 가우시안 함수에 따라 각 픽셀의 주변 값들을 가중 평균하여 처리한다. 가우시안 함수는 다음과 같은 형태로 정의된다:</li>
 </ol>
-<p>$$
-   G(x, y) = \frac{1}{2\pi\sigma^2} e^{-\frac{x^2 + y^2}{2\sigma^2}}</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+   G(x, y) = \frac{1}{2\pi\sigma^2} e^{-\frac{x^2 + y^2}{2\sigma^2}}
+</div>
+<script type="math/tex; mode=display">
+   G(x, y) = \frac{1}{2\pi\sigma^2} e^{-\frac{x^2 + y^2}{2\sigma^2}}
+</script>
+</div>
 <p>여기서 <span class="arithmatex"><span class="MathJax_Preview">\sigma</span><script type="math/tex">\sigma</script></span>는 필터의 표준 편차를 의미하며, <span class="arithmatex"><span class="MathJax_Preview">(x, y)</span><script type="math/tex">(x, y)</script></span>는 이미지 좌표이다. 가우시안 블러를 적용함으로써 고주파 성분을 줄이고, 매칭 오류를 줄일 수 있다. </p>
 <ol>
 <li><strong>미디언 필터:</strong>
    미디언 필터는 비선형 필터로서, 소금과 후추 잡음과 같은 극단적인 픽셀 값의 영향을 제거하는 데 유용하다. 이미지의 각 픽셀을 주변 픽셀 값의 중간값으로 대체한다. 미디언 필터는 다음과 같이 계산된다:</li>
 </ol>
-<p>$$
-   I'(x, y) = \text{median} { I(x + i, y + j) \mid (i, j) \in \text{Window} }</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+   I'(x, y) = \text{median} \{ I(x + i, y + j) \mid (i, j) \in \text{Window} \}
+</div>
+<script type="math/tex; mode=display">
+   I'(x, y) = \text{median} \{ I(x + i, y + j) \mid (i, j) \in \text{Window} \}
+</script>
+</div>
 <p>여기서 <span class="arithmatex"><span class="MathJax_Preview">I(x, y)</span><script type="math/tex">I(x, y)</script></span>는 원본 이미지 픽셀 값, <span class="arithmatex"><span class="MathJax_Preview">I'(x, y)</span><script type="math/tex">I'(x, y)</script></span>는 필터가 적용된 픽셀 값이며, 주어진 윈도우 내의 중간값을 선택하여 노이즈를 제거한다.</p>
 <h3 id="_3">에피폴라 기하학에서 필터 적용의 효과</h3>
 <p>잡음 감소 필터를 에피폴라 기하학에 적용할 때 중요한 점은 필터가 에피폴라인과 같은 중요한 기하학적 정보를 보존해야 한다는 것이다. 필터 적용 후에도 이미지 좌표계에서 에피폴라인을 정확히 추정할 수 있어야 하며, 이는 정확한 <strong>기본 행렬</strong> <span class="arithmatex"><span class="MathJax_Preview">\mathbf{F}</span><script type="math/tex">\mathbf{F}</script></span>와 <strong>본질 행렬</strong> <span class="arithmatex"><span class="MathJax_Preview">\mathbf{E}</span><script type="math/tex">\mathbf{E}</script></span> 계산에 필수적이다.</p>
@@ -161,17 +171,27 @@ NCC(I_1, I_2) = \frac{\sum (I_1(x, y) - \bar{I}_1)(I_2(x, y) - \bar{I}_2)}{\sqrt
 <li><strong>예측 단계:</strong>
    상태 변수 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{x}_{k-1}</span><script type="math/tex">\mathbf{x}_{k-1}</script></span>의 추정치를 기반으로 다음 시간 단계에서의 상태 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{x}_k</span><script type="math/tex">\mathbf{x}_k</script></span>를 예측한다.</li>
 </ol>
-<p>$$
-   \mathbf{x}<em>k = \mathbf{A} \mathbf{x}</em>{k-1} + \mathbf{B} \mathbf{u}<em>{k-1} + \mathbf{w}</em>{k-1}</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+   \mathbf{x}_k = \mathbf{A} \mathbf{x}_{k-1} + \mathbf{B} \mathbf{u}_{k-1} + \mathbf{w}_{k-1}
+</div>
+<script type="math/tex; mode=display">
+   \mathbf{x}_k = \mathbf{A} \mathbf{x}_{k-1} + \mathbf{B} \mathbf{u}_{k-1} + \mathbf{w}_{k-1}
+</script>
+</div>
 <p>여기서 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{A}</span><script type="math/tex">\mathbf{A}</script></span>는 상태 전이 행렬, <span class="arithmatex"><span class="MathJax_Preview">\mathbf{B}</span><script type="math/tex">\mathbf{B}</script></span>는 제어 행렬, <span class="arithmatex"><span class="MathJax_Preview">\mathbf{u}_{k-1}</span><script type="math/tex">\mathbf{u}_{k-1}</script></span>은 제어 입력, <span class="arithmatex"><span class="MathJax_Preview">\mathbf{w}_{k-1}</span><script type="math/tex">\mathbf{w}_{k-1}</script></span>은 시스템 노이즈(process noise)을 의미한다.</p>
 <ol>
 <li><strong>업데이트 단계:</strong>
    측정된 값을 기반으로 상태 추정치를 업데이트한다. 측정값 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{z}_k</span><script type="math/tex">\mathbf{z}_k</script></span>와 예측 상태값을 비교하여 새로운 추정값을 계산한다.</li>
 </ol>
-<p>$$
-   \mathbf{x}_k = \mathbf{x}_k + \mathbf{K}_k(\mathbf{z}_k - \mathbf{H}\mathbf{x}_k)</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+   \mathbf{x}_k = \mathbf{x}_k + \mathbf{K}_k(\mathbf{z}_k - \mathbf{H}\mathbf{x}_k)
+</div>
+<script type="math/tex; mode=display">
+   \mathbf{x}_k = \mathbf{x}_k + \mathbf{K}_k(\mathbf{z}_k - \mathbf{H}\mathbf{x}_k)
+</script>
+</div>
 <p>여기서 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{K}_k</span><script type="math/tex">\mathbf{K}_k</script></span>는 칼만 이득(Kalman gain), <span class="arithmatex"><span class="MathJax_Preview">\mathbf{H}</span><script type="math/tex">\mathbf{H}</script></span>는 측정 행렬, <span class="arithmatex"><span class="MathJax_Preview">\mathbf{z}_k</span><script type="math/tex">\mathbf{z}_k</script></span>는 측정된 값을 나타낸다.</p>
 <p>칼만 필터는 에피폴라 기하학에서 스테레오 매칭 및 삼각 측량을 통해 얻은 잡음이 포함된 대응점을 부드럽게 추정하여, 보다 정확한 매칭 결과를 도출할 수 있다. 이 필터는 특히 동적 환경에서 이미지 프레임 간의 대응점 추정에 유용하다.</p>
 <h3 id="_5">이미지 피라미드와 멀티 스케일 접근법</h3>

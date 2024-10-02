@@ -262,9 +262,14 @@ T_{\text{recovery}} = T_{\text{checkpoint}} + \Delta T_{\text{rollback}}
 </li>
 </ul>
 <p>QoS 목표를 수학적으로 표현하면 다음과 같이 정의할 수 있다:</p>
-<p>$$</p>
-<p>\text{QoS Goal: } \max \left( \frac{1}{N} \sum_{i=1}^{N} \text{SLA}<em>i(T</em>{\text{response}, i}, T_{\text{deadline}, i}) \right)</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+\text{QoS Goal: } \max \left( \frac{1}{N} \sum_{i=1}^{N} \text{SLA}_i(T_{\text{response}, i}, T_{\text{deadline}, i}) \right)
+</div>
+<script type="math/tex; mode=display">
+\text{QoS Goal: } \max \left( \frac{1}{N} \sum_{i=1}^{N} \text{SLA}_i(T_{\text{response}, i}, T_{\text{deadline}, i}) \right)
+</script>
+</div>
 <p>여기서 <span class="arithmatex"><span class="MathJax_Preview">N</span><script type="math/tex">N</script></span>은 총 트랜잭션 수, <span class="arithmatex"><span class="MathJax_Preview">\text{SLA}_i</span><script type="math/tex">\text{SLA}_i</script></span>는 각 트랜잭션 <span class="arithmatex"><span class="MathJax_Preview">i</span><script type="math/tex">i</script></span>에 대한 서비스 수준 협약(Service Level Agreement)을 나타내며, 이는 트랜잭션의 응답 시간 <span class="arithmatex"><span class="MathJax_Preview">T_{\text{response}, i}</span><script type="math/tex">T_{\text{response}, i}</script></span>과 마감 기한 <span class="arithmatex"><span class="MathJax_Preview">T_{\text{deadline}, i}</span><script type="math/tex">T_{\text{deadline}, i}</script></span>에 따라 결정된다.</p>
 <h3 id="10">10. 실시간 데이터베이스에서의 데이터 복제 및 분산 처리</h3>
 <p>실시간 데이터베이스 시스템은 종종 고가용성과 성능을 보장하기 위해 데이터 복제와 분산 처리 기법을 활용한다. 이러한 기법들은 다음과 같은 방식으로 적용될 수 있다:</p>
@@ -291,9 +296,14 @@ T_{\text{recovery}} = T_{\text{checkpoint}} + \Delta T_{\text{rollback}}
 <li><strong>트랜잭션 예측(Transaction Prediction)</strong>: 트랜잭션의 도착 시간을 예측하여 자원을 사전에 준비하거나, 우선순위를 조정하는 방식이다. 예측 기법은 주로 과거 데이터를 기반으로 한 통계적 모델이나, 머신러닝 알고리즘을 활용한다.</li>
 </ul>
 <p>예측 모델은 일반적으로 다음과 같은 수식으로 표현할 수 있다:</p>
-<p>$$</p>
-<p>\hat{T}<em>{\text{arrival}, i} = f(T</em>{\text{arrival}, 1}, T_{\text{arrival}, 2}, \ldots, T_{\text{arrival}, i-1})</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+\hat{T}_{\text{arrival}, i} = f(T_{\text{arrival}, 1}, T_{\text{arrival}, 2}, \ldots, T_{\text{arrival}, i-1})
+</div>
+<script type="math/tex; mode=display">
+\hat{T}_{\text{arrival}, i} = f(T_{\text{arrival}, 1}, T_{\text{arrival}, 2}, \ldots, T_{\text{arrival}, i-1})
+</script>
+</div>
 <p>여기서 <span class="arithmatex"><span class="MathJax_Preview">\hat{T}_{\text{arrival}, i}</span><script type="math/tex">\hat{T}_{\text{arrival}, i}</script></span>는 트랜잭션 <span class="arithmatex"><span class="MathJax_Preview">i</span><script type="math/tex">i</script></span>의 예측된 도착 시간이다.</p>
 <ul>
 <li><strong>적응적 자원 관리(Adaptive Resource Management)</strong>: 실시간 데이터베이스가 트랜잭션의 실제 도착 패턴에 맞춰 자원 할당 전략을 동적으로 변경하는 기법이다. 이는 시스템의 부하를 분산하고, 성능 저하를 방지하는 데 유용하다.</li>

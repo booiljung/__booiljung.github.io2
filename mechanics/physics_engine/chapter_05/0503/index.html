@@ -114,12 +114,22 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 <p><strong>충돌 응력 계산:</strong> 충돌 시 반작용력을 계산하여 충돌 후의 물체 속도를 조정한다. 예를 들어, 두 물체 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{A}</span><script type="math/tex">\mathbf{A}</script></span>와 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{B}</span><script type="math/tex">\mathbf{B}</script></span>가 충돌할 때, 충돌 전후의 속도는 다음과 같이 계산된다.</p>
 </li>
 </ul>
-<p>$$
-  \mathbf{v}_A' = \mathbf{v}_A - \frac{2m_B}{m_A + m_B}(\mathbf{v}_A - \mathbf{v}_B) \cdot \mathbf{n}\mathbf{n}</p>
-<p>$$</p>
-<p>$$
-  \mathbf{v}_B' = \mathbf{v}_B + \frac{2m_A}{m_A + m_B}(\mathbf{v}_A - \mathbf{v}_B) \cdot \mathbf{n}\mathbf{n}</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+  \mathbf{v}_A' = \mathbf{v}_A - \frac{2m_B}{m_A + m_B}(\mathbf{v}_A - \mathbf{v}_B) \cdot \mathbf{n}\mathbf{n}
+</div>
+<script type="math/tex; mode=display">
+  \mathbf{v}_A' = \mathbf{v}_A - \frac{2m_B}{m_A + m_B}(\mathbf{v}_A - \mathbf{v}_B) \cdot \mathbf{n}\mathbf{n}
+</script>
+</div>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+  \mathbf{v}_B' = \mathbf{v}_B + \frac{2m_A}{m_A + m_B}(\mathbf{v}_A - \mathbf{v}_B) \cdot \mathbf{n}\mathbf{n}
+</div>
+<script type="math/tex; mode=display">
+  \mathbf{v}_B' = \mathbf{v}_B + \frac{2m_A}{m_A + m_B}(\mathbf{v}_A - \mathbf{v}_B) \cdot \mathbf{n}\mathbf{n}
+</script>
+</div>
 <p>여기서, <span class="arithmatex"><span class="MathJax_Preview">\mathbf{n}</span><script type="math/tex">\mathbf{n}</script></span>은 접촉 점에서의 표면 법선 벡터이다.</p>
 <h4 id="_3">마찰력</h4>
 <p>마찰은 두 물체가 서로 접촉하면서 상대적인 이동을 하려고 할 때 발생하는 힘이다. 마찰력은 정지 마찰력과 운동 마찰력으로 나눌 수 있다.</p>

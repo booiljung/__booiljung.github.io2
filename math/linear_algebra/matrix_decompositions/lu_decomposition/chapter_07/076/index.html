@@ -178,16 +178,26 @@ int main() {
 <ol>
 <li><strong>Forward Substitution</strong>: 먼저 하삼각 행렬 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{L}</span><script type="math/tex">\mathbf{L}</script></span>을 사용하여 중간 변수를 구한다.</li>
 </ol>
-<p>$$
-   \mathbf{L} \mathbf{y} = \mathbf{b}</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+   \mathbf{L} \mathbf{y} = \mathbf{b}
+</div>
+<script type="math/tex; mode=display">
+   \mathbf{L} \mathbf{y} = \mathbf{b}
+</script>
+</div>
 <p>여기서 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{y}</span><script type="math/tex">\mathbf{y}</script></span>는 중간 변수이다.</p>
 <ol>
 <li><strong>Backward Substitution</strong>: 이후 상삼각 행렬 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{U}</span><script type="math/tex">\mathbf{U}</script></span>을 사용하여 최종 해 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{x}</span><script type="math/tex">\mathbf{x}</script></span>를 구한다.</li>
 </ol>
-<p>$$
-   \mathbf{U} \mathbf{x} = \mathbf{y}</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+   \mathbf{U} \mathbf{x} = \mathbf{y}
+</div>
+<script type="math/tex; mode=display">
+   \mathbf{U} \mathbf{x} = \mathbf{y}
+</script>
+</div>
 <p>Armadillo에서는 이러한 과정이 내부적으로 처리되며, 사용자는 단순히 <code>arma::solve</code> 함수를 통해 LU 분해와 함께 선형 방정식의 해를 직접적으로 구할 수 있다.</p>
 <h2 id="armadillo-lu">Armadillo에서의 LU 분해를 통한 선형 방정식 해결</h2>
 <p>Armadillo에서 <code>arma::solve</code> 함수를 사용하면 LU 분해를 통해 선형 방정식을 간편하게 해결할 수 있다. <code>arma::solve</code> 함수는 내부적으로 LU 분해를 사용하여 주어진 선형 시스템의 해를 계산한다.</p>

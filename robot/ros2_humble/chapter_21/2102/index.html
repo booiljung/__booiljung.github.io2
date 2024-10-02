@@ -106,13 +106,22 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 <p>TF2의 핵심 기능 중 하나는 좌표 변환이다. TF2는 로봇의 각 파트 간의 상대적인 위치 및 자세(Orientation)를 좌표 프레임(Frame)으로 정의하고, 이를 기반으로 좌표 간 변환을 수행할 수 있다. 이는 로봇의 센서 데이터와 로봇의 상태를 정확하게 조정하는 데 필수적이다. 각 좌표 변환은 아래와 같이 표현될 수 있다.</p>
 <h4 id="_1">좌표 변환 수식</h4>
 <p>TF2는 좌표계 간의 변환을 주어진 시간에 따라 계산한다. 3D 공간에서 한 좌표계를 다른 좌표계로 변환할 때는 주로 회전 행렬과 평행 이동 벡터를 사용한다. 변환 행렬은 아래와 같이 표현된다.</p>
-<p>$$</p>
-<p>\mathbf{T} = 
+<div class="arithmatex">
+<div class="MathJax_Preview">
+\mathbf{T} = 
 \begin{bmatrix}
-\mathbf{R} &amp; \mathbf{t} \
+\mathbf{R} &amp; \mathbf{t} \\
 \mathbf{0}^{T} &amp; 1
-\end{bmatrix}</p>
-<p>$$</p>
+\end{bmatrix}
+</div>
+<script type="math/tex; mode=display">
+\mathbf{T} = 
+\begin{bmatrix}
+\mathbf{R} & \mathbf{t} \\
+\mathbf{0}^{T} & 1
+\end{bmatrix}
+</script>
+</div>
 <p>여기서:
 - <span class="arithmatex"><span class="MathJax_Preview">\mathbf{R}</span><script type="math/tex">\mathbf{R}</script></span>은 <span class="arithmatex"><span class="MathJax_Preview">3 \times 3</span><script type="math/tex">3 \times 3</script></span> 회전 행렬,
 - <span class="arithmatex"><span class="MathJax_Preview">\mathbf{t}</span><script type="math/tex">\mathbf{t}</script></span>는 <span class="arithmatex"><span class="MathJax_Preview">3 \times 1</span><script type="math/tex">3 \times 1</script></span> 변환 벡터,
@@ -121,9 +130,14 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 <p>TF2는 시간에 따른 좌표 프레임의 변화를 추적하며, 각 좌표 변환은 특정 시점에 해당하는 정보를 기반으로 한다. 이를 통해 과거의 좌표 변환을 확인하거나 실시간으로 변환을 수행할 수 있다.</p>
 <h4 id="_2">시간 동기화 수식</h4>
 <p>시간 동기화에서 중요한 점은 각 변환이 정확한 타임스탬프와 함께 저장되어야 한다는 점이다. 타임스탬프 <span class="arithmatex"><span class="MathJax_Preview">t</span><script type="math/tex">t</script></span>에 대한 변환은 다음과 같이 표현된다.</p>
-<p>$$</p>
-<p>\mathbf{T}(t) = \mathbf{T}<em>{1}(t) \times \mathbf{T}</em>{2}(t)</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+\mathbf{T}(t) = \mathbf{T}_{1}(t) \times \mathbf{T}_{2}(t)
+</div>
+<script type="math/tex; mode=display">
+\mathbf{T}(t) = \mathbf{T}_{1}(t) \times \mathbf{T}_{2}(t)
+</script>
+</div>
 <p>여기서 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{T}_{1}(t)</span><script type="math/tex">\mathbf{T}_{1}(t)</script></span>와 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{T}_{2}(t)</span><script type="math/tex">\mathbf{T}_{2}(t)</script></span>는 각각 해당 시간에 해당하는 변환 행렬을 의미한다.</p>
 <h3 id="data-management-with-buffers">버퍼를 통한 데이터 관리 (Data Management with Buffers)</h3>
 <p>TF2는 좌표 변환 정보를 효율적으로 관리하기 위해 버퍼(Buffer)를 사용한다. 이는 과거의 좌표 변환을 저장하고 필요할 때 그 정보를 빠르게 가져와 사용할 수 있도록 돕는다. 버퍼는 설정된 기간 동안의 변환 기록을 저장하며, 이를 통해 과거의 특정 시점에 대한 데이터를 조회할 수 있다.</p>
@@ -132,9 +146,14 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 <p>TF2는 여러 좌표 프레임 사이의 변환을 관리할 수 있다. 이를 통해 서로 다른 센서나 로봇의 각 파트 간의 좌표계를 변환할 때, 중간 프레임을 거쳐 필요한 변환을 수행할 수 있다. TF2는 각 좌표 프레임 간의 변환 관계를 그래프 형태로 관리하며, 필요 시 경로를 찾아 자동으로 변환을 계산한다.</p>
 <h4 id="_3">다중 좌표 프레임 변환 수식</h4>
 <p>여러 좌표 프레임 간의 변환은 각 프레임의 변환 행렬을 곱함으로써 이루어진다. 예를 들어, <span class="arithmatex"><span class="MathJax_Preview">A</span><script type="math/tex">A</script></span> 프레임에서 <span class="arithmatex"><span class="MathJax_Preview">C</span><script type="math/tex">C</script></span> 프레임으로 변환하려면 <span class="arithmatex"><span class="MathJax_Preview">A \rightarrow B \rightarrow C</span><script type="math/tex">A \rightarrow B \rightarrow C</script></span>의 경로를 따라 다음과 같이 계산할 수 있다.</p>
-<p>$$</p>
-<p>\mathbf{T}<em>{A \rightarrow C} = \mathbf{T}</em>{A \rightarrow B} \times \mathbf{T}_{B \rightarrow C}</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+\mathbf{T}_{A \rightarrow C} = \mathbf{T}_{A \rightarrow B} \times \mathbf{T}_{B \rightarrow C}
+</div>
+<script type="math/tex; mode=display">
+\mathbf{T}_{A \rightarrow C} = \mathbf{T}_{A \rightarrow B} \times \mathbf{T}_{B \rightarrow C}
+</script>
+</div>
 <p>여기서:
 - <span class="arithmatex"><span class="MathJax_Preview">\mathbf{T}_{A \rightarrow C}</span><script type="math/tex">\mathbf{T}_{A \rightarrow C}</script></span>는 <span class="arithmatex"><span class="MathJax_Preview">A</span><script type="math/tex">A</script></span> 프레임에서 <span class="arithmatex"><span class="MathJax_Preview">C</span><script type="math/tex">C</script></span> 프레임으로의 최종 변환 행렬,
 - <span class="arithmatex"><span class="MathJax_Preview">\mathbf{T}_{A \rightarrow B}</span><script type="math/tex">\mathbf{T}_{A \rightarrow B}</script></span>는 <span class="arithmatex"><span class="MathJax_Preview">A</span><script type="math/tex">A</script></span> 프레임에서 <span class="arithmatex"><span class="MathJax_Preview">B</span><script type="math/tex">B</script></span> 프레임으로의 변환,
@@ -143,9 +162,14 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 <p>로봇의 동작에 따라 좌표 프레임은 지속적으로 업데이트되며, TF2는 이러한 변환을 실시간으로 반영한다. 각 좌표 프레임 간의 관계는 지속적으로 변하므로, 주기적인 좌표 프레임 업데이트가 필수적이다. TF2는 이러한 변환을 효율적으로 처리하기 위해 좌표 변환을 주기적으로 계산하고 적용한다.</p>
 <h4 id="_4">주기적 업데이트 과정</h4>
 <p>TF2는 각 좌표 프레임의 변환을 일정한 주기마다 업데이트하며, 변환 관계가 갱신된다. 각 주기 <span class="arithmatex"><span class="MathJax_Preview">\Delta t</span><script type="math/tex">\Delta t</script></span>에 따른 변환은 다음과 같이 계산된다.</p>
-<p>$$</p>
-<p>\mathbf{T}(t + \Delta t) = f(\mathbf{T}(t), \Delta t)</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+\mathbf{T}(t + \Delta t) = f(\mathbf{T}(t), \Delta t)
+</div>
+<script type="math/tex; mode=display">
+\mathbf{T}(t + \Delta t) = f(\mathbf{T}(t), \Delta t)
+</script>
+</div>
 <p>여기서:
 - <span class="arithmatex"><span class="MathJax_Preview">\mathbf{T}(t + \Delta t)</span><script type="math/tex">\mathbf{T}(t + \Delta t)</script></span>는 <span class="arithmatex"><span class="MathJax_Preview">t + \Delta t</span><script type="math/tex">t + \Delta t</script></span> 시점의 변환 행렬,
 - <span class="arithmatex"><span class="MathJax_Preview">f(\mathbf{T}(t), \Delta t)</span><script type="math/tex">f(\mathbf{T}(t), \Delta t)</script></span>는 이전 변환 값과 시간 간격을 기반으로 변환을 업데이트하는 함수이다.</p>
@@ -153,9 +177,14 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 <p>TF2는 다양한 센서와 로봇 파트 간의 비동기 변환 처리를 지원한다. 이는 여러 센서에서 수집된 데이터가 서로 다른 시간에 발생하는 경우, 해당 데이터를 적절하게 동기화하고 변환할 수 있도록 돕는다. 이를 통해 여러 센서에서 수집된 데이터를 하나의 좌표계로 통합하여 사용할 수 있다.</p>
 <h4 id="_5">비동기 변환 수식</h4>
 <p>비동기 변환은 각 센서의 타임스탬프에 맞게 데이터를 변환하는 과정으로, 각 센서의 변환 행렬은 타임스탬프에 따라 다르게 적용된다. 이를 수식으로 나타내면 다음과 같다.</p>
-<p>$$</p>
-<p>\mathbf{T}<em>{A \rightarrow B}(t_1) \times \mathbf{T}</em>{B \rightarrow C}(t_2)</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+\mathbf{T}_{A \rightarrow B}(t_1) \times \mathbf{T}_{B \rightarrow C}(t_2)
+</div>
+<script type="math/tex; mode=display">
+\mathbf{T}_{A \rightarrow B}(t_1) \times \mathbf{T}_{B \rightarrow C}(t_2)
+</script>
+</div>
 <p>여기서:
 - <span class="arithmatex"><span class="MathJax_Preview">\mathbf{T}_{A \rightarrow B}(t_1)</span><script type="math/tex">\mathbf{T}_{A \rightarrow B}(t_1)</script></span>은 <span class="arithmatex"><span class="MathJax_Preview">t_1</span><script type="math/tex">t_1</script></span> 시점에서 <span class="arithmatex"><span class="MathJax_Preview">A \rightarrow B</span><script type="math/tex">A \rightarrow B</script></span> 변환,
 - <span class="arithmatex"><span class="MathJax_Preview">\mathbf{T}_{B \rightarrow C}(t_2)</span><script type="math/tex">\mathbf{T}_{B \rightarrow C}(t_2)</script></span>는 <span class="arithmatex"><span class="MathJax_Preview">t_2</span><script type="math/tex">t_2</script></span> 시점에서 <span class="arithmatex"><span class="MathJax_Preview">B \rightarrow C</span><script type="math/tex">B \rightarrow C</script></span> 변환을 의미하며, 각 변환은 비동기적으로 처리된다.</p>

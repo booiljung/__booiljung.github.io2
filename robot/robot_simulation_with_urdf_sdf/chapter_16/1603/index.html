@@ -153,13 +153,22 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 <h3 id="_5">수학적 표현과 매크로의 활용</h3>
 <p>파라미터화는 로봇의 다양한 물리적 특성을 쉽게 정의하고 변경할 수 있도록 한다. 예를 들어, 로봇의 관성 모멘트를 파라미터화하는 경우, 관성 텐서를 다음과 같이 정의할 수 있다.</p>
 <p>로봇 링크의 관성 모멘트 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{I}</span><script type="math/tex">\mathbf{I}</script></span>는 다음과 같은 대칭 행렬로 나타낼 수 있다.</p>
-<p>$$</p>
-<p>\mathbf{I} = \begin{bmatrix}
-I_{xx} &amp; I_{xy} &amp; I_{xz} \
-I_{xy} &amp; I_{yy} &amp; I_{yz} \
+<div class="arithmatex">
+<div class="MathJax_Preview">
+\mathbf{I} = \begin{bmatrix}
+I_{xx} &amp; I_{xy} &amp; I_{xz} \\
+I_{xy} &amp; I_{yy} &amp; I_{yz} \\
 I_{xz} &amp; I_{yz} &amp; I_{zz}
-\end{bmatrix}</p>
-<p>$$</p>
+\end{bmatrix}
+</div>
+<script type="math/tex; mode=display">
+\mathbf{I} = \begin{bmatrix}
+I_{xx} & I_{xy} & I_{xz} \\
+I_{xy} & I_{yy} & I_{yz} \\
+I_{xz} & I_{yz} & I_{zz}
+\end{bmatrix}
+</script>
+</div>
 <p>이때, 매크로에서 각 링크의 관성 모멘트를 파라미터화하여 다음과 같이 표현할 수 있다.</p>
 <pre><code class="language-xml">&lt;xacro:macro name=&quot;inertia_macro&quot; params=&quot;ixx:=1.0 iyy:=1.0 izz:=1.0 ixy:=0.0 ixz:=0.0 iyz:=0.0&quot;&gt;
   &lt;inertial&gt;
@@ -170,13 +179,22 @@ I_{xz} &amp; I_{yz} &amp; I_{zz}
 &lt;/xacro:macro&gt;
 </code></pre>
 <p>여기서 <code>ixx</code>, <code>iyy</code>, <code>izz</code>, <code>ixy</code>, <code>ixz</code>, <code>iyz</code> 값은 매크로 호출 시 동적으로 설정할 수 있다. 이렇게 매크로로 파라미터화된 관성 텐서를 사용하면 다양한 링크에 대해 손쉽게 물리적 특성을 정의할 수 있다. 수학적으로는 링크의 관성 텐서를 다음과 같이 나타낼 수 있다.</p>
-<p>$$</p>
-<p>\mathbf{I}_{\text{link}} = \begin{bmatrix}
-\mathbf{ixx} &amp; \mathbf{ixy} &amp; \mathbf{ixz} \
-\mathbf{ixy} &amp; \mathbf{iyy} &amp; \mathbf{iyz} \
+<div class="arithmatex">
+<div class="MathJax_Preview">
+\mathbf{I}_{\text{link}} = \begin{bmatrix}
+\mathbf{ixx} &amp; \mathbf{ixy} &amp; \mathbf{ixz} \\
+\mathbf{ixy} &amp; \mathbf{iyy} &amp; \mathbf{iyz} \\
 \mathbf{ixz} &amp; \mathbf{iyz} &amp; \mathbf{izz}
-\end{bmatrix}</p>
-<p>$$</p>
+\end{bmatrix}
+</div>
+<script type="math/tex; mode=display">
+\mathbf{I}_{\text{link}} = \begin{bmatrix}
+\mathbf{ixx} & \mathbf{ixy} & \mathbf{ixz} \\
+\mathbf{ixy} & \mathbf{iyy} & \mathbf{iyz} \\
+\mathbf{ixz} & \mathbf{iyz} & \mathbf{izz}
+\end{bmatrix}
+</script>
+</div>
 <h3 id="_6">파라미터 범위와 조건문 활용</h3>
 <p>xacro에서는 파라미터의 범위나 조건에 따라 다른 값을 선택할 수 있는 기능도 제공한다. 예를 들어, 로봇의 특정 조건에 따라 링크의 길이나 반지름을 다르게 설정해야 할 경우, 조건문을 사용할 수 있다. 이는 로봇의 다양한 구성에 대한 유연성을 제공한다.</p>
 <pre><code class="language-xml">&lt;xacro:macro name=&quot;link_with_condition&quot; params=&quot;length:=1.0 radius:=0.1&quot;&gt;

@@ -111,9 +111,14 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 <p>위성 궤도는 <strong>중궤도(Medium Earth Orbit; MEO)</strong>에 배치되어 있으며, 고도는 약 20,000 km에서 24,000 km 범위이다. 위성들은 궤도마다 일정한 속도로 지구를 회전하며, 지구 전역에서 항상 일정한 수의 위성을 볼 수 있도록 설계되어 있다. 각 GNSS 시스템마다 위성의 배치와 궤도가 다르지만, 대부분 6~12개의 궤도면에 위성이 배치된다.</p>
 <h4 id="_2">궤도 설계</h4>
 <p>위성의 궤도는 지구 상의 특정 지역에서 일정한 수의 위성을 볼 수 있도록 <strong>궤도 경사각</strong>과 <strong>궤도 반경</strong>이 설계된다. 위성의 경로는 다음과 같은 방정식으로 표현할 수 있다:</p>
-<p>$$</p>
-<p>r(t) = \mathbf{r}_0 + \mathbf{v}_0 t + \frac{1}{2} \mathbf{a} t^2</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+r(t) = \mathbf{r}_0 + \mathbf{v}_0 t + \frac{1}{2} \mathbf{a} t^2
+</div>
+<script type="math/tex; mode=display">
+r(t) = \mathbf{r}_0 + \mathbf{v}_0 t + \frac{1}{2} \mathbf{a} t^2
+</script>
+</div>
 <p>여기서, 
 - <span class="arithmatex"><span class="MathJax_Preview">\mathbf{r}(t)</span><script type="math/tex">\mathbf{r}(t)</script></span>는 시간 <span class="arithmatex"><span class="MathJax_Preview">t</span><script type="math/tex">t</script></span>에서의 위성의 위치,
 - <span class="arithmatex"><span class="MathJax_Preview">\mathbf{r}_0</span><script type="math/tex">\mathbf{r}_0</script></span>는 초기 위치,
@@ -139,9 +144,14 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 <li><strong>신호 처리 장치</strong>: 수신된 위성 신호는 노이즈와 간섭에 의해 왜곡될 수 있기 때문에, 신호를 정밀하게 분석하고 처리하는 과정이 필요하다. 신호 처리 장치는 수신된 신호를 디지털 데이터로 변환하고, 위성에서 전송된 시간 및 위치 데이터를 추출한다.</li>
 <li><strong>위치 계산 알고리즘</strong>: 수신기는 최소 4개 이상의 위성 신호를 수신하여 자신의 위치를 계산하는데, 이 과정에서 삼변측량(Trilateration) 기법이 사용된다. 각 위성까지의 거리를 기반으로 수신기의 위치를 계산하는 과정은 다음과 같은 방정식으로 나타낼 수 있다:</li>
 </ul>
-<p>$$</p>
-<p>d_i = c \cdot \Delta t_i</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+d_i = c \cdot \Delta t_i
+</div>
+<script type="math/tex; mode=display">
+d_i = c \cdot \Delta t_i
+</script>
+</div>
 <p>여기서,
 - <span class="arithmatex"><span class="MathJax_Preview">d_i</span><script type="math/tex">d_i</script></span>는 수신기와 위성 <span class="arithmatex"><span class="MathJax_Preview">i</span><script type="math/tex">i</script></span> 사이의 거리,
 - <span class="arithmatex"><span class="MathJax_Preview">c</span><script type="math/tex">c</script></span>는 빛의 속도,
@@ -153,9 +163,14 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 <li>각 위성의 위치는 이미 알고 있기 때문에, 수신기는 세 개 이상의 위성으로부터 측정한 거리를 기반으로 자신의 위치를 삼각측량 방식으로 계산한다.</li>
 </ol>
 <p>이 과정에서 사용되는 수학적 원리는 다음과 같은 방정식으로 나타낼 수 있다:</p>
-<p>$$</p>
-<p>(x - x_i)^2 + (y - y_i)^2 + (z - z_i)^2 = d_i^2</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+(x - x_i)^2 + (y - y_i)^2 + (z - z_i)^2 = d_i^2
+</div>
+<script type="math/tex; mode=display">
+(x - x_i)^2 + (y - y_i)^2 + (z - z_i)^2 = d_i^2
+</script>
+</div>
 <p>여기서,
 - <span class="arithmatex"><span class="MathJax_Preview">(x, y, z)</span><script type="math/tex">(x, y, z)</script></span>는 수신기의 위치 좌표,
 - <span class="arithmatex"><span class="MathJax_Preview">(x_i, y_i, z_i)</span><script type="math/tex">(x_i, y_i, z_i)</script></span>는 위성 <span class="arithmatex"><span class="MathJax_Preview">i</span><script type="math/tex">i</script></span>의 위치 좌표,

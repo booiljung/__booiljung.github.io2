@@ -146,9 +146,14 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 <h4 id="_4">조인트 제어를 위한 수학적 모델</h4>
 <p>매니퓰레이터의 각 조인트는 특정 각도 θ로 회전할 수 있으며, 이를 통해 엔드 이펙터의 위치를 결정한다. 매니퓰레이터의 역운동학(Inverse Kinematics)을 사용하여 엔드 이펙터의 목표 위치에 도달하기 위한 각 조인트의 각도를 계산할 수 있다.</p>
 <p>역운동학 방정식은 다음과 같이 표현된다:</p>
-<p>$$</p>
-<p>\mathbf{p}<em>{end} = \mathbf{T}_1(\theta_1) \mathbf{T}_2(\theta_2) \dots \mathbf{T}_n(\theta_n) \mathbf{p}</em>{local}</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+\mathbf{p}_{end} = \mathbf{T}_1(\theta_1) \mathbf{T}_2(\theta_2) \dots \mathbf{T}_n(\theta_n) \mathbf{p}_{local}
+</div>
+<script type="math/tex; mode=display">
+\mathbf{p}_{end} = \mathbf{T}_1(\theta_1) \mathbf{T}_2(\theta_2) \dots \mathbf{T}_n(\theta_n) \mathbf{p}_{local}
+</script>
+</div>
 <p>여기서:
 - <span class="arithmatex"><span class="MathJax_Preview">\mathbf{p}_{end}</span><script type="math/tex">\mathbf{p}_{end}</script></span>는 엔드 이펙터의 전역 위치 벡터
 - <span class="arithmatex"><span class="MathJax_Preview">\mathbf{T}_i(\theta_i)</span><script type="math/tex">\mathbf{T}_i(\theta_i)</script></span>는 각 조인트의 변환 행렬
@@ -192,13 +197,23 @@ public class InverseKinematics : MonoBehaviour
 <p>매니퓰레이터의 동적 거동을 정확하게 시뮬레이션하기 위해서는 물리 기반의 동역학 모델을 구현해야 한다. 이는 매니퓰레이터의 조인트에 작용하는 힘과 토크를 계산하고, 각 링크의 가속도와 속도를 결정하는 과정을 포함한다.</p>
 <h4 id="_8">라그랑지안 역학</h4>
 <p>라그랑지안 역학은 매니퓰레이터의 동역학을 모델링하는 데 널리 사용되는 방법이다. 라그랑지안 <span class="arithmatex"><span class="MathJax_Preview">L</span><script type="math/tex">L</script></span>은 운동 에너지 <span class="arithmatex"><span class="MathJax_Preview">T</span><script type="math/tex">T</script></span>와 위치 에너지 <span class="arithmatex"><span class="MathJax_Preview">V</span><script type="math/tex">V</script></span>의 차이로 정의된다:</p>
-<p>$$</p>
-<p>L = T - V</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+L = T - V
+</div>
+<script type="math/tex; mode=display">
+L = T - V
+</script>
+</div>
 <p>라그랑지안 역학의 기본 방정식은 다음과 같다:</p>
-<p>$$</p>
-<p>\frac{d}{dt} \left( \frac{\partial L}{\partial \dot{\theta}_i} \right ) - \frac{\partial L}{\partial \theta_i} = \tau_i</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+\frac{d}{dt} \left( \frac{\partial L}{\partial \dot{\theta}_i} \right ) - \frac{\partial L}{\partial \theta_i} = \tau_i
+</div>
+<script type="math/tex; mode=display">
+\frac{d}{dt} \left( \frac{\partial L}{\partial \dot{\theta}_i} \right ) - \frac{\partial L}{\partial \theta_i} = \tau_i
+</script>
+</div>
 <p>여기서:
 - <span class="arithmatex"><span class="MathJax_Preview">\theta_i</span><script type="math/tex">\theta_i</script></span>는 <span class="arithmatex"><span class="MathJax_Preview">i</span><script type="math/tex">i</script></span>번째 조인트의 각도
 - <span class="arithmatex"><span class="MathJax_Preview">\dot{\theta}_i</span><script type="math/tex">\dot{\theta}_i</script></span>는 <span class="arithmatex"><span class="MathJax_Preview">i</span><script type="math/tex">i</script></span>번째 조인트의 각속도

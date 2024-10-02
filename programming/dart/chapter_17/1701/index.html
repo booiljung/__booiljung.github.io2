@@ -153,9 +153,14 @@ for (var item in myList) {
 <h3 id="_4">메모리 관리 및 가비지 컬렉션 고려</h3>
 <p>Dart의 가비지 컬렉션은 <strong>세대별</strong>로 관리된다. 불필요한 메모리 할당을 줄이는 것이 가비지 컬렉션의 효율성을 높이는 데 도움을 준다. 예를 들어, <strong>단기 메모리 할당</strong>을 줄이는 방식으로 메모리 관리를 최적화할 수 있다.</p>
 <p>가비지 컬렉션에 대한 이해는 Dart의 성능 최적화에 필수적이다. 이를 위해, 다음과 같은 수식을 통해 Dart 메모리 관리의 효율성을 설명할 수 있다.</p>
-<p>$$</p>
-<p>\mathbf{GC_time} = T_{\mathbf{minor}} + T_{\mathbf{major}}</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+\mathbf{GC\_time} = T_{\mathbf{minor}} + T_{\mathbf{major}}
+</div>
+<script type="math/tex; mode=display">
+\mathbf{GC\_time} = T_{\mathbf{minor}} + T_{\mathbf{major}}
+</script>
+</div>
 <p>여기서,
 - <span class="arithmatex"><span class="MathJax_Preview">T_{\mathbf{minor}}</span><script type="math/tex">T_{\mathbf{minor}}</script></span>는 <strong>minor GC</strong>(단기 할당된 메모리 회수)의 수행 시간
 - <span class="arithmatex"><span class="MathJax_Preview">T_{\mathbf{major}}</span><script type="math/tex">T_{\mathbf{major}}</script></span>는 <strong>major GC</strong>(장기 메모리 회수)의 수행 시간</p>

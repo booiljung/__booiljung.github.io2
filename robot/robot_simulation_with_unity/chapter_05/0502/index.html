@@ -289,24 +289,49 @@ public class IMUSensor : MonoBehaviour
 <ol>
 <li><strong>예측 단계(Prediction)</strong>:</li>
 </ol>
-<p>$$
-   \mathbf{x}<em>{k|k-1} = \mathbf{F} \mathbf{x}</em>{k-1|k-1} + \mathbf{B} \mathbf{u}_k</p>
-<p>$$</p>
-<p>$$
-   \mathbf{P}<em>{k|k-1} = \mathbf{F} \mathbf{P}</em>{k-1|k-1} \mathbf{F}^\top + \mathbf{Q}</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+   \mathbf{x}_{k|k-1} = \mathbf{F} \mathbf{x}_{k-1|k-1} + \mathbf{B} \mathbf{u}_k
+</div>
+<script type="math/tex; mode=display">
+   \mathbf{x}_{k|k-1} = \mathbf{F} \mathbf{x}_{k-1|k-1} + \mathbf{B} \mathbf{u}_k
+</script>
+</div>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+   \mathbf{P}_{k|k-1} = \mathbf{F} \mathbf{P}_{k-1|k-1} \mathbf{F}^\top + \mathbf{Q}
+</div>
+<script type="math/tex; mode=display">
+   \mathbf{P}_{k|k-1} = \mathbf{F} \mathbf{P}_{k-1|k-1} \mathbf{F}^\top + \mathbf{Q}
+</script>
+</div>
 <ol>
 <li><strong>갱신 단계(Update)</strong>:</li>
 </ol>
-<p>$$
-   \mathbf{K}<em>k = \mathbf{P}</em>{k|k-1} \mathbf{H}^\top \left( \mathbf{H} \mathbf{P}_{k|k-1} \mathbf{H}^\top + \mathbf{R} \right)^{-1}</p>
-<p>$$</p>
-<p>$$
-   \mathbf{x}<em>{k|k} = \mathbf{x}</em>{k|k-1} + \mathbf{K}<em>k \left( \mathbf{z}_k - \mathbf{H} \mathbf{x}</em>{k|k-1} \right)</p>
-<p>$$</p>
-<p>$$
-   \mathbf{P}<em>{k|k} = \left( \mathbf{I} - \mathbf{K}_k \mathbf{H} \right) \mathbf{P}</em>{k|k-1}</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+   \mathbf{K}_k = \mathbf{P}_{k|k-1} \mathbf{H}^\top \left( \mathbf{H} \mathbf{P}_{k|k-1} \mathbf{H}^\top + \mathbf{R} \right)^{-1}
+</div>
+<script type="math/tex; mode=display">
+   \mathbf{K}_k = \mathbf{P}_{k|k-1} \mathbf{H}^\top \left( \mathbf{H} \mathbf{P}_{k|k-1} \mathbf{H}^\top + \mathbf{R} \right)^{-1}
+</script>
+</div>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+   \mathbf{x}_{k|k} = \mathbf{x}_{k|k-1} + \mathbf{K}_k \left( \mathbf{z}_k - \mathbf{H} \mathbf{x}_{k|k-1} \right)
+</div>
+<script type="math/tex; mode=display">
+   \mathbf{x}_{k|k} = \mathbf{x}_{k|k-1} + \mathbf{K}_k \left( \mathbf{z}_k - \mathbf{H} \mathbf{x}_{k|k-1} \right)
+</script>
+</div>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+   \mathbf{P}_{k|k} = \left( \mathbf{I} - \mathbf{K}_k \mathbf{H} \right) \mathbf{P}_{k|k-1}
+</div>
+<script type="math/tex; mode=display">
+   \mathbf{P}_{k|k} = \left( \mathbf{I} - \mathbf{K}_k \mathbf{H} \right) \mathbf{P}_{k|k-1}
+</script>
+</div>
 <p>여기서 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{F}</span><script type="math/tex">\mathbf{F}</script></span>는 상태 전이 행렬, <span class="arithmatex"><span class="MathJax_Preview">\mathbf{B}</span><script type="math/tex">\mathbf{B}</script></span>는 제어 입력 행렬, <span class="arithmatex"><span class="MathJax_Preview">\mathbf{u}_k</span><script type="math/tex">\mathbf{u}_k</script></span>는 제어 입력, <span class="arithmatex"><span class="MathJax_Preview">\mathbf{P}</span><script type="math/tex">\mathbf{P}</script></span>는 오차 공분산 행렬, <span class="arithmatex"><span class="MathJax_Preview">\mathbf{Q}</span><script type="math/tex">\mathbf{Q}</script></span>는 시스템 노이즈 공분산, <span class="arithmatex"><span class="MathJax_Preview">\mathbf{H}</span><script type="math/tex">\mathbf{H}</script></span>는 관측 행렬, <span class="arithmatex"><span class="MathJax_Preview">\mathbf{R}</span><script type="math/tex">\mathbf{R}</script></span>은 관측 노이즈 공분산, <span class="arithmatex"><span class="MathJax_Preview">\mathbf{K}_k</span><script type="math/tex">\mathbf{K}_k</script></span>는 칼만 이득, <span class="arithmatex"><span class="MathJax_Preview">\mathbf{z}_k</span><script type="math/tex">\mathbf{z}_k</script></span>는 관측 벡터이다.</p>
 <h5 id="unity_2">Unity에서의 센서 퓨전 구현</h5>
 <p>Unity에서 센서 퓨전을 구현하기 위해서는 다음과 같은 단계를 따른다:</p>
@@ -350,9 +375,14 @@ public class SensorFusion : MonoBehaviour
 <ol>
 <li><strong>속도 및 위치 예측</strong>:</li>
 </ol>
-<p>$$
-   \mathbf{v}<em>{k} = \mathbf{v}</em>{k-1} + \mathbf{a} \Delta t</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+   \mathbf{v}_{k} = \mathbf{v}_{k-1} + \mathbf{a} \Delta t
+</div>
+<script type="math/tex; mode=display">
+   \mathbf{v}_{k} = \mathbf{v}_{k-1} + \mathbf{a} \Delta t
+</script>
+</div>
 <div class="arithmatex">
 <div class="MathJax_Preview">
 \mathbf{p}_{k} = \mathbf{p}_{k-1} + \mathbf{v}_{k} \Delta t + \frac{1}{2} \mathbf{a} (\Delta t)^2
@@ -366,9 +396,14 @@ public class SensorFusion : MonoBehaviour
 <li><strong>자세 추정</strong>:</li>
 </ol>
 <p>자이로스코프 데이터를 이용하여 로봇의 회전 각도를 추정한다.</p>
-<p>$$
-   \boldsymbol{\theta}<em>{k} = \boldsymbol{\theta}</em>{k-1} + \boldsymbol{\omega} \Delta t</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+   \boldsymbol{\theta}_{k} = \boldsymbol{\theta}_{k-1} + \boldsymbol{\omega} \Delta t
+</div>
+<script type="math/tex; mode=display">
+   \boldsymbol{\theta}_{k} = \boldsymbol{\theta}_{k-1} + \boldsymbol{\omega} \Delta t
+</script>
+</div>
 <p>여기서 <span class="arithmatex"><span class="MathJax_Preview">\boldsymbol{\theta}</span><script type="math/tex">\boldsymbol{\theta}</script></span>는 회전 각도, <span class="arithmatex"><span class="MathJax_Preview">\boldsymbol{\omega}</span><script type="math/tex">\boldsymbol{\omega}</script></span>는 각속도이다.</p>
 <ol>
 <li><strong>예측된 상태 반영</strong>:</li>

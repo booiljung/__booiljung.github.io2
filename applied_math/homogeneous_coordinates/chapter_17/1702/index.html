@@ -105,35 +105,63 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 <ul>
 <li><strong>스케일링(Scaling)</strong>:</li>
 </ul>
-<p>$$
+<div class="arithmatex">
+<div class="MathJax_Preview">
   \mathbf{S} = 
   \begin{bmatrix}
-  s_x &amp; 0 \
+  s_x &amp; 0 \\
   0 &amp; s_y 
-  \end{bmatrix}</p>
-<p>$$</p>
+  \end{bmatrix}
+</div>
+<script type="math/tex; mode=display">
+  \mathbf{S} = 
+  \begin{bmatrix}
+  s_x & 0 \\
+  0 & s_y 
+  \end{bmatrix}
+</script>
+</div>
 <ul>
 <li><strong>회전(Rotation)</strong>:</li>
 </ul>
-<p>$$
+<div class="arithmatex">
+<div class="MathJax_Preview">
   \mathbf{R} = 
   \begin{bmatrix}
-  \cos \theta &amp; -\sin \theta \
+  \cos \theta &amp; -\sin \theta \\
   \sin \theta &amp; \cos \theta 
-  \end{bmatrix}</p>
-<p>$$</p>
+  \end{bmatrix}
+</div>
+<script type="math/tex; mode=display">
+  \mathbf{R} = 
+  \begin{bmatrix}
+  \cos \theta & -\sin \theta \\
+  \sin \theta & \cos \theta 
+  \end{bmatrix}
+</script>
+</div>
 <ul>
 <li><strong>평행이동(Translation)</strong>:
   평행이동은 위의 2D 행렬로는 직접 표현하기 어렵다. 그러나 동차좌표계를 사용하면 다음과 같이 확장할 수 있다:</li>
 </ul>
-<p>$$
+<div class="arithmatex">
+<div class="MathJax_Preview">
   \mathbf{T} = 
   \begin{bmatrix}
-  1 &amp; 0 &amp; t_x \
-  0 &amp; 1 &amp; t_y \
+  1 &amp; 0 &amp; t_x \\
+  0 &amp; 1 &amp; t_y \\
   0 &amp; 0 &amp; 1
-  \end{bmatrix}</p>
-<p>$$</p>
+  \end{bmatrix}
+</div>
+<script type="math/tex; mode=display">
+  \mathbf{T} = 
+  \begin{bmatrix}
+  1 & 0 & t_x \\
+  0 & 1 & t_y \\
+  0 & 0 & 1
+  \end{bmatrix}
+</script>
+</div>
 <h4 id="_2">동차좌표계로의 변환</h4>
 <p>2차원 좌표 <span class="arithmatex"><span class="MathJax_Preview">(x, y)</span><script type="math/tex">(x, y)</script></span>를 동차좌표계로 변환하면 <span class="arithmatex"><span class="MathJax_Preview">(x, y, 1)</span><script type="math/tex">(x, y, 1)</script></span>이 된다. 따라서, 이 동차좌표를 이용하면 다양한 변환 작업을 하나의 행렬 곱셈으로 통일할 수 있다. </p>
 <h5 id="_3">예제: 동차좌표계를 통한 평행이동</h5>

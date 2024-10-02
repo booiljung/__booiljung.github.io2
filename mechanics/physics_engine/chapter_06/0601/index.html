@@ -102,21 +102,41 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 <ul>
 <li>2D 공간에서 AABB는 다음과 같이 정의된다:</li>
 </ul>
-<p>$$
-  \mathbf{Min} = (x_{\text{min}}, y_{\text{min}})</p>
-<p>$$</p>
-<p>$$
-  \mathbf{Max} = (x_{\text{max}}, y_{\text{max}})</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+  \mathbf{Min} = (x_{\text{min}}, y_{\text{min}})
+</div>
+<script type="math/tex; mode=display">
+  \mathbf{Min} = (x_{\text{min}}, y_{\text{min}})
+</script>
+</div>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+  \mathbf{Max} = (x_{\text{max}}, y_{\text{max}})
+</div>
+<script type="math/tex; mode=display">
+  \mathbf{Max} = (x_{\text{max}}, y_{\text{max}})
+</script>
+</div>
 <ul>
 <li>3D 공간에서 AABB는 다음과 같이 정의된다:</li>
 </ul>
-<p>$$
-  \mathbf{Min} = (x_{\text{min}}, y_{\text{min}}, z_{\text{min}})</p>
-<p>$$</p>
-<p>$$
-  \mathbf{Max} = (x_{\text{max}}, y_{\text{max}}, z_{\text{max}})</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+  \mathbf{Min} = (x_{\text{min}}, y_{\text{min}}, z_{\text{min}})
+</div>
+<script type="math/tex; mode=display">
+  \mathbf{Min} = (x_{\text{min}}, y_{\text{min}}, z_{\text{min}})
+</script>
+</div>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+  \mathbf{Max} = (x_{\text{max}}, y_{\text{max}}, z_{\text{max}})
+</div>
+<script type="math/tex; mode=display">
+  \mathbf{Max} = (x_{\text{max}}, y_{\text{max}}, z_{\text{max}})
+</script>
+</div>
 <h4 id="_2">충돌 감지</h4>
 <p>AABB 충돌 감지는 두 개의 AABB가 겹치는지를 검사하는 방식으로 이루어진다. 두 AABB가 겹치기 위해서는 각 축(x, y, z)에 대해 범위가 겹쳐야 한다.</p>
 <h5 id="2d-aabb">2D AABB 충돌 감지</h5>

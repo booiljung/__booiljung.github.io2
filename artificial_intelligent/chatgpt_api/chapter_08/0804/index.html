@@ -125,9 +125,14 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 <h3 id="_3">사용자 데이터의 비식별화</h3>
 <p>OpenAI는 사용자의 데이터를 처리할 때, 이를 익명화하는 기술적 절차를 적용할 수 있다. 익명화된 데이터는 특정 개인이나 조직을 식별할 수 없는 형태로 변환되며, 이를 통해 데이터가 무단으로 유출되더라도 개인 정보 보호가 유지될 수 있다.</p>
 <p>수학적으로, 비식별화 과정은 데이터 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{x}</span><script type="math/tex">\mathbf{x}</script></span>에서 개인 식별 정보를 제거하는 변환 <span class="arithmatex"><span class="MathJax_Preview">\mathcal{T}</span><script type="math/tex">\mathcal{T}</script></span>를 적용하는 것으로 표현할 수 있다:</p>
-<p>$$</p>
-<p>\mathbf{z} = \mathcal{T}(\mathbf{x})</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+\mathbf{z} = \mathcal{T}(\mathbf{x})
+</div>
+<script type="math/tex; mode=display">
+\mathbf{z} = \mathcal{T}(\mathbf{x})
+</script>
+</div>
 <p>여기서, <span class="arithmatex"><span class="MathJax_Preview">\mathbf{x}</span><script type="math/tex">\mathbf{x}</script></span>는 원본 데이터, <span class="arithmatex"><span class="MathJax_Preview">\mathbf{z}</span><script type="math/tex">\mathbf{z}</script></span>는 비식별화된 데이터, <span class="arithmatex"><span class="MathJax_Preview">\mathcal{T}</span><script type="math/tex">\mathcal{T}</script></span>는 비식별화 변환 함수이다.</p>
 <p>이러한 비식별화 기술은 주로 데이터의 가용성을 유지하면서도 보안을 강화하는 방법으로 사용된다.</p>
 <h3 id="api">API 키 관리</h3>
@@ -135,9 +140,14 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 <h3 id="_4">데이터 암호화</h3>
 <p>OpenAI는 데이터 전송 시 데이터의 보안을 강화하기 위해 <strong>암호화</strong>를 사용한다. API를 통해 전송된 모든 데이터는 TLS(Transport Layer Security)를 통해 암호화되며, 이는 데이터 전송 중 발생할 수 있는 스니핑(sniffing)이나 도청(eavesdropping)을 방지한다. 데이터가 전송되는 동안 암호화되지 않으면 제3자가 이를 중간에서 가로챌 수 있기 때문에, 데이터 암호화는 매우 중요한 보안 요소이다.</p>
 <p>암호화 과정은 수학적으로 다음과 같이 표현할 수 있다:</p>
-<p>$$</p>
-<p>\mathbf{c} = \mathcal{E}(\mathbf{m}, \mathbf{k})</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+\mathbf{c} = \mathcal{E}(\mathbf{m}, \mathbf{k})
+</div>
+<script type="math/tex; mode=display">
+\mathbf{c} = \mathcal{E}(\mathbf{m}, \mathbf{k})
+</script>
+</div>
 <p>여기서, <span class="arithmatex"><span class="MathJax_Preview">\mathbf{m}</span><script type="math/tex">\mathbf{m}</script></span>은 원본 메시지, <span class="arithmatex"><span class="MathJax_Preview">\mathbf{c}</span><script type="math/tex">\mathbf{c}</script></span>는 암호화된 메시지(암호문), <span class="arithmatex"><span class="MathJax_Preview">\mathbf{k}</span><script type="math/tex">\mathbf{k}</script></span>는 암호화 키, <span class="arithmatex"><span class="MathJax_Preview">\mathcal{E}</span><script type="math/tex">\mathcal{E}</script></span>는 암호화 함수이다.</p>
 <p>또한, OpenAI는 전송된 데이터뿐만 아니라 저장된 데이터에 대해서도 암호화를 적용할 수 있으며, 이는 데이터 유출 시에도 보안을 유지할 수 있도록 도와준다.</p>
 <h3 id="_5">데이터 접근 제어</h3>

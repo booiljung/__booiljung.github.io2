@@ -1,94 +1,106 @@
 <!DOCTYPE html>
-
 <html lang="en">
 <head>
-<meta charset="utf-8"/>
-<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<link href="https://booiljung.github.io/applied_math/laplace_transform/chapter_02/0205/" rel="canonical"/>
-<link href="../../../../img/favicon.ico" rel="shortcut icon"/>
-<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
-<title>스케일링 정리 - 실험 도서관</title>
-<link href="../../../../css/bootstrap-3.3.7.min.css" rel="stylesheet"/>
-<link href="../../../../css/font-awesome-4.7.0.css" rel="stylesheet"/>
-<link href="../../../../css/base.css" rel="stylesheet"/>
-<link href="../../../../css/highlight.css" rel="stylesheet"/>
-<link href="../../../../css/custom.css" rel="stylesheet"/>
-<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
-<!--[if lt IE 9]>
+  
+  
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    
+    <link rel="canonical" href="https://booiljung.github.io/applied_math/laplace_transform/chapter_02/0205/">
+    <link rel="shortcut icon" href="../../../../img/favicon.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <title>스케일링 정리 - 실험 도서관</title>
+    <link href="../../../../css/bootstrap-3.3.7.min.css" rel="stylesheet">
+    <link href="../../../../css/font-awesome-4.7.0.css" rel="stylesheet">
+    <link href="../../../../css/base.css" rel="stylesheet">
+    <link rel="stylesheet" href="../../../../css/highlight.css">
+    <link href="../../../../css/custom.css" rel="stylesheet">
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
         <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
     <![endif]-->
-<script src="../../../../js/jquery-3.2.1.min.js"></script>
-<script src="../../../../js/bootstrap-3.3.7.min.js"></script>
-<script src="../../../../js/highlight.pack.js"></script>
-<base target="_top"/>
-<script>
+
+    <script src="../../../../js/jquery-3.2.1.min.js"></script>
+    <script src="../../../../js/bootstrap-3.3.7.min.js"></script>
+    <script src="../../../../js/highlight.pack.js"></script>
+    
+    <base target="_top">
+    <script>
       var base_url = '../../../..';
       var is_top_frame = false;
         
         var pageToc = [
           {title: "\uc2a4\ucf00\uc77c\ub9c1 \uc815\ub9ac\uc758 \uc815\uc758", url: "#_top", children: [
-              {title: "\ub77c\ud50c\ub77c\uc2a4 \ubcc0\ud658\uc5d0 \ub530\ub978 \uc2a4\ucf00\uc77c\ub9c1 \uc815\ub9ac\uc758 \uc218\uc2dd\uc801 \ud45c\ud604", url: "#_2" },
           ]},
-          {title: "\uc2dc\uac04 \uc601\uc5ed\uc5d0\uc11c\uc758 \uc2a4\ucf00\uc77c\ub9c1", url: "#_3", children: [
-              {title: "\uc2a4\ucf00\uc77c\ub9c1\uc758 \uc815\uc758", url: "#_4" },
-              {title: "\uc2a4\ucf00\uc77c\ub9c1\uc758 \uc2dc\uac01\uc801 \uc774\ud574", url: "#_5" },
-              {title: "\uc608\uc2dc", url: "#_6" },
+          {title: "\uc2dc\uac04 \uc601\uc5ed\uc5d0\uc11c\uc758 \uc2a4\ucf00\uc77c\ub9c1", url: "#_2", children: [
+              {title: "\uc218\uc2dd\uc73c\ub85c \ud45c\ud604:", url: "#_3" },
           ]},
-          {title: "\uc2a4\ucf00\uc77c\ub9c1 \uc815\ub9ac\uc758 \uc9c1\uad00\uc801 \uc774\ud574", url: "#_7", children: [
-              {title: "\uc2dc\uac04 \ucd95\uc5d0\uc11c\uc758 \ubcc0\ud654", url: "#_8" },
-              {title: "\uc8fc\ud30c\uc218 \uc601\uc5ed\uc5d0\uc11c\uc758 \ubcc0\ud654", url: "#_9" },
-              {title: "\uc608\ub97c \ub4e4\uc5b4", url: "#_10" },
+          {title: "\uc2a4\ucf00\uc77c\ub9c1 \uc815\ub9ac\uc758 \uc9c1\uad00\uc801 \uc774\ud574", url: "#_4", children: [
           ]},
-          {title: "\uc2a4\ucf00\uc77c\ub9c1 \uc815\ub9ac\uc758 \uc218\ud559\uc801 \uc99d\uba85", url: "#_11", children: [
-              {title: "\ub77c\ud50c\ub77c\uc2a4 \ubcc0\ud658\uc758 \uc815\uc758", url: "#_12" },
-              {title: "\uc2a4\ucf00\uc77c\ub9c1\ub41c \ud568\uc218\uc758 \ub77c\ud50c\ub77c\uc2a4 \ubcc0\ud658", url: "#_13" },
-              {title: "\ubcc0\uc218 \uce58\ud658", url: "#_14" },
-              {title: "\uc2a4\ucf00\uc77c\ub9c1 \uc815\ub9ac\uc758 \ub3c4\ucd9c", url: "#_15" },
+          {title: "\uc608\uc2dc", url: "#_5", children: [
           ]},
-          {title: "\uc2a4\ucf00\uc77c\ub9c1 \uc815\ub9ac\uc758 \uc751\uc6a9", url: "#_16", children: [
-              {title: "\uc81c\uc5b4 \uc2dc\uc2a4\ud15c\uc5d0\uc11c\uc758 \uc2a4\ucf00\uc77c\ub9c1 \uc815\ub9ac", url: "#_17" },
-              {title: "\uc2e0\ud638 \ucc98\ub9ac\uc5d0\uc11c\uc758 \uc2a4\ucf00\uc77c\ub9c1 \uc815\ub9ac", url: "#_18" },
-              {title: "\uc804\uae30 \ud68c\ub85c \ubd84\uc11d\uc5d0\uc11c\uc758 \uc2a4\ucf00\uc77c\ub9c1 \uc815\ub9ac", url: "#_19" },
+          {title: "\uc2a4\ucf00\uc77c\ub9c1 \uc815\ub9ac\uc758 \uc218\ud559\uc801 \uc99d\uba85", url: "#_6", children: [
+          ]},
+          {title: "\uc2a4\ucf00\uc77c\ub9c1 \uc815\ub9ac\uc758 \uc751\uc6a9", url: "#_7", children: [
+              {title: "\uc81c\uc5b4 \uc2dc\uc2a4\ud15c\uc5d0\uc11c\uc758 \uc608\uc2dc", url: "#_8" },
           ]},
         ];
 
     </script>
-<script src="../../../../js/base.js"></script>
-<script src="../../../../js/google_analytics.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML"></script>
-<script src="https://www.googletagmanager.com/gtag/js?id=G-3F4LHCTF88"></script>
-</meta></head>
+    <script src="../../../../js/base.js"></script>
+      <script src="../../../../js/google_analytics.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+      <script src="https://www.googletagmanager.com/gtag/js?id=G-3F4LHCTF88"></script> 
+</head>
+
 <body>
 <script>
 if (is_top_frame) { $('body').addClass('wm-top-page'); }
 </script>
+
+
+
 <div class="container-fluid wm-page-content">
-<a name="_top"></a>
-<div aria-label="navigation" class="row wm-article-nav-buttons" role="navigation">
-<div class="wm-article-nav pull-right">
-<a class="btn btn-xs btn-default pull-right" href="../0206/">
+  <a name="_top"></a>
+    
+
+    
+    
+      
+    
+
+  <div class="row wm-article-nav-buttons" role="navigation" aria-label="navigation">
+    
+    <div class="wm-article-nav pull-right">
+      <a href="../0206/" class="btn btn-xs btn-default pull-right">
         Next
-        <i aria-hidden="true" class="fa fa-chevron-right"></i>
-</a>
-<a class="btn btn-xs btn-link" href="../0206/">
+        <i class="fa fa-chevron-right" aria-hidden="true"></i>
+      </a>
+      <a href="../0206/" class="btn btn-xs btn-link">
         주기 함수의 라플라스 변환
       </a>
-</div>
-<div class="wm-article-nav">
-<a class="btn btn-xs btn-default pull-left" href="../0204/">
-<i aria-hidden="true" class="fa fa-chevron-left"></i>
-        Previous</a><a class="btn btn-xs btn-link" href="../0204/">
+    </div>
+    
+    <div class="wm-article-nav">
+      <a href="../0204/" class="btn btn-xs btn-default pull-left">
+        <i class="fa fa-chevron-left" aria-hidden="true"></i>
+        Previous</a><a href="../0204/" class="btn btn-xs btn-link">
         미분 및 적분의 라플라스 변환
       </a>
-</div>
-</div>
-<h3 id="_1">스케일링 정리의 정의</h3>
-<p>스케일링 정리는 시간 영역에서의 신호가 스케일될 때 주파수 영역에서의 라플라스 변환이 어떻게 변하는지를 설명하는 중요한 정리이다. 이 정리는 주로 제어 시스템, 신호 처리 및 회로 분석에서 유용하게 사용된다. 시간 축에서의 스케일링이 주파수 영역에 미치는 영향을 정량적으로 표현하며, 신호의 스케일 조작과 라플라스 변환 간의 관계를 정의한다.</p>
-<p>시간 영역에서의 스케일링은 <span class="arithmatex"><span class="MathJax_Preview">f(t)</span><script type="math/tex">f(t)</script></span> 함수를 <span class="arithmatex"><span class="MathJax_Preview">f(at)</span><script type="math/tex">f(at)</script></span>으로 변환하는 작업을 의미한다. 여기서 <span class="arithmatex"><span class="MathJax_Preview">a</span><script type="math/tex">a</script></span>는 스케일링 계수로, <span class="arithmatex"><span class="MathJax_Preview">a &gt; 1</span><script type="math/tex">a > 1</script></span>인 경우 시간 축이 압축되고, <span class="arithmatex"><span class="MathJax_Preview">0 &lt; a &lt; 1</span><script type="math/tex">0 < a < 1</script></span>일 때는 시간 축이 확장된다.</p>
-<h4 id="_2">라플라스 변환에 따른 스케일링 정리의 수식적 표현</h4>
-<p>시간 축에서 스케일링된 함수 <span class="arithmatex"><span class="MathJax_Preview">f(at)</span><script type="math/tex">f(at)</script></span>의 라플라스 변환은 다음과 같이 정의된다:</p>
+    </div>
+    
+  </div>
+
+    
+
+    <h3 id="_1">스케일링 정리의 정의</h3>
+<p>스케일링 정리(Scaling Theorem)는 시간 영역에서의 신호가 스케일될 때, 그에 따른 라플라스 변환의 변화가 어떻게 일어나는지를 설명하는 중요한 정리이다. 이 정리는 신호의 스케일링을 통해 시스템의 성능 분석, 신호 처리에서의 필터링, 그리고 제어 시스템 설계에 중요한 역할을 한다.</p>
+<h3 id="_2">시간 영역에서의 스케일링</h3>
+<p>시간 영역에서 함수 <span class="arithmatex"><span class="MathJax_Preview">f(t)</span><script type="math/tex">f(t)</script></span>의 스케일링은 <span class="arithmatex"><span class="MathJax_Preview">f(at)</span><script type="math/tex">f(at)</script></span>으로 나타낼 수 있다. 여기서 <span class="arithmatex"><span class="MathJax_Preview">a</span><script type="math/tex">a</script></span>는 스케일링 인자이다. <span class="arithmatex"><span class="MathJax_Preview">a &gt; 1</span><script type="math/tex">a > 1</script></span>인 경우에는 시간 축이 압축되고, <span class="arithmatex"><span class="MathJax_Preview">0 &lt; a &lt; 1</span><script type="math/tex">0 < a < 1</script></span>인 경우에는 시간 축이 확장된다.</p>
+<h4 id="_3">수식으로 표현:</h4>
 <div class="arithmatex">
 <div class="MathJax_Preview">
 \mathcal{L}\{f(at)\} = \frac{1}{|a|} F\left( \frac{s}{a} \right)
@@ -97,49 +109,36 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 \mathcal{L}\{f(at)\} = \frac{1}{|a|} F\left( \frac{s}{a} \right)
 </script>
 </div>
-<p>위 식에서:
-- <span class="arithmatex"><span class="MathJax_Preview">a</span><script type="math/tex">a</script></span>는 시간 스케일링 계수이다.
-- <span class="arithmatex"><span class="MathJax_Preview">f(at)</span><script type="math/tex">f(at)</script></span>는 시간 영역에서 스케일링된 함수이다.
-- <span class="arithmatex"><span class="MathJax_Preview">F(s)</span><script type="math/tex">F(s)</script></span>는 원래 함수 <span class="arithmatex"><span class="MathJax_Preview">f(t)</span><script type="math/tex">f(t)</script></span>의 라플라스 변환이다.
-- <span class="arithmatex"><span class="MathJax_Preview">s</span><script type="math/tex">s</script></span>는 복소 평면에서의 라플라스 변환 변수이다.</p>
-<p>이 수식은 스케일링된 신호가 주파수 영역에서 스케일링 인자의 역수로 변환됨을 나타낸다. <span class="arithmatex"><span class="MathJax_Preview">a</span><script type="math/tex">a</script></span>가 1보다 크면 주파수 영역에서는 압축되고, <span class="arithmatex"><span class="MathJax_Preview">a</span><script type="math/tex">a</script></span>가 1보다 작으면 주파수 영역에서는 확장된다.</p>
-<h3 id="_3">시간 영역에서의 스케일링</h3>
-<p>시간 영역에서의 스케일링은 신호가 시간 축에서 압축되거나 확장되는 현상을 설명한다. 이를 통해 신호의 시간적인 변화가 주파수 영역에서 어떻게 영향을 미치는지 분석할 수 있다.</p>
-<h4 id="_4">스케일링의 정의</h4>
-<p>시간 영역에서 주어진 신호 <span class="arithmatex"><span class="MathJax_Preview">f(t)</span><script type="math/tex">f(t)</script></span>가 스케일링되면, 스케일링된 신호 <span class="arithmatex"><span class="MathJax_Preview">f(at)</span><script type="math/tex">f(at)</script></span>로 표현된다. 여기서 <span class="arithmatex"><span class="MathJax_Preview">a</span><script type="math/tex">a</script></span>는 스케일링 인자로, 시간이 압축 또는 확장되는 정도를 결정한다. <span class="arithmatex"><span class="MathJax_Preview">a</span><script type="math/tex">a</script></span>의 값에 따라 다음과 같이 신호가 변한다:</p>
-<ul>
-<li><span class="arithmatex"><span class="MathJax_Preview">a &gt; 1</span><script type="math/tex">a > 1</script></span>일 때: 시간 축이 압축된다. 즉, 신호가 더 빠르게 변화한다.</li>
-<li><span class="arithmatex"><span class="MathJax_Preview">0 &lt; a &lt; 1</span><script type="math/tex">0 < a < 1</script></span>일 때: 시간 축이 확장된다. 즉, 신호가 더 느리게 변화한다.</li>
-</ul>
-<p>스케일링된 신호는 시간에 대한 함수가 변환된 형태로 나타난다. 이때, 신호의 주파수 구성 성분도 변하게 된다.</p>
-<h4 id="_5">스케일링의 시각적 이해</h4>
-<p>신호가 스케일링되었을 때 시간 축에서의 변화는 다음과 같은 방식으로 나타난다. 예를 들어, 주어진 신호가 <span class="arithmatex"><span class="MathJax_Preview">f(t)</span><script type="math/tex">f(t)</script></span>라고 할 때, 시간이 <span class="arithmatex"><span class="MathJax_Preview">a</span><script type="math/tex">a</script></span>로 스케일링되면, 신호가 더 빠르거나 느리게 변화하는 것을 그래프적으로 확인할 수 있다.</p>
-<div class="mermaid">graph LR
-    A["Original Signal f(t)"] --&gt; B["Compressed Signal f(at), a &gt; 1"]
-    A --&gt; C["Expanded Signal f(at), 0 &lt; a &lt; 1"]
+<p>여기서,
+- <span class="arithmatex"><span class="MathJax_Preview">\mathcal{L}</span><script type="math/tex">\mathcal{L}</script></span>은 라플라스 변환을 의미한다.
+- <span class="arithmatex"><span class="MathJax_Preview">f(t)</span><script type="math/tex">f(t)</script></span>는 시간 영역에서의 함수이다.
+- <span class="arithmatex"><span class="MathJax_Preview">F(s)</span><script type="math/tex">F(s)</script></span>는 주파수 영역에서의 라플라스 변환 함수이다.
+- <span class="arithmatex"><span class="MathJax_Preview">a</span><script type="math/tex">a</script></span>는 스케일링 인자이다.
+- <span class="arithmatex"><span class="MathJax_Preview">s</span><script type="math/tex">s</script></span>는 복소수 변환 변수를 나타낸다.</p>
+<h3 id="_4">스케일링 정리의 직관적 이해</h3>
+<p>스케일링 정리는 신호의 시간 축이 압축되거나 확장될 때, 라플라스 변환이 반대로 변하는 현상을 설명한다. 즉, 시간 축이 압축되면 주파수 영역에서는 스케일이 커지고, 반대로 시간 축이 확장되면 주파수 영역에서는 스케일이 작아진다. 이를 통해 신호의 변화를 더욱 쉽게 해석할 수 있다.</p>
+<h3 id="_5">예시</h3>
+<p>다음으로 단순한 예를 들어보겠다. 시간 영역에서 지수 함수 <span class="arithmatex"><span class="MathJax_Preview">f(t) = e^{-\alpha t}</span><script type="math/tex">f(t) = e^{-\alpha t}</script></span>의 라플라스 변환은 다음과 같이 구할 수 있다:</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+F(s) = \frac{1}{s + \alpha}
 </div>
-<p>이와 같이 시간 축에서 스케일링이 일어나면 신호가 압축되거나 확장되는 것을 시각적으로 확인할 수 있다.</p>
-<h4 id="_6">예시</h4>
-<p>주어진 신호가 <span class="arithmatex"><span class="MathJax_Preview">f(t) = e^{-\alpha t}</span><script type="math/tex">f(t) = e^{-\alpha t}</script></span>라고 가정해 봅시다. 이 신호의 스케일링된 형태는 <span class="arithmatex"><span class="MathJax_Preview">f(at) = e^{-\alpha at}</span><script type="math/tex">f(at) = e^{-\alpha at}</script></span>로 표현된다. 이를 시간 축에서 비교해 보면, <span class="arithmatex"><span class="MathJax_Preview">a &gt; 1</span><script type="math/tex">a > 1</script></span>일 때 신호가 더 빠르게 감쇠하고, <span class="arithmatex"><span class="MathJax_Preview">0 &lt; a &lt; 1</span><script type="math/tex">0 < a < 1</script></span>일 때 신호가 더 느리게 감쇠하는 것을 확인할 수 있다.</p>
-<p>따라서 스케일링된 신호는 시간 축에서 신호가 어떻게 변화하는지를 나타내며, 이러한 변화는 라플라스 변환을 통해 주파수 영역에서의 대응 변화를 알 수 있게 해준다.</p>
-<h3 id="_7">스케일링 정리의 직관적 이해</h3>
-<p>스케일링 정리는 시간 영역에서 신호가 압축되거나 확장될 때, 그에 따른 주파수 영역에서의 변화를 쉽게 이해할 수 있도록 돕는 도구이다. 이 정리를 직관적으로 이해하기 위해, 시간 축과 주파수 축에서 일어나는 변화를 각각 살펴보자.</p>
-<h4 id="_8">시간 축에서의 변화</h4>
-<p>시간 축에서 스케일링은 함수 <span class="arithmatex"><span class="MathJax_Preview">f(t)</span><script type="math/tex">f(t)</script></span>를 <span class="arithmatex"><span class="MathJax_Preview">f(at)</span><script type="math/tex">f(at)</script></span>로 변환하는 과정이다. 여기서 <span class="arithmatex"><span class="MathJax_Preview">a</span><script type="math/tex">a</script></span>는 스케일링 인자로, <span class="arithmatex"><span class="MathJax_Preview">a &gt; 1</span><script type="math/tex">a > 1</script></span>일 때 시간 축이 압축되고, <span class="arithmatex"><span class="MathJax_Preview">0 &lt; a &lt; 1</span><script type="math/tex">0 < a < 1</script></span>일 때 시간 축이 확장된다. 이는 다음과 같은 현상을 의미한다:</p>
-<ul>
-<li><strong>압축(시간 축이 짧아짐)</strong>: 신호가 더 빠르게 변화하여, 주파수 영역에서 더 높은 주파수 성분들이 필요하게 된다.</li>
-<li><strong>확장(시간 축이 길어짐)</strong>: 신호가 더 느리게 변화하여, 주파수 영역에서 더 낮은 주파수 성분들만으로도 신호를 설명할 수 있게 된다.</li>
-</ul>
-<h4 id="_9">주파수 영역에서의 변화</h4>
-<p>주파수 영역에서 스케일링 정리는 시간 축의 변형이 주파수 성분에 어떻게 영향을 미치는지를 보여준다. 시간 축이 압축되면 주파수 축에서는 반대로 확장되고, 시간 축이 확장되면 주파수 축에서는 압축된다. 즉, 시간 축에서 신호가 빨라질수록 고주파 성분이 많이 포함되고, 반대로 신호가 느려질수록 저주파 성분만으로도 충분히 설명이 가능하게 된다.</p>
-<p>스케일링 정리가 말하는 바는 단순한다: <strong>시간과 주파수는 상호 보완적인 관계</strong>를 가지고 있으며, 한 쪽에서 스케일링이 일어나면 다른 쪽에서는 그 반대 방향으로 스케일링이 발생한다.</p>
-<h4 id="_10">예를 들어</h4>
-<p>지수 함수 <span class="arithmatex"><span class="MathJax_Preview">f(t) = e^{-\alpha t}</span><script type="math/tex">f(t) = e^{-\alpha t}</script></span>의 경우를 살펴보면, 시간 영역에서의 함수가 스케일링된 <span class="arithmatex"><span class="MathJax_Preview">f(at) = e^{-\alpha at}</span><script type="math/tex">f(at) = e^{-\alpha at}</script></span>는 더 빠르게 감쇠하거나, 더 느리게 감쇠하는 모습을 보이다. 이에 따라 주파수 영역에서의 라플라스 변환 역시 스케일 인자 <span class="arithmatex"><span class="MathJax_Preview">a</span><script type="math/tex">a</script></span>에 의해 변하게 된다. 주파수 축에서는 시간 축의 변화가 반대로 나타나기 때문에, 시간 축이 짧아질수록 주파수 대역폭이 넓어지며, 시간 축이 길어질수록 대역폭이 좁아진다.</p>
-<p>이를 통해 우리는 스케일링 정리를 시간-주파수 분석의 중요한 도구로 사용할 수 있으며, 신호의 시간적 특성에 따라 주파수 성분들이 어떻게 변화하는지를 쉽게 이해할 수 있게 된다.</p>
-<h3 id="_11">스케일링 정리의 수학적 증명</h3>
-<p>스케일링 정리의 수학적 증명은 라플라스 변환의 정의에 기초하여 이루어진다. 라플라스 변환의 기본 정의를 사용하여 스케일링된 함수 <span class="arithmatex"><span class="MathJax_Preview">f(at)</span><script type="math/tex">f(at)</script></span>의 변환을 구하고, 이를 통해 결과적으로 스케일링 정리를 증명할 수 있다.</p>
-<h4 id="_12">라플라스 변환의 정의</h4>
-<p>라플라스 변환은 시간 영역 함수 <span class="arithmatex"><span class="MathJax_Preview">f(t)</span><script type="math/tex">f(t)</script></span>를 복소수 영역으로 변환하는 연산으로 정의된다. 라플라스 변환의 정의는 다음과 같다:</p>
+<script type="math/tex; mode=display">
+F(s) = \frac{1}{s + \alpha}
+</script>
+</div>
+<p>이제 시간 축을 스케일링하여 <span class="arithmatex"><span class="MathJax_Preview">f(at) = e^{-\alpha at}</span><script type="math/tex">f(at) = e^{-\alpha at}</script></span>의 라플라스 변환을 구해보면:</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+\mathcal{L}\{e^{-\alpha at}\} = \frac{1}{|a|} \cdot \frac{1}{\frac{s}{a} + \alpha} = \frac{a}{s + a\alpha}
+</div>
+<script type="math/tex; mode=display">
+\mathcal{L}\{e^{-\alpha at}\} = \frac{1}{|a|} \cdot \frac{1}{\frac{s}{a} + \alpha} = \frac{a}{s + a\alpha}
+</script>
+</div>
+<p>따라서 시간 영역에서 스케일링된 함수의 라플라스 변환이 어떻게 변화하는지를 알 수 있다.</p>
+<h3 id="_6">스케일링 정리의 수학적 증명</h3>
+<p>스케일링 정리는 라플라스 변환의 기본 정의를 통해 증명할 수 있다. 라플라스 변환의 정의는 다음과 같다:</p>
 <div class="arithmatex">
 <div class="MathJax_Preview">
 \mathcal{L}\{f(t)\} = \int_0^{\infty} f(t) e^{-st} dt
@@ -148,12 +147,7 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 \mathcal{L}\{f(t)\} = \int_0^{\infty} f(t) e^{-st} dt
 </script>
 </div>
-<p>여기서:
-- <span class="arithmatex"><span class="MathJax_Preview">f(t)</span><script type="math/tex">f(t)</script></span>: 시간 영역에서의 함수
-- <span class="arithmatex"><span class="MathJax_Preview">s</span><script type="math/tex">s</script></span>: 복소수 변수 (일반적으로 <span class="arithmatex"><span class="MathJax_Preview">s = \sigma + j\omega</span><script type="math/tex">s = \sigma + j\omega</script></span>, <span class="arithmatex"><span class="MathJax_Preview">\sigma</span><script type="math/tex">\sigma</script></span>와 <span class="arithmatex"><span class="MathJax_Preview">\omega</span><script type="math/tex">\omega</script></span>는 실수)
-- <span class="arithmatex"><span class="MathJax_Preview">e^{-st}</span><script type="math/tex">e^{-st}</script></span>: 감쇠된 지수 함수로 주파수 영역에서의 변환을 나타냄</p>
-<h4 id="_13">스케일링된 함수의 라플라스 변환</h4>
-<p>이제 시간 영역에서 스케일링된 함수 <span class="arithmatex"><span class="MathJax_Preview">f(at)</span><script type="math/tex">f(at)</script></span>의 라플라스 변환을 구해본다. <span class="arithmatex"><span class="MathJax_Preview">f(at)</span><script type="math/tex">f(at)</script></span>의 라플라스 변환은 다음과 같이 정의된다:</p>
+<p>여기서 스케일링된 함수 <span class="arithmatex"><span class="MathJax_Preview">f(at)</span><script type="math/tex">f(at)</script></span>의 라플라스 변환을 구하기 위해 정의를 사용하면 다음과 같이 표현할 수 있다:</p>
 <div class="arithmatex">
 <div class="MathJax_Preview">
 \mathcal{L}\{f(at)\} = \int_0^{\infty} f(at) e^{-st} dt
@@ -162,42 +156,38 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 \mathcal{L}\{f(at)\} = \int_0^{\infty} f(at) e^{-st} dt
 </script>
 </div>
-<p>이 식에서 스케일링 인자 <span class="arithmatex"><span class="MathJax_Preview">a</span><script type="math/tex">a</script></span>는 시간 변수 <span class="arithmatex"><span class="MathJax_Preview">t</span><script type="math/tex">t</script></span>에 곱해진 상태로 존재한다. 이를 해결하기 위해 치환법을 사용한다.</p>
-<h4 id="_14">변수 치환</h4>
-<p>변수 <span class="arithmatex"><span class="MathJax_Preview">u = at</span><script type="math/tex">u = at</script></span>로 치환한다. 이때 미분하면 <span class="arithmatex"><span class="MathJax_Preview">du = a \, dt</span><script type="math/tex">du = a \, dt</script></span>가 된다. <span class="arithmatex"><span class="MathJax_Preview">u</span><script type="math/tex">u</script></span>를 새 변수로 사용하여 식을 변환하면:</p>
+<p>변수를 <span class="arithmatex"><span class="MathJax_Preview">u = at</span><script type="math/tex">u = at</script></span>로 치환하여 <span class="arithmatex"><span class="MathJax_Preview">du = a \, dt</span><script type="math/tex">du = a \, dt</script></span>가 된다. 이를 대입하면 다음과 같은 식을 얻을 수 있다:</p>
 <div class="arithmatex">
 <div class="MathJax_Preview">
-\mathcal{L}\{f(at)\} = \int_0^{\infty} f(u) e^{-s \frac{u}{a}} \frac{du}{a}
+\mathcal{L}\{f(at)\} = \int_0^{\infty} f(u) e^{-\frac{s}{a} u} \frac{du}{a}
 </div>
 <script type="math/tex; mode=display">
-\mathcal{L}\{f(at)\} = \int_0^{\infty} f(u) e^{-s \frac{u}{a}} \frac{du}{a}
+\mathcal{L}\{f(at)\} = \int_0^{\infty} f(u) e^{-\frac{s}{a} u} \frac{du}{a}
 </script>
 </div>
-<h4 id="_15">스케일링 정리의 도출</h4>
-<p>이제 <span class="arithmatex"><span class="MathJax_Preview">\frac{1}{a}</span><script type="math/tex">\frac{1}{a}</script></span>를 적분 바깥으로 꺼내고 식을 다시 정리하면 다음과 같은 결과를 얻게 된다:</p>
+<p>이를 정리하면:</p>
 <div class="arithmatex">
 <div class="MathJax_Preview">
-\mathcal{L}\{f(at)\} = \frac{1}{|a|} \int_0^{\infty} f(u) e^{-\frac{s}{a} u} du
+\mathcal{L}\{f(at)\} = \frac{1}{|a|} \int_0^{\infty} f(u) e^{-\frac{s}{a} u} du = \frac{1}{|a|} F\left( \frac{s}{a} \right)
 </div>
 <script type="math/tex; mode=display">
-\mathcal{L}\{f(at)\} = \frac{1}{|a|} \int_0^{\infty} f(u) e^{-\frac{s}{a} u} du
+\mathcal{L}\{f(at)\} = \frac{1}{|a|} \int_0^{\infty} f(u) e^{-\frac{s}{a} u} du = \frac{1}{|a|} F\left( \frac{s}{a} \right)
 </script>
 </div>
-<p>이 적분은 <span class="arithmatex"><span class="MathJax_Preview">f(t)</span><script type="math/tex">f(t)</script></span>의 라플라스 변환 정의와 동일한 형태를 띄고 있으므로, 이를 통해 스케일링된 함수 <span class="arithmatex"><span class="MathJax_Preview">f(at)</span><script type="math/tex">f(at)</script></span>의 라플라스 변환을 다음과 같이 표현할 수 있다:</p>
+<p>따라서 스케일링 정리가 증명된다.</p>
+<h3 id="_7">스케일링 정리의 응용</h3>
+<p>스케일링 정리는 신호 처리와 제어 시스템 설계에서 매우 유용하게 사용된다. 예를 들어, 제어 시스템에서 시간 상수(Time constant)를 조절하거나 신호를 분석할 때, 스케일링 정리를 통해 신호가 시간 영역에서 변화할 때 주파수 영역에서의 변화를 쉽게 예측할 수 있다.</p>
+<h4 id="_8">제어 시스템에서의 예시</h4>
+<p>시스템의 전달 함수가 다음과 같다고 가정하자:</p>
 <div class="arithmatex">
 <div class="MathJax_Preview">
-\mathcal{L}\{f(at)\} = \frac{1}{|a|} F\left( \frac{s}{a} \right)
+H(s) = \frac{1}{s + \alpha}
 </div>
 <script type="math/tex; mode=display">
-\mathcal{L}\{f(at)\} = \frac{1}{|a|} F\left( \frac{s}{a} \right)
+H(s) = \frac{1}{s + \alpha}
 </script>
 </div>
-<p>여기서 <span class="arithmatex"><span class="MathJax_Preview">F(s)</span><script type="math/tex">F(s)</script></span>는 원래 함수 <span class="arithmatex"><span class="MathJax_Preview">f(t)</span><script type="math/tex">f(t)</script></span>의 라플라스 변환이다. 이로써 스케일링 정리가 증명되었다.</p>
-<h3 id="_16">스케일링 정리의 응용</h3>
-<p>스케일링 정리는 다양한 분야에서 매우 중요한 역할을 한다. 특히 제어 시스템, 신호 처리, 통신 시스템, 그리고 전기 회로 분석에서 널리 사용된다. 시간 축이 압축되거나 확장되는 신호의 성질을 분석하는 데 있어 스케일링 정리를 활용하면 시스템의 동작을 효율적으로 해석할 수 있다.</p>
-<h4 id="_17">제어 시스템에서의 스케일링 정리</h4>
-<p>제어 시스템에서 스케일링 정리는 시스템의 전달 함수(Transfer Function)가 입력 신호의 시간 축 스케일링에 어떻게 반응하는지를 설명하는 데 유용하다. 전달 함수가 주어졌을 때, 입력 신호가 스케일링되면 출력 신호의 변화도 예측할 수 있다.</p>
-<p>예를 들어, 전달 함수 <span class="arithmatex"><span class="MathJax_Preview">H(s) = \frac{1}{s + \alpha}</span><script type="math/tex">H(s) = \frac{1}{s + \alpha}</script></span>인 시스템에서 입력 신호가 <span class="arithmatex"><span class="MathJax_Preview">u(t)</span><script type="math/tex">u(t)</script></span> 대신 <span class="arithmatex"><span class="MathJax_Preview">u(at)</span><script type="math/tex">u(at)</script></span>으로 스케일링된 경우를 생각해 보자. 이때, 시스템의 출력 신호는 스케일링된 전달 함수에 따라 다음과 같이 변화한다:</p>
+<p>이 시스템의 입력 신호가 시간 축에서 스케일링될 경우, 예를 들어 <span class="arithmatex"><span class="MathJax_Preview">u(at)</span><script type="math/tex">u(at)</script></span>이 입력된다고 하면, 출력도 스케일링된 형태로 변하게 된다. 스케일링된 전달 함수는 다음과 같이 표현된다:</p>
 <div class="arithmatex">
 <div class="MathJax_Preview">
 H(s) = \frac{a}{s + a\alpha}
@@ -206,37 +196,44 @@ H(s) = \frac{a}{s + a\alpha}
 H(s) = \frac{a}{s + a\alpha}
 </script>
 </div>
-<p>이처럼 시간 축에서 신호가 압축되거나 확장될 때, 시스템의 응답이 어떻게 변하는지 스케일링 정리를 통해 분석할 수 있다. 제어 시스템 설계에서는 이와 같은 원리를 이용하여 시스템의 응답 시간을 조절하거나, 특정 주파수 대역에서의 시스템 동작을 분석하는 데 활용한다.</p>
-<h4 id="_18">신호 처리에서의 스케일링 정리</h4>
-<p>신호 처리에서는 필터 설계나 주파수 응답 분석에 스케일링 정리가 널리 사용된다. 시간 축에서 신호가 스케일링되면, 주파수 영역에서는 그 역으로 스케일링되어 신호의 대역폭이 변화한다. 이를 통해 필터 설계 시 주파수 영역에서 원하는 대역폭을 조절하거나 신호를 분석할 수 있다.</p>
-<p>예를 들어, 저역통과 필터(Low-pass filter)의 주파수 응답이 주어졌을 때, 입력 신호의 시간 축을 스케일링하면 필터의 차단 주파수가 어떻게 변화하는지를 스케일링 정리를 통해 쉽게 예측할 수 있다.</p>
-<h4 id="_19">전기 회로 분석에서의 스케일링 정리</h4>
-<p>전기 회로 분석에서도 스케일링 정리는 매우 유용한 도구이다. 특히, RLC 회로와 같은 시스템에서 시간 상수(Time Constant)를 변화시키는 경우, 회로의 동작 특성을 분석하는 데 사용된다.</p>
-<p>예를 들어, RLC 회로의 임펄스 응답 함수가 <span class="arithmatex"><span class="MathJax_Preview">H(s) = \frac{1}{s^2 + 2\zeta\omega_n s + \omega_n^2}</span><script type="math/tex">H(s) = \frac{1}{s^2 + 2\zeta\omega_n s + \omega_n^2}</script></span>로 주어진다고 가정할 때, 시간 축에서의 스케일링이 시스템의 주파수 응답에 어떤 영향을 미치는지 쉽게 분석할 수 있다. 시간 상수가 변경되면 시스템의 응답 시간과 주파수 대역이 스케일링에 따라 변화하게 된다.</p>
-<br/>
-<div aria-label="navigation" class="row wm-article-nav-buttons" role="navigation">
-<div class="wm-article-nav pull-right">
-<a class="btn btn-xs btn-default pull-right" href="../0206/">
+<p>이를 통해 스케일링 정리가 시스템 해석에 중요한 도구로 작용할 수 있음을 알 수 있다.</p>
+
+  <br>
+    
+
+    
+    
+      
+    
+
+  <div class="row wm-article-nav-buttons" role="navigation" aria-label="navigation">
+    
+    <div class="wm-article-nav pull-right">
+      <a href="../0206/" class="btn btn-xs btn-default pull-right">
         Next
-        <i aria-hidden="true" class="fa fa-chevron-right"></i>
-</a>
-<a class="btn btn-xs btn-link" href="../0206/">
+        <i class="fa fa-chevron-right" aria-hidden="true"></i>
+      </a>
+      <a href="../0206/" class="btn btn-xs btn-link">
         주기 함수의 라플라스 변환
       </a>
-</div>
-<div class="wm-article-nav">
-<a class="btn btn-xs btn-default pull-left" href="../0204/">
-<i aria-hidden="true" class="fa fa-chevron-left"></i>
-        Previous</a><a class="btn btn-xs btn-link" href="../0204/">
+    </div>
+    
+    <div class="wm-article-nav">
+      <a href="../0204/" class="btn btn-xs btn-default pull-left">
+        <i class="fa fa-chevron-left" aria-hidden="true"></i>
+        Previous</a><a href="../0204/" class="btn btn-xs btn-link">
         미분 및 적분의 라플라스 변환
       </a>
+    </div>
+    
+  </div>
+
+    <br>
 </div>
-</div>
-<br/>
-</div>
+
 <footer class="container-fluid wm-page-content">
-<p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a> using <a href="https://github.com/gristlabs/mkdocs-windmill">Windmill</a> theme by Grist Labs.</p>
+  <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a> using <a href="https://github.com/gristlabs/mkdocs-windmill">Windmill</a> theme by Grist Labs.</p>
 </footer>
-<script type="module">import mermaid from "https://unpkg.com/mermaid@10.4.0/dist/mermaid.esm.min.mjs";
-mermaid.initialize({});</script></body>
+
+</body>
 </html>

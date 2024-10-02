@@ -187,25 +187,45 @@ y_*
 <p>하삼각 행렬 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{L}</span><script type="math/tex">\mathbf{L}</script></span>을 이용하여 <span class="arithmatex"><span class="MathJax_Preview">(\mathbf{K} + \sigma_n^2 \mathbf{I})^{-1} \mathbf{y}</span><script type="math/tex">(\mathbf{K} + \sigma_n^2 \mathbf{I})^{-1} \mathbf{y}</script></span>를 다음과 같이 계산한다:</p>
 </li>
 </ol>
-<p>$$
-   \mathbf{L} \mathbf{b} = \mathbf{y} \quad \text{(앞 방향 대입)}</p>
-<p>$$</p>
-<p>$$
-   \mathbf{L}^\top \mathbf{c} = \mathbf{b} \quad \text{(뒤 방향 대입)}</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+   \mathbf{L} \mathbf{b} = \mathbf{y} \quad \text{(앞 방향 대입)}
+</div>
+<script type="math/tex; mode=display">
+   \mathbf{L} \mathbf{b} = \mathbf{y} \quad \text{(앞 방향 대입)}
+</script>
+</div>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+   \mathbf{L}^\top \mathbf{c} = \mathbf{b} \quad \text{(뒤 방향 대입)}
+</div>
+<script type="math/tex; mode=display">
+   \mathbf{L}^\top \mathbf{c} = \mathbf{b} \quad \text{(뒤 방향 대입)}
+</script>
+</div>
 <p>그렇게 해서 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{c} = (\mathbf{K} + \sigma_n^2 \mathbf{I})^{-1} \mathbf{y}</span><script type="math/tex">\mathbf{c} = (\mathbf{K} + \sigma_n^2 \mathbf{I})^{-1} \mathbf{y}</script></span>를 얻는다.</p>
 <ol>
 <li>예측 값을 계산한다:</li>
 </ol>
-<p>$$
-   \mathbb{E}[y_<em> | \mathbf{X}, \mathbf{y}, \mathbf{x}_</em>] = \mathbf{k}_*^\top \mathbf{c}</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+   \mathbb{E}[y_* | \mathbf{X}, \mathbf{y}, \mathbf{x}_*] = \mathbf{k}_*^\top \mathbf{c}
+</div>
+<script type="math/tex; mode=display">
+   \mathbb{E}[y_* | \mathbf{X}, \mathbf{y}, \mathbf{x}_*] = \mathbf{k}_*^\top \mathbf{c}
+</script>
+</div>
 <ol>
 <li>예측 분산을 계산한다:</li>
 </ol>
-<p>$$
-   \text{Var}[y_<em> | \mathbf{X}, \mathbf{y}, \mathbf{x}_</em>] = k(\mathbf{x}_<em>, \mathbf{x}_</em>) - \mathbf{v}^\top \mathbf{v}</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+   \text{Var}[y_* | \mathbf{X}, \mathbf{y}, \mathbf{x}_*] = k(\mathbf{x}_*, \mathbf{x}_*) - \mathbf{v}^\top \mathbf{v}
+</div>
+<script type="math/tex; mode=display">
+   \text{Var}[y_* | \mathbf{X}, \mathbf{y}, \mathbf{x}_*] = k(\mathbf{x}_*, \mathbf{x}_*) - \mathbf{v}^\top \mathbf{v}
+</script>
+</div>
 <p>여기서 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{v}</span><script type="math/tex">\mathbf{v}</script></span>는 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{L} \mathbf{v} = \mathbf{k}_*</span><script type="math/tex">\mathbf{L} \mathbf{v} = \mathbf{k}_*</script></span>를 통해 구한다.</p>
 <p>이렇게 함으로써 예측 계산이 효율적으로 수행되며, 수치적으로도 안정적이다.</p>
 <h2 id="_5">예제 코드</h2>

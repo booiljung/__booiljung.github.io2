@@ -123,9 +123,14 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 <h4 id="_1">픽셀 구조</h4>
 <p>이벤트 카메라는 각각의 픽셀이 독립적으로 동작하며, 이는 전통적인 카메라와의 큰 차이점이다. Prophesee의 Metavision은 픽셀당 별도의 메모리와 회로를 가지고 있어 더 정교한 이벤트 처리가 가능하지만, 그에 따른 전력 소비가 상대적으로 높을 수 있다. 반면, iniVation의 DVS는 단순화된 픽셀 구조를 사용하여 전력 소비를 줄이면서도 빠른 응답 속도를 유지한다.</p>
 <p>픽셀 구조와 관련된 성능을 식으로 표현하면, 이벤트 발생률 <span class="arithmatex"><span class="MathJax_Preview">\lambda</span><script type="math/tex">\lambda</script></span>는 다음과 같이 표현될 수 있다.</p>
-<p>$$</p>
-<p>\lambda = f(\Delta I, \Delta t)</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+\lambda = f(\Delta I, \Delta t)
+</div>
+<script type="math/tex; mode=display">
+\lambda = f(\Delta I, \Delta t)
+</script>
+</div>
 <p>여기서,
 - <span class="arithmatex"><span class="MathJax_Preview">\Delta I</span><script type="math/tex">\Delta I</script></span>는 밝기의 변화량,
 - <span class="arithmatex"><span class="MathJax_Preview">\Delta t</span><script type="math/tex">\Delta t</script></span>는 시간 간격이다.</p>
@@ -133,9 +138,14 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 <h4 id="_2">전력 소비</h4>
 <p>이벤트 카메라의 전력 소비는 그 사용처에 매우 중요한 요소이다. Prophesee의 Metavision 센서는 상대적으로 높은 전력을 소비하지만, 더 정밀한 데이터를 제공하여 산업 자동화와 같이 정밀한 처리가 필요한 곳에서 많이 사용된다. 반면, iniVation의 DVS는 저전력으로 설계되어 휴대용 장치나 배터리 기반 시스템에서 적합한다.</p>
 <p>전력 소비량은 센서의 해상도, 이벤트 발생률에 따라 다르며, 이를 단순하게 모델링하면 다음과 같이 표현할 수 있다.</p>
-<p>$$</p>
-<p>P = k \cdot N \cdot \lambda</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+P = k \cdot N \cdot \lambda
+</div>
+<script type="math/tex; mode=display">
+P = k \cdot N \cdot \lambda
+</script>
+</div>
 <p>여기서,
 - <span class="arithmatex"><span class="MathJax_Preview">P</span><script type="math/tex">P</script></span>는 전력 소비량,
 - <span class="arithmatex"><span class="MathJax_Preview">N</span><script type="math/tex">N</script></span>은 센서의 픽셀 수,
@@ -169,9 +179,14 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 <h4 id="_6">시간적 해상도</h4>
 <p>이벤트 카메라의 핵심 지표 중 하나는 시간적 해상도이다. 시간적 해상도가 높을수록 빠른 움직임을 더 정확하게 감지할 수 있다. 시간적 해상도는 픽셀이 이벤트를 감지할 수 있는 최소 시간 단위로, 보통 나노초 단위로 표현된다.</p>
 <p>이를 수식으로 표현하면, 시간적 해상도 <span class="arithmatex"><span class="MathJax_Preview">\Delta t</span><script type="math/tex">\Delta t</script></span>는 다음과 같다.</p>
-<p>$$</p>
-<p>\Delta t = \frac{1}{f}</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+\Delta t = \frac{1}{f}
+</div>
+<script type="math/tex; mode=display">
+\Delta t = \frac{1}{f}
+</script>
+</div>
 <p>여기서,
 - <span class="arithmatex"><span class="MathJax_Preview">f</span><script type="math/tex">f</script></span>는 카메라의 최대 이벤트 처리 빈도이다.</p>
 <h4 id="_7">공간적 해상도</h4>
@@ -179,9 +194,14 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 <h4 id="_8">이벤트 발생률</h4>
 <p>이벤트 카메라의 이벤트 발생률은 카메라가 초당 생성하는 이벤트의 수로 정의된다. 이 값은 카메라의 픽셀 수와 각 픽셀이 감지하는 밝기 변화에 따라 달라진다. 높은 이벤트 발생률은 복잡한 장면에서 더 많은 정보를 제공하지만, 그에 따른 데이터 처리량도 증가한다.</p>
 <p>이벤트 발생률을 수식으로 나타내면 다음과 같다.</p>
-<p>$$</p>
-<p>R = N \cdot \lambda</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+R = N \cdot \lambda
+</div>
+<script type="math/tex; mode=display">
+R = N \cdot \lambda
+</script>
+</div>
 <p>여기서,
 - <span class="arithmatex"><span class="MathJax_Preview">R</span><script type="math/tex">R</script></span>는 이벤트 발생률,
 - <span class="arithmatex"><span class="MathJax_Preview">N</span><script type="math/tex">N</script></span>은 픽셀 수,

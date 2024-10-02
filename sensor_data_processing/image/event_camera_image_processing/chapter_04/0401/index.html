@@ -99,36 +99,61 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 <p>이벤트 카메라는 각 픽셀에서 발생하는 밝기 변화에 따라 이벤트를 발생시키는 센서이다. 전통적인 프레임 기반 카메라는 일정한 시간 간격으로 전체 이미지를 캡처하는 반면, 이벤트 카메라는 이벤트가 발생할 때마다 데이터를 기록하므로 시간적 해상도가 매우 높다. 따라서, 이벤트 카메라에서 프레임을 재구성하는 과정은 이 시간적으로 불연속적인 이벤트들을 처리하여 전통적인 프레임을 생성하는 작업이다.</p>
 <h3 id="2">2. 이벤트 기반 프레임 재구성의 수학적 모델</h3>
 <p>이벤트 카메라에서 발생하는 이벤트는 다음과 같은 수학적 모델로 표현할 수 있다:</p>
-<p>$$</p>
-<p>\mathbf{E}(x, y, t) = \left{ \left( x_i, y_i, t_i, p_i \right) \mid i = 1, 2, ..., N \right}</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+\mathbf{E}(x, y, t) = \left\{ \left( x_i, y_i, t_i, p_i \right) \mid i = 1, 2, ..., N \right\}
+</div>
+<script type="math/tex; mode=display">
+\mathbf{E}(x, y, t) = \left\{ \left( x_i, y_i, t_i, p_i \right) \mid i = 1, 2, ..., N \right\}
+</script>
+</div>
 <p>여기서:
 - <span class="arithmatex"><span class="MathJax_Preview">x_i, y_i</span><script type="math/tex">x_i, y_i</script></span>는 이벤트가 발생한 픽셀의 좌표이다.
 - <span class="arithmatex"><span class="MathJax_Preview">t_i</span><script type="math/tex">t_i</script></span>는 이벤트 발생 시간이다.
 - <span class="arithmatex"><span class="MathJax_Preview">p_i</span><script type="math/tex">p_i</script></span>는 밝기의 증가나 감소를 나타내는 극성(polarity)이다. <span class="arithmatex"><span class="MathJax_Preview">p_i = +1</span><script type="math/tex">p_i = +1</script></span>은 밝기의 증가, <span class="arithmatex"><span class="MathJax_Preview">p_i = -1</span><script type="math/tex">p_i = -1</script></span>은 밝기의 감소를 나타낸다.</p>
 <p>이 이벤트 스트림을 기반으로, 특정 시점 <span class="arithmatex"><span class="MathJax_Preview">t</span><script type="math/tex">t</script></span>에 프레임을 재구성하는 문제는 다음과 같이 표현될 수 있다:</p>
-<p>$$</p>
-<p>\mathbf{I}(x, y, t) = \sum_{i=1}^{N} p_i \cdot \delta(x - x_i, y - y_i)</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+\mathbf{I}(x, y, t) = \sum_{i=1}^{N} p_i \cdot \delta(x - x_i, y - y_i)
+</div>
+<script type="math/tex; mode=display">
+\mathbf{I}(x, y, t) = \sum_{i=1}^{N} p_i \cdot \delta(x - x_i, y - y_i)
+</script>
+</div>
 <p>여기서 <span class="arithmatex"><span class="MathJax_Preview">\delta</span><script type="math/tex">\delta</script></span>는 디랙 델타 함수로, 해당 위치에서만 값을 취한다. 이 식은 이벤트들의 합을 통해 이미지 값을 재구성하는 방식이다.</p>
 <h3 id="3-event-accumulation-method">3. 이벤트 누적 방식 (Event Accumulation Method)</h3>
 <p>가장 간단한 방법 중 하나는 이벤트를 누적하여 프레임을 재구성하는 방식이다. 이 방법에서는 일정 시간 동안 발생한 이벤트들을 누적하여 프레임을 생성한다. 이벤트 카메라의 데이터는 시간적으로 매우 세밀하기 때문에, 일정 시간 간격 <span class="arithmatex"><span class="MathJax_Preview">\Delta t</span><script type="math/tex">\Delta t</script></span>를 설정하여 그동안 발생한 이벤트를 모두 더하는 방식으로 프레임을 만든다.</p>
-<p>$$</p>
-<p>\mathbf{I}<em>\text{acc}(x, y) = \sum</em>{t_i \in [t_0, t_0 + \Delta t]} p_i \cdot \delta(x - x_i, y - y_i)</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+\mathbf{I}_\text{acc}(x, y) = \sum_{t_i \in [t_0, t_0 + \Delta t]} p_i \cdot \delta(x - x_i, y - y_i)
+</div>
+<script type="math/tex; mode=display">
+\mathbf{I}_\text{acc}(x, y) = \sum_{t_i \in [t_0, t_0 + \Delta t]} p_i \cdot \delta(x - x_i, y - y_i)
+</script>
+</div>
 <p>이 방법은 매우 직관적이며 구현이 간단하지만, 이벤트의 밀도가 낮거나 노이즈가 많은 경우 해상도가 떨어지거나 노이즈가 많아질 수 있다.</p>
 <h3 id="4-backprojection-based-reconstruction">4. 역투영 기반 재구성 (Backprojection-based Reconstruction)</h3>
 <p>역투영 기반 방법은 이벤트가 발생한 시점에서의 픽셀 밝기를 추정하는 방식이다. 이 방식에서는 각 이벤트가 발생할 때의 밝기 변화를 고려하여 픽셀의 밝기를 지속적으로 업데이트한다.</p>
 <p>밝기의 변화량은 이벤트의 극성 <span class="arithmatex"><span class="MathJax_Preview">p_i</span><script type="math/tex">p_i</script></span>에 따라 다음과 같이 업데이트된다:</p>
-<p>$$</p>
-<p>\mathbf{I}(x_i, y_i, t_i) = \mathbf{I}(x_i, y_i, t_{i-1}) + p_i \cdot \Delta L</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+\mathbf{I}(x_i, y_i, t_i) = \mathbf{I}(x_i, y_i, t_{i-1}) + p_i \cdot \Delta L
+</div>
+<script type="math/tex; mode=display">
+\mathbf{I}(x_i, y_i, t_i) = \mathbf{I}(x_i, y_i, t_{i-1}) + p_i \cdot \Delta L
+</script>
+</div>
 <p>여기서 <span class="arithmatex"><span class="MathJax_Preview">\Delta L</span><script type="math/tex">\Delta L</script></span>은 이벤트가 발생할 때의 밝기 변화량을 의미한다. 이 방식은 밝기의 변화를 계속해서 추적하므로, 높은 시간 해상도를 유지하면서도 더 나은 프레임 재구성을 할 수 있다. 그러나, 밝기 변화가 적절하게 보정되지 않으면 노이즈가 발생할 수 있다.</p>
 <h3 id="5-continuous-filtering-based-reconstruction">5. 연속적 필터링 기반 재구성 (Continuous Filtering-based Reconstruction)</h3>
 <p>연속적 필터링 방식은 이벤트 카메라의 데이터에서 발생하는 이벤트들을 시간적으로 부드럽게 연결하여 프레임을 재구성하는 방법이다. 이 방식에서는 이벤트 스트림을 활용하여 시간 축에서 연속적인 변화를 추정하고, 이를 통해 각 픽셀의 밝기를 업데이트한다. 주로 다음과 같은 형태로 표현된다:</p>
-<p>$$</p>
-<p>\mathbf{I}(x, y, t) = \mathbf{I}(x, y, t_0) + \int_{t_0}^{t} f(\mathbf{E}(x, y, t')) dt'</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+\mathbf{I}(x, y, t) = \mathbf{I}(x, y, t_0) + \int_{t_0}^{t} f(\mathbf{E}(x, y, t')) dt'
+</div>
+<script type="math/tex; mode=display">
+\mathbf{I}(x, y, t) = \mathbf{I}(x, y, t_0) + \int_{t_0}^{t} f(\mathbf{E}(x, y, t')) dt'
+</script>
+</div>
 <p>여기서 <span class="arithmatex"><span class="MathJax_Preview">f(\mathbf{E}(x, y, t'))</span><script type="math/tex">f(\mathbf{E}(x, y, t'))</script></span>는 이벤트의 발생을 필터링하여 반영하는 함수이다. 이 함수는 시간에 따른 이벤트의 연속성을 유지하면서 이벤트의 노이즈를 제거하는 필터링 작업을 수행한다.</p>
 <p>대표적인 필터로는 저주파 필터(Low-pass Filter)나 카르만 필터(Kalman Filter)를 사용할 수 있다. 이 필터들은 이벤트 데이터의 노이즈를 제거하고, 시간적으로 부드러운 영상을 생성하는 데 효과적이다.</p>
 <h4 id="_1">칼만 필터 적용 예시</h4>
@@ -136,16 +161,26 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 <ol>
 <li>예측 단계:</li>
 </ol>
-<p>$$</p>
-<p>\mathbf{\hat{I}}(x, y, t) = \mathbf{I}(x, y, t_{i-1}) + \Delta t \cdot \mathbf{v}(x, y, t_{i-1})</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+\mathbf{\hat{I}}(x, y, t) = \mathbf{I}(x, y, t_{i-1}) + \Delta t \cdot \mathbf{v}(x, y, t_{i-1})
+</div>
+<script type="math/tex; mode=display">
+\mathbf{\hat{I}}(x, y, t) = \mathbf{I}(x, y, t_{i-1}) + \Delta t \cdot \mathbf{v}(x, y, t_{i-1})
+</script>
+</div>
 <p>여기서 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{v}(x, y, t_{i-1})</span><script type="math/tex">\mathbf{v}(x, y, t_{i-1})</script></span>는 이전 시점에서의 밝기 변화 속도이다.</p>
 <ol>
 <li>업데이트 단계:</li>
 </ol>
-<p>$$</p>
-<p>\mathbf{I}(x, y, t_i) = \mathbf{\hat{I}}(x, y, t) + K(t) \cdot \left( \mathbf{E}(x, y, t_i) - \mathbf{\hat{I}}(x, y, t) \right)</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+\mathbf{I}(x, y, t_i) = \mathbf{\hat{I}}(x, y, t) + K(t) \cdot \left( \mathbf{E}(x, y, t_i) - \mathbf{\hat{I}}(x, y, t) \right)
+</div>
+<script type="math/tex; mode=display">
+\mathbf{I}(x, y, t_i) = \mathbf{\hat{I}}(x, y, t) + K(t) \cdot \left( \mathbf{E}(x, y, t_i) - \mathbf{\hat{I}}(x, y, t) \right)
+</script>
+</div>
 <p>여기서 <span class="arithmatex"><span class="MathJax_Preview">K(t)</span><script type="math/tex">K(t)</script></span>는 칼만 이득(Kalman Gain)을 의미하며, 노이즈와 측정값의 신뢰성을 반영하는 매개변수이다.</p>
 <h3 id="6">6. 이벤트 기반 영상 재구성의 응용</h3>
 <p>이벤트 카메라의 데이터를 프레임 기반 영상으로 재구성하는 것은 여러 응용 분야에서 중요하게 사용된다. 예를 들어, 초고속 영상 촬영이나 고동적 환경에서의 물체 추적 등에서 전통적인 프레임 기반 카메라보다 이벤트 카메라가 더 높은 성능을 발휘할 수 있다. 또한, 이벤트 카메라의 데이터는 매우 압축된 형태로 제공되기 때문에 데이터 처리 및 저장 효율성에서도 유리한다.</p>

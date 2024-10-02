@@ -147,15 +147,26 @@ A = \begin{pmatrix}
 <ol>
 <li>행 공간을 구하기 위해 행렬 <span class="arithmatex"><span class="MathJax_Preview">A</span><script type="math/tex">A</script></span>를 행 기본 형태로 변환:</li>
 </ol>
-<p>$$
+<div class="arithmatex">
+<div class="MathJax_Preview">
    \begin{pmatrix}
-   1 &amp; 2 \
+   1 &amp; 2 \\
    2 &amp; 4
    \end{pmatrix} \rightarrow \begin{pmatrix}
-   1 &amp; 2 \
+   1 &amp; 2 \\
    0 &amp; 0
-   \end{pmatrix}</p>
-<p>$$</p>
+   \end{pmatrix}
+</div>
+<script type="math/tex; mode=display">
+   \begin{pmatrix}
+   1 & 2 \\
+   2 & 4
+   \end{pmatrix} \rightarrow \begin{pmatrix}
+   1 & 2 \\
+   0 & 0
+   \end{pmatrix}
+</script>
+</div>
 <p>두 번째 행 벡터는 첫 번째 행 벡터의 스칼라 배수이므로, 행렬의 계수는 1이다.</p>
 <h3 id="2-3x3">예제 2: 3x3 행렬의 계수</h3>
 <p>주어진 행렬 <span class="arithmatex"><span class="MathJax_Preview">B</span><script type="math/tex">B</script></span>가 다음과 같다고 하자:</p>
@@ -178,21 +189,38 @@ B = \begin{pmatrix}
 <ol>
 <li>가우스 소거법을 사용하여 기약 행 간단 형태로 변환:</li>
 </ol>
-<p>$$
+<div class="arithmatex">
+<div class="MathJax_Preview">
    \begin{pmatrix}
-   1 &amp; 2 &amp; 3 \
-   4 &amp; 5 &amp; 6 \
+   1 &amp; 2 &amp; 3 \\
+   4 &amp; 5 &amp; 6 \\
    7 &amp; 8 &amp; 9
    \end{pmatrix} \rightarrow \begin{pmatrix}
-   1 &amp; 2 &amp; 3 \
-   0 &amp; -3 &amp; -6 \
+   1 &amp; 2 &amp; 3 \\
+   0 &amp; -3 &amp; -6 \\
    0 &amp; 0 &amp; 0
    \end{pmatrix} \rightarrow \begin{pmatrix}
-   1 &amp; 2 &amp; 3 \
-   0 &amp; 1 &amp; 2 \
+   1 &amp; 2 &amp; 3 \\
+   0 &amp; 1 &amp; 2 \\
    0 &amp; 0 &amp; 0
-   \end{pmatrix}</p>
-<p>$$</p>
+   \end{pmatrix}
+</div>
+<script type="math/tex; mode=display">
+   \begin{pmatrix}
+   1 & 2 & 3 \\
+   4 & 5 & 6 \\
+   7 & 8 & 9
+   \end{pmatrix} \rightarrow \begin{pmatrix}
+   1 & 2 & 3 \\
+   0 & -3 & -6 \\
+   0 & 0 & 0
+   \end{pmatrix} \rightarrow \begin{pmatrix}
+   1 & 2 & 3 \\
+   0 & 1 & 2 \\
+   0 & 0 & 0
+   \end{pmatrix}
+</script>
+</div>
 <p>두 번째 행에서 <code>-3</code>과 <code>-6</code>을 제거하기 위해 1로 나누고, 첫 번째 행을 조정한다. 최종 행 형태에서 비영 행의 개수는 2이므로, 행렬의 계수는 2이다.</p>
 <h3 id="_5">응용 분야</h3>
 <p>행렬의 계수는 여러 분야에서 응용된다:</p>

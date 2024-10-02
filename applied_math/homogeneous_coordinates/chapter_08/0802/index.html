@@ -102,22 +102,29 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 </div>
 <p>여기서 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{I}</span><script type="math/tex">\mathbf{I}</script></span>는 단위 행렬(identity matrix)이다.</p>
 <ul>
-<li><strong>역행렬의 존재 조건</strong>: 행렬 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{A}</span><script type="math/tex">\mathbf{A}</script></span>가 가역 행렬이기 위한 필요충분 조건은 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{A}</span><script type="math/tex">\mathbf{A}</script></span>의 행렬식(determinant)이 0이 아닌 것이다.
+<li>
+<p><strong>역행렬의 존재 조건</strong>: 행렬 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{A}</span><script type="math/tex">\mathbf{A}</script></span>가 가역 행렬이기 위한 필요충분 조건은 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{A}</span><script type="math/tex">\mathbf{A}</script></span>의 행렬식(determinant)이 0이 아닌 것이다.
 $$
-  \text{det}(\mathbf{A}) \neq 0</li>
-</ul>
-<p>$$</p>
-<ul>
-<li><strong>벡터 공간에서의 의미</strong>: 가역 변환은 벡터 공간의 차원을 보존하며, 한 공간에서 다른 공간으로 변환된 뒤 다시 원래 공간으로 돌아갈 수 있음을 의미한다.</li>
+  \text{det}(\mathbf{A}) \neq 0
+$$</p>
+</li>
+<li>
+<p><strong>벡터 공간에서의 의미</strong>: 가역 변환은 벡터 공간의 차원을 보존하며, 한 공간에서 다른 공간으로 변환된 뒤 다시 원래 공간으로 돌아갈 수 있음을 의미한다.</p>
+</li>
 </ul>
 <h4 id="non-invertible-transformation">비가역 변환 (Non-invertible Transformation)</h4>
 <p>비가역 변환은 행렬 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{A}</span><script type="math/tex">\mathbf{A}</script></span>에 대해 그 역행렬 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{A}^{-1}</span><script type="math/tex">\mathbf{A}^{-1}</script></span>이 존재하지 않는 경우를 의미한다. 이 경우, 다음과 같은 특성을 갖는다:</p>
 <ul>
 <li><strong>행렬식</strong>: 행렬 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{A}</span><script type="math/tex">\mathbf{A}</script></span>가 비가역 행렬(non-invertible matrix)인 경우, 행렬식은 0이다.</li>
 </ul>
-<p>$$
-  \text{det}(\mathbf{A}) = 0</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+  \text{det}(\mathbf{A}) = 0
+</div>
+<script type="math/tex; mode=display">
+  \text{det}(\mathbf{A}) = 0
+</script>
+</div>
 <ul>
 <li><strong>선형 종속성</strong>: 행렬 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{A}</span><script type="math/tex">\mathbf{A}</script></span>의 열벡터(혹은 행벡터)가 선형 종속(linearly dependent)인 경우 비가역 변환이 된다. 이는 행렬 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{A}</span><script type="math/tex">\mathbf{A}</script></span>의 계수가 그 행렬의 차원보다 작다는 것을 의미한다.</li>
 <li><strong>벡터 공간에서의 의미</strong>: 비가역 변환은 벡터 공간의 차원 감소를 의미하며, 이 경우 특정 방향의 정보가 손실되거나 왜곡된다.</li>

@@ -100,9 +100,14 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
    충돌 감지는 물리 엔진의 핵심 기능 중 하나이다. 물체 간의 충돌을 정확하게 감지하고, 이에 따른 반응을 계산하는 것이 중요하다. 주요 알고리즘으로는 AABB (Axis-Aligned Bounding Box), OBB (Oriented Bounding Box) 등이 있다.</p>
 </li>
 </ol>
-<p>$$
-   F = m \mathbf{a}</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+   F = m \mathbf{a}
+</div>
+<script type="math/tex; mode=display">
+   F = m \mathbf{a}
+</script>
+</div>
 <p>여기서 <span class="arithmatex"><span class="MathJax_Preview">F</span><script type="math/tex">F</script></span>는 힘, <span class="arithmatex"><span class="MathJax_Preview">m</span><script type="math/tex">m</script></span>은 질량, <span class="arithmatex"><span class="MathJax_Preview">\mathbf{a}</span><script type="math/tex">\mathbf{a}</script></span>는 가속도이다. 이 공식은 물리 엔진에서 기본적으로 사용되는 뉴턴의 운동 법칙이다.</p>
 <ol>
 <li>
@@ -113,17 +118,27 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 <p>강체 시뮬레이션:</p>
 </li>
 </ol>
-<p>$$
-     \mathbf{I} \frac{d\mathbf{\omega}}{dt} + \mathbf{\omega} \times (\mathbf{I} \mathbf{\omega}) = \mathbf{\tau}</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+     \mathbf{I} \frac{d\mathbf{\omega}}{dt} + \mathbf{\omega} \times (\mathbf{I} \mathbf{\omega}) = \mathbf{\tau}
+</div>
+<script type="math/tex; mode=display">
+     \mathbf{I} \frac{d\mathbf{\omega}}{dt} + \mathbf{\omega} \times (\mathbf{I} \mathbf{\omega}) = \mathbf{\tau}
+</script>
+</div>
 <pre><code> 여기서 $\mathbf{I}$는 관성 텐서, $\mathbf{\omega}$는 각속도, $\mathbf{\tau}$는 토크이다.
 </code></pre>
 <ul>
 <li>유체 시뮬레이션:</li>
 </ul>
-<p>$$
-     \frac{\partial \mathbf{u}}{\partial t} + (\mathbf{u} \cdot \nabla) \mathbf{u} = -\nabla p + \nu \nabla^2 \mathbf{u} + \mathbf{f}</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+     \frac{\partial \mathbf{u}}{\partial t} + (\mathbf{u} \cdot \nabla) \mathbf{u} = -\nabla p + \nu \nabla^2 \mathbf{u} + \mathbf{f}
+</div>
+<script type="math/tex; mode=display">
+     \frac{\partial \mathbf{u}}{\partial t} + (\mathbf{u} \cdot \nabla) \mathbf{u} = -\nabla p + \nu \nabla^2 \mathbf{u} + \mathbf{f}
+</script>
+</div>
 <pre><code> 여기서 $\mathbf{u}$는 유체의 속도, $p$는 압력, $\nu$는 동점성계수, $\mathbf{f}$는 외력이다.
 </code></pre>
 <h4 id="_2">미래의 물리 엔진</h4>
@@ -137,9 +152,14 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
    물리 엔진에 머신 러닝과 인공지능을 통합하는 연구가 활발히 진행되고 있다. 이는 물리 엔진이 더 효율적이고, 상황에 맞게 적응할 수 있도록 한다. 예를 들어, 물체의 운동 패턴을 학습하여 더 자연스러운 움직임을 구현할 수 있다.</p>
 </li>
 </ol>
-<p>$$
-   \mathbf{F} = \mathbf{I} \mathbf{a} + \sum_{i} (\mathbf{w_i} \cdot \mathbf{x_i})</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+   \mathbf{F} = \mathbf{I} \mathbf{a} + \sum_{i} (\mathbf{w_i} \cdot \mathbf{x_i})
+</div>
+<script type="math/tex; mode=display">
+   \mathbf{F} = \mathbf{I} \mathbf{a} + \sum_{i} (\mathbf{w_i} \cdot \mathbf{x_i})
+</script>
+</div>
 <p>여기서 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{w_i}</span><script type="math/tex">\mathbf{w_i}</script></span>와 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{x_i}</span><script type="math/tex">\mathbf{x_i}</script></span>는 학습에 의해 최적화된 가중치 및 특성 벡터이다.</p>
 <ol>
 <li>

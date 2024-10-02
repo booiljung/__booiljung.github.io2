@@ -203,9 +203,14 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 <p>모듈화된 실시간 제어 시스템에서는 각 모듈이 지정된 시간 내에 작업을 완료하는지 분석하는 것이 중요하다. 타이밍 분석은 시스템의 시간적 요구 사항을 충족시키기 위해 필수적이다.</p>
 <h4 id="_8">응답 시간 분석</h4>
 <p>모듈의 응답 시간 <span class="arithmatex"><span class="MathJax_Preview">R</span><script type="math/tex">R</script></span>은 모듈이 작업을 시작한 시점부터 완료할 때까지 걸리는 시간으로 정의된다. 응답 시간 분석은 다음과 같이 진행된다:</p>
-<p>$$</p>
-<p>R = C + I</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+R = C + I
+</div>
+<script type="math/tex; mode=display">
+R = C + I
+</script>
+</div>
 <p>여기서 <span class="arithmatex"><span class="MathJax_Preview">C</span><script type="math/tex">C</script></span>는 모듈의 계산 시간이고, <span class="arithmatex"><span class="MathJax_Preview">I</span><script type="math/tex">I</script></span>는 다른 태스크나 인터럽트에 의해 발생하는 지연 시간이다. 각 모듈의 응답 시간을 분석하여, 시스템의 실시간성을 보장할 수 있다.</p>
 <h4 id="_9">스케줄링 분석</h4>
 <p>모듈화된 시스템에서 각 모듈이 적절하게 스케줄링되었는지 분석하는 것도 중요하다. 이를 위해 다양한 스케줄링 알고리즘을 적용할 수 있으며, 각 알고리즘의 특성을 고려하여 최적의 방법을 선택해야 한다.</p>

@@ -40,11 +40,8 @@
           {title: "\uc2dc\uac04 \uc9c0\uc5f0\uc774 \ud3ec\ud568\ub41c \ub2e8\uc704 \uacc4\ub2e8 \ud568\uc218", url: "#_3", children: [
           ]},
           {title: "\ub2e8\uc704 \uacc4\ub2e8 \ud568\uc218\uc640 \uc2dc\uc2a4\ud15c \uc751\ub2f5", url: "#_4", children: [
-              {title: "\uc2dc\uc2a4\ud15c\uc758 \ub3d9\uc801 \ud2b9\uc131 \ubd84\uc11d", url: "#_5" },
           ]},
-          {title: "\ub77c\ud50c\ub77c\uc2a4 \ubcc0\ud658\uc744 \ud1b5\ud55c \uc2dc\uac04 \uc601\uc5ed \ud574\uc11d", url: "#_6", children: [
-              {title: "\uc2dc\uc2a4\ud15c\uc758 \uc2dc\uac04 \uc751\ub2f5", url: "#_7" },
-              {title: "\ubbf8\ubd84 \ubc29\uc815\uc2dd\uc758 \ub77c\ud50c\ub77c\uc2a4 \ubcc0\ud658", url: "#_8" },
+          {title: "\ub77c\ud50c\ub77c\uc2a4 \ubcc0\ud658\uc744 \ud1b5\ud55c \uc2dc\uac04 \uc601\uc5ed \ud574\uc11d", url: "#_5", children: [
           ]},
         ];
 
@@ -79,7 +76,7 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
         <i class="fa fa-chevron-right" aria-hidden="true"></i>
       </a>
       <a href="../0302/" class="btn btn-xs btn-link">
-        디랙 델타 함수
+        디랙 델타 함수의 라플라스 변환
       </a>
     </div>
     
@@ -208,8 +205,8 @@ u(t-a) =
 </div>
 <p>따라서, 시간 지연이 포함된 단위 계단 함수 <span class="arithmatex"><span class="MathJax_Preview">u(t-a)</span><script type="math/tex">u(t-a)</script></span>의 라플라스 변환은 <span class="arithmatex"><span class="MathJax_Preview">\frac{e^{-sa}}{s}</span><script type="math/tex">\frac{e^{-sa}}{s}</script></span>로 나타난다. 여기서 <span class="arithmatex"><span class="MathJax_Preview">a</span><script type="math/tex">a</script></span>는 시간 지연을 나타내며, 함수가 시간 <span class="arithmatex"><span class="MathJax_Preview">t = a</span><script type="math/tex">t = a</script></span>에서 1로 변하는 시점을 의미한다.</p>
 <h3 id="_4">단위 계단 함수와 시스템 응답</h3>
-<p>단위 계단 함수는 시스템의 성능을 분석하는 데 중요한 도구로 사용되며, 특히 <strong>단위 계단 응답</strong>을 계산할 때 널리 사용된다. 단위 계단 입력은 시스템에 갑작스러운 일정한 입력이 가해졌을 때의 시스템 반응을 모델링한다. 제어 이론에서는 단위 계단 입력을 시스템에 가하고, 시간에 따른 시스템의 출력을 분석하여 그 시스템의 동적 특성을 평가한다.</p>
-<p>단위 계단 응답을 구하기 위해서는 먼저 시스템의 <strong>전달 함수</strong>를 알아야 한다. 전달 함수 <span class="arithmatex"><span class="MathJax_Preview">H(s)</span><script type="math/tex">H(s)</script></span>는 시스템의 입력과 출력 사이의 관계를 주파수 영역에서 나타내는 함수이다. 단위 계단 입력의 라플라스 변환이 <span class="arithmatex"><span class="MathJax_Preview">\frac{1}{s}</span><script type="math/tex">\frac{1}{s}</script></span>이므로, 시스템의 단위 계단 응답 <span class="arithmatex"><span class="MathJax_Preview">Y(s)</span><script type="math/tex">Y(s)</script></span>는 다음과 같이 구할 수 있다.</p>
+<p>단위 계단 함수는 제어 시스템과 신호 처리에서 중요한 역할을 한다. 특히, 시스템의 단위 계단 응답 (step response)을 분석하는 데 사용된다. 시스템에 단위 계단 입력이 주어졌을 때, 시스템의 시간에 따른 출력은 단위 계단 응답으로 불린다. 이를 통해 시스템의 안정성, 시간 응답 특성, 과도 응답을 분석할 수 있다.</p>
+<p>라플라스 변환을 통해 복잡한 미분 방정식으로 표현된 시스템을 쉽게 분석할 수 있으며, 시스템의 전달 함수 <span class="arithmatex"><span class="MathJax_Preview">H(s)</span><script type="math/tex">H(s)</script></span>를 이용하여 단위 계단 응답을 구할 수 있다.</p>
 <div class="arithmatex">
 <div class="MathJax_Preview">
 Y(s) = H(s) \cdot \frac{1}{s}
@@ -218,65 +215,10 @@ Y(s) = H(s) \cdot \frac{1}{s}
 Y(s) = H(s) \cdot \frac{1}{s}
 </script>
 </div>
-<p>이 결과는 주파수 영역에서의 시스템의 출력으로, 역 라플라스 변환을 통해 다시 시간 영역으로 변환할 수 있다. 이를 통해 시스템이 단위 계단 입력에 어떻게 응답하는지 시간 영역에서 확인할 수 있다.</p>
-<h4 id="_5">시스템의 동적 특성 분석</h4>
-<p>시스템의 단위 계단 응답을 통해 다음과 같은 중요한 동적 특성을 평가할 수 있다.</p>
-<ol>
-<li>
-<p><strong>과도 응답</strong>: 시스템이 새로운 입력에 반응하여 최종 값에 도달하기 전까지의 출력 변화이다. 과도 응답은 시스템의 안정성과 시간에 따른 변화를 설명한다.</p>
-</li>
-<li>
-<p><strong>안정성</strong>: 시스템이 특정 입력에 대해 시간이 지남에 따라 안정적인 상태로 수렴하는지를 판단할 수 있다. 안정적인 시스템은 단위 계단 응답이 일정한 최종 값으로 수렴한다.</p>
-</li>
-<li>
-<p><strong>응답 시간</strong>: 단위 계단 응답에서 시스템이 최종 값의 90%에 도달하는 데 걸리는 시간을 통해 시스템의 응답 속도를 분석할 수 있다. 빠른 응답 시간은 시스템이 입력 변화에 빠르게 적응함을 나타낸다.</p>
-</li>
-</ol>
-<p>단위 계단 함수는 시스템의 성능을 전반적으로 분석하는 데 필수적인 역할을 하며, 이를 통해 시스템의 과도 응답과 정상 상태에서의 특성을 모두 평가할 수 있다.</p>
-<h3 id="_6">라플라스 변환을 통한 시간 영역 해석</h3>
-<p>라플라스 변환은 시간 영역에서 표현된 함수나 시스템을 주파수 영역으로 변환하여 분석할 수 있게 해주는 중요한 도구이다. 특히 복잡한 미분 방정식으로 표현된 시스템을 간단하게 풀 수 있어, 제어 시스템, 신호 처리, 기계 시스템 해석 등에 널리 사용된다. </p>
-<p>시간 영역에서의 신호는 종종 복잡한 미분 방정식으로 표현되는데, 라플라스 변환을 사용하면 이를 대수 방정식으로 변환할 수 있어 계산이 단순해진다. 이를 통해 우리는 주파수 영역에서의 해석을 바탕으로 시간 영역에서의 시스템 응답을 쉽게 구할 수 있다.</p>
-<h4 id="_7">시스템의 시간 응답</h4>
-<p>시스템에 특정 입력을 가했을 때 그에 따른 시간에 따른 출력은 시스템의 시간 응답이라 한다. 라플라스 변환을 이용하면, 주어진 입력에 대한 시스템의 응답을 간단히 구할 수 있다. 예를 들어, 시스템에 단위 계단 입력 <span class="arithmatex"><span class="MathJax_Preview">u(t)</span><script type="math/tex">u(t)</script></span>를 가했을 때, 주어진 시스템의 전달 함수 <span class="arithmatex"><span class="MathJax_Preview">H(s)</span><script type="math/tex">H(s)</script></span>를 이용하여 출력 <span class="arithmatex"><span class="MathJax_Preview">Y(s)</span><script type="math/tex">Y(s)</script></span>는 다음과 같이 구할 수 있다.</p>
-<div class="arithmatex">
-<div class="MathJax_Preview">
-Y(s) = H(s) \cdot \mathcal{L}\{u(t)\} = H(s) \cdot \frac{1}{s}
-</div>
-<script type="math/tex; mode=display">
-Y(s) = H(s) \cdot \mathcal{L}\{u(t)\} = H(s) \cdot \frac{1}{s}
-</script>
-</div>
-<p>이를 시간 영역으로 변환하기 위해서는 역 라플라스 변환을 적용해야 한다. 주파수 영역에서 <span class="arithmatex"><span class="MathJax_Preview">Y(s)</span><script type="math/tex">Y(s)</script></span>로 표현된 시스템의 출력을 시간 영역으로 변환하면 <span class="arithmatex"><span class="MathJax_Preview">y(t)</span><script type="math/tex">y(t)</script></span>로 나타난다. 이 과정에서, 시스템의 주파수 응답이 시간 영역에서 어떻게 변화하는지 알 수 있으며, 시스템의 과도 응답이나 정상 상태에서의 동작을 평가할 수 있다.</p>
-<h4 id="_8">미분 방정식의 라플라스 변환</h4>
-<p>라플라스 변환은 특히 미분 방정식의 해를 구하는 데 유용하다. 주어진 미분 방정식을 라플라스 변환을 통해 주파수 영역에서의 대수 방정식으로 바꾸고, 이를 풀어 시간 영역으로 다시 변환하여 해를 구할 수 있다. 예를 들어, 다음과 같은 1차 미분 방정식이 있다고 가정해 봅시다.</p>
-<div class="arithmatex">
-<div class="MathJax_Preview">
-\frac{dy(t)}{dt} + ay(t) = f(t)
-</div>
-<script type="math/tex; mode=display">
-\frac{dy(t)}{dt} + ay(t) = f(t)
-</script>
-</div>
-<p>라플라스 변환을 적용하면 미분은 다음과 같이 변환된다.</p>
-<div class="arithmatex">
-<div class="MathJax_Preview">
-\mathcal{L}\left\{ \frac{dy(t)}{dt} \right\} = sY(s) - y(0)
-</div>
-<script type="math/tex; mode=display">
-\mathcal{L}\left\{ \frac{dy(t)}{dt} \right\} = sY(s) - y(0)
-</script>
-</div>
-<p>따라서 위의 미분 방정식은 라플라스 변환을 통해 다음과 같은 대수 방정식으로 변환된다.</p>
-<div class="arithmatex">
-<div class="MathJax_Preview">
-sY(s) - y(0) + aY(s) = F(s)
-</div>
-<script type="math/tex; mode=display">
-sY(s) - y(0) + aY(s) = F(s)
-</script>
-</div>
-<p>여기서 <span class="arithmatex"><span class="MathJax_Preview">F(s)</span><script type="math/tex">F(s)</script></span>는 <span class="arithmatex"><span class="MathJax_Preview">f(t)</span><script type="math/tex">f(t)</script></span>의 라플라스 변환이다. 이 방정식을 풀어 <span class="arithmatex"><span class="MathJax_Preview">Y(s)</span><script type="math/tex">Y(s)</script></span>를 구한 후, 역 라플라스 변환을 통해 시간 영역에서의 해 <span class="arithmatex"><span class="MathJax_Preview">y(t)</span><script type="math/tex">y(t)</script></span>를 구할 수 있다.</p>
-<p>라플라스 변환을 사용하면 복잡한 미분 방정식을 다루는 데 필요한 계산이 상당히 단순화되므로, 시스템의 시간 응답을 빠르고 정확하게 분석할 수 있다.</p>
+<p>여기서 <span class="arithmatex"><span class="MathJax_Preview">Y(s)</span><script type="math/tex">Y(s)</script></span>는 시스템의 출력의 라플라스 변환이고, <span class="arithmatex"><span class="MathJax_Preview">H(s)</span><script type="math/tex">H(s)</script></span>는 시스템의 전달 함수이다. 단위 계단 함수의 라플라스 변환을 이용하여, 시스템의 응답을 직접 계산할 수 있다.</p>
+<h3 id="_5">라플라스 변환을 통한 시간 영역 해석</h3>
+<p>단위 계단 함수와 라플라스 변환을 이용하면, 시스템의 시간 응답을 주파수 영역에서 분석한 후 시간 영역으로 변환할 수 있다. 이를 통해 시스템이 특정 입력에 대해 어떻게 응답하는지 예측할 수 있다. 시스템의 안정성이나 과도 상태 등을 분석할 때도 이러한 라플라스 변환과 단위 계단 함수가 유용하다.</p>
+<p>단위 계단 입력은 흔히 실제 물리적 시스템에서 초기 조건을 설정하거나 일정한 입력을 가하는 상황을 모델링하는 데 쓰이기 때문에, 다양한 분야에서 폭넓게 사용된다.</p>
 
   <br>
     
@@ -294,7 +236,7 @@ sY(s) - y(0) + aY(s) = F(s)
         <i class="fa fa-chevron-right" aria-hidden="true"></i>
       </a>
       <a href="../0302/" class="btn btn-xs btn-link">
-        디랙 델타 함수
+        디랙 델타 함수의 라플라스 변환
       </a>
     </div>
     

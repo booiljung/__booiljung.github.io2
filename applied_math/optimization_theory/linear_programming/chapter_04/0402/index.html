@@ -104,12 +104,22 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 
     <h3 id="1-standard-form">1. 선형계획법의 표준형(Standard Form)</h3>
 <p>선형계획 문제는 다음과 같은 형태로 표현될 수 있다.</p>
-<p>$$</p>
-<p>\text{maximize } \mathbf{c}^\top \mathbf{x}</p>
-<p>$$</p>
-<p>$$</p>
-<p>\text{subject to } \mathbf{A} \mathbf{x} = \mathbf{b}, \quad \mathbf{x} \geq 0</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+\text{maximize } \mathbf{c}^\top \mathbf{x}
+</div>
+<script type="math/tex; mode=display">
+\text{maximize } \mathbf{c}^\top \mathbf{x}
+</script>
+</div>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+\text{subject to } \mathbf{A} \mathbf{x} = \mathbf{b}, \quad \mathbf{x} \geq 0
+</div>
+<script type="math/tex; mode=display">
+\text{subject to } \mathbf{A} \mathbf{x} = \mathbf{b}, \quad \mathbf{x} \geq 0
+</script>
+</div>
 <p>여기서,
 - <span class="arithmatex"><span class="MathJax_Preview">\mathbf{c} \in \mathbb{R}^n</span><script type="math/tex">\mathbf{c} \in \mathbb{R}^n</script></span> : 비용 벡터 (objective function의 계수)
 - <span class="arithmatex"><span class="MathJax_Preview">\mathbf{x} \in \mathbb{R}^n</span><script type="math/tex">\mathbf{x} \in \mathbb{R}^n</script></span> : 결정 변수 벡터
@@ -119,18 +129,28 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 <h3 id="2-basic-solution">2. 기본 해(Basic Solution)</h3>
 <p>단체법의 핵심 아이디어는 선형계획 문제에서 가능한 해 중에서 기본 해(basic solution)를 탐색하는 것이다. 이를 위해서는 행렬 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{A}</span><script type="math/tex">\mathbf{A}</script></span>에서 <span class="arithmatex"><span class="MathJax_Preview">m</span><script type="math/tex">m</script></span>개의 선형 독립인 열을 선택하여 기저 행렬(basis matrix) <span class="arithmatex"><span class="MathJax_Preview">\mathbf{B}</span><script type="math/tex">\mathbf{B}</script></span>를 형성한다.</p>
 <p>기본 해는 다음과 같이 정의된다:</p>
-<p>$$</p>
-<p>\mathbf{x} = \begin{pmatrix} \mathbf{x}_B \ \mathbf{x}_N \end{pmatrix}</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+\mathbf{x} = \begin{pmatrix} \mathbf{x}_B \\ \mathbf{x}_N \end{pmatrix}
+</div>
+<script type="math/tex; mode=display">
+\mathbf{x} = \begin{pmatrix} \mathbf{x}_B \\ \mathbf{x}_N \end{pmatrix}
+</script>
+</div>
 <p>여기서,
 - <span class="arithmatex"><span class="MathJax_Preview">\mathbf{x}_B \in \mathbb{R}^m</span><script type="math/tex">\mathbf{x}_B \in \mathbb{R}^m</script></span> : 기저 변수 (basis variables)
 - <span class="arithmatex"><span class="MathJax_Preview">\mathbf{x}_N \in \mathbb{R}^{n-m}</span><script type="math/tex">\mathbf{x}_N \in \mathbb{R}^{n-m}</script></span> : 비기저 변수 (non-basis variables)</p>
 <p>기저 변수 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{x}_B</span><script type="math/tex">\mathbf{x}_B</script></span>는 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{B} \mathbf{x}_B = \mathbf{b}</span><script type="math/tex">\mathbf{B} \mathbf{x}_B = \mathbf{b}</script></span>를 만족하며, 비기저 변수 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{x}_N = 0</span><script type="math/tex">\mathbf{x}_N = 0</script></span>로 설정된다.</p>
 <h3 id="3">3. 목적 함수의 기저 표현</h3>
 <p>목적 함수를 기저 변수를 이용해 다시 표현할 수 있다. 이를 위해, 전체 비용 벡터 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{c}</span><script type="math/tex">\mathbf{c}</script></span>를 기저 변수와 비기저 변수로 나누어 생각한다:</p>
-<p>$$</p>
-<p>\mathbf{c}^\top \mathbf{x} = \mathbf{c}_B^\top \mathbf{x}_B + \mathbf{c}_N^\top \mathbf{x}_N</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+\mathbf{c}^\top \mathbf{x} = \mathbf{c}_B^\top \mathbf{x}_B + \mathbf{c}_N^\top \mathbf{x}_N
+</div>
+<script type="math/tex; mode=display">
+\mathbf{c}^\top \mathbf{x} = \mathbf{c}_B^\top \mathbf{x}_B + \mathbf{c}_N^\top \mathbf{x}_N
+</script>
+</div>
 <p>비기저 변수가 0으로 설정되므로, 목적 함수는 단순히 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{c}_B^\top \mathbf{x}_B</span><script type="math/tex">\mathbf{c}_B^\top \mathbf{x}_B</script></span>로 축소된다. 따라서, 단체법은 기본적으로 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{x}_B</span><script type="math/tex">\mathbf{x}_B</script></span>에 의한 목적 함수의 변화를 추적한다.</p>
 <h3 id="4">4. 단체법의 단계</h3>
 <p>단체법의 주요 단계는 다음과 같다:
@@ -140,9 +160,14 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 <h3 id="5">5. 피봇팅 과정</h3>
 <p>단체법에서 피봇팅은 기저 변수를 교체하는 과정이다. 새로운 기저 변수는 목적 함수를 개선하는 방향으로 선택되며, 이를 위해 다음과 같은 계산이 필요하다.</p>
 <p>기저 해에서 목적 함수의 변화율을 계산하기 위해 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{A}_N</span><script type="math/tex">\mathbf{A}_N</script></span>과 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{A}_B^{-1}</span><script type="math/tex">\mathbf{A}_B^{-1}</script></span>를 이용하여 새로운 목적 함수 계수를 구할 수 있다:</p>
-<p>$$</p>
-<p>\mathbf{c}_N^\prime = \mathbf{c}_N - \mathbf{A}_N^\top \mathbf{A}_B^{-1} \mathbf{c}_B</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+\mathbf{c}_N^\prime = \mathbf{c}_N - \mathbf{A}_N^\top \mathbf{A}_B^{-1} \mathbf{c}_B
+</div>
+<script type="math/tex; mode=display">
+\mathbf{c}_N^\prime = \mathbf{c}_N - \mathbf{A}_N^\top \mathbf{A}_B^{-1} \mathbf{c}_B
+</script>
+</div>
 <p>여기서, <span class="arithmatex"><span class="MathJax_Preview">\mathbf{c}_N^\prime</span><script type="math/tex">\mathbf{c}_N^\prime</script></span>는 비기저 변수에 대한 새로운 목적 함수 계수이다. 이 계수들이 양수라면 목적 함수를 개선할 수 있다.</p>
 <h3 id="6-pivoting-rule">6. 피봇팅 규칙(Pivoting Rule)</h3>
 <p>비기저 변수 중에서 목적 함수를 개선할 수 있는 변수를 선택하는 과정에서, 다음과 같은 조건을 고려해야 한다:</p>
@@ -154,15 +179,25 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 <p><strong>나가는 변수(Outgoing Variable)</strong>: 들어오는 변수에 대응하는 기저 변수 중에서, 새로운 제약을 만족하기 위해 최소값 조건을 만족하는 변수를 나가는 변수로 선택한다. 이를 <strong>비율 테스트(Ratio Test)</strong>라고 한다. 나가는 변수는 다음과 같이 계산된다:</p>
 </li>
 </ul>
-<p>$$</p>
-<p>\theta = \min \left{ \frac{\mathbf{x}_B}{\mathbf{A}_B^{-1} \mathbf{A}_N} \right}</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+\theta = \min \left\{ \frac{\mathbf{x}_B}{\mathbf{A}_B^{-1} \mathbf{A}_N} \right\}
+</div>
+<script type="math/tex; mode=display">
+\theta = \min \left\{ \frac{\mathbf{x}_B}{\mathbf{A}_B^{-1} \mathbf{A}_N} \right\}
+</script>
+</div>
 <p>여기서, <span class="arithmatex"><span class="MathJax_Preview">\theta</span><script type="math/tex">\theta</script></span>는 나가는 변수에 해당하는 최소 비율이다. 이 과정에서 기저 행렬 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{B}</span><script type="math/tex">\mathbf{B}</script></span>를 갱신한다.</p>
 <h3 id="7">7. 갱신된 기저 해</h3>
 <p>피봇팅이 완료되면, 새로운 기저 해는 다음과 같이 계산된다:</p>
-<p>$$</p>
-<p>\mathbf{x}_B^\prime = \mathbf{A}_B^{-1} \mathbf{b}</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+\mathbf{x}_B^\prime = \mathbf{A}_B^{-1} \mathbf{b}
+</div>
+<script type="math/tex; mode=display">
+\mathbf{x}_B^\prime = \mathbf{A}_B^{-1} \mathbf{b}
+</script>
+</div>
 <p>비기저 변수는 여전히 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{x}_N = 0</span><script type="math/tex">\mathbf{x}_N = 0</script></span>로 유지된다. 새로운 기저 행렬 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{B}</span><script type="math/tex">\mathbf{B}</script></span>와 기저 변수에 대한 정보를 이용하여 해를 갱신하고, 목적 함수를 계산한다.</p>
 <h3 id="8">8. 단체법의 종료 조건</h3>
 <p>단체법은 다음 두 가지 조건 중 하나가 충족될 때 종료된다:</p>

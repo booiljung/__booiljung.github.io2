@@ -93,33 +93,58 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 <h2 id="_2">정운동학</h2>
 <p>정운동학(forward kinematics)은 로봇의 각 조인트의 위치와 회전각을 기반으로 로봇 암의 말단부(end-effector)의 위치와 자세를 계산하는 과정이다. 이를 수학적으로 표현하면 다음과 같다.</p>
 <p>로봇 암의 각 조인트에 대한 회전각을 나타내는 벡터를 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{q}</span><script type="math/tex">\mathbf{q}</script></span>라고 할 때, <span class="arithmatex"><span class="MathJax_Preview">\mathbf{q}</span><script type="math/tex">\mathbf{q}</script></span>는 <span class="arithmatex"><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span>개의 조인트로 구성된 로봇 암에서 다음과 같이 표현된다.</p>
-<p>$$</p>
-<p>\mathbf{q} = \begin{bmatrix}
-q_1 \
-q_2 \
-\vdots \
+<div class="arithmatex">
+<div class="MathJax_Preview">
+\mathbf{q} = \begin{bmatrix}
+q_1 \\
+q_2 \\
+\vdots \\
 q_n
-\end{bmatrix}</p>
-<p>$$</p>
+\end{bmatrix}
+</div>
+<script type="math/tex; mode=display">
+\mathbf{q} = \begin{bmatrix}
+q_1 \\
+q_2 \\
+\vdots \\
+q_n
+\end{bmatrix}
+</script>
+</div>
 <p>각 조인트의 회전은 로봇 암의 링크 길이와 조합되어 말단부의 위치를 결정한다. 이를 일반적으로 다음과 같이 표현할 수 있다.</p>
-<p>$$</p>
-<p>\mathbf{p}_{ee} = f(\mathbf{q})</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+\mathbf{p}_{ee} = f(\mathbf{q})
+</div>
+<script type="math/tex; mode=display">
+\mathbf{p}_{ee} = f(\mathbf{q})
+</script>
+</div>
 <p>여기서, <span class="arithmatex"><span class="MathJax_Preview">\mathbf{p}_{ee}</span><script type="math/tex">\mathbf{p}_{ee}</script></span>는 로봇 암 말단부의 위치 벡터이며, <span class="arithmatex"><span class="MathJax_Preview">f(\mathbf{q})</span><script type="math/tex">f(\mathbf{q})</script></span>는 각 조인트 변수를 입력으로 받아 말단부 위치를 반환하는 함수이다.</p>
 <h2 id="_3">역운동학</h2>
 <p>역운동학(inverse kinematics)은 말단부의 목표 위치를 주어졌을 때, 해당 위치에 도달하기 위해 각 조인트가 가져야 할 회전각을 계산하는 과정이다. 이는 주로 비선형 방정식을 풀어야 하므로, 수치 해법이나 근사 해법을 많이 사용한다.</p>
 <p>말단부의 목표 위치를 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{p}_{goal}</span><script type="math/tex">\mathbf{p}_{goal}</script></span>이라 할 때, 이를 만족하는 조인트 각도를 찾는 문제는 다음과 같이 정의된다.</p>
-<p>$$</p>
-<p>f(\mathbf{q}) = \mathbf{p}_{goal}</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+f(\mathbf{q}) = \mathbf{p}_{goal}
+</div>
+<script type="math/tex; mode=display">
+f(\mathbf{q}) = \mathbf{p}_{goal}
+</script>
+</div>
 <p>이를 풀어서 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{q}</span><script type="math/tex">\mathbf{q}</script></span>를 구하는 것이 역운동학의 목표이다. 수치적으로는 뉴턴-랩슨 방법이나 그레디언트 기반 방법이 많이 사용된다. </p>
 <h2 id="_4">제어 알고리즘</h2>
 <p>로봇 암의 제어는 일반적으로 PID 제어, 경로 계획(Path Planning), 그리고 힘 제어(Force Control)로 나뉜다. 각각의 제어 방식에 대한 기본적인 설명을 아래에서 다룬다.</p>
 <h3 id="pid">PID 제어</h3>
 <p>PID 제어는 위치 제어에서 가장 기본적인 제어 방식이다. 각 조인트의 목표 위치에 도달하기 위해서 사용되며, 목표 각도와 현재 각도 간의 오차를 최소화하는 방식으로 동작한다. PID 제어의 수식은 다음과 같다.</p>
-<p>$$</p>
-<p>u(t) = K_p e(t) + K_i \int_0^t e(\tau) d\tau + K_d \frac{de(t)}{dt}</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+u(t) = K_p e(t) + K_i \int_0^t e(\tau) d\tau + K_d \frac{de(t)}{dt}
+</div>
+<script type="math/tex; mode=display">
+u(t) = K_p e(t) + K_i \int_0^t e(\tau) d\tau + K_d \frac{de(t)}{dt}
+</script>
+</div>
 <p>여기서, 
 - <span class="arithmatex"><span class="MathJax_Preview">u(t)</span><script type="math/tex">u(t)</script></span>는 제어 입력,
 - <span class="arithmatex"><span class="MathJax_Preview">e(t)</span><script type="math/tex">e(t)</script></span>는 목표값과 현재값의 오차,
@@ -132,9 +157,14 @@ q_n
 - PRM (Probabilistic Roadmap)</p>
 <h3 id="_6">힘 제어</h3>
 <p>로봇 암이 특정한 힘을 유지하면서 작업을 수행해야 하는 경우, 힘 제어가 사용된다. 이는 로봇의 말단부가 물체와 접촉할 때 중요한 역할을 하며, 작업을 안전하고 정확하게 수행할 수 있게 한다. 힘 제어의 기본적인 수식은 다음과 같이 표현된다.</p>
-<p>$$</p>
-<p>\mathbf{F} = \mathbf{K} (\mathbf{p}<em>{desired} - \mathbf{p}</em>{current}) + \mathbf{D} (\dot{\mathbf{p}}<em>{desired} - \dot{\mathbf{p}}</em>{current})</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+\mathbf{F} = \mathbf{K} (\mathbf{p}_{desired} - \mathbf{p}_{current}) + \mathbf{D} (\dot{\mathbf{p}}_{desired} - \dot{\mathbf{p}}_{current})
+</div>
+<script type="math/tex; mode=display">
+\mathbf{F} = \mathbf{K} (\mathbf{p}_{desired} - \mathbf{p}_{current}) + \mathbf{D} (\dot{\mathbf{p}}_{desired} - \dot{\mathbf{p}}_{current})
+</script>
+</div>
 <p>여기서,
 - <span class="arithmatex"><span class="MathJax_Preview">\mathbf{F}</span><script type="math/tex">\mathbf{F}</script></span>는 제어하고자 하는 힘,
 - <span class="arithmatex"><span class="MathJax_Preview">\mathbf{K}</span><script type="math/tex">\mathbf{K}</script></span>는 스프링 상수(강성),
@@ -142,9 +172,14 @@ q_n
 <p>로봇 암의 말단부에서 측정된 힘에 따라 제어 입력을 조정하여 원하는 힘을 유지할 수 있다.</p>
 <h3 id="_7">동적 모델</h3>
 <p>로봇 암의 동적 모델은 로봇의 조인트에 대한 힘과 토크, 그리고 이로 인해 발생하는 조인트의 각속도와 각가속도 간의 관계를 설명한다. 로봇 암의 동적 모델은 다음과 같은 일반적인 수식으로 표현된다.</p>
-<p>$$</p>
-<p>\mathbf{M}(\mathbf{q}) \ddot{\mathbf{q}} + \mathbf{C}(\mathbf{q}, \dot{\mathbf{q}}) \dot{\mathbf{q}} + \mathbf{G}(\mathbf{q}) = \mathbf{\tau}</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+\mathbf{M}(\mathbf{q}) \ddot{\mathbf{q}} + \mathbf{C}(\mathbf{q}, \dot{\mathbf{q}}) \dot{\mathbf{q}} + \mathbf{G}(\mathbf{q}) = \mathbf{\tau}
+</div>
+<script type="math/tex; mode=display">
+\mathbf{M}(\mathbf{q}) \ddot{\mathbf{q}} + \mathbf{C}(\mathbf{q}, \dot{\mathbf{q}}) \dot{\mathbf{q}} + \mathbf{G}(\mathbf{q}) = \mathbf{\tau}
+</script>
+</div>
 <p>여기서,
 - <span class="arithmatex"><span class="MathJax_Preview">\mathbf{M}(\mathbf{q})</span><script type="math/tex">\mathbf{M}(\mathbf{q})</script></span>는 조인트 위치 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{q}</span><script type="math/tex">\mathbf{q}</script></span>에 대한 관성 행렬,
 - <span class="arithmatex"><span class="MathJax_Preview">\mathbf{C}(\mathbf{q}, \dot{\mathbf{q}})</span><script type="math/tex">\mathbf{C}(\mathbf{q}, \dot{\mathbf{q}})</script></span>는 코리올리 항 및 원심력 항을 포함하는 행렬,
@@ -153,32 +188,57 @@ q_n
 <p>이 모델은 각 조인트의 움직임을 계산하는 데 필수적인 요소로, 제어 알고리즘이 로봇 암의 동적 특성을 반영하도록 돕는다.</p>
 <h3 id="_8">관성 행렬</h3>
 <p>관성 행렬 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{M}(\mathbf{q})</span><script type="math/tex">\mathbf{M}(\mathbf{q})</script></span>는 로봇의 각 링크와 조인트의 질량 분포에 따라 결정된다. 이는 각 조인트가 특정 가속도를 가지기 위해 필요한 토크와 밀접한 관계가 있다. 일반적으로 관성 행렬은 다음과 같은 형태를 갖는다.</p>
-<p>$$</p>
-<p>\mathbf{M}(\mathbf{q}) = \begin{bmatrix}
-m_{11}(\mathbf{q}) &amp; m_{12}(\mathbf{q}) &amp; \cdots &amp; m_{1n}(\mathbf{q}) \
-m_{21}(\mathbf{q}) &amp; m_{22}(\mathbf{q}) &amp; \cdots &amp; m_{2n}(\mathbf{q}) \
-\vdots &amp; \vdots &amp; \ddots &amp; \vdots \
+<div class="arithmatex">
+<div class="MathJax_Preview">
+\mathbf{M}(\mathbf{q}) = \begin{bmatrix}
+m_{11}(\mathbf{q}) &amp; m_{12}(\mathbf{q}) &amp; \cdots &amp; m_{1n}(\mathbf{q}) \\
+m_{21}(\mathbf{q}) &amp; m_{22}(\mathbf{q}) &amp; \cdots &amp; m_{2n}(\mathbf{q}) \\
+\vdots &amp; \vdots &amp; \ddots &amp; \vdots \\
 m_{n1}(\mathbf{q}) &amp; m_{n2}(\mathbf{q}) &amp; \cdots &amp; m_{nn}(\mathbf{q})
-\end{bmatrix}</p>
-<p>$$</p>
+\end{bmatrix}
+</div>
+<script type="math/tex; mode=display">
+\mathbf{M}(\mathbf{q}) = \begin{bmatrix}
+m_{11}(\mathbf{q}) & m_{12}(\mathbf{q}) & \cdots & m_{1n}(\mathbf{q}) \\
+m_{21}(\mathbf{q}) & m_{22}(\mathbf{q}) & \cdots & m_{2n}(\mathbf{q}) \\
+\vdots & \vdots & \ddots & \vdots \\
+m_{n1}(\mathbf{q}) & m_{n2}(\mathbf{q}) & \cdots & m_{nn}(\mathbf{q})
+\end{bmatrix}
+</script>
+</div>
 <p>이 행렬은 로봇 암의 각 조인트가 다른 조인트에 미치는 영향을 고려한 복잡한 형태를 가지고 있으며, 이를 정확하게 계산하는 것이 로봇의 동적 제어에 중요하다.</p>
 <h3 id="_9">중력 항</h3>
 <p>중력 항 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{G}(\mathbf{q})</span><script type="math/tex">\mathbf{G}(\mathbf{q})</script></span>는 각 조인트에 가해지는 중력으로 인해 발생하는 토크를 나타낸다. 이는 로봇 암이 수직 방향으로 서 있을 때 각 조인트가 중력을 극복하여 움직이기 위해 필요한 힘을 제공한다. 중력 항은 다음과 같이 표현될 수 있다.</p>
-<p>$$</p>
-<p>\mathbf{G}(\mathbf{q}) = \begin{bmatrix}
-g_1(\mathbf{q}) \
-g_2(\mathbf{q}) \
-\vdots \
+<div class="arithmatex">
+<div class="MathJax_Preview">
+\mathbf{G}(\mathbf{q}) = \begin{bmatrix}
+g_1(\mathbf{q}) \\
+g_2(\mathbf{q}) \\
+\vdots \\
 g_n(\mathbf{q})
-\end{bmatrix}</p>
-<p>$$</p>
+\end{bmatrix}
+</div>
+<script type="math/tex; mode=display">
+\mathbf{G}(\mathbf{q}) = \begin{bmatrix}
+g_1(\mathbf{q}) \\
+g_2(\mathbf{q}) \\
+\vdots \\
+g_n(\mathbf{q})
+\end{bmatrix}
+</script>
+</div>
 <p>여기서 각 <span class="arithmatex"><span class="MathJax_Preview">g_i(\mathbf{q})</span><script type="math/tex">g_i(\mathbf{q})</script></span>는 <span class="arithmatex"><span class="MathJax_Preview">i</span><script type="math/tex">i</script></span>번째 조인트에서 발생하는 중력에 의한 토크를 나타낸다.</p>
 <h3 id="_10">제어 알고리즘과 동적 모델의 통합</h3>
 <p>동적 모델을 기반으로 한 제어 알고리즘은 로봇 암이 원하는 궤적을 따라 정확하게 움직일 수 있도록 도움을 준다. 특히 모델 기반 제어(MBC, Model-Based Control)는 관성, 코리올리, 중력 항을 고려하여 각 조인트에 필요한 토크를 계산한다. 이 방법은 비선형적인 로봇 동작을 정확하게 제어하는 데 매우 유용하다.</p>
 <p>모델 기반 제어의 일반적인 수식은 다음과 같다.</p>
-<p>$$</p>
-<p>\mathbf{\tau} = \mathbf{M}(\mathbf{q}) \mathbf{a}_{desired} + \mathbf{C}(\mathbf{q}, \dot{\mathbf{q}}) \dot{\mathbf{q}} + \mathbf{G}(\mathbf{q})</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+\mathbf{\tau} = \mathbf{M}(\mathbf{q}) \mathbf{a}_{desired} + \mathbf{C}(\mathbf{q}, \dot{\mathbf{q}}) \dot{\mathbf{q}} + \mathbf{G}(\mathbf{q})
+</div>
+<script type="math/tex; mode=display">
+\mathbf{\tau} = \mathbf{M}(\mathbf{q}) \mathbf{a}_{desired} + \mathbf{C}(\mathbf{q}, \dot{\mathbf{q}}) \dot{\mathbf{q}} + \mathbf{G}(\mathbf{q})
+</script>
+</div>
 <p>여기서,
 - <span class="arithmatex"><span class="MathJax_Preview">\mathbf{a}_{desired}</span><script type="math/tex">\mathbf{a}_{desired}</script></span>는 목표 가속도이다. 이는 제어 알고리즘을 통해 결정되며, 로봇 암이 목표 궤적을 따라가도록 유도한다.</p>
 <h2 id="ros2">ROS2에서의 로봇 암 제어 구현</h2>

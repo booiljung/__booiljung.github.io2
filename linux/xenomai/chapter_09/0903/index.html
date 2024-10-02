@@ -161,9 +161,14 @@ int main(int argc, char *argv[]) {
 </code></pre>
 <h2 id="_2">실시간 제어 알고리즘 사례</h2>
 <p>실시간 제어 시스템에서 흔하게 사용되는 제어 알고리즘은 PID (비례-적분-미분) 컨트롤러이다. PID 컨트롤러의 기본 수식은 다음과 같다:</p>
-<p>$$</p>
-<p>u(t) = K_p e(t) + K_i \int e(t) dt + K_d \frac{de(t)}{dt}</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+u(t) = K_p e(t) + K_i \int e(t) dt + K_d \frac{de(t)}{dt}
+</div>
+<script type="math/tex; mode=display">
+u(t) = K_p e(t) + K_i \int e(t) dt + K_d \frac{de(t)}{dt}
+</script>
+</div>
 <p>여기서:
 - <span class="arithmatex"><span class="MathJax_Preview">u(t)</span><script type="math/tex">u(t)</script></span>는 제어 신호
 - <span class="arithmatex"><span class="MathJax_Preview">e(t)</span><script type="math/tex">e(t)</script></span>는 현재 시간 <span class="arithmatex"><span class="MathJax_Preview">t</span><script type="math/tex">t</script></span>에서의 오차

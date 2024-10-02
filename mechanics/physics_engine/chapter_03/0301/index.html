@@ -187,9 +187,14 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 <p>이러한 좌표계는 특정 시뮬레이션 및 문제의 간소화에 따라 선택적으로 사용된다.</p>
 <h4 id="_6">좌표계 변환</h4>
 <p>물리 엔진에서는 종종 한 좌표계에서 다른 좌표계로 변환해야 할 필요가 있다. 일반적인 3D 좌표 변환은 다음과 같은 행렬 곱셈으로 수행된다:</p>
-<p>$$</p>
-<p>\mathbf{r}<em>{new} = \mathbf{M} \mathbf{r}</em>{old}
-$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+\mathbf{r}_{new} = \mathbf{M} \mathbf{r}_{old}
+</div>
+<script type="math/tex; mode=display">
+\mathbf{r}_{new} = \mathbf{M} \mathbf{r}_{old}
+</script>
+</div>
 <p>여기서 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{M}</span><script type="math/tex">\mathbf{M}</script></span>은 좌표 변환 행렬이다.</p>
 <h3 id="_7">좌표 변환의 예</h3>
 <p>다음은 2D 데카르트 좌표계를 2D 극좌표계로 변환하는 예이다. 주어진 점 <span class="arithmatex"><span class="MathJax_Preview">(x, y)</span><script type="math/tex">(x, y)</script></span>의 데카르트 좌표를 극좌표로 변환하려면 다음 공식을 사용할 수 있다:</p>

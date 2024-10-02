@@ -80,33 +80,53 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 <p>변위(Displacement)는 물체가 특정한 시간 동안 이동한 위치의 변화를 의미한다. 변위는 이동 경로의 시작점에서 끝점까지의 직선 거리와 방향을 나타내는 벡터량이다. 이는 물체가 이동한 전체 경로를 반영하지 않고, 시작점과 끝점의 위치 차이만을 측정한다.</p>
 <h3 id="_2">변위의 수학적 정의</h3>
 <p>변위를 수학적으로 정의하기 위해, 우선 물체의 위치(Position)를 나타내는 벡터 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{r}</span><script type="math/tex">\mathbf{r}</script></span>를 도입한다. 물체가 시간 <span class="arithmatex"><span class="MathJax_Preview">t_0</span><script type="math/tex">t_0</script></span>에서의 위치 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{r}(t_0)</span><script type="math/tex">\mathbf{r}(t_0)</script></span>에서 시간 <span class="arithmatex"><span class="MathJax_Preview">t_1</span><script type="math/tex">t_1</script></span>에서의 위치 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{r}(t_1)</span><script type="math/tex">\mathbf{r}(t_1)</script></span>로 이동했다고 가정하자. 이 경우, 변위 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{\Delta r}</span><script type="math/tex">\mathbf{\Delta r}</script></span>는 다음과 같이 정의된다:</p>
-<p>$$</p>
-<p>\mathbf{\Delta r} = \mathbf{r}(t_1) - \mathbf{r}(t_0)</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+\mathbf{\Delta r} = \mathbf{r}(t_1) - \mathbf{r}(t_0)
+</div>
+<script type="math/tex; mode=display">
+\mathbf{\Delta r} = \mathbf{r}(t_1) - \mathbf{r}(t_0)
+</script>
+</div>
 <p>여기서:
 - <span class="arithmatex"><span class="MathJax_Preview">\mathbf{r}(t_0)</span><script type="math/tex">\mathbf{r}(t_0)</script></span>는 시간 <span class="arithmatex"><span class="MathJax_Preview">t_0</span><script type="math/tex">t_0</script></span>에서의 물체의 위치를 나타내는 벡터,
 - <span class="arithmatex"><span class="MathJax_Preview">\mathbf{r}(t_1)</span><script type="math/tex">\mathbf{r}(t_1)</script></span>는 시간 <span class="arithmatex"><span class="MathJax_Preview">t_1</span><script type="math/tex">t_1</script></span>에서의 물체의 위치를 나타내는 벡터,
 - <span class="arithmatex"><span class="MathJax_Preview">\mathbf{\Delta r}</span><script type="math/tex">\mathbf{\Delta r}</script></span>는 물체의 변위를 나타내는 벡터이다.</p>
 <h3 id="_3">변위의 벡터적 특성</h3>
 <p>변위는 벡터량이므로 크기와 방향을 모두 가진다. 변위 벡터의 크기 <span class="arithmatex"><span class="MathJax_Preview">|\mathbf{\Delta r}|</span><script type="math/tex">|\mathbf{\Delta r}|</script></span>는 물체가 이동한 직선 거리이며, 이는 다음과 같이 계산된다:</p>
-<p>$$</p>
-<p>|\mathbf{\Delta r}| = \sqrt{(\Delta x)^2 + (\Delta y)^2 + (\Delta z)^2}</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+|\mathbf{\Delta r}| = \sqrt{(\Delta x)^2 + (\Delta y)^2 + (\Delta z)^2}
+</div>
+<script type="math/tex; mode=display">
+|\mathbf{\Delta r}| = \sqrt{(\Delta x)^2 + (\Delta y)^2 + (\Delta z)^2}
+</script>
+</div>
 <p>여기서:
 - <span class="arithmatex"><span class="MathJax_Preview">\Delta x = x_1 - x_0</span><script type="math/tex">\Delta x = x_1 - x_0</script></span>는 물체가 <span class="arithmatex"><span class="MathJax_Preview">x</span><script type="math/tex">x</script></span>축에서 이동한 거리,
 - <span class="arithmatex"><span class="MathJax_Preview">\Delta y = y_1 - y_0</span><script type="math/tex">\Delta y = y_1 - y_0</script></span>는 물체가 <span class="arithmatex"><span class="MathJax_Preview">y</span><script type="math/tex">y</script></span>축에서 이동한 거리,
 - <span class="arithmatex"><span class="MathJax_Preview">\Delta z = z_1 - z_0</span><script type="math/tex">\Delta z = z_1 - z_0</script></span>는 물체가 <span class="arithmatex"><span class="MathJax_Preview">z</span><script type="math/tex">z</script></span>축에서 이동한 거리를 나타낸다.</p>
 <h3 id="2">2차원 좌표계에서의 변위</h3>
 <p>만약 물체가 2차원 평면에서 움직인다고 가정하면, 변위 벡터는 다음과 같이 간단해진다:</p>
-<p>$$</p>
-<p>\mathbf{\Delta r} = \mathbf{r}(t_1) - \mathbf{r}(t_0) = (x_1 - x_0)\mathbf{i} + (y_1 - y_0)\mathbf{j}</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+\mathbf{\Delta r} = \mathbf{r}(t_1) - \mathbf{r}(t_0) = (x_1 - x_0)\mathbf{i} + (y_1 - y_0)\mathbf{j}
+</div>
+<script type="math/tex; mode=display">
+\mathbf{\Delta r} = \mathbf{r}(t_1) - \mathbf{r}(t_0) = (x_1 - x_0)\mathbf{i} + (y_1 - y_0)\mathbf{j}
+</script>
+</div>
 <p>여기서 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{i}</span><script type="math/tex">\mathbf{i}</script></span>와 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{j}</span><script type="math/tex">\mathbf{j}</script></span>는 각각 <span class="arithmatex"><span class="MathJax_Preview">x</span><script type="math/tex">x</script></span>축과 <span class="arithmatex"><span class="MathJax_Preview">y</span><script type="math/tex">y</script></span>축의 단위 벡터를 나타낸다.</p>
 <h3 id="3">3차원 좌표계에서의 변위</h3>
 <p>물체가 3차원 공간에서 움직이는 경우, 변위 벡터는 다음과 같이 정의된다:</p>
-<p>$$</p>
-<p>\mathbf{\Delta r} = \mathbf{r}(t_1) - \mathbf{r}(t_0) = (x_1 - x_0)\mathbf{i} + (y_1 - y_0)\mathbf{j} + (z_1 - z_0)\mathbf{k}</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+\mathbf{\Delta r} = \mathbf{r}(t_1) - \mathbf{r}(t_0) = (x_1 - x_0)\mathbf{i} + (y_1 - y_0)\mathbf{j} + (z_1 - z_0)\mathbf{k}
+</div>
+<script type="math/tex; mode=display">
+\mathbf{\Delta r} = \mathbf{r}(t_1) - \mathbf{r}(t_0) = (x_1 - x_0)\mathbf{i} + (y_1 - y_0)\mathbf{j} + (z_1 - z_0)\mathbf{k}
+</script>
+</div>
 <p>여기서:
 - <span class="arithmatex"><span class="MathJax_Preview">x_1, y_1, z_1</span><script type="math/tex">x_1, y_1, z_1</script></span>는 시간 <span class="arithmatex"><span class="MathJax_Preview">t_1</span><script type="math/tex">t_1</script></span>에서의 물체의 위치 좌표,
 - <span class="arithmatex"><span class="MathJax_Preview">x_0, y_0, z_0</span><script type="math/tex">x_0, y_0, z_0</script></span>는 시간 <span class="arithmatex"><span class="MathJax_Preview">t_0</span><script type="math/tex">t_0</script></span>에서의 물체의 위치 좌표,

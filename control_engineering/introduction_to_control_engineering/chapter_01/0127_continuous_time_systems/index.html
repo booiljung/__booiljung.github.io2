@@ -253,9 +253,14 @@ e_{\text{ss}} = \lim_{t \to \infty} [r(t) - y(t)]
 <h4 id="poles">폴 (Poles)</h4>
 <p>폴은 전달 함수 <span class="arithmatex"><span class="MathJax_Preview">G(s)</span><script type="math/tex">G(s)</script></span>의 분모가 0이 되는 값으로, 시스템의 자연 응답(Natural Response)을 결정하는 요소이다. 폴은 주로 시스템의 안정성과 과도 응답을 평가하는 데 사용된다. </p>
 <p>전달 함수 <span class="arithmatex"><span class="MathJax_Preview">G(s)</span><script type="math/tex">G(s)</script></span>는 다음과 같이 표현될 수 있다:</p>
-<p>$$</p>
-<p>G(s) = \frac{N(s)}{D(s)}</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+G(s) = \frac{N(s)}{D(s)}
+</div>
+<script type="math/tex; mode=display">
+G(s) = \frac{N(s)}{D(s)}
+</script>
+</div>
 <p>여기서 <span class="arithmatex"><span class="MathJax_Preview">D(s) = 0</span><script type="math/tex">D(s) = 0</script></span>인 <span class="arithmatex"><span class="MathJax_Preview">s</span><script type="math/tex">s</script></span> 값들이 폴이다. 폴의 위치는 시스템의 안정성과 관련이 있으며, 앞서 설명한 바와 같이 폴의 실수부가 음수일 경우 시스템은 안정적이다.</p>
 <h4 id="zeros">영 (Zeros)</h4>
 <p>영은 전달 함수 <span class="arithmatex"><span class="MathJax_Preview">G(s)</span><script type="math/tex">G(s)</script></span>의 분자가 0이 되는 값으로, 시스템의 입력에 대한 출력의 반응을 결정한다. 영은 시스템의 주파수 응답에 중요한 영향을 미치며, 영의 위치에 따라 특정 주파수에서의 응답이 크게 달라질 수 있다.</p>
@@ -272,19 +277,34 @@ e_{\text{ss}} = \lim_{t \to \infty} [r(t) - y(t)]
 <h3 id="state-transition-matrix">상태 전이 행렬 (State Transition Matrix)</h3>
 <p>연속 시간 시스템의 상태 공간 모델에서 상태 전이 행렬(State Transition Matrix)은 시스템의 자연 응답을 설명하는 중요한 행렬이다. 상태 전이 행렬은 시스템의 초기 상태가 시간에 따라 어떻게 변하는지를 나타낸다.</p>
 <p>상태 전이 행렬 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{\Phi}(t)</span><script type="math/tex">\mathbf{\Phi}(t)</script></span>는 다음과 같이 정의된다:</p>
-<p>$$</p>
-<p>\mathbf{\Phi}(t) = e^{\mathbf{A}t}</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+\mathbf{\Phi}(t) = e^{\mathbf{A}t}
+</div>
+<script type="math/tex; mode=display">
+\mathbf{\Phi}(t) = e^{\mathbf{A}t}
+</script>
+</div>
 <p>이때, <span class="arithmatex"><span class="MathJax_Preview">e^{\mathbf{A}t}</span><script type="math/tex">e^{\mathbf{A}t}</script></span>는 매트릭스 지수(Matrix Exponential)로 계산된다. 상태 전이 행렬을 사용하면 초기 상태 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{x}(0)</span><script type="math/tex">\mathbf{x}(0)</script></span>로부터 시간 <span class="arithmatex"><span class="MathJax_Preview">t</span><script type="math/tex">t</script></span> 이후의 상태 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{x}(t)</span><script type="math/tex">\mathbf{x}(t)</script></span>를 계산할 수 있다:</p>
-<p>$$</p>
-<p>\mathbf{x}(t) = \mathbf{\Phi}(t) \mathbf{x}(0)</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+\mathbf{x}(t) = \mathbf{\Phi}(t) \mathbf{x}(0)
+</div>
+<script type="math/tex; mode=display">
+\mathbf{x}(t) = \mathbf{\Phi}(t) \mathbf{x}(0)
+</script>
+</div>
 <p>상태 전이 행렬은 시스템의 안정성 분석, 시간 응답 계산, 관측기 설계 등에 필수적으로 사용된다. 매트릭스 지수를 직접 계산하기 위해서는 행렬 대각화 또는 조단 행렬(Jordan Matrix)을 사용할 수 있다.</p>
 <h3 id="pole-placement">상태 피드백과 폴 배치 (Pole Placement)</h3>
 <p>상태 피드백 제어에서 폴 배치(Pole Placement)는 시스템의 고유값을 원하는 위치에 배치하는 기법이다. 상태 피드백 제어는 다음과 같이 설계된다:</p>
-<p>$$</p>
-<p>\mathbf{u}(t) = -\mathbf{K} \mathbf{x}(t)</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+\mathbf{u}(t) = -\mathbf{K} \mathbf{x}(t)
+</div>
+<script type="math/tex; mode=display">
+\mathbf{u}(t) = -\mathbf{K} \mathbf{x}(t)
+</script>
+</div>
 <p>이때, 상태 피드백 이득 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{K}</span><script type="math/tex">\mathbf{K}</script></span>를 설계하여 시스템의 닫힌 고리(Closed-Loop)의 고유값을 원하는 위치로 배치할 수 있다. 폴 배치를 통해 시스템의 과도 응답을 제어할 수 있으며, 이 방법은 특히 연속 시간 시스템의 안정성 및 성능을 최적화하는 데 사용된다.</p>
 <p>폴 배치를 위한 방법 중 하나는 선형 대수학적 방식으로, 시스템의 제어 가능성 행렬이 전 계수(Full Rank)를 가질 때 폴 배치를 통해 원하는 동작을 달성할 수 있다.</p>
 <h3 id="lyapunov-stability">리아푸노프 안정성 (Lyapunov Stability)</h3>
@@ -296,13 +316,23 @@ e_{\text{ss}} = \lim_{t \to \infty} [r(t) - y(t)]
 <p>이 조건을 만족할 때, 시스템은 리아푸노프 안정성을 가진다고 말한다. 이러한 함수가 존재하면 시스템은 점근적으로 안정(Asymptotically Stable)하다고 평가된다.</p>
 <h4 id="lyapunov-equation">리아푸노프 방정식 (Lyapunov Equation)</h4>
 <p>선형 연속 시간 시스템에서 리아푸노프 안정성을 분석하기 위해 리아푸노프 방정식을 사용할 수 있다. 선형 시스템의 상태 공간 모델이 다음과 같을 때:</p>
-<p>$$</p>
-<p>\dot{\mathbf{x}}(t) = \mathbf{A} \mathbf{x}(t)</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+\dot{\mathbf{x}}(t) = \mathbf{A} \mathbf{x}(t)
+</div>
+<script type="math/tex; mode=display">
+\dot{\mathbf{x}}(t) = \mathbf{A} \mathbf{x}(t)
+</script>
+</div>
 <p>리아푸노프 방정식은 다음과 같이 주어진다:</p>
-<p>$$</p>
-<p>\mathbf{A}^{T} \mathbf{P} + \mathbf{P} \mathbf{A} = -\mathbf{Q}</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+\mathbf{A}^{T} \mathbf{P} + \mathbf{P} \mathbf{A} = -\mathbf{Q}
+</div>
+<script type="math/tex; mode=display">
+\mathbf{A}^{T} \mathbf{P} + \mathbf{P} \mathbf{A} = -\mathbf{Q}
+</script>
+</div>
 <p>여기서 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{P}</span><script type="math/tex">\mathbf{P}</script></span>와 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{Q}</span><script type="math/tex">\mathbf{Q}</script></span>는 대칭 행렬(Symmetric Matrices)이며, <span class="arithmatex"><span class="MathJax_Preview">\mathbf{Q}</span><script type="math/tex">\mathbf{Q}</script></span>는 양의 정부호 행렬(Positive Definite Matrix)로 선택된다. 이때, 리아푸노프 방정식의 해가 양의 정부호 행렬 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{P}</span><script type="math/tex">\mathbf{P}</script></span>라면 시스템은 안정하다고 판단된다.</p>
 <h3 id="lyapunov-direct-method">리아푸노프 직접 방법 (Lyapunov Direct Method)</h3>
 <p>리아푸노프 직접 방법은 비선형 연속 시간 시스템의 안정성을 평가하는 데 유용하다. 이 방법에서는 시스템의 모델을 사용하지 않고 리아푸노프 함수를 정의하여 안정성을 직접 평가한다. 리아푸노프 함수의 시간에 따른 변화율을 계산함으로써 시스템이 안정한지, 불안정한지 또는 한계 안정한지를 확인할 수 있다.</p>
@@ -310,9 +340,14 @@ e_{\text{ss}} = \lim_{t \to \infty} [r(t) - y(t)]
 <h3 id="state-trajectory">상태 궤적 (State Trajectory)</h3>
 <p>연속 시간 시스템에서 상태 궤적(State Trajectory)은 시간에 따라 상태 공간에서 시스템의 상태가 어떻게 변화하는지를 보여준다. 상태 궤적은 상태 변수 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{x}(t)</span><script type="math/tex">\mathbf{x}(t)</script></span>가 시간에 따라 이동하는 경로를 나타내며, 시스템의 과도 응답 및 안정성을 시각적으로 분석할 수 있다. </p>
 <p>상태 궤적은 다음과 같은 상태 전이 행렬을 통해 계산된다:</p>
-<p>$$</p>
-<p>\mathbf{x}(t) = \mathbf{\Phi}(t) \mathbf{x}(0)</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+\mathbf{x}(t) = \mathbf{\Phi}(t) \mathbf{x}(0)
+</div>
+<script type="math/tex; mode=display">
+\mathbf{x}(t) = \mathbf{\Phi}(t) \mathbf{x}(0)
+</script>
+</div>
 <p>여기서 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{x}(0)</span><script type="math/tex">\mathbf{x}(0)</script></span>는 초기 상태이며, <span class="arithmatex"><span class="MathJax_Preview">\mathbf{\Phi}(t)</span><script type="math/tex">\mathbf{\Phi}(t)</script></span>는 상태 전이 행렬이다. 상태 궤적을 분석하면 시스템이 시간이 지남에 따라 안정적인 상태로 수렴하는지, 혹은 불안정한 상태로 발산하는지를 알 수 있다.</p>
 <h3 id="_9">선형 연속 시간 시스템의 제어기 설계</h3>
 <p>연속 시간 시스템에서 제어기를 설계하는 기본적인 방법은 폴 배치(Pole Placement) 기법을 사용하는 것이다. 제어기의 목적은 시스템의 동작을 원하는 대로 조정하는 것이며, 이를 위해 상태 피드백 제어(State Feedback Control)를 사용할 수 있다. 상태 피드백 제어는 상태 변수 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{x}(t)</span><script type="math/tex">\mathbf{x}(t)</script></span>에 기반하여 제어 입력을 생성하는 방식이다.</p>

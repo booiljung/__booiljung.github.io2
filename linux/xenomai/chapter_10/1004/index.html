@@ -193,9 +193,14 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 <ol>
 <li><strong>행렬 곱셈의 부하 분산</strong>:</li>
 </ol>
-<p>$$</p>
-<p>\mathbf{C} = \mathbf{A} \times \mathbf{B}</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+\mathbf{C} = \mathbf{A} \times \mathbf{B}
+</div>
+<script type="math/tex; mode=display">
+\mathbf{C} = \mathbf{A} \times \mathbf{B}
+</script>
+</div>
 <p>행렬 곱셈을 병렬화하여 각 프로세서가 행렬의 일부를 계산한다.</p>
 <ol>
 <li>

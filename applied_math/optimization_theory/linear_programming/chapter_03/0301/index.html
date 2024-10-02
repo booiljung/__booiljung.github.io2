@@ -204,25 +204,45 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 <ul>
 <li><strong>등식 제약 조건을 부등식으로 변환</strong>: </li>
 </ul>
-<p>$$
-  \mathbf{A} \mathbf{x} = \mathbf{b}</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+  \mathbf{A} \mathbf{x} = \mathbf{b}
+</div>
+<script type="math/tex; mode=display">
+  \mathbf{A} \mathbf{x} = \mathbf{b}
+</script>
+</div>
 <p>이런 형태의 등식 제약 조건은 표준형에 맞춰 부등식으로 바꿀 수 있다. 등식 제약 조건은 두 개의 부등식으로 나눌 수 있다:</p>
-<p>$$
-  \mathbf{A} \mathbf{x} \leq \mathbf{b} \quad \text{and} \quad \mathbf{A} \mathbf{x} \geq \mathbf{b}</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+  \mathbf{A} \mathbf{x} \leq \mathbf{b} \quad \text{and} \quad \mathbf{A} \mathbf{x} \geq \mathbf{b}
+</div>
+<script type="math/tex; mode=display">
+  \mathbf{A} \mathbf{x} \leq \mathbf{b} \quad \text{and} \quad \mathbf{A} \mathbf{x} \geq \mathbf{b}
+</script>
+</div>
 <p>혹은 추가적인 방법으로 슬랙 변수를 도입하여 변형할 수 있다.</p>
 <ul>
 <li><strong>최소화 문제를 최대화 문제로 변환</strong>:
   최소화 문제를 최대화 문제로 바꾸려면, 목적 함수의 부호를 바꿔준다. 예를 들어, </li>
 </ul>
-<p>$$
-  \text{minimize} \quad \mathbf{c}^\top \mathbf{x}</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+  \text{minimize} \quad \mathbf{c}^\top \mathbf{x}
+</div>
+<script type="math/tex; mode=display">
+  \text{minimize} \quad \mathbf{c}^\top \mathbf{x}
+</script>
+</div>
 <p>를</p>
-<p>$$
-  \text{maximize} \quad -\mathbf{c}^\top \mathbf{x}</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+  \text{maximize} \quad -\mathbf{c}^\top \mathbf{x}
+</div>
+<script type="math/tex; mode=display">
+  \text{maximize} \quad -\mathbf{c}^\top \mathbf{x}
+</script>
+</div>
 <p>로 변환한다.</p>
 <h3 id="7-slack-variables">7. 슬랙 변수 (Slack Variables)</h3>
 <p>불등식 제약 조건을 등식 제약 조건으로 변환할 때 슬랙 변수를 도입할 수 있다. 예를 들어, 다음과 같은 부등식 제약 조건:</p>

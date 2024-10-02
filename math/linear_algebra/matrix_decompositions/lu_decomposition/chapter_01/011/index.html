@@ -122,29 +122,53 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 <ul>
 <li><strong>하삼각 행렬 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{L}</span><script type="math/tex">\mathbf{L}</script></span></strong>: <span class="arithmatex"><span class="MathJax_Preview">\mathbf{L}</span><script type="math/tex">\mathbf{L}</script></span>의 모든 원소 <span class="arithmatex"><span class="MathJax_Preview">l_{ij}</span><script type="math/tex">l_{ij}</script></span>는 <span class="arithmatex"><span class="MathJax_Preview">i &lt; j</span><script type="math/tex">i < j</script></span>인 경우에 0이다. 즉, 다음과 같은 구조를 가진다:</li>
 </ul>
-<p>$$
+<div class="arithmatex">
+<div class="MathJax_Preview">
   \mathbf{L} = 
   \begin{bmatrix}
-  l_{11} &amp; 0 &amp; 0 &amp; \cdots &amp; 0 \
-  l_{21} &amp; l_{22} &amp; 0 &amp; \cdots &amp; 0 \
-  l_{31} &amp; l_{32} &amp; l_{33} &amp; \cdots &amp; 0 \
-  \vdots &amp; \vdots &amp; \vdots &amp; \ddots &amp; \vdots \
+  l_{11} &amp; 0 &amp; 0 &amp; \cdots &amp; 0 \\
+  l_{21} &amp; l_{22} &amp; 0 &amp; \cdots &amp; 0 \\
+  l_{31} &amp; l_{32} &amp; l_{33} &amp; \cdots &amp; 0 \\
+  \vdots &amp; \vdots &amp; \vdots &amp; \ddots &amp; \vdots \\
   l_{n1} &amp; l_{n2} &amp; l_{n3} &amp; \cdots &amp; l_{nn}
-  \end{bmatrix}</p>
-<p>$$</p>
+  \end{bmatrix}
+</div>
+<script type="math/tex; mode=display">
+  \mathbf{L} = 
+  \begin{bmatrix}
+  l_{11} & 0 & 0 & \cdots & 0 \\
+  l_{21} & l_{22} & 0 & \cdots & 0 \\
+  l_{31} & l_{32} & l_{33} & \cdots & 0 \\
+  \vdots & \vdots & \vdots & \ddots & \vdots \\
+  l_{n1} & l_{n2} & l_{n3} & \cdots & l_{nn}
+  \end{bmatrix}
+</script>
+</div>
 <ul>
 <li><strong>상삼각 행렬 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{U}</span><script type="math/tex">\mathbf{U}</script></span></strong>: <span class="arithmatex"><span class="MathJax_Preview">\mathbf{U}</span><script type="math/tex">\mathbf{U}</script></span>의 모든 원소 <span class="arithmatex"><span class="MathJax_Preview">u_{ij}</span><script type="math/tex">u_{ij}</script></span>는 <span class="arithmatex"><span class="MathJax_Preview">i &gt; j</span><script type="math/tex">i > j</script></span>인 경우에 0이다. 다음과 같은 구조를 가진다:</li>
 </ul>
-<p>$$
+<div class="arithmatex">
+<div class="MathJax_Preview">
   \mathbf{U} = 
   \begin{bmatrix}
-  u_{11} &amp; u_{12} &amp; u_{13} &amp; \cdots &amp; u_{1n} \
-  0 &amp; u_{22} &amp; u_{23} &amp; \cdots &amp; u_{2n} \
-  0 &amp; 0 &amp; u_{33} &amp; \cdots &amp; u_{3n} \
-  \vdots &amp; \vdots &amp; \vdots &amp; \ddots &amp; \vdots \
+  u_{11} &amp; u_{12} &amp; u_{13} &amp; \cdots &amp; u_{1n} \\
+  0 &amp; u_{22} &amp; u_{23} &amp; \cdots &amp; u_{2n} \\
+  0 &amp; 0 &amp; u_{33} &amp; \cdots &amp; u_{3n} \\
+  \vdots &amp; \vdots &amp; \vdots &amp; \ddots &amp; \vdots \\
   0 &amp; 0 &amp; 0 &amp; \cdots &amp; u_{nn}
-  \end{bmatrix}</p>
-<p>$$</p>
+  \end{bmatrix}
+</div>
+<script type="math/tex; mode=display">
+  \mathbf{U} = 
+  \begin{bmatrix}
+  u_{11} & u_{12} & u_{13} & \cdots & u_{1n} \\
+  0 & u_{22} & u_{23} & \cdots & u_{2n} \\
+  0 & 0 & u_{33} & \cdots & u_{3n} \\
+  \vdots & \vdots & \vdots & \ddots & \vdots \\
+  0 & 0 & 0 & \cdots & u_{nn}
+  \end{bmatrix}
+</script>
+</div>
 <p>LU 분해가 가능한 행렬은 정사각행렬이어야 하며, 특정한 조건을 만족하는 경우 LU 분해가 고유하게 존재할 수 있다.</p>
 <h3 id="lu_1">LU 분해의 기초 개념</h3>
 <p>LU 분해의 기초 개념을 이해하기 위해서는 다음과 같은 개념들을 살펴보아야 한다:</p>

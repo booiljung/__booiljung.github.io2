@@ -146,20 +146,35 @@ x_{n1} & x_{n2} & \cdots & x_{np}
 <ul>
 <li><strong>전치행렬</strong>: 행렬 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{X}</span><script type="math/tex">\mathbf{X}</script></span>의 전치(transpose)는 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{X}^\top</span><script type="math/tex">\mathbf{X}^\top</script></span>로 표기되며, 행과 열을 바꾼 형태이다.</li>
 </ul>
-<p>$$
+<div class="arithmatex">
+<div class="MathJax_Preview">
   \mathbf{X}^\top = \begin{bmatrix}
-  x_{11} &amp; x_{21} &amp; \cdots &amp; x_{n1} \
-  x_{12} &amp; x_{22} &amp; \cdots &amp; x_{n2} \
-  \vdots &amp; \vdots &amp; \cdots &amp; \vdots \
+  x_{11} &amp; x_{21} &amp; \cdots &amp; x_{n1} \\
+  x_{12} &amp; x_{22} &amp; \cdots &amp; x_{n2} \\
+  \vdots &amp; \vdots &amp; \cdots &amp; \vdots \\
   x_{1p} &amp; x_{2p} &amp; \cdots &amp; x_{np}
-  \end{bmatrix}</p>
-<p>$$</p>
+  \end{bmatrix}
+</div>
+<script type="math/tex; mode=display">
+  \mathbf{X}^\top = \begin{bmatrix}
+  x_{11} & x_{21} & \cdots & x_{n1} \\
+  x_{12} & x_{22} & \cdots & x_{n2} \\
+  \vdots & \vdots & \cdots & \vdots \\
+  x_{1p} & x_{2p} & \cdots & x_{np}
+  \end{bmatrix}
+</script>
+</div>
 <ul>
 <li><strong>행렬의 곱</strong>: 두 행렬 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{A}</span><script type="math/tex">\mathbf{A}</script></span>와 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{B}</span><script type="math/tex">\mathbf{B}</script></span>의 곱 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{C}</span><script type="math/tex">\mathbf{C}</script></span>는 다음과 같이 정의된다:</li>
 </ul>
-<p>$$
-  \mathbf{C} = \mathbf{A} \mathbf{B}, \quad c_{ij} = \sum_{k} a_{ik} b_{kj}</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+  \mathbf{C} = \mathbf{A} \mathbf{B}, \quad c_{ij} = \sum_{k} a_{ik} b_{kj}
+</div>
+<script type="math/tex; mode=display">
+  \mathbf{C} = \mathbf{A} \mathbf{B}, \quad c_{ij} = \sum_{k} a_{ik} b_{kj}
+</script>
+</div>
 <h4 id="_6">샘플 평균 벡터</h4>
 <p>데이터 행렬 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{X}</span><script type="math/tex">\mathbf{X}</script></span>의 각 열은 각각의 속성에 해당하는 값들을 나타낸다. 샘플 평균 벡터 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{\bar{x}}</span><script type="math/tex">\mathbf{\bar{x}}</script></span>는 각 열의 평균값들로 구성된다:</p>
 <div class="arithmatex">

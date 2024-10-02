@@ -104,9 +104,14 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 <p>MATLAB은 수학적 계산, 데이터 분석, 모델링 및 시뮬레이션을 위한 대표적인 도구 중 하나이다. 특히 운동학 분석에서는 다중 변수의 수치적 계산과 기하학적 변환을 처리할 때 유용하다. Simulink는 MATLAB의 확장 도구로, 운동학 시스템을 시각적으로 모델링하고 시뮬레이션할 수 있는 블록 기반 환경을 제공한다.</p>
 <h4 id="matlab">MATLAB을 사용한 간단한 시뮬레이션 예시</h4>
 <p>MATLAB에서는 운동학 방정식을 기반으로 운동 궤적을 시뮬레이션할 수 있다. 예를 들어, 등속 운동을 나타내는 다음과 같은 선형 운동 방정식이 있다:</p>
-<p>$$</p>
-<p>\mathbf{x}(t) = \mathbf{x}_0 + \mathbf{v}t</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+\mathbf{x}(t) = \mathbf{x}_0 + \mathbf{v}t
+</div>
+<script type="math/tex; mode=display">
+\mathbf{x}(t) = \mathbf{x}_0 + \mathbf{v}t
+</script>
+</div>
 <p>여기서:
 - <span class="arithmatex"><span class="MathJax_Preview">\mathbf{x}(t)</span><script type="math/tex">\mathbf{x}(t)</script></span>는 시간 <span class="arithmatex"><span class="MathJax_Preview">t</span><script type="math/tex">t</script></span>에서의 위치 벡터,
 - <span class="arithmatex"><span class="MathJax_Preview">\mathbf{x}_0</span><script type="math/tex">\mathbf{x}_0</script></span>는 초기 위치 벡터,
@@ -160,9 +165,14 @@ title('등속 운동의 궤적');
 <h4 id="coppeliasim">CoppeliaSim에서의 로봇 팔 시뮬레이션</h4>
 <p>CoppeliaSim에서는 로봇의 각 조인트를 정의하고, 이를 이용해 로봇 팔이 특정 경로를 따라 이동하도록 시뮬레이션할 수 있다. 예를 들어, 로봇 팔의 목표 위치로 이동하기 위한 역운동학(kinematic) 모델을 CoppeliaSim에서 구현할 수 있다. CoppeliaSim은 또한 외부에서 제어 코드와 통신이 가능하므로, Python, C++, MATLAB과 같은 여러 언어를 사용해 로봇을 제어할 수 있다.</p>
 <p>CoppeliaSim에서의 역운동학을 통한 경로 계획의 예는 다음과 같다:</p>
-<p>$$</p>
-<p>\mathbf{q} = \mathbf{q}_0 + \Delta t \cdot \mathbf{J}^{-1}(\mathbf{x}_d - \mathbf{x}(\mathbf{q}))</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+\mathbf{q} = \mathbf{q}_0 + \Delta t \cdot \mathbf{J}^{-1}(\mathbf{x}_d - \mathbf{x}(\mathbf{q}))
+</div>
+<script type="math/tex; mode=display">
+\mathbf{q} = \mathbf{q}_0 + \Delta t \cdot \mathbf{J}^{-1}(\mathbf{x}_d - \mathbf{x}(\mathbf{q}))
+</script>
+</div>
 <p>여기서:
 - <span class="arithmatex"><span class="MathJax_Preview">\mathbf{q}</span><script type="math/tex">\mathbf{q}</script></span>는 조인트 변수 벡터,
 - <span class="arithmatex"><span class="MathJax_Preview">\mathbf{J}</span><script type="math/tex">\mathbf{J}</script></span>는 Jacobian 행렬,
@@ -174,9 +184,14 @@ title('등속 운동의 궤적');
 <p>OpenSim은 주로 골격 운동학과 동역학을 연구하기 위해 개발되었으며, 근육의 활성화와 힘 생성 과정까지 시뮬레이션할 수 있다. 이를 통해 근육의 동작에 따른 힘과 모멘트를 계산하고, 이를 바탕으로 운동 경로를 분석할 수 있다.</p>
 <h4 id="opensim-">OpenSim에서의 근육-골격 시스템 시뮬레이션</h4>
 <p>OpenSim에서 인간의 다리 운동을 시뮬레이션하는 예는 다음과 같다:</p>
-<p>$$</p>
-<p>\mathbf{F}<em>{\text{muscle}} = \mathbf{A} \cdot \mathbf{f}</em>{\text{iso}}(l_{\text{fiber}}) \cdot \mathbf{v}(t)</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+\mathbf{F}_{\text{muscle}} = \mathbf{A} \cdot \mathbf{f}_{\text{iso}}(l_{\text{fiber}}) \cdot \mathbf{v}(t)
+</div>
+<script type="math/tex; mode=display">
+\mathbf{F}_{\text{muscle}} = \mathbf{A} \cdot \mathbf{f}_{\text{iso}}(l_{\text{fiber}}) \cdot \mathbf{v}(t)
+</script>
+</div>
 <p>여기서:
 - <span class="arithmatex"><span class="MathJax_Preview">\mathbf{F}_{\text{muscle}}</span><script type="math/tex">\mathbf{F}_{\text{muscle}}</script></span>은 근육에서 생성되는 힘,
 - <span class="arithmatex"><span class="MathJax_Preview">\mathbf{A}</span><script type="math/tex">\mathbf{A}</script></span>는 근육의 활성화 수준,
@@ -188,9 +203,14 @@ title('등속 운동의 궤적');
 <p>Adams는 다물체 동역학(MBD, Multi-Body Dynamics)을 위한 상용 소프트웨어로, 기계 시스템에서 복잡한 운동과 힘을 분석하는 데 매우 유용하다. 주로 자동차, 항공우주, 기계 공학 분야에서 사용되며, 강체 간의 상호작용을 기반으로 시뮬레이션을 수행한다.</p>
 <h4 id="adams">Adams에서의 다물체 운동 시뮬레이션</h4>
 <p>Adams는 다체 시스템의 움직임을 시뮬레이션할 때 각 체의 질량, 관성, 구속 조건을 고려한다. 다물체 시스템의 운동 방정식은 다음과 같이 나타낼 수 있다:</p>
-<p>$$</p>
-<p>\mathbf{M}(\mathbf{q}) \ddot{\mathbf{q}} + \mathbf{C}(\mathbf{q}, \dot{\mathbf{q}}) + \mathbf{G}(\mathbf{q}) = \mathbf{F}_{\text{ext}}</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+\mathbf{M}(\mathbf{q}) \ddot{\mathbf{q}} + \mathbf{C}(\mathbf{q}, \dot{\mathbf{q}}) + \mathbf{G}(\mathbf{q}) = \mathbf{F}_{\text{ext}}
+</div>
+<script type="math/tex; mode=display">
+\mathbf{M}(\mathbf{q}) \ddot{\mathbf{q}} + \mathbf{C}(\mathbf{q}, \dot{\mathbf{q}}) + \mathbf{G}(\mathbf{q}) = \mathbf{F}_{\text{ext}}
+</script>
+</div>
 <p>여기서:
 - <span class="arithmatex"><span class="MathJax_Preview">\mathbf{M}(\mathbf{q})</span><script type="math/tex">\mathbf{M}(\mathbf{q})</script></span>는 일반화된 좌표 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{q}</span><script type="math/tex">\mathbf{q}</script></span>에서의 질량 행렬,
 - <span class="arithmatex"><span class="MathJax_Preview">\mathbf{C}(\mathbf{q}, \dot{\mathbf{q}})</span><script type="math/tex">\mathbf{C}(\mathbf{q}, \dot{\mathbf{q}})</script></span>는 코리올리 및 원심력 항,

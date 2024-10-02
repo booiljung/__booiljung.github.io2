@@ -128,17 +128,27 @@ e = (x, y, t, p)
 <li><strong>타임스탬프 보정</strong>: 
    이벤트 카메라와 다른 센서들은 각각의 내부 시계에 따라 독립적으로 데이터를 기록한다. 각 센서의 시계가 미세하게 차이날 수 있기 때문에, 이를 보정하는 과정이 필요하다. 이를 위해 각 센서의 타임스탬프를 통일된 시간 축으로 변환하거나, 센서 간의 시간 차이를 추정하여 보정할 수 있다. 타임스탬프 <span class="arithmatex"><span class="MathJax_Preview">t_i</span><script type="math/tex">t_i</script></span>와 보정된 타임스탬프 <span class="arithmatex"><span class="MathJax_Preview">\hat{t_i}</span><script type="math/tex">\hat{t_i}</script></span> 간의 관계는 다음과 같다:</li>
 </ol>
-<p>$$
-   \hat{t_i} = t_i + \Delta t</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+   \hat{t_i} = t_i + \Delta t
+</div>
+<script type="math/tex; mode=display">
+   \hat{t_i} = t_i + \Delta t
+</script>
+</div>
 <p>여기서 <span class="arithmatex"><span class="MathJax_Preview">\Delta t</span><script type="math/tex">\Delta t</script></span>는 센서 간의 시간 차이를 나타내는 상수 값이다.</p>
 <ol>
 <li><strong>이벤트 클러스터링</strong>: 
    이벤트의 발생 빈도가 매우 높기 때문에, 모든 이벤트를 개별적으로 동기화하기보다는 특정 시간 창(time window) 내의 이벤트들을 하나의 클러스터로 묶어 처리할 수 있다. 이 방법은 계산 비용을 줄이고, 실시간 처리를 가능하게 만든다. 각 클러스터 <span class="arithmatex"><span class="MathJax_Preview">C_k</span><script type="math/tex">C_k</script></span>는 다음과 같이 정의될 수 있다:</li>
 </ol>
-<p>$$
-   C_k = { e_i \mid t_k \leq t_i &lt; t_{k+1} }</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+   C_k = \{ e_i \mid t_k \leq t_i &lt; t_{k+1} \}
+</div>
+<script type="math/tex; mode=display">
+   C_k = \{ e_i \mid t_k \leq t_i < t_{k+1} \}
+</script>
+</div>
 <p>여기서 <span class="arithmatex"><span class="MathJax_Preview">t_k</span><script type="math/tex">t_k</script></span>는 클러스터의 시작 시간이고, <span class="arithmatex"><span class="MathJax_Preview">t_{k+1}</span><script type="math/tex">t_{k+1}</script></span>는 클러스터의 끝 시간을 나타낸다.</p>
 <h3 id="3">3. 동기화 오차 보정</h3>
 <p>이벤트 카메라의 동기화 과정에서는 <strong>동기화 오차</strong>(Synchronization Error)가 발생할 수 있다. 특히, 다른 센서들에 비해 이벤트 카메라는 매우 짧은 시간 간격으로 데이터를 발생시키기 때문에, 미세한 시간 차이도 큰 영향을 줄 수 있다. 동기화 오차를 줄이기 위해서는 다음과 같은 방법들이 사용된다.</p>

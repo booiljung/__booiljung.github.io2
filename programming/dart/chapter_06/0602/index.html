@@ -120,9 +120,14 @@ emptySet.add(10);
 <p>수학에서와 마찬가지로, Dart의 <code>Set</code>에서도 다양한 연산을 수행할 수 있다. 대표적인 연산으로는 합집합, 교집합, 차집합이 있으며, 이들 연산은 모두 <code>Set</code>에서 제공하는 메서드를 통해 수행할 수 있다.</p>
 <h4 id="union">합집합 (Union)</h4>
 <p>두 집합 <span class="arithmatex"><span class="MathJax_Preview">A</span><script type="math/tex">A</script></span>와 <span class="arithmatex"><span class="MathJax_Preview">B</span><script type="math/tex">B</script></span>의 합집합은 다음과 같이 정의된다:</p>
-<p>$$</p>
-<p>A \cup B = { x \mid x \in A \text{ 또는 } x \in B }</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+A \cup B = \{ x \mid x \in A \text{ 또는 } x \in B \}
+</div>
+<script type="math/tex; mode=display">
+A \cup B = \{ x \mid x \in A \text{ 또는 } x \in B \}
+</script>
+</div>
 <p>Dart에서 합집합은 <code>union</code> 메서드를 사용하여 구할 수 있다:</p>
 <pre><code class="language-dart">Set&lt;int&gt; a = {1, 2, 3};
 Set&lt;int&gt; b = {3, 4, 5};
@@ -132,9 +137,14 @@ print(unionSet); // {1, 2, 3, 4, 5}
 </code></pre>
 <h4 id="intersection">교집합 (Intersection)</h4>
 <p>두 집합 <span class="arithmatex"><span class="MathJax_Preview">A</span><script type="math/tex">A</script></span>와 <span class="arithmatex"><span class="MathJax_Preview">B</span><script type="math/tex">B</script></span>의 교집합은 다음과 같이 정의된다:</p>
-<p>$$</p>
-<p>A \cap B = { x \mid x \in A \text{ 그리고 } x \in B }</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+A \cap B = \{ x \mid x \in A \text{ 그리고 } x \in B \}
+</div>
+<script type="math/tex; mode=display">
+A \cap B = \{ x \mid x \in A \text{ 그리고 } x \in B \}
+</script>
+</div>
 <p>교집합은 <code>intersection</code> 메서드를 사용하여 구할 수 있다:</p>
 <pre><code class="language-dart">Set&lt;int&gt; a = {1, 2, 3};
 Set&lt;int&gt; b = {3, 4, 5};
@@ -144,9 +154,14 @@ print(intersectionSet); // {3}
 </code></pre>
 <h4 id="difference">차집합 (Difference)</h4>
 <p>차집합은 두 집합 <span class="arithmatex"><span class="MathJax_Preview">A</span><script type="math/tex">A</script></span>와 <span class="arithmatex"><span class="MathJax_Preview">B</span><script type="math/tex">B</script></span>에서 <span class="arithmatex"><span class="MathJax_Preview">A</span><script type="math/tex">A</script></span>에만 존재하고 <span class="arithmatex"><span class="MathJax_Preview">B</span><script type="math/tex">B</script></span>에는 존재하지 않는 원소들로 구성된다:</p>
-<p>$$</p>
-<p>A - B = { x \mid x \in A \text{ 그리고 } x \notin B }</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+A - B = \{ x \mid x \in A \text{ 그리고 } x \notin B \}
+</div>
+<script type="math/tex; mode=display">
+A - B = \{ x \mid x \in A \text{ 그리고 } x \notin B \}
+</script>
+</div>
 <p>Dart에서 차집합은 <code>difference</code> 메서드를 통해 구할 수 있다:</p>
 <pre><code class="language-dart">Set&lt;int&gt; a = {1, 2, 3};
 Set&lt;int&gt; b = {3, 4, 5};

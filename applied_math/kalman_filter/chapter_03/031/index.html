@@ -166,16 +166,26 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 <ul>
 <li><strong>상태 방정식</strong>:  </li>
 </ul>
-<p>$$
-  \mathbf{x}_{k+1} = \mathbf{F}_k \mathbf{x}_k + \mathbf{B}_k \mathbf{u}_k + \mathbf{w}_k</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+  \mathbf{x}_{k+1} = \mathbf{F}_k \mathbf{x}_k + \mathbf{B}_k \mathbf{u}_k + \mathbf{w}_k
+</div>
+<script type="math/tex; mode=display">
+  \mathbf{x}_{k+1} = \mathbf{F}_k \mathbf{x}_k + \mathbf{B}_k \mathbf{u}_k + \mathbf{w}_k
+</script>
+</div>
 <p>여기서 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{x}_k</span><script type="math/tex">\mathbf{x}_k</script></span>는 시점 <span class="arithmatex"><span class="MathJax_Preview">k</span><script type="math/tex">k</script></span>에서의 상태 벡터, <span class="arithmatex"><span class="MathJax_Preview">\mathbf{F}_k</span><script type="math/tex">\mathbf{F}_k</script></span>는 상태 전이 행렬, <span class="arithmatex"><span class="MathJax_Preview">\mathbf{u}_k</span><script type="math/tex">\mathbf{u}_k</script></span>는 시스템 입력, <span class="arithmatex"><span class="MathJax_Preview">\mathbf{B}_k</span><script type="math/tex">\mathbf{B}_k</script></span>는 입력에 대한 상태 변환 행렬, <span class="arithmatex"><span class="MathJax_Preview">\mathbf{w}_k</span><script type="math/tex">\mathbf{w}_k</script></span>는 시스템 노이즈를 나타낸다.</p>
 <ul>
 <li><strong>관측 방정식</strong>:  </li>
 </ul>
-<p>$$
-  \mathbf{z}_k = \mathbf{H}_k \mathbf{x}_k + \mathbf{v}_k</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+  \mathbf{z}_k = \mathbf{H}_k \mathbf{x}_k + \mathbf{v}_k
+</div>
+<script type="math/tex; mode=display">
+  \mathbf{z}_k = \mathbf{H}_k \mathbf{x}_k + \mathbf{v}_k
+</script>
+</div>
 <p>여기서 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{z}_k</span><script type="math/tex">\mathbf{z}_k</script></span>는 시점 <span class="arithmatex"><span class="MathJax_Preview">k</span><script type="math/tex">k</script></span>에서의 관측 벡터, <span class="arithmatex"><span class="MathJax_Preview">\mathbf{H}_k</span><script type="math/tex">\mathbf{H}_k</script></span>는 관측 모델 행렬, <span class="arithmatex"><span class="MathJax_Preview">\mathbf{v}_k</span><script type="math/tex">\mathbf{v}_k</script></span>는 측정 노이즈를 나타낸다.</p>
 <p>위의 방정식들은 칼만 필터 알고리즘이 수행될 수 있는 기본 틀을 제공하며, 상태 추정 과정은 이 방정식들을 기반으로 시간적 업데이트와 측정적 업데이트를 통해 이루어진다.</p>
 <h3 id="_7">초기 조건과 필터링 문제의 시작점</h3>
@@ -242,16 +252,26 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 <ul>
 <li><strong>추정 오차</strong>:  </li>
 </ul>
-<p>$$
-  \mathbf{e}_k = \mathbf{x}_k - \hat{\mathbf{x}}_k</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+  \mathbf{e}_k = \mathbf{x}_k - \hat{\mathbf{x}}_k
+</div>
+<script type="math/tex; mode=display">
+  \mathbf{e}_k = \mathbf{x}_k - \hat{\mathbf{x}}_k
+</script>
+</div>
 <p>여기서 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{e}_k</span><script type="math/tex">\mathbf{e}_k</script></span>는 실제 상태 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{x}_k</span><script type="math/tex">\mathbf{x}_k</script></span>와 추정된 상태 <span class="arithmatex"><span class="MathJax_Preview">\hat{\mathbf{x}}_k</span><script type="math/tex">\hat{\mathbf{x}}_k</script></span> 간의 차이를 나타낸다.</p>
 <ul>
 <li><strong>추정 오차의 공분산 행렬</strong>:  </li>
 </ul>
-<p>$$
-  \mathbf{P}_k = \mathbb{E}[\mathbf{e}_k \mathbf{e}_k^T]</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+  \mathbf{P}_k = \mathbb{E}[\mathbf{e}_k \mathbf{e}_k^T]
+</div>
+<script type="math/tex; mode=display">
+  \mathbf{P}_k = \mathbb{E}[\mathbf{e}_k \mathbf{e}_k^T]
+</script>
+</div>
 <p>이 행렬은 추정 오차의 통계적 분포를 나타내며, 필터링 문제에서 이를 최소화하는 것이 목표이다. 칼만 필터는 이러한 공분산 행렬을 갱신하고 최소화하는 방향으로 설계되어 있다.</p>
 <h4 id="_15">베이지안 추론과 최적화</h4>
 <p>칼만 필터는 베이지안 추론을 기반으로 상태를 최적화한다. 베이지안 접근법은 새로운 데이터가 주어졌을 때, 이전에 알고 있던 정보(사전 확률)를 업데이트하여 새로운 추정치(사후 확률)를 제공하는 방식으로 작동한다. 필터링 문제에서는 상태 변수의 사전 분포와 관측 데이터가 결합되어 사후 분포를 형성하며, 이 사후 분포의 평균이 최적의 상태 추정치로 간주된다.</p>

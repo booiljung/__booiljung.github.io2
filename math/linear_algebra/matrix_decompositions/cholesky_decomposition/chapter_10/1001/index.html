@@ -121,20 +121,36 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 <p><strong>주 소행렬 판별법</strong>: 모든 주 소행렬(Leading principal minors)의 행렬식이 양수인지 확인하는 방법이다. 예를 들어, 행렬 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{A}</span><script type="math/tex">\mathbf{A}</script></span>에 대해 다음 행렬식들이 모두 양수인지를 확인한다:</p>
 </li>
 </ol>
-<p>$$
+<div class="arithmatex">
+<div class="MathJax_Preview">
    \begin{vmatrix}
    a_{11}
    \end{vmatrix} &gt; 0, \quad
    \begin{vmatrix}
-   a_{11} &amp; a_{12} \
+   a_{11} &amp; a_{12} \\
    a_{21} &amp; a_{22}
    \end{vmatrix} &gt; 0, \quad \cdots, \quad
    \begin{vmatrix}
-   a_{11} &amp; \cdots &amp; a_{1n} \
-   \vdots &amp; \ddots &amp; \vdots \
+   a_{11} &amp; \cdots &amp; a_{1n} \\
+   \vdots &amp; \ddots &amp; \vdots \\
    a_{n1} &amp; \cdots &amp; a_{nn}
-   \end{vmatrix} &gt; 0</p>
-<p>$$</p>
+   \end{vmatrix} &gt; 0
+</div>
+<script type="math/tex; mode=display">
+   \begin{vmatrix}
+   a_{11}
+   \end{vmatrix} > 0, \quad
+   \begin{vmatrix}
+   a_{11} & a_{12} \\
+   a_{21} & a_{22}
+   \end{vmatrix} > 0, \quad \cdots, \quad
+   \begin{vmatrix}
+   a_{11} & \cdots & a_{1n} \\
+   \vdots & \ddots & \vdots \\
+   a_{n1} & \cdots & a_{nn}
+   \end{vmatrix} > 0
+</script>
+</div>
 <ol>
 <li><strong>치올레스키 분해 직접 시도</strong>: 치올레스키 분해는 실패하면 행렬이 양의 정부호가 아님을 의미한다. 분해가 성공하면, 해당 행렬은 양의 정부호이다.</li>
 </ol>
@@ -153,9 +169,14 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 <ul>
 <li><strong>정규화(Smoothing)</strong>: 행렬에 작은 양의 항목들을 더하여 양의 정부호성을 확보하는 방법이다. 예를 들어, <span class="arithmatex"><span class="MathJax_Preview">\mathbf{A}</span><script type="math/tex">\mathbf{A}</script></span>에 작은 양수 <span class="arithmatex"><span class="MathJax_Preview">\epsilon \mathbf{I}</span><script type="math/tex">\epsilon \mathbf{I}</script></span>를 더하는 방법이다.</li>
 </ul>
-<p>$$
-  \mathbf{A}' = \mathbf{A} + \epsilon \mathbf{I}</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+  \mathbf{A}' = \mathbf{A} + \epsilon \mathbf{I}
+</div>
+<script type="math/tex; mode=display">
+  \mathbf{A}' = \mathbf{A} + \epsilon \mathbf{I}
+</script>
+</div>
 <p>여기서 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{I}</span><script type="math/tex">\mathbf{I}</script></span>는 단위행렬(identity matrix)이다.</p>
 <ul>
 <li><strong>프로젝션 기법</strong>: 행렬을 양의 정부호 공간으로 투영(projection)하여 새로운 행렬을 생성하는 방법이다. 이는 행렬의 고유값 분해를 통해 음수 고유값들을 0 또는 양수로 변환하여 구현할 수 있다.</li>

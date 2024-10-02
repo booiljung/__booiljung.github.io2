@@ -115,9 +115,14 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 </div>
 <h3 id="_2">스칼라 곱의 정의</h3>
 <p>스칼라 곱, 내적(inner product) 혹은 dot product는 두 벡터 사이의 곱셈 연산 중 하나로 가장 기본적인 형태 중 하나이다. 두 개의 같은 차원의 벡터 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{a}</span><script type="math/tex">\mathbf{a}</script></span>와 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{b}</span><script type="math/tex">\mathbf{b}</script></span>의 스칼라 곱은 다음과 같이 정의된다:</p>
-<p>$$</p>
-<p>\mathbf{a} \cdot \mathbf{b} = \sum_{i=1}^n a_i b_i 
-$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+\mathbf{a} \cdot \mathbf{b} = \sum_{i=1}^n a_i b_i 
+</div>
+<script type="math/tex; mode=display">
+\mathbf{a} \cdot \mathbf{b} = \sum_{i=1}^n a_i b_i 
+</script>
+</div>
 <p>이를 통해, 벡터 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{a}</span><script type="math/tex">\mathbf{a}</script></span>와 벡터 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{b}</span><script type="math/tex">\mathbf{b}</script></span>의 각 성분 별 곱의 합으로 스칼라 값을 얻을 수 있다.</p>
 <div class="arithmatex">
 <div class="MathJax_Preview">
@@ -152,22 +157,37 @@ $$</p>
 <ol>
 <li><strong>교환 법칙(Commutativity)</strong>:</li>
 </ol>
-<p>$$</p>
-<p>\mathbf{a} \cdot \mathbf{b} = \mathbf{b} \cdot \mathbf{a} 
-$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+\mathbf{a} \cdot \mathbf{b} = \mathbf{b} \cdot \mathbf{a} 
+</div>
+<script type="math/tex; mode=display">
+\mathbf{a} \cdot \mathbf{b} = \mathbf{b} \cdot \mathbf{a} 
+</script>
+</div>
 <ol>
 <li><strong>결합 법칙(Distributivity)</strong>:</li>
 </ol>
-<p>$$</p>
-<p>\mathbf{a} \cdot (\mathbf{b} + \mathbf{c}) = \mathbf{a} \cdot \mathbf{b} + \mathbf{a} \cdot \mathbf{c} 
-$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+\mathbf{a} \cdot (\mathbf{b} + \mathbf{c}) = \mathbf{a} \cdot \mathbf{b} + \mathbf{a} \cdot \mathbf{c} 
+</div>
+<script type="math/tex; mode=display">
+\mathbf{a} \cdot (\mathbf{b} + \mathbf{c}) = \mathbf{a} \cdot \mathbf{b} + \mathbf{a} \cdot \mathbf{c} 
+</script>
+</div>
 <ol>
 <li><strong>스칼라 배율(Scalar Multiplication)</strong>:
 scaling a vector by a scalar and then taking the dot product with another vector is the same as scaling the dot product itself:</li>
 </ol>
-<p>$$</p>
-<p>(k \mathbf{a}) \cdot \mathbf{b} = k (\mathbf{a} \cdot \mathbf{b}) 
-$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+(k \mathbf{a}) \cdot \mathbf{b} = k (\mathbf{a} \cdot \mathbf{b}) 
+</div>
+<script type="math/tex; mode=display">
+(k \mathbf{a}) \cdot \mathbf{b} = k (\mathbf{a} \cdot \mathbf{b}) 
+</script>
+</div>
 <p>여기서 <span class="arithmatex"><span class="MathJax_Preview">k</span><script type="math/tex">k</script></span>는 스칼라 값을 의미한다.</p>
 <ol>
 <li>
@@ -179,9 +199,14 @@ $$</p>
 두 벡터 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{a}</span><script type="math/tex">\mathbf{a}</script></span>와 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{b}</span><script type="math/tex">\mathbf{b}</script></span>가 평행할 때, 스칼라 곱의 값은 벡터 크기들의 곱과 방향에 따라 크게 달라질 수 있다.</p>
 </li>
 </ol>
-<p>$$</p>
-<p>\mathbf{a} \cdot \mathbf{b} = |\mathbf{a}| |\mathbf{b}| \cos \theta 
-$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+\mathbf{a} \cdot \mathbf{b} = |\mathbf{a}| |\mathbf{b}| \cos \theta 
+</div>
+<script type="math/tex; mode=display">
+\mathbf{a} \cdot \mathbf{b} = |\mathbf{a}| |\mathbf{b}| \cos \theta 
+</script>
+</div>
 <p>여기서 <span class="arithmatex"><span class="MathJax_Preview">\theta</span><script type="math/tex">\theta</script></span>는 두 벡터 사이의 각도이다. 이 식은 두 벡터가 평행할 때 (<span class="arithmatex"><span class="MathJax_Preview">\theta = 0</span><script type="math/tex">\theta = 0</script></span> 또는 <span class="arithmatex"><span class="MathJax_Preview">\theta = \pi</span><script type="math/tex">\theta = \pi</script></span>) 최대값이나 최소값을 가짐을 보여준다.</p>
 <h3 id="_5">스칼라 곱의 기하학적 의미</h3>
 <p>스칼라 곱의 결과는 두 벡터의 길이 및 방향에 대한 정보를 제공하며 이는 다음과 같은 특성을 갖는다:</p>

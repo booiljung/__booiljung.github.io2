@@ -108,9 +108,14 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 <li><strong>주파수 (Frequency, <span class="arithmatex"><span class="MathJax_Preview">f</span><script type="math/tex">f</script></span>)</strong>: 주기의 역수로, 신호가 1초 동안 반복되는 횟수이다. <span class="arithmatex"><span class="MathJax_Preview">f = \frac{1}{T}</span><script type="math/tex">f = \frac{1}{T}</script></span>.</li>
 <li><strong>듀티 사이클 (Duty Cycle, <span class="arithmatex"><span class="MathJax_Preview">D</span><script type="math/tex">D</script></span>)</strong>: 펄스가 '높음' 상태를 유지하는 시간의 비율을 백분율로 나타낸 것이다. 듀티 사이클은 다음 식으로 정의된다.</li>
 </ul>
-<p>$$
-  D = \frac{t_{\text{on}}}{T} \times 100\%</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+  D = \frac{t_{\text{on}}}{T} \times 100\%
+</div>
+<script type="math/tex; mode=display">
+  D = \frac{t_{\text{on}}}{T} \times 100\%
+</script>
+</div>
 <p>여기서 <span class="arithmatex"><span class="MathJax_Preview">t_{\text{on}}</span><script type="math/tex">t_{\text{on}}</script></span>은 펄스가 '높음' 상태를 유지하는 시간이다.</p>
 <h3 id="_2">신호 생성</h3>
 <p>PWM 신호는 주로 타이머나 카운터를 이용하여 생성된다. 마이크로컨트롤러나 디지털 신호 처리기(DSP)는 이러한 타이머를 통해 정밀한 PWM 신호를 생성할 수 있다.</p>

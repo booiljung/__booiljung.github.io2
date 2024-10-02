@@ -126,29 +126,49 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 <ol>
 <li><strong>역행렬과 전치</strong>: <span class="arithmatex"><span class="MathJax_Preview">\mathbf{Q}</span><script type="math/tex">\mathbf{Q}</script></span>가 직교 행렬이므로, <span class="arithmatex"><span class="MathJax_Preview">\mathbf{Q}</span><script type="math/tex">\mathbf{Q}</script></span>의 역행렬은 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{Q}</span><script type="math/tex">\mathbf{Q}</script></span>의 전치행렬이다. 즉,</li>
 </ol>
-<p>$$
-   \mathbf{Q}^{-1} = \mathbf{Q}^{\top}</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+   \mathbf{Q}^{-1} = \mathbf{Q}^{\top}
+</div>
+<script type="math/tex; mode=display">
+   \mathbf{Q}^{-1} = \mathbf{Q}^{\top}
+</script>
+</div>
 <ol>
 <li><strong>행렬식</strong>: 직교 행렬의 행렬식은 항상 <span class="arithmatex"><span class="MathJax_Preview">\pm 1</span><script type="math/tex">\pm 1</script></span>이다. 이는 직교 행렬이 크기 변환 없이 회전 또는 반사 변환만 수행함을 의미한다.</li>
 </ol>
-<p>$$
-   \det(\mathbf{Q}) = \pm 1</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+   \det(\mathbf{Q}) = \pm 1
+</div>
+<script type="math/tex; mode=display">
+   \det(\mathbf{Q}) = \pm 1
+</script>
+</div>
 <ol>
 <li><strong>내적 보존</strong>: 직교 행렬은 벡터 사이의 내적을 보존한다. 즉, 두 벡터 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{u}</span><script type="math/tex">\mathbf{u}</script></span>와 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{v}</span><script type="math/tex">\mathbf{v}</script></span>에 대해,</li>
 </ol>
-<p>$$
-   \mathbf{u}^\top \mathbf{v} = (\mathbf{Q}\mathbf{u})^\top (\mathbf{Q}\mathbf{v})</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+   \mathbf{u}^\top \mathbf{v} = (\mathbf{Q}\mathbf{u})^\top (\mathbf{Q}\mathbf{v})
+</div>
+<script type="math/tex; mode=display">
+   \mathbf{u}^\top \mathbf{v} = (\mathbf{Q}\mathbf{u})^\top (\mathbf{Q}\mathbf{v})
+</script>
+</div>
 <h3 id="_2">상삼각 행렬의 성질</h3>
 <p>상삼각 행렬 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{R}</span><script type="math/tex">\mathbf{R}</script></span>의 주요 성질은 다음과 같다:</p>
 <ol>
 <li><strong>비대각 성분</strong>: 상삼각 행렬 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{R}</span><script type="math/tex">\mathbf{R}</script></span>의 모든 성분 <span class="arithmatex"><span class="MathJax_Preview">r_{ij}</span><script type="math/tex">r_{ij}</script></span>에 대해 <span class="arithmatex"><span class="MathJax_Preview">i &gt; j</span><script type="math/tex">i > j</script></span>이면, <span class="arithmatex"><span class="MathJax_Preview">r_{ij} = 0</span><script type="math/tex">r_{ij} = 0</script></span>이다. 즉, 주대각선 아래의 모든 요소가 0이다.</li>
 </ol>
-<p>$$
-   r_{ij} = 0 \quad \text{for} \quad i &gt; j</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+   r_{ij} = 0 \quad \text{for} \quad i &gt; j
+</div>
+<script type="math/tex; mode=display">
+   r_{ij} = 0 \quad \text{for} \quad i > j
+</script>
+</div>
 <ol>
 <li>
 <p><strong>역행렬</strong>: 상삼각 행렬의 역행렬도 상삼각 행렬이다. 이는 상삼각 행렬이 가지는 독특한 구조적 성질로, 계산의 효율성을 높이는 데 기여한다.</p>
@@ -162,9 +182,14 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 <ol>
 <li><strong>존재성</strong>: 모든 <span class="arithmatex"><span class="MathJax_Preview">m \times n</span><script type="math/tex">m \times n</script></span> 행렬 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{A}</span><script type="math/tex">\mathbf{A}</script></span>는 QR 분해를 갖는다. 즉, <span class="arithmatex"><span class="MathJax_Preview">\mathbf{Q}</span><script type="math/tex">\mathbf{Q}</script></span>와 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{R}</span><script type="math/tex">\mathbf{R}</script></span>가 항상 존재한다.</li>
 </ol>
-<p>$$
-   \mathbf{A} = \mathbf{Q} \mathbf{R}</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+   \mathbf{A} = \mathbf{Q} \mathbf{R}
+</div>
+<script type="math/tex; mode=display">
+   \mathbf{A} = \mathbf{Q} \mathbf{R}
+</script>
+</div>
 <ol>
 <li><strong>유일성</strong>: QR 분해가 유일하기 위해서는 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{R}</span><script type="math/tex">\mathbf{R}</script></span>의 대각 성분이 모두 양수이어야 한다. 이는 분해 과정에서의 자유도를 없애고, 분해의 결과가 독특해짐을 보장한다.</li>
 </ol>
@@ -177,15 +202,25 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 <ol>
 <li><span class="arithmatex"><span class="MathJax_Preview">\mathbf{A}</span><script type="math/tex">\mathbf{A}</script></span>의 첫 번째 열 벡터 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{a}_1</span><script type="math/tex">\mathbf{a}_1</script></span>을 정규화하여 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{q}_1</span><script type="math/tex">\mathbf{q}_1</script></span>을 생성한다.</li>
 </ol>
-<p>$$
-   \mathbf{q}_1 = \frac{\mathbf{a}_1}{|\mathbf{a}_1|}</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+   \mathbf{q}_1 = \frac{\mathbf{a}_1}{\|\mathbf{a}_1\|}
+</div>
+<script type="math/tex; mode=display">
+   \mathbf{q}_1 = \frac{\mathbf{a}_1}{\|\mathbf{a}_1\|}
+</script>
+</div>
 <ol>
 <li>두 번째 열 벡터 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{a}_2</span><script type="math/tex">\mathbf{a}_2</script></span>에 대해, <span class="arithmatex"><span class="MathJax_Preview">\mathbf{q}_1</span><script type="math/tex">\mathbf{q}_1</script></span>에 대해 직교하도록 조정하여 새로운 벡터 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{q}_2</span><script type="math/tex">\mathbf{q}_2</script></span>를 생성한다.</li>
 </ol>
-<p>$$
-   \mathbf{q}_2 = \frac{\mathbf{a}_2 - (\mathbf{q}_1^\top \mathbf{a}_2)\mathbf{q}_1}{|\mathbf{a}_2 - (\mathbf{q}_1^\top \mathbf{a}_2)\mathbf{q}_1|}</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+   \mathbf{q}_2 = \frac{\mathbf{a}_2 - (\mathbf{q}_1^\top \mathbf{a}_2)\mathbf{q}_1}{\|\mathbf{a}_2 - (\mathbf{q}_1^\top \mathbf{a}_2)\mathbf{q}_1\|}
+</div>
+<script type="math/tex; mode=display">
+   \mathbf{q}_2 = \frac{\mathbf{a}_2 - (\mathbf{q}_1^\top \mathbf{a}_2)\mathbf{q}_1}{\|\mathbf{a}_2 - (\mathbf{q}_1^\top \mathbf{a}_2)\mathbf{q}_1\|}
+</script>
+</div>
 <ol>
 <li>이 과정을 반복하여, 모든 열 벡터에 대해 직교화된 벡터 집합 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{Q}</span><script type="math/tex">\mathbf{Q}</script></span>를 구성한다. 마지막으로 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{R}</span><script type="math/tex">\mathbf{R}</script></span>은 각 벡터가 원래 벡터 공간에서 어떤 조합으로 이루어졌는지를 나타내는 성분을 포함한다.</li>
 </ol>

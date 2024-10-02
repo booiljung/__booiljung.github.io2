@@ -85,13 +85,23 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 <h4 id="partial-pivoting">Partial Pivoting</h4>
 <p>Partial pivoting은 각 열에서 절대값이 가장 큰 요소를 사용하여 행을 교환하는 전략이다. 이 방법은 분수의 발생을 최소화하고, LU 분해 과정에서 생성되는 행렬들이 가능한 한 정수로 유지되도록 한다.</p>
 <p>예를 들어, 다음과 같은 행렬을 고려해보겠다:</p>
-<p>$$</p>
-<p>\mathbf{A} = \begin{pmatrix} 2 &amp; 3 &amp; 1 \ 4 &amp; 7 &amp; 5 \ 6 &amp; 9 &amp; 8 \end{pmatrix}</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+\mathbf{A} = \begin{pmatrix} 2 &amp; 3 &amp; 1 \\ 4 &amp; 7 &amp; 5 \\ 6 &amp; 9 &amp; 8 \end{pmatrix}
+</div>
+<script type="math/tex; mode=display">
+\mathbf{A} = \begin{pmatrix} 2 & 3 & 1 \\ 4 & 7 & 5 \\ 6 & 9 & 8 \end{pmatrix}
+</script>
+</div>
 <p>Partial pivoting을 적용하여 첫 번째 열의 요소들 중에서 가장 큰 절대값을 가진 요소를 찾아, 해당 행을 첫 번째 행으로 이동시킨다. 이 경우, 6이 가장 큰 요소이므로 첫 번째와 세 번째 행을 교환한다:</p>
-<p>$$</p>
-<p>\mathbf{P}\mathbf{A} = \begin{pmatrix} 6 &amp; 9 &amp; 8 \ 4 &amp; 7 &amp; 5 \ 2 &amp; 3 &amp; 1 \end{pmatrix}</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+\mathbf{P}\mathbf{A} = \begin{pmatrix} 6 &amp; 9 &amp; 8 \\ 4 &amp; 7 &amp; 5 \\ 2 &amp; 3 &amp; 1 \end{pmatrix}
+</div>
+<script type="math/tex; mode=display">
+\mathbf{P}\mathbf{A} = \begin{pmatrix} 6 & 9 & 8 \\ 4 & 7 & 5 \\ 2 & 3 & 1 \end{pmatrix}
+</script>
+</div>
 <p>이제 이 변환된 행렬에 대해 LU 분해를 진행하면 분수 발생을 최소화할 수 있다.</p>
 <h4 id="complete-pivoting">Complete Pivoting</h4>
 <p>Complete pivoting은 행과 열 모두에서 절대값이 가장 큰 요소를 찾아 교환하는 전략이다. 이 방법은 Partial pivoting보다 분수를 더 효과적으로 억제할 수 있지만, 계산량이 더 많아진다. Complete pivoting은 주로 매우 정밀한 계산이 요구되거나, 분수 발생이 시스템의 안정성에 큰 영향을 미칠 수 있는 경우에 사용된다.</p>
@@ -99,9 +109,14 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 <p>정수 행렬에 대한 LU 분해를 수행하는 알고리즘은 일반 LU 분해 알고리즘과 기본적으로 동일하지만, 중간 계산 단계에서 분수를 방지하기 위한 추가적인 조치가 포함된다.</p>
 <h4 id="doolittle">Doolittle 알고리즘의 수정</h4>
 <p>Doolittle 알고리즘은 행렬을 하삼각 행렬 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{L}</span><script type="math/tex">\mathbf{L}</script></span>과 상삼각 행렬 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{U}</span><script type="math/tex">\mathbf{U}</script></span>로 분해하는 고전적인 방법이다. 정수 행렬의 경우, 이 알고리즘을 사용할 때 분수의 발생을 억제하기 위해 각 단계에서 계산된 중간 값을 최대 공약수(GCD)를 통해 정수로 환원하는 절차를 추가한다.</p>
-<p>$$</p>
-<p>\mathbf{A} = \mathbf{L} \mathbf{U}</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+\mathbf{A} = \mathbf{L} \mathbf{U}
+</div>
+<script type="math/tex; mode=display">
+\mathbf{A} = \mathbf{L} \mathbf{U}
+</script>
+</div>
 <p>이때 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{L}</span><script type="math/tex">\mathbf{L}</script></span>과 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{U}</span><script type="math/tex">\mathbf{U}</script></span>의 요소는 GCD를 통해 조정된 정수 값이 된다.</p>
 <h4 id="crout">Crout 알고리즘의 수정</h4>
 <p>Crout 알고리즘 역시 정수 행렬의 LU 분해에 적용할 수 있다. Crout 알고리즘에서는 상삼각 행렬 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{U}</span><script type="math/tex">\mathbf{U}</script></span>의 주대각 성분이 1로 유지되며, <span class="arithmatex"><span class="MathJax_Preview">\mathbf{L}</span><script type="math/tex">\mathbf{L}</script></span> 행렬은 하삼각 행렬로 유지된다. 이 과정에서 역시 중간 계산 단계에서 발생할 수 있는 분수들을 정수로 환원하는 과정이 추가된다.</p>
@@ -117,9 +132,14 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 <h4 id="modular-arithmetic">Modular Arithmetic의 활용</h4>
 <p>Overflow와 Underflow 문제를 해결하기 위한 한 가지 방법은 Modular Arithmetic을 사용하는 것이다. 이는 특히 암호학이나 코딩 이론에서 정수 행렬을 다룰 때 유용하다. Modular Arithmetic을 사용하면 연산의 결과가 특정 모듈로 제한되기 때문에, Overflow를 피할 수 있다.</p>
 <p>예를 들어, 모듈러스 <span class="arithmatex"><span class="MathJax_Preview">m</span><script type="math/tex">m</script></span>에 대해 다음과 같은 연산을 고려할 수 있다:</p>
-<p>$$</p>
-<p>\mathbf{A} \mod m = \mathbf{L} \mathbf{U} \mod m</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+\mathbf{A} \mod m = \mathbf{L} \mathbf{U} \mod m
+</div>
+<script type="math/tex; mode=display">
+\mathbf{A} \mod m = \mathbf{L} \mathbf{U} \mod m
+</script>
+</div>
 <p>이 방법은 LU 분해가 모듈러스 <span class="arithmatex"><span class="MathJax_Preview">m</span><script type="math/tex">m</script></span> 내에서 수행되도록 하여, 큰 수에 대한 계산을 효과적으로 다룰 수 있게 해준다.</p>
 <h3 id="lu_3">정수 행렬 LU 분해의 특수 알고리즘</h3>
 <p>정수 행렬에 특화된 LU 분해 알고리즘은 일반적인 LU 분해 알고리즘과는 다르게 설계된다. 이러한 알고리즘들은 정수 연산의 특징을 최대한 활용하며, 정수 범위 내에서 안정적이고 효율적인 분해를 목표로 한다.</p>

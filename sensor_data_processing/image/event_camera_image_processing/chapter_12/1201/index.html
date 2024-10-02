@@ -128,9 +128,14 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 <p><strong>옵티컬 플로우 계산</strong>: 옵티컬 플로우는 물체의 움직임을 추정하는 데 사용되는 기법으로, 이벤트 카메라의 빠른 시간 해상도 덕분에 매우 정밀한 속도 추정이 가능한다. 특정 물체의 움직임 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{v}</span><script type="math/tex">\mathbf{v}</script></span>는 다음과 같이 표현될 수 있다.</p>
 </li>
 </ol>
-<p>$$</p>
-<p>\mathbf{v} = \frac{\mathbf{x}(t + \Delta t) - \mathbf{x}(t)}{\Delta t}</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+\mathbf{v} = \frac{\mathbf{x}(t + \Delta t) - \mathbf{x}(t)}{\Delta t}
+</div>
+<script type="math/tex; mode=display">
+\mathbf{v} = \frac{\mathbf{x}(t + \Delta t) - \mathbf{x}(t)}{\Delta t}
+</script>
+</div>
 <p>여기서 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{x}(t)</span><script type="math/tex">\mathbf{x}(t)</script></span>는 시간 <span class="arithmatex"><span class="MathJax_Preview">t</span><script type="math/tex">t</script></span>에서의 물체 위치, <span class="arithmatex"><span class="MathJax_Preview">\Delta t</span><script type="math/tex">\Delta t</script></span>는 시간 차이를 의미한다.</p>
 <ol>
 <li>
@@ -145,9 +150,14 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 <ol>
 <li><strong>시간 기반 충돌 예측</strong>: 이벤트 카메라에서 발생하는 이벤트를 시간 축에 따라 분석하면 물체가 차량의 경로에 얼마나 빠르게 접근하는지 계산할 수 있다. 이를 통해 차량은 물체와의 충돌 가능성을 조기에 예측할 수 있다. 충돌 시간 <span class="arithmatex"><span class="MathJax_Preview">T_c</span><script type="math/tex">T_c</script></span>는 다음과 같이 계산할 수 있다:</li>
 </ol>
-<p>$$</p>
-<p>T_c = \frac{d}{|\mathbf{v}_{\text{rel}}|}</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+T_c = \frac{d}{|\mathbf{v}_{\text{rel}}|}
+</div>
+<script type="math/tex; mode=display">
+T_c = \frac{d}{|\mathbf{v}_{\text{rel}}|}
+</script>
+</div>
 <p>여기서 <span class="arithmatex"><span class="MathJax_Preview">d</span><script type="math/tex">d</script></span>는 차량과 물체 간의 거리, <span class="arithmatex"><span class="MathJax_Preview">\mathbf{v}_{\text{rel}}</span><script type="math/tex">\mathbf{v}_{\text{rel}}</script></span>은 물체의 상대 속도이다.</p>
 <ol>
 <li>

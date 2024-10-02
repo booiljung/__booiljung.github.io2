@@ -129,43 +129,76 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 <p>경로 계획을 구현하기 위해 다양한 알고리즘이 사용된다. 대표적인 알고리즘으로는 A* 알고리즘, Dijkstra 알고리즘, RRT(Rapidly-exploring Random Tree) 등이 있다.</p>
 <h4 id="a">A* 알고리즘</h4>
 <p>A* 알고리즘은 휴리스틱 함수를 사용하여 최적의 경로를 효율적으로 찾는 알고리즘이다. 이 알고리즘은 다음과 같은 식으로 동작한다:</p>
-<p>$$</p>
-<p>f(n) = g(n) + h(n)</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+f(n) = g(n) + h(n)
+</div>
+<script type="math/tex; mode=display">
+f(n) = g(n) + h(n)
+</script>
+</div>
 <p>여기서 <span class="arithmatex"><span class="MathJax_Preview">f(n)</span><script type="math/tex">f(n)</script></span>은 노드 <span class="arithmatex"><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span>에서의 총 예상 비용, <span class="arithmatex"><span class="MathJax_Preview">g(n)</span><script type="math/tex">g(n)</script></span>은 시작 노드에서 <span class="arithmatex"><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span>까지의 실제 비용, <span class="arithmatex"><span class="MathJax_Preview">h(n)</span><script type="math/tex">h(n)</script></span>은 <span class="arithmatex"><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span>에서 목표 노드까지의 휴리스틱 비용이다.</p>
 <h4 id="dijkstra">Dijkstra 알고리즘</h4>
 <p>Dijkstra 알고리즘은 모든 노드에 대한 최단 경로를 찾는 알고리즘으로, 휴리스틱을 사용하지 않는다. 이 알고리즘은 그래프의 각 노드를 방문하며 최단 경로를 업데이트한다.</p>
-<p>$$</p>
-<p>d(v) = \min { d(v), d(u) + w(u, v) }</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+d(v) = \min \{ d(v), d(u) + w(u, v) \}
+</div>
+<script type="math/tex; mode=display">
+d(v) = \min \{ d(v), d(u) + w(u, v) \}
+</script>
+</div>
 <p>여기서 <span class="arithmatex"><span class="MathJax_Preview">d(v)</span><script type="math/tex">d(v)</script></span>는 노드 <span class="arithmatex"><span class="MathJax_Preview">v</span><script type="math/tex">v</script></span>까지의 현재 최단 거리, <span class="arithmatex"><span class="MathJax_Preview">u</span><script type="math/tex">u</script></span>는 현재 탐색 중인 노드, <span class="arithmatex"><span class="MathJax_Preview">w(u, v)</span><script type="math/tex">w(u, v)</script></span>는 노드 <span class="arithmatex"><span class="MathJax_Preview">u</span><script type="math/tex">u</script></span>에서 <span class="arithmatex"><span class="MathJax_Preview">v</span><script type="math/tex">v</script></span>로 가는 간선의 가중치이다.</p>
 <h4 id="rrt">RRT 알고리즘</h4>
 <p>RRT 알고리즘은 고차원 공간에서의 경로 계획에 적합한 랜덤 샘플링 기반의 알고리즘이다. 이 알고리즘은 빠르게 탐색 공간을 커버하며 복잡한 환경에서도 효과적으로 경로를 찾을 수 있다.</p>
-<p>$$</p>
-<p>\text{Sample a random point } \mathbf{x}<em>{rand} \
-\text{Find the nearest node } \mathbf{x}</em>{nearest} \
-\text{Steer from } \mathbf{x}<em>{nearest} \text{ towards } \mathbf{x}</em>{rand} \
-\text{Add the new node to the tree if collision-free}</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+\text{Sample a random point } \mathbf{x}_{rand} \\
+\text{Find the nearest node } \mathbf{x}_{nearest} \\
+\text{Steer from } \mathbf{x}_{nearest} \text{ towards } \mathbf{x}_{rand} \\
+\text{Add the new node to the tree if collision-free}
+</div>
+<script type="math/tex; mode=display">
+\text{Sample a random point } \mathbf{x}_{rand} \\
+\text{Find the nearest node } \mathbf{x}_{nearest} \\
+\text{Steer from } \mathbf{x}_{nearest} \text{ towards } \mathbf{x}_{rand} \\
+\text{Add the new node to the tree if collision-free}
+</script>
+</div>
 <h3 id="_4">이동 제어 알고리즘</h3>
 <p>경로가 계획된 후, 로봇이 그 경로를 정확히 따를 수 있도록 이동 제어 알고리즘이 필요하다. 대표적인 이동 제어 알고리즘으로는 PID 제어, 선형 보간법, 스플라인 보간법 등이 있다.</p>
 <h4 id="pid">PID 제어</h4>
 <p>PID(Proportional-Integral-Derivative) 제어는 현재 오차, 오차의 적분, 오차의 미분을 기반으로 제어 입력을 계산한다.</p>
-<p>$$</p>
-<p>u(t) = K_p e(t) + K_i \int_{0}^{t} e(\tau) d\tau + K_d \frac{d e(t)}{dt}</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+u(t) = K_p e(t) + K_i \int_{0}^{t} e(\tau) d\tau + K_d \frac{d e(t)}{dt}
+</div>
+<script type="math/tex; mode=display">
+u(t) = K_p e(t) + K_i \int_{0}^{t} e(\tau) d\tau + K_d \frac{d e(t)}{dt}
+</script>
+</div>
 <p>여기서 <span class="arithmatex"><span class="MathJax_Preview">u(t)</span><script type="math/tex">u(t)</script></span>는 제어 입력, <span class="arithmatex"><span class="MathJax_Preview">e(t)</span><script type="math/tex">e(t)</script></span>는 현재 오차, <span class="arithmatex"><span class="MathJax_Preview">K_p</span><script type="math/tex">K_p</script></span>, <span class="arithmatex"><span class="MathJax_Preview">K_i</span><script type="math/tex">K_i</script></span>, <span class="arithmatex"><span class="MathJax_Preview">K_d</span><script type="math/tex">K_d</script></span>는 각각 비례, 적분, 미분 게인이다.</p>
 <h4 id="_5">선형 보간법</h4>
 <p>선형 보간법은 두 점 사이를 직선으로 연결하여 중간 값을 계산하는 방법이다. 이는 간단하지만 복잡한 경로에는 적합하지 않을 수 있다.</p>
-<p>$$</p>
-<p>\mathbf{x}(t) = \mathbf{x}_0 + t (\mathbf{x}_1 - \mathbf{x}_0)</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+\mathbf{x}(t) = \mathbf{x}_0 + t (\mathbf{x}_1 - \mathbf{x}_0)
+</div>
+<script type="math/tex; mode=display">
+\mathbf{x}(t) = \mathbf{x}_0 + t (\mathbf{x}_1 - \mathbf{x}_0)
+</script>
+</div>
 <p>여기서 <span class="arithmatex"><span class="MathJax_Preview">t</span><script type="math/tex">t</script></span>는 0과 1 사이의 매개변수이다.</p>
 <h4 id="_6">스플라인 보간법</h4>
 <p>스플라인 보간법은 여러 점을 매끄럽게 연결하는 곡선을 생성하여 경로를 생성한다. 이는 자연스러운 움직임을 보장하며 복잡한 경로에도 적합한다.</p>
-<p>$$</p>
-<p>\mathbf{x}(t) = a + bt + ct^2 + dt^3</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+\mathbf{x}(t) = a + bt + ct^2 + dt^3
+</div>
+<script type="math/tex; mode=display">
+\mathbf{x}(t) = a + bt + ct^2 + dt^3
+</script>
+</div>
 <p>여기서 <span class="arithmatex"><span class="MathJax_Preview">a</span><script type="math/tex">a</script></span>, <span class="arithmatex"><span class="MathJax_Preview">b</span><script type="math/tex">b</script></span>, <span class="arithmatex"><span class="MathJax_Preview">c</span><script type="math/tex">c</script></span>, <span class="arithmatex"><span class="MathJax_Preview">d</span><script type="math/tex">d</script></span>는 스플라인의 계수이다.</p>
 <h3 id="unity">Unity에서의 경로 계획 구현</h3>
 <p>Unity에서 경로 계획 알고리즘을 구현하려면 먼저 환경을 적절하게 모델링하고, 알고리즘을 적용할 수 있는 데이터 구조를 설정해야 한다. 다음은 Unity에서 A* 알고리즘을 예로 들어 경로 계획을 구현하는 과정이다.</p>

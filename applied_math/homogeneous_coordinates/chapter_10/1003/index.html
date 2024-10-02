@@ -130,21 +130,36 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 <ol>
 <li><strong>평행 이동</strong>: 새로운 회전 중심 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{C}</span><script type="math/tex">\mathbf{C}</script></span>를 원점으로 평행 이동한다. 이는 점 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{P} = (P_x, P_y)</span><script type="math/tex">\mathbf{P} = (P_x, P_y)</script></span>에 대해,</li>
 </ol>
-<p>$$</p>
-<p>\mathbf{P}_{trans} = \mathbf{P} - \mathbf{C} 
-$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+\mathbf{P}_{trans} = \mathbf{P} - \mathbf{C} 
+</div>
+<script type="math/tex; mode=display">
+\mathbf{P}_{trans} = \mathbf{P} - \mathbf{C} 
+</script>
+</div>
 <ol>
 <li><strong>회전 변환</strong>: 원점 중심의 회전 행렬 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{R}(\theta)</span><script type="math/tex">\mathbf{R}(\theta)</script></span>를 적용한다.</li>
 </ol>
-<p>$$</p>
-<p>\mathbf{P}<em>{rot} = \mathbf{R}(\theta) \mathbf{P}</em>{trans}
-$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+\mathbf{P}_{rot} = \mathbf{R}(\theta) \mathbf{P}_{trans}
+</div>
+<script type="math/tex; mode=display">
+\mathbf{P}_{rot} = \mathbf{R}(\theta) \mathbf{P}_{trans}
+</script>
+</div>
 <ol>
 <li><strong>재평행 이동</strong>: 원래의 위치로 이동한다.</li>
 </ol>
-<p>$$</p>
-<p>\mathbf{P'} = \mathbf{P}_{rot} + \mathbf{C}
-$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+\mathbf{P'} = \mathbf{P}_{rot} + \mathbf{C}
+</div>
+<script type="math/tex; mode=display">
+\mathbf{P'} = \mathbf{P}_{rot} + \mathbf{C}
+</script>
+</div>
 <p>최종적으로, 한 점 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{P}</span><script type="math/tex">\mathbf{P}</script></span>를 중심 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{C}</span><script type="math/tex">\mathbf{C}</script></span>를 기준으로 회전하는 행렬은 다음과 같이 표현할 수 있다.</p>
 <div class="arithmatex">
 <div class="MathJax_Preview">
@@ -171,13 +186,22 @@ $$</p>
 <ol>
 <li><strong>회전 변환</strong>:</li>
 </ol>
-<p>$$</p>
-<p>\mathbf{R}\left( \frac{\pi}{2} \right) = 
+<div class="arithmatex">
+<div class="MathJax_Preview">
+\mathbf{R}\left( \frac{\pi}{2} \right) = 
 \begin{bmatrix}
-0 &amp; -1 \
+0 &amp; -1 \\
 1 &amp; 0
 \end{bmatrix}
-$$</p>
+</div>
+<script type="math/tex; mode=display">
+\mathbf{R}\left( \frac{\pi}{2} \right) = 
+\begin{bmatrix}
+0 & -1 \\
+1 & 0
+\end{bmatrix}
+</script>
+</div>
 <div class="arithmatex">
 <div class="MathJax_Preview">
 \mathbf{P}_\text{rot} = 
@@ -215,9 +239,14 @@ $$</p>
 <ol>
 <li><strong>재평행 이동</strong>:</li>
 </ol>
-<p>$$</p>
-<p>\mathbf{P'} = (-1, 0) + (1, 1) = (0, 1)
-$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+\mathbf{P'} = (-1, 0) + (1, 1) = (0, 1)
+</div>
+<script type="math/tex; mode=display">
+\mathbf{P'} = (-1, 0) + (1, 1) = (0, 1)
+</script>
+</div>
 <p>따라서, 점 <span class="arithmatex"><span class="MathJax_Preview">(1, 2)</span><script type="math/tex">(1, 2)</script></span>는 중심 <span class="arithmatex"><span class="MathJax_Preview">(1, 1)</span><script type="math/tex">(1, 1)</script></span>을 기준으로 90도 회전하면 점 <span class="arithmatex"><span class="MathJax_Preview">(0, 1)</span><script type="math/tex">(0, 1)</script></span>이 된다.</p>
 <h3 id="_6">예제 연습문제</h3>
 <p>예제를 풀어보면서 이해도를 높여봅시다.</p>
@@ -256,17 +285,30 @@ $$</p>
 <ol>
 <li><strong>회전 변환</strong>:</li>
 </ol>
-<p>$$</p>
-<p>\mathbf{R}\left( \frac{\pi}{4} \right) = 
+<div class="arithmatex">
+<div class="MathJax_Preview">
+\mathbf{R}\left( \frac{\pi}{4} \right) = 
 \begin{bmatrix}
-\cos \frac{\pi}{4} &amp; -\sin \frac{\pi}{4} \
+\cos \frac{\pi}{4} &amp; -\sin \frac{\pi}{4} \\
 \sin \frac{\pi}{4} &amp; \cos \frac{\pi}{4}
 \end{bmatrix} = 
 \begin{bmatrix}
-\frac{\sqrt{2}}{2} &amp; -\frac{\sqrt{2}}{2} \
+\frac{\sqrt{2}}{2} &amp; -\frac{\sqrt{2}}{2} \\
 \frac{\sqrt{2}}{2} &amp; \frac{\sqrt{2}}{2}
 \end{bmatrix}
-$$</p>
+</div>
+<script type="math/tex; mode=display">
+\mathbf{R}\left( \frac{\pi}{4} \right) = 
+\begin{bmatrix}
+\cos \frac{\pi}{4} & -\sin \frac{\pi}{4} \\
+\sin \frac{\pi}{4} & \cos \frac{\pi}{4}
+\end{bmatrix} = 
+\begin{bmatrix}
+\frac{\sqrt{2}}{2} & -\frac{\sqrt{2}}{2} \\
+\frac{\sqrt{2}}{2} & \frac{\sqrt{2}}{2}
+\end{bmatrix}
+</script>
+</div>
 <div class="arithmatex">
 <div class="MathJax_Preview">
 \mathbf{P}_\text{rot} = 
@@ -304,9 +346,14 @@ $$</p>
 <ol>
 <li><strong>재평행 이동</strong>:</li>
 </ol>
-<p>$$</p>
-<p>\mathbf{P'} = (0, 2\sqrt{2}) + (2, 3) = (2, 3 + 2\sqrt{2})
-$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+\mathbf{P'} = (0, 2\sqrt{2}) + (2, 3) = (2, 3 + 2\sqrt{2})
+</div>
+<script type="math/tex; mode=display">
+\mathbf{P'} = (0, 2\sqrt{2}) + (2, 3) = (2, 3 + 2\sqrt{2})
+</script>
+</div>
 <p>따라서, 점 <span class="arithmatex"><span class="MathJax_Preview">(4, 5)</span><script type="math/tex">(4, 5)</script></span>는 중심 <span class="arithmatex"><span class="MathJax_Preview">(2, 3)</span><script type="math/tex">(2, 3)</script></span>을 기준으로 45도 회전하면 점 <span class="arithmatex"><span class="MathJax_Preview">(2, 3 + 2\sqrt{2})</span><script type="math/tex">(2, 3 + 2\sqrt{2})</script></span>이 된다.</p>
 <h4 id="2">문제 2 풀이</h4>
 <ol>
@@ -323,13 +370,22 @@ $$</p>
 <ol>
 <li><strong>회전 변환</strong>:</li>
 </ol>
-<p>$$</p>
-<p>\mathbf{R}\left( \pi \right) =
+<div class="arithmatex">
+<div class="MathJax_Preview">
+\mathbf{R}\left( \pi \right) =
 \begin{bmatrix}
--1 &amp; 0 \
+-1 &amp; 0 \\
 0 &amp; -1
 \end{bmatrix} 
-$$</p>
+</div>
+<script type="math/tex; mode=display">
+\mathbf{R}\left( \pi \right) =
+\begin{bmatrix}
+-1 & 0 \\
+0 & -1
+\end{bmatrix} 
+</script>
+</div>
 <div class="arithmatex">
 <div class="MathJax_Preview">
 \mathbf{P}_\text{rot} = 
@@ -365,9 +421,14 @@ $$</p>
 <ol>
 <li><strong>재평행 이동</strong>:</li>
 </ol>
-<p>$$</p>
-<p>\mathbf{P'} = (-3, -2) + (0, 2) = (-3, 0)
-$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+\mathbf{P'} = (-3, -2) + (0, 2) = (-3, 0)
+</div>
+<script type="math/tex; mode=display">
+\mathbf{P'} = (-3, -2) + (0, 2) = (-3, 0)
+</script>
+</div>
 <p>따라서, 점 <span class="arithmatex"><span class="MathJax_Preview">(3, 4)</span><script type="math/tex">(3, 4)</script></span>는 중심 <span class="arithmatex"><span class="MathJax_Preview">(0, 2)</span><script type="math/tex">(0, 2)</script></span>을 기준으로 180도 회전하면 점 <span class="arithmatex"><span class="MathJax_Preview">(-3, 0)</span><script type="math/tex">(-3, 0)</script></span>이 된다.</p>
 <p>지금까지 회전 중심 변경과 관련한 내용을 다루어보았다. 이와 같은 수학적 변환을 통해 보다 복잡하고 정확한 회전 변환을 구현할 수 있다.</p>
 

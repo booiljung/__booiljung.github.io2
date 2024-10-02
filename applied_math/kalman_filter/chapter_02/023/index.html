@@ -180,9 +180,14 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 <li><strong>가법성 (Additivity)</strong>: 
    두 입력 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{u}_1(t)</span><script type="math/tex">\mathbf{u}_1(t)</script></span>와 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{u}_2(t)</span><script type="math/tex">\mathbf{u}_2(t)</script></span>에 대해 시스템이 선형이라면, 그 합에 대한 출력은 개별 출력의 합과 동일하다:</li>
 </ol>
-<p>$$
-   \mathcal{S}{\mathbf{u}_1(t) + \mathbf{u}_2(t)} = \mathcal{S}{\mathbf{u}_1(t)} + \mathcal{S}{\mathbf{u}_2(t)}</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+   \mathcal{S}\{\mathbf{u}_1(t) + \mathbf{u}_2(t)\} = \mathcal{S}\{\mathbf{u}_1(t)\} + \mathcal{S}\{\mathbf{u}_2(t)\}
+</div>
+<script type="math/tex; mode=display">
+   \mathcal{S}\{\mathbf{u}_1(t) + \mathbf{u}_2(t)\} = \mathcal{S}\{\mathbf{u}_1(t)\} + \mathcal{S}\{\mathbf{u}_2(t)\}
+</script>
+</div>
 <ol>
 <li><strong>동차성 (Homogeneity)</strong>:
    입력이 어떤 스칼라 상수 <span class="arithmatex"><span class="MathJax_Preview">c</span><script type="math/tex">c</script></span>로 곱해질 때, 출력도 동일한 상수로 곱해진다:</li>
@@ -328,9 +333,14 @@ H(s) = \frac{Y(s)}{U(s)}
 </script>
 </div>
 <p>여기서 <span class="arithmatex"><span class="MathJax_Preview">\Phi(t)</span><script type="math/tex">\Phi(t)</script></span>는 상태 천이 행렬(State Transition Matrix)로, 다음과 같이 정의된다:</p>
-<p>$$
-   \Phi(t) = e^{At}</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+   \Phi(t) = e^{At}
+</div>
+<script type="math/tex; mode=display">
+   \Phi(t) = e^{At}
+</script>
+</div>
 <p>이는 시스템이 외부 입력이 없을 때, 시간에 따라 어떻게 변하는지를 나타낸다.</p>
 <ol>
 <li><strong>강제 응답</strong>: 외부 입력 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{u}(t)</span><script type="math/tex">\mathbf{u}(t)</script></span>에 의해 유도되는 해

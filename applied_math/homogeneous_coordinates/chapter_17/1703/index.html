@@ -124,34 +124,64 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 </ul>
 </li>
 </ul>
-<p>$$
+<div class="arithmatex">
+<div class="MathJax_Preview">
     \mathbf{R}_x(\theta) = \begin{bmatrix}
-1 &amp; 0 &amp; 0 &amp; 0 \
-0 &amp; \cos \theta &amp; -\sin \theta &amp; 0 \
-0 &amp; \sin \theta &amp; \cos \theta &amp; 0 \
+1 &amp; 0 &amp; 0 &amp; 0 \\
+0 &amp; \cos \theta &amp; -\sin \theta &amp; 0 \\
+0 &amp; \sin \theta &amp; \cos \theta &amp; 0 \\
 0 &amp; 0 &amp; 0 &amp; 1
-    \end{bmatrix}</p>
-<p>$$</p>
+    \end{bmatrix}
+</div>
+<script type="math/tex; mode=display">
+    \mathbf{R}_x(\theta) = \begin{bmatrix}
+1 & 0 & 0 & 0 \\
+0 & \cos \theta & -\sin \theta & 0 \\
+0 & \sin \theta & \cos \theta & 0 \\
+0 & 0 & 0 & 1
+    \end{bmatrix}
+</script>
+</div>
 <pre><code>- y축을 중심으로:
 </code></pre>
-<p>$$
+<div class="arithmatex">
+<div class="MathJax_Preview">
     \mathbf{R}_y(\theta) = \begin{bmatrix}
-\cos \theta &amp; 0 &amp; \sin \theta &amp; 0 \
-0 &amp; 1 &amp; 0 &amp; 0 \
--\sin \theta &amp; 0 &amp; \cos \theta &amp; 0 \
+\cos \theta &amp; 0 &amp; \sin \theta &amp; 0 \\
+0 &amp; 1 &amp; 0 &amp; 0 \\
+-\sin \theta &amp; 0 &amp; \cos \theta &amp; 0 \\
 0 &amp; 0 &amp; 0 &amp; 1
-    \end{bmatrix}</p>
-<p>$$</p>
+    \end{bmatrix}
+</div>
+<script type="math/tex; mode=display">
+    \mathbf{R}_y(\theta) = \begin{bmatrix}
+\cos \theta & 0 & \sin \theta & 0 \\
+0 & 1 & 0 & 0 \\
+-\sin \theta & 0 & \cos \theta & 0 \\
+0 & 0 & 0 & 1
+    \end{bmatrix}
+</script>
+</div>
 <pre><code>- z축을 중심으로:
 </code></pre>
-<p>$$
+<div class="arithmatex">
+<div class="MathJax_Preview">
     \mathbf{R}_z(\theta) = \begin{bmatrix}
-\cos \theta &amp; -\sin \theta &amp; 0 &amp; 0 \
-\sin \theta &amp; \cos \theta &amp; 0 &amp; 0 \
-0 &amp; 0 &amp; 1 &amp; 0 \
+\cos \theta &amp; -\sin \theta &amp; 0 &amp; 0 \\
+\sin \theta &amp; \cos \theta &amp; 0 &amp; 0 \\
+0 &amp; 0 &amp; 1 &amp; 0 \\
 0 &amp; 0 &amp; 0 &amp; 1
-    \end{bmatrix}</p>
-<p>$$</p>
+    \end{bmatrix}
+</div>
+<script type="math/tex; mode=display">
+    \mathbf{R}_z(\theta) = \begin{bmatrix}
+\cos \theta & -\sin \theta & 0 & 0 \\
+\sin \theta & \cos \theta & 0 & 0 \\
+0 & 0 & 1 & 0 \\
+0 & 0 & 0 & 1
+    \end{bmatrix}
+</script>
+</div>
 <ul>
 <li><strong>스케일링 변환 (Scaling):</strong> 객체의 크기 조정.</li>
 </ul>
@@ -180,14 +210,24 @@ s_x & 0 & 0 & 0 \\
 - <strong>카메라 회전 (Camera Rotation):</strong> 카메라 방향을 회전.</p>
 <p>이는 일반적으로 다음과 같은 단계로 구성된다:
 1. <strong>카메라의 위치를 원점으로 이동:</strong> </p>
-<p>$$
+<div class="arithmatex">
+<div class="MathJax_Preview">
     \mathbf{T}(-\mathbf{e}) = \begin{bmatrix}
-1 &amp; 0 &amp; 0 &amp; -e_x \
-0 &amp; 1 &amp; 0 &amp; -e_y \
-0 &amp; 0 &amp; 1 &amp; -e_z \
+1 &amp; 0 &amp; 0 &amp; -e_x \\
+0 &amp; 1 &amp; 0 &amp; -e_y \\
+0 &amp; 0 &amp; 1 &amp; -e_z \\
 0 &amp; 0 &amp; 0 &amp; 1 
-    \end{bmatrix}</p>
-<p>$$</p>
+    \end{bmatrix}
+</div>
+<script type="math/tex; mode=display">
+    \mathbf{T}(-\mathbf{e}) = \begin{bmatrix}
+1 & 0 & 0 & -e_x \\
+0 & 1 & 0 & -e_y \\
+0 & 0 & 1 & -e_z \\
+0 & 0 & 0 & 1 
+    \end{bmatrix}
+</script>
+</div>
 <pre><code>여기서 $\mathbf{e} = (e_x, e_y, e_z)$는 카메라 위치를 나타낸다.
 </code></pre>
 <ol>
@@ -218,26 +258,46 @@ s_x & 0 & 0 & 0 \\
 <ul>
 <li><strong>직교 투영행렬:</strong></li>
 </ul>
-<p>$$
+<div class="arithmatex">
+<div class="MathJax_Preview">
     \mathbf{P}_{ortho} = \begin{bmatrix}
-2/(r - l) &amp; 0 &amp; 0 &amp; -(r + l)/(r - l) \
-0 &amp; 2/(t - b) &amp; 0 &amp; -(t + b)/(t - b) \
-0 &amp; 0 &amp; -2/(f - n) &amp; -(f + n)/(f - n) \
+2/(r - l) &amp; 0 &amp; 0 &amp; -(r + l)/(r - l) \\
+0 &amp; 2/(t - b) &amp; 0 &amp; -(t + b)/(t - b) \\
+0 &amp; 0 &amp; -2/(f - n) &amp; -(f + n)/(f - n) \\
 0 &amp; 0 &amp; 0 &amp; 1
-    \end{bmatrix}</p>
-<p>$$</p>
+    \end{bmatrix}
+</div>
+<script type="math/tex; mode=display">
+    \mathbf{P}_{ortho} = \begin{bmatrix}
+2/(r - l) & 0 & 0 & -(r + l)/(r - l) \\
+0 & 2/(t - b) & 0 & -(t + b)/(t - b) \\
+0 & 0 & -2/(f - n) & -(f + n)/(f - n) \\
+0 & 0 & 0 & 1
+    \end{bmatrix}
+</script>
+</div>
 <p>여기서 <span class="arithmatex"><span class="MathJax_Preview">l, r, b, t, n, f</span><script type="math/tex">l, r, b, t, n, f</script></span>는 각각 좌, 우, 하, 상, 전방, 후방 절단면이다.</p>
 <ul>
 <li><strong>원근 투영행렬:</strong></li>
 </ul>
-<p>$$
+<div class="arithmatex">
+<div class="MathJax_Preview">
     \mathbf{P}_{perspective} = \begin{bmatrix}
-\frac{2n}{r - l} &amp; 0 &amp; \frac{r + l}{r - l} &amp; 0 \
-0 &amp; \frac{2n}{t - b} &amp; \frac{t + b}{t - b} &amp; 0 \
-0 &amp; 0 &amp; -\frac{f + n}{f - n} &amp; -\frac{2fn}{f - n} \
+\frac{2n}{r - l} &amp; 0 &amp; \frac{r + l}{r - l} &amp; 0 \\
+0 &amp; \frac{2n}{t - b} &amp; \frac{t + b}{t - b} &amp; 0 \\
+0 &amp; 0 &amp; -\frac{f + n}{f - n} &amp; -\frac{2fn}{f - n} \\
 0 &amp; 0 &amp; -1 &amp; 0
-    \end{bmatrix}</p>
-<p>$$</p>
+    \end{bmatrix}
+</div>
+<script type="math/tex; mode=display">
+    \mathbf{P}_{perspective} = \begin{bmatrix}
+\frac{2n}{r - l} & 0 & \frac{r + l}{r - l} & 0 \\
+0 & \frac{2n}{t - b} & \frac{t + b}{t - b} & 0 \\
+0 & 0 & -\frac{f + n}{f - n} & -\frac{2fn}{f - n} \\
+0 & 0 & -1 & 0
+    \end{bmatrix}
+</script>
+</div>
 <p>여기서 <span class="arithmatex"><span class="MathJax_Preview">n, f</span><script type="math/tex">n, f</script></span>는 각각 앞쪽과 뒤쪽 평면과의 거리이다.</p>
 <h3 id="homogeneous-coordinates">동차 좌표계 (Homogeneous Coordinates)</h3>
 <p>동차 좌표계는 변환 행렬을 사용하여 기하학적 변환을 쉽게 처리할 수 있도록 하는 방법이다. 이는 3D 공간의 점(P)를 4D 공간의 벡터로 표현함으로써 가능해진다.</p>
@@ -276,34 +336,64 @@ s_x & 0 & 0 & 0 \\
 </ul>
 </li>
 </ol>
-<p>$$
+<div class="arithmatex">
+<div class="MathJax_Preview">
     \mathbf{R}_x(\theta) = \begin{bmatrix}
-1 &amp; 0 &amp; 0 &amp; 0 \
-0 &amp; \cos \theta &amp; -\sin \theta &amp; 0 \
-0 &amp; \sin \theta &amp; \cos \theta &amp; 0 \
+1 &amp; 0 &amp; 0 &amp; 0 \\
+0 &amp; \cos \theta &amp; -\sin \theta &amp; 0 \\
+0 &amp; \sin \theta &amp; \cos \theta &amp; 0 \\
 0 &amp; 0 &amp; 0 &amp; 1
-    \end{bmatrix}</p>
-<p>$$</p>
+    \end{bmatrix}
+</div>
+<script type="math/tex; mode=display">
+    \mathbf{R}_x(\theta) = \begin{bmatrix}
+1 & 0 & 0 & 0 \\
+0 & \cos \theta & -\sin \theta & 0 \\
+0 & \sin \theta & \cos \theta & 0 \\
+0 & 0 & 0 & 1
+    \end{bmatrix}
+</script>
+</div>
 <pre><code>- y축을 중심으로:
 </code></pre>
-<p>$$
+<div class="arithmatex">
+<div class="MathJax_Preview">
     \mathbf{R}_y(\theta) = \begin{bmatrix}
-\cos \theta &amp; 0 &amp; \sin \theta &amp; 0 \
-0 &amp; 1 &amp; 0 &amp; 0 \
--\sin \theta &amp; 0 &amp; \cos \theta &amp; 0 \
+\cos \theta &amp; 0 &amp; \sin \theta &amp; 0 \\
+0 &amp; 1 &amp; 0 &amp; 0 \\
+-\sin \theta &amp; 0 &amp; \cos \theta &amp; 0 \\
 0 &amp; 0 &amp; 0 &amp; 1
-    \end{bmatrix}</p>
-<p>$$</p>
+    \end{bmatrix}
+</div>
+<script type="math/tex; mode=display">
+    \mathbf{R}_y(\theta) = \begin{bmatrix}
+\cos \theta & 0 & \sin \theta & 0 \\
+0 & 1 & 0 & 0 \\
+-\sin \theta & 0 & \cos \theta & 0 \\
+0 & 0 & 0 & 1
+    \end{bmatrix}
+</script>
+</div>
 <pre><code>- z축을 중심으로:
 </code></pre>
-<p>$$
+<div class="arithmatex">
+<div class="MathJax_Preview">
     \mathbf{R}_z(\theta) = \begin{bmatrix}
-\cos \theta &amp; -\sin \theta &amp; 0 &amp; 0 \
-\sin \theta &amp; \cos \theta &amp; 0 &amp; 0 \
-0 &amp; 0 &amp; 1 &amp; 0 \
+\cos \theta &amp; -\sin \theta &amp; 0 &amp; 0 \\
+\sin \theta &amp; \cos \theta &amp; 0 &amp; 0 \\
+0 &amp; 0 &amp; 1 &amp; 0 \\
 0 &amp; 0 &amp; 0 &amp; 1
-    \end{bmatrix}</p>
-<p>$$</p>
+    \end{bmatrix}
+</div>
+<script type="math/tex; mode=display">
+    \mathbf{R}_z(\theta) = \begin{bmatrix}
+\cos \theta & -\sin \theta & 0 & 0 \\
+\sin \theta & \cos \theta & 0 & 0 \\
+0 & 0 & 1 & 0 \\
+0 & 0 & 0 & 1
+    \end{bmatrix}
+</script>
+</div>
 <ol>
 <li><strong>스케일링 변환 (Scaling):</strong></li>
 </ol>

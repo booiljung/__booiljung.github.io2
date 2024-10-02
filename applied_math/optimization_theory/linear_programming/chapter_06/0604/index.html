@@ -99,24 +99,44 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 <p>선형 계획 문제에서 쌍대성 이론은 원문제(Primal Problem)와 이에 대응하는 쌍대문제(Dual Problem)를 다룬다. 원문제에서 최적화된 목적 함수의 값과 쌍대문제에서 최적화된 값은 동일하며, 이 두 문제 간의 관계는 경제적으로 중요한 의미를 갖는다.</p>
 <h3 id="_2">원문제와 쌍대문제</h3>
 <p>먼저 원문제는 일반적으로 다음과 같은 형태를 갖는다.</p>
-<p>$$</p>
-<p>\text{maximize} \ \mathbf{c}^\top \mathbf{x}</p>
-<p>$$</p>
-<p>$$</p>
-<p>\text{subject to} \ \mathbf{A} \mathbf{x} \leq \mathbf{b}, \ \mathbf{x} \geq 0</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+\text{maximize} \ \mathbf{c}^\top \mathbf{x}
+</div>
+<script type="math/tex; mode=display">
+\text{maximize} \ \mathbf{c}^\top \mathbf{x}
+</script>
+</div>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+\text{subject to} \ \mathbf{A} \mathbf{x} \leq \mathbf{b}, \ \mathbf{x} \geq 0
+</div>
+<script type="math/tex; mode=display">
+\text{subject to} \ \mathbf{A} \mathbf{x} \leq \mathbf{b}, \ \mathbf{x} \geq 0
+</script>
+</div>
 <p>여기서:
 - <span class="arithmatex"><span class="MathJax_Preview">\mathbf{x}</span><script type="math/tex">\mathbf{x}</script></span>는 의사결정 변수 벡터,
 - <span class="arithmatex"><span class="MathJax_Preview">\mathbf{c}</span><script type="math/tex">\mathbf{c}</script></span>는 목적 함수의 계수 벡터,
 - <span class="arithmatex"><span class="MathJax_Preview">\mathbf{A}</span><script type="math/tex">\mathbf{A}</script></span>는 제약 조건을 나타내는 계수 행렬,
 - <span class="arithmatex"><span class="MathJax_Preview">\mathbf{b}</span><script type="math/tex">\mathbf{b}</script></span>는 자원 제한을 나타내는 벡터이다.</p>
 <p>쌍대문제는 이 원문제와 대응되며, 다음과 같은 형태로 작성된다.</p>
-<p>$$</p>
-<p>\text{minimize} \ \mathbf{b}^\top \mathbf{y}</p>
-<p>$$</p>
-<p>$$</p>
-<p>\text{subject to} \ \mathbf{A}^\top \mathbf{y} \geq \mathbf{c}, \ \mathbf{y} \geq 0</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+\text{minimize} \ \mathbf{b}^\top \mathbf{y}
+</div>
+<script type="math/tex; mode=display">
+\text{minimize} \ \mathbf{b}^\top \mathbf{y}
+</script>
+</div>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+\text{subject to} \ \mathbf{A}^\top \mathbf{y} \geq \mathbf{c}, \ \mathbf{y} \geq 0
+</div>
+<script type="math/tex; mode=display">
+\text{subject to} \ \mathbf{A}^\top \mathbf{y} \geq \mathbf{c}, \ \mathbf{y} \geq 0
+</script>
+</div>
 <p>여기서:
 - <span class="arithmatex"><span class="MathJax_Preview">\mathbf{y}</span><script type="math/tex">\mathbf{y}</script></span>는 쌍대문제에서의 의사결정 변수 벡터이다.</p>
 <h3 id="_3">쌍대 문제의 경제적 해석</h3>
@@ -125,9 +145,14 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 <li><span class="arithmatex"><span class="MathJax_Preview">\mathbf{y}_i</span><script type="math/tex">\mathbf{y}_i</script></span>는 원문제의 <span class="arithmatex"><span class="MathJax_Preview">i</span><script type="math/tex">i</script></span>-번째 자원의 그림자 가격을 의미하며, 이는 해당 자원의 가치를 측정하는 중요한 경제적 지표이다.</li>
 </ul>
 <p>원문제의 제약 조건이 다음과 같을 때:</p>
-<p>$$</p>
-<p>\mathbf{A} \mathbf{x} \leq \mathbf{b}</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+\mathbf{A} \mathbf{x} \leq \mathbf{b}
+</div>
+<script type="math/tex; mode=display">
+\mathbf{A} \mathbf{x} \leq \mathbf{b}
+</script>
+</div>
 <p>각 제약 조건이 자원의 사용을 제한하는 역할을 하며, 제약 조건을 완화할 경우에 원문제의 목적 함수 값이 얼마나 향상될지를 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{y}_i</span><script type="math/tex">\mathbf{y}_i</script></span>가 나타낸다.</p>
 <p>이제 각 제약 조건을 하나씩 풀어 설명하겠다.</p>
 <h3 id="_4">제약 조건과 그림자 가격의 경제적 의미</h3>

@@ -179,9 +179,14 @@ d(\mathbf{p}_1, \mathbf{p}_2) < r_1 + r_2
 <li><span class="arithmatex"><span class="MathJax_Preview">l_z</span><script type="math/tex">l_z</script></span>: 박스의 z축 방향 길이</li>
 </ul>
 <p>박스의 충돌 모델에서, 박스의 중심 좌표를 기준으로 한 충돌 영역은 다음과 같이 정의된다:</p>
-<p>$$</p>
-<p>\mathbf{p}_{box} = \left( \frac{l_x}{2}, \frac{l_y}{2}, \frac{l_z}{2} \right)</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+\mathbf{p}_{box} = \left( \frac{l_x}{2}, \frac{l_y}{2}, \frac{l_z}{2} \right)
+</div>
+<script type="math/tex; mode=display">
+\mathbf{p}_{box} = \left( \frac{l_x}{2}, \frac{l_y}{2}, \frac{l_z}{2} \right)
+</script>
+</div>
 <p>여기서 박스는 중심 좌표를 기준으로 <span class="arithmatex"><span class="MathJax_Preview">l_x</span><script type="math/tex">l_x</script></span>, <span class="arithmatex"><span class="MathJax_Preview">l_y</span><script type="math/tex">l_y</script></span>, <span class="arithmatex"><span class="MathJax_Preview">l_z</span><script type="math/tex">l_z</script></span>의 절반씩 확장된 범위를 가지며, 각 축 방향에서 충돌 감지가 이루어진다.</p>
 <h4 id="cylinder">실린더(Cylinder) 충돌 모델 정의</h4>
 <p>실린더는 원형 단면을 가지며 특정 축 방향으로 높이를 가지는 기하학적 형상이다. 실린더 충돌 모델은 다음과 같은 매개변수로 정의된다:</p>
@@ -191,9 +196,14 @@ d(\mathbf{p}_1, \mathbf{p}_2) < r_1 + r_2
 </ul>
 <p>실린더의 충돌 영역은 해당 축을 따라 반지름 <span class="arithmatex"><span class="MathJax_Preview">r</span><script type="math/tex">r</script></span>과 높이 <span class="arithmatex"><span class="MathJax_Preview">h</span><script type="math/tex">h</script></span>로 정의된다. 실린더의 축 방향을 기준으로 충돌 모델을 정의하면, 실린더의 상단과 하단 그리고 원형 단면의 경계에서 충돌 감지가 발생한다.</p>
 <p>실린더의 충돌 영역은 다음과 같은 수학적 관계로 표현될 수 있다:</p>
-<p>$$</p>
-<p>\mathbf{p}_{cyl} = \left( r \cos{\theta}, r \sin{\theta}, \frac{h}{2} \right)</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+\mathbf{p}_{cyl} = \left( r \cos{\theta}, r \sin{\theta}, \frac{h}{2} \right)
+</div>
+<script type="math/tex; mode=display">
+\mathbf{p}_{cyl} = \left( r \cos{\theta}, r \sin{\theta}, \frac{h}{2} \right)
+</script>
+</div>
 <p>여기서 <span class="arithmatex"><span class="MathJax_Preview">\theta</span><script type="math/tex">\theta</script></span>는 원형 단면에서의 각도를 나타낸다.</p>
 <h4 id="sphere">구(Sphere) 충돌 모델 정의</h4>
 <p>구는 가장 단순한 기하학적 형상으로, 중심을 기준으로 일정한 반지름을 가지는 3차원 구형이다. 구의 충돌 모델은 다음과 같은 매개변수로 정의된다:</p>
@@ -201,9 +211,14 @@ d(\mathbf{p}_1, \mathbf{p}_2) < r_1 + r_2
 <li><span class="arithmatex"><span class="MathJax_Preview">r</span><script type="math/tex">r</script></span>: 구의 반지름</li>
 </ul>
 <p>구의 충돌 영역은 단순히 중심에서 반지름 <span class="arithmatex"><span class="MathJax_Preview">r</span><script type="math/tex">r</script></span>만큼의 거리를 기준으로 계산되며, 충돌 감지 계산이 매우 간단하다. 구의 충돌 영역은 다음과 같이 정의된다:</p>
-<p>$$</p>
-<p>|\mathbf{p}_{sphere}| \leq r</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+\|\mathbf{p}_{sphere}\| \leq r
+</div>
+<script type="math/tex; mode=display">
+\|\mathbf{p}_{sphere}\| \leq r
+</script>
+</div>
 <p>여기서 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{p}_{sphere}</span><script type="math/tex">\mathbf{p}_{sphere}</script></span>는 구의 중심에서 특정 지점까지의 거리 벡터이다.</p>
 <h4 id="_5">복잡한 충돌 모델에서 메쉬 사용</h4>
 <p>간단한 기하학적 형상으로 충돌 모델을 정의하는 것이 불가능한 경우, 복잡한 메쉬 파일을 사용할 수 있다. 복잡한 메쉬 충돌 모델은 STL 또는 Collada와 같은 형식의 파일을 사용하여 로봇의 실제 물리적 형상을 충돌 모델로 정의한다.</p>
@@ -214,19 +229,33 @@ d(\mathbf{p}_1, \mathbf{p}_2) < r_1 + r_2
 <h4 id="_7">질량과 관성</h4>
 <p>질량(<span class="arithmatex"><span class="MathJax_Preview">m</span><script type="math/tex">m</script></span>)은 로봇의 각 링크의 무게를 나타내며, 로봇의 충돌 시 힘과 가속도에 직접적인 영향을 미친다. URDF에서 각 링크의 질량을 정의할 때는 해당 링크의 중심에서 질량 중심이 어떻게 배분되는지를 명시해야 한다.</p>
 <p>질량 중심을 나타내는 수학적 표현은 다음과 같다:</p>
-<p>$$</p>
-<p>\mathbf{p}<em>{cm} = \left( x</em>{cm}, y_{cm}, z_{cm} \right)</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+\mathbf{p}_{cm} = \left( x_{cm}, y_{cm}, z_{cm} \right)
+</div>
+<script type="math/tex; mode=display">
+\mathbf{p}_{cm} = \left( x_{cm}, y_{cm}, z_{cm} \right)
+</script>
+</div>
 <p>여기서 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{p}_{cm}</span><script type="math/tex">\mathbf{p}_{cm}</script></span>은 질량 중심 좌표이다.</p>
 <p>관성 모멘트(<span class="arithmatex"><span class="MathJax_Preview">\mathbf{I}</span><script type="math/tex">\mathbf{I}</script></span>)는 로봇의 각 링크가 회전할 때 그 링크가 저항하는 정도를 나타낸다. 관성 모멘트는 충돌 후 링크가 어떻게 회전할지에 영향을 미치는 중요한 물리적 특성이다. URDF에서는 각 링크의 관성 텐서(inertia tensor)를 정의하여 이를 나타낸다.</p>
 <p>관성 모멘트는 다음과 같은 <span class="arithmatex"><span class="MathJax_Preview">3 \times 3</span><script type="math/tex">3 \times 3</script></span> 행렬로 정의된다:</p>
-<p>$$</p>
-<p>\mathbf{I} = \begin{bmatrix} 
-I_{xx} &amp; I_{xy} &amp; I_{xz} \
-I_{xy} &amp; I_{yy} &amp; I_{yz} \
+<div class="arithmatex">
+<div class="MathJax_Preview">
+\mathbf{I} = \begin{bmatrix} 
+I_{xx} &amp; I_{xy} &amp; I_{xz} \\
+I_{xy} &amp; I_{yy} &amp; I_{yz} \\
 I_{xz} &amp; I_{yz} &amp; I_{zz}
-\end{bmatrix}</p>
-<p>$$</p>
+\end{bmatrix}
+</div>
+<script type="math/tex; mode=display">
+\mathbf{I} = \begin{bmatrix} 
+I_{xx} & I_{xy} & I_{xz} \\
+I_{xy} & I_{yy} & I_{yz} \\
+I_{xz} & I_{yz} & I_{zz}
+\end{bmatrix}
+</script>
+</div>
 <p>여기서 <span class="arithmatex"><span class="MathJax_Preview">I_{xx}, I_{yy}, I_{zz}</span><script type="math/tex">I_{xx}, I_{yy}, I_{zz}</script></span>는 각 축에 대한 관성 모멘트를 나타내며, <span class="arithmatex"><span class="MathJax_Preview">I_{xy}, I_{xz}, I_{yz}</span><script type="math/tex">I_{xy}, I_{xz}, I_{yz}</script></span>는 교차 관성 모멘트로 각 축 사이의 상호작용을 나타낸다.</p>
 <p>질량과 관성은 충돌 후 로봇이 어떻게 이동하고 회전할지 결정하는 중요한 물리적 특성이다. 물리 엔진은 이러한 물리적 특성을 기반으로 충돌 시 로봇의 동작을 계산한다.</p>
 <h4 id="_8">마찰</h4>
@@ -236,9 +265,14 @@ I_{xz} &amp; I_{yz} &amp; I_{zz}
 - 동적 마찰(<span class="arithmatex"><span class="MathJax_Preview">\mu_k</span><script type="math/tex">\mu_k</script></span>)은 로봇이 움직이고 있을 때 표면에서 미끄러질 때의 저항을 나타낸다.</p>
 <p>마찰 계수는 로봇의 충돌 후 정지 및 이동을 결정하는 중요한 변수로, 시뮬레이션에서 로봇의 현실적인 동작을 구현하는 데 필수적이다.</p>
 <p>마찰 계수를 사용하는 충돌 모델에서의 힘 계산은 다음과 같은 식으로 정의된다:</p>
-<p>$$</p>
-<p>F_f = \mu \cdot F_n</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+F_f = \mu \cdot F_n
+</div>
+<script type="math/tex; mode=display">
+F_f = \mu \cdot F_n
+</script>
+</div>
 <p>여기서:
 - <span class="arithmatex"><span class="MathJax_Preview">F_f</span><script type="math/tex">F_f</script></span>는 마찰력이다.
 - <span class="arithmatex"><span class="MathJax_Preview">\mu</span><script type="math/tex">\mu</script></span>는 마찰 계수로, 정지 마찰 또는 동적 마찰 중 하나이다.
@@ -247,9 +281,14 @@ I_{xz} &amp; I_{yz} &amp; I_{zz}
 <h4 id="_9">충격과 반발 계수</h4>
 <p>로봇이 충돌할 때, 충돌에 의해 발생하는 힘과 그 충격을 제어하기 위해 반발 계수(<span class="arithmatex"><span class="MathJax_Preview">e</span><script type="math/tex">e</script></span>)를 정의할 수 있다. 반발 계수는 두 객체가 충돌 후 얼마나 반발하는지를 나타내는 값으로, 0에서 1 사이의 값을 가진다. 반발 계수가 1에 가까울수록, 충돌 후 객체는 더 많이 반발하며, 0에 가까울수록 충돌 후 거의 반발하지 않고 에너지가 소멸된다.</p>
 <p>반발 계수를 사용하는 충돌 모델에서의 속도 변화는 다음과 같이 표현된다:</p>
-<p>$$</p>
-<p>v_{\text{final}} = e \cdot v_{\text{initial}}</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+v_{\text{final}} = e \cdot v_{\text{initial}}
+</div>
+<script type="math/tex; mode=display">
+v_{\text{final}} = e \cdot v_{\text{initial}}
+</script>
+</div>
 <p>여기서:
 - <span class="arithmatex"><span class="MathJax_Preview">v_{\text{final}}</span><script type="math/tex">v_{\text{final}}</script></span>은 충돌 후의 속도이다.
 - <span class="arithmatex"><span class="MathJax_Preview">v_{\text{initial}}</span><script type="math/tex">v_{\text{initial}}</script></span>은 충돌 전의 속도이다.

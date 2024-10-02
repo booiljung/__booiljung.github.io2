@@ -100,24 +100,44 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 <li><strong>문제의 형태를 표준형으로 변환</strong><br />
    먼저 선형계획 문제는 표준형으로 변환되어야 한다. 표준형은 일반적으로 다음과 같은 형태로 주어진다:</li>
 </ol>
-<p>$$
-   \text{최대화} \quad \mathbf{c}^\top \mathbf{x} </p>
-<p>$$</p>
-<p>$$
-   \text{제약 조건} \quad \mathbf{A} \mathbf{x} = \mathbf{b}, \quad \mathbf{x} \geq 0</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+   \text{최대화} \quad \mathbf{c}^\top \mathbf{x} 
+</div>
+<script type="math/tex; mode=display">
+   \text{최대화} \quad \mathbf{c}^\top \mathbf{x} 
+</script>
+</div>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+   \text{제약 조건} \quad \mathbf{A} \mathbf{x} = \mathbf{b}, \quad \mathbf{x} \geq 0
+</div>
+<script type="math/tex; mode=display">
+   \text{제약 조건} \quad \mathbf{A} \mathbf{x} = \mathbf{b}, \quad \mathbf{x} \geq 0
+</script>
+</div>
 <p>여기서, <span class="arithmatex"><span class="MathJax_Preview">\mathbf{A}</span><script type="math/tex">\mathbf{A}</script></span>는 계수 행렬, <span class="arithmatex"><span class="MathJax_Preview">\mathbf{b}</span><script type="math/tex">\mathbf{b}</script></span>는 상수 벡터, <span class="arithmatex"><span class="MathJax_Preview">\mathbf{x}</span><script type="math/tex">\mathbf{x}</script></span>는 변수 벡터, <span class="arithmatex"><span class="MathJax_Preview">\mathbf{c}</span><script type="math/tex">\mathbf{c}</script></span>는 목적 함수의 계수 벡터이다.</p>
 <ol>
 <li><strong>인공 변수 추가</strong><br />
    제약 조건 중에서 부등식이 포함된 제약 조건이 있을 경우, 인공 변수를 추가한다. 부등식을 등식으로 변환하는 과정에서 여유 변수 또는 잉여 변수를 추가하고, 추가적으로 초기 기본 해를 찾기 위해 인공 변수를 도입한다. 예를 들어, 다음과 같은 부등식이 있다고 가정할 수 있다:</li>
 </ol>
-<p>$$
-   \mathbf{A}_1 \mathbf{x} \geq \mathbf{b}_1</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+   \mathbf{A}_1 \mathbf{x} \geq \mathbf{b}_1
+</div>
+<script type="math/tex; mode=display">
+   \mathbf{A}_1 \mathbf{x} \geq \mathbf{b}_1
+</script>
+</div>
 <p>이때, 부등식 좌변에 인공 변수 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{y}</span><script type="math/tex">\mathbf{y}</script></span>를 추가하여 다음과 같이 변환할 수 있다:</p>
-<p>$$
-   \mathbf{A}_1 \mathbf{x} - \mathbf{y} = \mathbf{b}_1</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+   \mathbf{A}_1 \mathbf{x} - \mathbf{y} = \mathbf{b}_1
+</div>
+<script type="math/tex; mode=display">
+   \mathbf{A}_1 \mathbf{x} - \mathbf{y} = \mathbf{b}_1
+</script>
+</div>
 <p>여기서 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{y}</span><script type="math/tex">\mathbf{y}</script></span>는 인공 변수이며, <span class="arithmatex"><span class="MathJax_Preview">\mathbf{y} \geq 0</span><script type="math/tex">\mathbf{y} \geq 0</script></span>을 만족한다.</p>
 <ol>
 <li>
@@ -135,9 +155,14 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 <li><strong>목적 함수의 변환</strong><br />
    인공 변수를 포함한 제약 조건에 따라 새로운 목적 함수를 설정한다. 예를 들어, 다음과 같은 문제에서 인공 변수 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{y}</span><script type="math/tex">\mathbf{y}</script></span>를 도입한 목적 함수는 다음과 같이 표현된다:</li>
 </ol>
-<p>$$
-   \text{최소화} \quad Z = \mathbf{c}^\top \mathbf{x} + M \mathbf{y}^\top \mathbf{1}</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+   \text{최소화} \quad Z = \mathbf{c}^\top \mathbf{x} + M \mathbf{y}^\top \mathbf{1}
+</div>
+<script type="math/tex; mode=display">
+   \text{최소화} \quad Z = \mathbf{c}^\top \mathbf{x} + M \mathbf{y}^\top \mathbf{1}
+</script>
+</div>
 <p>여기서 <span class="arithmatex"><span class="MathJax_Preview">M</span><script type="math/tex">M</script></span>은 매우 큰 상수로, 인공 변수 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{y}</span><script type="math/tex">\mathbf{y}</script></span>의 값이 최대한 0에 가까워지도록 유도하는 역할을 한다. 즉, 단체법의 과정에서 인공 변수의 영향을 최소화하여 최종 해에서 제거될 수 있도록 한다.</p>
 <ol>
 <li>

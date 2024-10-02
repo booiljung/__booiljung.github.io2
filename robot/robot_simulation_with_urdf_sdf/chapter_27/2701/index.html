@@ -228,13 +228,22 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 <ol>
 <li><strong>관성 행렬</strong>: 로봇의 질량과 관성 행렬이 제대로 설정되었는지 확인한다. 관성 행렬이 잘못 설정되면 로봇이 불안정하게 움직일 수 있다. 관성 행렬은 다음과 같이 정의된다:</li>
 </ol>
-<p>$$
+<div class="arithmatex">
+<div class="MathJax_Preview">
    \mathbf{I} = \begin{bmatrix}
-   I_{xx} &amp; I_{xy} &amp; I_{xz} \
-   I_{yx} &amp; I_{yy} &amp; I_{yz} \
+   I_{xx} &amp; I_{xy} &amp; I_{xz} \\
+   I_{yx} &amp; I_{yy} &amp; I_{yz} \\
    I_{zx} &amp; I_{zy} &amp; I_{zz}
-   \end{bmatrix}</p>
-<p>$$</p>
+   \end{bmatrix}
+</div>
+<script type="math/tex; mode=display">
+   \mathbf{I} = \begin{bmatrix}
+   I_{xx} & I_{xy} & I_{xz} \\
+   I_{yx} & I_{yy} & I_{yz} \\
+   I_{zx} & I_{zy} & I_{zz}
+   \end{bmatrix}
+</script>
+</div>
 <p>여기서 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{I}</span><script type="math/tex">\mathbf{I}</script></span>는 관성 행렬이며, 각 성분은 로봇의 회전 관성에 해당한다. 관성 행렬의 값이 올바르지 않으면 로봇의 동작이 비현실적으로 표현될 수 있다.</p>
 <ol>
 <li><strong>마찰 계수</strong>: 각 조인트와 바닥 또는 다른 물체 간의 마찰 계수가 적절하게 설정되었는지 확인한다. 마찰 계수는 물체 간의 접촉에서 발생하는 힘을 제어하며, 잘못 설정된 마찰 값은 로봇이 움직이거나 정지할 때 예상하지 못한 결과를 초래할 수 있다.</li>
@@ -254,11 +263,18 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 <p><strong>박스 예시</strong>:</p>
 </li>
 </ul>
-<p>$$
+<div class="arithmatex">
+<div class="MathJax_Preview">
+  \texttt{&lt;geometry&gt;}
+  \texttt{&lt;box size="x y z"/&gt;}
+  \texttt{&lt;/geometry&gt;}
+</div>
+<script type="math/tex; mode=display">
   \texttt{<geometry>}
   \texttt{<box size="x y z"/>}
-  \texttt{</geometry>}</p>
-<p>$$</p>
+  \texttt{</geometry>}
+</script>
+</div>
 <h4 id="complex-mesh-collision-debugging">Complex Mesh Collision Debugging</h4>
 <p>복잡한 형상의 경우, 메쉬 파일(STL, Collada)을 충돌 모델로 사용할 수 있다. 하지만 메쉬 파일을 사용하면 계산 비용이 증가하고, 때로는 비효율적인 충돌 감지가 발생할 수 있다. 메쉬 파일을 충돌 모델로 사용할 때 주의해야 할 점:</p>
 <ul>

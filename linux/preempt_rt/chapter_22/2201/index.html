@@ -119,9 +119,14 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 </ul>
 <h3 id="rms_1">RMS 스케줄링 조건</h3>
 <p>RMS에서 주어진 작업 집합이 스케줄 가능하려면 다음과 같은 조건을 만족해야 한다:</p>
-<p>$$</p>
-<p>U = \sum_{i=1}^{n} \frac{C_i}{T_i} \leq n(2^{\frac{1}{n}} - 1)</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+U = \sum_{i=1}^{n} \frac{C_i}{T_i} \leq n(2^{\frac{1}{n}} - 1)
+</div>
+<script type="math/tex; mode=display">
+U = \sum_{i=1}^{n} \frac{C_i}{T_i} \leq n(2^{\frac{1}{n}} - 1)
+</script>
+</div>
 <p>여기서 <span class="arithmatex"><span class="MathJax_Preview">U</span><script type="math/tex">U</script></span>는 시스템의 총 CPU 이용률이다. </p>
 <h2 id="earliest-deadline-first-edf">Earliest Deadline First (EDF)</h2>
 <h3 id="_3">개요</h3>
@@ -133,9 +138,14 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 </ul>
 <h3 id="edf_1">EDF 스케줄링 조건</h3>
 <p>EDF에서 주어진 작업 집합이 스케줄 가능하려면 다음과 같은 조건을 만족해야 한다:</p>
-<p>$$</p>
-<p>U = \sum_{i=1}^{n} \frac{C_i}{T_i} \leq 1</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+U = \sum_{i=1}^{n} \frac{C_i}{T_i} \leq 1
+</div>
+<script type="math/tex; mode=display">
+U = \sum_{i=1}^{n} \frac{C_i}{T_i} \leq 1
+</script>
+</div>
 <p>여기서 <span class="arithmatex"><span class="MathJax_Preview">U</span><script type="math/tex">U</script></span>는 시스템의 총 CPU 이용률이다.</p>
 <h2 id="rms-edf">RMS와 EDF 비교</h2>
 <ul>

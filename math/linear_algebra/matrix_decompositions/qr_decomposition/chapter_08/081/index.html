@@ -443,21 +443,36 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 <ol>
 <li><strong>1단계</strong>:</li>
 </ol>
-<p>$$
-   \mathbf{A}_1 = \mathbf{R}_0 \mathbf{Q}_0 = \mathbf{Q}_0^T \mathbf{A} \mathbf{Q}_0</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+   \mathbf{A}_1 = \mathbf{R}_0 \mathbf{Q}_0 = \mathbf{Q}_0^T \mathbf{A} \mathbf{Q}_0
+</div>
+<script type="math/tex; mode=display">
+   \mathbf{A}_1 = \mathbf{R}_0 \mathbf{Q}_0 = \mathbf{Q}_0^T \mathbf{A} \mathbf{Q}_0
+</script>
+</div>
 <ol>
 <li><strong>2단계</strong>:</li>
 </ol>
-<p>$$
-   \mathbf{A}_2 = \mathbf{R}_1 \mathbf{Q}_1</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+   \mathbf{A}_2 = \mathbf{R}_1 \mathbf{Q}_1
+</div>
+<script type="math/tex; mode=display">
+   \mathbf{A}_2 = \mathbf{R}_1 \mathbf{Q}_1
+</script>
+</div>
 <ol>
 <li><strong>3단계</strong>:</li>
 </ol>
-<p>$$
-   \mathbf{A}_3 = \mathbf{R}_2 \mathbf{Q}_2</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+   \mathbf{A}_3 = \mathbf{R}_2 \mathbf{Q}_2
+</div>
+<script type="math/tex; mode=display">
+   \mathbf{A}_3 = \mathbf{R}_2 \mathbf{Q}_2
+</script>
+</div>
 <p>반복 과정이 충분히 진행된 후, <span class="arithmatex"><span class="MathJax_Preview">\mathbf{A}_k</span><script type="math/tex">\mathbf{A}_k</script></span>는 거의 상삼각 행렬이 되며, 이 행렬의 대각 성분이 원래 행렬 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{A}</span><script type="math/tex">\mathbf{A}</script></span>의 고유값을 근사한다.</p>
 <h4 id="_6">결과 해석</h4>
 <p>QR 알고리즘을 통해 구한 상삼각 행렬의 대각 성분이 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{A}</span><script type="math/tex">\mathbf{A}</script></span>의 고유값을 나타낸다. 이 방법은 반복 횟수에 따라 원하는 정확도로 수렴할 수 있으며, 특히 대칭 행렬의 경우 매우 빠르게 수렴한다.</p>
@@ -764,15 +779,25 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 <p><strong>상삼각 행렬 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{R}</span><script type="math/tex">\mathbf{R}</script></span>의 조건수 계산</strong>: <span class="arithmatex"><span class="MathJax_Preview">\mathbf{A}</span><script type="math/tex">\mathbf{A}</script></span>의 조건수는 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{R}</span><script type="math/tex">\mathbf{R}</script></span>의 조건수와 동일한다. 이는 직교 행렬 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{Q}</span><script type="math/tex">\mathbf{Q}</script></span>의 노름이 1이기 때문이다.</p>
 </li>
 </ol>
-<p>$$
-   \kappa(\mathbf{A}) = \kappa(\mathbf{R})</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+   \kappa(\mathbf{A}) = \kappa(\mathbf{R})
+</div>
+<script type="math/tex; mode=display">
+   \kappa(\mathbf{A}) = \kappa(\mathbf{R})
+</script>
+</div>
 <ol>
 <li><strong><span class="arithmatex"><span class="MathJax_Preview">\mathbf{R}</span><script type="math/tex">\mathbf{R}</script></span>의 조건수 계산</strong>: 상삼각 행렬 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{R}</span><script type="math/tex">\mathbf{R}</script></span>의 최대 대각 성분과 최소 대각 성분의 비율로 조건수를 계산할 수 있다.</li>
 </ol>
-<p>$$
-   \kappa(\mathbf{R}) = \frac{\max_i |r_{ii}|}{\min_i |r_{ii}|}</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+   \kappa(\mathbf{R}) = \frac{\max_i |r_{ii}|}{\min_i |r_{ii}|}
+</div>
+<script type="math/tex; mode=display">
+   \kappa(\mathbf{R}) = \frac{\max_i |r_{ii}|}{\min_i |r_{ii}|}
+</script>
+</div>
 <h4 id="_12">예제: 조건수 계산</h4>
 <p>다음과 같은 <span class="arithmatex"><span class="MathJax_Preview">3 \times 3</span><script type="math/tex">3 \times 3</script></span> 행렬 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{A}</span><script type="math/tex">\mathbf{A}</script></span>를 고려해보겠다:</p>
 <div class="arithmatex">

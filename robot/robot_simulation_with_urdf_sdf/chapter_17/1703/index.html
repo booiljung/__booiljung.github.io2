@@ -174,13 +174,22 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 <h4 id="_6">예시: 관성 텐서 정의</h4>
 <p>로봇의 링크에 대한 관성 텐서를 정의할 때, 링크의 질량과 크기를 변수로 설정하고 이를 통해 관성 텐서를 계산할 수 있다. 다음은 단순한 직육면체의 관성 텐서를 계산하는 예시이다.</p>
 <p>직육면체의 관성 텐서는 다음과 같이 계산된다.</p>
-<p>$$</p>
-<p>\mathbf{I} = \begin{bmatrix} 
-  \frac{1}{12}m(b^2 + c^2) &amp; 0 &amp; 0 \
-  0 &amp; \frac{1}{12}m(a^2 + c^2) &amp; 0 \
+<div class="arithmatex">
+<div class="MathJax_Preview">
+\mathbf{I} = \begin{bmatrix} 
+  \frac{1}{12}m(b^2 + c^2) &amp; 0 &amp; 0 \\
+  0 &amp; \frac{1}{12}m(a^2 + c^2) &amp; 0 \\
   0 &amp; 0 &amp; \frac{1}{12}m(a^2 + b^2)
-\end{bmatrix}</p>
-<p>$$</p>
+\end{bmatrix}
+</div>
+<script type="math/tex; mode=display">
+\mathbf{I} = \begin{bmatrix} 
+  \frac{1}{12}m(b^2 + c^2) & 0 & 0 \\
+  0 & \frac{1}{12}m(a^2 + c^2) & 0 \\
+  0 & 0 & \frac{1}{12}m(a^2 + b^2)
+\end{bmatrix}
+</script>
+</div>
 <p>여기서 <span class="arithmatex"><span class="MathJax_Preview">m</span><script type="math/tex">m</script></span>은 링크의 질량이고, <span class="arithmatex"><span class="MathJax_Preview">a, b, c</span><script type="math/tex">a, b, c</script></span>는 각각 링크의 길이, 너비, 높이이다.</p>
 <pre><code class="language-xml">&lt;xacro:property name=&quot;mass&quot; value=&quot;2.0&quot;/&gt;
 &lt;xacro:property name=&quot;length&quot; value=&quot;1.0&quot;/&gt;
@@ -227,9 +236,14 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 <p>복잡한 수학적 계산이 필요한 경우에도 <code>xacro</code>는 간단한 수식을 활용하여 동적인 값 생성을 지원한다. 예를 들어, 로봇의 구조를 구성하는 각 링크의 위치를 변수화하고, 이를 계산하여 조건에 따라 값을 설정할 수 있다.</p>
 <h4 id="_10">예시: 링크의 위치 계산</h4>
 <p>다음은 링크의 위치를 계산하고, 이를 조건문과 결합하여 위치에 따른 조인트를 정의하는 예시이다. 링크의 길이에 따라 그 다음 링크의 위치를 결정할 수 있다.</p>
-<p>$$</p>
-<p>\mathbf{p}<em>{\text{next}} = \mathbf{p}</em>{\text{prev}} + \mathbf{l}</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+\mathbf{p}_{\text{next}} = \mathbf{p}_{\text{prev}} + \mathbf{l}
+</div>
+<script type="math/tex; mode=display">
+\mathbf{p}_{\text{next}} = \mathbf{p}_{\text{prev}} + \mathbf{l}
+</script>
+</div>
 <p>여기서 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{p}_{\text{next}}</span><script type="math/tex">\mathbf{p}_{\text{next}}</script></span>는 다음 링크의 위치, <span class="arithmatex"><span class="MathJax_Preview">\mathbf{p}_{\text{prev}}</span><script type="math/tex">\mathbf{p}_{\text{prev}}</script></span>는 이전 링크의 위치, <span class="arithmatex"><span class="MathJax_Preview">\mathbf{l}</span><script type="math/tex">\mathbf{l}</script></span>은 링크의 길이이다.</p>
 <pre><code class="language-xml">&lt;xacro:property name=&quot;link_length&quot; value=&quot;1.0&quot;/&gt;
 &lt;xacro:property name=&quot;prev_position&quot; value=&quot;0.0&quot;/&gt;
@@ -287,9 +301,14 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 <p>변수와 조건문을 함께 사용하면 복잡한 수식을 포함하는 로봇 모델의 특정 부분을 제어할 수 있다. 특히 운동학적 구조에서 링크 간의 관계를 정의하거나, 동역학 모델에서 힘과 토크를 계산하는 데 유용하다.</p>
 <h4 id="_14">예시: 토크 계산과 조건문</h4>
 <p>다음은 로봇의 조인트에 적용되는 토크를 계산하고, 그 값에 따라 조인트의 동작 방식을 조건부로 변경하는 예시이다. 조인트에 적용되는 토크는 다음과 같은 수식으로 계산할 수 있다.</p>
-<p>$$</p>
-<p>\tau = r \times F</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+\tau = r \times F
+</div>
+<script type="math/tex; mode=display">
+\tau = r \times F
+</script>
+</div>
 <p>여기서 <span class="arithmatex"><span class="MathJax_Preview">\tau</span><script type="math/tex">\tau</script></span>는 토크, <span class="arithmatex"><span class="MathJax_Preview">r</span><script type="math/tex">r</script></span>은 조인트의 회전 반경, <span class="arithmatex"><span class="MathJax_Preview">F</span><script type="math/tex">F</script></span>는 적용된 힘이다.</p>
 <pre><code class="language-xml">&lt;xacro:property name=&quot;force&quot; value=&quot;10.0&quot;/&gt;
 &lt;xacro:property name=&quot;radius&quot; value=&quot;0.5&quot;/&gt;
@@ -318,9 +337,14 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 <p>xacro에서 변수를 활용하여 복잡한 계산을 처리하고, 이를 통해 모델의 다양한 요소를 최적화할 수 있다. 예를 들어, 로봇의 전체적인 무게 중심을 계산하여 각 링크의 위치를 조정하거나, 로봇의 각 부분의 크기와 무게를 동적으로 할당할 수 있다.</p>
 <h4 id="_16">예시: 무게 중심 계산</h4>
 <p>로봇의 각 링크의 질량과 위치를 매개변수화하여 무게 중심을 계산할 수 있다. 로봇의 전체 무게 중심은 다음과 같은 수식으로 계산된다.</p>
-<p>$$</p>
-<p>\mathbf{r}<em>{\text{cm}} = \frac{1}{M} \sum</em>{i} m_i \mathbf{r}_i</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+\mathbf{r}_{\text{cm}} = \frac{1}{M} \sum_{i} m_i \mathbf{r}_i
+</div>
+<script type="math/tex; mode=display">
+\mathbf{r}_{\text{cm}} = \frac{1}{M} \sum_{i} m_i \mathbf{r}_i
+</script>
+</div>
 <p>여기서 <span class="arithmatex"><span class="MathJax_Preview">M</span><script type="math/tex">M</script></span>은 전체 질량, <span class="arithmatex"><span class="MathJax_Preview">m_i</span><script type="math/tex">m_i</script></span>는 각 링크의 질량, <span class="arithmatex"><span class="MathJax_Preview">\mathbf{r}_i</span><script type="math/tex">\mathbf{r}_i</script></span>는 각 링크의 위치이다.</p>
 <pre><code class="language-xml">&lt;xacro:property name=&quot;mass_link1&quot; value=&quot;2.0&quot;/&gt;
 &lt;xacro:property name=&quot;mass_link2&quot; value=&quot;3.0&quot;/&gt;

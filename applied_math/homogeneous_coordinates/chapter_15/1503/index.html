@@ -116,14 +116,24 @@ $$</li>
 <li><strong>회전 변환 (Rotation)</strong>
    회전 변환은 점을 원점 중심으로 <span class="arithmatex"><span class="MathJax_Preview">\theta</span><script type="math/tex">\theta</script></span> 만큼 회전시키는 변환이다. 회전 변환 행렬은 다음과 같다:</li>
 </ol>
-<p>$$
+<div class="arithmatex">
+<div class="MathJax_Preview">
    \mathbf{R}(\theta) = 
    \begin{bmatrix}
-   \cos\theta &amp; -\sin\theta &amp; 0 \
-   \sin\theta &amp; \cos\theta &amp; 0 \
+   \cos\theta &amp; -\sin\theta &amp; 0 \\
+   \sin\theta &amp; \cos\theta &amp; 0 \\
    0 &amp; 0 &amp; 1
-   \end{bmatrix}</p>
-<p>$$</p>
+   \end{bmatrix}
+</div>
+<script type="math/tex; mode=display">
+   \mathbf{R}(\theta) = 
+   \begin{bmatrix}
+   \cos\theta & -\sin\theta & 0 \\
+   \sin\theta & \cos\theta & 0 \\
+   0 & 0 & 1
+   \end{bmatrix}
+</script>
+</div>
 <p>이 변환 행렬을 통해 점 <span class="arithmatex"><span class="MathJax_Preview">(x, y, 1)</span><script type="math/tex">(x, y, 1)</script></span>은 원점을 기준으로 <span class="arithmatex"><span class="MathJax_Preview">\theta</span><script type="math/tex">\theta</script></span> 만큼 회전된 새로운 좌표로 변환된다.</p>
 <ol>
 <li><strong>확대 변환 (Scaling)</strong>

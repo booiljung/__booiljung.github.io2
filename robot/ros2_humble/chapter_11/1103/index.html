@@ -281,13 +281,23 @@ parameters_client-&gt;set_parameters({rclcpp::Parameter("speed", 10.0)});
 <h3 id="_21">파라미터 변경을 통한 로봇 제어의 수학적 모델링</h3>
 <p>파라미터가 로봇의 제어 변수에 직접적인 영향을 미치는 경우, 이를 수학적으로 모델링하면 다음과 같다.</p>
 <p>로봇 팔의 위치를 제어하는 시스템에서 속도가 파라미터로 주어질 때, 로봇의 위치 변화는 다음과 같이 표현된다.</p>
-<p>$$</p>
-<p>\mathbf{x}(t+1) = \mathbf{x}(t) + \mathbf{v}(t) \Delta t</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+\mathbf{x}(t+1) = \mathbf{x}(t) + \mathbf{v}(t) \Delta t
+</div>
+<script type="math/tex; mode=display">
+\mathbf{x}(t+1) = \mathbf{x}(t) + \mathbf{v}(t) \Delta t
+</script>
+</div>
 <p>여기서 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{v}(t)</span><script type="math/tex">\mathbf{v}(t)</script></span>는 속도 벡터이며, 이 속도는 동적으로 변경되는 파라미터 <span class="arithmatex"><span class="MathJax_Preview">p_{\text{speed}}(t)</span><script type="math/tex">p_{\text{speed}}(t)</script></span>에 의해 결정된다.</p>
-<p>$$</p>
-<p>\mathbf{v}(t) = p_{\text{speed}}(t) \mathbf{d}(t)</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+\mathbf{v}(t) = p_{\text{speed}}(t) \mathbf{d}(t)
+</div>
+<script type="math/tex; mode=display">
+\mathbf{v}(t) = p_{\text{speed}}(t) \mathbf{d}(t)
+</script>
+</div>
 <p><span class="arithmatex"><span class="MathJax_Preview">\mathbf{d}(t)</span><script type="math/tex">\mathbf{d}(t)</script></span>는 이동 방향을 나타내는 단위 벡터이다. 따라서 속도 파라미터가 실시간으로 변경되면, 로봇의 위치가 그에 맞춰 변화한다.</p>
 <h3 id="qos">동적 파라미터 시스템의 QoS 설정</h3>
 <p>동적 파라미터 시스템에서 중요한 또 다른 요소는 QoS 설정이다. QoS는 노드 간 통신의 신뢰성과 내구성을 정의하며, 파라미터가 변경될 때 통신의 품질을 보장하는 역할을 한다.</p>

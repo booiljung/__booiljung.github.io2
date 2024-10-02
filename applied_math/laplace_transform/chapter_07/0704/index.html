@@ -74,9 +74,14 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 </div>
 <h3 id="_1">복소 평면에서의 극좌표</h3>
 <p>라플라스 변환을 복소 평면에서 해석할 때, 가장 중요한 개념 중 하나가 <strong>극좌표</strong>이다. 복소수 <span class="arithmatex"><span class="MathJax_Preview">s = \sigma + j\omega</span><script type="math/tex">s = \sigma + j\omega</script></span>는 실수부 <span class="arithmatex"><span class="MathJax_Preview">\sigma</span><script type="math/tex">\sigma</script></span>와 허수부 <span class="arithmatex"><span class="MathJax_Preview">\omega</span><script type="math/tex">\omega</script></span>로 표현되며, 이를 극좌표로 변환하면 다음과 같이 나타낼 수 있다.</p>
-<p>$$</p>
-<p>s = re^{j\theta}</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+s = re^{j\theta}
+</div>
+<script type="math/tex; mode=display">
+s = re^{j\theta}
+</script>
+</div>
 <p>여기서 <span class="arithmatex"><span class="MathJax_Preview">r</span><script type="math/tex">r</script></span>은 복소수의 크기, 즉 <strong>모듈러스</strong>이고, <span class="arithmatex"><span class="MathJax_Preview">\theta</span><script type="math/tex">\theta</script></span>는 복소수의 <strong>위상각</strong>이다. 구체적으로는:</p>
 <ul>
 <li><span class="arithmatex"><span class="MathJax_Preview">r = |s| = \sqrt{\sigma^2 + \omega^2}</span><script type="math/tex">r = |s| = \sqrt{\sigma^2 + \omega^2}</script></span></li>
@@ -85,9 +90,14 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 <p>따라서, 복소 평면에서의 라플라스 변환은 실수와 허수 좌표를 극좌표 형태로 변환하여 복소수의 크기와 위상으로 해석할 수 있다. 이 해석을 통해 시스템의 감쇠 성분과 진동 성분을 직관적으로 파악할 수 있다.</p>
 <h3 id="_2">극과 영점의 의미</h3>
 <p>라플라스 변환에서 <strong>극(pole)</strong>과 <strong>영점(zero)</strong>은 시스템의 특성을 결정하는 중요한 요소이다. 주어진 전달 함수 <span class="arithmatex"><span class="MathJax_Preview">H(s)</span><script type="math/tex">H(s)</script></span>는 보통 다음과 같은 형태로 나타낼 수 있다:</p>
-<p>$$</p>
-<p>H(s) = \frac{N(s)}{D(s)}</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+H(s) = \frac{N(s)}{D(s)}
+</div>
+<script type="math/tex; mode=display">
+H(s) = \frac{N(s)}{D(s)}
+</script>
+</div>
 <p>여기서 <span class="arithmatex"><span class="MathJax_Preview">N(s)</span><script type="math/tex">N(s)</script></span>는 분자 다항식, <span class="arithmatex"><span class="MathJax_Preview">D(s)</span><script type="math/tex">D(s)</script></span>는 분모 다항식이다. </p>
 <ul>
 <li><strong>극(pole)</strong>은 <span class="arithmatex"><span class="MathJax_Preview">D(s) = 0</span><script type="math/tex">D(s) = 0</script></span>이 되는 <span class="arithmatex"><span class="MathJax_Preview">s</span><script type="math/tex">s</script></span>의 값들로, 시스템의 응답이 무한대로 발산하는 지점을 나타낸다.</li>

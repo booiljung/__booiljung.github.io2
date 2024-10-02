@@ -202,19 +202,35 @@ d_1 & 0 & \cdots & 0 \\
 <p>이 성질은 대각행렬의 단순함을 이용하여 역행렬을 쉽게 구할 수 있음을 보여준다.</p>
 <h3 id="7">7. 블록 행렬의 역행렬</h3>
 <p>특정 형태의 블록 행렬에 대해 역행렬을 구하는 방법도 존재한다. 예를 들어, 만약 행렬 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{A}</span><script type="math/tex">\mathbf{A}</script></span>와 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{D}</span><script type="math/tex">\mathbf{D}</script></span>가 가역 행렬이고 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{C} = 0</span><script type="math/tex">\mathbf{C} = 0</script></span>, <span class="arithmatex"><span class="MathJax_Preview">\mathbf{B} = 0</span><script type="math/tex">\mathbf{B} = 0</script></span>이라면:</p>
-<p>$$</p>
-<p>\mathbf{M} = \begin{pmatrix}
-\mathbf{A} &amp; \mathbf{0} \
+<div class="arithmatex">
+<div class="MathJax_Preview">
+\mathbf{M} = \begin{pmatrix}
+\mathbf{A} &amp; \mathbf{0} \\
 \mathbf{0} &amp; \mathbf{D}
 \end{pmatrix} 
-$$</p>
+</div>
+<script type="math/tex; mode=display">
+\mathbf{M} = \begin{pmatrix}
+\mathbf{A} & \mathbf{0} \\
+\mathbf{0} & \mathbf{D}
+\end{pmatrix} 
+</script>
+</div>
 <p>그 역행렬은 다음과 같이 쉽게 구할 수 있다:</p>
-<p>$$</p>
-<p>\mathbf{M}^{-1} = \begin{pmatrix}
-\mathbf{A}^{-1} &amp; \mathbf{0} \
+<div class="arithmatex">
+<div class="MathJax_Preview">
+\mathbf{M}^{-1} = \begin{pmatrix}
+\mathbf{A}^{-1} &amp; \mathbf{0} \\
 \mathbf{0} &amp; \mathbf{D}^{-1}
 \end{pmatrix} 
-$$</p>
+</div>
+<script type="math/tex; mode=display">
+\mathbf{M}^{-1} = \begin{pmatrix}
+\mathbf{A}^{-1} & \mathbf{0} \\
+\mathbf{0} & \mathbf{D}^{-1}
+\end{pmatrix} 
+</script>
+</div>
 <p>이 성질은 블록 행렬의 개념을 이용하여 복잡한 행렬의 부분들을 독립적으로 처리할 수 있게 해준다.</p>
 <h3 id="8">8. 닮음 행렬의 역행렬</h3>
 <p>행렬 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{A}</span><script type="math/tex">\mathbf{A}</script></span>와 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{B}</span><script type="math/tex">\mathbf{B}</script></span>가 닮음, 즉 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{A} = \mathbf{PBP}^{-1}</span><script type="math/tex">\mathbf{A} = \mathbf{PBP}^{-1}</script></span> 형태로 관계가 있을 때, <span class="arithmatex"><span class="MathJax_Preview">\mathbf{A}</span><script type="math/tex">\mathbf{A}</script></span>의 역행렬은 다음과 같은 성질을 가진다:</p>
@@ -242,12 +258,22 @@ $$</p>
 <p><span class="arithmatex"><span class="MathJax_Preview">\mathbf{L}</span><script type="math/tex">\mathbf{L}</script></span>은 하삼각행렬, <span class="arithmatex"><span class="MathJax_Preview">\mathbf{U}</span><script type="math/tex">\mathbf{U}</script></span>는 상삼각행렬이다. 행렬이 가역인 경우, 이 분해를 이용해 역행렬을 구하는 방법도 효과적으로 사용할 수 있다.</p>
 <h3 id="11-">11. 란카스터-라귀앙가르 왕복정리</h3>
 <p><span class="arithmatex"><span class="MathJax_Preview">\mathbf{A}</span><script type="math/tex">\mathbf{A}</script></span>와 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{B}</span><script type="math/tex">\mathbf{B}</script></span>라는 가역 행렬이 주어졌을 때, <span class="arithmatex"><span class="MathJax_Preview">\mathbf{AB}</span><script type="math/tex">\mathbf{AB}</script></span>의 역행렬과 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{BA}</span><script type="math/tex">\mathbf{BA}</script></span>의 역행렬은 교차적으로 적용될 수 있다:</p>
-<p>$$</p>
-<p>(\mathbf{AB})^{-1} = \mathbf{B}^{-1} \mathbf{A}^{-1}
-$$</p>
-<p>$$</p>
-<p>(\mathbf{BA})^{-1} = \mathbf{A}^{-1} \mathbf{B}^{-1}
-$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+(\mathbf{AB})^{-1} = \mathbf{B}^{-1} \mathbf{A}^{-1}
+</div>
+<script type="math/tex; mode=display">
+(\mathbf{AB})^{-1} = \mathbf{B}^{-1} \mathbf{A}^{-1}
+</script>
+</div>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+(\mathbf{BA})^{-1} = \mathbf{A}^{-1} \mathbf{B}^{-1}
+</div>
+<script type="math/tex; mode=display">
+(\mathbf{BA})^{-1} = \mathbf{A}^{-1} \mathbf{B}^{-1}
+</script>
+</div>
 <p>이 성질은 곱 연산의 순서를 바꾸어 역행렬을 구할 수 있게 하여 계산의 용이성을 제공한다.</p>
 <p>이와 같은 행렬의 역행렬 성질들은 매우 다채로우며, 이를 통해 다양한 수학적 문제 및 실제 응용 문제를 해결할 수 있다.</p>
 

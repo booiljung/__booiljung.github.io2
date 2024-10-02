@@ -129,12 +129,22 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 <h3 id="mimo">MIMO 시스템의 수학적 표현</h3>
 <p>MIMO 시스템을 수학적으로 표현할 때는 일반적으로 상태 공간 표현(State-Space Representation)을 사용한다. 상태 공간 표현은 시스템의 동적 동작을 나타내기 위해 상태 벡터, 입력 벡터, 출력 벡터를 정의하고, 이를 통해 시스템의 입력-출력 관계를 수식으로 나타낸다.</p>
 <p>상태 공간 표현은 다음과 같이 정의된다:</p>
-<p>$$</p>
-<p>\dot{\mathbf{x}}(t) = \mathbf{A}\mathbf{x}(t) + \mathbf{B}\mathbf{u}(t)</p>
-<p>$$</p>
-<p>$$</p>
-<p>\mathbf{y}(t) = \mathbf{C}\mathbf{x}(t) + \mathbf{D}\mathbf{u}(t)</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+\dot{\mathbf{x}}(t) = \mathbf{A}\mathbf{x}(t) + \mathbf{B}\mathbf{u}(t)
+</div>
+<script type="math/tex; mode=display">
+\dot{\mathbf{x}}(t) = \mathbf{A}\mathbf{x}(t) + \mathbf{B}\mathbf{u}(t)
+</script>
+</div>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+\mathbf{y}(t) = \mathbf{C}\mathbf{x}(t) + \mathbf{D}\mathbf{u}(t)
+</div>
+<script type="math/tex; mode=display">
+\mathbf{y}(t) = \mathbf{C}\mathbf{x}(t) + \mathbf{D}\mathbf{u}(t)
+</script>
+</div>
 <p>여기서,
 - <span class="arithmatex"><span class="MathJax_Preview">\mathbf{x}(t)</span><script type="math/tex">\mathbf{x}(t)</script></span>는 <span class="arithmatex"><span class="MathJax_Preview">n \times 1</span><script type="math/tex">n \times 1</script></span> 상태 벡터(State Vector),
 - <span class="arithmatex"><span class="MathJax_Preview">\mathbf{u}(t)</span><script type="math/tex">\mathbf{u}(t)</script></span>는 <span class="arithmatex"><span class="MathJax_Preview">m \times 1</span><script type="math/tex">m \times 1</script></span> 입력 벡터(Input Vector),
@@ -147,9 +157,14 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 <h3 id="mimo-transfer-function">MIMO 시스템의 전달 함수 (Transfer Function)</h3>
 <p>MIMO 시스템을 주파수 영역에서 해석할 때는 전달 함수(Transfer Function)를 사용한다. MIMO 시스템의 경우, 다중 입력과 다중 출력 간의 관계를 모두 나타내기 위해 전달 함수는 행렬 형태로 정의된다. 이를 "전달 행렬(Transfer Matrix)"이라고 부른다.</p>
 <p>시스템의 상태 공간 표현에서 라플라스 변환을 적용하면, 다음과 같은 전달 행렬을 얻을 수 있다:</p>
-<p>$$</p>
-<p>\mathbf{G}(s) = \mathbf{C}(s\mathbf{I} - \mathbf{A})^{-1}\mathbf{B} + \mathbf{D}</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+\mathbf{G}(s) = \mathbf{C}(s\mathbf{I} - \mathbf{A})^{-1}\mathbf{B} + \mathbf{D}
+</div>
+<script type="math/tex; mode=display">
+\mathbf{G}(s) = \mathbf{C}(s\mathbf{I} - \mathbf{A})^{-1}\mathbf{B} + \mathbf{D}
+</script>
+</div>
 <p>여기서,
 - <span class="arithmatex"><span class="MathJax_Preview">\mathbf{G}(s)</span><script type="math/tex">\mathbf{G}(s)</script></span>는 MIMO 시스템의 전달 행렬(Transfer Matrix),
 - <span class="arithmatex"><span class="MathJax_Preview">s</span><script type="math/tex">s</script></span>는 라플라스 변환 변수이다.</p>
@@ -158,31 +173,51 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 <p>MIMO 시스템에서 중요한 개념 중 하나는 제어 가능성(Controllability)과 관측 가능성(Observability)이다. 제어 가능성은 시스템의 모든 상태를 입력 신호를 통해 제어할 수 있는지를 나타내며, 관측 가능성은 출력 신호를 통해 시스템의 모든 상태를 측정할 수 있는지를 나타낸다.</p>
 <h4 id="_3">제어 가능성</h4>
 <p>시스템이 제어 가능한지 확인하기 위해 제어 가능성 행렬(Controllability Matrix)을 계산한다:</p>
-<p>$$</p>
-<p>\mathbf{C}_m = \begin{bmatrix} \mathbf{B} &amp; \mathbf{A}\mathbf{B} &amp; \mathbf{A}^2\mathbf{B} &amp; \dots &amp; \mathbf{A}^{n-1}\mathbf{B} \end{bmatrix}</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+\mathbf{C}_m = \begin{bmatrix} \mathbf{B} &amp; \mathbf{A}\mathbf{B} &amp; \mathbf{A}^2\mathbf{B} &amp; \dots &amp; \mathbf{A}^{n-1}\mathbf{B} \end{bmatrix}
+</div>
+<script type="math/tex; mode=display">
+\mathbf{C}_m = \begin{bmatrix} \mathbf{B} & \mathbf{A}\mathbf{B} & \mathbf{A}^2\mathbf{B} & \dots & \mathbf{A}^{n-1}\mathbf{B} \end{bmatrix}
+</script>
+</div>
 <p>제어 가능성 행렬의 행렬식이 0이 아니면, 시스템은 제어 가능한 것으로 간주된다.</p>
 <h4 id="_4">관측 가능성</h4>
 <p>관측 가능성 행렬(Observability Matrix)은 다음과 같이 정의된다:</p>
-<p>$$</p>
-<p>\mathbf{O}_m = \begin{bmatrix} \mathbf{C} \ \mathbf{C}\mathbf{A} \ \mathbf{C}\mathbf{A}^2 \ \dots \ \mathbf{C}\mathbf{A}^{n-1} \end{bmatrix}</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+\mathbf{O}_m = \begin{bmatrix} \mathbf{C} \\ \mathbf{C}\mathbf{A} \\ \mathbf{C}\mathbf{A}^2 \\ \dots \\ \mathbf{C}\mathbf{A}^{n-1} \end{bmatrix}
+</div>
+<script type="math/tex; mode=display">
+\mathbf{O}_m = \begin{bmatrix} \mathbf{C} \\ \mathbf{C}\mathbf{A} \\ \mathbf{C}\mathbf{A}^2 \\ \dots \\ \mathbf{C}\mathbf{A}^{n-1} \end{bmatrix}
+</script>
+</div>
 <p>관측 가능성 행렬의 행렬식이 0이 아니면, 시스템은 관측 가능한 것으로 간주된다.</p>
 <p>이러한 제어 가능성과 관측 가능성은 시스템 설계 및 분석에서 매우 중요한 역할을 한다.</p>
 <h3 id="mimo-state-feedback-control">MIMO 시스템의 상태 피드백 제어 (State Feedback Control)</h3>
 <p>MIMO 시스템에서 상태 피드백 제어(State Feedback Control)를 통해 시스템의 동적 동작을 제어할 수 있다. 상태 피드백 제어는 시스템의 상태 변수를 실시간으로 피드백하여 제어 입력을 결정하는 방식으로, 이를 통해 시스템의 안정성과 성능을 개선할 수 있다.</p>
 <p>상태 피드백 제어는 일반적으로 다음과 같은 형태로 표현된다:</p>
-<p>$$</p>
-<p>\mathbf{u}(t) = -\mathbf{K}\mathbf{x}(t)</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+\mathbf{u}(t) = -\mathbf{K}\mathbf{x}(t)
+</div>
+<script type="math/tex; mode=display">
+\mathbf{u}(t) = -\mathbf{K}\mathbf{x}(t)
+</script>
+</div>
 <p>여기서,
 - <span class="arithmatex"><span class="MathJax_Preview">\mathbf{K}</span><script type="math/tex">\mathbf{K}</script></span>는 피드백 이득 행렬(Feedback Gain Matrix)이다.</p>
 <p>피드백 이득 행렬 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{K}</span><script type="math/tex">\mathbf{K}</script></span>는 시스템의 폐루프 응답(Closed-loop Response)을 설계하기 위해 조정된다. 이를 통해 시스템의 고유값(Eigenvalues)이 원하는 위치로 이동되며, 시스템의 안정성이 확보된다.</p>
 <h4 id="_5">폐루프 시스템의 표현</h4>
 <p>피드백 제어가 적용된 시스템의 상태 방정식은 다음과 같이 표현된다:</p>
-<p>$$</p>
-<p>\dot{\mathbf{x}}(t) = (\mathbf{A} - \mathbf{B}\mathbf{K})\mathbf{x}(t)</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+\dot{\mathbf{x}}(t) = (\mathbf{A} - \mathbf{B}\mathbf{K})\mathbf{x}(t)
+</div>
+<script type="math/tex; mode=display">
+\dot{\mathbf{x}}(t) = (\mathbf{A} - \mathbf{B}\mathbf{K})\mathbf{x}(t)
+</script>
+</div>
 <p>여기서 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{A} - \mathbf{B}\mathbf{K}</span><script type="math/tex">\mathbf{A} - \mathbf{B}\mathbf{K}</script></span>는 폐루프 시스템의 상태 행렬을 나타낸다. 이 폐루프 상태 행렬의 고유값은 시스템의 안정성과 응답 속도에 직접적인 영향을 미친다. 따라서 피드백 이득 행렬 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{K}</span><script type="math/tex">\mathbf{K}</script></span>를 적절히 설계하는 것이 중요하다.</p>
 <h4 id="mathbfkmathbfk">이득 행렬 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{K}</span><script type="math/tex">\mathbf{K}</script></span>의 설계 방법</h4>
 <p>이득 행렬 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{K}</span><script type="math/tex">\mathbf{K}</script></span>를 설계하는 방법 중 하나는 고유값 배치법(Eigenvalue Placement)이다. 이 방법은 시스템의 고유값을 원하는 위치로 배치하여 시스템의 동적 특성을 제어하는 방식이다. 이를 위해, 원하는 고유값을 설정한 후, 해당 고유값을 가지는 이득 행렬 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{K}</span><script type="math/tex">\mathbf{K}</script></span>를 계산한다.</p>
@@ -195,9 +230,14 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 <h3 id="observer-design">관측기 설계 (Observer Design)</h3>
 <p>MIMO 시스템에서 모든 상태 변수를 직접 측정하기 어려운 경우가 많다. 따라서 시스템의 출력을 통해 상태 변수를 추정하는 관측기(Observer)를 설계할 수 있다. 관측기는 출력 값을 기반으로 시스템의 상태를 추정하는 기법으로, 상태 피드백 제어와 결합하여 사용할 수 있다.</p>
 <p>관측기의 상태 방정식은 다음과 같이 정의된다:</p>
-<p>$$</p>
-<p>\dot{\hat{\mathbf{x}}}(t) = \mathbf{A}\hat{\mathbf{x}}(t) + \mathbf{B}\mathbf{u}(t) + \mathbf{L}(\mathbf{y}(t) - \mathbf{C}\hat{\mathbf{x}}(t))</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+\dot{\hat{\mathbf{x}}}(t) = \mathbf{A}\hat{\mathbf{x}}(t) + \mathbf{B}\mathbf{u}(t) + \mathbf{L}(\mathbf{y}(t) - \mathbf{C}\hat{\mathbf{x}}(t))
+</div>
+<script type="math/tex; mode=display">
+\dot{\hat{\mathbf{x}}}(t) = \mathbf{A}\hat{\mathbf{x}}(t) + \mathbf{B}\mathbf{u}(t) + \mathbf{L}(\mathbf{y}(t) - \mathbf{C}\hat{\mathbf{x}}(t))
+</script>
+</div>
 <p>여기서,
 - <span class="arithmatex"><span class="MathJax_Preview">\hat{\mathbf{x}}(t)</span><script type="math/tex">\hat{\mathbf{x}}(t)</script></span>는 추정된 상태 벡터(Estimated State Vector),
 - <span class="arithmatex"><span class="MathJax_Preview">\mathbf{L}</span><script type="math/tex">\mathbf{L}</script></span>은 관측기 이득 행렬(Observer Gain Matrix)이다.</p>
@@ -211,9 +251,14 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 <p>관측기와 상태 피드백 제어기를 결합하면 전체 시스템의 상태를 추정하고, 이를 기반으로 피드백 제어를 수행할 수 있다.</p>
 <h3 id="_7">결합된 상태 피드백 및 관측기 시스템</h3>
 <p>상태 피드백 제어와 관측기를 결합한 시스템의 상태 방정식은 다음과 같다:</p>
-<p>$$</p>
-<p>\dot{\hat{\mathbf{x}}}(t) = (\mathbf{A} - \mathbf{B}\mathbf{K} - \mathbf{L}\mathbf{C})\hat{\mathbf{x}}(t) + \mathbf{L}\mathbf{y}(t)</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+\dot{\hat{\mathbf{x}}}(t) = (\mathbf{A} - \mathbf{B}\mathbf{K} - \mathbf{L}\mathbf{C})\hat{\mathbf{x}}(t) + \mathbf{L}\mathbf{y}(t)
+</div>
+<script type="math/tex; mode=display">
+\dot{\hat{\mathbf{x}}}(t) = (\mathbf{A} - \mathbf{B}\mathbf{K} - \mathbf{L}\mathbf{C})\hat{\mathbf{x}}(t) + \mathbf{L}\mathbf{y}(t)
+</script>
+</div>
 <p>이 시스템은 상태 피드백과 관측기가 결합된 형태로, 시스템의 상태를 실시간으로 추정하고 이를 피드백하여 제어 입력을 결정하는 방식이다. 이를 통해 시스템의 안정성과 성능을 개선할 수 있다.</p>
 <h3 id="mimo-decoupling">MIMO 시스템에서의 디커플링 (Decoupling)</h3>
 <p>MIMO 시스템의 주요 과제 중 하나는 각 입력이 여러 출력을 동시에 영향을 미치는 상호 의존성 문제를 해결하는 것이다. 이를 해결하기 위한 방법 중 하나가 디커플링(Decoupling)이다. 디커플링은 MIMO 시스템의 각 입력이 특정 출력에만 영향을 미치도록 설계하는 기법이다. 즉, 제어 시스템에서 여러 출력 사이의 상호작용을 제거하거나 최소화하여, 단일 입력-단일 출력(SISO) 시스템처럼 동작하도록 만드는 과정이다.</p>
@@ -221,16 +266,26 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 <p>MIMO 시스템에서 입력과 출력 사이의 상호작용이 강할 경우, 제어기가 원하는 성능을 발휘하지 못할 수 있다. 예를 들어, 한 입력을 조정할 때 다른 출력에도 영향을 미쳐 예기치 않은 제어 동작이 발생할 수 있다. 이러한 상호작용을 줄이기 위해 디커플링을 적용하면, 각각의 입력이 특정 출력에만 영향을 미치도록 만들어 제어 문제를 단순화할 수 있다.</p>
 <h4 id="_9">디커플링의 수학적 표현</h4>
 <p>MIMO 시스템에서 디커플링을 구현하려면 시스템 모델을 다음과 같이 변환한다:</p>
-<p>$$</p>
-<p>\mathbf{G}(s) = \mathbf{C}(s\mathbf{I} - \mathbf{A})^{-1}\mathbf{B} + \mathbf{D}</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+\mathbf{G}(s) = \mathbf{C}(s\mathbf{I} - \mathbf{A})^{-1}\mathbf{B} + \mathbf{D}
+</div>
+<script type="math/tex; mode=display">
+\mathbf{G}(s) = \mathbf{C}(s\mathbf{I} - \mathbf{A})^{-1}\mathbf{B} + \mathbf{D}
+</script>
+</div>
 <p>여기서, <span class="arithmatex"><span class="MathJax_Preview">\mathbf{G}(s)</span><script type="math/tex">\mathbf{G}(s)</script></span>는 전달 행렬로서 MIMO 시스템의 각 입력과 출력 사이의 관계를 나타낸다. 디커플링을 달성하려면 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{G}(s)</span><script type="math/tex">\mathbf{G}(s)</script></span> 행렬을 대각선 형태로 만들거나, 비대각선 성분을 최소화해야 한다. 이를 통해 각 입력이 개별 출력에만 영향을 미치도록 설계한다.</p>
 <h4 id="feedforward-control">디커플링을 위한 피드포워드 제어 (Feedforward Control)</h4>
 <p>피드포워드 제어는 디커플링을 구현하기 위한 주요 기법 중 하나이다. 피드포워드 제어는 시스템의 미래 동작을 예측하여, 미리 제어 신호를 조정하는 방식이다. 피드포워드 제어를 통해, 시스템 내에서 발생할 수 있는 상호작용을 사전에 보정할 수 있다.</p>
 <p>디커플링을 위한 피드포워드 제어 시스템은 다음과 같은 형태로 나타낼 수 있다:</p>
-<p>$$</p>
-<p>\mathbf{u}(t) = \mathbf{G}_{ff}^{-1}(s)\mathbf{r}(t)</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+\mathbf{u}(t) = \mathbf{G}_{ff}^{-1}(s)\mathbf{r}(t)
+</div>
+<script type="math/tex; mode=display">
+\mathbf{u}(t) = \mathbf{G}_{ff}^{-1}(s)\mathbf{r}(t)
+</script>
+</div>
 <p>여기서, <span class="arithmatex"><span class="MathJax_Preview">\mathbf{G}_{ff}(s)</span><script type="math/tex">\mathbf{G}_{ff}(s)</script></span>는 피드포워드 제어 행렬이며, 이를 통해 입력 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{u}(t)</span><script type="math/tex">\mathbf{u}(t)</script></span>가 각 출력 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{y}(t)</span><script type="math/tex">\mathbf{y}(t)</script></span>에 독립적으로 영향을 미치도록 설계한다. 즉, <span class="arithmatex"><span class="MathJax_Preview">\mathbf{G}_{ff}(s)</span><script type="math/tex">\mathbf{G}_{ff}(s)</script></span> 행렬을 적절히 선택하면 MIMO 시스템에서 입력 간 상호작용을 최소화할 수 있다.</p>
 <h3 id="_10">디커플링 제어 설계 과정</h3>
 <p>디커플링을 효과적으로 구현하기 위해서는 다음과 같은 과정을 따른다:</p>
@@ -267,9 +322,14 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 <h3 id="mimo-eigenvalue-decomposition">MIMO 시스템의 고유값 분해 (Eigenvalue Decomposition)</h3>
 <p>MIMO 시스템에서 중요한 분석 도구 중 하나는 고유값 분해(Eigenvalue Decomposition)이다. 고유값은 시스템의 동적 특성을 결정하는 중요한 요소로, 시스템의 안정성과 응답 속도를 평가하는 데 사용된다.</p>
 <p>MIMO 시스템의 상태 공간 표현에서, 시스템 행렬 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{A}</span><script type="math/tex">\mathbf{A}</script></span>의 고유값을 계산하면, 시스템이 시간에 따라 어떻게 변화하는지 예측할 수 있다. 고유값 분해는 다음과 같은 형태로 나타난다:</p>
-<p>$$</p>
-<p>\mathbf{A} = \mathbf{V} \mathbf{\Lambda} \mathbf{V}^{-1}</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+\mathbf{A} = \mathbf{V} \mathbf{\Lambda} \mathbf{V}^{-1}
+</div>
+<script type="math/tex; mode=display">
+\mathbf{A} = \mathbf{V} \mathbf{\Lambda} \mathbf{V}^{-1}
+</script>
+</div>
 <p>여기서,
 - <span class="arithmatex"><span class="MathJax_Preview">\mathbf{A}</span><script type="math/tex">\mathbf{A}</script></span>는 시스템 행렬,
 - <span class="arithmatex"><span class="MathJax_Preview">\mathbf{V}</span><script type="math/tex">\mathbf{V}</script></span>는 고유벡터로 구성된 행렬,
@@ -282,34 +342,59 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 <p>MIMO 시스템의 상태 공간(State-Space)에서 시스템의 동작을 해석하는 과정은 고유값과 고유벡터를 바탕으로 이루어진다. 상태 공간 해석은 시스템의 복잡한 동적 특성을 이해하고, 이를 제어하기 위한 기본적인 정보를 제공한다.</p>
 <h4 id="state-transition-matrix">상태 전이 행렬 (State Transition Matrix)</h4>
 <p>MIMO 시스템의 상태 전이 행렬은 시스템이 시간에 따라 어떻게 변화하는지를 나타내는 중요한 행렬이다. 상태 전이 행렬 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{\Phi}(t)</span><script type="math/tex">\mathbf{\Phi}(t)</script></span>는 다음과 같이 정의된다:</p>
-<p>$$</p>
-<p>\mathbf{\Phi}(t) = e^{\mathbf{A}t}</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+\mathbf{\Phi}(t) = e^{\mathbf{A}t}
+</div>
+<script type="math/tex; mode=display">
+\mathbf{\Phi}(t) = e^{\mathbf{A}t}
+</script>
+</div>
 <p>여기서, <span class="arithmatex"><span class="MathJax_Preview">\mathbf{A}</span><script type="math/tex">\mathbf{A}</script></span>는 시스템 행렬이며, <span class="arithmatex"><span class="MathJax_Preview">e^{\mathbf{A}t}</span><script type="math/tex">e^{\mathbf{A}t}</script></span>는 행렬 지수 함수(Matrix Exponential)를 나타낸다. 상태 전이 행렬은 시스템이 초기 상태에서 시간 <span class="arithmatex"><span class="MathJax_Preview">t</span><script type="math/tex">t</script></span>가 지남에 따라 어떻게 변화하는지를 나타낸다.</p>
 <p>상태 전이 행렬을 통해, 시스템의 상태 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{x}(t)</span><script type="math/tex">\mathbf{x}(t)</script></span>는 다음과 같이 표현된다:</p>
-<p>$$</p>
-<p>\mathbf{x}(t) = \mathbf{\Phi}(t) \mathbf{x}(0) + \int_0^t \mathbf{\Phi}(t-\tau)\mathbf{B}\mathbf{u}(\tau) d\tau</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+\mathbf{x}(t) = \mathbf{\Phi}(t) \mathbf{x}(0) + \int_0^t \mathbf{\Phi}(t-\tau)\mathbf{B}\mathbf{u}(\tau) d\tau
+</div>
+<script type="math/tex; mode=display">
+\mathbf{x}(t) = \mathbf{\Phi}(t) \mathbf{x}(0) + \int_0^t \mathbf{\Phi}(t-\tau)\mathbf{B}\mathbf{u}(\tau) d\tau
+</script>
+</div>
 <p>이 수식은 시스템의 초기 상태와 제어 입력을 바탕으로 시간이 지남에 따라 시스템 상태가 어떻게 변화하는지를 설명한다. 상태 전이 행렬 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{\Phi}(t)</span><script type="math/tex">\mathbf{\Phi}(t)</script></span>는 MIMO 시스템의 동적 동작을 해석하는 핵심 도구 중 하나이다.</p>
 <h4 id="time-response">시스템의 시간 응답 (Time Response)</h4>
 <p>MIMO 시스템의 시간 응답은 시스템의 입력에 대한 출력의 변화를 나타내며, 상태 공간 표현을 통해 이를 구체적으로 분석할 수 있다. 시스템의 시간 응답은 주로 두 가지로 나뉜다:
 - <strong>자유 응답(Free Response)</strong>: 시스템에 입력이 없는 경우, 초기 상태로부터 시스템이 어떻게 변화하는지를 나타낸다.
 - <strong>강제 응답(Forced Response)</strong>: 입력 신호가 주어진 경우, 시스템이 이에 어떻게 반응하는지를 나타낸다.</p>
 <p>자유 응답은 상태 전이 행렬을 통해 다음과 같이 계산된다:</p>
-<p>$$</p>
-<p>\mathbf{x}_{free}(t) = \mathbf{\Phi}(t)\mathbf{x}(0)</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+\mathbf{x}_{free}(t) = \mathbf{\Phi}(t)\mathbf{x}(0)
+</div>
+<script type="math/tex; mode=display">
+\mathbf{x}_{free}(t) = \mathbf{\Phi}(t)\mathbf{x}(0)
+</script>
+</div>
 <p>강제 응답은 입력 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{u}(t)</span><script type="math/tex">\mathbf{u}(t)</script></span>에 의해 유도되며, 다음과 같이 계산된다:</p>
-<p>$$</p>
-<p>\mathbf{x}_{forced}(t) = \int_0^t \mathbf{\Phi}(t-\tau)\mathbf{B}\mathbf{u}(\tau) d\tau</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+\mathbf{x}_{forced}(t) = \int_0^t \mathbf{\Phi}(t-\tau)\mathbf{B}\mathbf{u}(\tau) d\tau
+</div>
+<script type="math/tex; mode=display">
+\mathbf{x}_{forced}(t) = \int_0^t \mathbf{\Phi}(t-\tau)\mathbf{B}\mathbf{u}(\tau) d\tau
+</script>
+</div>
 <p>이 두 응답을 결합하면 전체 시스템의 시간 응답을 분석할 수 있으며, 이를 통해 시스템이 주어진 입력에 대해 어떻게 동작하는지를 명확하게 이해할 수 있다.</p>
 <h3 id="-routh-hurwitz-criterion">안정성 평가를 위한 루스-허위츠 기준 (Routh-Hurwitz Criterion)</h3>
 <p>MIMO 시스템에서 안정성을 평가하는 방법 중 하나는 루스-허위츠 기준(Routh-Hurwitz Criterion)을 사용하는 것이다. 루스-허위츠 기준은 시스템의 특성 방정식(Characteristic Equation)의 계수를 이용해 안정성을 평가하는 방법으로, 시스템이 안정한지 여부를 판별하는 데 사용된다.</p>
 <p>시스템의 특성 방정식은 다음과 같이 주어진다:</p>
-<p>$$</p>
-<p>\text{det}(s\mathbf{I} - \mathbf{A}) = 0</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+\text{det}(s\mathbf{I} - \mathbf{A}) = 0
+</div>
+<script type="math/tex; mode=display">
+\text{det}(s\mathbf{I} - \mathbf{A}) = 0
+</script>
+</div>
 <p>이 특성 방정식의 계수를 사용하여 루스 배열(Routh Array)을 구성하고, 이를 바탕으로 시스템의 고유값이 모두 음수인지 여부를 평가한다. 루스-허위츠 기준을 통해 시스템의 안정성을 직관적으로 평가할 수 있으며, 이를 통해 제어 시스템 설계에 중요한 정보를 제공한다.</p>
 <h3 id="interaction-blocking">상호작용 차단 (Interaction Blocking) 기법</h3>
 <p>MIMO 시스템에서 상호작용을 최소화하기 위한 방법 중 하나는 상호작용 차단(Interaction Blocking) 기법이다. 상호작용 차단 기법은 시스템의 입력과 출력 사이의 영향을 최소화하거나 제거하는 방법으로, 이를 통해 시스템의 동작을 단순화할 수 있다.</p>

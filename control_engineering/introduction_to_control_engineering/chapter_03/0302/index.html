@@ -139,21 +139,36 @@ G(s) = \frac{Y(s)}{U(s)} = \frac{K}{\tau s + 1}
 <ol>
 <li><strong>직렬 연결</strong>: 두 블록이 직렬로 연결되었을 때, 전체 전달 함수는 개별 블록의 전달 함수의 곱으로 구할 수 있다.</li>
 </ol>
-<p>$$
-    G_{\text{total}}(s) = G_1(s) \cdot G_2(s)</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+    G_{\text{total}}(s) = G_1(s) \cdot G_2(s)
+</div>
+<script type="math/tex; mode=display">
+    G_{\text{total}}(s) = G_1(s) \cdot G_2(s)
+</script>
+</div>
 <ol>
 <li><strong>병렬 연결</strong>: 두 블록이 병렬로 연결된 경우, 전체 전달 함수는 각 블록의 전달 함수의 합으로 구할 수 있다.</li>
 </ol>
-<p>$$
-    G_{\text{total}}(s) = G_1(s) + G_2(s)</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+    G_{\text{total}}(s) = G_1(s) + G_2(s)
+</div>
+<script type="math/tex; mode=display">
+    G_{\text{total}}(s) = G_1(s) + G_2(s)
+</script>
+</div>
 <ol>
 <li><strong>피드백 연결</strong>: 피드백 시스템에서는 전달 함수가 피드백 루프를 고려하여 계산된다. 피드백 시스템의 전달 함수는 다음과 같이 구할 수 있다.</li>
 </ol>
-<p>$$
-    G_{\text{total}}(s) = \frac{G(s)}{1 + G(s)H(s)}</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+    G_{\text{total}}(s) = \frac{G(s)}{1 + G(s)H(s)}
+</div>
+<script type="math/tex; mode=display">
+    G_{\text{total}}(s) = \frac{G(s)}{1 + G(s)H(s)}
+</script>
+</div>
 <pre><code>여기서 $G(s)$는 순방향 전달 함수이고, $H(s)$는 피드백 전달 함수이다.
 </code></pre>
 <p>복잡한 블록 다이어그램을 해석할 때, 이러한 규칙들을 적용하여 전체 시스템의 전달 함수를 쉽게 계산할 수 있다.</p>
@@ -166,13 +181,23 @@ G(s) = \frac{Y(s)}{U(s)} = \frac{K}{\tau s + 1}
    graph TD
        A["입력 X(s)"] --&gt;|"G1(s)"| B --&gt;|"G2(s)"| C["출력 Y(s)"]</code></p>
 <p>이 블록 다이어그램의 전체 전달 함수는 다음과 같다.</p>
-<p>$$
-   G_{\text{total}}(s) = G_1(s) \cdot G_2(s)</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+   G_{\text{total}}(s) = G_1(s) \cdot G_2(s)
+</div>
+<script type="math/tex; mode=display">
+   G_{\text{total}}(s) = G_1(s) \cdot G_2(s)
+</script>
+</div>
 <p>예를 들어, 두 시스템의 전달 함수가 각각 <span class="arithmatex"><span class="MathJax_Preview">G_1(s) = \frac{1}{s+1}</span><script type="math/tex">G_1(s) = \frac{1}{s+1}</script></span>, <span class="arithmatex"><span class="MathJax_Preview">G_2(s) = \frac{2}{s+2}</span><script type="math/tex">G_2(s) = \frac{2}{s+2}</script></span>인 경우, 전체 시스템의 전달 함수는 다음과 같이 구해진다.</p>
-<p>$$
-   G_{\text{total}}(s) = \frac{1}{s+1} \cdot \frac{2}{s+2} = \frac{2}{(s+1)(s+2)}</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+   G_{\text{total}}(s) = \frac{1}{s+1} \cdot \frac{2}{s+2} = \frac{2}{(s+1)(s+2)}
+</div>
+<script type="math/tex; mode=display">
+   G_{\text{total}}(s) = \frac{1}{s+1} \cdot \frac{2}{s+2} = \frac{2}{(s+1)(s+2)}
+</script>
+</div>
 <ol>
 <li><strong>병렬 연결 시스템 예시</strong><br/>
    두 개의 시스템이 병렬로 연결된 경우를 살펴보자. 첫 번째 시스템의 전달 함수는 <span class="arithmatex"><span class="MathJax_Preview">G_1(s)</span><script type="math/tex">G_1(s)</script></span>, 두 번째 시스템의 전달 함수는 <span class="arithmatex"><span class="MathJax_Preview">G_2(s)</span><script type="math/tex">G_2(s)</script></span>라고 할 때, 전체 시스템의 전달 함수는 두 시스템의 전달 함수의 합으로 구할 수 있다.</li>
@@ -185,17 +210,32 @@ G(s) = \frac{Y(s)}{U(s)} = \frac{K}{\tau s + 1}
        C --&gt; E["출력 Y(s)"]
        D --&gt; E</code></p>
 <p>이 경우 전체 전달 함수는 다음과 같다.</p>
-<p>$$
-   G_{\text{total}}(s) = G_1(s) + G_2(s)</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+   G_{\text{total}}(s) = G_1(s) + G_2(s)
+</div>
+<script type="math/tex; mode=display">
+   G_{\text{total}}(s) = G_1(s) + G_2(s)
+</script>
+</div>
 <p>예를 들어, 두 시스템의 전달 함수가 각각 <span class="arithmatex"><span class="MathJax_Preview">G_1(s) = \frac{1}{s+1}</span><script type="math/tex">G_1(s) = \frac{1}{s+1}</script></span>, <span class="arithmatex"><span class="MathJax_Preview">G_2(s) = \frac{2}{s+2}</span><script type="math/tex">G_2(s) = \frac{2}{s+2}</script></span>일 경우, 전체 시스템의 전달 함수는 다음과 같다.</p>
-<p>$$
-   G_{\text{total}}(s) = \frac{1}{s+1} + \frac{2}{s+2}</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+   G_{\text{total}}(s) = \frac{1}{s+1} + \frac{2}{s+2}
+</div>
+<script type="math/tex; mode=display">
+   G_{\text{total}}(s) = \frac{1}{s+1} + \frac{2}{s+2}
+</script>
+</div>
 <p>이를 공통 분모로 정리하면 다음과 같이 된다.</p>
-<p>$$
-   G_{\text{total}}(s) = \frac{(s+2) + 2(s+1)}{(s+1)(s+2)} = \frac{3s + 4}{(s+1)(s+2)}</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+   G_{\text{total}}(s) = \frac{(s+2) + 2(s+1)}{(s+1)(s+2)} = \frac{3s + 4}{(s+1)(s+2)}
+</div>
+<script type="math/tex; mode=display">
+   G_{\text{total}}(s) = \frac{(s+2) + 2(s+1)}{(s+1)(s+2)} = \frac{3s + 4}{(s+1)(s+2)}
+</script>
+</div>
 <ol>
 <li><strong>피드백 시스템 예시</strong><br/>
    피드백 시스템은 제어 시스템에서 자주 사용되며, 시스템의 출력이 다시 입력으로 피드백되는 구조를 가지고 있다. 순방향 전달 함수가 <span class="arithmatex"><span class="MathJax_Preview">G(s)</span><script type="math/tex">G(s)</script></span>, 피드백 전달 함수가 <span class="arithmatex"><span class="MathJax_Preview">H(s)</span><script type="math/tex">H(s)</script></span>일 때, 전체 시스템의 전달 함수는 다음과 같이 계산된다.</li>
@@ -206,13 +246,23 @@ G(s) = \frac{Y(s)}{U(s)} = \frac{K}{\tau s + 1}
        B --&gt;|"H(s)"| C["피드백"]
        C --&gt; A</code></p>
 <p>이 피드백 시스템의 전체 전달 함수는 다음과 같이 계산된다.</p>
-<p>$$
-   G_{\text{total}}(s) = \frac{G(s)}{1 + G(s)H(s)}</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+   G_{\text{total}}(s) = \frac{G(s)}{1 + G(s)H(s)}
+</div>
+<script type="math/tex; mode=display">
+   G_{\text{total}}(s) = \frac{G(s)}{1 + G(s)H(s)}
+</script>
+</div>
 <p>예를 들어, <span class="arithmatex"><span class="MathJax_Preview">G(s) = \frac{1}{s+1}</span><script type="math/tex">G(s) = \frac{1}{s+1}</script></span>이고, 피드백 전달 함수 <span class="arithmatex"><span class="MathJax_Preview">H(s) = 1</span><script type="math/tex">H(s) = 1</script></span>인 경우, 전체 시스템의 전달 함수는 다음과 같다.</p>
-<p>$$
-   G_{\text{total}}(s) = \frac{\frac{1}{s+1}}{1 + \frac{1}{s+1}} = \frac{1}{s+2}</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+   G_{\text{total}}(s) = \frac{\frac{1}{s+1}}{1 + \frac{1}{s+1}} = \frac{1}{s+2}
+</div>
+<script type="math/tex; mode=display">
+   G_{\text{total}}(s) = \frac{\frac{1}{s+1}}{1 + \frac{1}{s+1}} = \frac{1}{s+2}
+</script>
+</div>
 <h3 id="_6">블록 다이어그램의 변환 규칙</h3>
 <ol>
 <li>

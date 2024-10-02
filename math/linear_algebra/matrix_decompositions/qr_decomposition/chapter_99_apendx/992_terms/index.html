@@ -140,20 +140,35 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 <p>QR 분해는 행렬을 두 개의 행렬 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{Q}</span><script type="math/tex">\mathbf{Q}</script></span>와 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{R}</span><script type="math/tex">\mathbf{R}</script></span>로 분해하는 방법이다. 여기서 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{Q}</span><script type="math/tex">\mathbf{Q}</script></span>는 직교 행렬이고, <span class="arithmatex"><span class="MathJax_Preview">\mathbf{R}</span><script type="math/tex">\mathbf{R}</script></span>은 상삼각 행렬이다. 이 분해는 주로 선형 대수에서 중요한 역할을 하며, 특히 선형 시스템의 해를 구하거나, 행렬의 고유값 문제를 푸는 데 사용된다.</p>
 <h3 id="orthogonal-matrix">직교 행렬 (Orthogonal Matrix)</h3>
 <p>직교 행렬 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{Q}</span><script type="math/tex">\mathbf{Q}</script></span>는 그 행과 열이 각각 서로 직교하는 단위 벡터로 구성된 정사각 행렬이다. 수학적으로, <span class="arithmatex"><span class="MathJax_Preview">\mathbf{Q}</span><script type="math/tex">\mathbf{Q}</script></span>는 다음과 같은 성질을 만족한다:</p>
-<p>$$</p>
-<p>\mathbf{Q}^{T} \mathbf{Q} = \mathbf{Q} \mathbf{Q}^{T} = \mathbf{I}</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+\mathbf{Q}^{T} \mathbf{Q} = \mathbf{Q} \mathbf{Q}^{T} = \mathbf{I}
+</div>
+<script type="math/tex; mode=display">
+\mathbf{Q}^{T} \mathbf{Q} = \mathbf{Q} \mathbf{Q}^{T} = \mathbf{I}
+</script>
+</div>
 <p>여기서 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{Q}^{T}</span><script type="math/tex">\mathbf{Q}^{T}</script></span>는 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{Q}</span><script type="math/tex">\mathbf{Q}</script></span>의 전치 행렬, <span class="arithmatex"><span class="MathJax_Preview">\mathbf{I}</span><script type="math/tex">\mathbf{I}</script></span>는 단위 행렬을 의미한다.</p>
 <h3 id="upper-triangular-matrix">상삼각 행렬 (Upper Triangular Matrix)</h3>
 <p>상삼각 행렬 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{R}</span><script type="math/tex">\mathbf{R}</script></span>은 모든 성분이 대각선 아래에서는 0인 행렬이다. 즉, 행렬 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{R}</span><script type="math/tex">\mathbf{R}</script></span>은 다음과 같은 형태를 갖는다:</p>
-<p>$$</p>
-<p>\mathbf{R} = \begin{pmatrix}
-r_{11} &amp; r_{12} &amp; \cdots &amp; r_{1n} \
-0 &amp; r_{22} &amp; \cdots &amp; r_{2n} \
-\vdots &amp; \vdots &amp; \ddots &amp; \vdots \
+<div class="arithmatex">
+<div class="MathJax_Preview">
+\mathbf{R} = \begin{pmatrix}
+r_{11} &amp; r_{12} &amp; \cdots &amp; r_{1n} \\
+0 &amp; r_{22} &amp; \cdots &amp; r_{2n} \\
+\vdots &amp; \vdots &amp; \ddots &amp; \vdots \\
 0 &amp; 0 &amp; \cdots &amp; r_{nn}
-\end{pmatrix}</p>
-<p>$$</p>
+\end{pmatrix}
+</div>
+<script type="math/tex; mode=display">
+\mathbf{R} = \begin{pmatrix}
+r_{11} & r_{12} & \cdots & r_{1n} \\
+0 & r_{22} & \cdots & r_{2n} \\
+\vdots & \vdots & \ddots & \vdots \\
+0 & 0 & \cdots & r_{nn}
+\end{pmatrix}
+</script>
+</div>
 <p>여기서 <span class="arithmatex"><span class="MathJax_Preview">r_{ij}</span><script type="math/tex">r_{ij}</script></span>는 행렬의 원소를 나타내며, <span class="arithmatex"><span class="MathJax_Preview">i &gt; j</span><script type="math/tex">i > j</script></span>일 때 <span class="arithmatex"><span class="MathJax_Preview">r_{ij} = 0</span><script type="math/tex">r_{ij} = 0</script></span>이다.</p>
 <h3 id="-gram-schmidt-orthogonalization">그람-슈미트 정규화 (Gram-Schmidt Orthogonalization)</h3>
 <p>그람-슈미트 정규화는 주어진 벡터 집합을 직교 벡터 집합으로 변환하는 과정이다. 이 방법을 통해 생성된 직교 벡터 집합은 직교 기저를 이루며, 이는 QR 분해에서 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{Q}</span><script type="math/tex">\mathbf{Q}</script></span> 행렬을 만드는 데 사용된다.</p>

@@ -100,9 +100,14 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 <li><span class="arithmatex"><span class="MathJax_Preview">w \neq 0</span><script type="math/tex">w \neq 0</script></span>이어야 한다.</li>
 <li>동차좌표 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{p} = \begin{bmatrix} x \\ y \\ w \end{bmatrix}</span><script type="math/tex">\mathbf{p} = \begin{bmatrix} x \\ y \\ w \end{bmatrix}</script></span>는 데카르트 좌표 <span class="arithmatex"><span class="MathJax_Preview">\begin{bmatrix} x \\ y \end{bmatrix}</span><script type="math/tex">\begin{bmatrix} x \\ y \end{bmatrix}</script></span>에 의해 다음과 같이 대응된다:</li>
 </ol>
-<p>$$
-   \begin{bmatrix} x \ y \end{bmatrix} = \begin{bmatrix} \frac{x}{w} \ \frac{y}{w} \end{bmatrix}</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+   \begin{bmatrix} x \\ y \end{bmatrix} = \begin{bmatrix} \frac{x}{w} \\ \frac{y}{w} \end{bmatrix}
+</div>
+<script type="math/tex; mode=display">
+   \begin{bmatrix} x \\ y \end{bmatrix} = \begin{bmatrix} \frac{x}{w} \\ \frac{y}{w} \end{bmatrix}
+</script>
+</div>
 <p>즉, 동차좌표계에서의 점 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{p}</span><script type="math/tex">\mathbf{p}</script></span>는 스칼라 <span class="arithmatex"><span class="MathJax_Preview">w</span><script type="math/tex">w</script></span>를 나눈 좌표값으로 데카르트 좌표계의 한 점을 표현하게 된다.</p>
 <h3 id="_2">동차좌표의 변환</h3>
 <p>이제 동차좌표를 이용하여 2차원 평면의 점을 변환해보겠다. 2차원의 다양한 변환 (예: 평행이동, 스케일링, 회전)들은 동차좌표계에서 행렬 곱셈으로 간단히 표현할 수 있다.</p>

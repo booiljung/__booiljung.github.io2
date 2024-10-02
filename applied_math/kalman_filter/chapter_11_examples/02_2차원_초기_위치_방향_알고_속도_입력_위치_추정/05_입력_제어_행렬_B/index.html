@@ -131,26 +131,46 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 <li><strong>위치 변화</strong><br />
 <span class="arithmatex"><span class="MathJax_Preview">x</span><script type="math/tex">x</script></span>와 <span class="arithmatex"><span class="MathJax_Preview">y</span><script type="math/tex">y</script></span> 위치는 시간 간격 <span class="arithmatex"><span class="MathJax_Preview">\Delta t</span><script type="math/tex">\Delta t</script></span> 동안 다음과 같이 변화한다:</li>
 </ol>
-<p>$$
-   x_{k+1} = x_k + v_k \cos(\theta_k) \Delta t + \frac{1}{2} a_k \cos(\theta_k) \Delta t^2</p>
-<p>$$</p>
-<p>$$
-   y_{k+1} = y_k + v_k \sin(\theta_k) \Delta t + \frac{1}{2} a_k \sin(\theta_k) \Delta t^2</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+   x_{k+1} = x_k + v_k \cos(\theta_k) \Delta t + \frac{1}{2} a_k \cos(\theta_k) \Delta t^2
+</div>
+<script type="math/tex; mode=display">
+   x_{k+1} = x_k + v_k \cos(\theta_k) \Delta t + \frac{1}{2} a_k \cos(\theta_k) \Delta t^2
+</script>
+</div>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+   y_{k+1} = y_k + v_k \sin(\theta_k) \Delta t + \frac{1}{2} a_k \sin(\theta_k) \Delta t^2
+</div>
+<script type="math/tex; mode=display">
+   y_{k+1} = y_k + v_k \sin(\theta_k) \Delta t + \frac{1}{2} a_k \sin(\theta_k) \Delta t^2
+</script>
+</div>
 <ol>
 <li><strong>속도 변화</strong><br />
    속도 <span class="arithmatex"><span class="MathJax_Preview">v</span><script type="math/tex">v</script></span>는 가속도에 따라 선형적으로 변화한다:</li>
 </ol>
-<p>$$
-   v_{k+1} = v_k + a_k \Delta t</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+   v_{k+1} = v_k + a_k \Delta t
+</div>
+<script type="math/tex; mode=display">
+   v_{k+1} = v_k + a_k \Delta t
+</script>
+</div>
 <ol>
 <li><strong>방향 변화</strong><br />
    여기서는 방향 <span class="arithmatex"><span class="MathJax_Preview">\theta</span><script type="math/tex">\theta</script></span>가 가속도에 의해 변화하지 않는다고 가정하므로 다음과 같다:</li>
 </ol>
-<p>$$
-   \theta_{k+1} = \theta_k</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+   \theta_{k+1} = \theta_k
+</div>
+<script type="math/tex; mode=display">
+   \theta_{k+1} = \theta_k
+</script>
+</div>
 <h4 id="_3">상태 공간 표현과 입력 제어 행렬</h4>
 <p>이제, 위에서 구한 식들을 상태 벡터와 입력 제어로 표현할 수 있다. 상태 벡터 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{x}_k = [x_k, y_k, \theta_k, v_k]^T</span><script type="math/tex">\mathbf{x}_k = [x_k, y_k, \theta_k, v_k]^T</script></span>와 입력 제어 벡터 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{u}_k = a_k</span><script type="math/tex">\mathbf{u}_k = a_k</script></span>로 상태 방정식을 다음과 같이 표현할 수 있다:</p>
 <div class="arithmatex">

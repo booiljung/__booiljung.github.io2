@@ -103,33 +103,53 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 </li>
 <li>강체가 회전할 때의 저항 정도를 나타내는 값이다. 주로 <span class="arithmatex"><span class="MathJax_Preview">I</span><script type="math/tex">I</script></span>로 표시되며, 축 주위의 회전 저항을 수식으로 표현할 수 있다.</li>
 </ul>
-<p>$$
-  I = \int_V \rho(\mathbf{r}) (\mathbf{r} \cdot \mathbf{r})  \, dV</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+  I = \int_V \rho(\mathbf{r}) (\mathbf{r} \cdot \mathbf{r})  \, dV
+</div>
+<script type="math/tex; mode=display">
+  I = \int_V \rho(\mathbf{r}) (\mathbf{r} \cdot \mathbf{r})  \, dV
+</script>
+</div>
 <p>여기서 <span class="arithmatex"><span class="MathJax_Preview">\rho(\mathbf{r})</span><script type="math/tex">\rho(\mathbf{r})</script></span>는 질량 밀도 분포, <span class="arithmatex"><span class="MathJax_Preview">\mathbf{r}</span><script type="math/tex">\mathbf{r}</script></span>은 회전 중심으로부터의 거리이다.</p>
 <ul>
 <li><strong>선형 운동 (Linear Motion)</strong>:</li>
 <li>강체의 선형 운동은 뉴턴의 제2운동 법칙에 따라 설명된다.</li>
 </ul>
-<p>$$
-  \mathbf{F} = m \mathbf{a}</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+  \mathbf{F} = m \mathbf{a}
+</div>
+<script type="math/tex; mode=display">
+  \mathbf{F} = m \mathbf{a}
+</script>
+</div>
 <p>여기서 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{F}</span><script type="math/tex">\mathbf{F}</script></span>는 외력, <span class="arithmatex"><span class="MathJax_Preview">m</span><script type="math/tex">m</script></span>은 질량, <span class="arithmatex"><span class="MathJax_Preview">\mathbf{a}</span><script type="math/tex">\mathbf{a}</script></span>는 가속도이다.</p>
 <ul>
 <li><strong>회전 운동 (Rotational Motion)</strong>:</li>
 <li>강체의 회전 운동은 토크와 각가속도에 의해 설명된다.</li>
 </ul>
-<p>$$
-  \mathbf{\tau} = I \mathbf{\alpha}</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+  \mathbf{\tau} = I \mathbf{\alpha}
+</div>
+<script type="math/tex; mode=display">
+  \mathbf{\tau} = I \mathbf{\alpha}
+</script>
+</div>
 <p>여기서 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{\tau}</span><script type="math/tex">\mathbf{\tau}</script></span>는 토크, <span class="arithmatex"><span class="MathJax_Preview">I</span><script type="math/tex">I</script></span>는 관성 모멘트, <span class="arithmatex"><span class="MathJax_Preview">\mathbf{\alpha}</span><script type="math/tex">\mathbf{\alpha}</script></span>는 각가속도이다.</p>
 <ul>
 <li><strong>충돌 및 반발 (Collision and Response)</strong>:</li>
 <li>강체는 충돌 시 기존의 운동량과 에너지와 기반한 물리 법칙을 따라 반발한다. 충돌 후의 속도는 주로 반사계수 <span class="arithmatex"><span class="MathJax_Preview">e</span><script type="math/tex">e</script></span>에 의해 결정된다.</li>
 </ul>
-<p>$$
-  e = \frac{v_{\text{후}} - u_{\text{후}}}{v_{\text{전}} - u_{\text{전}}}</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+  e = \frac{v_{\text{후}} - u_{\text{후}}}{v_{\text{전}} - u_{\text{전}}}
+</div>
+<script type="math/tex; mode=display">
+  e = \frac{v_{\text{후}} - u_{\text{후}}}{v_{\text{전}} - u_{\text{전}}}
+</script>
+</div>
 <p>여기서 <span class="arithmatex"><span class="MathJax_Preview">v</span><script type="math/tex">v</script></span> 와 <span class="arithmatex"><span class="MathJax_Preview">u</span><script type="math/tex">u</script></span>는 각각 충돌 객체들의 속도를 나타낸다.</p>
 <h3 id="soft-body">Soft Body (연체)</h3>
 <p>연체는 외부 힘에 의해 변형될 수 있는 객체로, 고무, 천, 젤리와 같은 유연한 물질들을 시뮬레이션하는 데 사용된다. 주로 다음과 같은 구성 요소들을 사용한다.</p>
@@ -137,17 +157,27 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 <li><strong>질량 스프링 모델 (Mass-Spring Model)</strong>:</li>
 <li>질량 점과 이들을 연결하는 스프링으로 모델링된다. 각 스프링의 장력은 후크 법칙에 기초한다.</li>
 </ul>
-<p>$$
-  \mathbf{F} = -k (\mathbf{x} - \mathbf{l})</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+  \mathbf{F} = -k (\mathbf{x} - \mathbf{l})
+</div>
+<script type="math/tex; mode=display">
+  \mathbf{F} = -k (\mathbf{x} - \mathbf{l})
+</script>
+</div>
 <p>여기서 <span class="arithmatex"><span class="MathJax_Preview">k</span><script type="math/tex">k</script></span>는 스프링 상수, <span class="arithmatex"><span class="MathJax_Preview">\mathbf{x}</span><script type="math/tex">\mathbf{x}</script></span>는 현재 길이, <span class="arithmatex"><span class="MathJax_Preview">\mathbf{l}</span><script type="math/tex">\mathbf{l}</script></span>는 자연 길이이다.</p>
 <ul>
 <li><strong>유한 요소 분석 (Finite Element Analysis, FEA)</strong>:</li>
 <li>연체의 물리적 동작을 더 정밀하게 모델링하기 위해 요소들로 나누어 스트레스와 스트레인을 계산한다.</li>
 </ul>
-<p>$$
-  \sigma = C \cdot \epsilon</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+  \sigma = C \cdot \epsilon
+</div>
+<script type="math/tex; mode=display">
+  \sigma = C \cdot \epsilon
+</script>
+</div>
 <p>여기서 <span class="arithmatex"><span class="MathJax_Preview">\sigma</span><script type="math/tex">\sigma</script></span>는 스트레스, <span class="arithmatex"><span class="MathJax_Preview">\epsilon</span><script type="math/tex">\epsilon</script></span>은 스트레인, <span class="arithmatex"><span class="MathJax_Preview">C</span><script type="math/tex">C</script></span>는 물질의 성질을 나타내는 탄성 행렬이다.</p>
 <ul>
 <li><strong>파티클 시스템 (Particle System)</strong>:</li>
@@ -202,17 +232,27 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 <li><strong>반사법 (Reflection)</strong>:</li>
 <li>두 객체가 충돌한 후의 속도를 기존 속도의 반사계수에 따라 결정한다.</li>
 </ul>
-<p>$$
-  \mathbf{v}<em>{\text{후}} = \mathbf{v}</em>{\text{전}} - (1 + e)(\mathbf{v}_{\text{전}} \cdot \hat{\mathbf{n}}) \hat{\mathbf{n}}</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+  \mathbf{v}_{\text{후}} = \mathbf{v}_{\text{전}} - (1 + e)(\mathbf{v}_{\text{전}} \cdot \hat{\mathbf{n}}) \hat{\mathbf{n}}
+</div>
+<script type="math/tex; mode=display">
+  \mathbf{v}_{\text{후}} = \mathbf{v}_{\text{전}} - (1 + e)(\mathbf{v}_{\text{전}} \cdot \hat{\mathbf{n}}) \hat{\mathbf{n}}
+</script>
+</div>
 <p>여기서 <span class="arithmatex"><span class="MathJax_Preview">e</span><script type="math/tex">e</script></span>는 반사계수, <span class="arithmatex"><span class="MathJax_Preview">\hat{\mathbf{n}}</span><script type="math/tex">\hat{\mathbf{n}}</script></span>은 충돌면의 법선 벡터이다.</p>
 <ul>
 <li><strong>임펄스 기반 방법 (Impulse-based Methods)</strong>:</li>
 <li>충돌 시점에서의 바로캉 타이트에서 임펄스 <span class="arithmatex"><span class="MathJax_Preview">J</span><script type="math/tex">J</script></span>를 계산하여 속도를 조정한다.</li>
 </ul>
-<p>$$
-  \Delta \mathbf{v} = \frac{J}{m}</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+  \Delta \mathbf{v} = \frac{J}{m}
+</div>
+<script type="math/tex; mode=display">
+  \Delta \mathbf{v} = \frac{J}{m}
+</script>
+</div>
 <p>여기서 <span class="arithmatex"><span class="MathJax_Preview">m</span><script type="math/tex">m</script></span>은 질량이다.</p>
 <ul>
 <li><strong>제약 기반 방법 (Constraint-based Methods)</strong>:</li>

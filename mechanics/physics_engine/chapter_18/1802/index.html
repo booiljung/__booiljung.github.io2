@@ -117,18 +117,28 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 <li><strong>드래그(공기 저항)</strong>
     드래그는 대상의 속도에 반비례하는 힘으로 속도를 감소시키는 역할을 한다. 드래그 힘은 다음과 같이 정의할 수 있다:</li>
 </ol>
-<p>$$
-    \mathbf{F}_{d} = -c_d |\mathbf{v}| \mathbf{v}</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+    \mathbf{F}_{d} = -c_d |\mathbf{v}| \mathbf{v}
+</div>
+<script type="math/tex; mode=display">
+    \mathbf{F}_{d} = -c_d |\mathbf{v}| \mathbf{v}
+</script>
+</div>
 <pre><code>여기서 $c_d$는 드래그 계수, $\mathbf{v}$는 속도 벡터이다.
 </code></pre>
 <ol>
 <li><strong>흐름에 의한 힘(유체 저항)</strong>
     유체 및 기체 내를 이동하는 객체에 작용하는 힘을 정의할 수 있다:</li>
 </ol>
-<p>$$
-    \mathbf{F}_{f} = \frac{1}{2} \rho v^2 A C_d \mathbf{\hat{v}}</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+    \mathbf{F}_{f} = \frac{1}{2} \rho v^2 A C_d \mathbf{\hat{v}}
+</div>
+<script type="math/tex; mode=display">
+    \mathbf{F}_{f} = \frac{1}{2} \rho v^2 A C_d \mathbf{\hat{v}}
+</script>
+</div>
 <pre><code>여기서 $\rho$는 유체 밀도, $v$는 유체 속도, $A$는 단면적, $C_d$는 저항 계수, $\mathbf{\hat{v}}$는 속도의 단위 벡터이다.
 </code></pre>
 <h3 id="_4">사용자 정의 충돌 처리</h3>
@@ -158,18 +168,28 @@ def aabb_collision(box1, box2):
 <li><strong>반사력 기반 충돌 응답</strong>
     탄성 충돌에서 물체는 충돌 전의 속도와 충돌 후의 속도가 대칭적으로 변화한다. 필요한 속도의 변화를 계산한다:</li>
 </ol>
-<p>$$
-    \mathbf{v}<em>{1} = \mathbf{v}</em>{1} - \left(1 + e\right) \frac{\left(\mathbf{v}<em>{1} - \mathbf{v}</em>{2}\right) \cdot \mathbf{n}}{\left(\mathbf{n} \cdot \mathbf{n}\right)} \mathbf{n}</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+    \mathbf{v}_{1} = \mathbf{v}_{1} - \left(1 + e\right) \frac{\left(\mathbf{v}_{1} - \mathbf{v}_{2}\right) \cdot \mathbf{n}}{\left(\mathbf{n} \cdot \mathbf{n}\right)} \mathbf{n}
+</div>
+<script type="math/tex; mode=display">
+    \mathbf{v}_{1} = \mathbf{v}_{1} - \left(1 + e\right) \frac{\left(\mathbf{v}_{1} - \mathbf{v}_{2}\right) \cdot \mathbf{n}}{\left(\mathbf{n} \cdot \mathbf{n}\right)} \mathbf{n}
+</script>
+</div>
 <pre><code>여기서 $e$는 계수 반발계수, $\mathbf{n}$은 충돌 면의 법선 벡터이다.
 </code></pre>
 <ol>
 <li><strong>감쇠 기반 충돌 응답</strong>
     충돌 후 속도를 감소시키는 식으로 감쇠력을 적용할 수 있다:</li>
 </ol>
-<p>$$
-    \mathbf{v}' = \mathbf{v} - d\mathbf{v}</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+    \mathbf{v}' = \mathbf{v} - d\mathbf{v}
+</div>
+<script type="math/tex; mode=display">
+    \mathbf{v}' = \mathbf{v} - d\mathbf{v}
+</script>
+</div>
 <pre><code>여기서 $d$는 감쇠 계수이다.
 </code></pre>
 <h2 id="_7">고급 사용자 정의 요소</h2>

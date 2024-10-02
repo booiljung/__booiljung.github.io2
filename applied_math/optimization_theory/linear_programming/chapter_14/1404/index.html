@@ -163,9 +163,14 @@ V_t(\mathbf{s}_t) = \min_{\mathbf{x}_t} \left[ c_t(\mathbf{s}_t, \mathbf{x}_t) +
 <ol>
 <li>마지막 단계에서부터 시작하여 역방향으로 해를 구한다. 마지막 단계에서는 다음 단계가 존재하지 않으므로, 그 상태에서의 해법은 단순한 최소화 문제로 정의된다.</li>
 </ol>
-<p>$$
-   V_T(\mathbf{s}<em>T) = \min</em>{\mathbf{x}_T} \, c_T(\mathbf{s}_T, \mathbf{x}_T)</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+   V_T(\mathbf{s}_T) = \min_{\mathbf{x}_T} \, c_T(\mathbf{s}_T, \mathbf{x}_T)
+</div>
+<script type="math/tex; mode=display">
+   V_T(\mathbf{s}_T) = \min_{\mathbf{x}_T} \, c_T(\mathbf{s}_T, \mathbf{x}_T)
+</script>
+</div>
 <ol>
 <li>
 <p>각 단계에서 벨만 방정식을 이용하여 상태에 대한 최적 해법을 찾는다. 각 단계에서 구한 최적 해법은 다음 단계에서의 입력이 된다.</p>

@@ -190,9 +190,14 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 <ul>
 <li><strong>조명 계산:</strong> 각 픽셀에 대해 조명 모델을 적용하여 색상을 계산하는 과정에서 큰 부동소수점 연산이 필요하다. 예를 들어 퐁 모델(Phong Model)은 다음과 같은 수식을 사용한다:</li>
 </ul>
-<p>$$
-  I = I_a + I_d (\vec{L} \cdot \vec{N}) + I_s (\vec{R} \cdot \vec{V})^n</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+  I = I_a + I_d (\vec{L} \cdot \vec{N}) + I_s (\vec{R} \cdot \vec{V})^n
+</div>
+<script type="math/tex; mode=display">
+  I = I_a + I_d (\vec{L} \cdot \vec{N}) + I_s (\vec{R} \cdot \vec{V})^n
+</script>
+</div>
 <p>여기서 <span class="arithmatex"><span class="MathJax_Preview">I_a</span><script type="math/tex">I_a</script></span>는 완화광(Ambient light),  <span class="arithmatex"><span class="MathJax_Preview">I_d</span><script type="math/tex">I_d</script></span>는 확산광(Diffuse light), <span class="arithmatex"><span class="MathJax_Preview">I_s</span><script type="math/tex">I_s</script></span>는 반사광(Specular light), <span class="arithmatex"><span class="MathJax_Preview">\vec{L}</span><script type="math/tex">\vec{L}</script></span>은 광선 벡터(Light vector), <span class="arithmatex"><span class="MathJax_Preview">\vec{N}</span><script type="math/tex">\vec{N}</script></span>은 법선 벡터(Normal vector), <span class="arithmatex"><span class="MathJax_Preview">\vec{R}</span><script type="math/tex">\vec{R}</script></span>은 반사 벡터(Reflection vector), <span class="arithmatex"><span class="MathJax_Preview">\vec{V}</span><script type="math/tex">\vec{V}</script></span>는 카메라 벡터(Camera vector), <span class="arithmatex"><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span>는 반사지수(Specular exponent)이다.</p>
 <hr />
 <p>부동소수점 연산 유닛(FPU)은 GPU 성능의 핵심 요소 중 하나로, 다양한 복잡한 연산을 신속하고 정확하게 수행한다. 덧셈, 뺄셈, 곱셈, 나눗셈, 제곱근 등의 연산을 효율적으로 처리하기 위해 구조적 최적화 및 성능 최적화 기법이 필수적이다. 특히 게이밍과 같은 그래픽 집약적인 애플리케이션에서 FPU의 역할이 매우 중요하다. 이를 통해 실제보다 더 생생하고 복잡한 그래픽을 실시간으로 렌더링할 수 있다.</p>

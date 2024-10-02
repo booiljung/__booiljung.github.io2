@@ -110,9 +110,14 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 <ul>
 <li><strong>행렬의 조건수(Condition Number):</strong> 조건수는 주어진 행렬의 크기에 비해 LU 분해 과정에서 결과값이 얼마나 변할 수 있는지를 측정하는 척도이다. 행렬 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{A}</span><script type="math/tex">\mathbf{A}</script></span>의 조건수는 다음과 같이 정의된다:</li>
 </ul>
-<p>$$</p>
-<p>\kappa(\mathbf{A}) = |\mathbf{A}| \cdot |\mathbf{A}^{-1}|</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+  \kappa(\mathbf{A}) = \|\mathbf{A}\| \cdot \|\mathbf{A}^{-1}\|
+</div>
+<script type="math/tex; mode=display">
+  \kappa(\mathbf{A}) = \|\mathbf{A}\| \cdot \|\mathbf{A}^{-1}\|
+</script>
+</div>
 <p>조건수가 큰 행렬은 작은 수치적 오류가 큰 결과 오류로 증폭될 가능성이 높다.</p>
 <ul>
 <li><strong>Pivoting 전략:</strong> LU 분해 과정에서 주어진 행렬이 수치적으로 안정적인 분해를 보장하도록 피벗을 선택하는 전략이다. 피벗팅을 제대로 사용하지 않으면, 분해 과정에서 오류가 크게 증가할 수 있다.</li>

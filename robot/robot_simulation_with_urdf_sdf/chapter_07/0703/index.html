@@ -150,9 +150,14 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 Eigen::Matrix3d R_camera;          // 카메라의 회전 행렬
 </code></pre>
 <p>카메라의 방향과 위치를 기반으로 이미지를 생성하는 과정은 아래와 같은 관계식을 따른다.</p>
-<p>$$</p>
-<p>\mathbf{p}<em>{\text{image}} = \mathbf{R}</em>{\text{camera}} \mathbf{p}<em>{\text{object}} + \mathbf{p}</em>{\text{camera}}</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+\mathbf{p}_{\text{image}} = \mathbf{R}_{\text{camera}} \mathbf{p}_{\text{object}} + \mathbf{p}_{\text{camera}}
+</div>
+<script type="math/tex; mode=display">
+\mathbf{p}_{\text{image}} = \mathbf{R}_{\text{camera}} \mathbf{p}_{\text{object}} + \mathbf{p}_{\text{camera}}
+</script>
+</div>
 <p>여기서 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{p}_{\text{image}}</span><script type="math/tex">\mathbf{p}_{\text{image}}</script></span>는 이미지 좌표계에서의 물체 위치, <span class="arithmatex"><span class="MathJax_Preview">\mathbf{p}_{\text{object}}</span><script type="math/tex">\mathbf{p}_{\text{object}}</script></span>는 월드 좌표계에서의 물체 위치를 의미한다.</p>
 <h3 id="gazebo_3">Gazebo 플러그인 작성 예시</h3>
 <p>플러그인을 작성하는 과정에서 주로 C++ 언어를 사용하며, Gazebo의 API를 활용하여 물리 엔진과 상호작용하는 코드를 작성하게 된다. 예를 들어, 간단한 카메라 플러그인을 작성하는 예제를 살펴보자.</p>

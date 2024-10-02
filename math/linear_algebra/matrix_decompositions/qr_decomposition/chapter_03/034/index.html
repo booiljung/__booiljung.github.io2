@@ -101,18 +101,31 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
     <p>기븐스 회전(Givens rotation)은 QR 분해에서 중요한 역할을 하는 알고리즘 중 하나로, 대규모 행렬의 QR 분해를 효율적으로 계산하는 데 사용된다. 기븐스 회전은 주로 희소 행렬이나 대각선 요소가 중요한 행렬에 대해 효과적이다. 이 방법은 행렬의 개별 요소에 대해 회전을 적용하여 하삼각 요소를 제거하고, 결국 상삼각 행렬을 얻는 방식으로 작동한다.</p>
 <h3 id="_1">기븐스 회전의 기본 개념</h3>
 <p>기븐스 회전은 2차원 평면에서 벡터를 회전시키는 방식으로 특정 요소를 0으로 만든다. 수학적으로 기븐스 회전은 단위 행렬에 대한 작은 회전 변환으로 정의된다. 회전 변환은 2차원 벡터에 대해 다음과 같이 표현된다:</p>
-<p>$$</p>
-<p>\mathbf{G}(i, j, \theta) = \begin{bmatrix}
-\cos\theta &amp; -\sin\theta \
+<div class="arithmatex">
+<div class="MathJax_Preview">
+\mathbf{G}(i, j, \theta) = \begin{bmatrix}
+\cos\theta &amp; -\sin\theta \\
 \sin\theta &amp; \cos\theta
-\end{bmatrix}</p>
-<p>$$</p>
+\end{bmatrix}
+</div>
+<script type="math/tex; mode=display">
+\mathbf{G}(i, j, \theta) = \begin{bmatrix}
+\cos\theta & -\sin\theta \\
+\sin\theta & \cos\theta
+\end{bmatrix}
+</script>
+</div>
 <p>여기서 <span class="arithmatex"><span class="MathJax_Preview">\theta</span><script type="math/tex">\theta</script></span>는 회전 각도를 나타내며, 이 변환은 행렬의 특정 두 요소를 회전시켜 하나를 0으로 만든다.</p>
 <h3 id="_2">기븐스 회전 행렬의 정의</h3>
 <p>기븐스 회전 행렬 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{G}(i, j, \theta)</span><script type="math/tex">\mathbf{G}(i, j, \theta)</script></span>는 <span class="arithmatex"><span class="MathJax_Preview">n \times n</span><script type="math/tex">n \times n</script></span> 단위 행렬 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{I}</span><script type="math/tex">\mathbf{I}</script></span>에서 두 개의 행과 열을 회전시키는 형태로 정의된다. 행렬 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{A}</span><script type="math/tex">\mathbf{A}</script></span>의 <span class="arithmatex"><span class="MathJax_Preview">i</span><script type="math/tex">i</script></span>번째 행과 <span class="arithmatex"><span class="MathJax_Preview">j</span><script type="math/tex">j</script></span>번째 행을 회전시키는 회전 행렬 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{G}_{ij}</span><script type="math/tex">\mathbf{G}_{ij}</script></span>는 다음과 같이 나타낼 수 있다:</p>
-<p>$$</p>
-<p>\mathbf{G}_{ij}(\theta) = \mathbf{I} - \left(1 - \cos\theta\right) (\mathbf{e}_i \mathbf{e}_i^T + \mathbf{e}_j \mathbf{e}_j^T) + \sin\theta (\mathbf{e}_i \mathbf{e}_j^T - \mathbf{e}_j \mathbf{e}_i^T)</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+\mathbf{G}_{ij}(\theta) = \mathbf{I} - \left(1 - \cos\theta\right) (\mathbf{e}_i \mathbf{e}_i^T + \mathbf{e}_j \mathbf{e}_j^T) + \sin\theta (\mathbf{e}_i \mathbf{e}_j^T - \mathbf{e}_j \mathbf{e}_i^T)
+</div>
+<script type="math/tex; mode=display">
+\mathbf{G}_{ij}(\theta) = \mathbf{I} - \left(1 - \cos\theta\right) (\mathbf{e}_i \mathbf{e}_i^T + \mathbf{e}_j \mathbf{e}_j^T) + \sin\theta (\mathbf{e}_i \mathbf{e}_j^T - \mathbf{e}_j \mathbf{e}_i^T)
+</script>
+</div>
 <p>여기서 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{e}_i</span><script type="math/tex">\mathbf{e}_i</script></span>와 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{e}_j</span><script type="math/tex">\mathbf{e}_j</script></span>는 표준 단위 벡터이다.</p>
 <h3 id="qr">기븐스 회전을 이용한 QR 분해의 과정</h3>
 <p>QR 분해에서 기븐스 회전의 목적은 행렬 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{A}</span><script type="math/tex">\mathbf{A}</script></span>의 하삼각 부분을 0으로 만들어 상삼각 행렬 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{R}</span><script type="math/tex">\mathbf{R}</script></span>을 얻는 것이다. 이때 회전 행렬을 순차적으로 곱하여 직교 행렬 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{Q}</span><script type="math/tex">\mathbf{Q}</script></span>를 얻는다.</p>
@@ -124,16 +137,26 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 <p><strong>회전 각도 계산</strong>: 요소 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{a}_{ii}</span><script type="math/tex">\mathbf{a}_{ii}</script></span>와 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{a}_{ji}</span><script type="math/tex">\mathbf{a}_{ji}</script></span>를 사용하여 회전 각도 <span class="arithmatex"><span class="MathJax_Preview">\theta</span><script type="math/tex">\theta</script></span>를 계산한다. 각도는 다음과 같이 구할 수 있다:</p>
 </li>
 </ol>
-<p>$$</p>
-<p>r = \sqrt{a_{ii}^2 + a_{ji}^2}, \quad c = \frac{a_{ii}}{r}, \quad s = \frac{a_{ji}}{r}</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+r = \sqrt{a_{ii}^2 + a_{ji}^2}, \quad c = \frac{a_{ii}}{r}, \quad s = \frac{a_{ji}}{r}
+</div>
+<script type="math/tex; mode=display">
+r = \sqrt{a_{ii}^2 + a_{ji}^2}, \quad c = \frac{a_{ii}}{r}, \quad s = \frac{a_{ji}}{r}
+</script>
+</div>
 <p>여기서 <span class="arithmatex"><span class="MathJax_Preview">c</span><script type="math/tex">c</script></span>와 <span class="arithmatex"><span class="MathJax_Preview">s</span><script type="math/tex">s</script></span>는 각각 <span class="arithmatex"><span class="MathJax_Preview">\cos\theta</span><script type="math/tex">\cos\theta</script></span>와 <span class="arithmatex"><span class="MathJax_Preview">\sin\theta</span><script type="math/tex">\sin\theta</script></span>에 해당한다.</p>
 <ol>
 <li><strong>기븐스 회전 적용</strong>: 행렬 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{A}</span><script type="math/tex">\mathbf{A}</script></span>에 대해 회전 행렬 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{G}_{ij}</span><script type="math/tex">\mathbf{G}_{ij}</script></span>를 왼쪽에서 곱하여 해당 요소를 0으로 만든다:</li>
 </ol>
-<p>$$</p>
-<p>\mathbf{G}_{ij} \mathbf{A}</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+\mathbf{G}_{ij} \mathbf{A}
+</div>
+<script type="math/tex; mode=display">
+\mathbf{G}_{ij} \mathbf{A}
+</script>
+</div>
 <p>이 과정을 통해 행렬의 특정 하삼각 요소를 제거한다.</p>
 <ol>
 <li>
@@ -143,9 +166,14 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 <p><strong>직교 행렬 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{Q}</span><script type="math/tex">\mathbf{Q}</script></span> 계산</strong>: 모든 회전 행렬의 곱을 통해 직교 행렬 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{Q}</span><script type="math/tex">\mathbf{Q}</script></span>를 계산한다:</p>
 </li>
 </ol>
-<p>$$</p>
-<p>\mathbf{Q} = \mathbf{G}_1^T \mathbf{G}_2^T \dots \mathbf{G}_k^T</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+\mathbf{Q} = \mathbf{G}_1^T \mathbf{G}_2^T \dots \mathbf{G}_k^T
+</div>
+<script type="math/tex; mode=display">
+\mathbf{Q} = \mathbf{G}_1^T \mathbf{G}_2^T \dots \mathbf{G}_k^T
+</script>
+</div>
 <p>여기서 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{G}_k</span><script type="math/tex">\mathbf{G}_k</script></span>는 각 회전 단계에서 사용된 기븐스 회전 행렬이다.</p>
 <h3 id="_3">기븐스 회전의 수치적 안정성</h3>
 <p>기븐스 회전은 주로 수치적으로 안정적이며, 특히 대규모 행렬에서 효과적이다. 이는 특정 요소를 직접 0으로 만드는 방식이기 때문에, 계산 과정에서 발생할 수 있는 수치적 불안정을 최소화할 수 있다.</p>

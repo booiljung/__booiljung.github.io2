@@ -106,15 +106,25 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 <li><strong>평면의 법선 벡터 계산</strong>: 평면 <span class="arithmatex"><span class="MathJax_Preview">\pi</span><script type="math/tex">\pi</script></span>의 법선 벡터 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{n}</span><script type="math/tex">\mathbf{n}</script></span>을 구한다.</li>
 <li><strong>법선 벡터 방향 투영 성분 계산</strong>: 벡터 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{a}</span><script type="math/tex">\mathbf{a}</script></span>를 법선 벡터 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{n}</span><script type="math/tex">\mathbf{n}</script></span>에 투영하여 벡터 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{a}</span><script type="math/tex">\mathbf{a}</script></span>의 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{n}</span><script type="math/tex">\mathbf{n}</script></span> 방향 성분을 구한다.</li>
 </ol>
-<p>$$
-   \mathbf{a}_n = \left( \frac{\mathbf{a} \cdot \mathbf{n}}{\mathbf{n} \cdot \mathbf{n}} \right) \mathbf{n}</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+   \mathbf{a}_n = \left( \frac{\mathbf{a} \cdot \mathbf{n}}{\mathbf{n} \cdot \mathbf{n}} \right) \mathbf{n}
+</div>
+<script type="math/tex; mode=display">
+   \mathbf{a}_n = \left( \frac{\mathbf{a} \cdot \mathbf{n}}{\mathbf{n} \cdot \mathbf{n}} \right) \mathbf{n}
+</script>
+</div>
 <ol>
 <li><strong>법선 벡터 방향 성분 제거</strong>: 벡터 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{a}</span><script type="math/tex">\mathbf{a}</script></span>에서 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{n}</span><script type="math/tex">\mathbf{n}</script></span> 방향 성분 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{a}_n</span><script type="math/tex">\mathbf{a}_n</script></span>을 빼준다.</li>
 </ol>
-<p>$$
-   \mathbf{a}_{\pi} = \mathbf{a} - \mathbf{a}_n</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+   \mathbf{a}_{\pi} = \mathbf{a} - \mathbf{a}_n
+</div>
+<script type="math/tex; mode=display">
+   \mathbf{a}_{\pi} = \mathbf{a} - \mathbf{a}_n
+</script>
+</div>
 <h3 id="_3">예제</h3>
 <p>다음은 벡터 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{a}</span><script type="math/tex">\mathbf{a}</script></span>가 주어지고, 평면 <span class="arithmatex"><span class="MathJax_Preview">\pi</span><script type="math/tex">\pi</script></span>가 벡터 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{n}</span><script type="math/tex">\mathbf{n}</script></span>에 직교하는 경우의 예제이다.</p>
 <ul>
@@ -123,15 +133,25 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 </ul>
 <p>벡터 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{a}</span><script type="math/tex">\mathbf{a}</script></span>의 평면 <span class="arithmatex"><span class="MathJax_Preview">\pi</span><script type="math/tex">\pi</script></span>에 대한 투영 벡터 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{a}_{\pi}</span><script type="math/tex">\mathbf{a}_{\pi}</script></span>를 구하려면 다음과 같이 계산한다.
 - 벡터 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{a}</span><script type="math/tex">\mathbf{a}</script></span>를 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{n}</span><script type="math/tex">\mathbf{n}</script></span>에 투영한 결과:</p>
-<p>$$
-  \mathbf{a}_n = \left( \frac{a_1 n_1 + a_2 n_2 + a_3 n_3}{n_1^2 + n_2^2 + n_3^2} \right) \begin{bmatrix} n_1 \ n_2 \ n_3 \end{bmatrix}</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+  \mathbf{a}_n = \left( \frac{a_1 n_1 + a_2 n_2 + a_3 n_3}{n_1^2 + n_2^2 + n_3^2} \right) \begin{bmatrix} n_1 \\ n_2 \\ n_3 \end{bmatrix}
+</div>
+<script type="math/tex; mode=display">
+  \mathbf{a}_n = \left( \frac{a_1 n_1 + a_2 n_2 + a_3 n_3}{n_1^2 + n_2^2 + n_3^2} \right) \begin{bmatrix} n_1 \\ n_2 \\ n_3 \end{bmatrix}
+</script>
+</div>
 <ul>
 <li>벡터 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{a}</span><script type="math/tex">\mathbf{a}</script></span>의 평면 <span class="arithmatex"><span class="MathJax_Preview">\pi</span><script type="math/tex">\pi</script></span>에 대한 투영 벡터:</li>
 </ul>
-<p>$$
-  \mathbf{a}_{\pi} = \begin{bmatrix} a_1 \ a_2 \ a_3 \end{bmatrix} - \left( \frac{a_1 n_1 + a_2 n_2 + a_3 n_3}{n_1^2 + n_2^2 + n_3^2} \right) \begin{bmatrix} n_1 \ n_2 \ n_3 \end{bmatrix}</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+  \mathbf{a}_{\pi} = \begin{bmatrix} a_1 \\ a_2 \\ a_3 \end{bmatrix} - \left( \frac{a_1 n_1 + a_2 n_2 + a_3 n_3}{n_1^2 + n_2^2 + n_3^2} \right) \begin{bmatrix} n_1 \\ n_2 \\ n_3 \end{bmatrix}
+</div>
+<script type="math/tex; mode=display">
+  \mathbf{a}_{\pi} = \begin{bmatrix} a_1 \\ a_2 \\ a_3 \end{bmatrix} - \left( \frac{a_1 n_1 + a_2 n_2 + a_3 n_3}{n_1^2 + n_2^2 + n_3^2} \right) \begin{bmatrix} n_1 \\ n_2 \\ n_3 \end{bmatrix}
+</script>
+</div>
 <h3 id="_4">추가 예제 및 응용</h3>
 <p>표현된 기본 공식을 활용하여 다양한 벡터와 평면의 경우에 대해 벡터 투영을 계산할 수 있다. 실제 응용에서는 이러한 투영 과정을 통해 평면의 어느 점이든 벡터를 분석하거나 직교 성분을 추출할 수 있다. </p>
 <h3 id="_5">응용 사례</h3>

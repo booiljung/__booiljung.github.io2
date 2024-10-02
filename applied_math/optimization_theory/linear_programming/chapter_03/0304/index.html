@@ -99,12 +99,22 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
     <h3 id="1">1. 균형 상태</h3>
 <p>균형 상태는 선형계획법에서 제약 조건의 양쪽(자원과 요구)이 정확히 일치하는 상황을 말한다. 이는 특히 공급망 문제에서 자주 나타나는 경우로, 공급량과 수요량이 동일할 때를 의미한다.</p>
 <p>선형 계획의 일반적인 형태는 다음과 같다:</p>
-<p>$$</p>
-<p>\text{최대화 혹은 최소화} \quad \mathbf{c}^\top \mathbf{x}</p>
-<p>$$</p>
-<p>$$</p>
-<p>\text{제약 조건} \quad \mathbf{A} \mathbf{x} = \mathbf{b}, \quad \mathbf{x} \geq 0</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+\text{최대화 혹은 최소화} \quad \mathbf{c}^\top \mathbf{x}
+</div>
+<script type="math/tex; mode=display">
+\text{최대화 혹은 최소화} \quad \mathbf{c}^\top \mathbf{x}
+</script>
+</div>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+\text{제약 조건} \quad \mathbf{A} \mathbf{x} = \mathbf{b}, \quad \mathbf{x} \geq 0
+</div>
+<script type="math/tex; mode=display">
+\text{제약 조건} \quad \mathbf{A} \mathbf{x} = \mathbf{b}, \quad \mathbf{x} \geq 0
+</script>
+</div>
 <p>여기서:
 - <span class="arithmatex"><span class="MathJax_Preview">\mathbf{A}</span><script type="math/tex">\mathbf{A}</script></span>는 제약 조건의 계수 행렬이며, <span class="arithmatex"><span class="MathJax_Preview">m \times n</span><script type="math/tex">m \times n</script></span> 차원의 행렬이다.
 - <span class="arithmatex"><span class="MathJax_Preview">\mathbf{x}</span><script type="math/tex">\mathbf{x}</script></span>는 <span class="arithmatex"><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span>-차원의 변수 벡터이다.
@@ -113,9 +123,14 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 <h3 id="2">2. 균형 상태의 예시</h3>
 <p>균형 상태는 공급과 수요가 일치하는 경우에 나타난다. 예를 들어, 한 도시에 여러 공장에서 물품을 공급하고 여러 상점에서 그 물품을 수령할 때, 각 공장에서 공급되는 총 물량과 각 상점에서 요구하는 물량이 동일하다면, 이 문제는 균형 상태에 있다고 할 수 있다.</p>
 <p>이때 균형 상태의 선형 계획 문제는 다음과 같이 나타낼 수 있다.</p>
-<p>$$</p>
-<p>\sum_{i=1}^{n} x_{i} = \sum_{j=1}^{m} d_j</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+\sum_{i=1}^{n} x_{i} = \sum_{j=1}^{m} d_j
+</div>
+<script type="math/tex; mode=display">
+\sum_{i=1}^{n} x_{i} = \sum_{j=1}^{m} d_j
+</script>
+</div>
 <p>여기서:
 - <span class="arithmatex"><span class="MathJax_Preview">x_i</span><script type="math/tex">x_i</script></span>는 각 공급지 <span class="arithmatex"><span class="MathJax_Preview">i</span><script type="math/tex">i</script></span>에서 공급되는 물량
 - <span class="arithmatex"><span class="MathJax_Preview">d_j</span><script type="math/tex">d_j</script></span>는 각 수요지 <span class="arithmatex"><span class="MathJax_Preview">j</span><script type="math/tex">j</script></span>에서 요구하는 물량</p>
@@ -133,34 +148,64 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 </li>
 </ol>
 <p>제약 조건은 다음과 같이 변경될 수 있다:</p>
-<p>$$</p>
-<p>\mathbf{A} \mathbf{x} + \mathbf{d} = \mathbf{b}, \quad \mathbf{x} \geq 0, \quad \mathbf{d} \geq 0</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+\mathbf{A} \mathbf{x} + \mathbf{d} = \mathbf{b}, \quad \mathbf{x} \geq 0, \quad \mathbf{d} \geq 0
+</div>
+<script type="math/tex; mode=display">
+\mathbf{A} \mathbf{x} + \mathbf{d} = \mathbf{b}, \quad \mathbf{x} \geq 0, \quad \mathbf{d} \geq 0
+</script>
+</div>
 <p>여기서:
 - <span class="arithmatex"><span class="MathJax_Preview">\mathbf{d}</span><script type="math/tex">\mathbf{d}</script></span>는 가상 변수로, 공급과 수요의 차이를 보정한다.</p>
 <h3 id="5">5. 비균형 상태의 예시</h3>
 <p>비균형 상태를 다루기 위해 가상 변수를 추가하는 예를 살펴보겠다. 공급량이 수요량보다 많은 경우를 가정해 보자. 예를 들어, 두 개의 공급지 <span class="arithmatex"><span class="MathJax_Preview">S_1, S_2</span><script type="math/tex">S_1, S_2</script></span>가 있고 세 개의 수요지 <span class="arithmatex"><span class="MathJax_Preview">D_1, D_2, D_3</span><script type="math/tex">D_1, D_2, D_3</script></span>가 있다고 할 때, 공급량과 수요량이 다음과 같이 주어진다:</p>
-<p>$$</p>
-<p>S_1 = 100, \quad S_2 = 150</p>
-<p>$$</p>
-<p>$$</p>
-<p>D_1 = 50, \quad D_2 = 80, \quad D_3 = 70</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+S_1 = 100, \quad S_2 = 150
+</div>
+<script type="math/tex; mode=display">
+S_1 = 100, \quad S_2 = 150
+</script>
+</div>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+D_1 = 50, \quad D_2 = 80, \quad D_3 = 70
+</div>
+<script type="math/tex; mode=display">
+D_1 = 50, \quad D_2 = 80, \quad D_3 = 70
+</script>
+</div>
 <p>총 공급량은 <span class="arithmatex"><span class="MathJax_Preview">250</span><script type="math/tex">250</script></span>이고, 총 수요량은 <span class="arithmatex"><span class="MathJax_Preview">200</span><script type="math/tex">200</script></span>이다. 이때 50만큼의 여분 공급량이 존재한다. 이 문제를 균형 상태로 만들기 위해 가상 수요지 <span class="arithmatex"><span class="MathJax_Preview">D_4</span><script type="math/tex">D_4</script></span>를 추가하고, 이를 통해 50만큼의 여분 공급량을 할당한다.</p>
 <p>수식을 다시 작성하면:</p>
-<p>$$</p>
-<p>S_1 + S_2 = D_1 + D_2 + D_3 + D_4</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+S_1 + S_2 = D_1 + D_2 + D_3 + D_4
+</div>
+<script type="math/tex; mode=display">
+S_1 + S_2 = D_1 + D_2 + D_3 + D_4
+</script>
+</div>
 <p>여기서 <span class="arithmatex"><span class="MathJax_Preview">D_4 = 50</span><script type="math/tex">D_4 = 50</script></span>이다. 가상 수요지의 도입으로 비균형 문제는 균형 문제로 변환되었다.</p>
 <h3 id="6">6. 균형 및 비균형 상태의 수학적 표현</h3>
 <p>균형 상태에서 선형 계획 문제는 다음과 같이 표현된다:</p>
-<p>$$</p>
-<p>\mathbf{A} \mathbf{x} = \mathbf{b}, \quad \mathbf{x} \geq 0</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+\mathbf{A} \mathbf{x} = \mathbf{b}, \quad \mathbf{x} \geq 0
+</div>
+<script type="math/tex; mode=display">
+\mathbf{A} \mathbf{x} = \mathbf{b}, \quad \mathbf{x} \geq 0
+</script>
+</div>
 <p>비균형 상태에서는 다음과 같이 가상 변수를 도입하여 수정된 제약 조건을 포함한다:</p>
-<p>$$</p>
-<p>\mathbf{A} \mathbf{x} + \mathbf{d} = \mathbf{b}, \quad \mathbf{x} \geq 0, \quad \mathbf{d} \geq 0</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+\mathbf{A} \mathbf{x} + \mathbf{d} = \mathbf{b}, \quad \mathbf{x} \geq 0, \quad \mathbf{d} \geq 0
+</div>
+<script type="math/tex; mode=display">
+\mathbf{A} \mathbf{x} + \mathbf{d} = \mathbf{b}, \quad \mathbf{x} \geq 0, \quad \mathbf{d} \geq 0
+</script>
+</div>
 <p>이때, <span class="arithmatex"><span class="MathJax_Preview">\mathbf{d}</span><script type="math/tex">\mathbf{d}</script></span>는 가상 변수로, 공급과 수요의 차이를 나타내며, 이를 통해 문제를 균형 상태로 전환한다.</p>
 <h3 id="7">7. 비균형 문제의 해결 알고리즘</h3>
 <p>비균형 문제의 해결은 단순히 가상 변수를 추가하는 것뿐만 아니라, 다음과 같은 단계를 포함한다:</p>

@@ -109,9 +109,14 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 <li>각 신호는 고유의 처리 로직에 따라 분석되고, 그 결과는 제어 명령으로 변환되어야 한다.</li>
 </ol>
 <p>이를 수학적으로 표현하면, 입력 신호 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{x}(t)</span><script type="math/tex">\mathbf{x}(t)</script></span>가 주어졌을 때, 실시간 제어 시스템의 목표는 다음과 같이 정의할 수 있다:</p>
-<p>$$
-   \mathbf{y}(t) = f(\mathbf{x}(t), \theta)</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+   \mathbf{y}(t) = f(\mathbf{x}(t), \theta)
+</div>
+<script type="math/tex; mode=display">
+   \mathbf{y}(t) = f(\mathbf{x}(t), \theta)
+</script>
+</div>
 <p>여기서 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{y}(t)</span><script type="math/tex">\mathbf{y}(t)</script></span>는 제어 신호, <span class="arithmatex"><span class="MathJax_Preview">f</span><script type="math/tex">f</script></span>는 처리 함수, <span class="arithmatex"><span class="MathJax_Preview">\theta</span><script type="math/tex">\theta</script></span>는 시스템 파라미터를 나타낸다.</p>
 <ol>
 <li><strong>제어 신호 생성:</strong></li>
@@ -119,9 +124,14 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 <li>제어 신호는 특정 시간 제약 내에 출력되어야 하며, 출력되는 제어 신호는 정밀하고 정확해야 한다.</li>
 </ol>
 <p>제어 신호는 다음과 같은 피드백 제어 시스템의 형태로 나타낼 수 있다:</p>
-<p>$$
-   \mathbf{u}(t) = K_p \cdot e(t) + K_i \cdot \int e(t) \, dt + K_d \cdot \frac{de(t)}{dt}</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+   \mathbf{u}(t) = K_p \cdot e(t) + K_i \cdot \int e(t) \, dt + K_d \cdot \frac{de(t)}{dt}
+</div>
+<script type="math/tex; mode=display">
+   \mathbf{u}(t) = K_p \cdot e(t) + K_i \cdot \int e(t) \, dt + K_d \cdot \frac{de(t)}{dt}
+</script>
+</div>
 <p>여기서 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{u}(t)</span><script type="math/tex">\mathbf{u}(t)</script></span>는 제어 신호, <span class="arithmatex"><span class="MathJax_Preview">e(t)</span><script type="math/tex">e(t)</script></span>는 오류 신호, <span class="arithmatex"><span class="MathJax_Preview">K_p</span><script type="math/tex">K_p</script></span>, <span class="arithmatex"><span class="MathJax_Preview">K_i</span><script type="math/tex">K_i</script></span>, <span class="arithmatex"><span class="MathJax_Preview">K_d</span><script type="math/tex">K_d</script></span>는 각각 비례, 적분, 미분 제어 이득을 나타낸다.</p>
 <ol>
 <li><strong>실시간 데이터 로깅:</strong></li>

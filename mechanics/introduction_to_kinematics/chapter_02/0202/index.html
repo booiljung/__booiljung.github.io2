@@ -107,27 +107,52 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 <ul>
 <li>데카르트 좌표계에서 극좌표계로의 변환:</li>
 </ul>
-<p>$$</p>
-<p>r = \sqrt{x^2 + y^2}</p>
-<p>$$</p>
-<p>$$</p>
-<p>\theta = \tan^{-1}\left(\frac{y}{x}\right)</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+  r = \sqrt{x^2 + y^2}
+</div>
+<script type="math/tex; mode=display">
+  r = \sqrt{x^2 + y^2}
+</script>
+</div>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+  \theta = \tan^{-1}\left(\frac{y}{x}\right)
+</div>
+<script type="math/tex; mode=display">
+  \theta = \tan^{-1}\left(\frac{y}{x}\right)
+</script>
+</div>
 <ul>
 <li>극좌표계에서 데카르트 좌표계로의 변환:</li>
 </ul>
-<p>$$</p>
-<p>x = r \cos{\theta}</p>
-<p>$$</p>
-<p>$$</p>
-<p>y = r \sin{\theta}</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+  x = r \cos{\theta}
+</div>
+<script type="math/tex; mode=display">
+  x = r \cos{\theta}
+</script>
+</div>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+  y = r \sin{\theta}
+</div>
+<script type="math/tex; mode=display">
+  y = r \sin{\theta}
+</script>
+</div>
 <p>이 변환식은 극좌표계의 두 좌표 <span class="arithmatex"><span class="MathJax_Preview">r</span><script type="math/tex">r</script></span>과 <span class="arithmatex"><span class="MathJax_Preview">\theta</span><script type="math/tex">\theta</script></span>를 데카르트 좌표계의 <span class="arithmatex"><span class="MathJax_Preview">x</span><script type="math/tex">x</script></span>, <span class="arithmatex"><span class="MathJax_Preview">y</span><script type="math/tex">y</script></span> 좌표로 변환하거나 그 반대로 할 때 사용된다.</p>
 <h3 id="_3">벡터 표현</h3>
 <p>극좌표계에서의 벡터는 반지름 벡터 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{r}</span><script type="math/tex">\mathbf{r}</script></span>와 각도 벡터 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{\theta}</span><script type="math/tex">\mathbf{\theta}</script></span>로 구성된다. 이는 각 좌표에 대한 기저 벡터로 정의된다.</p>
-<p>$$</p>
-<p>\mathbf{r} = \hat{r}, \quad \mathbf{\theta} = \hat{\theta}</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+\mathbf{r} = \hat{r}, \quad \mathbf{\theta} = \hat{\theta}
+</div>
+<script type="math/tex; mode=display">
+\mathbf{r} = \hat{r}, \quad \mathbf{\theta} = \hat{\theta}
+</script>
+</div>
 <p>벡터의 크기와 방향은 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{r}</span><script type="math/tex">\mathbf{r}</script></span>와 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{\theta}</span><script type="math/tex">\mathbf{\theta}</script></span>를 기준으로 정의된다. 벡터의 크기는 <span class="arithmatex"><span class="MathJax_Preview">r</span><script type="math/tex">r</script></span>, 방향은 <span class="arithmatex"><span class="MathJax_Preview">\theta</span><script type="math/tex">\theta</script></span>로 나타낸다. </p>
 <p>극좌표계에서의 단위 벡터는 다음과 같이 표현된다.</p>
 <ul>
@@ -139,18 +164,28 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 <p>극좌표계에서 속도와 가속도는 데카르트 좌표계와 다르게 계산된다. 이는 좌표계가 원점을 기준으로 변화하기 때문이다. 속도와 가속도는 각각 반지름 방향과 각도 방향으로 나누어진다.</p>
 <h4 id="_5">속도 벡터</h4>
 <p>속도 벡터는 반지름 방향과 각도 방향으로의 변화율을 포함한다. 이를 표현하면 다음과 같다.</p>
-<p>$$</p>
-<p>\mathbf{v} = \dot{r} \hat{r} + r \dot{\theta} \hat{\theta}</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+\mathbf{v} = \dot{r} \hat{r} + r \dot{\theta} \hat{\theta}
+</div>
+<script type="math/tex; mode=display">
+\mathbf{v} = \dot{r} \hat{r} + r \dot{\theta} \hat{\theta}
+</script>
+</div>
 <p>여기서:
 - <span class="arithmatex"><span class="MathJax_Preview">\dot{r}</span><script type="math/tex">\dot{r}</script></span>: 반지름 방향 속도 (원점에서 멀어지거나 가까워지는 속도)
 - <span class="arithmatex"><span class="MathJax_Preview">r \dot{\theta}</span><script type="math/tex">r \dot{\theta}</script></span>: 각도 방향 속도 (반지름을 따라 회전하는 속도)</p>
 <p>이 식은 극좌표계에서 한 점이 움직일 때의 속도를 나타낸다. 반지름의 변화율 <span class="arithmatex"><span class="MathJax_Preview">\dot{r}</span><script type="math/tex">\dot{r}</script></span>과 각도 변화율 <span class="arithmatex"><span class="MathJax_Preview">r \dot{\theta}</span><script type="math/tex">r \dot{\theta}</script></span>는 각각의 방향에서의 속도를 의미한다.</p>
 <h4 id="_6">가속도 벡터</h4>
 <p>가속도는 속도의 시간에 따른 변화율이므로, 반지름 방향과 각도 방향으로 가속도를 나눌 수 있다. 극좌표계에서의 가속도 벡터는 다음과 같다.</p>
-<p>$$</p>
-<p>\mathbf{a} = (\ddot{r} - r \dot{\theta}^2) \hat{r} + (r \ddot{\theta} + 2 \dot{r} \dot{\theta}) \hat{\theta}</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+\mathbf{a} = (\ddot{r} - r \dot{\theta}^2) \hat{r} + (r \ddot{\theta} + 2 \dot{r} \dot{\theta}) \hat{\theta}
+</div>
+<script type="math/tex; mode=display">
+\mathbf{a} = (\ddot{r} - r \dot{\theta}^2) \hat{r} + (r \ddot{\theta} + 2 \dot{r} \dot{\theta}) \hat{\theta}
+</script>
+</div>
 <p>여기서:
 - <span class="arithmatex"><span class="MathJax_Preview">\ddot{r}</span><script type="math/tex">\ddot{r}</script></span>: 반지름 방향 가속도
 - <span class="arithmatex"><span class="MathJax_Preview">r \ddot{\theta}</span><script type="math/tex">r \ddot{\theta}</script></span>: 각도 방향 가속도
@@ -159,22 +194,37 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 <p>가속도 벡터는 반지름 방향과 각도 방향에서 가속도를 각각 계산하며, 여기에는 원심력과 코리올리 효과가 포함된다. 이 식을 통해 극좌표계에서 물체가 이동할 때 가속도를 계산할 수 있다.</p>
 <h3 id="_7">극좌표계에서의 운동 방정식</h3>
 <p>극좌표계에서 운동 방정식은 뉴턴의 제2법칙을 적용하여 유도된다. 운동 방정식은 힘 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{F}</span><script type="math/tex">\mathbf{F}</script></span>가 가해졌을 때, 물체의 속도와 가속도에 미치는 영향을 설명한다. 극좌표계에서의 운동 방정식은 다음과 같다.</p>
-<p>$$</p>
-<p>\mathbf{F} = m \mathbf{a}</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+\mathbf{F} = m \mathbf{a}
+</div>
+<script type="math/tex; mode=display">
+\mathbf{F} = m \mathbf{a}
+</script>
+</div>
 <p>이때 가속도 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{a}</span><script type="math/tex">\mathbf{a}</script></span>는 앞서 설명한 극좌표계에서의 가속도 벡터로 표현된다. 따라서 극좌표계에서의 운동 방정식은 반지름 방향과 각도 방향의 운동을 나타내는 두 개의 방정식으로 나눌 수 있다.</p>
 <ul>
 <li><strong>반지름 방향 운동 방정식</strong>:</li>
 </ul>
-<p>$$</p>
-<p>F_r = m (\ddot{r} - r \dot{\theta}^2)</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+  F_r = m (\ddot{r} - r \dot{\theta}^2)
+</div>
+<script type="math/tex; mode=display">
+  F_r = m (\ddot{r} - r \dot{\theta}^2)
+</script>
+</div>
 <ul>
 <li><strong>각도 방향 운동 방정식</strong>:</li>
 </ul>
-<p>$$</p>
-<p>F_\theta = m (r \ddot{\theta} + 2 \dot{r} \dot{\theta})</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+  F_\theta = m (r \ddot{\theta} + 2 \dot{r} \dot{\theta})
+</div>
+<script type="math/tex; mode=display">
+  F_\theta = m (r \ddot{\theta} + 2 \dot{r} \dot{\theta})
+</script>
+</div>
 <p>이 두 식은 극좌표계에서 물체의 운동을 기술하는데, 반지름 방향과 각도 방향에서의 힘과 가속도의 관계를 나타낸다.</p>
 
   <br>

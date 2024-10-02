@@ -113,21 +113,36 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 <ul>
 <li><strong>박스(Box)</strong>: 박스는 세 차원 <span class="arithmatex"><span class="MathJax_Preview">(x, y, z)</span><script type="math/tex">(x, y, z)</script></span> 크기를 사용하여 정의된다.</li>
 </ul>
-<p>$$
-  \text{크기} = \begin{bmatrix} x \ y \ z \end{bmatrix}</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+  \text{크기} = \begin{bmatrix} x \\ y \\ z \end{bmatrix}
+</div>
+<script type="math/tex; mode=display">
+  \text{크기} = \begin{bmatrix} x \\ y \\ z \end{bmatrix}
+</script>
+</div>
 <ul>
 <li><strong>구(Sphere)</strong>: 구는 반지름 <span class="arithmatex"><span class="MathJax_Preview">r</span><script type="math/tex">r</script></span>을 사용하여 정의된다.</li>
 </ul>
-<p>$$
-  \text{반지름} = r</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+  \text{반지름} = r
+</div>
+<script type="math/tex; mode=display">
+  \text{반지름} = r
+</script>
+</div>
 <ul>
 <li><strong>원통(Cylinder)</strong>: 원통은 반지름 <span class="arithmatex"><span class="MathJax_Preview">r</span><script type="math/tex">r</script></span>과 높이 <span class="arithmatex"><span class="MathJax_Preview">h</span><script type="math/tex">h</script></span>로 정의된다.</li>
 </ul>
-<p>$$
-  \text{반지름} = r, \quad \text{높이} = h</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+  \text{반지름} = r, \quad \text{높이} = h
+</div>
+<script type="math/tex; mode=display">
+  \text{반지름} = r, \quad \text{높이} = h
+</script>
+</div>
 <p>기본 형상을 사용하면 로봇의 기본적인 외형을 빠르게 정의할 수 있으며, 시뮬레이션 성능을 유지하면서도 간단한 형태의 로봇을 시각적으로 표현할 수 있다.</p>
 <h3 id="_2">메쉬 파일 사용</h3>
 <p>복잡한 로봇 모델을 시각적으로 표현하기 위해서는 STL, Collada 등과 같은 3D 메쉬 파일을 사용할 수 있다. 메쉬 파일은 로봇의 복잡한 기하학적 구조를 정의하는데 적합하며, 실제 로봇의 모델과 시뮬레이션에서의 로봇을 일치시킬 수 있다. 메쉬 파일을 SDF에서 사용하는 방법은 다음과 같다:</p>

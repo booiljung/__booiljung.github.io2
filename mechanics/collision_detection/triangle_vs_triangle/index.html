@@ -107,15 +107,25 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
    삼각형들이 서로 다른 평면에 있을 때, 그 평면 간의 충돌 여부를 확인하기 위해 각 삼각형의 법선 벡터를 이용한다. 각 삼각형의 법선 벡터는 해당 평면의 수직 벡터이다:</li>
 <li>삼각형 <span class="arithmatex"><span class="MathJax_Preview">T_1</span><script type="math/tex">T_1</script></span>의 법선 벡터:  </li>
 </ol>
-<p>$$
-     \mathbf{n}<em>1 = (\mathbf{v}</em>{1b} - \mathbf{v}<em>{1a}) \times (\mathbf{v}</em>{1c} - \mathbf{v}_{1a})</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+     \mathbf{n}_1 = (\mathbf{v}_{1b} - \mathbf{v}_{1a}) \times (\mathbf{v}_{1c} - \mathbf{v}_{1a})
+</div>
+<script type="math/tex; mode=display">
+     \mathbf{n}_1 = (\mathbf{v}_{1b} - \mathbf{v}_{1a}) \times (\mathbf{v}_{1c} - \mathbf{v}_{1a})
+</script>
+</div>
 <ul>
 <li>삼각형 <span class="arithmatex"><span class="MathJax_Preview">T_2</span><script type="math/tex">T_2</script></span>의 법선 벡터:  </li>
 </ul>
-<p>$$
-     \mathbf{n}<em>2 = (\mathbf{v}</em>{2b} - \mathbf{v}<em>{2a}) \times (\mathbf{v}</em>{2c} - \mathbf{v}_{2a})</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+     \mathbf{n}_2 = (\mathbf{v}_{2b} - \mathbf{v}_{2a}) \times (\mathbf{v}_{2c} - \mathbf{v}_{2a})
+</div>
+<script type="math/tex; mode=display">
+     \mathbf{n}_2 = (\mathbf{v}_{2b} - \mathbf{v}_{2a}) \times (\mathbf{v}_{2c} - \mathbf{v}_{2a})
+</script>
+</div>
 <ol>
 <li><strong>두 삼각형의 변 벡터와 서로의 변 벡터의 외적</strong>
    삼각형 간의 변들이 교차하는지를 확인하기 위해, 각 삼각형의 변과 다른 삼각형의 변 벡터의 외적을 분리축으로 사용한다. 이 외적 벡터들이 충돌을 감지할 수 있는 분리축을 제공한다:

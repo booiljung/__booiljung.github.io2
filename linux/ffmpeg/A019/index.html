@@ -176,9 +176,14 @@ n = \left\lceil \frac{S}{s} \right\rceil
 <p>이 명령어는 장면 변화가 40% 이상 감지된 지점에서 비디오를 분할하여 <code>output1.mp4</code>, <code>output2.mp4</code> 등의 파일을 생성한다. 여기서 <code>scene</code> 값은 장면 전환의 민감도를 조절하며, 값이 높을수록 더 큰 변화에서만 장면이 분할된다.</p>
 <h4 id="_10">장면 기반 분할의 수학적 모델</h4>
 <p>장면 전환을 감지하여 비디오를 분할할 때, 영상의 프레임별 픽셀 값 변화 정도를 분석하여 장면 변화를 감지한다. 특정 장면에서의 프레임 변화를 <span class="arithmatex"><span class="MathJax_Preview">\Delta P</span><script type="math/tex">\Delta P</script></span>라고 할 때, <span class="arithmatex"><span class="MathJax_Preview">\Delta P</span><script type="math/tex">\Delta P</script></span>가 설정된 임계값 <span class="arithmatex"><span class="MathJax_Preview">\theta</span><script type="math/tex">\theta</script></span>보다 클 경우, 그 지점에서 비디오가 분할된다.</p>
-<p>$$</p>
-<p>\Delta P = \sum_{i,j} \left| I(i,j,t) - I(i,j,t-1) \right|</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+\Delta P = \sum_{i,j} \left| I(i,j,t) - I(i,j,t-1) \right|
+</div>
+<script type="math/tex; mode=display">
+\Delta P = \sum_{i,j} \left| I(i,j,t) - I(i,j,t-1) \right|
+</script>
+</div>
 <p>여기서 <span class="arithmatex"><span class="MathJax_Preview">I(i,j,t)</span><script type="math/tex">I(i,j,t)</script></span>는 시간 <span class="arithmatex"><span class="MathJax_Preview">t</span><script type="math/tex">t</script></span>에서 픽셀 <span class="arithmatex"><span class="MathJax_Preview">(i,j)</span><script type="math/tex">(i,j)</script></span>의 밝기값을 의미하며, <span class="arithmatex"><span class="MathJax_Preview">\Delta P</span><script type="math/tex">\Delta P</script></span>는 두 프레임 간의 차이를 나타낸다. 이 값이 임계값 <span class="arithmatex"><span class="MathJax_Preview">\theta</span><script type="math/tex">\theta</script></span>를 넘으면, 장면 변화가 발생했다고 판단한다.</p>
 <h3 id="_11">파일 분할 자동화</h3>
 <p>FFMPEG은 다양한 방식으로 파일 분할을 자동화할 수 있다. 예를 들어, 비디오를 일정 시간 간격으로 분할하려는 경우, <code>-f segment</code> 옵션을 사용할 수 있다.</p>
@@ -187,9 +192,14 @@ n = \left\lceil \frac{S}{s} \right\rceil
 <p>이 명령어는 <code>input.mp4</code>를 60초마다 분할하여 파일을 생성한다. 각 파일은 <code>output001.mp4</code>, <code>output002.mp4</code> 등의 형식으로 저장된다. <code>-segment_time</code> 옵션은 분할 시간 간격을 지정하며, 이 옵션을 사용하면 비디오가 자동으로 여러 파일로 나뉜다.</p>
 <h4 id="_12">자동 분할의 수학적 표현</h4>
 <p>시간 간격을 기준으로 자동 분할하는 경우, 총 시간 <span class="arithmatex"><span class="MathJax_Preview">T</span><script type="math/tex">T</script></span>를 일정 간격 <span class="arithmatex"><span class="MathJax_Preview">\Delta t</span><script type="math/tex">\Delta t</script></span>로 나누어 분할할 수 있다. 분할된 파일의 개수는 다음과 같다.</p>
-<p>$$</p>
-<p>n = \left\lceil \frac{T}{\Delta t} \right\rceil</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+n = \left\lceil \frac{T}{\Delta t} \right\rceil
+</div>
+<script type="math/tex; mode=display">
+n = \left\lceil \frac{T}{\Delta t} \right\rceil
+</script>
+</div>
 <p>여기서 <span class="arithmatex"><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span>은 생성된 분할 파일의 개수를 나타내며, <span class="arithmatex"><span class="MathJax_Preview">\Delta t</span><script type="math/tex">\Delta t</script></span>는 분할 간격(초)을 의미한다.</p>
 <h3 id="_13">파일 분할 후 재병합</h3>
 <p>분할된 파일을 다시 하나로 병합하는 것도 가능하다. 이를 위해 <code>concat</code> 명령어를 사용하여 여러 파일을 하나로 병합할 수 있다.</p>
@@ -203,9 +213,14 @@ file 'output3.mp4'
 </code></pre>
 <h4 id="_14">병합의 수학적 모델</h4>
 <p>파일 병합은 각각의 분할 파일을 시간 축에서 다시 연결하는 과정이다. 만약 각각의 분할 파일의 길이가 <span class="arithmatex"><span class="MathJax_Preview">T_1, T_2, \dots, T_n</span><script type="math/tex">T_1, T_2, \dots, T_n</script></span>이라면, 병합된 파일의 총 길이는 다음과 같이 계산된다.</p>
-<p>$$</p>
-<p>T_{\text{merged}} = \sum_{i=1}^{n} T_i</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+T_{\text{merged}} = \sum_{i=1}^{n} T_i
+</div>
+<script type="math/tex; mode=display">
+T_{\text{merged}} = \sum_{i=1}^{n} T_i
+</script>
+</div>
 <p>이때 <span class="arithmatex"><span class="MathJax_Preview">T_{\text{merged}}</span><script type="math/tex">T_{\text{merged}}</script></span>는 병합된 파일의 총 시간을 나타낸다.</p>
 
   <br>

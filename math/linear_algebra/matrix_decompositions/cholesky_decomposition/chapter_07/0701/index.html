@@ -209,68 +209,135 @@ print(x)  # Output: [0.09090909 0.63636364]
 <li><strong>행렬 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{A}</span><script type="math/tex">\mathbf{A}</script></span>의 칠레스키 분해</strong><br />
    행렬 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{A}</span><script type="math/tex">\mathbf{A}</script></span>는 양의 정부호 행렬이므로 칠레스키 분해를 통해 다음과 같은 하삼각 행렬 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{L}</span><script type="math/tex">\mathbf{L}</script></span>을 찾을 수 있다:</li>
 </ol>
-<p>$$
+<div class="arithmatex">
+<div class="MathJax_Preview">
    \mathbf{L} = \begin{pmatrix}
-   2 &amp; 0 \
+   2 &amp; 0 \\
    0.5 &amp; \sqrt{2.75}
-   \end{pmatrix}</p>
-<p>$$</p>
+   \end{pmatrix}
+</div>
+<script type="math/tex; mode=display">
+   \mathbf{L} = \begin{pmatrix}
+   2 & 0 \\
+   0.5 & \sqrt{2.75}
+   \end{pmatrix}
+</script>
+</div>
 <p>여기서 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{L}</span><script type="math/tex">\mathbf{L}</script></span>은 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{A}</span><script type="math/tex">\mathbf{A}</script></span>를 다음과 같이 분해할 수 있게 해준다:</p>
-<p>$$
-   \mathbf{A} = \mathbf{LL}^T</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+   \mathbf{A} = \mathbf{LL}^T
+</div>
+<script type="math/tex; mode=display">
+   \mathbf{A} = \mathbf{LL}^T
+</script>
+</div>
 <ol>
 <li><strong>전진 대입 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{Ly} = \mathbf{b}</span><script type="math/tex">\mathbf{Ly} = \mathbf{b}</script></span> 풀기</strong><br />
    하삼각 행렬을 이용해 다음과 같은 시스템을 풀자:</li>
 </ol>
-<p>$$
+<div class="arithmatex">
+<div class="MathJax_Preview">
    \begin{pmatrix}
-   2 &amp; 0 \
+   2 &amp; 0 \\
    0.5 &amp; \sqrt{2.75}
    \end{pmatrix}
    \begin{pmatrix}
-   y_1 \
+   y_1 \\
    y_2
    \end{pmatrix}
    =
    \begin{pmatrix}
-   1 \
+   1 \\
    2
-   \end{pmatrix}</p>
-<p>$$</p>
+   \end{pmatrix}
+</div>
+<script type="math/tex; mode=display">
+   \begin{pmatrix}
+   2 & 0 \\
+   0.5 & \sqrt{2.75}
+   \end{pmatrix}
+   \begin{pmatrix}
+   y_1 \\
+   y_2
+   \end{pmatrix}
+   =
+   \begin{pmatrix}
+   1 \\
+   2
+   \end{pmatrix}
+</script>
+</div>
 <p>이를 순차적으로 풀어서:</p>
-<p>$$
-   y_1 = \frac{1}{2} = 0.5</p>
-<p>$$</p>
-<p>$$
-   y_2 = \frac{2 - (0.5 \times 0.5)}{\sqrt{2.75}} = 1.22474</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+   y_1 = \frac{1}{2} = 0.5
+</div>
+<script type="math/tex; mode=display">
+   y_1 = \frac{1}{2} = 0.5
+</script>
+</div>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+   y_2 = \frac{2 - (0.5 \times 0.5)}{\sqrt{2.75}} = 1.22474
+</div>
+<script type="math/tex; mode=display">
+   y_2 = \frac{2 - (0.5 \times 0.5)}{\sqrt{2.75}} = 1.22474
+</script>
+</div>
 <ol>
 <li><strong>후진 대입 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{L}^T \mathbf{x} = \mathbf{y}</span><script type="math/tex">\mathbf{L}^T \mathbf{x} = \mathbf{y}</script></span> 풀기</strong><br />
    상삼각 행렬 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{L}^T</span><script type="math/tex">\mathbf{L}^T</script></span>를 이용해 다음과 같은 시스템을 풀자:</li>
 </ol>
-<p>$$
+<div class="arithmatex">
+<div class="MathJax_Preview">
    \begin{pmatrix}
-   2 &amp; 0.5 \
+   2 &amp; 0.5 \\
    0 &amp; \sqrt{2.75}
    \end{pmatrix}
    \begin{pmatrix}
-   x_1 \
+   x_1 \\
    x_2
    \end{pmatrix}
    =
    \begin{pmatrix}
-   y_1 \
+   y_1 \\
    y_2
-   \end{pmatrix}</p>
-<p>$$</p>
+   \end{pmatrix}
+</div>
+<script type="math/tex; mode=display">
+   \begin{pmatrix}
+   2 & 0.5 \\
+   0 & \sqrt{2.75}
+   \end{pmatrix}
+   \begin{pmatrix}
+   x_1 \\
+   x_2
+   \end{pmatrix}
+   =
+   \begin{pmatrix}
+   y_1 \\
+   y_2
+   \end{pmatrix}
+</script>
+</div>
 <p>이를 순차적으로 풀어서:</p>
-<p>$$
-   x_2 = \frac{y_2}{\sqrt{2.75}} = 0.736</p>
-<p>$$</p>
-<p>$$
-   x_1 = \frac{y_1 - (0.5 \times x_2)}{2} = 0.0909</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+   x_2 = \frac{y_2}{\sqrt{2.75}} = 0.736
+</div>
+<script type="math/tex; mode=display">
+   x_2 = \frac{y_2}{\sqrt{2.75}} = 0.736
+</script>
+</div>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+   x_1 = \frac{y_1 - (0.5 \times x_2)}{2} = 0.0909
+</div>
+<script type="math/tex; mode=display">
+   x_1 = \frac{y_1 - (0.5 \times x_2)}{2} = 0.0909
+</script>
+</div>
 <p>결국 해는 다음과 같다:</p>
 <div class="arithmatex">
 <div class="MathJax_Preview">

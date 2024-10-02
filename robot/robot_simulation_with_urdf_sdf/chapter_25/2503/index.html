@@ -163,9 +163,14 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 </code></pre>
 <p>여기서, <code>joint</code>는 제어할 조인트를 가리키며, <code>q_dot</code>는 적용할 속도를 나타낸다.</p>
 <p>속도 제어는 일반적으로 PID 제어기를 사용하여 원하는 속도 <span class="arithmatex"><span class="MathJax_Preview">\dot{q}_{desired}</span><script type="math/tex">\dot{q}_{desired}</script></span>와 실제 속도 <span class="arithmatex"><span class="MathJax_Preview">\dot{q}_{actual}</span><script type="math/tex">\dot{q}_{actual}</script></span> 간의 오차를 줄이는 방식으로 수행된다. PID 제어는 다음과 같은 형태로 나타낼 수 있다:</p>
-<p>$$</p>
-<p>\tau = K_p (\dot{q}<em>{desired} - \dot{q}</em>{actual}) + K_d (\ddot{q}<em>{desired} - \ddot{q}</em>{actual}) + K_i \int (\dot{q}<em>{desired} - \dot{q}</em>{actual}) dt</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+\tau = K_p (\dot{q}_{desired} - \dot{q}_{actual}) + K_d (\ddot{q}_{desired} - \ddot{q}_{actual}) + K_i \int (\dot{q}_{desired} - \dot{q}_{actual}) dt
+</div>
+<script type="math/tex; mode=display">
+\tau = K_p (\dot{q}_{desired} - \dot{q}_{actual}) + K_d (\ddot{q}_{desired} - \ddot{q}_{actual}) + K_i \int (\dot{q}_{desired} - \dot{q}_{actual}) dt
+</script>
+</div>
 <p>여기서,</p>
 <ul>
 <li><span class="arithmatex"><span class="MathJax_Preview">K_p</span><script type="math/tex">K_p</script></span>: 비례 게인</li>
@@ -179,9 +184,14 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 <p>PID 제어기는 비례, 미분, 적분 항목을 통해 조인트의 목표 속도에 대한 오차를 줄여가며 제어한다. 이를 Gazebo 플러그인을 통해 구현하여 로봇의 움직임을 정밀하게 제어할 수 있다.</p>
 <h3 id="_5">위치 제어</h3>
 <p>로봇의 조인트를 목표 위치로 제어하기 위해서는 위치 제어 알고리즘을 적용해야 한다. 위치 제어는 로봇이 특정 위치에 도달할 수 있도록 하며, 주로 PD 제어기를 사용하여 수행된다. PD 제어는 다음과 같은 방정식으로 표현된다:</p>
-<p>$$</p>
-<p>\tau = K_p (q_{desired} - q_{actual}) + K_d (\dot{q}<em>{desired} - \dot{q}</em>{actual})</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+\tau = K_p (q_{desired} - q_{actual}) + K_d (\dot{q}_{desired} - \dot{q}_{actual})
+</div>
+<script type="math/tex; mode=display">
+\tau = K_p (q_{desired} - q_{actual}) + K_d (\dot{q}_{desired} - \dot{q}_{actual})
+</script>
+</div>
 <p>여기서,</p>
 <ul>
 <li><span class="arithmatex"><span class="MathJax_Preview">q_{desired}</span><script type="math/tex">q_{desired}</script></span>: 목표 위치</li>
@@ -204,9 +214,14 @@ joint-&gt;SetForce(0, tau);
 <h3 id="_6">관성 행렬 업데이트</h3>
 <p>로봇의 동작을 제어하기 위해서는 조인트의 관성 행렬 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{M(q)}</span><script type="math/tex">\mathbf{M(q)}</script></span>를 적절히 설정해야 한다. 관성 행렬은 로봇의 각 구성 요소의 질량과 분포에 따라 결정되며, 이를 정확하게 설정하면 로봇의 운동을 보다 정밀하게 시뮬레이션할 수 있다.</p>
 <p>관성 행렬을 계산하는 방식은 다음과 같다:</p>
-<p>$$</p>
-<p>\mathbf{M(q)} = \sum_{i=1}^{n} m_i \mathbf{I}_{i}</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+\mathbf{M(q)} = \sum_{i=1}^{n} m_i \mathbf{I}_{i}
+</div>
+<script type="math/tex; mode=display">
+\mathbf{M(q)} = \sum_{i=1}^{n} m_i \mathbf{I}_{i}
+</script>
+</div>
 <p>여기서,</p>
 <ul>
 <li><span class="arithmatex"><span class="MathJax_Preview">m_i</span><script type="math/tex">m_i</script></span>: i번째 구성 요소의 질량</li>
@@ -215,9 +230,14 @@ joint-&gt;SetForce(0, tau);
 <p>이 관성 행렬은 로봇의 각 구성 요소의 질량과 관성 모멘트를 바탕으로 계산되며, 플러그인을 통해 로봇의 동역학을 제어할 때 중요한 역할을 한다.</p>
 <h3 id="_7">힘 기반 제어</h3>
 <p>힘 기반 제어는 로봇의 조인트에 직접적인 힘을 적용하여 동작을 제어하는 방식이다. 이 방법은 특히 로봇의 물리적 상호작용이 중요한 상황에서 유용하다. 로봇의 조인트에 적용할 힘 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{F}</span><script type="math/tex">\mathbf{F}</script></span>는 다음과 같은 방정식으로 계산할 수 있다:</p>
-<p>$$</p>
-<p>\mathbf{F} = m \mathbf{a}</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+\mathbf{F} = m \mathbf{a}
+</div>
+<script type="math/tex; mode=display">
+\mathbf{F} = m \mathbf{a}
+</script>
+</div>
 <p>여기서,</p>
 <ul>
 <li><span class="arithmatex"><span class="MathJax_Preview">\mathbf{F}</span><script type="math/tex">\mathbf{F}</script></span>: 조인트에 적용할 힘</li>
@@ -246,9 +266,14 @@ joint-&gt;SetForce(0, force);
 <p>위치 제어는 정밀한 위치 제어가 필요한 로봇 팔이나 멀티 조인트 로봇에서 많이 사용된다.</p>
 <h3 id="_12">조인트의 마찰 모델링</h3>
 <p>로봇의 조인트에는 항상 일정한 마찰이 존재한다. 이 마찰을 모델링하는 것은 현실적인 시뮬레이션을 위해 매우 중요하다. 마찰은 일반적으로 다음과 같은 방정식으로 표현된다:</p>
-<p>$$</p>
-<p>\mathbf{F}_{\text{friction}} = -\mu \cdot \mathbf{N}</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+\mathbf{F}_{\text{friction}} = -\mu \cdot \mathbf{N}
+</div>
+<script type="math/tex; mode=display">
+\mathbf{F}_{\text{friction}} = -\mu \cdot \mathbf{N}
+</script>
+</div>
 <p>여기서,</p>
 <ul>
 <li><span class="arithmatex"><span class="MathJax_Preview">\mu</span><script type="math/tex">\mu</script></span>: 마찰 계수</li>
@@ -270,9 +295,14 @@ joint-&gt;SetForce(0, force);
 </ol>
 <h3 id="pid">PID 제어기 구현</h3>
 <p>로봇의 동작을 제어하는 가장 일반적인 방식 중 하나는 PID 제어기이다. PID 제어기는 목표 값과 실제 값 사이의 오차를 기반으로 제어 신호를 생성하며, 비례(Proportional), 적분(Integral), 미분(Derivative) 제어를 통해 오차를 줄이는 방식이다. PID 제어는 다음 방정식으로 표현된다:</p>
-<p>$$</p>
-<p>\tau(t) = K_p e(t) + K_i \int_0^t e(\tau) d\tau + K_d \frac{d}{dt} e(t)</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+\tau(t) = K_p e(t) + K_i \int_0^t e(\tau) d\tau + K_d \frac{d}{dt} e(t)
+</div>
+<script type="math/tex; mode=display">
+\tau(t) = K_p e(t) + K_i \int_0^t e(\tau) d\tau + K_d \frac{d}{dt} e(t)
+</script>
+</div>
 <p>여기서,</p>
 <ul>
 <li><span class="arithmatex"><span class="MathJax_Preview">\tau(t)</span><script type="math/tex">\tau(t)</script></span>: 제어 신호(조인트에 적용할 토크)</li>
@@ -283,21 +313,36 @@ joint-&gt;SetForce(0, force);
 </ul>
 <h4 id="_14">비례 제어</h4>
 <p>비례 제어는 목표 값과 실제 값의 차이인 오차 <span class="arithmatex"><span class="MathJax_Preview">e(t)</span><script type="math/tex">e(t)</script></span>에 비례하는 제어 신호를 생성한다. 비례 제어는 오차가 커질수록 큰 제어 신호를 생성하여 빠르게 목표 값에 도달하게 한다. 비례 제어는 다음과 같은 방정식으로 표현된다:</p>
-<p>$$</p>
-<p>\tau_P(t) = K_p e(t)</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+\tau_P(t) = K_p e(t)
+</div>
+<script type="math/tex; mode=display">
+\tau_P(t) = K_p e(t)
+</script>
+</div>
 <p>여기서, <span class="arithmatex"><span class="MathJax_Preview">K_p</span><script type="math/tex">K_p</script></span>는 비례 게인으로, 오차에 얼마나 민감하게 반응할지 결정한다.</p>
 <h4 id="_15">적분 제어</h4>
 <p>적분 제어는 오차가 누적되는 양을 고려하여 제어 신호를 생성한다. 즉, 오랜 시간 동안 작은 오차가 누적되었을 때 이를 보정하기 위한 신호를 제공한다. 적분 제어는 다음과 같이 표현된다:</p>
-<p>$$</p>
-<p>\tau_I(t) = K_i \int_0^t e(\tau) d\tau</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+\tau_I(t) = K_i \int_0^t e(\tau) d\tau
+</div>
+<script type="math/tex; mode=display">
+\tau_I(t) = K_i \int_0^t e(\tau) d\tau
+</script>
+</div>
 <p>적분 제어는 주로 정밀한 위치 제어가 필요한 상황에서 오차를 지속적으로 줄여주는 역할을 한다.</p>
 <h4 id="_16">미분 제어</h4>
 <p>미분 제어는 오차의 변화율에 반응하여 제어 신호를 생성한다. 즉, 오차가 빠르게 증가하거나 감소할 때 이를 보정하는 신호를 제공한다. 미분 제어는 다음과 같은 방정식으로 표현된다:</p>
-<p>$$</p>
-<p>\tau_D(t) = K_d \frac{d}{dt} e(t)</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+\tau_D(t) = K_d \frac{d}{dt} e(t)
+</div>
+<script type="math/tex; mode=display">
+\tau_D(t) = K_d \frac{d}{dt} e(t)
+</script>
+</div>
 <p>미분 제어는 시스템의 과도한 움직임을 방지하고, 부드러운 제어를 유지하는 데 중요한 역할을 한다.</p>
 <h3 id="pid-gazebo">PID 제어기의 Gazebo 플러그인 구현</h3>
 <p>Gazebo에서 PID 제어기를 구현하려면 플러그인 내부에서 PID 제어 알고리즘을 적용하여 제어 신호를 계산하고 이를 로봇의 조인트에 전달해야 한다. 다음은 간단한 PID 제어기 플러그인 구현 예시이다:</p>

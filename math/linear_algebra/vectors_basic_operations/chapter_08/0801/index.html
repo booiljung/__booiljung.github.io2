@@ -143,9 +143,14 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 <li>벡터 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{b}</span><script type="math/tex">\mathbf{b}</script></span>의 크기 계산: <span class="arithmatex"><span class="MathJax_Preview">|\mathbf{b}| = \sqrt{1^2 + 2^2} = \sqrt{5}</span><script type="math/tex">|\mathbf{b}| = \sqrt{1^2 + 2^2} = \sqrt{5}</script></span></li>
 <li>투영 벡터 계산: </li>
 </ol>
-<p>$$
-   \mathrm{proj}_{\mathbf{b}}\mathbf{a} = \left( \frac{11}{1^2 + 2^2} \right) \mathbf{b} = \left( \frac{11}{5} \right) \mathbf{b} = \frac{11}{5} \begin{bmatrix}1 \ 2\end{bmatrix} = \begin{bmatrix}\frac{11}{5} \ \frac{22}{5}\end{bmatrix}</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+   \mathrm{proj}_{\mathbf{b}}\mathbf{a} = \left( \frac{11}{1^2 + 2^2} \right) \mathbf{b} = \left( \frac{11}{5} \right) \mathbf{b} = \frac{11}{5} \begin{bmatrix}1 \\ 2\end{bmatrix} = \begin{bmatrix}\frac{11}{5} \\ \frac{22}{5}\end{bmatrix}
+</div>
+<script type="math/tex; mode=display">
+   \mathrm{proj}_{\mathbf{b}}\mathbf{a} = \left( \frac{11}{1^2 + 2^2} \right) \mathbf{b} = \left( \frac{11}{5} \right) \mathbf{b} = \frac{11}{5} \begin{bmatrix}1 \\ 2\end{bmatrix} = \begin{bmatrix}\frac{11}{5} \\ \frac{22}{5}\end{bmatrix}
+</script>
+</div>
 <p>여기서 투영된 벡터 <span class="arithmatex"><span class="MathJax_Preview">\mathrm{proj}_{\mathbf{b}}\mathbf{a} = \begin{bmatrix} \frac{11}{5} \\ \frac{22}{5} \end{bmatrix}</span><script type="math/tex">\mathrm{proj}_{\mathbf{b}}\mathbf{a} = \begin{bmatrix} \frac{11}{5} \\ \frac{22}{5} \end{bmatrix}</script></span>을 얻었다.</p>
 <h3 id="_6">직교 프로젝션</h3>
 <p>벡터의 투영에서 중요한 개념 중 하나는 직교 프로젝션(orthogonal projection)이다. 이는 벡터 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{a}</span><script type="math/tex">\mathbf{a}</script></span>를 벡터 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{b}</span><script type="math/tex">\mathbf{b}</script></span>이 놓여있는 공간으로 투영하는 것을 의미한다. 직교 프로젝션은 직각 삼각형의 직각 변과 관련이 있으며, 벡터의 길이를 각각 구성 요소의 합으로 나타낼 수 있다.</p>

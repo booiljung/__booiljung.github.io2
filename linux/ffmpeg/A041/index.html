@@ -129,13 +129,23 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 <p>오디오 스트림을 무손실 FLAC 코덱으로 변환한다.</p>
 <h3 id="_3">무손실 변환의 수학적 배경</h3>
 <p>압축 알고리즘에서 무손실 변환은 기본적으로 원본 데이터의 엔트로피를 활용하여 중복성을 제거하고 압축한다. 이를 수학적으로 표현하면, 데이터 <span class="arithmatex"><span class="MathJax_Preview">X</span><script type="math/tex">X</script></span>가 있을 때, 압축 후의 데이터 <span class="arithmatex"><span class="MathJax_Preview">X'</span><script type="math/tex">X'</script></span>는 아래와 같은 조건을 만족해야 한다.</p>
-<p>$$</p>
-<p>H(X) = H(X')</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+H(X) = H(X')
+</div>
+<script type="math/tex; mode=display">
+H(X) = H(X')
+</script>
+</div>
 <p>여기서 <span class="arithmatex"><span class="MathJax_Preview">H(X)</span><script type="math/tex">H(X)</script></span>는 데이터 <span class="arithmatex"><span class="MathJax_Preview">X</span><script type="math/tex">X</script></span>의 엔트로피를 나타낸다. 무손실 압축에서는 데이터의 엔트로피가 보존되며, 압축된 데이터도 원본과 동일한 정보를 포함하고 있어야 한다. 데이터 복원 시에도 마찬가지로 엔트로피의 보존을 통해 원본 데이터를 완벽하게 복원할 수 있어야 한다.</p>
-<p>$$</p>
-<p>X = \text{Decode}(\text{Encode}(X))</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+X = \text{Decode}(\text{Encode}(X))
+</div>
+<script type="math/tex; mode=display">
+X = \text{Decode}(\text{Encode}(X))
+</script>
+</div>
 <p>따라서 무손실 코덱은 압축 후의 데이터와 복원된 데이터 사이에서 정보 손실이 발생하지 않도록 설계된다.</p>
 <h3 id="_4">무손실 변환 시 고려 사항</h3>
 <p>무손실 변환을 사용할 때는 몇 가지 고려 사항이 있다:</p>
@@ -146,45 +156,85 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 </ol>
 <h3 id="_5">수식적 해석</h3>
 <p>무손실 압축의 성능은 데이터의 중복성과 관련이 있다. 데이터 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{X}</span><script type="math/tex">\mathbf{X}</script></span>의 길이를 <span class="arithmatex"><span class="MathJax_Preview">N</span><script type="math/tex">N</script></span>, 중복된 정보를 <span class="arithmatex"><span class="MathJax_Preview">R</span><script type="math/tex">R</script></span>라고 할 때, 무손실 압축은 아래와 같은 식으로 나타낼 수 있다.</p>
-<p>$$</p>
-<p>C(\mathbf{X}) = N - R</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+C(\mathbf{X}) = N - R
+</div>
+<script type="math/tex; mode=display">
+C(\mathbf{X}) = N - R
+</script>
+</div>
 <p>여기서 <span class="arithmatex"><span class="MathJax_Preview">C(\mathbf{X})</span><script type="math/tex">C(\mathbf{X})</script></span>는 압축 후 데이터의 길이를 의미한다. 압축 비율은 다음과 같이 정의된다:</p>
-<p>$$</p>
-<p>\text{Compression Ratio} = \frac{N}{C(\mathbf{X})}</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+\text{Compression Ratio} = \frac{N}{C(\mathbf{X})}
+</div>
+<script type="math/tex; mode=display">
+\text{Compression Ratio} = \frac{N}{C(\mathbf{X})}
+</script>
+</div>
 <p>무손실 압축에서 <span class="arithmatex"><span class="MathJax_Preview">R</span><script type="math/tex">R</script></span>이 클수록 더 높은 압축 비율을 얻을 수 있으며, 이는 데이터의 중복도가 높을수록 무손실 압축이 더 효율적임을 의미한다. 반면, 데이터의 엔트로피가 높아 중복성이 적을 경우, 무손실 압축의 효과는 미미할 수 있다.</p>
 <h3 id="_6">무손실 비디오 변환</h3>
 <p>비디오 데이터의 무손실 변환은 특히 높은 비트레이트와 품질을 유지해야 하는 경우에 중요하다. 비디오 데이터의 압축은 기본적으로 각 프레임의 픽셀 정보를 처리하는 방식에 의해 이루어진다. 이를 수학적으로 분석하면, 원본 비디오 프레임 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{F}_i</span><script type="math/tex">\mathbf{F}_i</script></span>는 픽셀 값으로 이루어진 행렬로 나타낼 수 있다.</p>
-<p>$$</p>
-<p>\mathbf{F}<em>i = \begin{bmatrix}
-p</em>{11} &amp; p_{12} &amp; \cdots &amp; p_{1n} \
-p_{21} &amp; p_{22} &amp; \cdots &amp; p_{2n} \
-\vdots &amp; \vdots &amp; \ddots &amp; \vdots \
+<div class="arithmatex">
+<div class="MathJax_Preview">
+\mathbf{F}_i = \begin{bmatrix}
+p_{11} &amp; p_{12} &amp; \cdots &amp; p_{1n} \\
+p_{21} &amp; p_{22} &amp; \cdots &amp; p_{2n} \\
+\vdots &amp; \vdots &amp; \ddots &amp; \vdots \\
 p_{m1} &amp; p_{m2} &amp; \cdots &amp; p_{mn}
-\end{bmatrix}</p>
-<p>$$</p>
+\end{bmatrix}
+</div>
+<script type="math/tex; mode=display">
+\mathbf{F}_i = \begin{bmatrix}
+p_{11} & p_{12} & \cdots & p_{1n} \\
+p_{21} & p_{22} & \cdots & p_{2n} \\
+\vdots & \vdots & \ddots & \vdots \\
+p_{m1} & p_{m2} & \cdots & p_{mn}
+\end{bmatrix}
+</script>
+</div>
 <p>여기서 <span class="arithmatex"><span class="MathJax_Preview">p_{ij}</span><script type="math/tex">p_{ij}</script></span>는 <span class="arithmatex"><span class="MathJax_Preview">i</span><script type="math/tex">i</script></span>번째 행과 <span class="arithmatex"><span class="MathJax_Preview">j</span><script type="math/tex">j</script></span>번째 열에 해당하는 픽셀 값을 나타낸다. 무손실 변환은 이 픽셀 값들의 정보를 그대로 유지하면서 압축을 수행한다. 즉, 변환된 비디오 프레임 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{F'}_i</span><script type="math/tex">\mathbf{F'}_i</script></span>는 아래와 같은 조건을 만족해야 한다.</p>
-<p>$$</p>
-<p>\mathbf{F}_i = \mathbf{F'}_i</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+\mathbf{F}_i = \mathbf{F'}_i
+</div>
+<script type="math/tex; mode=display">
+\mathbf{F}_i = \mathbf{F'}_i
+</script>
+</div>
 <p>무손실 변환이란, 압축된 데이터를 복원했을 때 원본 프레임과 완전히 동일한 픽셀 값을 얻을 수 있어야 한다는 것을 의미한다. 이는 픽셀 값의 차이가 0이 되는 것을 의미한다.</p>
-<p>$$</p>
-<p>\sum_{i=1}^{m} \sum_{j=1}^{n} \left( p_{ij} - p'_{ij} \right)^2 = 0</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+\sum_{i=1}^{m} \sum_{j=1}^{n} \left( p_{ij} - p'_{ij} \right)^2 = 0
+</div>
+<script type="math/tex; mode=display">
+\sum_{i=1}^{m} \sum_{j=1}^{n} \left( p_{ij} - p'_{ij} \right)^2 = 0
+</script>
+</div>
 <h3 id="_7">무손실 변환의 비트레이트 영향</h3>
 <p>무손실 변환에서 중요한 요소 중 하나는 비트레이트이다. 비트레이트는 영상 품질에 직접적인 영향을 미치며, 일반적으로 무손실 변환에서는 높은 비트레이트를 요구한다. 비트레이트는 초당 전달되는 비트 수로 정의되며, 다음과 같이 나타낼 수 있다.</p>
-<p>$$</p>
-<p>\text{Bitrate} = \frac{\text{Total bits}}{\text{Time (seconds)}}</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+\text{Bitrate} = \frac{\text{Total bits}}{\text{Time (seconds)}}
+</div>
+<script type="math/tex; mode=display">
+\text{Bitrate} = \frac{\text{Total bits}}{\text{Time (seconds)}}
+</script>
+</div>
 <p>여기서 총 비트 수는 영상의 해상도, 프레임 레이트, 색상 깊이 등 다양한 요소에 의해 결정된다. 무손실 변환의 경우, 압축으로 인해 비트 수가 감소하지 않기 때문에 비트레이트는 상대적으로 높다.</p>
 <h3 id="huffyuv">HuffYUV 코덱을 사용한 무손실 변환</h3>
 <p>FFmpeg에서 무손실 비디오 압축을 위한 대표적인 코덱 중 하나는 HuffYUV이다. 이 코덱은 YUV 색상 공간을 기반으로 한 무손실 비디오 압축을 지원한다. HuffYUV는 비디오 프레임을 각 색상 성분으로 나누고, 각 성분을 별도로 압축한다.</p>
 <h4 id="yuv">YUV 색상 공간</h4>
 <p>YUV 색상 공간은 밝기 성분 <span class="arithmatex"><span class="MathJax_Preview">Y</span><script type="math/tex">Y</script></span>와 색상 성분 <span class="arithmatex"><span class="MathJax_Preview">U</span><script type="math/tex">U</script></span>, <span class="arithmatex"><span class="MathJax_Preview">V</span><script type="math/tex">V</script></span>로 나뉜다. 각 프레임 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{F}_i</span><script type="math/tex">\mathbf{F}_i</script></span>는 다음과 같이 표현할 수 있다.</p>
-<p>$$</p>
-<p>\mathbf{F}_i = \mathbf{Y}_i + \mathbf{U}_i + \mathbf{V}_i</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+\mathbf{F}_i = \mathbf{Y}_i + \mathbf{U}_i + \mathbf{V}_i
+</div>
+<script type="math/tex; mode=display">
+\mathbf{F}_i = \mathbf{Y}_i + \mathbf{U}_i + \mathbf{V}_i
+</script>
+</div>
 <p>여기서 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{Y}_i</span><script type="math/tex">\mathbf{Y}_i</script></span>는 밝기 성분, <span class="arithmatex"><span class="MathJax_Preview">\mathbf{U}_i</span><script type="math/tex">\mathbf{U}_i</script></span>와 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{V}_i</span><script type="math/tex">\mathbf{V}_i</script></span>는 색상 차이 성분을 나타낸다. HuffYUV 코덱은 이 성분들을 각각 무손실로 압축하여 비디오 데이터를 저장한다.</p>
 <p>FFmpeg 명령어를 사용하여 HuffYUV 코덱으로 무손실 변환을 수행하려면 다음과 같은 명령어를 사용할 수 있다.</p>
 <pre><code class="language-bash">ffmpeg -i input.mp4 -c:v huffyuv -c:a flac output.avi

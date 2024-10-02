@@ -201,9 +201,14 @@ E_{\text{stereo}} = \sum_{i=1}^{N} \left( \left\| \mathbf{x}_i^{\text{left}} - \
 <li><strong>Gradient Descent</strong>: 파라미터가 적은 경우 빠르게 적용 가능하지만, 매우 큰 데이터셋이나 복잡한 모델에서는 성능이 저하된다.</li>
 </ul>
 <p>Gradient Descent는 다음과 같이 계산된다:</p>
-<p>$$
-  \mathbf{p}_{t+1} = \mathbf{p}_t - \alpha \nabla f(\mathbf{p}_t)</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+  \mathbf{p}_{t+1} = \mathbf{p}_t - \alpha \nabla f(\mathbf{p}_t)
+</div>
+<script type="math/tex; mode=display">
+  \mathbf{p}_{t+1} = \mathbf{p}_t - \alpha \nabla f(\mathbf{p}_t)
+</script>
+</div>
 <p>여기서 <span class="arithmatex"><span class="MathJax_Preview">\alpha</span><script type="math/tex">\alpha</script></span>는 학습률(learning rate)이며, <span class="arithmatex"><span class="MathJax_Preview">\nabla f(\mathbf{p}_t)</span><script type="math/tex">\nabla f(\mathbf{p}_t)</script></span>는 파라미터에 대한 손실 함수의 기울기이다.</p>
 <ul>
 <li><strong>Gauss-Newton 방법</strong>: Gauss-Newton 방법은 특히 선형성에 가까운 문제에서 매우 빠르게 수렴한다. 하지만 비선형성이 큰 문제에서는 계산 복잡도가 매우 커질 수 있다. Gauss-Newton의 업데이트 식은 다음과 같다.</li>

@@ -105,32 +105,57 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 <p>쌍대성 이론을 이용하면 복잡한 선형계획 문제를 간단한 쌍대 문제로 변환하여 더 쉽게 풀 수 있는 장점이 있다.</p>
 <h3 id="_2">원문제와 쌍대문제의 관계</h3>
 <p>일반적인 선형계획 문제는 다음과 같은 형태를 가진다:</p>
-<p>$$</p>
-<p>\text{maximize} \quad \mathbf{c}^\top \mathbf{x}</p>
-<p>$$</p>
-<p>$$</p>
-<p>\text{subject to} \quad \mathbf{A} \mathbf{x} \leq \mathbf{b}, \quad \mathbf{x} \geq 0</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+\text{maximize} \quad \mathbf{c}^\top \mathbf{x}
+</div>
+<script type="math/tex; mode=display">
+\text{maximize} \quad \mathbf{c}^\top \mathbf{x}
+</script>
+</div>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+\text{subject to} \quad \mathbf{A} \mathbf{x} \leq \mathbf{b}, \quad \mathbf{x} \geq 0
+</div>
+<script type="math/tex; mode=display">
+\text{subject to} \quad \mathbf{A} \mathbf{x} \leq \mathbf{b}, \quad \mathbf{x} \geq 0
+</script>
+</div>
 <p>여기서:
 - <span class="arithmatex"><span class="MathJax_Preview">\mathbf{c} \in \mathbb{R}^n</span><script type="math/tex">\mathbf{c} \in \mathbb{R}^n</script></span>은 비용 벡터
 - <span class="arithmatex"><span class="MathJax_Preview">\mathbf{x} \in \mathbb{R}^n</span><script type="math/tex">\mathbf{x} \in \mathbb{R}^n</script></span>은 결정 변수 벡터
 - <span class="arithmatex"><span class="MathJax_Preview">\mathbf{A} \in \mathbb{R}^{m \times n}</span><script type="math/tex">\mathbf{A} \in \mathbb{R}^{m \times n}</script></span>은 계수 행렬
 - <span class="arithmatex"><span class="MathJax_Preview">\mathbf{b} \in \mathbb{R}^m</span><script type="math/tex">\mathbf{b} \in \mathbb{R}^m</script></span>은 제약 조건의 우변 벡터</p>
 <p>이 문제에 상응하는 <strong>쌍대문제</strong>는 다음과 같이 정의된다:</p>
-<p>$$</p>
-<p>\text{minimize} \quad \mathbf{b}^\top \mathbf{y}</p>
-<p>$$</p>
-<p>$$</p>
-<p>\text{subject to} \quad \mathbf{A}^\top \mathbf{y} \geq \mathbf{c}, \quad \mathbf{y} \geq 0</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+\text{minimize} \quad \mathbf{b}^\top \mathbf{y}
+</div>
+<script type="math/tex; mode=display">
+\text{minimize} \quad \mathbf{b}^\top \mathbf{y}
+</script>
+</div>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+\text{subject to} \quad \mathbf{A}^\top \mathbf{y} \geq \mathbf{c}, \quad \mathbf{y} \geq 0
+</div>
+<script type="math/tex; mode=display">
+\text{subject to} \quad \mathbf{A}^\top \mathbf{y} \geq \mathbf{c}, \quad \mathbf{y} \geq 0
+</script>
+</div>
 <p>여기서:
 - <span class="arithmatex"><span class="MathJax_Preview">\mathbf{y} \in \mathbb{R}^m</span><script type="math/tex">\mathbf{y} \in \mathbb{R}^m</script></span>은 쌍대 변수 벡터</p>
 <p>쌍대문제는 원문제의 제약 조건과 목표 함수를 이중적으로 변환하여 나타낸 것이다.</p>
 <h3 id="_3">쌍대성 정리</h3>
 <p>쌍대성의 중요한 결과 중 하나는 <strong>쌍대성 정리</strong>이다. 이 정리는 원문제와 쌍대문제의 최적해가 동일한 최적값을 가진다는 것을 보여준다. 이는 다음과 같은 수학적 표현으로 나타낼 수 있다:</p>
-<p>$$</p>
-<p>\mathbf{c}^\top \mathbf{x}^<em> = \mathbf{b}^\top \mathbf{y}^</em></p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+\mathbf{c}^\top \mathbf{x}^* = \mathbf{b}^\top \mathbf{y}^*
+</div>
+<script type="math/tex; mode=display">
+\mathbf{c}^\top \mathbf{x}^* = \mathbf{b}^\top \mathbf{y}^*
+</script>
+</div>
 <p>여기서 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{x}^*</span><script type="math/tex">\mathbf{x}^*</script></span>는 원문제의 최적해, <span class="arithmatex"><span class="MathJax_Preview">\mathbf{y}^*</span><script type="math/tex">\mathbf{y}^*</script></span>는 쌍대문제의 최적해이다.</p>
 <h3 id="_4">쌍대성 이론의 경제적 해석</h3>
 <p>쌍대성 이론은 선형계획법에서 경제적 해석을 가능하게 한다. 원문제에서 결정 변수 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{x}</span><script type="math/tex">\mathbf{x}</script></span>는 자원 할당 문제에서 자원을 배분하는 역할을 하고, 쌍대문제에서의 변수 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{y}</span><script type="math/tex">\mathbf{y}</script></span>는 자원의 가격 또는 그림자 가격(Shadow Price)을 나타낸다. 즉, 쌍대 변수 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{y}</span><script type="math/tex">\mathbf{y}</script></span>는 각 제약 조건이 자원으로 작용할 때 해당 자원의 가치(혹은 추가적인 자원 단위당 기여도)를 나타낸다.</p>
@@ -142,53 +167,93 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 <ul>
 <li>원문제의 모든 허용 가능한 해 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{x}</span><script type="math/tex">\mathbf{x}</script></span>에 대해, 쌍대문제의 모든 허용 가능한 해 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{y}</span><script type="math/tex">\mathbf{y}</script></span>에 대해서도 다음이 성립한다:</li>
 </ul>
-<p>$$</p>
-<p>\mathbf{c}^\top \mathbf{x} \leq \mathbf{b}^\top \mathbf{y}</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+  \mathbf{c}^\top \mathbf{x} \leq \mathbf{b}^\top \mathbf{y}
+</div>
+<script type="math/tex; mode=display">
+  \mathbf{c}^\top \mathbf{x} \leq \mathbf{b}^\top \mathbf{y}
+</script>
+</div>
 <p>즉, 원문제의 목표 함수값은 쌍대문제의 목표 함수값보다 클 수 없다.</p>
 <h4 id="_7">강 쌍대성 정리</h4>
 <p>강 쌍대성 정리는 원문제와 쌍대문제 모두 최적해가 존재할 때 성립한다. 이 경우, 원문제의 최적해와 쌍대문제의 최적해는 같은 최적값을 가진다. 이는 다음과 같이 표현된다:</p>
-<p>$$</p>
-<p>\mathbf{c}^\top \mathbf{x}^<em> = \mathbf{b}^\top \mathbf{y}^</em></p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+\mathbf{c}^\top \mathbf{x}^* = \mathbf{b}^\top \mathbf{y}^*
+</div>
+<script type="math/tex; mode=display">
+\mathbf{c}^\top \mathbf{x}^* = \mathbf{b}^\top \mathbf{y}^*
+</script>
+</div>
 <p>즉, 최적 상태에서는 원문제와 쌍대문제의 목표 함수값이 동일해지며, 이는 두 문제 간의 밀접한 관계를 의미한다.</p>
 <h3 id="_8">쌍대성 이론의 수학적 유도</h3>
 <p>쌍대 문제는 원문제의 제약 조건을 기반으로 도출되며, 그 과정은 라그랑지 승수법을 통해 이해할 수 있다. 라그랑지 승수법을 사용하여 원문제의 제약을 추가하여 이를 해결하는데, 이때 승수 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{y}</span><script type="math/tex">\mathbf{y}</script></span>는 제약 조건에 대한 그림자 가격 역할을 하며, 쌍대 문제의 변수로 등장한다.</p>
 <p>원문제는 다음과 같다:</p>
-<p>$$</p>
-<p>\text{maximize} \quad \mathbf{c}^\top \mathbf{x}</p>
-<p>$$</p>
-<p>$$</p>
-<p>\text{subject to} \quad \mathbf{A} \mathbf{x} \leq \mathbf{b}, \quad \mathbf{x} \geq 0</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+\text{maximize} \quad \mathbf{c}^\top \mathbf{x}
+</div>
+<script type="math/tex; mode=display">
+\text{maximize} \quad \mathbf{c}^\top \mathbf{x}
+</script>
+</div>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+\text{subject to} \quad \mathbf{A} \mathbf{x} \leq \mathbf{b}, \quad \mathbf{x} \geq 0
+</div>
+<script type="math/tex; mode=display">
+\text{subject to} \quad \mathbf{A} \mathbf{x} \leq \mathbf{b}, \quad \mathbf{x} \geq 0
+</script>
+</div>
 <p>이 문제의 라그랑지 함수를 도입하면, 이를 다음과 같이 나타낼 수 있다:</p>
-<p>$$</p>
-<p>L(\mathbf{x}, \mathbf{y}) = \mathbf{c}^\top \mathbf{x} - \mathbf{y}^\top (\mathbf{A} \mathbf{x} - \mathbf{b})</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+L(\mathbf{x}, \mathbf{y}) = \mathbf{c}^\top \mathbf{x} - \mathbf{y}^\top (\mathbf{A} \mathbf{x} - \mathbf{b})
+</div>
+<script type="math/tex; mode=display">
+L(\mathbf{x}, \mathbf{y}) = \mathbf{c}^\top \mathbf{x} - \mathbf{y}^\top (\mathbf{A} \mathbf{x} - \mathbf{b})
+</script>
+</div>
 <p>여기서 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{y} \geq 0</span><script type="math/tex">\mathbf{y} \geq 0</script></span>는 제약 조건에 대한 라그랑지 승수로, 쌍대문제의 변수 역할을 한다. 이 함수는 원문제의 목적 함수와 제약 조건의 결합으로 이루어져 있으며, 쌍대 문제는 이 라그랑지 함수의 최소화를 구하는 과정에서 도출된다.</p>
 <h3 id="_9">쌍대 문제 도출 과정</h3>
 <ol>
 <li><strong>라그랑지 함수의 최소화:</strong></li>
 </ol>
 <p>주어진 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{y}</span><script type="math/tex">\mathbf{y}</script></span>에 대해, 라그랑지 함수를 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{x}</span><script type="math/tex">\mathbf{x}</script></span>에 대해 최대화하는 값을 찾는다. 이는 다음과 같은 형태로 표현된다:</p>
-<p>$$</p>
-<p>\mathbf{x} \in \arg\max_{\mathbf{x} \geq 0} \left( \mathbf{c}^\top \mathbf{x} - \mathbf{y}^\top (\mathbf{A} \mathbf{x} - \mathbf{b}) \right)</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+   \mathbf{x} \in \arg\max_{\mathbf{x} \geq 0} \left( \mathbf{c}^\top \mathbf{x} - \mathbf{y}^\top (\mathbf{A} \mathbf{x} - \mathbf{b}) \right)
+</div>
+<script type="math/tex; mode=display">
+   \mathbf{x} \in \arg\max_{\mathbf{x} \geq 0} \left( \mathbf{c}^\top \mathbf{x} - \mathbf{y}^\top (\mathbf{A} \mathbf{x} - \mathbf{b}) \right)
+</script>
+</div>
 <ol>
 <li><strong>쌍대 문제의 목적 함수 유도:</strong></li>
 </ol>
 <p>라그랑지 함수를 최적화한 결과를 바탕으로, 쌍대 문제의 목적 함수는 다음과 같이 주어진다:</p>
-<p>$$</p>
-<p>\text{minimize} \quad \mathbf{b}^\top \mathbf{y}</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+   \text{minimize} \quad \mathbf{b}^\top \mathbf{y}
+</div>
+<script type="math/tex; mode=display">
+   \text{minimize} \quad \mathbf{b}^\top \mathbf{y}
+</script>
+</div>
 <p>이는 각 제약 조건이 자원으로서의 기여도를 평가하는 과정이다.</p>
 <ol>
 <li><strong>쌍대 문제의 제약 조건 도출:</strong></li>
 </ol>
 <p>라그랑지 함수를 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{x}</span><script type="math/tex">\mathbf{x}</script></span>에 대해 최적화할 때의 조건에서 다음과 같은 쌍대 문제의 제약 조건이 도출된다:</p>
-<p>$$</p>
-<p>\mathbf{A}^\top \mathbf{y} \geq \mathbf{c}, \quad \mathbf{y} \geq 0</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+   \mathbf{A}^\top \mathbf{y} \geq \mathbf{c}, \quad \mathbf{y} \geq 0
+</div>
+<script type="math/tex; mode=display">
+   \mathbf{A}^\top \mathbf{y} \geq \mathbf{c}, \quad \mathbf{y} \geq 0
+</script>
+</div>
 <p>이 과정을 통해, 원문제에서 제약 조건으로 주어졌던 불평등 관계가 쌍대 문제에서는 목표 함수의 최소화 문제로 전환되고, 이로부터 쌍대 문제의 구조가 도출된다.</p>
 <h3 id="_10">경제적 해석의 확장</h3>
 <p>쌍대성 이론에서, 원문제와 쌍대문제는 자원 할당의 최적화 문제를 서로 다른 방식으로 표현한다. 예를 들어, 원문제는 자원을 효과적으로 배분하는 문제를 나타내고, 쌍대문제는 해당 자원에 대한 그림자 가격을 최적화하는 문제로 해석할 수 있다.</p>

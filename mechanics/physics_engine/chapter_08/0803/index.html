@@ -111,9 +111,14 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 <li><strong>스프링-질량 시스템(Spring-Mass System)</strong>: 물체를 질량-질점 시스템으로 모델링하고, 질점 간의 스프링을 배치하여 물체의 변형과 충돌을 표현한다.</li>
 </ol>
 <p>질점 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{p}_i</span><script type="math/tex">\mathbf{p}_i</script></span>와 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{p}_j</span><script type="math/tex">\mathbf{p}_j</script></span> 사이의 거리 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{d}_{ij} = \mathbf{p}_j - \mathbf{p}_i</span><script type="math/tex">\mathbf{d}_{ij} = \mathbf{p}_j - \mathbf{p}_i</script></span>가 초기 거리 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{d}_{ij}^0</span><script type="math/tex">\mathbf{d}_{ij}^0</script></span>와 다를 때, 스프링 힘 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{f}_{ij}</span><script type="math/tex">\mathbf{f}_{ij}</script></span>는 후크의 법칙을 따른다:</p>
-<p>$$
-   \mathbf{f}<em>{ij} = k</em>{ij} (|\mathbf{d}<em>{ij}| - |\mathbf{d}</em>{ij}^0|) \frac{\mathbf{d}<em>{ij}}{|\mathbf{d}</em>{ij}|}</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+   \mathbf{f}_{ij} = k_{ij} (\|\mathbf{d}_{ij}\| - \|\mathbf{d}_{ij}^0\|) \frac{\mathbf{d}_{ij}}{\|\mathbf{d}_{ij}\|}
+</div>
+<script type="math/tex; mode=display">
+   \mathbf{f}_{ij} = k_{ij} (\|\mathbf{d}_{ij}\| - \|\mathbf{d}_{ij}^0\|) \frac{\mathbf{d}_{ij}}{\|\mathbf{d}_{ij}\|}
+</script>
+</div>
 <p>여기서 <span class="arithmatex"><span class="MathJax_Preview">k_{ij}</span><script type="math/tex">k_{ij}</script></span>는 스프링 상수이다.</p>
 <ol>
 <li><strong>유한 요소 법(FEM)</strong>: 다차원 탄성 물체의 변형을 수치적으로 해석하는 방법으로, 매우 정교한 시뮬레이션이 가능한다.</li>
@@ -124,9 +129,14 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 <li><strong>포지션 베이스 다이나믹스(Position Based Dynamics)</strong>: 충돌 후 위치 제약 조건을 통해 스프링 힘이나 장애물 침투를 해결하여 물체의 변형을 처리한다.</li>
 </ol>
 <p>새로운 위치 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{p}_i'</span><script type="math/tex">\mathbf{p}_i'</script></span>는 충돌 조건을 만족하도록 다음과 같이 수정된다:</p>
-<p>$$
-   \mathbf{p}_i' = \mathbf{p}_i + \mathbf{w}_i \mathbf{\Delta}</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+   \mathbf{p}_i' = \mathbf{p}_i + \mathbf{w}_i \mathbf{\Delta}
+</div>
+<script type="math/tex; mode=display">
+   \mathbf{p}_i' = \mathbf{p}_i + \mathbf{w}_i \mathbf{\Delta}
+</script>
+</div>
 <p>여기서 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{w}_i</span><script type="math/tex">\mathbf{w}_i</script></span>는 위치 보정 벡터이다.</p>
 <ol>
 <li><strong>에너지 기반 접근(Energy-Based Approaches)</strong>: 충돌 시 발생하는 에너지 변화를 기반으로 시스템의 총 에너지가 일정하게 유지되도록 조정한다.</li>
@@ -136,16 +146,26 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 <ol>
 <li><strong>마찰력(Friction Force)</strong>: 연체 물체와 다른 객체 간의 마찰은 탄성 복원력과 함께 작용하여 안정한 충돌 반응을 만든다. 마찰 모델로는 콜롬 마찰(Coulomb Friction) 모델이 일반적이다. 마찰력 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{f}_{f}</span><script type="math/tex">\mathbf{f}_{f}</script></span>는 접촉면에 수직인 힘 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{n}</span><script type="math/tex">\mathbf{n}</script></span>와 마찰 계수 <span class="arithmatex"><span class="MathJax_Preview">\mu</span><script type="math/tex">\mu</script></span>에 따라 계산된다:</li>
 </ol>
-<p>$$
-   \mathbf{f}<em>{f} = - \mu |\mathbf{f}</em>{n}| \frac{\mathbf{v}<em>{t}}{|\mathbf{v}</em>{t}|}</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+   \mathbf{f}_{f} = - \mu |\mathbf{f}_{n}| \frac{\mathbf{v}_{t}}{|\mathbf{v}_{t}|}
+</div>
+<script type="math/tex; mode=display">
+   \mathbf{f}_{f} = - \mu |\mathbf{f}_{n}| \frac{\mathbf{v}_{t}}{|\mathbf{v}_{t}|}
+</script>
+</div>
 <p>여기서 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{v}_{t}</span><script type="math/tex">\mathbf{v}_{t}</script></span>는 접촉면을 따라 평행한 속도 성분이다.</p>
 <ol>
 <li><strong>점성력(Viscous Force)</strong>: 연체 물체가 내부에서 변형할 때 발생하는 점성 저항을 모델로, 뉴턴 점성 모델(Newtonian Viscosity Model)을 흔히 사용한다. 점성력 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{f}_{v}</span><script type="math/tex">\mathbf{f}_{v}</script></span>는 속도 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{v}</span><script type="math/tex">\mathbf{v}</script></span>와 점성 계수 <span class="arithmatex"><span class="MathJax_Preview">\eta</span><script type="math/tex">\eta</script></span>에 비례한다:</li>
 </ol>
-<p>$$
-   \mathbf{f}_{v} = - \eta \mathbf{v}</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+   \mathbf{f}_{v} = - \eta \mathbf{v}
+</div>
+<script type="math/tex; mode=display">
+   \mathbf{f}_{v} = - \eta \mathbf{v}
+</script>
+</div>
 <h3 id="_9">충돌 후 처리</h3>
 <p>충돌 후에는 시스템의 상태를 업데이트하고 적절한 형태의 물리적 안정성을 유지해야 한다. 이를 위해 사용하는 방법들 중 일부는 다음과 같다.</p>
 <ol>

@@ -109,30 +109,55 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
    시스템 노이즈 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{w}_k</span><script type="math/tex">\mathbf{w}_k</script></span>의 크기와 상관 관계는 공분산 행렬 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{Q}_k</span><script type="math/tex">\mathbf{Q}_k</script></span>로 결정된다. 이 행렬 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{Q}_k</span><script type="math/tex">\mathbf{Q}_k</script></span>는 보통 다음과 같은 형태를 가진다:</p>
 </li>
 </ol>
-<p>$$
-   \mathbf{Q}<em>k = \begin{bmatrix}
-   \sigma_x^2 &amp; 0 &amp; 0 &amp; 0 \
-   0 &amp; \sigma_y^2 &amp; 0 &amp; 0 \
-   0 &amp; 0 &amp; \sigma</em>\theta^2 &amp; 0 \
+<div class="arithmatex">
+<div class="MathJax_Preview">
+   \mathbf{Q}_k = \begin{bmatrix}
+   \sigma_x^2 &amp; 0 &amp; 0 &amp; 0 \\
+   0 &amp; \sigma_y^2 &amp; 0 &amp; 0 \\
+   0 &amp; 0 &amp; \sigma_\theta^2 &amp; 0 \\
    0 &amp; 0 &amp; 0 &amp; \sigma_v^2
-   \end{bmatrix}</p>
-<p>$$</p>
+   \end{bmatrix}
+</div>
+<script type="math/tex; mode=display">
+   \mathbf{Q}_k = \begin{bmatrix}
+   \sigma_x^2 & 0 & 0 & 0 \\
+   0 & \sigma_y^2 & 0 & 0 \\
+   0 & 0 & \sigma_\theta^2 & 0 \\
+   0 & 0 & 0 & \sigma_v^2
+   \end{bmatrix}
+</script>
+</div>
 <p>여기서 <span class="arithmatex"><span class="MathJax_Preview">\sigma_x^2</span><script type="math/tex">\sigma_x^2</script></span>, <span class="arithmatex"><span class="MathJax_Preview">\sigma_y^2</span><script type="math/tex">\sigma_y^2</script></span>, <span class="arithmatex"><span class="MathJax_Preview">\sigma_\theta^2</span><script type="math/tex">\sigma_\theta^2</script></span>, <span class="arithmatex"><span class="MathJax_Preview">\sigma_v^2</span><script type="math/tex">\sigma_v^2</script></span>는 각각 상태 변수 <span class="arithmatex"><span class="MathJax_Preview">x</span><script type="math/tex">x</script></span>, <span class="arithmatex"><span class="MathJax_Preview">y</span><script type="math/tex">y</script></span>, <span class="arithmatex"><span class="MathJax_Preview">\theta</span><script type="math/tex">\theta</script></span>, <span class="arithmatex"><span class="MathJax_Preview">v</span><script type="math/tex">v</script></span>의 불확실성(즉, 잡음의 분산)을 나타낸다.</p>
 <ol>
 <li><strong>잡음 생성:</strong>
    시스템 노이즈 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{w}_k</span><script type="math/tex">\mathbf{w}_k</script></span>는 매 시간 스텝 <span class="arithmatex"><span class="MathJax_Preview">k</span><script type="math/tex">k</script></span>마다 새로운 가우시안 랜덤 벡터로 생성된다. 이는 주로 난수 발생기(Random Number Generator, RNG)를 통해 생성되며, 각 상태 변수에 해당하는 분산 값에 따라 스케일링된다.</li>
 </ol>
 <p>예를 들어, <span class="arithmatex"><span class="MathJax_Preview">x</span><script type="math/tex">x</script></span>와 <span class="arithmatex"><span class="MathJax_Preview">y</span><script type="math/tex">y</script></span> 위치에 대한 잡음 성분을 생성할 때, 다음과 같이 생성할 수 있다:</p>
-<p>$$
-   w_{x_k} \sim \mathcal{N}(0, \sigma_x^2)</p>
-<p>$$</p>
-<p>$$
-   w_{y_k} \sim \mathcal{N}(0, \sigma_y^2)</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+   w_{x_k} \sim \mathcal{N}(0, \sigma_x^2)
+</div>
+<script type="math/tex; mode=display">
+   w_{x_k} \sim \mathcal{N}(0, \sigma_x^2)
+</script>
+</div>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+   w_{y_k} \sim \mathcal{N}(0, \sigma_y^2)
+</div>
+<script type="math/tex; mode=display">
+   w_{y_k} \sim \mathcal{N}(0, \sigma_y^2)
+</script>
+</div>
 <p>그리고 이들을 결합하여 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{w}_k</span><script type="math/tex">\mathbf{w}_k</script></span> 벡터를 형성한다:</p>
-<p>$$
-   \mathbf{w}<em>k = \begin{bmatrix} w</em>{x_k} \ w_{y_k} \ w_{\theta_k} \ w_{v_k} \end{bmatrix}</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+   \mathbf{w}_k = \begin{bmatrix} w_{x_k} \\ w_{y_k} \\ w_{\theta_k} \\ w_{v_k} \end{bmatrix}
+</div>
+<script type="math/tex; mode=display">
+   \mathbf{w}_k = \begin{bmatrix} w_{x_k} \\ w_{y_k} \\ w_{\theta_k} \\ w_{v_k} \end{bmatrix}
+</script>
+</div>
 <ol>
 <li><strong>시뮬레이션에서의 구현:</strong>
    실제 시뮬레이션에서는 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{w}_k</span><script type="math/tex">\mathbf{w}_k</script></span>를 난수 생성 라이브러리(예: Python의 <code>numpy.random.normal</code>)를 통해 매 시간 스텝마다 동적으로 생성한다. 이 값은 시스템 모델의 상태 전이 식에 추가되어 예측된 상태 벡터 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{x}_{k|k-1}</span><script type="math/tex">\mathbf{x}_{k|k-1}</script></span>를 계산하는 데 사용된다.</li>

@@ -123,19 +123,34 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 <ol>
 <li><strong>선형 시스템 가정</strong>: 시스템은 다음과 같은 선형 모델로 표현된다:</li>
 </ol>
-<p>$$
-   \mathbf{x}<em>k = \mathbf{F}</em>{k-1} \mathbf{x}<em>{k-1} + \mathbf{B}</em>{k-1} \mathbf{u}<em>{k-1} + \mathbf{w}</em>{k-1}</p>
-<p>$$</p>
-<p>$$
-   \mathbf{z}_k = \mathbf{H}_k \mathbf{x}_k + \mathbf{v}_k</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+   \mathbf{x}_k = \mathbf{F}_{k-1} \mathbf{x}_{k-1} + \mathbf{B}_{k-1} \mathbf{u}_{k-1} + \mathbf{w}_{k-1}
+</div>
+<script type="math/tex; mode=display">
+   \mathbf{x}_k = \mathbf{F}_{k-1} \mathbf{x}_{k-1} + \mathbf{B}_{k-1} \mathbf{u}_{k-1} + \mathbf{w}_{k-1}
+</script>
+</div>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+   \mathbf{z}_k = \mathbf{H}_k \mathbf{x}_k + \mathbf{v}_k
+</div>
+<script type="math/tex; mode=display">
+   \mathbf{z}_k = \mathbf{H}_k \mathbf{x}_k + \mathbf{v}_k
+</script>
+</div>
 <p>여기서 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{F}_{k-1}</span><script type="math/tex">\mathbf{F}_{k-1}</script></span>은 상태 전이 행렬, <span class="arithmatex"><span class="MathJax_Preview">\mathbf{B}_{k-1}</span><script type="math/tex">\mathbf{B}_{k-1}</script></span>은 제어 입력 행렬, <span class="arithmatex"><span class="MathJax_Preview">\mathbf{H}_k</span><script type="math/tex">\mathbf{H}_k</script></span>는 관측 행렬, <span class="arithmatex"><span class="MathJax_Preview">\mathbf{w}_{k-1}</span><script type="math/tex">\mathbf{w}_{k-1}</script></span>와 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{v}_k</span><script type="math/tex">\mathbf{v}_k</script></span>는 각각 과정 노이즈와 측정 노이즈를 나타낸다.</p>
 <ol>
 <li><strong>가우시안 노이즈</strong>: 노이즈 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{w}_{k-1}</span><script type="math/tex">\mathbf{w}_{k-1}</script></span>와 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{v}_k</span><script type="math/tex">\mathbf{v}_k</script></span>는 평균이 0이고, 공분산이 각각 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{Q}_{k-1}</span><script type="math/tex">\mathbf{Q}_{k-1}</script></span>와 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{R}_k</span><script type="math/tex">\mathbf{R}_k</script></span>인 가우시안 분포를 따른다:</li>
 </ol>
-<p>$$
-   \mathbf{w}<em>{k-1} \sim \mathcal{N}(0, \mathbf{Q}</em>{k-1}), \quad \mathbf{v}_k \sim \mathcal{N}(0, \mathbf{R}_k)</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+   \mathbf{w}_{k-1} \sim \mathcal{N}(0, \mathbf{Q}_{k-1}), \quad \mathbf{v}_k \sim \mathcal{N}(0, \mathbf{R}_k)
+</div>
+<script type="math/tex; mode=display">
+   \mathbf{w}_{k-1} \sim \mathcal{N}(0, \mathbf{Q}_{k-1}), \quad \mathbf{v}_k \sim \mathcal{N}(0, \mathbf{R}_k)
+</script>
+</div>
 <ol>
 <li><strong>초기 조건</strong>: 초기 상태 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{x}_0</span><script type="math/tex">\mathbf{x}_0</script></span>의 추정값 <span class="arithmatex"><span class="MathJax_Preview">\hat{\mathbf{x}}_0</span><script type="math/tex">\hat{\mathbf{x}}_0</script></span>와 초기 추정 오차 공분산 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{P}_0</span><script type="math/tex">\mathbf{P}_0</script></span>가 주어진다.</li>
 </ol>

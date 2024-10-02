@@ -223,9 +223,14 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 <li><strong>GPS 데이터:</strong>
    GPS는 다음과 같은 비선형 측정 방정식으로 나타낼 수 있다.</li>
 </ol>
-<p>$$
-   \mathbf{z}^{\text{GPS}}_k = \mathbf{H}^{\text{GPS}} \mathbf{x}_k + \mathbf{v}^{\text{GPS}}_k</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+   \mathbf{z}^{\text{GPS}}_k = \mathbf{H}^{\text{GPS}} \mathbf{x}_k + \mathbf{v}^{\text{GPS}}_k
+</div>
+<script type="math/tex; mode=display">
+   \mathbf{z}^{\text{GPS}}_k = \mathbf{H}^{\text{GPS}} \mathbf{x}_k + \mathbf{v}^{\text{GPS}}_k
+</script>
+</div>
 <p>여기서,
    - <span class="arithmatex"><span class="MathJax_Preview">\mathbf{z}^{\text{GPS}}_k</span><script type="math/tex">\mathbf{z}^{\text{GPS}}_k</script></span>는 GPS로부터 얻은 위치 측정 벡터이다.
    - <span class="arithmatex"><span class="MathJax_Preview">\mathbf{H}^{\text{GPS}}</span><script type="math/tex">\mathbf{H}^{\text{GPS}}</script></span>는 GPS 측정 모델의 측정 행렬이다.
@@ -234,9 +239,14 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 <li><strong>IMU 데이터:</strong>
    IMU로부터 얻은 자이로스코프 및 가속도계 데이터는 속도 및 가속도의 추정에 사용되며, 이 데이터는 상태 벡터에 다음과 같이 반영된다.</li>
 </ol>
-<p>$$
-   \mathbf{x}_{k+1} = \mathbf{F}^{\text{IMU}} \mathbf{x}_k + \mathbf{G}^{\text{IMU}} \mathbf{u}_k + \mathbf{w}^{\text{IMU}}_k</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+   \mathbf{x}_{k+1} = \mathbf{F}^{\text{IMU}} \mathbf{x}_k + \mathbf{G}^{\text{IMU}} \mathbf{u}_k + \mathbf{w}^{\text{IMU}}_k
+</div>
+<script type="math/tex; mode=display">
+   \mathbf{x}_{k+1} = \mathbf{F}^{\text{IMU}} \mathbf{x}_k + \mathbf{G}^{\text{IMU}} \mathbf{u}_k + \mathbf{w}^{\text{IMU}}_k
+</script>
+</div>
 <p>여기서,
    - <span class="arithmatex"><span class="MathJax_Preview">\mathbf{F}^{\text{IMU}}</span><script type="math/tex">\mathbf{F}^{\text{IMU}}</script></span>는 IMU 데이터를 기반으로 하는 상태 전이 행렬이다.
    - <span class="arithmatex"><span class="MathJax_Preview">\mathbf{G}^{\text{IMU}}</span><script type="math/tex">\mathbf{G}^{\text{IMU}}</script></span>는 가속도계를 통한 제어 입력 행렬이다.
@@ -259,29 +269,49 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 <ul>
 <li><strong>시스템 노이즈 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{w}_k</span><script type="math/tex">\mathbf{w}_k</script></span>:</strong> 시스템 노이즈는 상태 변수의 예측 과정에서 발생하는 오차를 나타낸다. 예를 들어, IMU에서 얻은 가속도 데이터는 정확하지 않을 수 있으며, 이로 인해 시스템 노이즈가 발생할 수 있다. 시스템 노이즈의 공분산 행렬 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{Q}_k</span><script type="math/tex">\mathbf{Q}_k</script></span>는 IMU 데이터의 정확도와 관련이 있다.</li>
 </ul>
-<p>$$
-  \mathbf{Q}_k = E[\mathbf{w}_k \mathbf{w}_k^T]</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+  \mathbf{Q}_k = E[\mathbf{w}_k \mathbf{w}_k^T]
+</div>
+<script type="math/tex; mode=display">
+  \mathbf{Q}_k = E[\mathbf{w}_k \mathbf{w}_k^T]
+</script>
+</div>
 <ul>
 <li><strong>측정 노이즈 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{v}_k</span><script type="math/tex">\mathbf{v}_k</script></span>:</strong> 측정 노이즈는 GPS나 IMU에서 얻은 데이터의 정확도와 관련된다. GPS는 대기 상태나 위성 신호 품질에 따라 노이즈가 변동될 수 있다. 측정 노이즈의 공분산 행렬 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{R}_k</span><script type="math/tex">\mathbf{R}_k</script></span>는 센서의 특성에 따라 적절하게 설정되어야 한다.</li>
 </ul>
-<p>$$
-  \mathbf{R}_k = E[\mathbf{v}_k \mathbf{v}_k^T]</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+  \mathbf{R}_k = E[\mathbf{v}_k \mathbf{v}_k^T]
+</div>
+<script type="math/tex; mode=display">
+  \mathbf{R}_k = E[\mathbf{v}_k \mathbf{v}_k^T]
+</script>
+</div>
 <h4 id="2">2. 야코비 행렬의 정확한 계산</h4>
 <p>확장 칼만 필터에서 비선형 시스템을 선형화하기 위해 사용되는 야코비 행렬 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{F}_k</span><script type="math/tex">\mathbf{F}_k</script></span>와 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{H}_k</span><script type="math/tex">\mathbf{H}_k</script></span>는 시스템 및 측정 함수의 정확한 선형 근사를 제공해야 한다. 이러한 야코비 행렬은 각 상태 변수에 대한 미분으로 구할 수 있으며, 잘못된 선형화는 필터의 성능을 저하시킬 수 있다.</p>
 <ul>
 <li><strong>상태 전이 함수의 야코비 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{F}_k</span><script type="math/tex">\mathbf{F}_k</script></span>:</strong></li>
 </ul>
-<p>$$
-  \mathbf{F}<em>k = \frac{\partial f}{\partial \mathbf{x}}\bigg|</em>{\hat{\mathbf{x}}_{k|k-1}}</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+  \mathbf{F}_k = \frac{\partial f}{\partial \mathbf{x}}\bigg|_{\hat{\mathbf{x}}_{k|k-1}}
+</div>
+<script type="math/tex; mode=display">
+  \mathbf{F}_k = \frac{\partial f}{\partial \mathbf{x}}\bigg|_{\hat{\mathbf{x}}_{k|k-1}}
+</script>
+</div>
 <ul>
 <li><strong>측정 함수의 야코비 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{H}_k</span><script type="math/tex">\mathbf{H}_k</script></span>:</strong></li>
 </ul>
-<p>$$
-  \mathbf{H}<em>k = \frac{\partial h}{\partial \mathbf{x}}\bigg|</em>{\hat{\mathbf{x}}_{k|k-1}}</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+  \mathbf{H}_k = \frac{\partial h}{\partial \mathbf{x}}\bigg|_{\hat{\mathbf{x}}_{k|k-1}}
+</div>
+<script type="math/tex; mode=display">
+  \mathbf{H}_k = \frac{\partial h}{\partial \mathbf{x}}\bigg|_{\hat{\mathbf{x}}_{k|k-1}}
+</script>
+</div>
 <p>야코비 행렬의 계산에서 수치적 불안정성이 발생할 수 있으므로, 계산 과정에서의 수치 안정성도 고려해야 한다.</p>
 <h4 id="3">3. 필터의 수치적 안정성</h4>
 <p>확장 칼만 필터의 반복적인 계산 과정에서 발생할 수 있는 수치적 불안정성을 방지하기 위한 다양한 방법들이 적용될 수 있다. 예를 들어, 칼만 이득 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{K}_k</span><script type="math/tex">\mathbf{K}_k</script></span>를 계산할 때, 오차 공분산 행렬 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{P}_k</span><script type="math/tex">\mathbf{P}_k</script></span>가 음수가 되는 경우가 발생하지 않도록 조정이 필요하다.</p>
@@ -289,9 +319,14 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 <ul>
 <li><strong>공분산 행렬 재조정:</strong> 공분산 행렬 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{P}_k</span><script type="math/tex">\mathbf{P}_k</script></span>가 비대칭이거나 음수가 되는 경우, 이를 재조정하여 수치적 안정성을 확보할 수 있다.</li>
 </ul>
-<p>$$
-  \mathbf{P}_k = \mathbf{P}_k + \epsilon \mathbf{I}</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+  \mathbf{P}_k = \mathbf{P}_k + \epsilon \mathbf{I}
+</div>
+<script type="math/tex; mode=display">
+  \mathbf{P}_k = \mathbf{P}_k + \epsilon \mathbf{I}
+</script>
+</div>
 <p>여기서 <span class="arithmatex"><span class="MathJax_Preview">\epsilon</span><script type="math/tex">\epsilon</script></span>은 작은 양수로, 공분산 행렬이 음수가 되는 것을 방지한다.</p>
 <ul>
 <li><strong>게인 클리핑:</strong> 칼만 이득 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{K}_k</span><script type="math/tex">\mathbf{K}_k</script></span>가 너무 커질 경우, 필터가 과하게 반응할 수 있다. 이때 칼만 이득의 크기를 제한하는 게인 클리핑 기법을 사용할 수 있다.</li>
@@ -301,9 +336,14 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 <ul>
 <li><strong>야코비 근사:</strong> 정확한 야코비을 계산하는 대신, 수치적으로 근사된 야코비을 사용할 수 있다. 이는 계산 시간을 줄이면서도 충분한 정확도를 제공할 수 있는 방법이다.</li>
 </ul>
-<p>$$
-  \mathbf{F}<em>k \approx \mathbf{F}</em>{k-1}</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+  \mathbf{F}_k \approx \mathbf{F}_{k-1}
+</div>
+<script type="math/tex; mode=display">
+  \mathbf{F}_k \approx \mathbf{F}_{k-1}
+</script>
+</div>
 <ul>
 <li><strong>코드 최적화:</strong> 필터의 구현 과정에서 계산 효율성을 높이기 위해 코드 최적화를 적용할 수 있다. 특히, 다중 센서 데이터를 실시간으로 처리하기 위해서는 알고리즘의 병렬화나 하드웨어 가속을 고려할 수 있다.</li>
 </ul>

@@ -111,17 +111,27 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 </ol>
 <h3 id="qos">QoS 정책의 수학적 모델</h3>
 <p>QoS 정책을 최적화하는 과정에서 트래픽 제어의 핵심은 주기적 데이터 전송 및 지연 시간(주기적 지연)이다. 노드 간의 주기적 데이터 전송을 고려할 때, 각 노드의 전송 주기 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{T_{node}}</span><script type="math/tex">\mathbf{T_{node}}</script></span>는 다음과 같이 정의된다.</p>
-<p>$$</p>
-<p>\mathbf{T_{node}} = \frac{\mathbf{L_{msg}}}{\mathbf{B_{net}}}</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+\mathbf{T_{node}} = \frac{\mathbf{L_{msg}}}{\mathbf{B_{net}}}
+</div>
+<script type="math/tex; mode=display">
+\mathbf{T_{node}} = \frac{\mathbf{L_{msg}}}{\mathbf{B_{net}}}
+</script>
+</div>
 <p>여기서:
 - <span class="arithmatex"><span class="MathJax_Preview">\mathbf{L_{msg}}</span><script type="math/tex">\mathbf{L_{msg}}</script></span>는 메시지의 길이 (Bytes),
 - <span class="arithmatex"><span class="MathJax_Preview">\mathbf{B_{net}}</span><script type="math/tex">\mathbf{B_{net}}</script></span>는 네트워크 대역폭 (Bytes/초)이다.</p>
 <p>따라서 네트워크 대역폭을 고려하여 메시지 전송 주기를 조정할 수 있다. </p>
 <p>QoS 정책 중 <strong>Latency Budget</strong>은 특정 시간 내에 메시지를 받을 수 있는 지연을 결정하며, 이를 수학적으로 표현하면:</p>
-<p>$$</p>
-<p>\mathbf{L_{latency}} \leq \mathbf{T_{node}} - \mathbf{L_{processing}} </p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+\mathbf{L_{latency}} \leq \mathbf{T_{node}} - \mathbf{L_{processing}} 
+</div>
+<script type="math/tex; mode=display">
+\mathbf{L_{latency}} \leq \mathbf{T_{node}} - \mathbf{L_{processing}} 
+</script>
+</div>
 <p>여기서:
 - <span class="arithmatex"><span class="MathJax_Preview">\mathbf{L_{latency}}</span><script type="math/tex">\mathbf{L_{latency}}</script></span>는 허용된 최대 지연 시간 (ms),
 - <span class="arithmatex"><span class="MathJax_Preview">\mathbf{T_{node}}</span><script type="math/tex">\mathbf{T_{node}}</script></span>는 노드 간 전송 주기 (ms),
@@ -144,9 +154,14 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 </li>
 <li><strong>Reliable</strong> 방식은 모든 메시지를 보장하지만, 트래픽이 급증할 수 있다.</li>
 </ol>
-<p>$$</p>
-<p>\mathbf{T_{throughput}} = \mathbf{N_{pub}} \cdot \mathbf{L_{msg}} \cdot \mathbf{f_{pub}} </p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+\mathbf{T_{throughput}} = \mathbf{N_{pub}} \cdot \mathbf{L_{msg}} \cdot \mathbf{f_{pub}} 
+</div>
+<script type="math/tex; mode=display">
+\mathbf{T_{throughput}} = \mathbf{N_{pub}} \cdot \mathbf{L_{msg}} \cdot \mathbf{f_{pub}} 
+</script>
+</div>
 <p>여기서:
 - <span class="arithmatex"><span class="MathJax_Preview">\mathbf{T_{throughput}}</span><script type="math/tex">\mathbf{T_{throughput}}</script></span>는 네트워크 처리량 (Bytes/초),
 - <span class="arithmatex"><span class="MathJax_Preview">\mathbf{N_{pub}}</span><script type="math/tex">\mathbf{N_{pub}}</script></span>는 퍼블리셔의 수,
@@ -156,9 +171,14 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 <p>ROS2 네트워크 성능을 향상시키기 위해 <strong>DDS(Data Distribution Service)</strong> 설정을 최적화할 수 있다. DDS는 ROS2에서 중요한 역할을 하며, RTPS(Real-Time Publish-Subscribe) 프로토콜을 기반으로 작동한다. DDS 설정 최적화의 주요 목표는 네트워크 대역폭을 효율적으로 활용하고, 노드 간 통신의 지연 시간을 줄이는 것이다.</p>
 <h4 id="_3">데이터 압축과 직렬화 최적화</h4>
 <p>DDS에서 데이터를 전송할 때, 메시지를 직렬화하여 전송한다. 메시지의 크기를 줄이기 위해 데이터 압축 및 직렬화 최적화가 필요하다. 메시지 직렬화에 대한 최적화는 다음과 같은 수식으로 나타낼 수 있다.</p>
-<p>$$</p>
-<p>\mathbf{S_{total}} = \mathbf{S_{raw}} + \mathbf{S_{header}} + \mathbf{S_{crc}}</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+\mathbf{S_{total}} = \mathbf{S_{raw}} + \mathbf{S_{header}} + \mathbf{S_{crc}}
+</div>
+<script type="math/tex; mode=display">
+\mathbf{S_{total}} = \mathbf{S_{raw}} + \mathbf{S_{header}} + \mathbf{S_{crc}}
+</script>
+</div>
 <p>여기서:
 - <span class="arithmatex"><span class="MathJax_Preview">\mathbf{S_{total}}</span><script type="math/tex">\mathbf{S_{total}}</script></span>은 직렬화된 데이터의 총 크기,
 - <span class="arithmatex"><span class="MathJax_Preview">\mathbf{S_{raw}}</span><script type="math/tex">\mathbf{S_{raw}}</script></span>는 원본 데이터 크기,
@@ -177,17 +197,27 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 </ol>
 <p>각각의 프로토콜에 대한 트래픽 제어 수식은 다음과 같다.</p>
 <p><strong>UDP 기반 통신의 전송 시간</strong> <span class="arithmatex"><span class="MathJax_Preview">\mathbf{T_{udp}}</span><script type="math/tex">\mathbf{T_{udp}}</script></span>:</p>
-<p>$$</p>
-<p>\mathbf{T_{udp}} = \frac{\mathbf{S_{total}}}{\mathbf{B_{udp}}}</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+\mathbf{T_{udp}} = \frac{\mathbf{S_{total}}}{\mathbf{B_{udp}}}
+</div>
+<script type="math/tex; mode=display">
+\mathbf{T_{udp}} = \frac{\mathbf{S_{total}}}{\mathbf{B_{udp}}}
+</script>
+</div>
 <p>여기서:
 - <span class="arithmatex"><span class="MathJax_Preview">\mathbf{T_{udp}}</span><script type="math/tex">\mathbf{T_{udp}}</script></span>는 UDP를 통한 데이터 전송 시간,
 - <span class="arithmatex"><span class="MathJax_Preview">\mathbf{S_{total}}</span><script type="math/tex">\mathbf{S_{total}}</script></span>는 전송할 데이터의 크기,
 - <span class="arithmatex"><span class="MathJax_Preview">\mathbf{B_{udp}}</span><script type="math/tex">\mathbf{B_{udp}}</script></span>는 UDP 프로토콜의 대역폭이다.</p>
 <p><strong>TCP 기반 통신의 전송 시간</strong> <span class="arithmatex"><span class="MathJax_Preview">\mathbf{T_{tcp}}</span><script type="math/tex">\mathbf{T_{tcp}}</script></span>:</p>
-<p>$$</p>
-<p>\mathbf{T_{tcp}} = \frac{\mathbf{S_{total}} + \mathbf{S_{ack}}}{\mathbf{B_{tcp}}}</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+\mathbf{T_{tcp}} = \frac{\mathbf{S_{total}} + \mathbf{S_{ack}}}{\mathbf{B_{tcp}}}
+</div>
+<script type="math/tex; mode=display">
+\mathbf{T_{tcp}} = \frac{\mathbf{S_{total}} + \mathbf{S_{ack}}}{\mathbf{B_{tcp}}}
+</script>
+</div>
 <p>여기서:
 - <span class="arithmatex"><span class="MathJax_Preview">\mathbf{S_{ack}}</span><script type="math/tex">\mathbf{S_{ack}}</script></span>는 TCP에서의 ACK(Acknowledgment) 패킷 크기,
 - <span class="arithmatex"><span class="MathJax_Preview">\mathbf{B_{tcp}}</span><script type="math/tex">\mathbf{B_{tcp}}</script></span>는 TCP 프로토콜의 대역폭이다.</p>
@@ -207,9 +237,14 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 <p>네트워크 트래픽이 일정 수준 이상으로 증가할 경우, 퍼블리셔의 샘플링 주기나 메시지 크기를 줄이거나 QoS 정책을 조정하는 등의 조치를 취할 수 있다.</p>
 <h3 id="_5">네트워크 대역폭 사용 최적화</h3>
 <p>ROS2 네트워크 성능을 극대화하기 위해 네트워크 대역폭의 효율적인 사용이 필요하다. 이는 DDS 설정, QoS 정책 조정, 그리고 퍼블리셔 및 서브스크라이버의 트래픽 관리로 이뤄질 수 있다.</p>
-<p>$$</p>
-<p>\mathbf{B_{opt}} = \frac{\mathbf{S_{pub}}}{\mathbf{T_{pub}}}</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+\mathbf{B_{opt}} = \frac{\mathbf{S_{pub}}}{\mathbf{T_{pub}}}
+</div>
+<script type="math/tex; mode=display">
+\mathbf{B_{opt}} = \frac{\mathbf{S_{pub}}}{\mathbf{T_{pub}}}
+</script>
+</div>
 <p>여기서:
 - <span class="arithmatex"><span class="MathJax_Preview">\mathbf{B_{opt}}</span><script type="math/tex">\mathbf{B_{opt}}</script></span>는 최적화된 대역폭 사용량,
 - <span class="arithmatex"><span class="MathJax_Preview">\mathbf{S_{pub}}</span><script type="math/tex">\mathbf{S_{pub}}</script></span>는 퍼블리셔에서 전송된 메시지 크기,
@@ -219,9 +254,14 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 <p>ROS2에서 네트워크 트래픽 제어의 핵심 중 하나는 노드 간의 효율적인 통신이다. 이를 위해 각 노드 간의 트래픽을 줄이거나 최적화된 방식으로 데이터를 전송할 수 있는 전략이 필요하다. 특히, 다중 노드 환경에서 트래픽 부하를 줄이는 것이 중요하다.</p>
 <h4 id="_7">노드 간 통신 최적화 수식</h4>
 <p>노드 간 통신에서 가장 중요한 요소는 데이터의 전송 주기와 메시지 크기이다. 전송 주기와 메시지 크기 사이의 관계는 다음과 같이 나타낼 수 있다.</p>
-<p>$$</p>
-<p>\mathbf{B_{node}} = \mathbf{N_{node}} \cdot \frac{\mathbf{S_{msg}}}{\mathbf{T_{msg}}}</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+\mathbf{B_{node}} = \mathbf{N_{node}} \cdot \frac{\mathbf{S_{msg}}}{\mathbf{T_{msg}}}
+</div>
+<script type="math/tex; mode=display">
+\mathbf{B_{node}} = \mathbf{N_{node}} \cdot \frac{\mathbf{S_{msg}}}{\mathbf{T_{msg}}}
+</script>
+</div>
 <p>여기서:
 - <span class="arithmatex"><span class="MathJax_Preview">\mathbf{B_{node}}</span><script type="math/tex">\mathbf{B_{node}}</script></span>는 노드 간 사용되는 대역폭 (Bytes/초),
 - <span class="arithmatex"><span class="MathJax_Preview">\mathbf{N_{node}}</span><script type="math/tex">\mathbf{N_{node}}</script></span>는 노드의 수,
@@ -232,9 +272,14 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 <p>네트워크 트래픽을 효과적으로 분배하고 라우팅하기 위해, ROS2에서는 <strong>Multicast</strong> 방식의 사용을 권장한다. Multicast를 사용하면 한 번의 전송으로 다수의 구독자에게 메시지를 전달할 수 있다.</p>
 <h4 id="multicast">Multicast 통신 모델</h4>
 <p>Multicast 통신의 주요 이점은 동일한 메시지를 여러 구독자에게 동시에 전송함으로써 트래픽 부하를 줄이는 데 있다. Multicast를 사용하는 경우, 노드 간의 트래픽 모델은 다음과 같이 표현된다.</p>
-<p>$$</p>
-<p>\mathbf{B_{multicast}} = \mathbf{S_{msg}} \cdot \mathbf{N_{sub}} \cdot \mathbf{f_{multicast}}</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+\mathbf{B_{multicast}} = \mathbf{S_{msg}} \cdot \mathbf{N_{sub}} \cdot \mathbf{f_{multicast}}
+</div>
+<script type="math/tex; mode=display">
+\mathbf{B_{multicast}} = \mathbf{S_{msg}} \cdot \mathbf{N_{sub}} \cdot \mathbf{f_{multicast}}
+</script>
+</div>
 <p>여기서:
 - <span class="arithmatex"><span class="MathJax_Preview">\mathbf{B_{multicast}}</span><script type="math/tex">\mathbf{B_{multicast}}</script></span>는 Multicast를 통한 대역폭 사용량 (Bytes/초),
 - <span class="arithmatex"><span class="MathJax_Preview">\mathbf{S_{msg}}</span><script type="math/tex">\mathbf{S_{msg}}</script></span>는 메시지 크기 (Bytes),
@@ -246,17 +291,27 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 <p>실시간 네트워크 성능을 보장하려면 QoS 정책의 적절한 설정이 필수적이다. 특히, 네트워크의 응답 시간을 줄이고, 트래픽이 많이 발생하는 환경에서도 일정한 성능을 유지하려면 QoS의 <strong>Deadline</strong>과 <strong>Latency Budget</strong> 설정이 중요하다.</p>
 <h4 id="deadline-latency-budget">Deadline과 Latency Budget 수식</h4>
 <p><strong>Deadline</strong>은 퍼블리셔가 주기적으로 메시지를 전송해야 하는 시간 간격을 정의하며, 이를 통해 데이터의 적시성을 보장한다. <strong>Latency Budget</strong>은 메시지가 구독자에게 전달되기까지 허용되는 최대 지연 시간을 의미한다.</p>
-<p>$$</p>
-<p>\mathbf{D_{deadline}} = \frac{\mathbf{S_{msg}}}{\mathbf{B_{deadline}}}</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+\mathbf{D_{deadline}} = \frac{\mathbf{S_{msg}}}{\mathbf{B_{deadline}}}
+</div>
+<script type="math/tex; mode=display">
+\mathbf{D_{deadline}} = \frac{\mathbf{S_{msg}}}{\mathbf{B_{deadline}}}
+</script>
+</div>
 <p>여기서:
 - <span class="arithmatex"><span class="MathJax_Preview">\mathbf{D_{deadline}}</span><script type="math/tex">\mathbf{D_{deadline}}</script></span>는 퍼블리셔의 메시지 전송 간격 (초),
 - <span class="arithmatex"><span class="MathJax_Preview">\mathbf{B_{deadline}}</span><script type="math/tex">\mathbf{B_{deadline}}</script></span>는 Deadline에 따라 요구되는 대역폭 (Bytes/초),
 - <span class="arithmatex"><span class="MathJax_Preview">\mathbf{S_{msg}}</span><script type="math/tex">\mathbf{S_{msg}}</script></span>는 메시지 크기 (Bytes)이다.</p>
 <p><strong>Latency Budget</strong> 설정을 최적화하는 경우, 네트워크 지연 시간 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{L_{latency}}</span><script type="math/tex">\mathbf{L_{latency}}</script></span>은 다음과 같이 표현된다.</p>
-<p>$$</p>
-<p>\mathbf{L_{latency}} = \mathbf{T_{transmit}} + \mathbf{T_{processing}} + \mathbf{T_{delivery}}</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+\mathbf{L_{latency}} = \mathbf{T_{transmit}} + \mathbf{T_{processing}} + \mathbf{T_{delivery}}
+</div>
+<script type="math/tex; mode=display">
+\mathbf{L_{latency}} = \mathbf{T_{transmit}} + \mathbf{T_{processing}} + \mathbf{T_{delivery}}
+</script>
+</div>
 <p>여기서:
 - <span class="arithmatex"><span class="MathJax_Preview">\mathbf{T_{transmit}}</span><script type="math/tex">\mathbf{T_{transmit}}</script></span>는 메시지 전송 시간,
 - <span class="arithmatex"><span class="MathJax_Preview">\mathbf{T_{processing}}</span><script type="math/tex">\mathbf{T_{processing}}</script></span>는 퍼블리셔의 처리 시간,
@@ -272,24 +327,39 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 </ol>
 <p>각 모드에 따른 대역폭 사용량은 다음과 같이 수식으로 표현할 수 있다.</p>
 <p><strong>Reliable 모드의 대역폭 사용량</strong>:</p>
-<p>$$</p>
-<p>\mathbf{B_{reliable}} = \mathbf{S_{msg}} \cdot \left( 1 + \mathbf{R_{ack}} \right)</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+\mathbf{B_{reliable}} = \mathbf{S_{msg}} \cdot \left( 1 + \mathbf{R_{ack}} \right)
+</div>
+<script type="math/tex; mode=display">
+\mathbf{B_{reliable}} = \mathbf{S_{msg}} \cdot \left( 1 + \mathbf{R_{ack}} \right)
+</script>
+</div>
 <p>여기서:
 - <span class="arithmatex"><span class="MathJax_Preview">\mathbf{B_{reliable}}</span><script type="math/tex">\mathbf{B_{reliable}}</script></span>는 Reliable 모드에서의 대역폭 사용량,
 - <span class="arithmatex"><span class="MathJax_Preview">\mathbf{S_{msg}}</span><script type="math/tex">\mathbf{S_{msg}}</script></span>는 메시지 크기,
 - <span class="arithmatex"><span class="MathJax_Preview">\mathbf{R_{ack}}</span><script type="math/tex">\mathbf{R_{ack}}</script></span>는 ACK 패킷의 비율 (보통 1:1 또는 1:2 비율로 설정).</p>
 <p><strong>Best-Effort 모드의 대역폭 사용량</strong>:</p>
-<p>$$</p>
-<p>\mathbf{B_{besteffort}} = \mathbf{S_{msg}}</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+\mathbf{B_{besteffort}} = \mathbf{S_{msg}}
+</div>
+<script type="math/tex; mode=display">
+\mathbf{B_{besteffort}} = \mathbf{S_{msg}}
+</script>
+</div>
 <p>Best-Effort 모드는 추가적인 ACK 패킷을 보내지 않으므로 메시지 크기만큼의 대역폭을 사용한다.</p>
 <h3 id="_11">데이터 전송의 우선 순위 제어</h3>
 <p>다중 노드 통신에서 트래픽이 과도하게 발생하는 상황에서는 특정 데이터의 우선 순위를 설정하여 중요한 데이터가 먼저 전달되도록 해야 한다. 이를 통해 중요한 메시지가 네트워크에서 지연 없이 전달될 수 있다.</p>
 <p>QoS 설정에서 <strong>Priority</strong> 필드를 사용하여 데이터의 우선 순위를 설정할 수 있다. 각 메시지의 우선 순위 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{P_{msg}}</span><script type="math/tex">\mathbf{P_{msg}}</script></span>는 다음과 같이 정의할 수 있다.</p>
-<p>$$</p>
-<p>\mathbf{P_{msg}} = \frac{1}{\mathbf{T_{delay}}}</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+\mathbf{P_{msg}} = \frac{1}{\mathbf{T_{delay}}}
+</div>
+<script type="math/tex; mode=display">
+\mathbf{P_{msg}} = \frac{1}{\mathbf{T_{delay}}}
+</script>
+</div>
 <p>여기서:
 - <span class="arithmatex"><span class="MathJax_Preview">\mathbf{P_{msg}}</span><script type="math/tex">\mathbf{P_{msg}}</script></span>는 메시지의 우선 순위,
 - <span class="arithmatex"><span class="MathJax_Preview">\mathbf{T_{delay}}</span><script type="math/tex">\mathbf{T_{delay}}</script></span>는 해당 메시지의 지연 허용 시간.</p>

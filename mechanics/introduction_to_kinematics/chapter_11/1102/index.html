@@ -403,48 +403,88 @@ E_{\text{rot}} = \frac{1}{2} \mathbf{I} |\boldsymbol{\omega}|^2
 <ol>
 <li>첫 번째 단계에서는 중간 위치 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{r}_m</span><script type="math/tex">\mathbf{r}_m</script></span>과 중간 속도 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{v}_m</span><script type="math/tex">\mathbf{v}_m</script></span>를 계산한다:</li>
 </ol>
-<p>$$
-   \mathbf{r}_m = \mathbf{r}(t) + \mathbf{v}(t) \frac{\Delta t}{2}</p>
-<p>$$</p>
-<p>$$
-   \mathbf{v}_m = \mathbf{v}(t)</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+   \mathbf{r}_m = \mathbf{r}(t) + \mathbf{v}(t) \frac{\Delta t}{2}
+</div>
+<script type="math/tex; mode=display">
+   \mathbf{r}_m = \mathbf{r}(t) + \mathbf{v}(t) \frac{\Delta t}{2}
+</script>
+</div>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+   \mathbf{v}_m = \mathbf{v}(t)
+</div>
+<script type="math/tex; mode=display">
+   \mathbf{v}_m = \mathbf{v}(t)
+</script>
+</div>
 <ol>
 <li>두 번째 단계에서는 중간 값을 사용하여 다음 위치와 속도를 계산한다:</li>
 </ol>
-<p>$$
-   \mathbf{r}(t + \Delta t) = \mathbf{r}(t) + \mathbf{v}_m \Delta t</p>
-<p>$$</p>
-<p>$$
-   \mathbf{v}(t + \Delta t) = \mathbf{v}_m</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+   \mathbf{r}(t + \Delta t) = \mathbf{r}(t) + \mathbf{v}_m \Delta t
+</div>
+<script type="math/tex; mode=display">
+   \mathbf{r}(t + \Delta t) = \mathbf{r}(t) + \mathbf{v}_m \Delta t
+</script>
+</div>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+   \mathbf{v}(t + \Delta t) = \mathbf{v}_m
+</div>
+<script type="math/tex; mode=display">
+   \mathbf{v}(t + \Delta t) = \mathbf{v}_m
+</script>
+</div>
 <p>이 방식은 기본 오일러 방법에 비해 더 높은 정확도를 가지며, 오차가 적게 누적된다.</p>
 <h4 id="53-runge-kutta-method">5.3 룽게-쿠타 방법 (Runge-Kutta Method)</h4>
 <p>자유 운동을 보다 정확하게 해석하기 위해 룽게-쿠타(Runge-Kutta) 방법을 사용할 수 있다. 이 방법은 네 가지 단계로 나누어 상태를 계산하며, 다음과 같은 형태로 나타낼 수 있다:</p>
 <ol>
 <li>첫 번째 단계에서는 초기 위치와 속도를 기반으로 계산한다:</li>
 </ol>
-<p>$$
-   k_1 = \mathbf{v}(t)</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+   k_1 = \mathbf{v}(t)
+</div>
+<script type="math/tex; mode=display">
+   k_1 = \mathbf{v}(t)
+</script>
+</div>
 <ol>
 <li>두 번째 단계에서는 중간 위치와 속도를 계산한다:</li>
 </ol>
-<p>$$
-   k_2 = \mathbf{v}(t) + \frac{k_1}{2} \Delta t</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+   k_2 = \mathbf{v}(t) + \frac{k_1}{2} \Delta t
+</div>
+<script type="math/tex; mode=display">
+   k_2 = \mathbf{v}(t) + \frac{k_1}{2} \Delta t
+</script>
+</div>
 <ol>
 <li>세 번째 단계에서도 중간 위치와 속도를 계산한다:</li>
 </ol>
-<p>$$
-   k_3 = \mathbf{v}(t) + \frac{k_2}{2} \Delta t</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+   k_3 = \mathbf{v}(t) + \frac{k_2}{2} \Delta t
+</div>
+<script type="math/tex; mode=display">
+   k_3 = \mathbf{v}(t) + \frac{k_2}{2} \Delta t
+</script>
+</div>
 <ol>
 <li>마지막 단계에서는 최종 값을 계산한다:</li>
 </ol>
-<p>$$
-   k_4 = \mathbf{v}(t) + k_3 \Delta t</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+   k_4 = \mathbf{v}(t) + k_3 \Delta t
+</div>
+<script type="math/tex; mode=display">
+   k_4 = \mathbf{v}(t) + k_3 \Delta t
+</script>
+</div>
 <p>최종적으로 다음 상태는 다음과 같이 구할 수 있다:</p>
 <div class="arithmatex">
 <div class="MathJax_Preview">

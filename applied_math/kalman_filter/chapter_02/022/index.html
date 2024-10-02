@@ -198,15 +198,25 @@ f(\mathbf{x}) = \frac{1}{\sqrt{(2\pi)^k |\mathbf{\Sigma}|}} \exp\left(-\frac{1}{
 <ul>
 <li>결합된 분포의 평균:</li>
 </ul>
-<p>$$
-  \mu_{\text{new}} = \frac{\sigma_2^2 \mu_1 + \sigma_1^2 \mu_2}{\sigma_1^2 + \sigma_2^2}</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+  \mu_{\text{new}} = \frac{\sigma_2^2 \mu_1 + \sigma_1^2 \mu_2}{\sigma_1^2 + \sigma_2^2}
+</div>
+<script type="math/tex; mode=display">
+  \mu_{\text{new}} = \frac{\sigma_2^2 \mu_1 + \sigma_1^2 \mu_2}{\sigma_1^2 + \sigma_2^2}
+</script>
+</div>
 <ul>
 <li>결합된 분포의 분산:</li>
 </ul>
-<p>$$
-  \sigma_{\text{new}}^2 = \frac{\sigma_1^2 \sigma_2^2}{\sigma_1^2 + \sigma_2^2}</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+  \sigma_{\text{new}}^2 = \frac{\sigma_1^2 \sigma_2^2}{\sigma_1^2 + \sigma_2^2}
+</div>
+<script type="math/tex; mode=display">
+  \sigma_{\text{new}}^2 = \frac{\sigma_1^2 \sigma_2^2}{\sigma_1^2 + \sigma_2^2}
+</script>
+</div>
 <p>여기서 <span class="arithmatex"><span class="MathJax_Preview">\mu_1</span><script type="math/tex">\mu_1</script></span>과 <span class="arithmatex"><span class="MathJax_Preview">\mu_2</span><script type="math/tex">\mu_2</script></span>는 두 개의 가우시안 분포의 평균, <span class="arithmatex"><span class="MathJax_Preview">\sigma_1^2</span><script type="math/tex">\sigma_1^2</script></span>와 <span class="arithmatex"><span class="MathJax_Preview">\sigma_2^2</span><script type="math/tex">\sigma_2^2</script></span>는 각각의 분산을 나타낸다. 이 공식은 칼만 필터의 상태 추정에서 핵심적인 역할을 하며, 측정값과 예측값의 가중치를 결합하는 과정에서 사용된다.</p>
 <h3 id="_13">가우시안 분포와 베이즈 추론</h3>
 <p>칼만 필터는 베이즈 추론의 한 형태로 볼 수 있으며, 이 과정에서 가우시안 분포는 매우 중요한 역할을 한다. 베이즈 추론에서는 사전 확률(prior probability)과 사후 확률(posterior probability)을 계산하는데, 칼만 필터의 경우 이 확률들이 가우시안 분포로 표현된다. 특히, 사전 확률이 가우시안 분포를 따를 때, 관측 데이터를 반영하여 사후 확률을 업데이트하는 과정에서 여전히 가우시안 분포를 유지할 수 있다. 이 점은 칼만 필터가 효율적이고 일관된 상태 추정을 가능하게 하는 중요한 이유 중 하나이다.</p>

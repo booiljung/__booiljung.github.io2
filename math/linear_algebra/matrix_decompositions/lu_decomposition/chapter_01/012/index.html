@@ -114,33 +114,53 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 <li><strong>LU 분해</strong>:
    주어진 행렬을 하나의 하삼각 행렬(L)과 하나의 상삼각 행렬(U)로 분해하는 방법이다. LU 분해는 선형 시스템의 해를 구하거나 행렬의 역행렬을 계산할 때 자주 사용된다.</li>
 </ol>
-<p>$$
-   \mathbf{A} = \mathbf{L} \mathbf{U}</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+   \mathbf{A} = \mathbf{L} \mathbf{U}
+</div>
+<script type="math/tex; mode=display">
+   \mathbf{A} = \mathbf{L} \mathbf{U}
+</script>
+</div>
 <p>여기서, <span class="arithmatex"><span class="MathJax_Preview">\mathbf{L}</span><script type="math/tex">\mathbf{L}</script></span>은 하삼각 행렬, <span class="arithmatex"><span class="MathJax_Preview">\mathbf{U}</span><script type="math/tex">\mathbf{U}</script></span>는 상삼각 행렬이다.</p>
 <ol>
 <li><strong>QR 분해</strong>:
    주어진 행렬을 직교 행렬(<span class="arithmatex"><span class="MathJax_Preview">\mathbf{Q}</span><script type="math/tex">\mathbf{Q}</script></span>)과 상삼각 행렬(<span class="arithmatex"><span class="MathJax_Preview">\mathbf{R}</span><script type="math/tex">\mathbf{R}</script></span>)로 분해하는 방법이다. 이 방법은 특히 선형 최소제곱 문제를 풀 때 유용하다.</li>
 </ol>
-<p>$$
-   \mathbf{A} = \mathbf{Q} \mathbf{R}</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+   \mathbf{A} = \mathbf{Q} \mathbf{R}
+</div>
+<script type="math/tex; mode=display">
+   \mathbf{A} = \mathbf{Q} \mathbf{R}
+</script>
+</div>
 <p>여기서, <span class="arithmatex"><span class="MathJax_Preview">\mathbf{Q}</span><script type="math/tex">\mathbf{Q}</script></span>는 직교 행렬, <span class="arithmatex"><span class="MathJax_Preview">\mathbf{R}</span><script type="math/tex">\mathbf{R}</script></span>은 상삼각 행렬이다.</p>
 <ol>
 <li><strong>Cholesky 분해</strong>:
    대칭 양의 정부호 행렬을 하나의 하삼각 행렬과 그 행렬의 전치 행렬로 분해하는 방법이다. 이 분해는 LU 분해의 특수한 형태로 볼 수 있다.</li>
 </ol>
-<p>$$
-   \mathbf{A} = \mathbf{L} \mathbf{L}^\top</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+   \mathbf{A} = \mathbf{L} \mathbf{L}^\top
+</div>
+<script type="math/tex; mode=display">
+   \mathbf{A} = \mathbf{L} \mathbf{L}^\top
+</script>
+</div>
 <p>여기서, <span class="arithmatex"><span class="MathJax_Preview">\mathbf{L}</span><script type="math/tex">\mathbf{L}</script></span>은 하삼각 행렬이다.</p>
 <ol>
 <li><strong>SVD(특이값 분해)</strong>:
    임의의 행렬을 세 개의 행렬, 즉 하나의 직교 행렬(<span class="arithmatex"><span class="MathJax_Preview">\mathbf{U}</span><script type="math/tex">\mathbf{U}</script></span>), 하나의 대각 행렬(<span class="arithmatex"><span class="MathJax_Preview">\mathbf{\Sigma}</span><script type="math/tex">\mathbf{\Sigma}</script></span>), 그리고 또 하나의 직교 행렬(<span class="arithmatex"><span class="MathJax_Preview">\mathbf{V}^\top</span><script type="math/tex">\mathbf{V}^\top</script></span>)로 분해하는 방법이다.</li>
 </ol>
-<p>$$
-   \mathbf{A} = \mathbf{U} \mathbf{\Sigma} \mathbf{V}^\top</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+   \mathbf{A} = \mathbf{U} \mathbf{\Sigma} \mathbf{V}^\top
+</div>
+<script type="math/tex; mode=display">
+   \mathbf{A} = \mathbf{U} \mathbf{\Sigma} \mathbf{V}^\top
+</script>
+</div>
 <p>여기서, <span class="arithmatex"><span class="MathJax_Preview">\mathbf{U}</span><script type="math/tex">\mathbf{U}</script></span>와 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{V}</span><script type="math/tex">\mathbf{V}</script></span>는 직교 행렬, <span class="arithmatex"><span class="MathJax_Preview">\mathbf{\Sigma}</span><script type="math/tex">\mathbf{\Sigma}</script></span>는 대각 행렬이다.</p>
 <h3 id="_3">행렬 분해의 기본 원리</h3>
 <p>행렬 분해는 기본적으로 복잡한 행렬 연산을 단순화하기 위한 방법으로, 큰 행렬을 여러 개의 더 작은 행렬로 분해함으로써 계산의 복잡도를 줄이다. 이는 특정한 문제에서 필요한 연산이 복잡할 때 매우 유용하며, 연립 방정식의 해법, 역행렬 계산, 행렬식 계산 등에 자주 활용된다.</p>
@@ -154,9 +174,14 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 <ol>
 <li><strong>연립 방정식의 해법</strong>: <span class="arithmatex"><span class="MathJax_Preview">\mathbf{A} \mathbf{x} = \mathbf{b}</span><script type="math/tex">\mathbf{A} \mathbf{x} = \mathbf{b}</script></span> 형태의 연립 방정식에서, 행렬 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{A}</span><script type="math/tex">\mathbf{A}</script></span>를 LU로 분해하면 연립 방정식의 해를 구하는 작업이 크게 단순화된다. LU 분해를 통해 연립 방정식 문제를 두 단계의 간단한 행렬 문제로 나눌 수 있다.</li>
 </ol>
-<p>$$
-   \mathbf{A} \mathbf{x} = \mathbf{L} \mathbf{U} \mathbf{x} = \mathbf{b}</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+   \mathbf{A} \mathbf{x} = \mathbf{L} \mathbf{U} \mathbf{x} = \mathbf{b}
+</div>
+<script type="math/tex; mode=display">
+   \mathbf{A} \mathbf{x} = \mathbf{L} \mathbf{U} \mathbf{x} = \mathbf{b}
+</script>
+</div>
 <p>이 식을 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{L} \mathbf{y} = \mathbf{b}</span><script type="math/tex">\mathbf{L} \mathbf{y} = \mathbf{b}</script></span>와 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{U} \mathbf{x} = \mathbf{y}</span><script type="math/tex">\mathbf{U} \mathbf{x} = \mathbf{y}</script></span>로 나누어 계산할 수 있다.</p>
 <ol>
 <li>
@@ -169,9 +194,14 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 <p><strong>행렬의 역행렬 계산</strong>: LU 분해는 행렬의 역행렬을 계산하는 데 효과적으로 사용될 수 있다. 행렬 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{A}</span><script type="math/tex">\mathbf{A}</script></span>의 LU 분해를 통해 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{A}^{-1}</span><script type="math/tex">\mathbf{A}^{-1}</script></span>를 보다 쉽게 구할 수 있으며, 이는 많은 응용 분야에서 중요한 역할을 한다.</p>
 </li>
 </ol>
-<p>$$
-   \mathbf{A}^{-1} = \mathbf{U}^{-1} \mathbf{L}^{-1}</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+   \mathbf{A}^{-1} = \mathbf{U}^{-1} \mathbf{L}^{-1}
+</div>
+<script type="math/tex; mode=display">
+   \mathbf{A}^{-1} = \mathbf{U}^{-1} \mathbf{L}^{-1}
+</script>
+</div>
 <ol>
 <li><strong>특수 행렬에의 적용 가능성</strong>: LU 분해는 대칭 행렬, 대각 행렬, 희소 행렬 등 다양한 특수 형태의 행렬에도 적용할 수 있다. 이는 LU 분해가 다양한 수학적 문제에서 범용적으로 사용될 수 있음을 의미한다.</li>
 </ol>
@@ -212,30 +242,53 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 </li>
 </ol>
 <p>초기화:</p>
-<p>$$
+<div class="arithmatex">
+<div class="MathJax_Preview">
    \mathbf{L} = \begin{bmatrix}
-   1 &amp; 0 &amp; 0 &amp; \dots &amp; 0 \
-   l_{21} &amp; 1 &amp; 0 &amp; \dots &amp; 0 \
-   l_{31} &amp; l_{32} &amp; 1 &amp; \dots &amp; 0 \
-   \vdots &amp; \vdots &amp; \vdots &amp; \ddots &amp; \vdots \
+   1 &amp; 0 &amp; 0 &amp; \dots &amp; 0 \\
+   l_{21} &amp; 1 &amp; 0 &amp; \dots &amp; 0 \\
+   l_{31} &amp; l_{32} &amp; 1 &amp; \dots &amp; 0 \\
+   \vdots &amp; \vdots &amp; \vdots &amp; \ddots &amp; \vdots \\
    l_{n1} &amp; l_{n2} &amp; l_{n3} &amp; \dots &amp; 1
    \end{bmatrix}, \quad
    \mathbf{U} = \begin{bmatrix}
-   u_{11} &amp; u_{12} &amp; u_{13} &amp; \dots &amp; u_{1n} \
-   0 &amp; u_{22} &amp; u_{23} &amp; \dots &amp; u_{2n} \
-   0 &amp; 0 &amp; u_{33} &amp; \dots &amp; u_{3n} \
-   \vdots &amp; \vdots &amp; \vdots &amp; \ddots &amp; \vdots \
+   u_{11} &amp; u_{12} &amp; u_{13} &amp; \dots &amp; u_{1n} \\
+   0 &amp; u_{22} &amp; u_{23} &amp; \dots &amp; u_{2n} \\
+   0 &amp; 0 &amp; u_{33} &amp; \dots &amp; u_{3n} \\
+   \vdots &amp; \vdots &amp; \vdots &amp; \ddots &amp; \vdots \\
    0 &amp; 0 &amp; 0 &amp; \dots &amp; u_{nn}
-   \end{bmatrix}</p>
-<p>$$</p>
+   \end{bmatrix}
+</div>
+<script type="math/tex; mode=display">
+   \mathbf{L} = \begin{bmatrix}
+   1 & 0 & 0 & \dots & 0 \\
+   l_{21} & 1 & 0 & \dots & 0 \\
+   l_{31} & l_{32} & 1 & \dots & 0 \\
+   \vdots & \vdots & \vdots & \ddots & \vdots \\
+   l_{n1} & l_{n2} & l_{n3} & \dots & 1
+   \end{bmatrix}, \quad
+   \mathbf{U} = \begin{bmatrix}
+   u_{11} & u_{12} & u_{13} & \dots & u_{1n} \\
+   0 & u_{22} & u_{23} & \dots & u_{2n} \\
+   0 & 0 & u_{33} & \dots & u_{3n} \\
+   \vdots & \vdots & \vdots & \ddots & \vdots \\
+   0 & 0 & 0 & \dots & u_{nn}
+   \end{bmatrix}
+</script>
+</div>
 <ol>
 <li><strong>가우스 소거법 적용</strong>: 행렬 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{A}</span><script type="math/tex">\mathbf{A}</script></span>에 가우스 소거법을 적용하여 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{U}</span><script type="math/tex">\mathbf{U}</script></span>를 상삼각 행렬로 변환한다. 이 과정에서 사용된 행 연산을 기록하여 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{L}</span><script type="math/tex">\mathbf{L}</script></span>을 구성한다.</li>
 </ol>
 <p>예를 들어, 첫 번째 열에서 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{A}</span><script type="math/tex">\mathbf{A}</script></span>의 첫 번째 성분을 기준으로 하여 나머지 행들을 소거한다. 이 과정에서 생긴 요소들을 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{L}</span><script type="math/tex">\mathbf{L}</script></span>의 하삼각 요소로 저장한다.</p>
 <p>계산 과정:</p>
-<p>$$
-   u_{ij} = a_{ij} - \sum_{k=1}^{i-1} l_{ik} u_{kj}, \quad l_{ij} = \frac{a_{ij} - \sum_{k=1}^{i-1} l_{ik} u_{kj}}{u_{ii}}</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+   u_{ij} = a_{ij} - \sum_{k=1}^{i-1} l_{ik} u_{kj}, \quad l_{ij} = \frac{a_{ij} - \sum_{k=1}^{i-1} l_{ik} u_{kj}}{u_{ii}}
+</div>
+<script type="math/tex; mode=display">
+   u_{ij} = a_{ij} - \sum_{k=1}^{i-1} l_{ik} u_{kj}, \quad l_{ij} = \frac{a_{ij} - \sum_{k=1}^{i-1} l_{ik} u_{kj}}{u_{ii}}
+</script>
+</div>
 <p>여기서 <span class="arithmatex"><span class="MathJax_Preview">i \leq j</span><script type="math/tex">i \leq j</script></span>일 때 <span class="arithmatex"><span class="MathJax_Preview">u_{ij}</span><script type="math/tex">u_{ij}</script></span>는 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{U}</span><script type="math/tex">\mathbf{U}</script></span>의 성분, <span class="arithmatex"><span class="MathJax_Preview">i &gt; j</span><script type="math/tex">i > j</script></span>일 때 <span class="arithmatex"><span class="MathJax_Preview">l_{ij}</span><script type="math/tex">l_{ij}</script></span>는 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{L}</span><script type="math/tex">\mathbf{L}</script></span>의 성분이 된다.</p>
 <ol>
 <li><strong>최종 행렬 도출</strong>: 가우스 소거법의 모든 단계가 완료되면, 행렬 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{A}</span><script type="math/tex">\mathbf{A}</script></span>는 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{L}</span><script type="math/tex">\mathbf{L}</script></span>과 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{U}</span><script type="math/tex">\mathbf{U}</script></span>로 분해된다. 이 결과를 통해 연립 방정식을 해결하거나, 행렬의 역행렬을 구할 수 있다.</li>
@@ -247,13 +300,23 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
    LU 분해를 통해 연립 방정식을 빠르고 효율적으로 풀 수 있다. 주어진 행렬 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{A}</span><script type="math/tex">\mathbf{A}</script></span>를 LU로 분해한 후, 두 단계로 나누어 연립 방정식을 해결한다.</li>
 </ol>
 <p>첫 번째 단계:</p>
-<p>$$
-   \mathbf{L} \mathbf{y} = \mathbf{b}</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+   \mathbf{L} \mathbf{y} = \mathbf{b}
+</div>
+<script type="math/tex; mode=display">
+   \mathbf{L} \mathbf{y} = \mathbf{b}
+</script>
+</div>
 <p>두 번째 단계:</p>
-<p>$$
-   \mathbf{U} \mathbf{x} = \mathbf{y}</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+   \mathbf{U} \mathbf{x} = \mathbf{y}
+</div>
+<script type="math/tex; mode=display">
+   \mathbf{U} \mathbf{x} = \mathbf{y}
+</script>
+</div>
 <ol>
 <li>
 <p><strong>행렬의 역행렬 계산</strong>:
@@ -265,9 +328,14 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 </li>
 </ol>
 <p>행렬식 계산:</p>
-<p>$$
-   \text{det}(\mathbf{A}) = \text{det}(\mathbf{L}) \times \text{det}(\mathbf{U})</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+   \text{det}(\mathbf{A}) = \text{det}(\mathbf{L}) \times \text{det}(\mathbf{U})
+</div>
+<script type="math/tex; mode=display">
+   \text{det}(\mathbf{A}) = \text{det}(\mathbf{L}) \times \text{det}(\mathbf{U})
+</script>
+</div>
 
   <br>
     

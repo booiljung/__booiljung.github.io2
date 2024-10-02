@@ -110,15 +110,25 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 <ul>
 <li>두 실린더의 축 벡터 <span class="arithmatex"><span class="MathJax_Preview">D1</span><script type="math/tex">D1</script></span>과 <span class="arithmatex"><span class="MathJax_Preview">D2</span><script type="math/tex">D2</script></span>가 있을 때, 그 사이의 최소 거리 벡터는 두 실린더 축에 수직인 벡터를 구함으로써 계산된다. 이를 벡터 수학적으로 나타내면:</li>
 </ul>
-<p>$$
-     \text{distance} = \frac{|(P2 - P1) \cdot (D1 \times D2)|}{|D1 \times D2|}</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+     \text{distance} = \frac{|(P2 - P1) \cdot (D1 \times D2)|}{|D1 \times D2|}
+</div>
+<script type="math/tex; mode=display">
+     \text{distance} = \frac{|(P2 - P1) \cdot (D1 \times D2)|}{|D1 \times D2|}
+</script>
+</div>
 <p>여기서 <span class="arithmatex"><span class="MathJax_Preview">P1</span><script type="math/tex">P1</script></span>과 <span class="arithmatex"><span class="MathJax_Preview">P2</span><script type="math/tex">P2</script></span>는 각 실린더의 중심 좌표이고, <span class="arithmatex"><span class="MathJax_Preview">D1</span><script type="math/tex">D1</script></span>과 <span class="arithmatex"><span class="MathJax_Preview">D2</span><script type="math/tex">D2</script></span>는 각 실린더의 축 방향 벡터이다.</p>
 <h3 id="3">3. <strong>축 거리 비교</strong></h3>
 <p>두 실린더가 축 방향 거리에서 겹치지 않는다면 충돌하지 않음을 빠르게 확인할 수 있다. 즉, 실린더의 중심에서 반지름까지의 거리가 충분히 크면 충돌하지 않는다:</p>
-<p>$$
-   \text{충돌 조건}: \text{distance} \leq (R1 + R2)</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+   \text{충돌 조건}: \text{distance} \leq (R1 + R2)
+</div>
+<script type="math/tex; mode=display">
+   \text{충돌 조건}: \text{distance} \leq (R1 + R2)
+</script>
+</div>
 <p>여기서 <span class="arithmatex"><span class="MathJax_Preview">R1</span><script type="math/tex">R1</script></span>과 <span class="arithmatex"><span class="MathJax_Preview">R2</span><script type="math/tex">R2</script></span>는 각 실린더의 반지름이다.</p>
 <h3 id="4">4. <strong>높이 비교</strong></h3>
 <p>축 방향에서 충돌이 의심되는 경우, 실린더의 높이로 충돌 여부를 확인할 수 있다. 각 실린더의 중심에서 해당 축을 따라 상하로 이동한 위치가 겹치는지 확인한다.</p>

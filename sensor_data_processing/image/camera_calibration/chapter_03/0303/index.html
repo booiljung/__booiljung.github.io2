@@ -223,15 +223,25 @@ f_y \cdot \frac{Y_c}{Z_c} + c_y \\
 - <span class="arithmatex"><span class="MathJax_Preview">\mathbf{P_w}</span><script type="math/tex">\mathbf{P_w}</script></span>는 월드 좌표계에서의 3D 점을 나타낸다.</p>
 <p>이 전체 투영 과정을 단계별로 설명하면:
 1. 3D 세계 좌표 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{P_w}</span><script type="math/tex">\mathbf{P_w}</script></span>가 회전 행렬 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{R}</span><script type="math/tex">\mathbf{R}</script></span>과 평행 이동 벡터 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{T}</span><script type="math/tex">\mathbf{T}</script></span>에 의해 카메라 좌표계 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{P_c}</span><script type="math/tex">\mathbf{P_c}</script></span>로 변환된다.</p>
-<p>$$
-   \mathbf{P_c} = \mathbf{R} \mathbf{P_w} + \mathbf{T}</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+   \mathbf{P_c} = \mathbf{R} \mathbf{P_w} + \mathbf{T}
+</div>
+<script type="math/tex; mode=display">
+   \mathbf{P_c} = \mathbf{R} \mathbf{P_w} + \mathbf{T}
+</script>
+</div>
 <ol>
 <li>변환된 카메라 좌표계의 점 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{P_c}</span><script type="math/tex">\mathbf{P_c}</script></span>가 내부 파라미터 매트릭스 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{K}</span><script type="math/tex">\mathbf{K}</script></span>에 의해 이미지 평면 상의 2D 점 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{p}</span><script type="math/tex">\mathbf{p}</script></span>로 투영된다.</li>
 </ol>
-<p>$$
-   \mathbf{p} = \mathbf{K} \mathbf{P_c}</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+   \mathbf{p} = \mathbf{K} \mathbf{P_c}
+</div>
+<script type="math/tex; mode=display">
+   \mathbf{p} = \mathbf{K} \mathbf{P_c}
+</script>
+</div>
 <p>이를 하나의 식으로 결합하면 다음과 같은 최종 투영 방정식이 도출된다:</p>
 <div class="arithmatex">
 <div class="MathJax_Preview">
@@ -247,15 +257,25 @@ f_y \cdot \frac{Y_c}{Z_c} + c_y \\
 <ol>
 <li>월드 좌표계의 점 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{P_w}</span><script type="math/tex">\mathbf{P_w}</script></span>는 회전 행렬 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{R}</span><script type="math/tex">\mathbf{R}</script></span>과 평행 이동 벡터 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{T}</span><script type="math/tex">\mathbf{T}</script></span>에 의해 카메라 좌표계의 점 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{P_c} = (X_c, Y_c, Z_c)</span><script type="math/tex">\mathbf{P_c} = (X_c, Y_c, Z_c)</script></span>로 변환된다:</li>
 </ol>
-<p>$$
-   \mathbf{P_c} = \mathbf{R} \mathbf{P_w} + \mathbf{T}</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+   \mathbf{P_c} = \mathbf{R} \mathbf{P_w} + \mathbf{T}
+</div>
+<script type="math/tex; mode=display">
+   \mathbf{P_c} = \mathbf{R} \mathbf{P_w} + \mathbf{T}
+</script>
+</div>
 <ol>
 <li>카메라 좌표계의 점 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{P_c}</span><script type="math/tex">\mathbf{P_c}</script></span>는 내부 파라미터 매트릭스 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{K}</span><script type="math/tex">\mathbf{K}</script></span>에 의해 이미지 평면으로 투영된다:</li>
 </ol>
-<p>$$
-   \mathbf{p} = \mathbf{K} \mathbf{P_c}</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+   \mathbf{p} = \mathbf{K} \mathbf{P_c}
+</div>
+<script type="math/tex; mode=display">
+   \mathbf{p} = \mathbf{K} \mathbf{P_c}
+</script>
+</div>
 <ol>
 <li>투영된 결과는 다음과 같은 형태로 표현된다:</li>
 </ol>

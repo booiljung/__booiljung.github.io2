@@ -77,9 +77,14 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 <h3 id="_2">이벤트 기반 옵티컬 플로우 모델</h3>
 <p>일반적인 옵티컬 플로우는 <strong>광학 흐름 방정식</strong>을 바탕으로 한다. 이 방정식은 픽셀 단위에서의 이미지 밝기 변화와 관련된 수식을 사용하여 픽셀의 이동을 계산한다. 이벤트 카메라의 경우, 픽셀에서 이벤트가 발생하는 시점에서 밝기의 변화가 직접적으로 기록되므로, 이를 바탕으로 옵티컬 플로우를 계산할 수 있다. </p>
 <p>광학 흐름 방정식은 다음과 같이 정의된다:</p>
-<p>$$</p>
-<p>\frac{\partial I(x, y, t)}{\partial t} + \mathbf{v_x} \frac{\partial I(x, y, t)}{\partial x} + \mathbf{v_y} \frac{\partial I(x, y, t)}{\partial y} = 0</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+\frac{\partial I(x, y, t)}{\partial t} + \mathbf{v_x} \frac{\partial I(x, y, t)}{\partial x} + \mathbf{v_y} \frac{\partial I(x, y, t)}{\partial y} = 0
+</div>
+<script type="math/tex; mode=display">
+\frac{\partial I(x, y, t)}{\partial t} + \mathbf{v_x} \frac{\partial I(x, y, t)}{\partial x} + \mathbf{v_y} \frac{\partial I(x, y, t)}{\partial y} = 0
+</script>
+</div>
 <p>여기서:
 - <span class="arithmatex"><span class="MathJax_Preview">I(x, y, t)</span><script type="math/tex">I(x, y, t)</script></span>는 시공간 상에서 밝기 변화를 나타내는 함수
 - <span class="arithmatex"><span class="MathJax_Preview">\mathbf{v_x}, \mathbf{v_y}</span><script type="math/tex">\mathbf{v_x}, \mathbf{v_y}</script></span>는 픽셀의 x축, y축 방향 이동 속도(즉, 옵티컬 플로우)
@@ -87,9 +92,14 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 <p>이 방정식에서 <strong>이벤트 카메라</strong>는 <strong>밝기 변화</strong>를 이벤트로 기록하므로, 위 방정식을 활용하여 이벤트가 발생한 시점에서의 픽셀 이동을 추적할 수 있다. 이를 바탕으로 이벤트 스트림에서 시간에 따른 픽셀 위치 변화를 계산할 수 있으며, 결과적으로 옵티컬 플로우를 추출할 수 있다.</p>
 <h3 id="_3">에너지 기반 접근법</h3>
 <p>이벤트 카메라에서는 전통적인 프레임 기반의 옵티컬 플로우 알고리즘과 달리, <strong>에너지 최소화</strong> 접근법을 사용할 수 있다. 이 방법은 각각의 이벤트가 발생한 지점에서의 픽셀 움직임 벡터를 추정하기 위해 에너지 함수의 최소값을 찾는 방식으로 동작한다. 에너지 함수는 일반적으로 아래와 같은 형태로 표현된다:</p>
-<p>$$</p>
-<p>E(\mathbf{v}) = \sum_{i} \left( I(x_i + v_x \Delta t, y_i + v_y \Delta t, t + \Delta t) - I(x_i, y_i, t) \right)^2</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+E(\mathbf{v}) = \sum_{i} \left( I(x_i + v_x \Delta t, y_i + v_y \Delta t, t + \Delta t) - I(x_i, y_i, t) \right)^2
+</div>
+<script type="math/tex; mode=display">
+E(\mathbf{v}) = \sum_{i} \left( I(x_i + v_x \Delta t, y_i + v_y \Delta t, t + \Delta t) - I(x_i, y_i, t) \right)^2
+</script>
+</div>
 <p>여기서:
 - <span class="arithmatex"><span class="MathJax_Preview">x_i, y_i</span><script type="math/tex">x_i, y_i</script></span>는 이벤트가 발생한 위치
 - <span class="arithmatex"><span class="MathJax_Preview">\mathbf{v} = (v_x, v_y)</span><script type="math/tex">\mathbf{v} = (v_x, v_y)</script></span>는 옵티컬 플로우 벡터
@@ -98,9 +108,14 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 <h3 id="_4">적분 기반 접근법</h3>
 <p>또 다른 방법은 <strong>적분 기반 접근법</strong>이다. 이 방식은 이벤트 카메라의 연속적인 데이터 스트림을 기반으로 옵티컬 플로우를 계산하는 방식이다. 각 이벤트는 픽셀의 변화율을 기록하므로, 이를 바탕으로 적분하여 전체적인 픽셀의 이동 벡터를 추정할 수 있다. </p>
 <p>이 방법은 아래와 같은 수식을 따른다:</p>
-<p>$$</p>
-<p>\mathbf{v} = \frac{1}{N} \sum_{i=1}^{N} \mathbf{v}_i</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+\mathbf{v} = \frac{1}{N} \sum_{i=1}^{N} \mathbf{v}_i
+</div>
+<script type="math/tex; mode=display">
+\mathbf{v} = \frac{1}{N} \sum_{i=1}^{N} \mathbf{v}_i
+</script>
+</div>
 <p>여기서:
 - <span class="arithmatex"><span class="MathJax_Preview">N</span><script type="math/tex">N</script></span>은 주어진 시간 구간 내의 이벤트 수
 - <span class="arithmatex"><span class="MathJax_Preview">\mathbf{v}_i</span><script type="math/tex">\mathbf{v}_i</script></span>는 각각의 이벤트가 발생한 위치에서의 이동 벡터</p>

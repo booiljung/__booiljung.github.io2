@@ -106,9 +106,14 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
    로봇은 이벤트 카메라를 이용해 빠르게 변하는 환경을 실시간으로 인식하고 이를 토대로 2D 또는 3D 지도를 생성할 수 있다. 이러한 작업은 SLAM(동시적 위치 추정 및 지도 작성)과 연관되며, 이벤트 카메라의 높은 시간 해상도 덕분에 더욱 정확하고 빠르게 환경을 모델링할 수 있다.</li>
 </ol>
 <p>이를 위해서는 이벤트 스트림 데이터를 좌표계에 따라 정렬하고, 이를 로봇이 현재 위치한 공간의 일부분으로 통합해야 한다. 지도 생성 과정에서 발생하는 좌표 변환을 수식으로 표현하면 다음과 같다:</p>
-<p>$$
-   \mathbf{T}<em>{wc} = \mathbf{T}</em>{wr} \mathbf{T}_{rc}</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+   \mathbf{T}_{wc} = \mathbf{T}_{wr} \mathbf{T}_{rc}
+</div>
+<script type="math/tex; mode=display">
+   \mathbf{T}_{wc} = \mathbf{T}_{wr} \mathbf{T}_{rc}
+</script>
+</div>
 <p>여기서:
    - <span class="arithmatex"><span class="MathJax_Preview">\mathbf{T}_{wc}</span><script type="math/tex">\mathbf{T}_{wc}</script></span>는 월드 좌표계에서 카메라 좌표계로의 변환 행렬,
    - <span class="arithmatex"><span class="MathJax_Preview">\mathbf{T}_{wr}</span><script type="math/tex">\mathbf{T}_{wr}</script></span>는 월드 좌표계에서 로봇 좌표계로의 변환 행렬,
@@ -118,9 +123,14 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
    로봇은 이벤트 카메라를 이용해 움직이는 객체를 빠르게 탐지하고 추적할 수 있다. 특히, 빠르게 움직이는 물체나 순간적인 움직임을 실시간으로 탐지하는 데 유리한다. 이벤트 카메라의 데이터는 프레임 기반 카메라의 느린 프레임 속도에 의한 모션 블러 없이 물체의 움직임을 정확하게 캡처한다.</li>
 </ol>
 <p>이벤트 기반 객체 추적은 물체의 경계에서 발생하는 이벤트를 분석하여 실시간으로 물체의 움직임을 추정하는 방식으로 이루어진다. 이를 수식으로 나타내면, 객체의 위치 변화량 <span class="arithmatex"><span class="MathJax_Preview">\Delta \mathbf{p}</span><script type="math/tex">\Delta \mathbf{p}</script></span>는 다음과 같이 구할 수 있다:</p>
-<p>$$
-   \Delta \mathbf{p} = \mathbf{v}_{obj} \cdot \Delta t</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+   \Delta \mathbf{p} = \mathbf{v}_{obj} \cdot \Delta t
+</div>
+<script type="math/tex; mode=display">
+   \Delta \mathbf{p} = \mathbf{v}_{obj} \cdot \Delta t
+</script>
+</div>
 <p>여기서:
    - <span class="arithmatex"><span class="MathJax_Preview">\mathbf{v}_{obj}</span><script type="math/tex">\mathbf{v}_{obj}</script></span>는 객체의 속도 벡터,
    - <span class="arithmatex"><span class="MathJax_Preview">\Delta t</span><script type="math/tex">\Delta t</script></span>는 시간 차이이다.</p>

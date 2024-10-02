@@ -158,18 +158,28 @@ MSE = \frac{1}{n} \sum_{i=1}^{n} \|\mathbf{p}_{\text{실제}}^{(i)} - \mathbf{p}
 <li><strong>카메라의 비선형 왜곡</strong>: 실제 카메라는 이상적인 핀홀 모델과는 다르게 비선형 왜곡을 갖는다. 특히, 렌즈의 비대칭적 구조로 인해 발생하는 왜곡을 완벽히 보정하지 못하면 캘리브레이션 오류가 증가할 수 있다. Radial 왜곡과 Tangential 왜곡 모두 이에 해당한다.</li>
 </ol>
 <p>Radial 왜곡은 방사형으로 발생하며, 거리의 제곱에 비례하는 형태로 나타난다. 수학적으로 표현하면:</p>
-<p>$$
-   \mathbf{p}<em>{\text{왜곡}} = \mathbf{p}</em>{\text{비왜곡}} (1 + k_1 r^2 + k_2 r^4 + k_3 r^6)</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+   \mathbf{p}_{\text{왜곡}} = \mathbf{p}_{\text{비왜곡}} (1 + k_1 r^2 + k_2 r^4 + k_3 r^6)
+</div>
+<script type="math/tex; mode=display">
+   \mathbf{p}_{\text{왜곡}} = \mathbf{p}_{\text{비왜곡}} (1 + k_1 r^2 + k_2 r^4 + k_3 r^6)
+</script>
+</div>
 <p>여기서<br />
    - <span class="arithmatex"><span class="MathJax_Preview">\mathbf{p}_{\text{왜곡}}</span><script type="math/tex">\mathbf{p}_{\text{왜곡}}</script></span>는 왜곡된 이미지 좌표,<br />
    - <span class="arithmatex"><span class="MathJax_Preview">\mathbf{p}_{\text{비왜곡}}</span><script type="math/tex">\mathbf{p}_{\text{비왜곡}}</script></span>는 보정된 이미지 좌표,<br />
    - <span class="arithmatex"><span class="MathJax_Preview">k_1, k_2, k_3</span><script type="math/tex">k_1, k_2, k_3</script></span>는 Radial 왜곡 계수,<br />
    - <span class="arithmatex"><span class="MathJax_Preview">r</span><script type="math/tex">r</script></span>은 중심에서의 거리이다.</p>
 <p>Tangential 왜곡은 렌즈가 카메라의 평면에 정확히 맞지 않을 때 발생하며, 이는 다음과 같이 표현된다:</p>
-<p>$$
-   \mathbf{p}<em>{\text{왜곡}} = \mathbf{p}</em>{\text{비왜곡}} + [2p_1 xy + p_2(r^2 + 2x^2), p_1(r^2 + 2y^2) + 2p_2 xy]</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+   \mathbf{p}_{\text{왜곡}} = \mathbf{p}_{\text{비왜곡}} + [2p_1 xy + p_2(r^2 + 2x^2), p_1(r^2 + 2y^2) + 2p_2 xy]
+</div>
+<script type="math/tex; mode=display">
+   \mathbf{p}_{\text{왜곡}} = \mathbf{p}_{\text{비왜곡}} + [2p_1 xy + p_2(r^2 + 2x^2), p_1(r^2 + 2y^2) + 2p_2 xy]
+</script>
+</div>
 <p>여기서<br />
    - <span class="arithmatex"><span class="MathJax_Preview">p_1, p_2</span><script type="math/tex">p_1, p_2</script></span>는 Tangential 왜곡 계수,<br />
    - <span class="arithmatex"><span class="MathJax_Preview">x, y</span><script type="math/tex">x, y</script></span>는 비왜곡 이미지 좌표의 성분이다.</p>
@@ -187,9 +197,14 @@ MSE = \frac{1}{n} \sum_{i=1}^{n} \|\mathbf{p}_{\text{실제}}^{(i)} - \mathbf{p}
 <li><strong>스테레오 카메라 시스템</strong>: 스테레오 비전에서 중요한 것은 두 카메라 간의 상대적인 위치와 방향이다. 스테레오 시스템에서 캘리브레이션 오류는 깊이 추정에 큰 영향을 미치며, 두 카메라의 외부 파라미터가 정확히 추정되지 않으면 깊이 값이 부정확해진다.</li>
 </ol>
 <p>스테레오 캘리브레이션의 주요 목표는 두 카메라 사이의 변환 행렬 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{T}</span><script type="math/tex">\mathbf{T}</script></span>를 추정하는 것이다. 이는 회전 행렬 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{R}</span><script type="math/tex">\mathbf{R}</script></span>과 변환 벡터 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{t}</span><script type="math/tex">\mathbf{t}</script></span>로 나뉘며, 두 카메라 간의 관계는 다음과 같이 표현된다:</p>
-<p>$$
-   \mathbf{T} = \begin{bmatrix} \mathbf{R} &amp; \mathbf{t} \ 0 &amp; 1 \end{bmatrix}</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+   \mathbf{T} = \begin{bmatrix} \mathbf{R} &amp; \mathbf{t} \\ 0 &amp; 1 \end{bmatrix}
+</div>
+<script type="math/tex; mode=display">
+   \mathbf{T} = \begin{bmatrix} \mathbf{R} & \mathbf{t} \\ 0 & 1 \end{bmatrix}
+</script>
+</div>
 <p>여기서<br />
    - <span class="arithmatex"><span class="MathJax_Preview">\mathbf{R}</span><script type="math/tex">\mathbf{R}</script></span>은 두 카메라 간의 회전 행렬,<br />
    - <span class="arithmatex"><span class="MathJax_Preview">\mathbf{t}</span><script type="math/tex">\mathbf{t}</script></span>는 두 카메라 간의 변환 벡터이다.</p>

@@ -111,28 +111,47 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
     <p>대칭 행렬(symmetrical matrix)은 특수한 형태의 행렬로, 이 행렬은 주대각선을 기준으로 좌우가 대칭인 성질을 가진다. 대칭 행렬의 특성과 그 응용에 대해 알아보겠다. </p>
 <h3 id="_1">대칭 행렬의 정의</h3>
 <p>대칭 행렬 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{A}</span><script type="math/tex">\mathbf{A}</script></span>는 행렬의 전치 행렬(transpose matrix)과 원래의 행렬이 같을 때를 말한다. 즉, 대칭 행렬 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{A}</span><script type="math/tex">\mathbf{A}</script></span>는 다음과 같은 조건을 만족한다:</p>
-<p>$$</p>
-<p>\mathbf{A} = \mathbf{A}^T</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+\mathbf{A} = \mathbf{A}^T
+</div>
+<script type="math/tex; mode=display">
+\mathbf{A} = \mathbf{A}^T
+</script>
+</div>
 <p>여기서 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{A}^T</span><script type="math/tex">\mathbf{A}^T</script></span>는 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{A}</span><script type="math/tex">\mathbf{A}</script></span>의 전치 행렬(transpose matrix)을 의미한다.</p>
 <h3 id="_2">특성</h3>
 <p>대칭 행렬은 여러 가지 중요한 특성을 가지고 있다.</p>
 <h4 id="1">1. 주대각선 성분은 실수</h4>
 <p>대칭 행렬 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{A}</span><script type="math/tex">\mathbf{A}</script></span>의 주대각선 성분들은 반드시 실수이다. 이 특성은 다음과 같이 증명할 수 있다.</p>
 <p>대칭 행렬 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{A}</span><script type="math/tex">\mathbf{A}</script></span>에서 임의의 주대각선 성분 <span class="arithmatex"><span class="MathJax_Preview">a_{ii}</span><script type="math/tex">a_{ii}</script></span>를 고려하자. 정의에 따라, </p>
-<p>$$</p>
-<p>a_{ii} = a_{ii}</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+a_{ii} = a_{ii}
+</div>
+<script type="math/tex; mode=display">
+a_{ii} = a_{ii}
+</script>
+</div>
 <p>이는 자명하게 실수이다.</p>
 <h3 id="2">2. 대칭 성분</h3>
 <p>대칭 행렬은 <span class="arithmatex"><span class="MathJax_Preview">a_{ij} = a_{ji}</span><script type="math/tex">a_{ij} = a_{ji}</script></span>를 성립한다. 즉, </p>
-<p>$$</p>
-<p>\mathbf{A} = \begin{pmatrix}
-a_{11} &amp; a_{12} &amp; a_{13} \
-a_{12} &amp; a_{22} &amp; a_{23} \
+<div class="arithmatex">
+<div class="MathJax_Preview">
+\mathbf{A} = \begin{pmatrix}
+a_{11} &amp; a_{12} &amp; a_{13} \\
+a_{12} &amp; a_{22} &amp; a_{23} \\
 a_{13} &amp; a_{23} &amp; a_{33}
-\end{pmatrix}</p>
-<p>$$</p>
+\end{pmatrix}
+</div>
+<script type="math/tex; mode=display">
+\mathbf{A} = \begin{pmatrix}
+a_{11} & a_{12} & a_{13} \\
+a_{12} & a_{22} & a_{23} \\
+a_{13} & a_{23} & a_{33}
+\end{pmatrix}
+</script>
+</div>
 <p>위와 같은 행렬에서 우리는 <span class="arithmatex"><span class="MathJax_Preview">a_{12} = a_{21}</span><script type="math/tex">a_{12} = a_{21}</script></span>, <span class="arithmatex"><span class="MathJax_Preview">a_{13} = a_{31}</span><script type="math/tex">a_{13} = a_{31}</script></span>, <span class="arithmatex"><span class="MathJax_Preview">a_{23} = a_{32}</span><script type="math/tex">a_{23} = a_{32}</script></span>임을 알 수 있다. </p>
 <h3 id="3">3. 고유값과 고유벡터</h3>
 <p>대칭 행렬 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{A}</span><script type="math/tex">\mathbf{A}</script></span>는 다음과 같은 고유값 및 고유벡터의 성질을 가지고 있다.</p>
@@ -141,41 +160,71 @@ a_{13} &amp; a_{23} &amp; a_{33}
 <h4 id="_4">직교 고유벡터</h4>
 <p>대칭 행렬의 고유벡터는 서로 직교하며, 이는 대칭 행렬이 대각화 가능하다는 의미이다.<br />
 즉, </p>
-<p>$$</p>
-<p>\mathbf{A} = \mathbf{Q} \mathbf{\Lambda} \mathbf{Q}^T</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+\mathbf{A} = \mathbf{Q} \mathbf{\Lambda} \mathbf{Q}^T
+</div>
+<script type="math/tex; mode=display">
+\mathbf{A} = \mathbf{Q} \mathbf{\Lambda} \mathbf{Q}^T
+</script>
+</div>
 <p>여기서 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{\Lambda}</span><script type="math/tex">\mathbf{\Lambda}</script></span>는 대각 행렬이고 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{Q}</span><script type="math/tex">\mathbf{Q}</script></span>는 직교 행렬이다.</p>
 <h4 id="_5">고유값 분해</h4>
 <p>대칭 행렬은 항상 고유값 분해할 수 있으며, 그 결과는 다음과 같다.</p>
-<p>$$</p>
-<p>\mathbf{A} = \mathbf{Q} \mathbf{\Lambda} \mathbf{Q}^T</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+\mathbf{A} = \mathbf{Q} \mathbf{\Lambda} \mathbf{Q}^T
+</div>
+<script type="math/tex; mode=display">
+\mathbf{A} = \mathbf{Q} \mathbf{\Lambda} \mathbf{Q}^T
+</script>
+</div>
 <p>여기서 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{Q}</span><script type="math/tex">\mathbf{Q}</script></span>는 고유벡터로 구성된 직교 행렬이고, <span class="arithmatex"><span class="MathJax_Preview">\mathbf{\Lambda}</span><script type="math/tex">\mathbf{\Lambda}</script></span>는 대각 행렬로 구성된 고유값들을 나타낸다.</p>
 <h3 id="4">4. 행렬식과 고유값의 관계</h3>
 <p>대칭 행렬 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{A}</span><script type="math/tex">\mathbf{A}</script></span>의 행렬식은 고유값들의 곱으로 표현된다.</p>
-<p>$$</p>
-<p>det(\mathbf{A}) = \lambda_1 \lambda_2 \cdots \lambda_n</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+det(\mathbf{A}) = \lambda_1 \lambda_2 \cdots \lambda_n
+</div>
+<script type="math/tex; mode=display">
+det(\mathbf{A}) = \lambda_1 \lambda_2 \cdots \lambda_n
+</script>
+</div>
 <p>여기서 <span class="arithmatex"><span class="MathJax_Preview">\lambda_i</span><script type="math/tex">\lambda_i</script></span>는 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{A}</span><script type="math/tex">\mathbf{A}</script></span>의 고유값이다. </p>
 <h3 id="5">5. 역행렬</h3>
 <p>대칭 행렬의 역행렬도 대칭 행렬이다. 즉,<br />
 대칭 행렬 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{A}</span><script type="math/tex">\mathbf{A}</script></span>의 역행렬 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{A}^{-1}</span><script type="math/tex">\mathbf{A}^{-1}</script></span> 또한 대칭 행렬임을 증명할 수 있다.</p>
-<p>$$</p>
-<p>(\mathbf{A}^{-1})^T = (\mathbf{A}^T)^{-1} = (\mathbf{A})^{-1}</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+(\mathbf{A}^{-1})^T = (\mathbf{A}^T)^{-1} = (\mathbf{A})^{-1}
+</div>
+<script type="math/tex; mode=display">
+(\mathbf{A}^{-1})^T = (\mathbf{A}^T)^{-1} = (\mathbf{A})^{-1}
+</script>
+</div>
 <p>따라서, <span class="arithmatex"><span class="MathJax_Preview">\mathbf{A}^{-1}</span><script type="math/tex">\mathbf{A}^{-1}</script></span> 역시 대칭이다.</p>
 <h3 id="6">6. 합과 곱</h3>
 <p>대칭 행렬은 다음과 같은 연산적 특성을 가진다.</p>
 <h4 id="_6">합</h4>
 <p>두 대칭 행렬 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{A}</span><script type="math/tex">\mathbf{A}</script></span>와 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{B}</span><script type="math/tex">\mathbf{B}</script></span>의 합 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{C} = \mathbf{A} + \mathbf{B}</span><script type="math/tex">\mathbf{C} = \mathbf{A} + \mathbf{B}</script></span>도 대칭 행렬이다.</p>
-<p>$$</p>
-<p>(\mathbf{A} + \mathbf{B})^T = \mathbf{A}^T + \mathbf{B}^T = \mathbf{A} + \mathbf{B}</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+(\mathbf{A} + \mathbf{B})^T = \mathbf{A}^T + \mathbf{B}^T = \mathbf{A} + \mathbf{B}
+</div>
+<script type="math/tex; mode=display">
+(\mathbf{A} + \mathbf{B})^T = \mathbf{A}^T + \mathbf{B}^T = \mathbf{A} + \mathbf{B}
+</script>
+</div>
 <h4 id="_7">곱</h4>
 <p>두 대칭 행렬의 곱 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{AB}</span><script type="math/tex">\mathbf{AB}</script></span>는 일반적으로 대칭 행렬이 아니다. 즉,</p>
-<p>$$</p>
-<p>(\mathbf{AB})^T = \mathbf{B}^T \mathbf{A}^T = \mathbf{B} \mathbf{A} </p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+(\mathbf{AB})^T = \mathbf{B}^T \mathbf{A}^T = \mathbf{B} \mathbf{A} 
+</div>
+<script type="math/tex; mode=display">
+(\mathbf{AB})^T = \mathbf{B}^T \mathbf{A}^T = \mathbf{B} \mathbf{A} 
+</script>
+</div>
 <p>일반적으로 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{AB} \neq \mathbf{BA}</span><script type="math/tex">\mathbf{AB} \neq \mathbf{BA}</script></span> 이므로 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{AB} \neq (\mathbf{AB})^T</span><script type="math/tex">\mathbf{AB} \neq (\mathbf{AB})^T</script></span> 아니다. </p>
 <p>그러나 대칭 행렬과 직교 행렬 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{Q}</span><script type="math/tex">\mathbf{Q}</script></span>의 곱 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{A}\mathbf{Q}</span><script type="math/tex">\mathbf{A}\mathbf{Q}</script></span>는 대칭 행렬이다.</p>
 <h3 id="7">7. 응용</h3>

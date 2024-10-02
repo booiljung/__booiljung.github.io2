@@ -145,9 +145,14 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 <li><strong>AABB 계산</strong>: 메쉬 모델의 최소-최대 좌표를 기준으로 축 정렬 경계 상자를 계산한다.</li>
 </ol>
 <p>AABB는 각 축에서의 최소 좌표와 최대 좌표로 정의된다:</p>
-<p>$$
-   AABB_{min} = \min(\mathbf{v}<em>1, \mathbf{v}_2, ..., \mathbf{v}_n), \quad AABB</em>{max} = \max(\mathbf{v}_1, \mathbf{v}_2, ..., \mathbf{v}_n)</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+   AABB_{min} = \min(\mathbf{v}_1, \mathbf{v}_2, ..., \mathbf{v}_n), \quad AABB_{max} = \max(\mathbf{v}_1, \mathbf{v}_2, ..., \mathbf{v}_n)
+</div>
+<script type="math/tex; mode=display">
+   AABB_{min} = \min(\mathbf{v}_1, \mathbf{v}_2, ..., \mathbf{v}_n), \quad AABB_{max} = \max(\mathbf{v}_1, \mathbf{v}_2, ..., \mathbf{v}_n)
+</script>
+</div>
 <p>여기서:
    - <span class="arithmatex"><span class="MathJax_Preview">\mathbf{v}_i</span><script type="math/tex">\mathbf{v}_i</script></span>는 메쉬의 꼭짓점 좌표</p>
 <ol>

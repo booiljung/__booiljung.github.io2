@@ -88,9 +88,14 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 <h3 id="_1">인공 변수와 목적 함수의 수정</h3>
 <p>먼저, 허용 가능한 기본 해를 찾기 위해 인공 변수를 도입한다. 이러한 인공 변수는 문제의 제약식이 항상 성립하도록 보장한다. 즉, 제약식이 등식 형태로 변환될 때, 잉여 변수(surplus variable)만으로는 허용 가능한 해를 찾을 수 없는 경우에 인공 변수를 추가한다.</p>
 <p>이때 수정된 목적 함수는 다음과 같은 형태를 갖는다:</p>
-<p>$$</p>
-<p>\text{최대화} \quad z = c_1 x_1 + c_2 x_2 + \cdots + c_n x_n - M(A_1 + A_2 + \cdots + A_m)</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+\text{최대화} \quad z = c_1 x_1 + c_2 x_2 + \cdots + c_n x_n - M(A_1 + A_2 + \cdots + A_m)
+</div>
+<script type="math/tex; mode=display">
+\text{최대화} \quad z = c_1 x_1 + c_2 x_2 + \cdots + c_n x_n - M(A_1 + A_2 + \cdots + A_m)
+</script>
+</div>
 <p>여기서:
 - <span class="arithmatex"><span class="MathJax_Preview">c_1, c_2, \dots, c_n</span><script type="math/tex">c_1, c_2, \dots, c_n</script></span>: 원래 목적 함수의 계수들
 - <span class="arithmatex"><span class="MathJax_Preview">A_1, A_2, \dots, A_m</span><script type="math/tex">A_1, A_2, \dots, A_m</script></span>: 인공 변수들
@@ -169,9 +174,14 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 - <span class="arithmatex"><span class="MathJax_Preview">b_1, b_2, \dots, b_m</span><script type="math/tex">b_1, b_2, \dots, b_m</script></span>: 우변 상수들</p>
 <h3 id="_2">목적 함수의 초기 형태</h3>
 <p>인공 변수를 포함한 문제에서 초기 목적 함수는 다음과 같이 수정된다:</p>
-<p>$$</p>
-<p>\mathbf{z} = \mathbf{c}^{T} \mathbf{x} - M (\mathbf{A}^{T} \mathbf{a})</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+\mathbf{z} = \mathbf{c}^{T} \mathbf{x} - M (\mathbf{A}^{T} \mathbf{a})
+</div>
+<script type="math/tex; mode=display">
+\mathbf{z} = \mathbf{c}^{T} \mathbf{x} - M (\mathbf{A}^{T} \mathbf{a})
+</script>
+</div>
 <p>여기서:
 - <span class="arithmatex"><span class="MathJax_Preview">\mathbf{c}</span><script type="math/tex">\mathbf{c}</script></span>: 원래 목적 함수의 계수 벡터
 - <span class="arithmatex"><span class="MathJax_Preview">\mathbf{x}</span><script type="math/tex">\mathbf{x}</script></span>: 결정 변수 벡터
@@ -289,9 +299,14 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 <p>따라서 각 반복 단계에서 인공 변수의 값을 가능한 한 빨리 0으로 만들기 위해 피봇을 선택하고 단체법 표를 수정한다. 피봇 선택 시, 인공 변수의 열에서 가능한 피봇 요소를 선택하여 해당 행의 기본 변수를 인공 변수 대신 결정 변수로 바꾸게 된다.</p>
 <h3 id="_6">목적 함수의 갱신</h3>
 <p>각 단계에서 목적 함수는 피봇 선택에 따라 계속 갱신된다. 갱신된 목적 함수는 다음과 같이 표현된다:</p>
-<p>$$</p>
-<p>\mathbf{z} = \mathbf{c}^{T} \mathbf{x} - M (\mathbf{A}^{T} \mathbf{a})</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+\mathbf{z} = \mathbf{c}^{T} \mathbf{x} - M (\mathbf{A}^{T} \mathbf{a})
+</div>
+<script type="math/tex; mode=display">
+\mathbf{z} = \mathbf{c}^{T} \mathbf{x} - M (\mathbf{A}^{T} \mathbf{a})
+</script>
+</div>
 <p>여기서:
 - <span class="arithmatex"><span class="MathJax_Preview">\mathbf{c}^{T} \mathbf{x}</span><script type="math/tex">\mathbf{c}^{T} \mathbf{x}</script></span>: 원래 결정 변수들로 이루어진 부분
 - <span class="arithmatex"><span class="MathJax_Preview">M (\mathbf{A}^{T} \mathbf{a})</span><script type="math/tex">M (\mathbf{A}^{T} \mathbf{a})</script></span>: 인공 변수들을 포함하는 항목으로, 이 부분을 0으로 만드는 것이 목표이다.</p>

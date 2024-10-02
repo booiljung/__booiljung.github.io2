@@ -239,9 +239,14 @@ F_{\text{collision}} = \mathbf{n} \cdot \Delta v
 <h2 id="_2">링크의 관성 텐서 변환</h2>
 <p>링크의 관성 텐서는 링크의 질량이 어떻게 분포되어 있는지 나타내며, 링크의 관성 중심에 대해 계산된다. 만약 링크의 관성 텐서가 링크의 원점을 기준으로 제공되는 경우, 이를 관성 중심으로 변환해야 한다. 이때 사용되는 변환 공식을 <strong>파라렐 축 정리</strong>(Parallel Axis Theorem)라고 하며, URDF에서 정의된 링크의 원점과 질량 중심 사이의 거리에 따라 관성 텐서가 변환된다.</p>
 <p>관성 텐서 변환은 다음과 같은 수식으로 표현된다:</p>
-<p>$$</p>
-<p>\mathbf{I}<em>{\text{com}} = \mathbf{I}</em>{\text{link}} - m \mathbf{d}^T \mathbf{d} \mathbf{I}_{3x3}</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+\mathbf{I}_{\text{com}} = \mathbf{I}_{\text{link}} - m \mathbf{d}^T \mathbf{d} \mathbf{I}_{3x3}
+</div>
+<script type="math/tex; mode=display">
+\mathbf{I}_{\text{com}} = \mathbf{I}_{\text{link}} - m \mathbf{d}^T \mathbf{d} \mathbf{I}_{3x3}
+</script>
+</div>
 <p>여기서
 - <span class="arithmatex"><span class="MathJax_Preview">\mathbf{I}_{\text{com}}</span><script type="math/tex">\mathbf{I}_{\text{com}}</script></span>는 질량 중심을 기준으로 한 관성 텐서,
 - <span class="arithmatex"><span class="MathJax_Preview">\mathbf{I}_{\text{link}}</span><script type="math/tex">\mathbf{I}_{\text{link}}</script></span>는 링크 원점을 기준으로 한 관성 텐서,
@@ -252,9 +257,14 @@ F_{\text{collision}} = \mathbf{n} \cdot \Delta v
 <h2 id="_3">조인트의 마찰력</h2>
 <p>조인트의 마찰력은 로봇이 회전하거나 이동할 때, 조인트에서 발생하는 저항을 나타낸다. URDF에서는 마찰력을 정의하여 조인트가 움직임을 시작하거나 유지하는 데 필요한 힘을 제어할 수 있다. 특히, 마찰은 조인트의 움직임을 제어하고 로봇이 정지할 때 안정성을 제공한다.</p>
 <p>조인트의 마찰력은 조인트의 회전 속도와 비례하는 저항력을 제공한다. 이를 수식으로 나타내면 다음과 같다:</p>
-<p>$$</p>
-<p>\tau_{\text{friction}} = \mu \cdot \mathbf{v}_{\text{joint}}</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+\tau_{\text{friction}} = \mu \cdot \mathbf{v}_{\text{joint}}
+</div>
+<script type="math/tex; mode=display">
+\tau_{\text{friction}} = \mu \cdot \mathbf{v}_{\text{joint}}
+</script>
+</div>
 <p>여기서
 - <span class="arithmatex"><span class="MathJax_Preview">\tau_{\text{friction}}</span><script type="math/tex">\tau_{\text{friction}}</script></span>는 마찰 토크,
 - <span class="arithmatex"><span class="MathJax_Preview">\mu</span><script type="math/tex">\mu</script></span>는 마찰 계수,
@@ -263,9 +273,14 @@ F_{\text{collision}} = \mathbf{n} \cdot \Delta v
 <h2 id="_4">링크와 조인트의 마찰 토크와 정지 마찰</h2>
 <p>조인트에서 마찰 토크는 로봇이 특정 속도에서 움직일 때 작용하는 저항력으로, 링크와 링크 간의 회전이나 움직임을 제어한다. 정지 마찰은 로봇이 멈추었을 때 다시 움직이기 위해 필요한 최소한의 힘을 의미한다. URDF에서 이를 정의할 때 마찰 토크와 정지 마찰 계수를 고려하여 설정할 수 있다.</p>
 <p>정지 마찰의 수식은 다음과 같다:</p>
-<p>$$</p>
-<p>F_{\text{static}} = \mu_s \cdot N</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+F_{\text{static}} = \mu_s \cdot N
+</div>
+<script type="math/tex; mode=display">
+F_{\text{static}} = \mu_s \cdot N
+</script>
+</div>
 <p>여기서
 - <span class="arithmatex"><span class="MathJax_Preview">F_{\text{static}}</span><script type="math/tex">F_{\text{static}}</script></span>는 정지 마찰력,
 - <span class="arithmatex"><span class="MathJax_Preview">\mu_s</span><script type="math/tex">\mu_s</script></span>는 정지 마찰 계수,
@@ -273,9 +288,14 @@ F_{\text{collision}} = \mathbf{n} \cdot \Delta v
 <p>로봇이 멈추거나 출발할 때의 안정성을 제공하며, 이를 통해 로봇의 시작과 정지가 더욱 매끄럽게 이루어질 수 있다.</p>
 <h2 id="_5">링크의 관성 모멘트와 회전 동역학</h2>
 <p>링크의 회전 동역학은 링크가 회전할 때 발생하는 운동량을 설명한다. 관성 모멘트는 링크가 특정 축을 기준으로 회전할 때 저항하는 정도를 나타내며, 다음과 같은 수식을 통해 계산된다:</p>
-<p>$$</p>
-<p>\tau = \mathbf{I} \cdot \boldsymbol{\alpha}</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+\tau = \mathbf{I} \cdot \boldsymbol{\alpha}
+</div>
+<script type="math/tex; mode=display">
+\tau = \mathbf{I} \cdot \boldsymbol{\alpha}
+</script>
+</div>
 <p>여기서
 - <span class="arithmatex"><span class="MathJax_Preview">\tau</span><script type="math/tex">\tau</script></span>는 회전 토크,
 - <span class="arithmatex"><span class="MathJax_Preview">\mathbf{I}</span><script type="math/tex">\mathbf{I}</script></span>는 관성 모멘트,

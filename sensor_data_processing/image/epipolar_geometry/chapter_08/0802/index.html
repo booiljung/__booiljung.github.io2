@@ -123,13 +123,22 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 <li><strong>내부 파라미터 변환:</strong>
    내부 파라미터 행렬 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{K}</span><script type="math/tex">\mathbf{K}</script></span>는 다음과 같이 정의된다:</li>
 </ol>
-<p>$$
+<div class="arithmatex">
+<div class="MathJax_Preview">
    \mathbf{K} = \begin{bmatrix}
-   f_x &amp; 0 &amp; c_x \
-   0 &amp; f_y &amp; c_y \
+   f_x &amp; 0 &amp; c_x \\
+   0 &amp; f_y &amp; c_y \\
    0 &amp; 0 &amp; 1
-   \end{bmatrix}</p>
-<p>$$</p>
+   \end{bmatrix}
+</div>
+<script type="math/tex; mode=display">
+   \mathbf{K} = \begin{bmatrix}
+   f_x & 0 & c_x \\
+   0 & f_y & c_y \\
+   0 & 0 & 1
+   \end{bmatrix}
+</script>
+</div>
 <p>여기서:
    - <span class="arithmatex"><span class="MathJax_Preview">f_x, f_y</span><script type="math/tex">f_x, f_y</script></span>는 카메라의 초점 거리와 관련된 스케일링 팩터이다.
    - <span class="arithmatex"><span class="MathJax_Preview">c_x, c_y</span><script type="math/tex">c_x, c_y</script></span>는 이미지 센서의 중심 좌표를 나타낸다.</p>
@@ -137,9 +146,14 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 <li><strong>외부 파라미터 변환:</strong>
    외부 파라미터는 카메라 좌표계와 월드 좌표계 간의 회전 및 이동을 나타내며, 다음과 같은 형태로 표현된다:</li>
 </ol>
-<p>$$
-   \mathbf{P} = \begin{bmatrix} \mathbf{R} &amp; \mathbf{t} \end{bmatrix}</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+   \mathbf{P} = \begin{bmatrix} \mathbf{R} &amp; \mathbf{t} \end{bmatrix}
+</div>
+<script type="math/tex; mode=display">
+   \mathbf{P} = \begin{bmatrix} \mathbf{R} & \mathbf{t} \end{bmatrix}
+</script>
+</div>
 <ul>
 <li><span class="arithmatex"><span class="MathJax_Preview">\mathbf{R}</span><script type="math/tex">\mathbf{R}</script></span>은 <span class="arithmatex"><span class="MathJax_Preview">3 \times 3</span><script type="math/tex">3 \times 3</script></span> 회전 행렬로, 카메라의 방향을 나타낸다.</li>
 <li><span class="arithmatex"><span class="MathJax_Preview">\mathbf{t}</span><script type="math/tex">\mathbf{t}</script></span>는 카메라의 위치를 나타내는 <span class="arithmatex"><span class="MathJax_Preview">3 \times 1</span><script type="math/tex">3 \times 1</script></span> 이동 벡터이다.</li>

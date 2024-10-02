@@ -103,41 +103,77 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 <ol>
 <li><strong>평행 이동 (Translation)</strong>: 객체를 어느 방향으로 이동시키는 변환이다. 이는 보통 벡터 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{t}</span><script type="math/tex">\mathbf{t}</script></span>를 사용하여 표현된다.</li>
 </ol>
-<p>$$
-   \mathbf{x}' = \mathbf{x} + \mathbf{t}</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+   \mathbf{x}' = \mathbf{x} + \mathbf{t}
+</div>
+<script type="math/tex; mode=display">
+   \mathbf{x}' = \mathbf{x} + \mathbf{t}
+</script>
+</div>
 <ol>
 <li><strong>회전 (Rotation)</strong>: 객체를 특정 각도로 회전시키는 변환이다. 2D 회전의 경우, <span class="arithmatex"><span class="MathJax_Preview">\theta</span><script type="math/tex">\theta</script></span> 만큼 회전시키는 변환 행렬은 다음과 같다.</li>
 </ol>
-<p>$$
+<div class="arithmatex">
+<div class="MathJax_Preview">
    \mathbf{R}_{\theta} = \begin{bmatrix}
-   \cos\theta &amp; -\sin\theta \
+   \cos\theta &amp; -\sin\theta \\
    \sin\theta &amp; \cos\theta 
-   \end{bmatrix}</p>
-<p>$$</p>
+   \end{bmatrix}
+</div>
+<script type="math/tex; mode=display">
+   \mathbf{R}_{\theta} = \begin{bmatrix}
+   \cos\theta & -\sin\theta \\
+   \sin\theta & \cos\theta 
+   \end{bmatrix}
+</script>
+</div>
 <p>그래서 변환된 점 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{x}'</span><script type="math/tex">\mathbf{x}'</script></span>는 다음과 같다.</p>
-<p>$$
-   \mathbf{x}' = \mathbf{R}_{\theta} \mathbf{x}</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+   \mathbf{x}' = \mathbf{R}_{\theta} \mathbf{x}
+</div>
+<script type="math/tex; mode=display">
+   \mathbf{x}' = \mathbf{R}_{\theta} \mathbf{x}
+</script>
+</div>
 <ol>
 <li><strong>스케일링 (Scaling)</strong>: 객체의 크기를 변경하는 변환이다. 이는 스케일 팩터 <span class="arithmatex"><span class="MathJax_Preview">s</span><script type="math/tex">s</script></span>를 사용하여 표현된다.</li>
 </ol>
-<p>$$
-   \mathbf{x}' = s \mathbf{x}</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+   \mathbf{x}' = s \mathbf{x}
+</div>
+<script type="math/tex; mode=display">
+   \mathbf{x}' = s \mathbf{x}
+</script>
+</div>
 <ol>
 <li><strong>반사 (Reflection)</strong>: 객체를 특정 축에 대해 대칭시키는 변환이다. 예를 들어, <span class="arithmatex"><span class="MathJax_Preview">x</span><script type="math/tex">x</script></span>-축에 대한 반사는 다음과 같이 표현된다.</li>
 </ol>
-<p>$$
+<div class="arithmatex">
+<div class="MathJax_Preview">
    \mathbf{R}_{x-\text{axis}} = \begin{bmatrix}
-   1 &amp; 0 \
+   1 &amp; 0 \\
    0 &amp; -1 
-   \end{bmatrix}</p>
-<p>$$</p>
+   \end{bmatrix}
+</div>
+<script type="math/tex; mode=display">
+   \mathbf{R}_{x-\text{axis}} = \begin{bmatrix}
+   1 & 0 \\
+   0 & -1 
+   \end{bmatrix}
+</script>
+</div>
 <p>그래서 변환된 점 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{x}'</span><script type="math/tex">\mathbf{x}'</script></span>는 다음과 같다.</p>
-<p>$$
-   \mathbf{x}' = \mathbf{R}_{x-\text{axis}} \mathbf{x}</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+   \mathbf{x}' = \mathbf{R}_{x-\text{axis}} \mathbf{x}
+</div>
+<script type="math/tex; mode=display">
+   \mathbf{x}' = \mathbf{R}_{x-\text{axis}} \mathbf{x}
+</script>
+</div>
 <h3 id="_2">좌표 변환 조합</h3>
 <p>좌표 변환은 행렬의 곱셈을 통해 쉽게 조합될 수 있다. 여러 변환을 연속적으로 적용하려면 변환 행렬을 곱한다.</p>
 <div class="arithmatex">
@@ -273,15 +309,25 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 <ol>
 <li>회전 후 평행 이동 (<span class="arithmatex"><span class="MathJax_Preview">\mathbf{T}_2 \mathbf{T}_1 \mathbf{x}</span><script type="math/tex">\mathbf{T}_2 \mathbf{T}_1 \mathbf{x}</script></span>):</li>
 </ol>
-<p>$$
-   \mathbf{x}' = \mathbf{T}<em>{\text{trans}} (\mathbf{R}</em>{\theta} \mathbf{x})</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+   \mathbf{x}' = \mathbf{T}_{\text{trans}} (\mathbf{R}_{\theta} \mathbf{x})
+</div>
+<script type="math/tex; mode=display">
+   \mathbf{x}' = \mathbf{T}_{\text{trans}} (\mathbf{R}_{\theta} \mathbf{x})
+</script>
+</div>
 <ol>
 <li>평행 이동 후 회전 (<span class="arithmatex"><span class="MathJax_Preview">\mathbf{T}_1 \mathbf{T}_2 \mathbf{x}</span><script type="math/tex">\mathbf{T}_1 \mathbf{T}_2 \mathbf{x}</script></span>):</li>
 </ol>
-<p>$$
-   \mathbf{x}' = \mathbf{R}<em>{\theta} (\mathbf{T}</em>{\text{trans}} \mathbf{x})</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+   \mathbf{x}' = \mathbf{R}_{\theta} (\mathbf{T}_{\text{trans}} \mathbf{x})
+</div>
+<script type="math/tex; mode=display">
+   \mathbf{x}' = \mathbf{R}_{\theta} (\mathbf{T}_{\text{trans}} \mathbf{x})
+</script>
+</div>
 <p>이 두 변환의 결과는 일반적으로 다르다. 따라서 변환을 조합할 때는 순서를 신중히 고려해야 한다.</p>
 <hr />
 <p>좌표 변환은 복잡해 보일 수 있지만, 행렬 곱셈을 통해 간단히 구현할 수 있다. 이 챕터에서 다룬 다양한 변환과 그 조합 방법을 이해함으로써, 여러분은 객체를 원하는 방식으로 이동시키고 조작할 수 있는 강력한 도구를 얻게 된다. 이를 통해 여러분의 프로젝트나 연구에서 더욱 효과적으로 문제를 해결할 수 있을 것이다.</p>

@@ -79,9 +79,14 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 <p>이벤트 카메라 기반 시스템에서 전송 및 통신은 매우 중요한 역할을 한다. 이벤트 카메라는 전통적인 프레임 기반 카메라와는 달리, 각 픽셀에서 변화가 발생할 때마다 개별 이벤트를 발생시키며, 이는 매우 높은 시간적 해상도를 제공하지만 동시에 대량의 이벤트 데이터를 생성할 수 있다. 이 데이터의 전송과 통신에서 중요한 몇 가지 고려사항들을 살펴보자.</p>
 <h3 id="_1">데이터 전송률과 대역폭</h3>
 <p>이벤트 카메라는 초당 수백만 개의 이벤트를 생성할 수 있기 때문에 데이터 전송률이 매우 높다. 전송률을 관리하기 위해서는 적절한 대역폭을 제공하는 통신 시스템이 필요하다. 데이터 전송률 <span class="arithmatex"><span class="MathJax_Preview">R</span><script type="math/tex">R</script></span>은 다음과 같이 계산할 수 있다.</p>
-<p>$$</p>
-<p>R = E \times S</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+R = E \times S
+</div>
+<script type="math/tex; mode=display">
+R = E \times S
+</script>
+</div>
 <p>여기서
 - <span class="arithmatex"><span class="MathJax_Preview">E</span><script type="math/tex">E</script></span>는 초당 이벤트 발생 수 (event rate)이며,
 - <span class="arithmatex"><span class="MathJax_Preview">S</span><script type="math/tex">S</script></span>는 이벤트 하나의 데이터 크기 (event size)이다.</p>

@@ -443,10 +443,14 @@ public void ReleaseResource(int robotID)
 <p><strong>충돌 방지 메커니즘</strong>: 로봇 간의 충돌을 예방하기 위해 경로 계획 시 충돌 회피 알고리즘을 적용한다. 예를 들어, <span class="arithmatex"><span class="MathJax_Preview">\mathbf{p}_i(t)</span><script type="math/tex">\mathbf{p}_i(t)</script></span>와 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{p}_j(t)</span><script type="math/tex">\mathbf{p}_j(t)</script></span>가 시간 <span class="arithmatex"><span class="MathJax_Preview">t</span><script type="math/tex">t</script></span>에서의 로봇 <span class="arithmatex"><span class="MathJax_Preview">i</span><script type="math/tex">i</script></span>와 <span class="arithmatex"><span class="MathJax_Preview">j</span><script type="math/tex">j</script></span>의 위치라면, 다음 조건을 만족해야 한다:</p>
 </li>
 </ol>
-<p>$$</p>
-<pre><code>\|\mathbf{p}_i(t) - \mathbf{p}_j(t)\| \geq d_{\text{min}}
-</code></pre>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+    \|\mathbf{p}_i(t) - \mathbf{p}_j(t)\| \geq d_{\text{min}}
+</div>
+<script type="math/tex; mode=display">
+    \|\mathbf{p}_i(t) - \mathbf{p}_j(t)\| \geq d_{\text{min}}
+</script>
+</div>
 <pre><code>여기서 $d_{\text{min}}$은 최소 안전 거리이다.
 
 ```csharp

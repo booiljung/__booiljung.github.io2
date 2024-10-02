@@ -133,28 +133,38 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 <p>Diffie-Hellman 키 교환 방식은 다음과 같이 수학적으로 정의된다:</p>
 </li>
 </ol>
-<p>$$
-    g^a \mod p \quad \text{(클라이언트 측)}</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+    g^a \mod p \quad \text{(클라이언트 측)}
+</div>
+<script type="math/tex; mode=display">
+    g^a \mod p \quad \text{(클라이언트 측)}
+</script>
+</div>
 <p>​  <br />
 $$
-    g^b \mod p \quad \text{(서버 측)}</p>
-<p>$$</p>
+    g^b \mod p \quad \text{(서버 측)}
+$$</p>
 <pre><code>여기서 $g$는 공개된 기본수(base), $p$는 소수(prime), $a$, $b$는 각각 클라이언트와 서버의 비밀 값이다. 클라이언트와 서버는 각각 $g^a$와 $g^b$ 값을 교환한 후, 최종적으로 공유된 비밀 키를 다음과 같이 계산한다:
 </code></pre>
 <p>​  <br />
 $$
-    \mathbf{K} = (g^b)^a \mod p = (g^a)^b \mod p</p>
-<p>$$</p>
+    \mathbf{K} = (g^b)^a \mod p = (g^a)^b \mod p
+$$</p>
 <ol>
 <li><strong>서버 인증</strong> (Server Authentication)<ul>
 <li>서버는 클라이언트에게 자신이 올바른 서버임을 증명해야 한다. 이 과정에서는 서버의 공개 키를 클라이언트가 확인하고, 클라이언트는 서버의 신뢰성을 판단한다. 공개 키는 보통 다음과 같이 표현된다:</li>
 </ul>
 </li>
 </ol>
-<p>$$
-    \mathbf{K_{\text{pub}}} = (g^a \mod p, g^b \mod p)</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+    \mathbf{K_{\text{pub}}} = (g^a \mod p, g^b \mod p)
+</div>
+<script type="math/tex; mode=display">
+    \mathbf{K_{\text{pub}}} = (g^a \mod p, g^b \mod p)
+</script>
+</div>
 <pre><code>클라이언트는 서버의 공개 키를 이용해 서명을 검증하며, 서명이 올바르지 않으면 연결을 종료한다.
 </code></pre>
 <h3 id="_2">사용자 인증</h3>
@@ -178,9 +188,14 @@ $$
 <li>서버는 클라이언트가 전송한 데이터를 클라이언트의 공개 키로 복호화하여 신뢰성을 확인한다.</li>
 </ol>
 <p>이 과정을 수식으로 표현하면, 클라이언트가 서버로부터 받은 데이터를 <span class="arithmatex"><span class="MathJax_Preview">D</span><script type="math/tex">D</script></span>라 할 때, 클라이언트는 다음과 같이 서명한다:</p>
-<p>$$
-   \text{Sign}(D, \mathbf{K_{\text{priv}}})</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+   \text{Sign}(D, \mathbf{K_{\text{priv}}})
+</div>
+<script type="math/tex; mode=display">
+   \text{Sign}(D, \mathbf{K_{\text{priv}}})
+</script>
+</div>
 <p>여기서 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{K_{\text{priv}}}</span><script type="math/tex">\mathbf{K_{\text{priv}}}</script></span>는 클라이언트의 개인 키이다. 서버는 클라이언트의 공개 키 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{K_{\text{pub}}}</span><script type="math/tex">\mathbf{K_{\text{pub}}}</script></span>를 사용하여 서명을 검증한다.</p>
 <ol>
 <li><strong>기타 인증 방법</strong></li>
@@ -199,18 +214,28 @@ $$
 <li>데이터는 클라이언트와 서버 사이에서 전송될 때, 선택된 대칭 키 암호화 알고리즘을 사용하여 암호화된다. 일반적으로 사용되는 알고리즘은 AES(Advanced Encryption Standard)이다. 데이터를 암호화하는 대칭 키는 이전에 설명한 Diffie-Hellman 키 교환을 통해 공유된 비밀 값 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{K}</span><script type="math/tex">\mathbf{K}</script></span>로부터 생성된다.</li>
 </ol>
 <p>예를 들어, AES 알고리즘을 사용한 암호화는 다음과 같이 표현된다:</p>
-<p>$$
-   \mathbf{C} = \text{AES}(\mathbf{P}, \mathbf{K})</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+   \mathbf{C} = \text{AES}(\mathbf{P}, \mathbf{K})
+</div>
+<script type="math/tex; mode=display">
+   \mathbf{C} = \text{AES}(\mathbf{P}, \mathbf{K})
+</script>
+</div>
 <p>여기서 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{C}</span><script type="math/tex">\mathbf{C}</script></span>는 암호화된 텍스트, <span class="arithmatex"><span class="MathJax_Preview">\mathbf{P}</span><script type="math/tex">\mathbf{P}</script></span>는 평문, <span class="arithmatex"><span class="MathJax_Preview">\mathbf{K}</span><script type="math/tex">\mathbf{K}</script></span>는 대칭 키이다.</p>
 <ol>
 <li><strong>데이터 무결성 검사</strong></li>
 <li>전송된 데이터의 무결성을 보장하기 위해 SSH는 메시지 인증 코드를 사용한다. 일반적으로 SHA-2(Secure Hash Algorithm 2)와 같은 해시 함수가 사용되며, 각 메시지는 전송 전 해시 값으로 변환되어 전송된다. 서버는 이 해시 값을 검증하여 데이터가 전송 중에 변경되지 않았음을 확인한다.</li>
 </ol>
 <p>데이터 무결성 검사는 다음과 같은 수식으로 표현된다:</p>
-<p>$$
-   \mathbf{H} = \text{SHA-2}(\mathbf{M})</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+   \mathbf{H} = \text{SHA-2}(\mathbf{M})
+</div>
+<script type="math/tex; mode=display">
+   \mathbf{H} = \text{SHA-2}(\mathbf{M})
+</script>
+</div>
 <p>여기서 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{M}</span><script type="math/tex">\mathbf{M}</script></span>은 메시지, <span class="arithmatex"><span class="MathJax_Preview">\mathbf{H}</span><script type="math/tex">\mathbf{H}</script></span>는 해시 값이다. 서버는 수신된 데이터 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{M'}</span><script type="math/tex">\mathbf{M'}</script></span>에 대해서도 같은 해시 값을 계산하여 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{H}</span><script type="math/tex">\mathbf{H}</script></span>와 일치하는지 확인한다.</p>
 
   <br>

@@ -113,23 +113,38 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 <ol>
 <li><strong>오차 추정:</strong> 현재 시간 스텝 <span class="arithmatex"><span class="MathJax_Preview">\Delta t</span><script type="math/tex">\Delta t</script></span>에서의 수치 해 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{y}</span><script type="math/tex">\mathbf{y}</script></span>과 정확한 해 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{y}_{exact}</span><script type="math/tex">\mathbf{y}_{exact}</script></span>의 차이를 계산하여 오차를 추정한다.</li>
 </ol>
-<p>$$
-   E = \left| \mathbf{y} - \mathbf{y}_{exact} \right|</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+   E = \left| \mathbf{y} - \mathbf{y}_{exact} \right|
+</div>
+<script type="math/tex; mode=display">
+   E = \left| \mathbf{y} - \mathbf{y}_{exact} \right|
+</script>
+</div>
 <ol>
 <li><strong>오차 기준과 비교:</strong> 오차 <span class="arithmatex"><span class="MathJax_Preview">E</span><script type="math/tex">E</script></span>와 사용자 정의 오차 허용 범위 <span class="arithmatex"><span class="MathJax_Preview">\epsilon</span><script type="math/tex">\epsilon</script></span>을 비교한다.</li>
 <li><strong>시간 스텝 수정 법칙:</strong> </li>
 <li><span class="arithmatex"><span class="MathJax_Preview">E &gt; \epsilon</span><script type="math/tex">E > \epsilon</script></span>: 오차가 허용 범위 밖에 있으면 시간 스텝을 줄이다.</li>
 </ol>
-<p>$$
-     \Delta t_{new} = \Delta t \times \left( \frac{\epsilon}{E} \right)^{\frac{1}{n}}</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+     \Delta t_{new} = \Delta t \times \left( \frac{\epsilon}{E} \right)^{\frac{1}{n}}
+</div>
+<script type="math/tex; mode=display">
+     \Delta t_{new} = \Delta t \times \left( \frac{\epsilon}{E} \right)^{\frac{1}{n}}
+</script>
+</div>
 <ul>
 <li><span class="arithmatex"><span class="MathJax_Preview">E \leq \epsilon</span><script type="math/tex">E \leq \epsilon</script></span>: 오차가 허용 범위 내에 있으면 시간 스텝을 유지하거나 늘린다.</li>
 </ul>
-<p>$$
-     \Delta t_{new} = \Delta t \times \left( \frac{\epsilon}{E} \right)^{\frac{1}{n}}</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+     \Delta t_{new} = \Delta t \times \left( \frac{\epsilon}{E} \right)^{\frac{1}{n}}
+</div>
+<script type="math/tex; mode=display">
+     \Delta t_{new} = \Delta t \times \left( \frac{\epsilon}{E} \right)^{\frac{1}{n}}
+</script>
+</div>
 <h4 id="4">4. 알고리즘 구현 예시</h4>
 <p>아래에 적응형 시간 스텝 방식의 일반적인 구현 예시를 제시한다.</p>
 <pre><code class="language-python">def adaptive_time_step(f, y0, t0, tf, dt0, tol):

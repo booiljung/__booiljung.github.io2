@@ -107,17 +107,27 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
    버텍스 셰이더는 모델 좌표계를 월드 좌표계로 변환하고, 이를 다시 뷰 좌표계로 변환하는 과정을 거친다. 이를 위해 일반적으로 행렬 변환을 사용한다. 예를 들어, 모델-뷰 변환은 다음과 같이 표현될 수 있다:</p>
 </li>
 </ol>
-<p>$$
-   \mathbf{v'} = \mathbf{M}<em>{model} \mathbf{M}</em>{view} \mathbf{v}</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+   \mathbf{v'} = \mathbf{M}_{model} \mathbf{M}_{view} \mathbf{v}
+</div>
+<script type="math/tex; mode=display">
+   \mathbf{v'} = \mathbf{M}_{model} \mathbf{M}_{view} \mathbf{v}
+</script>
+</div>
 <p>여기서 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{v}</span><script type="math/tex">\mathbf{v}</script></span>는 원래의 버텍스 위치, <span class="arithmatex"><span class="MathJax_Preview">\mathbf{M}_{model}</span><script type="math/tex">\mathbf{M}_{model}</script></span>은 모델 변환 행렬, <span class="arithmatex"><span class="MathJax_Preview">\mathbf{M}_{view}</span><script type="math/tex">\mathbf{M}_{view}</script></span>는 뷰 변환 행렬이다.</p>
 <ol>
 <li><strong>투영 변환</strong>:
    뷰 공간의 좌표를 클립 공간으로 변환한다. 이 변환은 주로 원근 투영이나 직교 투영을 위해 사용되며, 투영 행렬을 통해 이루어진다. 투영 행렬은 다음과 같이 표현될 수 있다:</li>
 </ol>
-<p>$$
-   \mathbf{v''} = \mathbf{M}_{projection} \mathbf{v'}</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+   \mathbf{v''} = \mathbf{M}_{projection} \mathbf{v'}
+</div>
+<script type="math/tex; mode=display">
+   \mathbf{v''} = \mathbf{M}_{projection} \mathbf{v'}
+</script>
+</div>
 <p>여기서 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{M}_{projection}</span><script type="math/tex">\mathbf{M}_{projection}</script></span>는 투영 변환 행렬이다.</p>
 <ol>
 <li><strong>출력 버텍스</strong>:
@@ -153,16 +163,26 @@ void main()
    텍스처 좌표를 사용하여 텍스처 맵에서 색상을 샘플링한다. 텍스처 맵핑은 다음과 같이 표현될 수 있다:</p>
 </li>
 </ol>
-<p>$$
-   \mathbf{color} = \mathbf{texture}(\mathbf{sampler}, \mathbf{texCoord})</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+   \mathbf{color} = \mathbf{texture}(\mathbf{sampler}, \mathbf{texCoord})
+</div>
+<script type="math/tex; mode=display">
+   \mathbf{color} = \mathbf{texture}(\mathbf{sampler}, \mathbf{texCoord})
+</script>
+</div>
 <ol>
 <li><strong>라이팅 계산</strong>:
    광원 정보를 바탕으로 각 픽셀의 최종 색상을 계산한다. 예를 들어, Phong 라이팅 모델은 다음과 같은 방정식을 사용한다:</li>
 </ol>
-<p>$$
-   \mathbf{I} = \mathbf{I}_a + \mathbf{I}_d (\mathbf{N} \cdot \mathbf{L}) + \mathbf{I}_s (\mathbf{R} \cdot \mathbf{V})^n</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+   \mathbf{I} = \mathbf{I}_a + \mathbf{I}_d (\mathbf{N} \cdot \mathbf{L}) + \mathbf{I}_s (\mathbf{R} \cdot \mathbf{V})^n
+</div>
+<script type="math/tex; mode=display">
+   \mathbf{I} = \mathbf{I}_a + \mathbf{I}_d (\mathbf{N} \cdot \mathbf{L}) + \mathbf{I}_s (\mathbf{R} \cdot \mathbf{V})^n
+</script>
+</div>
 <p>여기서 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{I}_a</span><script type="math/tex">\mathbf{I}_a</script></span>는 앰비언트(light) 조명, <span class="arithmatex"><span class="MathJax_Preview">\mathbf{I}_d</span><script type="math/tex">\mathbf{I}_d</script></span>는 디퓨즈(diffuse) 조명, <span class="arithmatex"><span class="MathJax_Preview">\mathbf{I}_s</span><script type="math/tex">\mathbf{I}_s</script></span>는 스펙큘러(specular) 조명 성분이며, <span class="arithmatex"><span class="MathJax_Preview">\mathbf{N}</span><script type="math/tex">\mathbf{N}</script></span>, <span class="arithmatex"><span class="MathJax_Preview">\mathbf{L}</span><script type="math/tex">\mathbf{L}</script></span>, <span class="arithmatex"><span class="MathJax_Preview">\mathbf{R}</span><script type="math/tex">\mathbf{R}</script></span>, <span class="arithmatex"><span class="MathJax_Preview">\mathbf{V}</span><script type="math/tex">\mathbf{V}</script></span>, <span class="arithmatex"><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span>은 각각 법선 벡터, 광원 벡터, 반사 벡터, 뷰어 벡터, 스펙큘러 강조지수 이다.</p>
 <ol>
 <li><strong>출력 색상</strong>:

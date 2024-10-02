@@ -104,16 +104,26 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 <ul>
 <li>운동 에너지 (Kinetic Energy, <span class="arithmatex"><span class="MathJax_Preview">E_k</span><script type="math/tex">E_k</script></span>):</li>
 </ul>
-<p>$$
-  E_k = \frac{1}{2} m \mathbf{v} \cdot \mathbf{v}</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+  E_k = \frac{1}{2} m \mathbf{v} \cdot \mathbf{v}
+</div>
+<script type="math/tex; mode=display">
+  E_k = \frac{1}{2} m \mathbf{v} \cdot \mathbf{v}
+</script>
+</div>
 <p>여기서 <span class="arithmatex"><span class="MathJax_Preview">m</span><script type="math/tex">m</script></span>은 질량, <span class="arithmatex"><span class="MathJax_Preview">\mathbf{v}</span><script type="math/tex">\mathbf{v}</script></span>는 속도 벡터이다.</p>
 <ul>
 <li>위치 에너지 (Potential Energy, <span class="arithmatex"><span class="MathJax_Preview">E_p</span><script type="math/tex">E_p</script></span>):</li>
 </ul>
-<p>$$
-  E_p = m g h</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+  E_p = m g h
+</div>
+<script type="math/tex; mode=display">
+  E_p = m g h
+</script>
+</div>
 <p>여기서 <span class="arithmatex"><span class="MathJax_Preview">m</span><script type="math/tex">m</script></span>은 질량, <span class="arithmatex"><span class="MathJax_Preview">g</span><script type="math/tex">g</script></span>는 중력 가속도, <span class="arithmatex"><span class="MathJax_Preview">h</span><script type="math/tex">h</script></span>는 높이이다.</p>
 <h3 id="_2">에너지 보존 오류의 주요 원인</h3>
 <p>에너지 보존 오류가 발생하는 주요 원인은 다음과 같다:</p>
@@ -122,12 +132,22 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 <ul>
 <li>오일러 방식:</li>
 </ul>
-<p>$$
-  \mathbf{x}(t + \Delta t) = \mathbf{x}(t) + \Delta t \mathbf{v}(t)</p>
-<p>$$</p>
-<p>$$
-  \mathbf{v}(t + \Delta t) = \mathbf{v}(t) + \Delta t \mathbf{a}(t)</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+  \mathbf{x}(t + \Delta t) = \mathbf{x}(t) + \Delta t \mathbf{v}(t)
+</div>
+<script type="math/tex; mode=display">
+  \mathbf{x}(t + \Delta t) = \mathbf{x}(t) + \Delta t \mathbf{v}(t)
+</script>
+</div>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+  \mathbf{v}(t + \Delta t) = \mathbf{v}(t) + \Delta t \mathbf{a}(t)
+</div>
+<script type="math/tex; mode=display">
+  \mathbf{v}(t + \Delta t) = \mathbf{v}(t) + \Delta t \mathbf{a}(t)
+</script>
+</div>
 <ul>
 <li>반면, 보다 정확한 방법인 반사각 방법(Symplectic integrator)이나 루킹 방법(Verlet integrator)은 에너지 보존 특성이 뛰어난다.</li>
 </ul>
@@ -136,12 +156,22 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 <ul>
 <li>탄성 충돌 공식:</li>
 </ul>
-<p>$$
-  \mathbf{v}_1' = \mathbf{v}_1 + \frac{2 m_2}{m_1 + m_2} \left( \mathbf{v}_2 - \mathbf{v}_1 \right) \cdot \hat{\mathbf{n}} \hat{\mathbf{n}}</p>
-<p>$$</p>
-<p>$$
-  \mathbf{v}_2' = \mathbf{v}_2 + \frac{2 m_1}{m_1 + m_2} \left( \mathbf{v}_1 - \mathbf{v}_2 \right) \cdot \hat{\mathbf{n}} \hat{\mathbf{n}}</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+  \mathbf{v}_1' = \mathbf{v}_1 + \frac{2 m_2}{m_1 + m_2} \left( \mathbf{v}_2 - \mathbf{v}_1 \right) \cdot \hat{\mathbf{n}} \hat{\mathbf{n}}
+</div>
+<script type="math/tex; mode=display">
+  \mathbf{v}_1' = \mathbf{v}_1 + \frac{2 m_2}{m_1 + m_2} \left( \mathbf{v}_2 - \mathbf{v}_1 \right) \cdot \hat{\mathbf{n}} \hat{\mathbf{n}}
+</script>
+</div>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+  \mathbf{v}_2' = \mathbf{v}_2 + \frac{2 m_1}{m_1 + m_2} \left( \mathbf{v}_1 - \mathbf{v}_2 \right) \cdot \hat{\mathbf{n}} \hat{\mathbf{n}}
+</div>
+<script type="math/tex; mode=display">
+  \mathbf{v}_2' = \mathbf{v}_2 + \frac{2 m_1}{m_1 + m_2} \left( \mathbf{v}_1 - \mathbf{v}_2 \right) \cdot \hat{\mathbf{n}} \hat{\mathbf{n}}
+</script>
+</div>
 <p>여기서 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{v}_1</span><script type="math/tex">\mathbf{v}_1</script></span>과 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{v}_2</span><script type="math/tex">\mathbf{v}_2</script></span>는 충돌 전 속도 벡터, <span class="arithmatex"><span class="MathJax_Preview">\mathbf{v}_1'</span><script type="math/tex">\mathbf{v}_1'</script></span>과 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{v}_2'</span><script type="math/tex">\mathbf{v}_2'</script></span>는 충돌 후 속도 벡터, <span class="arithmatex"><span class="MathJax_Preview">\hat{\mathbf{n}}</span><script type="math/tex">\hat{\mathbf{n}}</script></span>는 충돌 노멀 벡터, <span class="arithmatex"><span class="MathJax_Preview">m_1</span><script type="math/tex">m_1</script></span>과 <span class="arithmatex"><span class="MathJax_Preview">m_2</span><script type="math/tex">m_2</script></span>는 질량이다.</p>
 <h3 id="_5">디버깅 절차</h3>
 <p>디버깅 할 때는 다음과 같은 절차를 따르는 것이 좋다:</p>

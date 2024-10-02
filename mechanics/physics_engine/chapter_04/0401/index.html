@@ -108,9 +108,14 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 <ul>
 <li>두 개의 AABB 상자가 충돌하는지 확인하는 방법:</li>
 </ul>
-<p>$$
-  \text{충돌 여부} = (A_{\min,x} \leq B_{\max,x} \quad \text{and} \quad A_{\max,x} \geq B_{\min,x}) \quad \text{and} \quad (A_{\min,y} \leq B_{\max,y} \quad \text{and} \quad A_{\max,y} \geq B_{\min,y})</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+  \text{충돌 여부} = (A_{\min,x} \leq B_{\max,x} \quad \text{and} \quad A_{\max,x} \geq B_{\min,x}) \quad \text{and} \quad (A_{\min,y} \leq B_{\max,y} \quad \text{and} \quad A_{\max,y} \geq B_{\min,y})
+</div>
+<script type="math/tex; mode=display">
+  \text{충돌 여부} = (A_{\min,x} \leq B_{\max,x} \quad \text{and} \quad A_{\max,x} \geq B_{\min,x}) \quad \text{and} \quad (A_{\min,y} \leq B_{\max,y} \quad \text{and} \quad A_{\max,y} \geq B_{\min,y})
+</script>
+</div>
 <p>여기서 <span class="arithmatex"><span class="MathJax_Preview">A</span><script type="math/tex">A</script></span>와 <span class="arithmatex"><span class="MathJax_Preview">B</span><script type="math/tex">B</script></span>는 각각 두 오브젝트의 AABB 박스이다.</p>
 <h3 id="obb-oriented-bounding-box">OBB (Oriented Bounding Box)</h3>
 <p><strong>OBB</strong>는 AABB와 유사하지만 축이 물체에 고정되어 회전할 수 있는 경계 박스를 이용한다. OBB는 AABB에 비해 정확하지만, 충돌 감지 계산이 더 복잡한다.</p>
@@ -124,9 +129,14 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 <li><span class="arithmatex"><span class="MathJax_Preview">A</span><script type="math/tex">A</script></span>의 에지와 <span class="arithmatex"><span class="MathJax_Preview">B</span><script type="math/tex">B</script></span>의 에지의 모든 조합을 검사한다.</li>
 <li>각 축에 대해 프로젝션 U와 V의 최소값과 최대값을 비교한다.</li>
 </ul>
-<p>$$
-  \max(A_{\text{proj}}) &lt; \min(B_{\text{proj}}) \quad \text{or} \quad \max(B_{\text{proj}}) &lt; \min(A_{\text{proj}})</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+  \max(A_{\text{proj}}) &lt; \min(B_{\text{proj}}) \quad \text{or} \quad \max(B_{\text{proj}}) &lt; \min(A_{\text{proj}})
+</div>
+<script type="math/tex; mode=display">
+  \max(A_{\text{proj}}) < \min(B_{\text{proj}}) \quad \text{or} \quad \max(B_{\text{proj}}) < \min(A_{\text{proj}})
+</script>
+</div>
 <ul>
 <li>어느 하나의 분리 축이라도 충돌하지 않는다면 오브젝트는 충돌하지 않는다.</li>
 </ul>
@@ -172,9 +182,14 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 <li><strong>해시 함수</strong>:</li>
 <li>오브젝트의 위치를 입력으로 받아서 격자 셀이 해시 테이블의 인덱스로 변환된다.</li>
 </ul>
-<p>$$
-  h(x, y, z) = (x \cdot p1 + y \cdot p2 + z \cdot p3) \mod n</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+  h(x, y, z) = (x \cdot p1 + y \cdot p2 + z \cdot p3) \mod n
+</div>
+<script type="math/tex; mode=display">
+  h(x, y, z) = (x \cdot p1 + y \cdot p2 + z \cdot p3) \mod n
+</script>
+</div>
 <p>여기서 <span class="arithmatex"><span class="MathJax_Preview">p1, p2, p3</span><script type="math/tex">p1, p2, p3</script></span>는 큰 소수이고 <span class="arithmatex"><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span>은 해시 테이블의 크기이다.
 - <strong>충돌 감지</strong>:
   - 오브젝트가 속한 격자 셀 내의 다른 오브젝트들과 충돌 여부를 검사한다.

@@ -95,16 +95,26 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
     <h3 id="gain-margin">이득 여유 (Gain Margin)</h3>
 <p>이득 여유는 폐루프 시스템이 불안정해지기 전까지 시스템의 이득을 얼마나 더 증가시킬 수 있는지를 나타내는 값이다. 일반적으로 이득 여유는 보드(Bode) 도표나 나이퀴스트(Nyquist) 도표에서 확인할 수 있다. 폐루프 시스템의 안정성은 루프 전달 함수(Loop Transfer Function)의 이득이 특정 값 이상으로 증가할 경우에 영향을 받을 수 있다.</p>
 <p>이득 여유는 주파수 응답에서 위상이 <span class="arithmatex"><span class="MathJax_Preview">-180^\circ</span><script type="math/tex">-180^\circ</script></span>일 때의 이득에 의해 결정되며, 이 지점에서의 이득이 얼마만큼 여유가 있는지 계산한다. 수학적으로는 위상이 <span class="arithmatex"><span class="MathJax_Preview">-180^\circ</span><script type="math/tex">-180^\circ</script></span>일 때의 진폭이 <span class="arithmatex"><span class="MathJax_Preview">A_m</span><script type="math/tex">A_m</script></span>이라고 하면, 이득 여유는 다음과 같이 정의된다:</p>
-<p>$$</p>
-<p>GM = \frac{1}{A_m}</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+GM = \frac{1}{A_m}
+</div>
+<script type="math/tex; mode=display">
+GM = \frac{1}{A_m}
+</script>
+</div>
 <p>이득 여유가 1보다 크면 시스템은 여전히 안정적인 상태에 있으며, 1에 가까울수록 불안정성이 증가한다. 또한 이득 여유가 음수일 경우 시스템은 이미 불안정한 상태임을 의미한다.</p>
 <h3 id="phase-margin">위상 여유 (Phase Margin)</h3>
 <p>위상 여유는 주파수 응답에서 진폭이 1일 때, 위상이 <span class="arithmatex"><span class="MathJax_Preview">-180^\circ</span><script type="math/tex">-180^\circ</script></span>까지 얼마나 여유가 있는지를 나타내는 값이다. 위상 여유는 폐루프 시스템이 위상 지연이 얼마나 더 증가해도 안정성을 유지할 수 있는지 측정하는 지표로 사용된다. 위상 여유가 클수록 시스템은 보다 안정적인 상태에 있다고 할 수 있으며, 작아질수록 불안정한 상태에 가까워진다.</p>
 <p>위상 여유는 진폭이 1일 때의 위상 각을 <span class="arithmatex"><span class="MathJax_Preview">\phi_m</span><script type="math/tex">\phi_m</script></span>이라고 할 때, 위상 여유 <span class="arithmatex"><span class="MathJax_Preview">\text{PM}</span><script type="math/tex">\text{PM}</script></span>은 다음과 같이 정의된다:</p>
-<p>$$</p>
-<p>PM = 180^\circ + \phi_m</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+PM = 180^\circ + \phi_m
+</div>
+<script type="math/tex; mode=display">
+PM = 180^\circ + \phi_m
+</script>
+</div>
 <p>위상 여유가 <span class="arithmatex"><span class="MathJax_Preview">0^\circ</span><script type="math/tex">0^\circ</script></span>보다 크면 시스템은 안정성을 유지하고 있으며, <span class="arithmatex"><span class="MathJax_Preview">0^\circ</span><script type="math/tex">0^\circ</script></span>에 가까워지면 불안정성이 증가한다. 반면, 위상 여유가 음수일 경우 시스템은 불안정하다는 의미이다.</p>
 <h4 id="_1">주파수 응답 해석</h4>
 <p>이득 여유와 위상 여유는 모두 시스템의 주파수 응답에서 중요한 역할을 한다. 특히 이 두 값은 시스템이 주어진 설계에서 얼마나 안정한지를 평가하는 기준으로 사용된다. 이를 통해 시스템의 성능을 개선하거나 안정성을 강화하기 위한 설계 조정을 할 수 있다.</p>

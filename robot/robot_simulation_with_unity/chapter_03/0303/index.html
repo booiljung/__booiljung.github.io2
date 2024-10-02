@@ -116,15 +116,25 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 <ul>
 <li><strong>질량 (Mass):</strong> 로봇 부품의 질량은 Rigidbody 컴포넌트의 <code>mass</code> 속성을 통해 설정된다.</li>
 </ul>
-<p>$$
-  m = \text{mass}</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+  m = \text{mass}
+</div>
+<script type="math/tex; mode=display">
+  m = \text{mass}
+</script>
+</div>
 <ul>
 <li><strong>관성 텐서 (Inertia Tensor):</strong> 로봇 부품의 관성은 <code>inertiaTensor</code> 속성을 통해 설정된다. 이는 부품이 회전할 때의 저항을 정의한다.</li>
 </ul>
-<p>$$
-  \mathbf{I} = \text{inertiaTensor}</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+  \mathbf{I} = \text{inertiaTensor}
+</div>
+<script type="math/tex; mode=display">
+  \mathbf{I} = \text{inertiaTensor}
+</script>
+</div>
 <h4 id="colliders">충돌체 (Colliders) 설정</h4>
 <p>로봇의 각 부품에 충돌체를 추가하여 다른 객체와의 상호작용을 정의할 수 있다. 충돌체의 형태는 박스, 구, 캡슐 등 다양한 형태로 설정할 수 있으며, 복잡한 형태는 메쉬 충돌체를 사용하여 구현할 수 있다.</p>
 <ul>
@@ -142,29 +152,49 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 <ul>
 <li><strong>축 (Axis):</strong> 힌지 조인트의 회전 축을 설정한다.</li>
 </ul>
-<p>$$
-  \mathbf{a} = \text{Axis}</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+  \mathbf{a} = \text{Axis}
+</div>
+<script type="math/tex; mode=display">
+  \mathbf{a} = \text{Axis}
+</script>
+</div>
 <ul>
 <li><strong>모터 (Motor):</strong> 조인트의 회전을 제어하기 위해 모터 속성을 설정할 수 있다. 모터는 속도와 힘을 정의하여 조인트의 움직임을 조절한다.</li>
 </ul>
-<p>$$
-  \omega = \text{Motor Speed}, \quad \tau = \text{Motor Force}</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+  \omega = \text{Motor Speed}, \quad \tau = \text{Motor Force}
+</div>
+<script type="math/tex; mode=display">
+  \omega = \text{Motor Speed}, \quad \tau = \text{Motor Force}
+</script>
+</div>
 <h4 id="spring-joint">스프링 조인트 (Spring Joint)</h4>
 <p>스프링 조인트는 조인트에 스프링 특성을 추가하여 탄성적인 움직임을 구현한다. 이는 로봇이 외부 힘에 반응할 때 자연스러운 움직임을 제공한다.</p>
 <ul>
 <li><strong>스프링 상수 (Spring Constant):</strong> 스프링의 강도를 정의한다.</li>
 </ul>
-<p>$$
-  k = \text{Spring Constant}</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+  k = \text{Spring Constant}
+</div>
+<script type="math/tex; mode=display">
+  k = \text{Spring Constant}
+</script>
+</div>
 <ul>
 <li><strong>댐핑 계수 (Damping Coefficient):</strong> 스프링의 진동을 제어하는 댐핑을 설정한다.</li>
 </ul>
-<p>$$
-  c = \text{Damping Coefficient}</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+  c = \text{Damping Coefficient}
+</div>
+<script type="math/tex; mode=display">
+  c = \text{Damping Coefficient}
+</script>
+</div>
 <h3 id="_4">스크립트를 통한 동적 움직임 제어</h3>
 <p>Unity의 C# 스크립트를 사용하여 로봇의 움직임을 동적으로 제어할 수 있다. 이를 통해 실시간으로 로봇의 상태를 변경하거나 외부 입력에 반응하는 동작을 구현할 수 있다.</p>
 <h4 id="rigidbody">Rigidbody를 이용한 이동</h4>
@@ -251,25 +281,45 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 <ul>
 <li><strong>비례 (Proportional, P):</strong> 현재 오차에 비례하여 제어 입력을 조정한다.</li>
 </ul>
-<p>$$</p>
-<p>P = K_p \cdot e(t)</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+  P = K_p \cdot e(t)
+</div>
+<script type="math/tex; mode=display">
+  P = K_p \cdot e(t)
+</script>
+</div>
 <ul>
 <li><strong>적분 (Integral, I):</strong> 과거 오차의 누적에 비례하여 제어 입력을 조정한다.</li>
 </ul>
-<p>$$</p>
-<p>I = K_i \cdot \int_{0}^{t} e(\tau) d\tau</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+  I = K_i \cdot \int_{0}^{t} e(\tau) d\tau
+</div>
+<script type="math/tex; mode=display">
+  I = K_i \cdot \int_{0}^{t} e(\tau) d\tau
+</script>
+</div>
 <ul>
 <li><strong>미분 (Derivative, D):</strong> 오차의 변화율에 비례하여 제어 입력을 조정한다.</li>
 </ul>
-<p>$$</p>
-<p>D = K_d \cdot \frac{d e(t)}{dt}</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+  D = K_d \cdot \frac{d e(t)}{dt}
+</div>
+<script type="math/tex; mode=display">
+  D = K_d \cdot \frac{d e(t)}{dt}
+</script>
+</div>
 <p>전체 PID 제어 입력 <span class="arithmatex"><span class="MathJax_Preview">u(t)</span><script type="math/tex">u(t)</script></span>는 다음과 같이 표현된다:</p>
-<p>$$</p>
-<p>u(t) = P + I + D = K_p \cdot e(t) + K_i \cdot \int_{0}^{t} e(\tau) d\tau + K_d \cdot \frac{d e(t)}{dt}</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+u(t) = P + I + D = K_p \cdot e(t) + K_i \cdot \int_{0}^{t} e(\tau) d\tau + K_d \cdot \frac{d e(t)}{dt}
+</div>
+<script type="math/tex; mode=display">
+u(t) = P + I + D = K_p \cdot e(t) + K_i \cdot \int_{0}^{t} e(\tau) d\tau + K_d \cdot \frac{d e(t)}{dt}
+</script>
+</div>
 <p>여기서 <span class="arithmatex"><span class="MathJax_Preview">e(t)</span><script type="math/tex">e(t)</script></span>는 목표값과 실제값의 오차이다. Unity에서 PID 컨트롤러를 구현하여 로봇의 움직임을 정밀하게 제어할 수 있다.</p>
 <pre><code class="language-csharp">public class PIDController : MonoBehaviour
 {
@@ -295,9 +345,14 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 <ul>
 <li><strong>A* 알고리즘:</strong> 휴리스틱을 사용하여 최적의 경로를 빠르게 찾는 알고리즘이다. 휴리스틱 함수 <span class="arithmatex"><span class="MathJax_Preview">h(n)</span><script type="math/tex">h(n)</script></span>은 현재 노드 <span class="arithmatex"><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span>에서 목표 노드까지의 추정 거리를 나타낸다.</li>
 </ul>
-<p>$$</p>
-<p>f(n) = g(n) + h(n)</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+  f(n) = g(n) + h(n)
+</div>
+<script type="math/tex; mode=display">
+  f(n) = g(n) + h(n)
+</script>
+</div>
 <p>여기서 <span class="arithmatex"><span class="MathJax_Preview">g(n)</span><script type="math/tex">g(n)</script></span>은 시작 노드에서 현재 노드까지의 실제 비용, <span class="arithmatex"><span class="MathJax_Preview">h(n)</span><script type="math/tex">h(n)</script></span>은 현재 노드에서 목표 노드까지의 휴리스틱 추정 비용이다.</p>
 <ul>
 <li><strong>Dijkstra 알고리즘:</strong> 모든 노드에 대한 최단 경로를 찾는 알고리즘으로, 휴리스틱을 사용하지 않는다. 따라서 A*보다 계산량이 많을 수 있지만, 최적의 경로를 보장한다.</li>

@@ -120,9 +120,14 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 <h4 id="21">2.1 시간적 중복 제거</h4>
 <p>이벤트 데이터는 매우 미세한 시간 단위로 발생하므로, 이벤트가 짧은 시간 내에 유사한 위치에서 반복적으로 발생하는 경우가 많다. 이를 기반으로 시간적으로 가까운 이벤트들을 그룹화하여 압축할 수 있다. 예를 들어, 짧은 시간 동안 동일한 좌표 <code>(x, y)</code>에서 발생한 이벤트들을 하나의 이벤트로 통합할 수 있다.</p>
 <p>이를 수식으로 표현하면, 시간 차이가 일정 임계값 <code>\delta t</code> 이하일 때, 해당 좌표에서 발생한 이벤트들을 하나의 이벤트로 통합할 수 있다. </p>
-<p>$$</p>
-<p>t_i - t_{i-1} \leq \delta t \quad \text{일 때}, \quad E(x_i, y_i, t_i, p_i) \rightarrow E(x_i, y_i, \bar{t}, p_i)
-$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+t_i - t_{i-1} \leq \delta t \quad \text{일 때}, \quad E(x_i, y_i, t_i, p_i) \rightarrow E(x_i, y_i, \bar{t}, p_i)
+</div>
+<script type="math/tex; mode=display">
+t_i - t_{i-1} \leq \delta t \quad \text{일 때}, \quad E(x_i, y_i, t_i, p_i) \rightarrow E(x_i, y_i, \bar{t}, p_i)
+</script>
+</div>
 <p>여기서 <span class="arithmatex"><span class="MathJax_Preview">\bar{t}</span><script type="math/tex">\bar{t}</script></span>는 통합된 시간 값이다. 이 방법은 데이터의 시간적 중복을 줄여 전체 데이터의 양을 감소시킬 수 있다.</p>
 <h4 id="22">2.2 공간적 중복 제거</h4>
 <p>이벤트 데이터는 공간적으로도 중복되는 경우가 있다. 특히, 물체가 일정 방향으로 움직일 때, 인접한 픽셀에서 유사한 이벤트가 발생하는 경향이 있다. 이를 이용하여 공간적으로 근접한 이벤트들을 클러스터링하여 압축할 수 있다. </p>

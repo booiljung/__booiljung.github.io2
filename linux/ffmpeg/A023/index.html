@@ -201,15 +201,25 @@ n_{\text{frame}} = \left\lfloor \frac{f_{\text{audio}} \cdot t}{f_{\text{video}}
 <ol>
 <li>오디오 신호 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{x}(t)</span><script type="math/tex">\mathbf{x}(t)</script></span>의 절대값을 구하여 진폭을 추출:</li>
 </ol>
-<p>$$
-   A(t) = |\mathbf{x}(t)|</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+   A(t) = |\mathbf{x}(t)|
+</div>
+<script type="math/tex; mode=display">
+   A(t) = |\mathbf{x}(t)|
+</script>
+</div>
 <ol>
 <li>이 진폭 값을 비디오 필터에 반영하여, 각 프레임의 밝기 또는 색상을 조정:</li>
 </ol>
-<p>$$
-   \text{brightness}(t) = A(t)</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+   \text{brightness}(t) = A(t)
+</div>
+<script type="math/tex; mode=display">
+   \text{brightness}(t) = A(t)
+</script>
+</div>
 <p>FFMPEG 명령어 예시는 다음과 같다:</p>
 <pre><code>ffmpeg -i input_audio_file -filter_complex &quot;[a]asetrate=44100,volume=2[a];[a]showspectrum,eq=brightness=1.5&quot; output_video_file.mp4
 </code></pre>

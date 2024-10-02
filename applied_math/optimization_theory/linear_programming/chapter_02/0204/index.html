@@ -91,12 +91,22 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 <h4 id="_2">기저 해</h4>
 <p>기저 해는 주어진 선형계획 문제에서 가능한 해의 일종으로, 일반적으로 다음과 같은 수학적 정의를 따른다.</p>
 <p>선형계획 문제는 다음과 같이 일반적인 형태로 표현될 수 있다.</p>
-<p>$$</p>
-<p>\text{maximize} \quad \mathbf{c}^\top \mathbf{x}</p>
-<p>$$</p>
-<p>$$</p>
-<p>\text{subject to} \quad \mathbf{A} \mathbf{x} = \mathbf{b}, \quad \mathbf{x} \geq 0</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+\text{maximize} \quad \mathbf{c}^\top \mathbf{x}
+</div>
+<script type="math/tex; mode=display">
+\text{maximize} \quad \mathbf{c}^\top \mathbf{x}
+</script>
+</div>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+\text{subject to} \quad \mathbf{A} \mathbf{x} = \mathbf{b}, \quad \mathbf{x} \geq 0
+</div>
+<script type="math/tex; mode=display">
+\text{subject to} \quad \mathbf{A} \mathbf{x} = \mathbf{b}, \quad \mathbf{x} \geq 0
+</script>
+</div>
 <p>여기서:</p>
 <ul>
 <li><span class="arithmatex"><span class="MathJax_Preview">\mathbf{A} \in \mathbb{R}^{m \times n}</span><script type="math/tex">\mathbf{A} \in \mathbb{R}^{m \times n}</script></span>: 제약 조건을 나타내는 행렬</li>
@@ -108,9 +118,14 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 <h4 id="_3">기저 행렬</h4>
 <p>선형계획 문제에서 기저 해를 구하려면, 행렬 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{A}</span><script type="math/tex">\mathbf{A}</script></span>에서 <span class="arithmatex"><span class="MathJax_Preview">m \times m</span><script type="math/tex">m \times m</script></span> 크기의 부분 행렬을 선택해야 한다. 이 행렬을 기저 행렬이라고 하며, 이를 통해 기저 해를 계산할 수 있다. 기저 행렬은 풀랭크(Full Rank)이어야 한다. 즉, 이 행렬은 역행렬이 존재해야 한다.</p>
 <p>기저 행렬을 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{B}</span><script type="math/tex">\mathbf{B}</script></span>라고 하면, 기저 해는 다음과 같이 주어진다:</p>
-<p>$$</p>
-<p>\mathbf{x}_B = \mathbf{B}^{-1} \mathbf{b}</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+\mathbf{x}_B = \mathbf{B}^{-1} \mathbf{b}
+</div>
+<script type="math/tex; mode=display">
+\mathbf{x}_B = \mathbf{B}^{-1} \mathbf{b}
+</script>
+</div>
 <p>여기서:</p>
 <ul>
 <li><span class="arithmatex"><span class="MathJax_Preview">\mathbf{x}_B</span><script type="math/tex">\mathbf{x}_B</script></span>: 기저 변수 벡터</li>
@@ -152,55 +167,110 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 </ol>
 <h4 id="_8">예시</h4>
 <p>제약 조건이 다음과 같은 선형계획 문제를 고려해 보자:</p>
-<p>$$</p>
-<p>\mathbf{A} = 
+<div class="arithmatex">
+<div class="MathJax_Preview">
+\mathbf{A} = 
 \begin{pmatrix}
-1 &amp; 2 &amp; 1 \
+1 &amp; 2 &amp; 1 \\
 2 &amp; 1 &amp; 0
 \end{pmatrix}, \quad
 \mathbf{b} =
 \begin{pmatrix}
-4 \
+4 \\
 3
-\end{pmatrix}</p>
-<p>$$</p>
+\end{pmatrix}
+</div>
+<script type="math/tex; mode=display">
+\mathbf{A} = 
+\begin{pmatrix}
+1 & 2 & 1 \\
+2 & 1 & 0
+\end{pmatrix}, \quad
+\mathbf{b} =
+\begin{pmatrix}
+4 \\
+3
+\end{pmatrix}
+</script>
+</div>
 <p>이 문제에서 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{A}</span><script type="math/tex">\mathbf{A}</script></span>의 일부 열을 선택하여 기저 행렬 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{B}</span><script type="math/tex">\mathbf{B}</script></span>를 구성한다. 예를 들어, 첫 번째와 두 번째 열을 선택하면 기저 행렬은 다음과 같이 된다:</p>
-<p>$$</p>
-<p>\mathbf{B} = 
+<div class="arithmatex">
+<div class="MathJax_Preview">
+\mathbf{B} = 
 \begin{pmatrix}
-1 &amp; 2 \
+1 &amp; 2 \\
 2 &amp; 1
-\end{pmatrix}</p>
-<p>$$</p>
+\end{pmatrix}
+</div>
+<script type="math/tex; mode=display">
+\mathbf{B} = 
+\begin{pmatrix}
+1 & 2 \\
+2 & 1
+\end{pmatrix}
+</script>
+</div>
 <p>기저 행렬 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{B}</span><script type="math/tex">\mathbf{B}</script></span>의 역행렬을 구한 후, 기저 해는 다음과 같이 계산된다:</p>
-<p>$$</p>
-<p>\mathbf{x}_B = \mathbf{B}^{-1} \mathbf{b}</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+\mathbf{x}_B = \mathbf{B}^{-1} \mathbf{b}
+</div>
+<script type="math/tex; mode=display">
+\mathbf{x}_B = \mathbf{B}^{-1} \mathbf{b}
+</script>
+</div>
 <p>역행렬 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{B}^{-1}</span><script type="math/tex">\mathbf{B}^{-1}</script></span>을 계산하면:</p>
-<p>$$</p>
-<p>\mathbf{B}^{-1} =
+<div class="arithmatex">
+<div class="MathJax_Preview">
+\mathbf{B}^{-1} =
 \begin{pmatrix}
--1 &amp; 2 \
+-1 &amp; 2 \\
 2 &amp; -1
-\end{pmatrix}</p>
-<p>$$</p>
-<p>따라서 기저 해는:</p>
-<p>$$</p>
-<p>\mathbf{x}_B = 
+\end{pmatrix}
+</div>
+<script type="math/tex; mode=display">
+\mathbf{B}^{-1} =
 \begin{pmatrix}
--1 &amp; 2 \
+-1 & 2 \\
+2 & -1
+\end{pmatrix}
+</script>
+</div>
+<p>따라서 기저 해는:</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+\mathbf{x}_B = 
+\begin{pmatrix}
+-1 &amp; 2 \\
 2 &amp; -1
 \end{pmatrix}
 \begin{pmatrix}
-4 \
+4 \\
 3
 \end{pmatrix}
 =
 \begin{pmatrix}
-2 \
+2 \\
 5
-\end{pmatrix}</p>
-<p>$$</p>
+\end{pmatrix}
+</div>
+<script type="math/tex; mode=display">
+\mathbf{x}_B = 
+\begin{pmatrix}
+-1 & 2 \\
+2 & -1
+\end{pmatrix}
+\begin{pmatrix}
+4 \\
+3
+\end{pmatrix}
+=
+\begin{pmatrix}
+2 \\
+5
+\end{pmatrix}
+</script>
+</div>
 <p>이 경우 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{x}_B \geq 0</span><script type="math/tex">\mathbf{x}_B \geq 0</script></span> 조건을 만족하므로, 이 기저 해는 유효하다.</p>
 <h3 id="_9">기저 해의 기하학적 의미</h3>
 <p>기저 해는 기하학적으로 다면체의 꼭짓점에 해당한다. 선형계획 문제의 해 공간은 다면체 형태로 나타나며, 기저 해는 이 다면체의 극점, 즉 꼭짓점에서 나타난다. 기저 해가 존재한다면, 이는 다면체의 하나의 꼭짓점에서 발생한다.</p>
@@ -234,94 +304,174 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 <p>기저 해와 달리, 비기저 해는 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{A} \mathbf{x} = \mathbf{b}</span><script type="math/tex">\mathbf{A} \mathbf{x} = \mathbf{b}</script></span> 조건을 만족하지 않는 해이다. 비기저 해는 일반적으로 중간 과정에서 발생하는 해로, 최종적으로 기저 해에 도달해야 문제를 해결할 수 있다. 기저 해는 항상 제약 조건을 만족하며, 이 과정에서 비기저 해를 거치지 않도록 하는 것이 목표이다.</p>
 <h3 id="_12">기저 해의 계산 사례</h3>
 <p>이제 기저 해의 계산을 실제로 다뤄 보자. 예를 들어, 다음과 같은 선형계획 문제를 생각해 보자:</p>
-<p>$$</p>
-<p>\text{maximize} \quad 3x_1 + 5x_2</p>
-<p>$$</p>
-<p>$$</p>
-<p>\text{subject to} \quad
+<div class="arithmatex">
+<div class="MathJax_Preview">
+\text{maximize} \quad 3x_1 + 5x_2
+</div>
+<script type="math/tex; mode=display">
+\text{maximize} \quad 3x_1 + 5x_2
+</script>
+</div>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+\text{subject to} \quad
 \begin{aligned}
-x_1 + 2x_2 &amp;\leq 6 \
-4x_1 + x_2 &amp;\leq 8 \
+x_1 + 2x_2 &amp;\leq 6 \\
+4x_1 + x_2 &amp;\leq 8 \\
 x_1, x_2 &amp;\geq 0
-\end{aligned}</p>
-<p>$$</p>
+\end{aligned}
+</div>
+<script type="math/tex; mode=display">
+\text{subject to} \quad
+\begin{aligned}
+x_1 + 2x_2 &\leq 6 \\
+4x_1 + x_2 &\leq 8 \\
+x_1, x_2 &\geq 0
+\end{aligned}
+</script>
+</div>
 <p>이 문제에서 제약 조건을 만족시키는 기저 해를 구하는 과정은 다음과 같다:</p>
 <ol>
 <li>제약 조건을 등식으로 변환:</li>
 </ol>
-<p>$$</p>
-<p>x_1 + 2x_2 = 6 \quad (슬랙 변수 도입)</p>
-<p>$$</p>
-<p>$$</p>
-<p>4x_1 + x_2 = 8</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+   x_1 + 2x_2 = 6 \quad (슬랙 변수 도입)
+</div>
+<script type="math/tex; mode=display">
+   x_1 + 2x_2 = 6 \quad (슬랙 변수 도입)
+</script>
+</div>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+   4x_1 + x_2 = 8
+</div>
+<script type="math/tex; mode=display">
+   4x_1 + x_2 = 8
+</script>
+</div>
 <ol>
 <li>기저 행렬 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{B}</span><script type="math/tex">\mathbf{B}</script></span>를 선택:</li>
 </ol>
-<p>$$</p>
-<p>\mathbf{B} = 
+<div class="arithmatex">
+<div class="MathJax_Preview">
+   \mathbf{B} = 
    \begin{pmatrix}
-   1 &amp; 2 \
+   1 &amp; 2 \\
    4 &amp; 1
-   \end{pmatrix}</p>
-<p>$$</p>
+   \end{pmatrix}
+</div>
+<script type="math/tex; mode=display">
+   \mathbf{B} = 
+   \begin{pmatrix}
+   1 & 2 \\
+   4 & 1
+   \end{pmatrix}
+</script>
+</div>
 <p>이 경우, 기저 행렬의 역행렬을 계산하여 기저 해를 구할 수 있다.</p>
 <p>계산 과정을 계속 진행하면 기저 해의 위치와 값을 확인할 수 있으며, 이러한 기저 해는 다면체의 꼭짓점에서 발생한다.</p>
 <h3 id="_13">기저 해 계산 과정의 자세한 설명</h3>
 <p>이제 앞서 설명한 문제의 기저 해 계산 과정을 자세히 살펴보자.</p>
 <h4 id="_14">문제 재구성</h4>
 <p>주어진 선형계획 문제를 다시 한 번 정리해 보자:</p>
-<p>$$</p>
-<p>\text{maximize} \quad 3x_1 + 5x_2</p>
-<p>$$</p>
-<p>$$</p>
-<p>\text{subject to} \quad
-\begin{aligned}
-x_1 + 2x_2 &amp;\leq 6 \
-4x_1 + x_2 &amp;\leq 8 \
-x_1, x_2 &amp;\geq 0
-\end{aligned}</p>
-<p>$$</p>
-<p>이 문제를 표준형으로 변환하기 위해, 각 제약 조건에 슬랙 변수를 도입하여 등식 형태로 바꾸어 준다:</p>
-<p>$$</p>
 <div class="arithmatex">
-<div class="MathJax_Preview">\begin{aligned}
+<div class="MathJax_Preview">
+\text{maximize} \quad 3x_1 + 5x_2
+</div>
+<script type="math/tex; mode=display">
+\text{maximize} \quad 3x_1 + 5x_2
+</script>
+</div>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+\text{subject to} \quad
+\begin{aligned}
+x_1 + 2x_2 &amp;\leq 6 \\
+4x_1 + x_2 &amp;\leq 8 \\
+x_1, x_2 &amp;\geq 0
+\end{aligned}
+</div>
+<script type="math/tex; mode=display">
+\text{subject to} \quad
+\begin{aligned}
+x_1 + 2x_2 &\leq 6 \\
+4x_1 + x_2 &\leq 8 \\
+x_1, x_2 &\geq 0
+\end{aligned}
+</script>
+</div>
+<p>이 문제를 표준형으로 변환하기 위해, 각 제약 조건에 슬랙 변수를 도입하여 등식 형태로 바꾸어 준다:</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+\begin{aligned}
 x_1 + 2x_2 + s_1 &amp;= 6 \\
 4x_1 + x_2 + s_2 &amp;= 8
-\end{aligned}</div>
-<script type="math/tex; mode=display">\begin{aligned}
+\end{aligned}
+</div>
+<script type="math/tex; mode=display">
+\begin{aligned}
 x_1 + 2x_2 + s_1 &= 6 \\
 4x_1 + x_2 + s_2 &= 8
-\end{aligned}</script>
+\end{aligned}
+</script>
 </div>
-<p>$$</p>
 <p>여기서 <span class="arithmatex"><span class="MathJax_Preview">s_1</span><script type="math/tex">s_1</script></span>과 <span class="arithmatex"><span class="MathJax_Preview">s_2</span><script type="math/tex">s_2</script></span>는 슬랙 변수로, 각각 첫 번째와 두 번째 제약 조건의 남는 여유를 나타낸다.</p>
 <p>따라서, 이제 새로운 선형계획 문제는 다음과 같다:</p>
-<p>$$</p>
-<p>\text{maximize} \quad 3x_1 + 5x_2</p>
-<p>$$</p>
-<p>$$</p>
-<p>\text{subject to} \quad
+<div class="arithmatex">
+<div class="MathJax_Preview">
+\text{maximize} \quad 3x_1 + 5x_2
+</div>
+<script type="math/tex; mode=display">
+\text{maximize} \quad 3x_1 + 5x_2
+</script>
+</div>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+\text{subject to} \quad
 \begin{aligned}
-x_1 + 2x_2 + s_1 &amp;= 6 \
-4x_1 + x_2 + s_2 &amp;= 8 \
+x_1 + 2x_2 + s_1 &amp;= 6 \\
+4x_1 + x_2 + s_2 &amp;= 8 \\
 x_1, x_2, s_1, s_2 &amp;\geq 0
-\end{aligned}</p>
-<p>$$</p>
+\end{aligned}
+</div>
+<script type="math/tex; mode=display">
+\text{subject to} \quad
+\begin{aligned}
+x_1 + 2x_2 + s_1 &= 6 \\
+4x_1 + x_2 + s_2 &= 8 \\
+x_1, x_2, s_1, s_2 &\geq 0
+\end{aligned}
+</script>
+</div>
 <h4 id="_15">기저 변수와 비기저 변수 선택</h4>
 <p>이 문제에서 기저 변수는 <span class="arithmatex"><span class="MathJax_Preview">x_1</span><script type="math/tex">x_1</script></span>, <span class="arithmatex"><span class="MathJax_Preview">x_2</span><script type="math/tex">x_2</script></span>, <span class="arithmatex"><span class="MathJax_Preview">s_1</span><script type="math/tex">s_1</script></span>, <span class="arithmatex"><span class="MathJax_Preview">s_2</span><script type="math/tex">s_2</script></span> 중에서 두 개를 선택해야 한다. 일반적으로, 변수 중에서 슬랙 변수를 기저 변수로 먼저 선택하고, 나머지 변수를 비기저 변수로 두는 방식으로 초기 기저 해를 구할 수 있다.</p>
 <p>여기서 <span class="arithmatex"><span class="MathJax_Preview">s_1</span><script type="math/tex">s_1</script></span>과 <span class="arithmatex"><span class="MathJax_Preview">s_2</span><script type="math/tex">s_2</script></span>를 기저 변수로 선택하면, 기저 행렬 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{B}</span><script type="math/tex">\mathbf{B}</script></span>는 다음과 같이 구성된다:</p>
-<p>$$</p>
-<p>\mathbf{B} =
+<div class="arithmatex">
+<div class="MathJax_Preview">
+\mathbf{B} =
 \begin{pmatrix}
-1 &amp; 0 \
+1 &amp; 0 \\
 0 &amp; 1
-\end{pmatrix}</p>
-<p>$$</p>
+\end{pmatrix}
+</div>
+<script type="math/tex; mode=display">
+\mathbf{B} =
+\begin{pmatrix}
+1 & 0 \\
+0 & 1
+\end{pmatrix}
+</script>
+</div>
 <p>기저 변수인 <span class="arithmatex"><span class="MathJax_Preview">s_1</span><script type="math/tex">s_1</script></span>과 <span class="arithmatex"><span class="MathJax_Preview">s_2</span><script type="math/tex">s_2</script></span>의 값을 계산하면 다음과 같다:</p>
-<p>$$</p>
-<p>s_1 = 6 - (x_1 + 2x_2), \quad s_2 = 8 - (4x_1 + x_2)</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+s_1 = 6 - (x_1 + 2x_2), \quad s_2 = 8 - (4x_1 + x_2)
+</div>
+<script type="math/tex; mode=display">
+s_1 = 6 - (x_1 + 2x_2), \quad s_2 = 8 - (4x_1 + x_2)
+</script>
+</div>
 <h4 id="_16">비기저 변수의 값 결정</h4>
 <p>처음에는 <span class="arithmatex"><span class="MathJax_Preview">x_1 = 0</span><script type="math/tex">x_1 = 0</script></span>과 <span class="arithmatex"><span class="MathJax_Preview">x_2 = 0</span><script type="math/tex">x_2 = 0</script></span>으로 설정할 수 있다. 그러면 <span class="arithmatex"><span class="MathJax_Preview">s_1 = 6</span><script type="math/tex">s_1 = 6</script></span>, <span class="arithmatex"><span class="MathJax_Preview">s_2 = 8</span><script type="math/tex">s_2 = 8</script></span>이 되어, 이 초기 기저 해는 유효하다. 이 상태에서 Simplex 알고리즘은 목적 함수를 개선하기 위해 다른 기저 해로 이동하는 과정을 수행한다.</p>
 <h4 id="_17">기저 해 이동</h4>

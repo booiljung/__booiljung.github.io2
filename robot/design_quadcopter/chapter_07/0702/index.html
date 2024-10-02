@@ -101,58 +101,108 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 <ul>
 <li><strong>비례 제어 (Proportional Control, P)</strong>: 현재 오차(error)에 비례하여 제어 신호를 생성한다.</li>
 </ul>
-<p>$$</p>
-<p>u(t) = K_p \cdot e(t)</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+  u(t) = K_p \cdot e(t)
+</div>
+<script type="math/tex; mode=display">
+  u(t) = K_p \cdot e(t)
+</script>
+</div>
 <p>여기서 <span class="arithmatex"><span class="MathJax_Preview">K_p</span><script type="math/tex">K_p</script></span>는 비례 이득(proportional gain), <span class="arithmatex"><span class="MathJax_Preview">e(t)</span><script type="math/tex">e(t)</script></span>는 시간 <span class="arithmatex"><span class="MathJax_Preview">t</span><script type="math/tex">t</script></span>에서의 오차이다.</p>
 <ul>
 <li><strong>적분 제어 (Integral Control, I)</strong>: 오차의 누적값을 고려하여 제어 신호를 생성한다.</li>
 </ul>
-<p>$$</p>
-<p>u(t) = K_i \cdot \int_{0}^{t} e(\tau) d\tau</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+  u(t) = K_i \cdot \int_{0}^{t} e(\tau) d\tau
+</div>
+<script type="math/tex; mode=display">
+  u(t) = K_i \cdot \int_{0}^{t} e(\tau) d\tau
+</script>
+</div>
 <p>여기서 <span class="arithmatex"><span class="MathJax_Preview">K_i</span><script type="math/tex">K_i</script></span>는 적분 이득(integral gain)이다.</p>
 <ul>
 <li><strong>미분 제어 (Derivative Control, D)</strong>: 오차의 변화율을 고려하여 제어 신호를 생성한다.</li>
 </ul>
-<p>$$</p>
-<p>u(t) = K_d \cdot \frac{de(t)}{dt}</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+  u(t) = K_d \cdot \frac{de(t)}{dt}
+</div>
+<script type="math/tex; mode=display">
+  u(t) = K_d \cdot \frac{de(t)}{dt}
+</script>
+</div>
 <p>여기서 <span class="arithmatex"><span class="MathJax_Preview">K_d</span><script type="math/tex">K_d</script></span>는 미분 이득(derivative gain)이다.</p>
 <p>전체 PID 제어기 식은 다음과 같다.</p>
-<p>$$</p>
-<p>u(t) = K_p \cdot e(t) + K_i \cdot \int_{0}^{t} e(\tau) d\tau + K_d \cdot \frac{de(t)}{dt}</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+u(t) = K_p \cdot e(t) + K_i \cdot \int_{0}^{t} e(\tau) d\tau + K_d \cdot \frac{de(t)}{dt}
+</div>
+<script type="math/tex; mode=display">
+u(t) = K_p \cdot e(t) + K_i \cdot \int_{0}^{t} e(\tau) d\tau + K_d \cdot \frac{de(t)}{dt}
+</script>
+</div>
 <h4 id="state-feedback-control">상태 피드백 제어 (State Feedback Control)</h4>
 <p>상태 피드백 제어는 드론의 모든 상태 변수를 측정하고 이를 기반으로 제어 신호를 생성하는 방식이다. 이 방법은 상태 공간 모델을 사용하여 시스템을 설계하고 제어한다.</p>
 <p>상태 공간 표현:</p>
-<p>$$</p>
-<p>\mathbf{\dot{x}} = \mathbf{Ax} + \mathbf{Bu}</p>
-<p>$$</p>
-<p>$$</p>
-<p>\mathbf{y} = \mathbf{Cx} + \mathbf{Du}</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+\mathbf{\dot{x}} = \mathbf{Ax} + \mathbf{Bu}
+</div>
+<script type="math/tex; mode=display">
+\mathbf{\dot{x}} = \mathbf{Ax} + \mathbf{Bu}
+</script>
+</div>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+\mathbf{y} = \mathbf{Cx} + \mathbf{Du}
+</div>
+<script type="math/tex; mode=display">
+\mathbf{y} = \mathbf{Cx} + \mathbf{Du}
+</script>
+</div>
 <p>여기서 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{x}</span><script type="math/tex">\mathbf{x}</script></span>는 상태 벡터, <span class="arithmatex"><span class="MathJax_Preview">\mathbf{u}</span><script type="math/tex">\mathbf{u}</script></span>는 입력 벡터, <span class="arithmatex"><span class="MathJax_Preview">\mathbf{y}</span><script type="math/tex">\mathbf{y}</script></span>는 출력 벡터이다. <span class="arithmatex"><span class="MathJax_Preview">\mathbf{A}</span><script type="math/tex">\mathbf{A}</script></span>, <span class="arithmatex"><span class="MathJax_Preview">\mathbf{B}</span><script type="math/tex">\mathbf{B}</script></span>, <span class="arithmatex"><span class="MathJax_Preview">\mathbf{C}</span><script type="math/tex">\mathbf{C}</script></span>, <span class="arithmatex"><span class="MathJax_Preview">\mathbf{D}</span><script type="math/tex">\mathbf{D}</script></span>는 시스템 행렬이다.</p>
 <p>상태 피드백 제어법은 일반적으로 다음과 같은 형태를 갖는다.</p>
-<p>$$</p>
-<p>\mathbf{u} = -\mathbf{Kx}</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+\mathbf{u} = -\mathbf{Kx}
+</div>
+<script type="math/tex; mode=display">
+\mathbf{u} = -\mathbf{Kx}
+</script>
+</div>
 <p>여기서 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{K}</span><script type="math/tex">\mathbf{K}</script></span>는 상태 피드백 행렬이다.</p>
 <h4 id="lqr-linear-quadratic-regulator">LQR 제어기 (Linear Quadratic Regulator)</h4>
 <p>LQR 제어기는 시스템의 상태 공간 모델을 기반으로 최적의 제어 입력을 계산한다. 제어 목표는 상태와 제어 입력의 가중치 합계를 최소화하는 것이다.</p>
 <p>LQR 성능 지수는 다음과 같다.</p>
-<p>$$</p>
-<p>J = \int_{0}^{\infty} \left( \mathbf{x}^T \mathbf{Qx} + \mathbf{u}^T \mathbf{Ru} \right) dt</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+J = \int_{0}^{\infty} \left( \mathbf{x}^T \mathbf{Qx} + \mathbf{u}^T \mathbf{Ru} \right) dt
+</div>
+<script type="math/tex; mode=display">
+J = \int_{0}^{\infty} \left( \mathbf{x}^T \mathbf{Qx} + \mathbf{u}^T \mathbf{Ru} \right) dt
+</script>
+</div>
 <p>여기서 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{Q}</span><script type="math/tex">\mathbf{Q}</script></span>는 상태 가중치 행렬, <span class="arithmatex"><span class="MathJax_Preview">\mathbf{R}</span><script type="math/tex">\mathbf{R}</script></span>은 제어 입력 가중치 행렬이다.</p>
 <p>LQR 제어 입력은 다음과 같이 표현된다.</p>
-<p>$$</p>
-<p>\mathbf{u} = -\mathbf{Kx}</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+\mathbf{u} = -\mathbf{Kx}
+</div>
+<script type="math/tex; mode=display">
+\mathbf{u} = -\mathbf{Kx}
+</script>
+</div>
 <p>여기서 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{K}</span><script type="math/tex">\mathbf{K}</script></span>는 다음 리카티 방정식을 통해 얻은 피드백 행렬이다.</p>
-<p>$$</p>
-<p>\mathbf{A}^T \mathbf{P} + \mathbf{P} \mathbf{A} - \mathbf{P} \mathbf{B} \mathbf{R}^{-1} \mathbf{B}^T \mathbf{P} + \mathbf{Q} = 0</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+\mathbf{A}^T \mathbf{P} + \mathbf{P} \mathbf{A} - \mathbf{P} \mathbf{B} \mathbf{R}^{-1} \mathbf{B}^T \mathbf{P} + \mathbf{Q} = 0
+</div>
+<script type="math/tex; mode=display">
+\mathbf{A}^T \mathbf{P} + \mathbf{P} \mathbf{A} - \mathbf{P} \mathbf{B} \mathbf{R}^{-1} \mathbf{B}^T \mathbf{P} + \mathbf{Q} = 0
+</script>
+</div>
 <p><span class="arithmatex"><span class="MathJax_Preview">\mathbf{P}</span><script type="math/tex">\mathbf{P}</script></span>는 리카티 방정식의 해이다.</p>
 <h3 id="_2">예제 코드</h3>
 <h4 id="pid_1">PID 제어기 예제 코드</h4>

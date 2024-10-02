@@ -136,20 +136,35 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 <h4 id="_8">최소 제곱 문제 해결</h4>
 <p>QR 분해는 <strong>최소 제곱 문제(Least Squares Problem)</strong>를 푸는 데 있어서도 중요한 역할을 한다. 최소 제곱 문제는 주어진 선형 시스템 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{A}\mathbf{x} = \mathbf{b}</span><script type="math/tex">\mathbf{A}\mathbf{x} = \mathbf{b}</script></span>에 대해 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{b}</span><script type="math/tex">\mathbf{b}</script></span>와 가장 가까운 해 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{x}</span><script type="math/tex">\mathbf{x}</script></span>를 찾는 문제로, 과대결정된 시스템(overdetermined system)에서 주로 발생한다.</p>
 <p>QR 분해를 사용하면, 이 문제를 효율적으로 해결할 수 있다. 이를 위해, 먼저 행렬 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{A}</span><script type="math/tex">\mathbf{A}</script></span>를 QR 분해하여 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{A} = \mathbf{Q}\mathbf{R}</span><script type="math/tex">\mathbf{A} = \mathbf{Q}\mathbf{R}</script></span>로 표현한다. 이후 문제는 다음과 같이 변환된다:</p>
-<p>$$</p>
-<p>\mathbf{Q}\mathbf{R}\mathbf{x} = \mathbf{b}</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+\mathbf{Q}\mathbf{R}\mathbf{x} = \mathbf{b}
+</div>
+<script type="math/tex; mode=display">
+\mathbf{Q}\mathbf{R}\mathbf{x} = \mathbf{b}
+</script>
+</div>
 <p>여기서 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{Q}</span><script type="math/tex">\mathbf{Q}</script></span>는 직교 행렬이므로, 양변에 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{Q}^T</span><script type="math/tex">\mathbf{Q}^T</script></span>를 곱하여 다음과 같은 상삼각 행렬 방정식으로 변환할 수 있다:</p>
-<p>$$</p>
-<p>\mathbf{R}\mathbf{x} = \mathbf{Q}^T\mathbf{b}</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+\mathbf{R}\mathbf{x} = \mathbf{Q}^T\mathbf{b}
+</div>
+<script type="math/tex; mode=display">
+\mathbf{R}\mathbf{x} = \mathbf{Q}^T\mathbf{b}
+</script>
+</div>
 <p>이제 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{R}</span><script type="math/tex">\mathbf{R}</script></span>이 상삼각 행렬이므로, 이 방정식은 간단한 후진 대입(back substitution)을 통해 해 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{x}</span><script type="math/tex">\mathbf{x}</script></span>를 쉽게 구할 수 있다. 이 방법은 특히 대규모 데이터나 시스템에서 매우 효율적이다.</p>
 <h4 id="qr">고유값 계산을 위한 QR 알고리즘</h4>
 <p>QR 분해는 <strong>고유값 계산(Eigenvalue Computation)</strong>에도 중요한 역할을 한다. QR 알고리즘은 대규모 행렬의 고유값을 계산하는 데 널리 사용되는 방법으로, 이 알고리즘의 근간이 바로 QR 분해이다.</p>
 <p>QR 알고리즘의 기본 아이디어는 행렬 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{A}</span><script type="math/tex">\mathbf{A}</script></span>를 반복적으로 QR 분해하여, 다음과 같은 형태의 행렬을 생성하는 것이다:</p>
-<p>$$</p>
-<p>\mathbf{A}_{k+1} = \mathbf{R}_k \mathbf{Q}_k</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+\mathbf{A}_{k+1} = \mathbf{R}_k \mathbf{Q}_k
+</div>
+<script type="math/tex; mode=display">
+\mathbf{A}_{k+1} = \mathbf{R}_k \mathbf{Q}_k
+</script>
+</div>
 <p>여기서 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{A}_k = \mathbf{Q}_k\mathbf{R}_k</span><script type="math/tex">\mathbf{A}_k = \mathbf{Q}_k\mathbf{R}_k</script></span>는 <span class="arithmatex"><span class="MathJax_Preview">k</span><script type="math/tex">k</script></span>번째 단계에서의 QR 분해 결과이다. 반복이 진행될수록 행렬 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{A}_k</span><script type="math/tex">\mathbf{A}_k</script></span>는 상삼각 형태에 가까워지며, 이 상삼각 행렬의 대각선 요소가 원래 행렬 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{A}</span><script type="math/tex">\mathbf{A}</script></span>의 고유값에 근접하게 된다.</p>
 <p>이 방법은 대규모 고유값 문제를 해결하는 데 매우 효율적이며, 수학, 물리학, 공학 등 다양한 분야에서 널리 응용되고 있다.</p>
 <h4 id="qr_1">신호 처리 및 통신에서의 QR 분해 응용</h4>

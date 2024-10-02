@@ -157,13 +157,22 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 <h3 id="_4">물리적 특성</h3>
 <p><code>&lt;inertial&gt;</code> 태그는 링크의 질량과 관성(inertia)을 정의하는데 사용된다. 관성 행렬은 링크의 물리적 움직임을 시뮬레이션할 때 중요한 역할을 하며, URDF에서 이 값들을 직접 입력할 수 있다.</p>
 <p>관성 행렬 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{I}</span><script type="math/tex">\mathbf{I}</script></span>는 다음과 같은 3x3 대칭 행렬로 표현된다:</p>
-<p>$$</p>
-<p>\mathbf{I} = \begin{bmatrix}
-I_{xx} &amp; I_{xy} &amp; I_{xz} \
-I_{xy} &amp; I_{yy} &amp; I_{yz} \
+<div class="arithmatex">
+<div class="MathJax_Preview">
+\mathbf{I} = \begin{bmatrix}
+I_{xx} &amp; I_{xy} &amp; I_{xz} \\
+I_{xy} &amp; I_{yy} &amp; I_{yz} \\
 I_{xz} &amp; I_{yz} &amp; I_{zz}
-\end{bmatrix}</p>
-<p>$$</p>
+\end{bmatrix}
+</div>
+<script type="math/tex; mode=display">
+\mathbf{I} = \begin{bmatrix}
+I_{xx} & I_{xy} & I_{xz} \\
+I_{xy} & I_{yy} & I_{yz} \\
+I_{xz} & I_{yz} & I_{zz}
+\end{bmatrix}
+</script>
+</div>
 <p>URDF에서는 관성 행렬의 성분을 직접 정의하며, 이는 각 축에 대한 회전 관성(moment of inertia)을 나타낸다. 관성 행렬과 질량 <span class="arithmatex"><span class="MathJax_Preview">m</span><script type="math/tex">m</script></span>은 링크의 움직임을 정확하게 시뮬레이션하는 데 필수적이다.</p>
 <pre><code class="language-xml">&lt;inertial&gt;
   &lt;mass value=&quot;5.0&quot;/&gt;

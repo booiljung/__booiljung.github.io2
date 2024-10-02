@@ -116,13 +116,22 @@ transform = buffer.lookupTransform(&quot;target_frame&quot;, &quot;source_frame&
 </code></pre>
 <h4 id="5">5. 수학적 표현</h4>
 <p>TF와 TF2 모두 좌표 변환에서 수학적으로 동일한 개념을 사용한다. 변환 행렬 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{T}</span><script type="math/tex">\mathbf{T}</script></span>는 두 좌표계 간의 변환을 나타내며, 회전 행렬 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{R}</span><script type="math/tex">\mathbf{R}</script></span>과 변환 벡터 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{t}</span><script type="math/tex">\mathbf{t}</script></span>로 구성된다. TF2에서는 이러한 변환을 더 효과적으로 처리하며, 다음과 같은 형태로 좌표 변환이 정의된다:</p>
-<p>$$</p>
-<p>\mathbf{T} =
+<div class="arithmatex">
+<div class="MathJax_Preview">
+\mathbf{T} =
 \begin{bmatrix}
-\mathbf{R} &amp; \mathbf{t} \
+\mathbf{R} &amp; \mathbf{t} \\
 \mathbf{0}^\top &amp; 1
-\end{bmatrix}</p>
-<p>$$</p>
+\end{bmatrix}
+</div>
+<script type="math/tex; mode=display">
+\mathbf{T} =
+\begin{bmatrix}
+\mathbf{R} & \mathbf{t} \\
+\mathbf{0}^\top & 1
+\end{bmatrix}
+</script>
+</div>
 <p>여기서 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{R}</span><script type="math/tex">\mathbf{R}</script></span>은 회전 행렬이고, <span class="arithmatex"><span class="MathJax_Preview">\mathbf{t}</span><script type="math/tex">\mathbf{t}</script></span>는 변환 벡터다. 이 변환 행렬은 두 좌표계 간의 변환을 나타내며, 주어진 시간에 따라 달라질 수 있다. TF2는 이러한 변환을 시간에 따라 더 정확하게 처리하며, 특히 다중 센서 시스템에서 유용하다.</p>
 <h4 id="6">6. 성능 최적화</h4>
 <p>TF2는 성능 측면에서 TF보다 더욱 개선되었다. TF는 실시간 로봇 시스템에서 많은 좌표 변환 데이터를 처리해야 하는데, TF2는 이를 보다 효율적으로 관리할 수 있도록 설계되었다. 특히, 다중 쓰레드 환경에서의 성능이 TF에 비해 크게 향상되었다.</p>

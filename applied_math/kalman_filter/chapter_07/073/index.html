@@ -191,9 +191,14 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 <p>비선형 시스템에서 칼만 필터를 적용하기 위해 사용되는 주요 방법 중 하나는 <strong>선형화(Linearization)</strong> 기법이다. 가장 일반적으로 사용되는 선형화 기법은 <strong>테일러 급수 전개(Taylor Series Expansion)</strong>를 통한 근사화이다. 이 방법은 비선형 함수를 첫 번째 또는 두 번째 미분 항까지 전개하여 선형적으로 근사화하는 방법이다.</p>
 <h4 id="_7">일차 테일러 전개에 의한 선형화</h4>
 <p>비선형 함수 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{f}(\mathbf{x})</span><script type="math/tex">\mathbf{f}(\mathbf{x})</script></span>는 상태 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{x}_{k-1}</span><script type="math/tex">\mathbf{x}_{k-1}</script></span> 주변에서 다음과 같이 일차 테일러 급수로 근사화될 수 있다:</p>
-<p>$$</p>
-<p>\mathbf{f}(\mathbf{x}<em>{k-1}) \approx \mathbf{f}(\mathbf{\hat{x}}</em>{k-1}) + \mathbf{J}<em>{\mathbf{f}} (\mathbf{x}</em>{k-1} - \mathbf{\hat{x}}_{k-1})</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+\mathbf{f}(\mathbf{x}_{k-1}) \approx \mathbf{f}(\mathbf{\hat{x}}_{k-1}) + \mathbf{J}_{\mathbf{f}} (\mathbf{x}_{k-1} - \mathbf{\hat{x}}_{k-1})
+</div>
+<script type="math/tex; mode=display">
+\mathbf{f}(\mathbf{x}_{k-1}) \approx \mathbf{f}(\mathbf{\hat{x}}_{k-1}) + \mathbf{J}_{\mathbf{f}} (\mathbf{x}_{k-1} - \mathbf{\hat{x}}_{k-1})
+</script>
+</div>
 <p>여기서 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{\hat{x}}_{k-1}</span><script type="math/tex">\mathbf{\hat{x}}_{k-1}</script></span>는 상태 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{x}_{k-1}</span><script type="math/tex">\mathbf{x}_{k-1}</script></span>의 추정치이며, <span class="arithmatex"><span class="MathJax_Preview">\mathbf{J}_{\mathbf{f}}</span><script type="math/tex">\mathbf{J}_{\mathbf{f}}</script></span>는 함수 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{f}</span><script type="math/tex">\mathbf{f}</script></span>의 야코비(Jacobian) 행렬이다. 이 행렬은 상태 변수들에 대한 부분 도함수들로 구성되며, 비선형 시스템의 특정 지점에서의 선형 근사를 제공한다.</p>
 <p>이러한 선형화 과정은 본질적으로 근사적이기 때문에, 근사화가 정확하지 않을 경우 필터 성능이 크게 저하될 수 있다. 특히, 비선형성이 강한 시스템에서는 테일러 급수의 고차항을 무시함으로 인해 발생하는 오차가 매우 커질 수 있다. 이는 상태 추정 오차의 증가로 이어지고, 필터의 정확도와 신뢰성을 저하시킬 수 있다.</p>
 <h4 id="_8">근사화의 전파 오류</h4>

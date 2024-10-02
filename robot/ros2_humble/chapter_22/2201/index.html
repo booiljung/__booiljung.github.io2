@@ -177,13 +177,23 @@ sudo apt install ros-humble-rviz2
 <li><strong>ranges</strong>: 각도 범위에 따른 거리 값들의 배열. 이 값은 로봇의 주변 환경을 2D 거리 측정 데이터로 나타낸다.</li>
 </ul>
 <p>레이저 스캔의 각도 범위는 다음과 같이 정의된다:</p>
-<p>$$</p>
-<p>\mathbf{\theta} = [\theta_{min}, \theta_{max}]</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+\mathbf{\theta} = [\theta_{min}, \theta_{max}]
+</div>
+<script type="math/tex; mode=display">
+\mathbf{\theta} = [\theta_{min}, \theta_{max}]
+</script>
+</div>
 <p>거리 데이터 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{d}</span><script type="math/tex">\mathbf{d}</script></span>는 레이저 스캔에서 반환된 거리 값들의 배열로 나타낼 수 있다:</p>
-<p>$$</p>
-<p>\mathbf{d} = [d_1, d_2, \dots, d_n]</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+\mathbf{d} = [d_1, d_2, \dots, d_n]
+</div>
+<script type="math/tex; mode=display">
+\mathbf{d} = [d_1, d_2, \dots, d_n]
+</script>
+</div>
 <h3 id="pointcloud2">PointCloud2 데이터 시각화</h3>
 <p>3D 포인트 클라우드(PointCloud2) 데이터는 LiDAR, RGB-D 카메라 또는 기타 3D 센서를 사용하여 수집된 환경 정보를 시각화하는 데 사용된다. 포인트 클라우드는 3차원 공간에서 각 포인트의 위치를 정의하며, rviz2에서는 이를 직관적으로 확인할 수 있다.</p>
 <h4 id="pointcloud2_1">PointCloud2 데이터 퍼블리셔 설정</h4>
@@ -200,14 +210,24 @@ sudo apt install ros-humble-rviz2
 <li>데이터가 정상적으로 퍼블리싱되면 rviz2에서 3D 공간 상에 각 포인트들이 표시된다.</li>
 </ol>
 <p>포인트 클라우드는 3D 공간에서 좌표 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{p}_i = (x_i, y_i, z_i)</span><script type="math/tex">\mathbf{p}_i = (x_i, y_i, z_i)</script></span>로 정의된다. 각 포인트의 좌표는 다음과 같은 벡터로 표현된다:</p>
-<p>$$</p>
-<p>\mathbf{P} = \begin{bmatrix} 
-x_1 &amp; y_1 &amp; z_1 \
-x_2 &amp; y_2 &amp; z_2 \
-\vdots &amp; \vdots &amp; \vdots \
-x_n &amp; y_n &amp; z_n \
-\end{bmatrix}</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+\mathbf{P} = \begin{bmatrix} 
+x_1 &amp; y_1 &amp; z_1 \\
+x_2 &amp; y_2 &amp; z_2 \\
+\vdots &amp; \vdots &amp; \vdots \\
+x_n &amp; y_n &amp; z_n \\
+\end{bmatrix}
+</div>
+<script type="math/tex; mode=display">
+\mathbf{P} = \begin{bmatrix} 
+x_1 & y_1 & z_1 \\
+x_2 & y_2 & z_2 \\
+\vdots & \vdots & \vdots \\
+x_n & y_n & z_n \\
+\end{bmatrix}
+</script>
+</div>
 <p>rviz2에서는 이러한 좌표들을 사용하여 3D 공간 상에서 점들의 위치를 시각화한다. 각 포인트는 해당 위치에 3D 점으로 나타나며, 센서의 거리 데이터를 직관적으로 확인할 수 있다.</p>
 <h4 id="pointcloud2_2">PointCloud2의 색상 설정</h4>
 <p>포인트 클라우드 데이터는 색상 정보도 함께 포함할 수 있다. rviz2에서 포인트의 색상을 나타내기 위해 <strong>Color Transformer</strong> 설정을 사용할 수 있다. 포인트의 색상은 <code>rgb</code> 또는 <code>intensity</code> 필드를 기반으로 시각화되며, 사용자가 이를 원하는 방식으로 설정할 수 있다.</p>
@@ -215,12 +235,20 @@ x_n &amp; y_n &amp; z_n \
 <p>rviz2에서는 로봇의 각 구성 요소 또는 센서들이 서로 다른 좌표계를 가지고 있을 때, 이들 간의 변환을 시각적으로 확인할 수 있다. 이를 위해 ROS2의 TF2 라이브러리를 사용하며, 각 좌표계 간의 변환 정보를 시각화한다.</p>
 <h4 id="tf_1">TF 메시지의 구조</h4>
 <p>TF 메시지는 좌표계 간의 변환을 나타내며, 각 변환은 다음과 같은 수식으로 표현된다:</p>
-<p>$$</p>
-<p>\mathbf{T} = \begin{bmatrix} 
-\mathbf{R} &amp; \mathbf{t} \
-0 &amp; 1 \
-\end{bmatrix}</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+\mathbf{T} = \begin{bmatrix} 
+\mathbf{R} &amp; \mathbf{t} \\
+0 &amp; 1 \\
+\end{bmatrix}
+</div>
+<script type="math/tex; mode=display">
+\mathbf{T} = \begin{bmatrix} 
+\mathbf{R} & \mathbf{t} \\
+0 & 1 \\
+\end{bmatrix}
+</script>
+</div>
 <p>여기서 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{R}</span><script type="math/tex">\mathbf{R}</script></span>은 회전 행렬이고, <span class="arithmatex"><span class="MathJax_Preview">\mathbf{t}</span><script type="math/tex">\mathbf{t}</script></span>는 변환 벡터이다. </p>
 <p>rviz2에서는 이러한 변환 행렬을 기반으로 각 좌표계의 위치와 방향을 화살표로 표시한다. 화살표의 길이와 방향은 변환 행렬에 따라 결정된다.</p>
 <h4 id="tf_2">TF 시각화 설정</h4>
@@ -280,9 +308,14 @@ x_n &amp; y_n &amp; z_n \
 </ol>
 <h4 id="3d">마커를 이용한 3D 객체 시각화</h4>
 <p>마커는 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{P} = (x, y, z)</span><script type="math/tex">\mathbf{P} = (x, y, z)</script></span> 위치에 크기 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{S} = (s_x, s_y, s_z)</span><script type="math/tex">\mathbf{S} = (s_x, s_y, s_z)</script></span>와 색상 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{C} = (r, g, b, a)</span><script type="math/tex">\mathbf{C} = (r, g, b, a)</script></span>로 표현될 수 있다. 이를 수학적으로 나타내면:</p>
-<p>$$</p>
-<p>\mathbf{M} = \left{ \mathbf{P}, \mathbf{S}, \mathbf{C} \right}</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+\mathbf{M} = \left\{ \mathbf{P}, \mathbf{S}, \mathbf{C} \right\}
+</div>
+<script type="math/tex; mode=display">
+\mathbf{M} = \left\{ \mathbf{P}, \mathbf{S}, \mathbf{C} \right\}
+</script>
+</div>
 <p>여기서:
 - <span class="arithmatex"><span class="MathJax_Preview">\mathbf{P}</span><script type="math/tex">\mathbf{P}</script></span>는 마커의 위치 벡터이다.
 - <span class="arithmatex"><span class="MathJax_Preview">\mathbf{S}</span><script type="math/tex">\mathbf{S}</script></span>는 마커의 크기 벡터이다.
@@ -338,12 +371,20 @@ x_n &amp; y_n &amp; z_n \
 <p>각 데이터는 각도 <span class="arithmatex"><span class="MathJax_Preview">\theta</span><script type="math/tex">\theta</script></span>와 거리 <span class="arithmatex"><span class="MathJax_Preview">d</span><script type="math/tex">d</script></span>의 관계로 표현된다:</p>
 </li>
 </ul>
-<p>$$</p>
-<p>\mathbf{p}_i = \begin{bmatrix} 
-  d_i \cos \theta_i \ 
+<div class="arithmatex">
+<div class="MathJax_Preview">
+  \mathbf{p}_i = \begin{bmatrix} 
+  d_i \cos \theta_i \\ 
   d_i \sin \theta_i 
-  \end{bmatrix}</p>
-<p>$$</p>
+  \end{bmatrix}
+</div>
+<script type="math/tex; mode=display">
+  \mathbf{p}_i = \begin{bmatrix} 
+  d_i \cos \theta_i \\ 
+  d_i \sin \theta_i 
+  \end{bmatrix}
+</script>
+</div>
 <p>여기서 <span class="arithmatex"><span class="MathJax_Preview">i = 1, 2, \dots, n</span><script type="math/tex">i = 1, 2, \dots, n</script></span>이다.</p>
 <ul>
 <li>
@@ -404,9 +445,14 @@ x_n &amp; y_n &amp; z_n \
 <ul>
 <li>예를 들어, 로봇의 센서가 위치한 <strong>sensor_frame</strong>에서 얻은 데이터를 로봇의 <strong>base_link</strong> 프레임으로 변환하려면 다음과 같은 변환 행렬 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{T}_{\text{sensor} \to \text{base}}</span><script type="math/tex">\mathbf{T}_{\text{sensor} \to \text{base}}</script></span>을 적용해야 한다:</li>
 </ul>
-<p>$$</p>
-<p>\mathbf{p}<em>{\text{base}} = \mathbf{T}</em>{\text{sensor} \to \text{base}} \mathbf{p}_{\text{sensor}}</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+  \mathbf{p}_{\text{base}} = \mathbf{T}_{\text{sensor} \to \text{base}} \mathbf{p}_{\text{sensor}}
+</div>
+<script type="math/tex; mode=display">
+  \mathbf{p}_{\text{base}} = \mathbf{T}_{\text{sensor} \to \text{base}} \mathbf{p}_{\text{sensor}}
+</script>
+</div>
 <p>여기서 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{T}_{\text{sensor} \to \text{base}}</span><script type="math/tex">\mathbf{T}_{\text{sensor} \to \text{base}}</script></span>는 회전과 병진 변환을 포함하는 4x4 변환 행렬이다.</p>
 <h4 id="42">4.2 좌표 변환 시각화</h4>
 <p><strong>rviz2</strong>에서 TF2를 활용하여 좌표 변환을 시각화할 수 있다. 각 프레임 간의 관계를 선으로 연결하여 로봇의 여러 프레임을 한눈에 파악할 수 있으며, 이를 통해 센서 데이터가 어느 좌표계에서 나온 것인지 직관적으로 확인할 수 있다. </p>
@@ -451,9 +497,14 @@ x_n &amp; y_n &amp; z_n \
 <h4 id="55-gazebo">5.5 Gazebo에서의 좌표 변환과 시각화</h4>
 <p>Gazebo 시뮬레이터에서 사용되는 좌표계와 ROS2에서 사용하는 좌표계 간의 변환이 필요할 때, <strong>TF2</strong>를 사용하여 이를 처리할 수 있다. Gazebo에서 로봇의 위치 및 자세 정보를 <strong>base_link</strong> 또는 <strong>odom</strong>과 같은 프레임으로 변환하여 rviz2에서 시각화할 수 있다.</p>
 <p>예를 들어, Gazebo에서 얻은 로봇의 위치 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{p}_{\text{gazebo}} = [x, y, z]</span><script type="math/tex">\mathbf{p}_{\text{gazebo}} = [x, y, z]</script></span>를 ROS2에서 사용하는 좌표계로 변환하려면 TF2의 변환 행렬 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{T}_{\text{gazebo} \to \text{ros}}</span><script type="math/tex">\mathbf{T}_{\text{gazebo} \to \text{ros}}</script></span>을 적용하여 다음과 같이 변환할 수 있다:</p>
-<p>$$</p>
-<p>\mathbf{p}<em>{\text{ros}} = \mathbf{T}</em>{\text{gazebo} \to \text{ros}} \mathbf{p}_{\text{gazebo}}</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+\mathbf{p}_{\text{ros}} = \mathbf{T}_{\text{gazebo} \to \text{ros}} \mathbf{p}_{\text{gazebo}}
+</div>
+<script type="math/tex; mode=display">
+\mathbf{p}_{\text{ros}} = \mathbf{T}_{\text{gazebo} \to \text{ros}} \mathbf{p}_{\text{gazebo}}
+</script>
+</div>
 <h4 id="56-gazebo">5.6 Gazebo에서의 로봇 모델 시각화</h4>
 <p>Gazebo는 로봇 모델을 시뮬레이션 환경에 배치하여 시각화할 수 있는 기능을 제공한다. 이 로봇 모델은 <strong>URDF (Unified Robot Description Format)</strong>나 <strong>SDF (Simulation Description Format)</strong>로 정의된다. 이러한 형식으로 정의된 로봇 모델을 Gazebo에서 불러와 시뮬레이션할 수 있으며, 이를 rviz2에서 실시간으로 시각화할 수 있다.</p>
 <h5 id="561-urdfsdf">5.6.1 URDF/SDF를 통한 로봇 모델링</h5>
@@ -496,9 +547,14 @@ x_n &amp; y_n &amp; z_n \
 <ul>
 <li><strong>LaserScan</strong> 데이터는 벡터 형식으로 표현된다: </li>
 </ul>
-<p>$$</p>
-<p>\mathbf{d} = [d_1, d_2, \dots, d_n]</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+  \mathbf{d} = [d_1, d_2, \dots, d_n]
+</div>
+<script type="math/tex; mode=display">
+  \mathbf{d} = [d_1, d_2, \dots, d_n]
+</script>
+</div>
 <p>여기서 <span class="arithmatex"><span class="MathJax_Preview">d_i</span><script type="math/tex">d_i</script></span>는 로봇으로부터의 거리이며, <span class="arithmatex"><span class="MathJax_Preview">\theta_i</span><script type="math/tex">\theta_i</script></span>는 각도이다.</p>
 <p>rviz2에서 LaserScan 데이터를 시각화하면, 로봇이 인식한 주변 환경을 실시간으로 확인할 수 있다. 이 데이터는 로봇의 장애물 회피, 환경 매핑 등에 사용된다.</p>
 <h5 id="582">5.8.2 카메라 데이터 시각화</h5>
@@ -506,9 +562,14 @@ x_n &amp; y_n &amp; z_n \
 <ul>
 <li>카메라 데이터는 2D 이미지 배열로 표현되며, 각 픽셀은 RGB 값을 갖는다:</li>
 </ul>
-<p>$$</p>
-<p>\mathbf{I} = { \mathbf{I}_{ij} \mid i = 1, \dots, h; j = 1, \dots, w }</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+  \mathbf{I} = \{ \mathbf{I}_{ij} \mid i = 1, \dots, h; j = 1, \dots, w \}
+</div>
+<script type="math/tex; mode=display">
+  \mathbf{I} = \{ \mathbf{I}_{ij} \mid i = 1, \dots, h; j = 1, \dots, w \}
+</script>
+</div>
 <p>여기서 <span class="arithmatex"><span class="MathJax_Preview">h</span><script type="math/tex">h</script></span>는 이미지의 높이, <span class="arithmatex"><span class="MathJax_Preview">w</span><script type="math/tex">w</script></span>는 이미지의 너비, <span class="arithmatex"><span class="MathJax_Preview">\mathbf{I}_{ij}</span><script type="math/tex">\mathbf{I}_{ij}</script></span>는 해당 좌표의 픽셀 값이다.</p>
 <h5 id="583-imu">5.8.3 IMU 데이터 시각화</h5>
 <p>IMU(Inertial Measurement Unit) 데이터는 <strong>sensor_msgs/Imu</strong> 메시지 타입으로 퍼블리싱되며, 이는 로봇의 가속도, 각속도, 자세(오리엔테이션) 정보를 포함한다. IMU 데이터는 주로 로봇의 균형 유지나 동작 제어에 사용된다.</p>
@@ -521,18 +582,28 @@ x_n &amp; y_n &amp; z_n \
 <ul>
 <li>GPS 데이터는 위도, 경도, 고도 <span class="arithmatex"><span class="MathJax_Preview">(\phi, \lambda, h)</span><script type="math/tex">(\phi, \lambda, h)</script></span>로 표현된다:</li>
 </ul>
-<p>$$</p>
-<p>\mathbf{p}_{\text{GPS}} = [\phi, \lambda, h]</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+  \mathbf{p}_{\text{GPS}} = [\phi, \lambda, h]
+</div>
+<script type="math/tex; mode=display">
+  \mathbf{p}_{\text{GPS}} = [\phi, \lambda, h]
+</script>
+</div>
 <p>여기서 <span class="arithmatex"><span class="MathJax_Preview">\phi</span><script type="math/tex">\phi</script></span>는 위도, <span class="arithmatex"><span class="MathJax_Preview">\lambda</span><script type="math/tex">\lambda</script></span>는 경도, <span class="arithmatex"><span class="MathJax_Preview">h</span><script type="math/tex">h</script></span>는 고도이다.</p>
 <p>GPS 데이터는 실시간으로 로봇의 위치 변화를 시각적으로 확인할 수 있으며, 이를 통해 로봇의 이동 경로를 추적하고 분석할 수 있다.</p>
 <h4 id="59">5.9 실시간 시뮬레이션 데이터 분석</h4>
 <p>rviz2를 통해 시뮬레이션 데이터를 시각화하는 것 외에도, 실시간으로 데이터를 분석하고 문제를 해결하는 것이 중요하다. 시각화 도구를 사용하여 실시간으로 데이터를 모니터링하고, 이를 기반으로 로봇의 동작을 수정할 수 있다.</p>
 <h5 id="591">5.9.1 실시간 경로 추적</h5>
 <p>로봇의 경로 데이터를 실시간으로 시각화하면, 로봇이 계획된 경로를 얼마나 정확하게 따르고 있는지 분석할 수 있다. 이때, 경로 데이터는 <strong>nav_msgs/Path</strong> 메시지 타입으로 퍼블리싱되며, 경로는 일련의 위치 좌표로 구성된다:</p>
-<p>$$</p>
-<p>\mathbf{P} = { \mathbf{p}_1, \mathbf{p}_2, \dots, \mathbf{p}_n }</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+\mathbf{P} = \{ \mathbf{p}_1, \mathbf{p}_2, \dots, \mathbf{p}_n \}
+</div>
+<script type="math/tex; mode=display">
+\mathbf{P} = \{ \mathbf{p}_1, \mathbf{p}_2, \dots, \mathbf{p}_n \}
+</script>
+</div>
 <p>여기서 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{p}_i = [x_i, y_i, z_i]</span><script type="math/tex">\mathbf{p}_i = [x_i, y_i, z_i]</script></span>는 로봇의 특정 시점에서의 위치를 나타낸다. rviz2에서 경로 데이터를 시각화하면, 로봇의 실시간 경로 추적 성능을 시각적으로 확인할 수 있다.</p>
 <h5 id="592">5.9.2 로봇 상태 모니터링</h5>
 <p>실시간으로 로봇의 상태를 모니터링하는 것은 로봇의 동작을 분석하고 문제가 발생했을 때 신속하게 대처하는 데 필수적이다. 로봇의 상태는 <strong>odometry</strong>, <strong>IMU</strong>, <strong>GPS</strong> 데이터 등을 포함하며, 이를 통해 로봇의 자세, 속도, 위치 등을 실시간으로 확인할 수 있다.</p>

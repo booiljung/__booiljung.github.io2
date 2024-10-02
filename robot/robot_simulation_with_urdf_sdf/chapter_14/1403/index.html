@@ -165,13 +165,22 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 &lt;/inertial&gt;
 </code></pre>
 <p>여기서 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{I}</span><script type="math/tex">\mathbf{I}</script></span>는 관성 텐서를 나타내며, 다음과 같은 행렬로 표현된다.</p>
-<p>$$</p>
-<p>\mathbf{I} = \begin{bmatrix}
-I_{xx} &amp; I_{xy} &amp; I_{xz} \
-I_{xy} &amp; I_{yy} &amp; I_{yz} \
+<div class="arithmatex">
+<div class="MathJax_Preview">
+\mathbf{I} = \begin{bmatrix}
+I_{xx} &amp; I_{xy} &amp; I_{xz} \\
+I_{xy} &amp; I_{yy} &amp; I_{yz} \\
 I_{xz} &amp; I_{yz} &amp; I_{zz}
-\end{bmatrix}</p>
-<p>$$</p>
+\end{bmatrix}
+</div>
+<script type="math/tex; mode=display">
+\mathbf{I} = \begin{bmatrix}
+I_{xx} & I_{xy} & I_{xz} \\
+I_{xy} & I_{yy} & I_{yz} \\
+I_{xz} & I_{yz} & I_{zz}
+\end{bmatrix}
+</script>
+</div>
 <p>이 관성 행렬은 물체가 각 축을 기준으로 회전할 때 발생하는 저항을 나타내며, 물체의 운동 방정식에서 중요한 역할을 한다.</p>
 <h3 id="_7">충돌 후 반발과 에너지 보존</h3>
 <p>물리 엔진에서 물체 간의 충돌이 발생할 때, 충돌 후 에너지의 보존 여부를 설정할 수 있다. 이는 반발 계수(복원 계수)로 정의되며, 값이 0이면 충돌 후 에너지가 전부 소모되고, 1이면 에너지가 전부 보존된다.</p>
@@ -182,9 +191,14 @@ I_{xz} &amp; I_{yz} &amp; I_{zz}
 <p>이 설정은 충돌이 발생했을 때 두 물체가 얼마나 반발할지를 결정하며, 이를 통해 시뮬레이션에서 더 현실적인 물리적 반응을 구현할 수 있다.</p>
 <h3 id="_8">마찰력의 수학적 모델</h3>
 <p>마찰력은 두 물체 간의 접촉 표면에서 발생하는 저항력으로, 이는 물리 엔진에서 다음과 같은 수식으로 표현된다.</p>
-<p>$$</p>
-<p>\mathbf{F}_{\text{friction}} = \mu \mathbf{N}</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+\mathbf{F}_{\text{friction}} = \mu \mathbf{N}
+</div>
+<script type="math/tex; mode=display">
+\mathbf{F}_{\text{friction}} = \mu \mathbf{N}
+</script>
+</div>
 <p>여기서 <span class="arithmatex"><span class="MathJax_Preview">\mu</span><script type="math/tex">\mu</script></span>는 마찰 계수, <span class="arithmatex"><span class="MathJax_Preview">\mathbf{N}</span><script type="math/tex">\mathbf{N}</script></span>은 접촉 면에서 발생하는 수직 힘이다. 이 식은 물체가 움직이거나 정지해 있을 때 발생하는 마찰력을 설명하며, 시뮬레이션 환경에서 중요한 역할을 한다.</p>
 
   <br>

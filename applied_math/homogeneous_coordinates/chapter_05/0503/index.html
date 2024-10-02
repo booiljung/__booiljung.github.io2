@@ -128,21 +128,35 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 </ol>
 <h3 id="intrinsic-mathbfkmathbfk">카메라 Intrinsic 행렬 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{K}</span><script type="math/tex">\mathbf{K}</script></span>:</h3>
 <p>이 매개변수는 다음과 같은 행렬 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{K}</span><script type="math/tex">\mathbf{K}</script></span>로 표현된다:</p>
-<p>$$</p>
-<p>\mathbf{K} = \begin{pmatrix}
-f_x &amp; 0 &amp; c_x \
-0 &amp; f_y &amp; c_y \
+<div class="arithmatex">
+<div class="MathJax_Preview">
+\mathbf{K} = \begin{pmatrix}
+f_x &amp; 0 &amp; c_x \\
+0 &amp; f_y &amp; c_y \\
 0 &amp; 0 &amp; 1
 \end{pmatrix}
-$$</p>
+</div>
+<script type="math/tex; mode=display">
+\mathbf{K} = \begin{pmatrix}
+f_x & 0 & c_x \\
+0 & f_y & c_y \\
+0 & 0 & 1
+\end{pmatrix}
+</script>
+</div>
 <p>여기서 <span class="arithmatex"><span class="MathJax_Preview">f_x</span><script type="math/tex">f_x</script></span>와 <span class="arithmatex"><span class="MathJax_Preview">f_y</span><script type="math/tex">f_y</script></span>는 각각 <span class="arithmatex"><span class="MathJax_Preview">f \cdot s_x</span><script type="math/tex">f \cdot s_x</script></span>와 <span class="arithmatex"><span class="MathJax_Preview">f \cdot s_y</span><script type="math/tex">f \cdot s_y</script></span>로 정의된다.</p>
 <h3 id="extrinsic">Extrinsic 매개변수</h3>
 <p>Extrinsic 매개변수는 카메라의 위치와 방향에 따른 3D 공간의 좌표계 간의 변환을 나타낸다. 이 변환은 회전 행렬 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{R}</span><script type="math/tex">\mathbf{R}</script></span>와 변환 벡터 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{t}</span><script type="math/tex">\mathbf{t}</script></span>로 표현되며, 카메라 좌표계에서 월드 좌표계로 매핑한다.</p>
 <h3 id="_4">전체 투영 행렬</h3>
 <p>전체 투영 행렬 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{P}</span><script type="math/tex">\mathbf{P}</script></span>는 Intrinsic 행렬 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{K}</span><script type="math/tex">\mathbf{K}</script></span>와 Extrinsic 행렬의 곱으로 나타낼 수 있다:</p>
-<p>$$</p>
-<p>\mathbf{P} = \mathbf{K} [\mathbf{R} | \mathbf{t}] 
-$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+\mathbf{P} = \mathbf{K} [\mathbf{R} | \mathbf{t}] 
+</div>
+<script type="math/tex; mode=display">
+\mathbf{P} = \mathbf{K} [\mathbf{R} | \mathbf{t}] 
+</script>
+</div>
 <p>여기서 <span class="arithmatex"><span class="MathJax_Preview">[\mathbf{R} | \mathbf{t}]</span><script type="math/tex">[\mathbf{R} | \mathbf{t}]</script></span>는 3x4 행렬로, <span class="arithmatex"><span class="MathJax_Preview">\mathbf{R}</span><script type="math/tex">\mathbf{R}</script></span>은 3x3 회전 행렬, <span class="arithmatex"><span class="MathJax_Preview">\mathbf{t}</span><script type="math/tex">\mathbf{t}</script></span>는 3x1 변환 벡터이다.</p>
 <hr />
 <p>이제 기본 매트릭스 변환과 관련된 세부 사항을 다루겠다.</p>
@@ -150,44 +164,81 @@ $$</p>
 <p>기본 매트릭스 변환은 원래 3D 점을 풀 체인으로 2D 이미지 평면으로 변환하는 과정에서 사용된다. 이 과정은 카메라의 물리적 배치와 내부 특성을 고려한 일련의 선형 변환들로 이루어진다.</p>
 <h3 id="mathbfrmathbfr">회전 행렬 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{R}</span><script type="math/tex">\mathbf{R}</script></span></h3>
 <p>회전 행렬은 3D 공간에서 카메라의 방향(또는 자세)을 나타내는 데 사용된다. 회전 행렬 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{R}</span><script type="math/tex">\mathbf{R}</script></span>은 정규 직교 행렬로, 3D 벡터를 다른 방향으로 회전시킨다. 예를 들어, 월드 좌표계에서 카메라 좌표계로 변환하기 위해 사용할 수 있다.</p>
-<p>$$</p>
-<p>\mathbf{R} = \begin{pmatrix}
-r_{11} &amp; r_{12} &amp; r_{13} \
-r_{21} &amp; r_{22} &amp; r_{23} \
+<div class="arithmatex">
+<div class="MathJax_Preview">
+\mathbf{R} = \begin{pmatrix}
+r_{11} &amp; r_{12} &amp; r_{13} \\
+r_{21} &amp; r_{22} &amp; r_{23} \\
 r_{31} &amp; r_{32} &amp; r_{33}
 \end{pmatrix} 
-$$</p>
+</div>
+<script type="math/tex; mode=display">
+\mathbf{R} = \begin{pmatrix}
+r_{11} & r_{12} & r_{13} \\
+r_{21} & r_{22} & r_{23} \\
+r_{31} & r_{32} & r_{33}
+\end{pmatrix} 
+</script>
+</div>
 <h3 id="mathbftmathbft">변환 벡터 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{t}</span><script type="math/tex">\mathbf{t}</script></span></h3>
 <p>변환 벡터는 카메라의 위치를 나타내는 3D 벡터이다. 회전 행렬과 함께 사용되어 카메라 좌표계로의 변환을 완성한다.</p>
-<p>$$</p>
-<p>\mathbf{t} = \begin{pmatrix}
-t_x \
-t_y \
+<div class="arithmatex">
+<div class="MathJax_Preview">
+\mathbf{t} = \begin{pmatrix}
+t_x \\
+t_y \\
 t_z
 \end{pmatrix} 
-$$</p>
+</div>
+<script type="math/tex; mode=display">
+\mathbf{t} = \begin{pmatrix}
+t_x \\
+t_y \\
+t_z
+\end{pmatrix} 
+</script>
+</div>
 <p>이렇게 해서 만든 3x4 Extrinsic 행렬은 다음과 같이 표현된다:</p>
-<p>$$</p>
-<p>[\mathbf{R} | \mathbf{t}] = \begin{pmatrix}
-r_{11} &amp; r_{12} &amp; r_{13} &amp; t_x \
-r_{21} &amp; r_{22} &amp; r_{23} &amp; t_y \
+<div class="arithmatex">
+<div class="MathJax_Preview">
+[\mathbf{R} | \mathbf{t}] = \begin{pmatrix}
+r_{11} &amp; r_{12} &amp; r_{13} &amp; t_x \\
+r_{21} &amp; r_{22} &amp; r_{23} &amp; t_y \\
 r_{31} &amp; r_{32} &amp; r_{33} &amp; t_z
 \end{pmatrix} 
-$$</p>
+</div>
+<script type="math/tex; mode=display">
+[\mathbf{R} | \mathbf{t}] = \begin{pmatrix}
+r_{11} & r_{12} & r_{13} & t_x \\
+r_{21} & r_{22} & r_{23} & t_y \\
+r_{31} & r_{32} & r_{33} & t_z
+\end{pmatrix} 
+</script>
+</div>
 <h3 id="_6">전체 투영 과정을 요약하면</h3>
 <p>3D 동차 좌표 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{P_w}=(X_w, Y_w, Z_w, 1)</span><script type="math/tex">\mathbf{P_w}=(X_w, Y_w, Z_w, 1)</script></span>가 주어졌을 때, 카메라 좌표계로 변환 후 이미지 평면으로 투영하는 과정은 다음과 같다:</p>
 <ol>
 <li><strong>카메라 좌표계로 변환</strong>: </li>
 </ol>
-<p>$$
-   \mathbf{P_c} = \mathbf{R} \mathbf{P_w} + \mathbf{t}</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+   \mathbf{P_c} = \mathbf{R} \mathbf{P_w} + \mathbf{t}
+</div>
+<script type="math/tex; mode=display">
+   \mathbf{P_c} = \mathbf{R} \mathbf{P_w} + \mathbf{t}
+</script>
+</div>
 <ol>
 <li><strong>이미지 평면으로 투영</strong>: </li>
 </ol>
-<p>$$
-   \mathbf{p_h} = \mathbf{K} [\mathbf{R} | \mathbf{t}] \mathbf{P_w}</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+   \mathbf{p_h} = \mathbf{K} [\mathbf{R} | \mathbf{t}] \mathbf{P_w}
+</div>
+<script type="math/tex; mode=display">
+   \mathbf{p_h} = \mathbf{K} [\mathbf{R} | \mathbf{t}] \mathbf{P_w}
+</script>
+</div>
 <p>여기서 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{p_h}</span><script type="math/tex">\mathbf{p_h}</script></span>는 동차 좌표로 표현된 2D 이미지 점이다.</p>
 <h3 id="_7">최종 이미지 좌표로 변환</h3>
 <p>동차 좌표 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{p_h} = (x_h, y_h, w_h)^T</span><script type="math/tex">\mathbf{p_h} = (x_h, y_h, w_h)^T</script></span>를 2D 이미지 좌표로 변환하는 최종 단계는 동차 좌표의 z성분(w_h)으로 나누는 것이다:</p>

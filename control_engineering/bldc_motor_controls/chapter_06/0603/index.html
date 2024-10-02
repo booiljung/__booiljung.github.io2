@@ -114,9 +114,14 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 <li><strong>주파수(f)</strong>: 주기의 역수, 즉 <span class="arithmatex"><span class="MathJax_Preview">f = \frac{1}{T}</span><script type="math/tex">f = \frac{1}{T}</script></span>.</li>
 <li><strong>듀티 사이클(Duty Cycle)</strong>: 한 주기 동안 신호가 HIGH 상태에 있는 비율로, 이는 퍼센트(%)로 표현된다. 듀티 사이클 <span class="arithmatex"><span class="MathJax_Preview">D</span><script type="math/tex">D</script></span>는 다음과 같이 정의된다.</li>
 </ul>
-<p>$$
-  D = \frac{T_{on}}{T} \times 100</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+  D = \frac{T_{on}}{T} \times 100
+</div>
+<script type="math/tex; mode=display">
+  D = \frac{T_{on}}{T} \times 100
+</script>
+</div>
 <p>여기서 <span class="arithmatex"><span class="MathJax_Preview">T_{on}</span><script type="math/tex">T_{on}</script></span>은 신호가 HIGH 상태에 있는 시간이다.</p>
 <h3 id="pwm_1">PWM 신호 생성 방법</h3>
 <p>PWM 신호를 생성하는 방법에는 여러 가지가 있지만, 일반적으로 마이크로컨트롤러(MCU)를 사용하여 구현한다. 이 절에서는 PWM 신호를 생성하기 위한 다양한 방법을 설명한다.</p>

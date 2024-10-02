@@ -108,9 +108,14 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 <p>경로 최적화는 특정 목표 지점으로 이동하는 동안, 주어진 제약 조건 하에서 이동 경로를 최소화하거나 최적화하는 방법을 다룬다. 이를 위해 경로를 계산하는 알고리즘들은 여러 가지 기법을 사용하며, 이 과정에서 시간, 에너지, 거리, 그리고 동적 제약 조건 등을 고려할 수 있다. 경로 최적화는 로봇 공학, 항공우주, 생체역학 등 다양한 분야에서 사용된다.</p>
 <h3 id="_2">목적 함수</h3>
 <p>경로 최적화에서 기본적으로 사용되는 방법은 목적 함수를 설정하는 것이다. 이 목적 함수는 시스템이 경로를 따르는 동안 최소화하거나 최대화하고자 하는 목표를 정의한다. 일반적으로 다음과 같은 형태로 나타난다:</p>
-<p>$$</p>
-<p>J = \int_{t_0}^{t_f} L(\mathbf{x}(t), \mathbf{u}(t), t) \, dt</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+J = \int_{t_0}^{t_f} L(\mathbf{x}(t), \mathbf{u}(t), t) \, dt
+</div>
+<script type="math/tex; mode=display">
+J = \int_{t_0}^{t_f} L(\mathbf{x}(t), \mathbf{u}(t), t) \, dt
+</script>
+</div>
 <p>여기서,
 - <span class="arithmatex"><span class="MathJax_Preview">J</span><script type="math/tex">J</script></span>는 최적화하려는 목적 함수 값
 - <span class="arithmatex"><span class="MathJax_Preview">t_0</span><script type="math/tex">t_0</script></span>와 <span class="arithmatex"><span class="MathJax_Preview">t_f</span><script type="math/tex">t_f</script></span>는 초기 시간과 종료 시간
@@ -123,9 +128,14 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 <li><strong>상태 방정식</strong>:<br />
    상태 벡터 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{x}(t)</span><script type="math/tex">\mathbf{x}(t)</script></span>는 시스템의 동역학에 의해 정의된다. 이 방정식은 일반적으로 다음과 같이 나타낸다:</li>
 </ol>
-<p>$$</p>
-<p>\dot{\mathbf{x}}(t) = \mathbf{f}(\mathbf{x}(t), \mathbf{u}(t), t)</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+   \dot{\mathbf{x}}(t) = \mathbf{f}(\mathbf{x}(t), \mathbf{u}(t), t)
+</div>
+<script type="math/tex; mode=display">
+   \dot{\mathbf{x}}(t) = \mathbf{f}(\mathbf{x}(t), \mathbf{u}(t), t)
+</script>
+</div>
 <p>여기서,<br />
    - <span class="arithmatex"><span class="MathJax_Preview">\dot{\mathbf{x}}(t)</span><script type="math/tex">\dot{\mathbf{x}}(t)</script></span>는 상태 벡터의 시간에 따른 변화율 (즉, 미분값)
    - <span class="arithmatex"><span class="MathJax_Preview">\mathbf{f}(\mathbf{x}, \mathbf{u}, t)</span><script type="math/tex">\mathbf{f}(\mathbf{x}, \mathbf{u}, t)</script></span>는 시스템의 동역학을 나타내는 함수</p>
@@ -133,25 +143,40 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 <li><strong>초기 및 경계 조건</strong>:<br />
    초기 상태 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{x}(t_0)</span><script type="math/tex">\mathbf{x}(t_0)</script></span>와 종료 상태 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{x}(t_f)</span><script type="math/tex">\mathbf{x}(t_f)</script></span>가 주어진다.</li>
 </ol>
-<p>$$</p>
-<p>\mathbf{x}(t_0) = \mathbf{x}_0, \quad \mathbf{x}(t_f) = \mathbf{x}_f</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+   \mathbf{x}(t_0) = \mathbf{x}_0, \quad \mathbf{x}(t_f) = \mathbf{x}_f
+</div>
+<script type="math/tex; mode=display">
+   \mathbf{x}(t_0) = \mathbf{x}_0, \quad \mathbf{x}(t_f) = \mathbf{x}_f
+</script>
+</div>
 <ol>
 <li><strong>경로 제약 조건</strong>:<br />
    경로 상에서 시스템의 상태나 제어 입력에 대해 다양한 제약 조건이 주어질 수 있다. 이러한 제약 조건은 다음과 같은 형태로 표현된다:</li>
 </ol>
-<p>$$</p>
-<p>\mathbf{g}(\mathbf{x}(t), \mathbf{u}(t), t) \leq 0</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+   \mathbf{g}(\mathbf{x}(t), \mathbf{u}(t), t) \leq 0
+</div>
+<script type="math/tex; mode=display">
+   \mathbf{g}(\mathbf{x}(t), \mathbf{u}(t), t) \leq 0
+</script>
+</div>
 <p>여기서 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{g}</span><script type="math/tex">\mathbf{g}</script></span>는 경로 제약을 나타내는 벡터 함수이다.</p>
 <h3 id="_4">최적 제어 이론</h3>
 <p>경로 최적화 문제는 최적 제어 이론의 방법론을 통해 해결될 수 있다. 이를 위해 일반적으로 해밀턴-자코비-벨만(HJB) 방정식이나 벨만의 원리 등을 사용하며, 경로의 시간에 따른 최적화 문제를 동적으로 해결할 수 있다.</p>
 <h3 id="_5">해밀턴 함수</h3>
 <p>최적 경로를 찾기 위해 사용하는 중요한 도구 중 하나는 해밀턴 함수이다. 이 함수는 상태 벡터, 제어 입력, 그리고 보조 변수(라그랑주 승수)를 결합하여 최적화 문제를 푸는 방법을 제공한다.</p>
 <p>해밀턴 함수 <span class="arithmatex"><span class="MathJax_Preview">H</span><script type="math/tex">H</script></span>는 다음과 같이 정의된다:</p>
-<p>$$</p>
-<p>H(\mathbf{x}(t), \mathbf{u}(t), \mathbf{\lambda}(t), t) = L(\mathbf{x}(t), \mathbf{u}(t), t) + \mathbf{\lambda}^T(t) \mathbf{f}(\mathbf{x}(t), \mathbf{u}(t), t)</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+H(\mathbf{x}(t), \mathbf{u}(t), \mathbf{\lambda}(t), t) = L(\mathbf{x}(t), \mathbf{u}(t), t) + \mathbf{\lambda}^T(t) \mathbf{f}(\mathbf{x}(t), \mathbf{u}(t), t)
+</div>
+<script type="math/tex; mode=display">
+H(\mathbf{x}(t), \mathbf{u}(t), \mathbf{\lambda}(t), t) = L(\mathbf{x}(t), \mathbf{u}(t), t) + \mathbf{\lambda}^T(t) \mathbf{f}(\mathbf{x}(t), \mathbf{u}(t), t)
+</script>
+</div>
 <p>여기서,
 - <span class="arithmatex"><span class="MathJax_Preview">\mathbf{\lambda}(t)</span><script type="math/tex">\mathbf{\lambda}(t)</script></span>는 시간에 따른 보조 변수 (또는 라그랑주 승수)</p>
 <h3 id="_6">필요조건: 해밀턴 방정식</h3>
@@ -159,27 +184,47 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 <ol>
 <li><strong>상태 방정식</strong>:</li>
 </ol>
-<p>$$</p>
-<p>\dot{\mathbf{x}}(t) = \frac{\partial H}{\partial \mathbf{\lambda}} = \mathbf{f}(\mathbf{x}(t), \mathbf{u}(t), t)</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+   \dot{\mathbf{x}}(t) = \frac{\partial H}{\partial \mathbf{\lambda}} = \mathbf{f}(\mathbf{x}(t), \mathbf{u}(t), t)
+</div>
+<script type="math/tex; mode=display">
+   \dot{\mathbf{x}}(t) = \frac{\partial H}{\partial \mathbf{\lambda}} = \mathbf{f}(\mathbf{x}(t), \mathbf{u}(t), t)
+</script>
+</div>
 <ol>
 <li><strong>보조 변수 방정식</strong>:</li>
 </ol>
-<p>$$</p>
-<p>\dot{\mathbf{\lambda}}(t) = -\frac{\partial H}{\partial \mathbf{x}} = -\frac{\partial L}{\partial \mathbf{x}} - \mathbf{\lambda}^T(t) \frac{\partial \mathbf{f}}{\partial \mathbf{x}}</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+   \dot{\mathbf{\lambda}}(t) = -\frac{\partial H}{\partial \mathbf{x}} = -\frac{\partial L}{\partial \mathbf{x}} - \mathbf{\lambda}^T(t) \frac{\partial \mathbf{f}}{\partial \mathbf{x}}
+</div>
+<script type="math/tex; mode=display">
+   \dot{\mathbf{\lambda}}(t) = -\frac{\partial H}{\partial \mathbf{x}} = -\frac{\partial L}{\partial \mathbf{x}} - \mathbf{\lambda}^T(t) \frac{\partial \mathbf{f}}{\partial \mathbf{x}}
+</script>
+</div>
 <ol>
 <li><strong>최적화 조건</strong>:</li>
 </ol>
-<p>$$</p>
-<p>\frac{\partial H}{\partial \mathbf{u}} = 0</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+   \frac{\partial H}{\partial \mathbf{u}} = 0
+</div>
+<script type="math/tex; mode=display">
+   \frac{\partial H}{\partial \mathbf{u}} = 0
+</script>
+</div>
 <p>이 방정식들은 경로 최적화 문제를 해결하기 위한 필수적인 조건을 제시한다.</p>
 <h3 id="-hjb">해밀턴-자코비-벨만(HJB) 방정식</h3>
 <p>경로 최적화 문제는 해밀턴-자코비-벨만(HJB) 방정식을 통해 동적으로 해결될 수 있다. HJB 방정식은 경로 최적화 문제를 시간에 따라 쪼개어 해결하는 방법을 제시하며, 벨만의 최적화 원리에 기반하여 다음과 같이 정의된다:</p>
-<p>$$</p>
-<p>\frac{\partial V(\mathbf{x}(t), t)}{\partial t} + \min_{\mathbf{u}(t)} \left[ L(\mathbf{x}(t), \mathbf{u}(t), t) + \frac{\partial V(\mathbf{x}(t), t)}{\partial \mathbf{x}} \cdot \mathbf{f}(\mathbf{x}(t), \mathbf{u}(t), t) \right] = 0</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+\frac{\partial V(\mathbf{x}(t), t)}{\partial t} + \min_{\mathbf{u}(t)} \left[ L(\mathbf{x}(t), \mathbf{u}(t), t) + \frac{\partial V(\mathbf{x}(t), t)}{\partial \mathbf{x}} \cdot \mathbf{f}(\mathbf{x}(t), \mathbf{u}(t), t) \right] = 0
+</div>
+<script type="math/tex; mode=display">
+\frac{\partial V(\mathbf{x}(t), t)}{\partial t} + \min_{\mathbf{u}(t)} \left[ L(\mathbf{x}(t), \mathbf{u}(t), t) + \frac{\partial V(\mathbf{x}(t), t)}{\partial \mathbf{x}} \cdot \mathbf{f}(\mathbf{x}(t), \mathbf{u}(t), t) \right] = 0
+</script>
+</div>
 <p>여기서,
 - <span class="arithmatex"><span class="MathJax_Preview">V(\mathbf{x}(t), t)</span><script type="math/tex">V(\mathbf{x}(t), t)</script></span>는 시간 <span class="arithmatex"><span class="MathJax_Preview">t</span><script type="math/tex">t</script></span>에서 상태 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{x}(t)</span><script type="math/tex">\mathbf{x}(t)</script></span>에 대한 값 함수이다.
 - <span class="arithmatex"><span class="MathJax_Preview">\min_{\mathbf{u}(t)}</span><script type="math/tex">\min_{\mathbf{u}(t)}</script></span>는 제어 입력 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{u}(t)</span><script type="math/tex">\mathbf{u}(t)</script></span>에 대해 최소화한다는 의미이다.</p>
@@ -188,9 +233,14 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 <p>경로 최적화를 위한 다양한 알고리즘들이 존재한다. 이들 알고리즘은 각각의 문제에 적합한 최적화 기법을 제공하며, 사용되는 목적 함수와 제약 조건에 따라 다르게 적용된다.</p>
 <h4 id="1">1. 구간별 최적화</h4>
 <p>구간별 최적화 기법은 경로를 작은 구간으로 나누어 각각의 구간에서 최적의 경로를 찾는 방법이다. 이를 통해 복잡한 경로 문제를 더 간단한 문제들로 분할할 수 있다. 각 구간에서의 경로는 다음과 같은 형태로 최적화될 수 있다:</p>
-<p>$$</p>
-<p>J_i = \int_{t_{i-1}}^{t_i} L(\mathbf{x}(t), \mathbf{u}(t), t) \, dt</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+J_i = \int_{t_{i-1}}^{t_i} L(\mathbf{x}(t), \mathbf{u}(t), t) \, dt
+</div>
+<script type="math/tex; mode=display">
+J_i = \int_{t_{i-1}}^{t_i} L(\mathbf{x}(t), \mathbf{u}(t), t) \, dt
+</script>
+</div>
 <p>여기서,
 - <span class="arithmatex"><span class="MathJax_Preview">t_{i-1}</span><script type="math/tex">t_{i-1}</script></span>와 <span class="arithmatex"><span class="MathJax_Preview">t_i</span><script type="math/tex">t_i</script></span>는 구간의 시작과 끝을 나타낸다.
 - 각 구간에서의 최적 경로는 전체 경로의 일부로 결합된다.</p>
@@ -200,9 +250,14 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 <li>초기 경로 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{x}_0(t)</span><script type="math/tex">\mathbf{x}_0(t)</script></span>를 설정한다.</li>
 <li>목적 함수의 잔차(residual)를 계산하고, 이를 최소화하는 방향으로 경로를 수정한다:</li>
 </ol>
-<p>$$</p>
-<p>\mathbf{x}_{k+1}(t) = \mathbf{x}_k(t) - \alpha \mathbf{J}^{-1} \mathbf{r}(\mathbf{x}_k(t))</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+   \mathbf{x}_{k+1}(t) = \mathbf{x}_k(t) - \alpha \mathbf{J}^{-1} \mathbf{r}(\mathbf{x}_k(t))
+</div>
+<script type="math/tex; mode=display">
+   \mathbf{x}_{k+1}(t) = \mathbf{x}_k(t) - \alpha \mathbf{J}^{-1} \mathbf{r}(\mathbf{x}_k(t))
+</script>
+</div>
 <p>여기서,
    - <span class="arithmatex"><span class="MathJax_Preview">\mathbf{J}</span><script type="math/tex">\mathbf{J}</script></span>는 잔차의 자코비 행렬(Jacobian matrix)
    - <span class="arithmatex"><span class="MathJax_Preview">\mathbf{r}</span><script type="math/tex">\mathbf{r}</script></span>는 잔차 벡터
@@ -213,9 +268,14 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 <h4 id="3">3. 경사 하강법</h4>
 <p>경사 하강법(Gradient Descent)은 최적화 문제에서 자주 사용되는 기법 중 하나이다. 이 방법은 경로에서 목적 함수를 최소화하는 방향으로 경로를 점진적으로 수정한다. 경사 하강법의 기본 원리는 목적 함수의 기울기(경사)를 계산하여, 기울기가 작은 방향으로 이동하는 것이다.</p>
 <p>경사 하강법의 업데이트 규칙은 다음과 같다:</p>
-<p>$$</p>
-<p>\mathbf{x}_{k+1}(t) = \mathbf{x}_k(t) - \alpha \nabla J(\mathbf{x}_k(t))</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+\mathbf{x}_{k+1}(t) = \mathbf{x}_k(t) - \alpha \nabla J(\mathbf{x}_k(t))
+</div>
+<script type="math/tex; mode=display">
+\mathbf{x}_{k+1}(t) = \mathbf{x}_k(t) - \alpha \nabla J(\mathbf{x}_k(t))
+</script>
+</div>
 <p>여기서,
 - <span class="arithmatex"><span class="MathJax_Preview">\alpha</span><script type="math/tex">\alpha</script></span>는 학습률 또는 스텝 크기
 - <span class="arithmatex"><span class="MathJax_Preview">\nabla J(\mathbf{x}_k(t))</span><script type="math/tex">\nabla J(\mathbf{x}_k(t))</script></span>는 목적 함수 <span class="arithmatex"><span class="MathJax_Preview">J</span><script type="math/tex">J</script></span>의 기울기</p>
@@ -223,13 +283,23 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 <h4 id="4">4. 이차 프로그래밍</h4>
 <p>경로 최적화 문제에서 자주 사용되는 또 다른 방법은 이차 프로그래밍(Quadratic Programming, QP)이다. 이차 프로그래밍은 목적 함수가 이차식으로 주어지고, 제약 조건이 선형으로 주어진 경우에 사용된다. 이 방법은 제약 조건이 있는 경로 최적화 문제를 효율적으로 해결할 수 있다.</p>
 <p>이차 프로그래밍 문제는 다음과 같은 형태로 정의된다:</p>
-<p>$$</p>
-<p>\min_{\mathbf{u}} \frac{1}{2} \mathbf{u}^T \mathbf{H} \mathbf{u} + \mathbf{f}^T \mathbf{u}</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+\min_{\mathbf{u}} \frac{1}{2} \mathbf{u}^T \mathbf{H} \mathbf{u} + \mathbf{f}^T \mathbf{u}
+</div>
+<script type="math/tex; mode=display">
+\min_{\mathbf{u}} \frac{1}{2} \mathbf{u}^T \mathbf{H} \mathbf{u} + \mathbf{f}^T \mathbf{u}
+</script>
+</div>
 <p>제약 조건:</p>
-<p>$$</p>
-<p>\mathbf{A} \mathbf{u} \leq \mathbf{b}</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+\mathbf{A} \mathbf{u} \leq \mathbf{b}
+</div>
+<script type="math/tex; mode=display">
+\mathbf{A} \mathbf{u} \leq \mathbf{b}
+</script>
+</div>
 <p>여기서,
 - <span class="arithmatex"><span class="MathJax_Preview">\mathbf{H}</span><script type="math/tex">\mathbf{H}</script></span>는 이차 항을 나타내는 대칭 행렬
 - <span class="arithmatex"><span class="MathJax_Preview">\mathbf{f}</span><script type="math/tex">\mathbf{f}</script></span>는 선형 항을 나타내는 벡터

@@ -180,13 +180,13 @@ $$
 1 &amp; 0 &amp; 0 \
 0 &amp; 1 &amp; 0 \
 0 &amp; 0 &amp; 1
-\end{pmatrix}</li>
+\end{pmatrix}
+$$</li>
 </ul>
 </li>
-</ol>
-<p>$$</p>
-<ol>
-<li><strong>대각 행렬(Diagonal Matrix)</strong>:<ul>
+<li>
+<p><strong>대각 행렬(Diagonal Matrix)</strong>:</p>
+<ul>
 <li>대각선 이외의 원소가 모두 0인 행렬.</li>
 <li>예: 
 $$
@@ -194,66 +194,68 @@ $$
 e_{11} &amp; 0 &amp; 0 \
 0 &amp; e_{22} &amp; 0 \
 0 &amp; 0 &amp; e_{33}
-\end{pmatrix}</li>
+\end{pmatrix}
+$$</li>
 </ul>
 </li>
-</ol>
-<p>$$</p>
-<ol>
-<li><strong>영 행렬(Zero Matrix)</strong>:<ul>
+<li>
+<p><strong>영 행렬(Zero Matrix)</strong>:</p>
+<ul>
 <li>모든 원소가 0인 행렬.</li>
 <li>예: 
 $$
 \mathbf{O} = \begin{pmatrix}
 0 &amp; 0 \
 0 &amp; 0
-\end{pmatrix}</li>
+\end{pmatrix}
+$$</li>
 </ul>
 </li>
 </ol>
-<p>$$</p>
 <h3 id="_5">행렬 연산</h3>
 <p>행렬 연산은 벡터 연산과 유사하며, 다음과 같은 주요 연산들이 있다:</p>
 <ol>
-<li><strong>행렬 덧셈(Matrix Addition)</strong>:<ul>
+<li>
+<p><strong>행렬 덧셈(Matrix Addition)</strong>:</p>
+<ul>
 <li>같은 크기의 두 행렬 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{A}</span><script type="math/tex">\mathbf{A}</script></span>와 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{B}</span><script type="math/tex">\mathbf{B}</script></span>의 대응되는 원소를 더한다.</li>
 <li>정의: 
 $$
-(\mathbf{A} + \mathbf{B})<em>{ij} = a</em>{ij} + b_{ij}</li>
+(\mathbf{A} + \mathbf{B})<em>{ij} = a</em>{ij} + b_{ij}
+$$</li>
 </ul>
 </li>
-</ol>
-<p>$$</p>
-<ol>
-<li><strong>행렬 곱셈(Matrix Multiplication)</strong>:<ul>
+<li>
+<p><strong>행렬 곱셈(Matrix Multiplication)</strong>:</p>
+<ul>
 <li>두 행렬 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{A}</span><script type="math/tex">\mathbf{A}</script></span>와 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{B}</span><script type="math/tex">\mathbf{B}</script></span>의 곱은 다음과 같이 정의된다. 단, <span class="arithmatex"><span class="MathJax_Preview">\mathbf{A}</span><script type="math/tex">\mathbf{A}</script></span>의 열 수와 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{B}</span><script type="math/tex">\mathbf{B}</script></span>의 행 수가 같아야 한다.</li>
 <li>정의: 
 $$
-(\mathbf{AB})<em>{ij} = \sum</em>{k=1}^{n} a_{ik} b_{kj}</li>
+(\mathbf{AB})<em>{ij} = \sum</em>{k=1}^{n} a_{ik} b_{kj}
+$$</li>
 </ul>
 </li>
-</ol>
-<p>$$</p>
-<ol>
-<li><strong>스칼라 곱(Scalar Multiplication)</strong>:<ul>
+<li>
+<p><strong>스칼라 곱(Scalar Multiplication)</strong>:</p>
+<ul>
 <li>하나의 행렬 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{A}</span><script type="math/tex">\mathbf{A}</script></span>와 스칼라 <span class="arithmatex"><span class="MathJax_Preview">c</span><script type="math/tex">c</script></span>의 곱은 행렬의 각 원소에 스칼라를 곱한 것이다.</li>
 <li>정의: 
 $$
-(c\mathbf{A})<em>{ij} = c \cdot a</em>{ij}</li>
+(c\mathbf{A})<em>{ij} = c \cdot a</em>{ij}
+$$</li>
 </ul>
 </li>
-</ol>
-<p>$$</p>
-<ol>
-<li><strong>전치 행렬(Transpose Matrix)</strong>:<ul>
+<li>
+<p><strong>전치 행렬(Transpose Matrix)</strong>:</p>
+<ul>
 <li>행렬 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{A}</span><script type="math/tex">\mathbf{A}</script></span>의 전치 행렬 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{A}^T</span><script type="math/tex">\mathbf{A}^T</script></span>는 행과 열을 뒤바꾼 것이다.</li>
 <li>정의: 
 $$
-(\mathbf{A}^T)<em>{ij} = a</em>{ji}</li>
+(\mathbf{A}^T)<em>{ij} = a</em>{ji}
+$$</li>
 </ul>
 </li>
 </ol>
-<p>$$</p>
 <p>이 외에도 역행렬(Inverse Matrix), 행렬식(Determinant), 고유값 및 고유벡터(Eigenvalues and Eigenvectors) 등 다양한 특성과 연산이 있다. 이들은 선형대수학의 중요한 부분을 차지하며, 다양한 응용 분야에서 활용된다.</p>
 <h2 id="_6">특수한 행렬</h2>
 <h3 id="square-matrix">정사각 행렬(Square Matrix)</h3>

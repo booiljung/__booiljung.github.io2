@@ -126,22 +126,42 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 <li><strong>선운동</strong>: 물체의 중심이 특정 경로를 따라 이동하는 운동. 주로 변위, 속도, 가속도로 기술된다.</li>
 </ul>
 <p>변위 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{r}(t)</span><script type="math/tex">\mathbf{r}(t)</script></span>는 시간 <span class="arithmatex"><span class="MathJax_Preview">t</span><script type="math/tex">t</script></span>에 따른 위치 벡터 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{r}</span><script type="math/tex">\mathbf{r}</script></span>로 표현되며, 속도 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{v}(t)</span><script type="math/tex">\mathbf{v}(t)</script></span>와 가속도 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{a}(t)</span><script type="math/tex">\mathbf{a}(t)</script></span>는 다음과 같은 관계로 정의된다:</p>
-<p>$$
-  \mathbf{v}(t) = \frac{d\mathbf{r}(t)}{dt}</p>
-<p>$$</p>
-<p>$$
-  \mathbf{a}(t) = \frac{d\mathbf{v}(t)}{dt}</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+  \mathbf{v}(t) = \frac{d\mathbf{r}(t)}{dt}
+</div>
+<script type="math/tex; mode=display">
+  \mathbf{v}(t) = \frac{d\mathbf{r}(t)}{dt}
+</script>
+</div>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+  \mathbf{a}(t) = \frac{d\mathbf{v}(t)}{dt}
+</div>
+<script type="math/tex; mode=display">
+  \mathbf{a}(t) = \frac{d\mathbf{v}(t)}{dt}
+</script>
+</div>
 <ul>
 <li><strong>각운동</strong>: 물체가 고정된 축을 중심으로 회전하는 운동. 각변위, 각속도, 각가속도로 기술된다.</li>
 </ul>
 <p>각변위 <span class="arithmatex"><span class="MathJax_Preview">\theta(t)</span><script type="math/tex">\theta(t)</script></span>, 각속도 <span class="arithmatex"><span class="MathJax_Preview">\omega(t)</span><script type="math/tex">\omega(t)</script></span>, 각가속도 <span class="arithmatex"><span class="MathJax_Preview">\alpha(t)</span><script type="math/tex">\alpha(t)</script></span>의 관계는 다음과 같다:</p>
-<p>$$
-  \omega(t) = \frac{d\theta(t)}{dt}</p>
-<p>$$</p>
-<p>$$
-  \alpha(t) = \frac{d\omega(t)}{dt}</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+  \omega(t) = \frac{d\theta(t)}{dt}
+</div>
+<script type="math/tex; mode=display">
+  \omega(t) = \frac{d\theta(t)}{dt}
+</script>
+</div>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+  \alpha(t) = \frac{d\omega(t)}{dt}
+</div>
+<script type="math/tex; mode=display">
+  \alpha(t) = \frac{d\omega(t)}{dt}
+</script>
+</div>
 <h4 id="12">1.2 복합 운동의 예시</h4>
 <p>복합 운동의 대표적인 예로는 다음과 같은 경우들이 있다.</p>
 <ul>
@@ -214,21 +234,36 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 <ul>
 <li><strong><span class="arithmatex"><span class="MathJax_Preview">x</span><script type="math/tex">x</script></span>축에 대한 회전</strong>: 각도 <span class="arithmatex"><span class="MathJax_Preview">\alpha</span><script type="math/tex">\alpha</script></span>만큼 <span class="arithmatex"><span class="MathJax_Preview">x</span><script type="math/tex">x</script></span>축을 중심으로 회전할 때,</li>
 </ul>
-<p>$$
-  \mathbf{R}_x(\alpha) = \begin{bmatrix} 1 &amp; 0 &amp; 0 \ 0 &amp; \cos \alpha &amp; -\sin \alpha \ 0 &amp; \sin \alpha &amp; \cos \alpha \end{bmatrix}</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+  \mathbf{R}_x(\alpha) = \begin{bmatrix} 1 &amp; 0 &amp; 0 \\ 0 &amp; \cos \alpha &amp; -\sin \alpha \\ 0 &amp; \sin \alpha &amp; \cos \alpha \end{bmatrix}
+</div>
+<script type="math/tex; mode=display">
+  \mathbf{R}_x(\alpha) = \begin{bmatrix} 1 & 0 & 0 \\ 0 & \cos \alpha & -\sin \alpha \\ 0 & \sin \alpha & \cos \alpha \end{bmatrix}
+</script>
+</div>
 <ul>
 <li><strong><span class="arithmatex"><span class="MathJax_Preview">y</span><script type="math/tex">y</script></span>축에 대한 회전</strong>: 각도 <span class="arithmatex"><span class="MathJax_Preview">\beta</span><script type="math/tex">\beta</script></span>만큼 <span class="arithmatex"><span class="MathJax_Preview">y</span><script type="math/tex">y</script></span>축을 중심으로 회전할 때,</li>
 </ul>
-<p>$$
-  \mathbf{R}_y(\beta) = \begin{bmatrix} \cos \beta &amp; 0 &amp; \sin \beta \ 0 &amp; 1 &amp; 0 \ -\sin \beta &amp; 0 &amp; \cos \beta \end{bmatrix}</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+  \mathbf{R}_y(\beta) = \begin{bmatrix} \cos \beta &amp; 0 &amp; \sin \beta \\ 0 &amp; 1 &amp; 0 \\ -\sin \beta &amp; 0 &amp; \cos \beta \end{bmatrix}
+</div>
+<script type="math/tex; mode=display">
+  \mathbf{R}_y(\beta) = \begin{bmatrix} \cos \beta & 0 & \sin \beta \\ 0 & 1 & 0 \\ -\sin \beta & 0 & \cos \beta \end{bmatrix}
+</script>
+</div>
 <ul>
 <li><strong><span class="arithmatex"><span class="MathJax_Preview">z</span><script type="math/tex">z</script></span>축에 대한 회전</strong>: 각도 <span class="arithmatex"><span class="MathJax_Preview">\gamma</span><script type="math/tex">\gamma</script></span>만큼 <span class="arithmatex"><span class="MathJax_Preview">z</span><script type="math/tex">z</script></span>축을 중심으로 회전할 때,</li>
 </ul>
-<p>$$
-  \mathbf{R}_z(\gamma) = \begin{bmatrix} \cos \gamma &amp; -\sin \gamma &amp; 0 \ \sin \gamma &amp; \cos \gamma &amp; 0 \ 0 &amp; 0 &amp; 1 \end{bmatrix}</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+  \mathbf{R}_z(\gamma) = \begin{bmatrix} \cos \gamma &amp; -\sin \gamma &amp; 0 \\ \sin \gamma &amp; \cos \gamma &amp; 0 \\ 0 &amp; 0 &amp; 1 \end{bmatrix}
+</div>
+<script type="math/tex; mode=display">
+  \mathbf{R}_z(\gamma) = \begin{bmatrix} \cos \gamma & -\sin \gamma & 0 \\ \sin \gamma & \cos \gamma & 0 \\ 0 & 0 & 1 \end{bmatrix}
+</script>
+</div>
 <p>3차원 공간에서의 회전은 이 축 회전들을 조합하여 표현할 수 있다.</p>
 <h4 id="35">3.5 좌표 변환의 예</h4>
 <p>복합 운동에서 물체의 회전과 이동을 동시에 고려할 때, 이를 좌표 변환으로 나타낼 수 있다. 예를 들어, 물체가 <span class="arithmatex"><span class="MathJax_Preview">t=0</span><script type="math/tex">t=0</script></span>에서 위치 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{r}_0</span><script type="math/tex">\mathbf{r}_0</script></span>에 있었고, 시간 <span class="arithmatex"><span class="MathJax_Preview">t</span><script type="math/tex">t</script></span> 동안 각속도 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{\omega}(t)</span><script type="math/tex">\mathbf{\omega}(t)</script></span>로 회전하면서 이동 속도 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{v}(t)</span><script type="math/tex">\mathbf{v}(t)</script></span>로 이동한 경우, 물체의 최종 위치는 다음과 같이 표현할 수 있다:</p>

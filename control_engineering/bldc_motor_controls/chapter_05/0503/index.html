@@ -109,17 +109,32 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 <p>시스템이 다음과 같이 주어진다고 가정하겠다:</p>
 </li>
 </ul>
-<p>$$
-    \dot{\mathbf{x}}(t) = \mathbf{A}\mathbf{x}(t) + \mathbf{B}\mathbf{u}(t)</p>
-<p>$$</p>
-<p>$$
-    \mathbf{y}(t) = \mathbf{C}\mathbf{x}(t)</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+    \dot{\mathbf{x}}(t) = \mathbf{A}\mathbf{x}(t) + \mathbf{B}\mathbf{u}(t)
+</div>
+<script type="math/tex; mode=display">
+    \dot{\mathbf{x}}(t) = \mathbf{A}\mathbf{x}(t) + \mathbf{B}\mathbf{u}(t)
+</script>
+</div>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+    \mathbf{y}(t) = \mathbf{C}\mathbf{x}(t)
+</div>
+<script type="math/tex; mode=display">
+    \mathbf{y}(t) = \mathbf{C}\mathbf{x}(t)
+</script>
+</div>
 <pre><code>루엔버거 관측기의 상태 추정 식은 다음과 같다:
 </code></pre>
-<p>$$
-    \dot{\hat{\mathbf{x}}}(t) = \mathbf{A}\hat{\mathbf{x}}(t) + \mathbf{B}\mathbf{u}(t) + \mathbf{L}(\mathbf{y}(t) - \mathbf{C}\hat{\mathbf{x}}(t))</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+    \dot{\hat{\mathbf{x}}}(t) = \mathbf{A}\hat{\mathbf{x}}(t) + \mathbf{B}\mathbf{u}(t) + \mathbf{L}(\mathbf{y}(t) - \mathbf{C}\hat{\mathbf{x}}(t))
+</div>
+<script type="math/tex; mode=display">
+    \dot{\hat{\mathbf{x}}}(t) = \mathbf{A}\hat{\mathbf{x}}(t) + \mathbf{B}\mathbf{u}(t) + \mathbf{L}(\mathbf{y}(t) - \mathbf{C}\hat{\mathbf{x}}(t))
+</script>
+</div>
 <pre><code>여기서, $\hat{\mathbf{x}}(t)$는 상태의 추정값이며, $\mathbf{L}$은 관측기 이득 행렬이다. 이 이득 행렬 $\mathbf{L}$은 시스템의 관측 가능성을 보장하기 위해 설계된다.
 </code></pre>
 <h3 id="_2">루엔버거 관측기의 설계</h3>
@@ -146,26 +161,51 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 <p>여기서, <span class="arithmatex"><span class="MathJax_Preview">\mathbf{w}_k</span><script type="math/tex">\mathbf{w}_k</script></span>와 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{v}_k</span><script type="math/tex">\mathbf{v}_k</script></span>는 각각 시스템 노이즈과 측정 잡음이다. 이들은 보통 가우시안 잡음으로 가정한다.</p>
 <p>칼만 필터의 업데이트는 다음 두 단계로 이루어진다:
 1. <strong>예측 단계 (Prediction Step)</strong>:</p>
-<p>$$
-    \hat{\mathbf{x}}<em>{k|k-1} = \mathbf{A}\hat{\mathbf{x}}</em>{k-1|k-1} + \mathbf{B}\mathbf{u}_k</p>
-<p>$$</p>
-<p>$$
-    \mathbf{P}<em>{k|k-1} = \mathbf{A}\mathbf{P}</em>{k-1|k-1}\mathbf{A}^T + \mathbf{Q}</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+    \hat{\mathbf{x}}_{k|k-1} = \mathbf{A}\hat{\mathbf{x}}_{k-1|k-1} + \mathbf{B}\mathbf{u}_k
+</div>
+<script type="math/tex; mode=display">
+    \hat{\mathbf{x}}_{k|k-1} = \mathbf{A}\hat{\mathbf{x}}_{k-1|k-1} + \mathbf{B}\mathbf{u}_k
+</script>
+</div>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+    \mathbf{P}_{k|k-1} = \mathbf{A}\mathbf{P}_{k-1|k-1}\mathbf{A}^T + \mathbf{Q}
+</div>
+<script type="math/tex; mode=display">
+    \mathbf{P}_{k|k-1} = \mathbf{A}\mathbf{P}_{k-1|k-1}\mathbf{A}^T + \mathbf{Q}
+</script>
+</div>
 <pre><code>여기서, $\mathbf{P}$는 오차 공분산 행렬이며, $\mathbf{Q}$는 시스템 노이즈의 공분산이다.
 </code></pre>
 <ol>
 <li><strong>업데이트 단계 (Update Step)</strong>:</li>
 </ol>
-<p>$$
-    \mathbf{K}<em>k = \mathbf{P}</em>{k|k-1}\mathbf{C}^T (\mathbf{C}\mathbf{P}_{k|k-1}\mathbf{C}^T + \mathbf{R})^{-1}</p>
-<p>$$</p>
-<p>$$
-    \hat{\mathbf{x}}<em>{k|k} = \hat{\mathbf{x}}</em>{k|k-1} + \mathbf{K}<em>k (\mathbf{y}_k - \mathbf{C}\hat{\mathbf{x}}</em>{k|k-1})</p>
-<p>$$</p>
-<p>$$
-    \mathbf{P}<em>{k|k} = (\mathbf{I} - \mathbf{K}_k \mathbf{C})\mathbf{P}</em>{k|k-1}</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+    \mathbf{K}_k = \mathbf{P}_{k|k-1}\mathbf{C}^T (\mathbf{C}\mathbf{P}_{k|k-1}\mathbf{C}^T + \mathbf{R})^{-1}
+</div>
+<script type="math/tex; mode=display">
+    \mathbf{K}_k = \mathbf{P}_{k|k-1}\mathbf{C}^T (\mathbf{C}\mathbf{P}_{k|k-1}\mathbf{C}^T + \mathbf{R})^{-1}
+</script>
+</div>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+    \hat{\mathbf{x}}_{k|k} = \hat{\mathbf{x}}_{k|k-1} + \mathbf{K}_k (\mathbf{y}_k - \mathbf{C}\hat{\mathbf{x}}_{k|k-1})
+</div>
+<script type="math/tex; mode=display">
+    \hat{\mathbf{x}}_{k|k} = \hat{\mathbf{x}}_{k|k-1} + \mathbf{K}_k (\mathbf{y}_k - \mathbf{C}\hat{\mathbf{x}}_{k|k-1})
+</script>
+</div>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+    \mathbf{P}_{k|k} = (\mathbf{I} - \mathbf{K}_k \mathbf{C})\mathbf{P}_{k|k-1}
+</div>
+<script type="math/tex; mode=display">
+    \mathbf{P}_{k|k} = (\mathbf{I} - \mathbf{K}_k \mathbf{C})\mathbf{P}_{k|k-1}
+</script>
+</div>
 <pre><code>여기서, $\mathbf{K}_k$는 칼만 이득이며, $\mathbf{R}$은 측정 잡음의 공분산이다.
 </code></pre>
 <h3 id="_3">비센서 제어를 위한 모델 기반 접근법</h3>
@@ -189,12 +229,22 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 <p>MRAC의 일반적인 구조는 다음과 같다:</p>
 </li>
 </ul>
-<p>$$
-    \dot{\mathbf{x}}_m = \mathbf{A}_m\mathbf{x}_m + \mathbf{B}_m\mathbf{r}</p>
-<p>$$</p>
-<p>$$
-    \mathbf{u} = -\mathbf{K}_x\mathbf{x} + \mathbf{K}_r\mathbf{r}</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+    \dot{\mathbf{x}}_m = \mathbf{A}_m\mathbf{x}_m + \mathbf{B}_m\mathbf{r}
+</div>
+<script type="math/tex; mode=display">
+    \dot{\mathbf{x}}_m = \mathbf{A}_m\mathbf{x}_m + \mathbf{B}_m\mathbf{r}
+</script>
+</div>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+    \mathbf{u} = -\mathbf{K}_x\mathbf{x} + \mathbf{K}_r\mathbf{r}
+</div>
+<script type="math/tex; mode=display">
+    \mathbf{u} = -\mathbf{K}_x\mathbf{x} + \mathbf{K}_r\mathbf{r}
+</script>
+</div>
 <pre><code>여기서, $\mathbf{x}_m$은 참조 모델의 상태이며, $\mathbf{K}_x$와 $\mathbf{K}_r$은 적응적으로 조정되는 제어기 이득이다.
 </code></pre>
 <h3 id="_5">비센서 학습 제어</h3>

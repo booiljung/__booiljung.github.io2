@@ -99,13 +99,22 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 <li><strong>압축 저장 방식</strong>: 희소 행렬은 비제로(non-zero) 성분만을 저장하여 메모리 사용량을 줄이다. 대표적인 방식으로는 Compressed Row Storage (CRS)와 Compressed Column Storage (CCS)가 있다.</li>
 </ul>
 <p>예를 들어, 행렬 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{A}</span><script type="math/tex">\mathbf{A}</script></span>가 다음과 같이 주어졌다고 가정해봅시다:</p>
-<p>$$
+<div class="arithmatex">
+<div class="MathJax_Preview">
   \mathbf{A} = \begin{bmatrix}
-  0 &amp; 0 &amp; 3 &amp; 0 \
-  0 &amp; 5 &amp; 0 &amp; 0 \
-  1 &amp; 0 &amp; 0 &amp; 4 \
-  \end{bmatrix}</p>
-<p>$$</p>
+  0 &amp; 0 &amp; 3 &amp; 0 \\
+  0 &amp; 5 &amp; 0 &amp; 0 \\
+  1 &amp; 0 &amp; 0 &amp; 4 \\
+  \end{bmatrix}
+</div>
+<script type="math/tex; mode=display">
+  \mathbf{A} = \begin{bmatrix}
+  0 & 0 & 3 & 0 \\
+  0 & 5 & 0 & 0 \\
+  1 & 0 & 0 & 4 \\
+  \end{bmatrix}
+</script>
+</div>
 <p>이 행렬을 압축된 형태로 저장하는 방법은 비제로 성분과 그들의 위치만 기록하는 방식이다. 이 경우, 행렬 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{A}</span><script type="math/tex">\mathbf{A}</script></span>는 다음과 같이 저장될 수 있다:</p>
 <ul>
 <li>값: <span class="arithmatex"><span class="MathJax_Preview">[3, 5, 1, 4]</span><script type="math/tex">[3, 5, 1, 4]</script></span></li>
@@ -260,17 +269,27 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 <ul>
 <li><strong>마스터 문제</strong>:</li>
 </ul>
-<p>$$
-  \min \mathbf{c}^\top \mathbf{x} + \sum_{i=1}^{n} \lambda_i \mathbf{d}_i</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+  \min \mathbf{c}^\top \mathbf{x} + \sum_{i=1}^{n} \lambda_i \mathbf{d}_i
+</div>
+<script type="math/tex; mode=display">
+  \min \mathbf{c}^\top \mathbf{x} + \sum_{i=1}^{n} \lambda_i \mathbf{d}_i
+</script>
+</div>
 <p>여기서 <span class="arithmatex"><span class="MathJax_Preview">\lambda_i</span><script type="math/tex">\lambda_i</script></span>는 하위 문제에서 도출된 변수이다.</p>
 <ul>
 <li><strong>하위 문제</strong>:</li>
 </ul>
 <p>각 하위 문제는 다음과 같이 나타낼 수 있다:</p>
-<p>$$
-  \min \mathbf{c}_i^\top \mathbf{x}_i \quad \text{subject to } \mathbf{A}_i \mathbf{x}_i = \mathbf{b}_i, \quad \mathbf{x}_i \geq 0</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+  \min \mathbf{c}_i^\top \mathbf{x}_i \quad \text{subject to } \mathbf{A}_i \mathbf{x}_i = \mathbf{b}_i, \quad \mathbf{x}_i \geq 0
+</div>
+<script type="math/tex; mode=display">
+  \min \mathbf{c}_i^\top \mathbf{x}_i \quad \text{subject to } \mathbf{A}_i \mathbf{x}_i = \mathbf{b}_i, \quad \mathbf{x}_i \geq 0
+</script>
+</div>
 <p>각 하위 문제에서 얻은 해는 마스터 문제로 전달되어 전체 문제의 해를 업데이트한다.</p>
 <h3 id="6-benders">6. Benders 분해법</h3>
 <p><strong>Benders 분해법</strong>은 또 다른 중요한 분해 기법으로, 대규모 혼합 정수 선형계획(Mixed Integer Linear Programming, MILP) 문제에 주로 사용된다. Benders 분해법은 문제를 두 개의 하위 문제로 나누어 해결하며, 하나는 <strong>마스터 문제</strong>이고, 다른 하나는 <strong>서브 문제</strong>이다.</p>
@@ -286,17 +305,27 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 <ul>
 <li><strong>마스터 문제</strong>:</li>
 </ul>
-<p>$$
-  \min \mathbf{c}^\top \mathbf{x} + \sum_{j=1}^{m} \theta_j</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+  \min \mathbf{c}^\top \mathbf{x} + \sum_{j=1}^{m} \theta_j
+</div>
+<script type="math/tex; mode=display">
+  \min \mathbf{c}^\top \mathbf{x} + \sum_{j=1}^{m} \theta_j
+</script>
+</div>
 <p>여기서 <span class="arithmatex"><span class="MathJax_Preview">\theta_j</span><script type="math/tex">\theta_j</script></span>는 서브 문제에서 도출된 변수이다.</p>
 <ul>
 <li><strong>서브 문제</strong>:</li>
 </ul>
 <p>서브 문제는 다음과 같이 나타난다:</p>
-<p>$$
-  \min \mathbf{d}_j^\top \mathbf{y}_j \quad \text{subject to } \mathbf{A}_j \mathbf{y}_j = \mathbf{b}_j, \quad \mathbf{y}_j \geq 0</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+  \min \mathbf{d}_j^\top \mathbf{y}_j \quad \text{subject to } \mathbf{A}_j \mathbf{y}_j = \mathbf{b}_j, \quad \mathbf{y}_j \geq 0
+</div>
+<script type="math/tex; mode=display">
+  \min \mathbf{d}_j^\top \mathbf{y}_j \quad \text{subject to } \mathbf{A}_j \mathbf{y}_j = \mathbf{b}_j, \quad \mathbf{y}_j \geq 0
+</script>
+</div>
 <p>이 과정에서 얻어진 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{y}_j</span><script type="math/tex">\mathbf{y}_j</script></span> 값은 마스터 문제로 다시 전달되어 전체 해를 갱신한다.</p>
 <br/>
 <div aria-label="navigation" class="row wm-article-nav-buttons" role="navigation">

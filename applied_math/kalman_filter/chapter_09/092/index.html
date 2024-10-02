@@ -128,16 +128,31 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 </ol>
 <p>레이크-스티븐스 스무딩은 다음과 같이 계산된다:</p>
 <p><strong>백워드 패스 (Backward Pass):</strong></p>
-<p>$$
-   \mathbf{P}<em>{k|N} = \mathbf{P}</em>{k|k} + \mathbf{A}<em>{k}^\top \mathbf{G}</em>{k+1} (\mathbf{P}<em>{k+1|N} - \mathbf{P}</em>{k+1|k}) \mathbf{G}<em>{k+1}^\top \mathbf{A}</em>{k}</p>
-<p>$$</p>
-<p>$$
-   \mathbf{x}<em>{k|N} = \mathbf{x}</em>{k|k} + \mathbf{G}<em>{k} (\mathbf{x}</em>{k+1|N} - \mathbf{x}_{k+1|k})</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+   \mathbf{P}_{k|N} = \mathbf{P}_{k|k} + \mathbf{A}_{k}^\top \mathbf{G}_{k+1} (\mathbf{P}_{k+1|N} - \mathbf{P}_{k+1|k}) \mathbf{G}_{k+1}^\top \mathbf{A}_{k}
+</div>
+<script type="math/tex; mode=display">
+   \mathbf{P}_{k|N} = \mathbf{P}_{k|k} + \mathbf{A}_{k}^\top \mathbf{G}_{k+1} (\mathbf{P}_{k+1|N} - \mathbf{P}_{k+1|k}) \mathbf{G}_{k+1}^\top \mathbf{A}_{k}
+</script>
+</div>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+   \mathbf{x}_{k|N} = \mathbf{x}_{k|k} + \mathbf{G}_{k} (\mathbf{x}_{k+1|N} - \mathbf{x}_{k+1|k})
+</div>
+<script type="math/tex; mode=display">
+   \mathbf{x}_{k|N} = \mathbf{x}_{k|k} + \mathbf{G}_{k} (\mathbf{x}_{k+1|N} - \mathbf{x}_{k+1|k})
+</script>
+</div>
 <p>여기서, <span class="arithmatex"><span class="MathJax_Preview">\mathbf{G}_{k}</span><script type="math/tex">\mathbf{G}_{k}</script></span>는 게인 행렬이며, 이는 다음과 같이 정의된다:</p>
-<p>$$
-   \mathbf{G}<em>{k} = \mathbf{P}</em>{k|k} \mathbf{A}<em>{k}^\top \mathbf{P}</em>{k+1|k}^{-1}</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+   \mathbf{G}_{k} = \mathbf{P}_{k|k} \mathbf{A}_{k}^\top \mathbf{P}_{k+1|k}^{-1}
+</div>
+<script type="math/tex; mode=display">
+   \mathbf{G}_{k} = \mathbf{P}_{k|k} \mathbf{A}_{k}^\top \mathbf{P}_{k+1|k}^{-1}
+</script>
+</div>
 <p>이 방법은 계산 효율성과 정확성의 균형을 이루며 널리 사용된다.</p>
 <ol>
 <li>
@@ -178,35 +193,65 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 <ol>
 <li><strong>정보 행렬 및 벡터 갱신:</strong></li>
 </ol>
-<p>$$</p>
-<p>\mathbf{Y}<em>{k|k} = \mathbf{Y}</em>{k|k-1} + \mathbf{H}<em>{k}^{\top} \mathbf{R}</em>{k}^{-1} \mathbf{H}_{k}</p>
-<p>$$</p>
-<p>$$</p>
-<p>\mathbf{y}<em>{k|k} = \mathbf{y}</em>{k|k-1} + \mathbf{H}<em>{k}^{\top} \mathbf{R}</em>{k}^{-1} \mathbf{z}_{k}</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+   \mathbf{Y}_{k|k} = \mathbf{Y}_{k|k-1} + \mathbf{H}_{k}^{\top} \mathbf{R}_{k}^{-1} \mathbf{H}_{k}
+</div>
+<script type="math/tex; mode=display">
+   \mathbf{Y}_{k|k} = \mathbf{Y}_{k|k-1} + \mathbf{H}_{k}^{\top} \mathbf{R}_{k}^{-1} \mathbf{H}_{k}
+</script>
+</div>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+   \mathbf{y}_{k|k} = \mathbf{y}_{k|k-1} + \mathbf{H}_{k}^{\top} \mathbf{R}_{k}^{-1} \mathbf{z}_{k}
+</div>
+<script type="math/tex; mode=display">
+   \mathbf{y}_{k|k} = \mathbf{y}_{k|k-1} + \mathbf{H}_{k}^{\top} \mathbf{R}_{k}^{-1} \mathbf{z}_{k}
+</script>
+</div>
 <ol>
 <li><strong>예측 단계:</strong></li>
 </ol>
-<p>$$</p>
-<p>\mathbf{Y}<em>{k+1|k} = \left( \mathbf{F}</em>{k} \mathbf{Y}<em>{k|k}^{-1} \mathbf{F}</em>{k}^{\top} + \mathbf{Q}_{k} \right)^{-1}</p>
-<p>$$</p>
-<p>$$</p>
-<p>\mathbf{y}<em>{k+1|k} = \mathbf{Y}</em>{k+1|k} \mathbf{F}<em>{k} \mathbf{y}</em>{k|k}</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+   \mathbf{Y}_{k+1|k} = \left( \mathbf{F}_{k} \mathbf{Y}_{k|k}^{-1} \mathbf{F}_{k}^{\top} + \mathbf{Q}_{k} \right)^{-1}
+</div>
+<script type="math/tex; mode=display">
+   \mathbf{Y}_{k+1|k} = \left( \mathbf{F}_{k} \mathbf{Y}_{k|k}^{-1} \mathbf{F}_{k}^{\top} + \mathbf{Q}_{k} \right)^{-1}
+</script>
+</div>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+   \mathbf{y}_{k+1|k} = \mathbf{Y}_{k+1|k} \mathbf{F}_{k} \mathbf{y}_{k|k}
+</div>
+<script type="math/tex; mode=display">
+   \mathbf{y}_{k+1|k} = \mathbf{Y}_{k+1|k} \mathbf{F}_{k} \mathbf{y}_{k|k}
+</script>
+</div>
 <h4 id="_5">정보 필터의 역방향 스무딩</h4>
 <p>정보 필터에서 역방향 스무딩은 다음 단계로 구성된다:</p>
 <ol>
 <li><strong>정보 행렬 역방향 갱신:</strong></li>
 </ol>
-<p>$$</p>
-<p>\mathbf{Y}<em>{k|N} = \mathbf{Y}</em>{k|k} + \mathbf{F}<em>{k}^\top \left(\mathbf{Y}</em>{k+1|N} - \mathbf{Y}<em>{k+1|k}\right) \mathbf{F}</em>{k}</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+   \mathbf{Y}_{k|N} = \mathbf{Y}_{k|k} + \mathbf{F}_{k}^\top \left(\mathbf{Y}_{k+1|N} - \mathbf{Y}_{k+1|k}\right) \mathbf{F}_{k}
+</div>
+<script type="math/tex; mode=display">
+   \mathbf{Y}_{k|N} = \mathbf{Y}_{k|k} + \mathbf{F}_{k}^\top \left(\mathbf{Y}_{k+1|N} - \mathbf{Y}_{k+1|k}\right) \mathbf{F}_{k}
+</script>
+</div>
 <ol>
 <li><strong>정보 벡터 역방향 갱신:</strong></li>
 </ol>
-<p>$$</p>
-<p>\mathbf{y}<em>{k|N} = \mathbf{y}</em>{k|k} + \mathbf{F}<em>{k}^\top \left(\mathbf{y}</em>{k+1|N} - \mathbf{Y}<em>{k+1|k} \mathbf{F}</em>{k} \mathbf{y}_{k|k}\right)</p>
-<p>$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+   \mathbf{y}_{k|N} = \mathbf{y}_{k|k} + \mathbf{F}_{k}^\top \left(\mathbf{y}_{k+1|N} - \mathbf{Y}_{k+1|k} \mathbf{F}_{k} \mathbf{y}_{k|k}\right)
+</div>
+<script type="math/tex; mode=display">
+   \mathbf{y}_{k|N} = \mathbf{y}_{k|k} + \mathbf{F}_{k}^\top \left(\mathbf{y}_{k+1|N} - \mathbf{Y}_{k+1|k} \mathbf{F}_{k} \mathbf{y}_{k|k}\right)
+</script>
+</div>
 <p>이 과정에서 정보 행렬과 정보 벡터의 역방향 갱신을 통해 스무딩된 상태 추정이 이루어진다. 정보 필터 기반의 스무딩 기법은 계산 효율성이 높으며, 특히 분산 시스템에서 유용하다.</p>
 <h3 id="_6">스무딩 기법의 응용 분야</h3>
 <p>스무딩 기법은 다양한 응용 분야에서 중요한 역할을 한다. 몇 가지 주요 응용 분야를 살펴보겠다.</p>
