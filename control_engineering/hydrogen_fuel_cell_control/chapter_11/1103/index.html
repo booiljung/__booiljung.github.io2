@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+  
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    
+    <link rel="canonical" href="https://booiljung.github.io/control_engineering/hydrogen_fuel_cell_control/chapter_11/1103/">
+    <link rel="shortcut icon" href="../../../../img/favicon.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <title>차량 속도 및 출력 제어 - 실험 도서관</title>
+    <link href="../../../../css/bootstrap-3.3.7.min.css" rel="stylesheet">
+    <link href="../../../../css/font-awesome-4.7.0.css" rel="stylesheet">
+    <link href="../../../../css/base.css" rel="stylesheet">
+    <link rel="stylesheet" href="../../../../css/highlight.css">
+    <link href="../../../../css/custom.css" rel="stylesheet">
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+
+    <script src="../../../../js/jquery-3.2.1.min.js"></script>
+    <script src="../../../../js/bootstrap-3.3.7.min.js"></script>
+    <script src="../../../../js/highlight.pack.js"></script>
+    
+    <base target="_top">
+    <script>
+      var base_url = '../../../..';
+      var is_top_frame = false;
+        
+        var pageToc = [
+          {title: "\uc18d\ub3c4 \uc81c\uc5b4 \uac1c\uc694", url: "#_top", children: [
+          ]},
+          {title: "\ucc28\ub7c9 \uc18d\ub3c4\uc640 \ucd9c\ub825\uc758 \uad00\uacc4", url: "#_2", children: [
+          ]},
+          {title: "\ucd9c\ub825 \uc81c\uc5b4 \ubc29\uc815\uc2dd", url: "#_3", children: [
+          ]},
+          {title: "\uc18d\ub3c4 \uc81c\uc5b4\uae30 \uc124\uacc4", url: "#_4", children: [
+          ]},
+        ];
+
+    </script>
+    <script src="../../../../js/base.js"></script>
+      <script src="../../../../js/google_analytics.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+      <script src="https://www.googletagmanager.com/gtag/js?id=G-3F4LHCTF88"></script> 
+</head>
+
+<body>
+<script>
+if (is_top_frame) { $('body').addClass('wm-top-page'); }
+</script>
+
+
+
+<div class="container-fluid wm-page-content">
+  <a name="_top"></a>
+    
+
+    
+    
+      
+    
+
+  <div class="row wm-article-nav-buttons" role="navigation" aria-label="navigation">
+    
+    <div class="wm-article-nav pull-right">
+      <a href="../1104/" class="btn btn-xs btn-default pull-right">
+        Next
+        <i class="fa fa-chevron-right" aria-hidden="true"></i>
+      </a>
+      <a href="../1104/" class="btn btn-xs btn-link">
+        배터리와 연료 전지 하이브리드 제어
+      </a>
+    </div>
+    
+    <div class="wm-article-nav">
+      <a href="../1102/" class="btn btn-xs btn-default pull-left">
+        <i class="fa fa-chevron-left" aria-hidden="true"></i>
+        Previous</a><a href="../1102/" class="btn btn-xs btn-link">
+        연료 전지 스택 제어
+      </a>
+    </div>
+    
+  </div>
+
+    
+
+    <h2 id="_1">속도 제어 개요</h2>
+<p>수소 연료 전지 차량의 속도 제어는 차량의 구동 시스템에서 중요한 부분을 차지한다. 전기 모터와 수소 연료 전지의 상호작용을 기반으로 차량의 속도와 출력을 결정하게 된다. 속도 제어는 주로 다음과 같은 수식을 기반으로 하여 이루어진다.</p>
+<h2 id="_2">차량 속도와 출력의 관계</h2>
+<p>차량의 속도 <span class="arithmatex"><span class="MathJax_Preview">v</span><script type="math/tex">v</script></span>는 차량에 가해지는 출력 <span class="arithmatex"><span class="MathJax_Preview">P</span><script type="math/tex">P</script></span>와 저항 <span class="arithmatex"><span class="MathJax_Preview">R</span><script type="math/tex">R</script></span>에 의해 결정된다. 차량의 총 저항력은 공기 저항, 구름 저항, 기계적 마찰 등을 포함한다. 차량 속도 <span class="arithmatex"><span class="MathJax_Preview">v</span><script type="math/tex">v</script></span>는 다음과 같이 정의될 수 있다:</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+v = \frac{P - R}{F}
+</div>
+<script type="math/tex; mode=display">
+v = \frac{P - R}{F}
+</script>
+</div>
+<p>여기서 <span class="arithmatex"><span class="MathJax_Preview">F</span><script type="math/tex">F</script></span>는 차량의 질량에 가속도를 곱한 값, 즉 추진력이다. 저항력 <span class="arithmatex"><span class="MathJax_Preview">R</span><script type="math/tex">R</script></span>은 대략적으로 다음과 같은 식으로 표현된다:</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+R = C_d \cdot A \cdot v^2 + \text{기계적 저항}
+</div>
+<script type="math/tex; mode=display">
+R = C_d \cdot A \cdot v^2 + \text{기계적 저항}
+</script>
+</div>
+<ul>
+<li><span class="arithmatex"><span class="MathJax_Preview">C_d</span><script type="math/tex">C_d</script></span>: 항력 계수</li>
+<li><span class="arithmatex"><span class="MathJax_Preview">A</span><script type="math/tex">A</script></span>: 차량의 전면적</li>
+<li><span class="arithmatex"><span class="MathJax_Preview">v</span><script type="math/tex">v</script></span>: 차량 속도</li>
+</ul>
+<p>따라서 차량 속도를 제어하기 위해서는 출력을 제어해야 하며, 이를 위해 연료 전지와 모터의 출력 특성을 고려해야 한다.</p>
+<h2 id="_3">출력 제어 방정식</h2>
+<p>수소 연료 전지 차량의 출력은 연료 전지 시스템이 제공하는 전력 <span class="arithmatex"><span class="MathJax_Preview">P_{\text{fc}}</span><script type="math/tex">P_{\text{fc}}</script></span>과 배터리로부터의 추가 전력 <span class="arithmatex"><span class="MathJax_Preview">P_{\text{bat}}</span><script type="math/tex">P_{\text{bat}}</script></span>의 합으로 결정된다. 출력 제어 방정식은 다음과 같이 표현할 수 있다.</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+P_{\text{total}} = P_{\text{fc}} + P_{\text{bat}}
+</div>
+<script type="math/tex; mode=display">
+P_{\text{total}} = P_{\text{fc}} + P_{\text{bat}}
+</script>
+</div>
+<p>여기서, <span class="arithmatex"><span class="MathJax_Preview">P_{\text{fc}}</span><script type="math/tex">P_{\text{fc}}</script></span>는 연료 전지의 출력이며, 이는 수소의 공급량과 산소의 공급량에 따라 결정된다. 반면 <span class="arithmatex"><span class="MathJax_Preview">P_{\text{bat}}</span><script type="math/tex">P_{\text{bat}}</script></span>는 배터리의 상태 및 충전 수준에 따라 달라지며, 수소 연료 전지가 부족한 출력을 보완하는 역할을 한다.</p>
+<p>이러한 전력의 합이 차량의 구동 시스템에 공급되어 모터를 통해 차량의 속도를 결정하게 된다.</p>
+<h2 id="_4">속도 제어기 설계</h2>
+<p>차량 속도 제어를 위해서는 PID 제어기를 사용하는 것이 일반적이다. 여기서 차량의 목표 속도 <span class="arithmatex"><span class="MathJax_Preview">v_{\text{ref}}</span><script type="math/tex">v_{\text{ref}}</script></span>와 현재 속도 <span class="arithmatex"><span class="MathJax_Preview">v</span><script type="math/tex">v</script></span>의 차이를 기반으로 제어 신호를 생성하여 모터의 출력을 조절한다. PID 제어의 기본적인 수식은 다음과 같다.</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+u(t) = K_p \left( v_{\text{ref}}(t) - v(t) \right) + K_i \int_0^t \left( v_{\text{ref}}(\tau) - v(\tau) \right) d\tau + K_d \frac{d}{dt} \left( v_{\text{ref}}(t) - v(t) \right)
+</div>
+<script type="math/tex; mode=display">
+u(t) = K_p \left( v_{\text{ref}}(t) - v(t) \right) + K_i \int_0^t \left( v_{\text{ref}}(\tau) - v(\tau) \right) d\tau + K_d \frac{d}{dt} \left( v_{\text{ref}}(t) - v(t) \right)
+</script>
+</div>
+<ul>
+<li><span class="arithmatex"><span class="MathJax_Preview">K_p</span><script type="math/tex">K_p</script></span>: 비례 이득</li>
+<li><span class="arithmatex"><span class="MathJax_Preview">K_i</span><script type="math/tex">K_i</script></span>: 적분 이득</li>
+<li><span class="arithmatex"><span class="MathJax_Preview">K_d</span><script type="math/tex">K_d</script></span>: 미분 이득</li>
+<li><span class="arithmatex"><span class="MathJax_Preview">v_{\text{ref}}</span><script type="math/tex">v_{\text{ref}}</script></span>: 목표 속도</li>
+<li><span class="arithmatex"><span class="MathJax_Preview">v(t)</span><script type="math/tex">v(t)</script></span>: 현재 속도</li>
+<li><span class="arithmatex"><span class="MathJax_Preview">u(t)</span><script type="math/tex">u(t)</script></span>: 제어 신호</li>
+</ul>
+<p>제어 신호 <span class="arithmatex"><span class="MathJax_Preview">u(t)</span><script type="math/tex">u(t)</script></span>는 모터에 전달되어 속도 <span class="arithmatex"><span class="MathJax_Preview">v(t)</span><script type="math/tex">v(t)</script></span>를 조절하게 된다.</p>
+<p>[계속]</p>
+
+  <br>
+    
+
+    
+    
+      
+    
+
+  <div class="row wm-article-nav-buttons" role="navigation" aria-label="navigation">
+    
+    <div class="wm-article-nav pull-right">
+      <a href="../1104/" class="btn btn-xs btn-default pull-right">
+        Next
+        <i class="fa fa-chevron-right" aria-hidden="true"></i>
+      </a>
+      <a href="../1104/" class="btn btn-xs btn-link">
+        배터리와 연료 전지 하이브리드 제어
+      </a>
+    </div>
+    
+    <div class="wm-article-nav">
+      <a href="../1102/" class="btn btn-xs btn-default pull-left">
+        <i class="fa fa-chevron-left" aria-hidden="true"></i>
+        Previous</a><a href="../1102/" class="btn btn-xs btn-link">
+        연료 전지 스택 제어
+      </a>
+    </div>
+    
+  </div>
+
+    <br>
+</div>
+
+<footer class="container-fluid wm-page-content">
+  <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a> using <a href="https://github.com/gristlabs/mkdocs-windmill">Windmill</a> theme by Grist Labs.</p>
+</footer>
+
+</body>
+</html>
