@@ -66,13 +66,22 @@
               {title: "2.1 \ub4dc\ub860\uc758 \ud558\ub4dc\uc6e8\uc5b4 \uad6c\uc131", url: "#21" },
               {title: "2.2 MAVLink \ud1b5\uc2e0", url: "#22-mavlink" },
               {title: "2.2 \uc18c\ud504\ud2b8\uc6e8\uc5b4 \uad6c\uc131", url: "#22" },
+              {title: "\ud3c9\uba74 \ubc29\uc815\uc2dd:", url: "#_13" },
+              {title: "\uc120\ubd84 \ubc29\uc815\uc2dd:", url: "#_14" },
+              {title: "\uad50\ucc28\uc810 \uad6c\ud558\uae30:", url: "#_15" },
+              {title: "\uad50\ucc28\uc810 \\mathbf{x}\\mathbf{x}:", url: "#mathbfxmathbfx" },
+              {title: "N_dN_d \uc815\uc758", url: "#n_dn_d" },
+              {title: "\uace0\ub3c4 \uacc4\uc0b0\uc5d0\uc11c N_dN_d\uc758 \uc5ed\ud560", url: "#n_dn_d_1" },
+              {title: "1. \uc77c\ubc18 \uc774\uc2ec\ub960 (ee)", url: "#1-ee" },
+              {title: "2. \ubcf4\uc870 \uc774\uc2ec\ub960 (e\u0027e\u0027)", url: "#2-ee" },
+              {title: "\uad00\uacc4 \ubd84\uc11d", url: "#_16" },
               {title: "1. \ud3c9\uba74 \ubc29\uc815\uc2dd", url: "#1_2" },
               {title: "2. \uc120 \ubc29\uc815\uc2dd", url: "#2_2" },
               {title: "3. \uad50\uc810 \uad6c\ud558\uae30", url: "#3_3" },
               {title: "4. \uad50\uc810\uc758 \uc870\uac74", url: "#4_1" },
               {title: "ODE\ub97c \ucc38\uc870\ud55c \uc5f0\uc0b0", url: "#ode" },
               {title: "zz\ucd95\uc744 \uae30\uc900\uc73c\ub85c \\psi\\psi\ub9cc\ud07c\uc758 \ud68c\uc804 \ud589\ub82c", url: "#zz-psipsi" },
-              {title: "\uc124\uba85", url: "#_13" },
+              {title: "\uc124\uba85", url: "#_17" },
               {title: "3.3.4 \uac00\uc0c1 \ud3c9\uba74 \uc801\uc6a9", url: "#334" },
               {title: "3.3.5 \ud5a5\ud6c4 \uacfc\uc81c", url: "#335" },
               {title: "2.3 \uad70\uc9d1 \ube44\ud589 \uc81c\uc5b4", url: "#23" },
@@ -88,7 +97,14 @@
           ]},
           {title: "5. \uacb0\ub860", url: "#5", children: [
           ]},
-          {title: "\ucc38\uc870", url: "#_14", children: [
+          {title: "\ucc38\uc870", url: "#_18", children: [
+              {title: "1. \ucd08\uae30 \uc704\ub3c4 \uac12 \ucd94\uc815", url: "#1_3" },
+              {title: "2. \ubc18\ubcf5\uc801\uc778 \uc704\ub3c4 \uacc4\uc0b0", url: "#2_3" },
+              {title: "3. \uacbd\ub3c4\uc640 \uace0\ub3c4 \uacc4\uc0b0", url: "#3_5" },
+              {title: "1. WGS84 \uc88c\ud45c\ub97c \uc9c1\uad50 \uc88c\ud45c\uacc4\ub85c \ubcc0\ud658 (ECEF \uc88c\ud45c\uacc4)", url: "#1-wgs84-ecef" },
+              {title: "2. \ub450 \ub4dc\ub860 \uac04 \uc0c1\ub300 \ubca1\ud130 \uacc4\uc0b0", url: "#2_4" },
+              {title: "3. \uc0c1\ub300 \ubc29\ud5a5\uc744 \ub4dc\ub860\uc758 \ub85c\uceec \uc88c\ud45c\uacc4\ub85c \ubcc0\ud658", url: "#3_6" },
+              {title: "4. \ub85c\uceec \uc88c\ud45c\uacc4\uc5d0\uc11c \ubc29\ud5a5 \uacb0\uc815", url: "#4_3" },
           ]},
         ];
 
@@ -169,14 +185,24 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 </ol>
 <div class="arithmatex">
 <div class="MathJax_Preview">
-   \mathbf{r_{enu}} = \mathbf{R} \cdot \mathbf{r_{rel}}
+\mathbf{r_{enu}} = \mathbf{R} \cdot \mathbf{r_{rel}}
 </div>
 <script type="math/tex; mode=display">
-   \mathbf{r_{enu}} = \mathbf{R} \cdot \mathbf{r_{rel}}
+\mathbf{r_{enu}} = \mathbf{R} \cdot \mathbf{r_{rel}}
 </script>
 </div>
 <p>이 과정을 통해 피사체(원점) 기준으로 드론의 ENU 좌표를 계산할 수 있다.</p>
 <p>이제 피사체의 위도, 경도, 고도 <span class="arithmatex"><span class="MathJax_Preview">(o_{\phi}, o_{\lambda}, o_h)</span><script type="math/tex">(o_{\phi}, o_{\lambda}, o_h)</script></span>와 드론의 위도, 경도, 고도 <span class="arithmatex"><span class="MathJax_Preview">(d_{\phi}, d_{\lambda}, d_h)</span><script type="math/tex">(d_{\phi}, d_{\lambda}, d_h)</script></span>를 통해 위와 같은 절차를 사용하여 ENU 좌표로 변환하면 된다.</p>
+<p>3차원 제로 벡터는 보통 다음과 같이 표기된다:</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+\mathbf{0} = 
+</div>
+<script type="math/tex; mode=display">
+\mathbf{0} = 
+</script>
+</div>
+<p>이 벡터는 <span class="arithmatex"><span class="MathJax_Preview">x</span><script type="math/tex">x</script></span>, <span class="arithmatex"><span class="MathJax_Preview">y</span><script type="math/tex">y</script></span>, <span class="arithmatex"><span class="MathJax_Preview">z</span><script type="math/tex">z</script></span> 세 축 모두에서 성분이 0인 벡터를 의미한다.</p>
 <h3 id="221-ardupilot">2.2.1 드론 펌웨어 (ArduPilot)</h3>
 <p><strong>아두파일럿(ArduPilot)</strong>은 오픈 소스 기반의 자율 비행 소프트웨어로, 다양한 드론과 로봇의 자동 제어를 지원하는 플랫폼이다. 이 연구에서는 아두파일럿을 사용하여 드론의 자동 비행 및 상태 관리를 수행한다. 아두파일럿의 주요 역할은 다음과 같다.</p>
 <ul>
@@ -1375,6 +1401,89 @@ $$
 \mathbf{p}_\text{intersection} = (\dot{x}_1 + t(\dot{x}_2 - \dot{x}_1), \dot{y}_1 + t(\dot{y}_2 - \dot{y}_1), \dot{z}_1 + t(\dot{z}_2 - \dot{z}_1))
 $$</p>
 <p>이렇게 해서 두 드론을 연결하는 선과 가상 평면의 교점을 구할 수 있다.</p>
+<p>3차원 공간에서 위치 <span class="arithmatex"><span class="MathJax_Preview">p_0</span><script type="math/tex">p_0</script></span>에 법선 벡터 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{n}</span><script type="math/tex">\mathbf{n}</script></span>을 가진 평면과, 두 점 <span class="arithmatex"><span class="MathJax_Preview">p_1</span><script type="math/tex">p_1</script></span>과 <span class="arithmatex"><span class="MathJax_Preview">p_2</span><script type="math/tex">p_2</script></span>를 연결하는 선분이 평면과 교차하는 점 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{x}</span><script type="math/tex">\mathbf{x}</script></span>를 구하는 방법은 다음과 같다.</p>
+<h3 id="_13">평면 방정식:</h3>
+<p>평면은 법선 벡터 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{n}</span><script type="math/tex">\mathbf{n}</script></span>과 평면 위의 한 점 <span class="arithmatex"><span class="MathJax_Preview">p_0</span><script type="math/tex">p_0</script></span>으로 정의된다. 이 평면의 방정식은 다음과 같다.</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+(\mathbf{p} - \mathbf{p_0}) \cdot \mathbf{n} = 0
+</div>
+<script type="math/tex; mode=display">
+(\mathbf{p} - \mathbf{p_0}) \cdot \mathbf{n} = 0
+</script>
+</div>
+<p>여기서 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{p}</span><script type="math/tex">\mathbf{p}</script></span>는 평면 위의 임의의 점을 의미한다. <span class="arithmatex"><span class="MathJax_Preview">\cdot</span><script type="math/tex">\cdot</script></span>는 벡터 내적이다.</p>
+<h3 id="_14">선분 방정식:</h3>
+<p>점 <span class="arithmatex"><span class="MathJax_Preview">p_1</span><script type="math/tex">p_1</script></span>과 <span class="arithmatex"><span class="MathJax_Preview">p_2</span><script type="math/tex">p_2</script></span>를 연결하는 선분은 매개변수 <span class="arithmatex"><span class="MathJax_Preview">t</span><script type="math/tex">t</script></span>에 대해 다음과 같이 표현할 수 있다.</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+\mathbf{p}(t) = (1 - t) \mathbf{p_1} + t \mathbf{p_2}, \quad t \in [0, 1]
+</div>
+<script type="math/tex; mode=display">
+\mathbf{p}(t) = (1 - t) \mathbf{p_1} + t \mathbf{p_2}, \quad t \in [0, 1]
+</script>
+</div>
+<p>여기서 <span class="arithmatex"><span class="MathJax_Preview">t = 0</span><script type="math/tex">t = 0</script></span>일 때 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{p}(t) = \mathbf{p_1}</span><script type="math/tex">\mathbf{p}(t) = \mathbf{p_1}</script></span>, <span class="arithmatex"><span class="MathJax_Preview">t = 1</span><script type="math/tex">t = 1</script></span>일 때 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{p}(t) = \mathbf{p_2}</span><script type="math/tex">\mathbf{p}(t) = \mathbf{p_2}</script></span>이다.</p>
+<h3 id="_15">교차점 구하기:</h3>
+<p>선분의 방정식을 평면 방정식에 대입하면 교차점에서의 <span class="arithmatex"><span class="MathJax_Preview">t</span><script type="math/tex">t</script></span>를 구할 수 있다. 우선, 선분 방정식을 평면 방정식에 대입하면:</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+((1 - t) \mathbf{p_1} + t \mathbf{p_2} - \mathbf{p_0}) \cdot \mathbf{n} = 0
+</div>
+<script type="math/tex; mode=display">
+((1 - t) \mathbf{p_1} + t \mathbf{p_2} - \mathbf{p_0}) \cdot \mathbf{n} = 0
+</script>
+</div>
+<p>이를 전개하면:</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+(1 - t) (\mathbf{p_1} - \mathbf{p_0}) \cdot \mathbf{n} + t (\mathbf{p_2} - \mathbf{p_0}) \cdot \mathbf{n} = 0
+</div>
+<script type="math/tex; mode=display">
+(1 - t) (\mathbf{p_1} - \mathbf{p_0}) \cdot \mathbf{n} + t (\mathbf{p_2} - \mathbf{p_0}) \cdot \mathbf{n} = 0
+</script>
+</div>
+<p>이 식을 <span class="arithmatex"><span class="MathJax_Preview">t</span><script type="math/tex">t</script></span>에 대해 풀면:</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+t = \frac{(\mathbf{p_0} - \mathbf{p_1}) \cdot \mathbf{n}}{(\mathbf{p_2} - \mathbf{p_1}) \cdot \mathbf{n}}
+</div>
+<script type="math/tex; mode=display">
+t = \frac{(\mathbf{p_0} - \mathbf{p_1}) \cdot \mathbf{n}}{(\mathbf{p_2} - \mathbf{p_1}) \cdot \mathbf{n}}
+</script>
+</div>
+<h3 id="mathbfxmathbfx">교차점 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{x}</span><script type="math/tex">\mathbf{x}</script></span>:</h3>
+<p>구한 <span class="arithmatex"><span class="MathJax_Preview">t</span><script type="math/tex">t</script></span> 값을 선분 방정식 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{p}(t)</span><script type="math/tex">\mathbf{p}(t)</script></span>에 대입하면 교차점 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{x}</span><script type="math/tex">\mathbf{x}</script></span>를 구할 수 있다.</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+\mathbf{x} = (1 - t) \mathbf{p_1} + t \mathbf{p_2}
+</div>
+<script type="math/tex; mode=display">
+\mathbf{x} = (1 - t) \mathbf{p_1} + t \mathbf{p_2}
+</script>
+</div>
+<p>---:
+1. 먼저 <span class="arithmatex"><span class="MathJax_Preview">t</span><script type="math/tex">t</script></span> 값을 구한다:</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+   t = \frac{(\mathbf{p_0} - \mathbf{p_1}) \cdot \mathbf{n}}{(\mathbf{p_2} - \mathbf{p_1}) \cdot \mathbf{n}}
+</div>
+<script type="math/tex; mode=display">
+   t = \frac{(\mathbf{p_0} - \mathbf{p_1}) \cdot \mathbf{n}}{(\mathbf{p_2} - \mathbf{p_1}) \cdot \mathbf{n}}
+</script>
+</div>
+<ol>
+<li>그 후, 교차점 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{x}</span><script type="math/tex">\mathbf{x}</script></span>는:</li>
+</ol>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+\mathbf{x} = (1 - t) \mathbf{p_1} + t \mathbf{p_2}
+</div>
+<script type="math/tex; mode=display">
+\mathbf{x} = (1 - t) \mathbf{p_1} + t \mathbf{p_2}
+</script>
+</div>
+<p>이 방법으로 선분이 평면과 교차하는 점을 구할 수 있다.</p>
 <p>먼저, 각 드론 <span class="arithmatex"><span class="MathJax_Preview">d</span><script type="math/tex">d</script></span>의 로컬 좌표 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{q}_d = (x_d, y_d, z_d)</span><script type="math/tex">\mathbf{q}_d = (x_d, y_d, z_d)</script></span>를 얻는다.</p>
 <div class="arithmatex">
 <div class="MathJax_Preview">
@@ -1414,6 +1523,195 @@ $$
 -1
 \end{bmatrix}
 $$</p>
+<p>ENU(동, 북, 상) 좌표계를 GPS(WGS84) 좌표계로 변환하는 과정은 일반적으로 다음과 같은 단계를 포함한다. ENU 좌표계는 지표면 위의 특정 기준점(예: 원점 <span class="arithmatex"><span class="MathJax_Preview">O</span><script type="math/tex">O</script></span>)을 기준으로 동(East), 북(North), 위(Up) 방향으로 정의된다. 변환하려면 먼저 그 기준점의 GPS 좌표(위도, 경도, 고도)를 알고 있어야 한다. 변환 과정은 다음과 같다:</p>
+<ol>
+<li><strong>원점 <span class="arithmatex"><span class="MathJax_Preview">O</span><script type="math/tex">O</script></span>의 GPS 좌표 확인 (위도, 경도, 고도)</strong>:<br/>
+   원점 <span class="arithmatex"><span class="MathJax_Preview">O</span><script type="math/tex">O</script></span>의 GPS 좌표를 <span class="arithmatex"><span class="MathJax_Preview">(\phi_O, \lambda_O, h_O)</span><script type="math/tex">(\phi_O, \lambda_O, h_O)</script></span>로 설정한다. 여기서:</li>
+<li><span class="arithmatex"><span class="MathJax_Preview">\phi_O</span><script type="math/tex">\phi_O</script></span>는 원점의 위도</li>
+<li><span class="arithmatex"><span class="MathJax_Preview">\lambda_O</span><script type="math/tex">\lambda_O</script></span>는 원점의 경도</li>
+<li>
+<p><span class="arithmatex"><span class="MathJax_Preview">h_O</span><script type="math/tex">h_O</script></span>는 원점의 고도이다.</p>
+</li>
+<li>
+<p><strong>ENU 좌표를 지구 중심 지구 고정(ECEF) 좌표로 변환</strong>:
+   ENU 좌표계에서의 드론의 위치 <span class="arithmatex"><span class="MathJax_Preview">p_d = (e, n, u)</span><script type="math/tex">p_d = (e, n, u)</script></span>는 원점에서 동쪽으로 <span class="arithmatex"><span class="MathJax_Preview">e</span><script type="math/tex">e</script></span>, 북쪽으로 <span class="arithmatex"><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span>, 위쪽으로 <span class="arithmatex"><span class="MathJax_Preview">u</span><script type="math/tex">u</script></span>만큼 떨어져 있다. 이를 변환하려면 먼저 ENU 좌표를 ECEF 좌표로 변환해야 한다.</p>
+</li>
+</ol>
+<p>ECEF 좌표로 변환하는 과정은 아래와 같다:</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+\mathbf{P}_{\text{ECEF}} = \mathbf{P}_O + \mathbf{R} \cdot \mathbf{P}_{\text{ENU}}
+</div>
+<script type="math/tex; mode=display">
+\mathbf{P}_{\text{ECEF}} = \mathbf{P}_O + \mathbf{R} \cdot \mathbf{P}_{\text{ENU}}
+</script>
+</div>
+<p>여기서:
+   - <span class="arithmatex"><span class="MathJax_Preview">\mathbf{P}_{\text{ECEF}}</span><script type="math/tex">\mathbf{P}_{\text{ECEF}}</script></span>는 변환된 드론의 ECEF 좌표
+   - <span class="arithmatex"><span class="MathJax_Preview">\mathbf{P}_O</span><script type="math/tex">\mathbf{P}_O</script></span>는 원점 <span class="arithmatex"><span class="MathJax_Preview">O</span><script type="math/tex">O</script></span>의 ECEF 좌표
+   - <span class="arithmatex"><span class="MathJax_Preview">\mathbf{P}_{\text{ENU}} = (e, n, u)</span><script type="math/tex">\mathbf{P}_{\text{ENU}} = (e, n, u)</script></span>는 ENU 좌표에서의 드론의 위치
+   - <span class="arithmatex"><span class="MathJax_Preview">\mathbf{R}</span><script type="math/tex">\mathbf{R}</script></span>은 ENU 좌표계를 ECEF 좌표계로 변환하는 회전 행렬이다. 이 행렬은 원점의 위도와 경도를 사용하여 계산된다.</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+   \mathbf{R} =
+   \begin{bmatrix}
+   -\sin(\lambda_O) &amp; \cos(\lambda_O) &amp; 0 \\
+   -\sin(\phi_O)\cos(\lambda_O) &amp; -\sin(\phi_O)\sin(\lambda_O) &amp; \cos(\phi_O) \\
+   \cos(\phi_O)\cos(\lambda_O) &amp; \cos(\phi_O)\sin(\lambda_O) &amp; \sin(\phi_O)
+   \end{bmatrix}
+</div>
+<script type="math/tex; mode=display">
+   \mathbf{R} =
+   \begin{bmatrix}
+   -\sin(\lambda_O) & \cos(\lambda_O) & 0 \\
+   -\sin(\phi_O)\cos(\lambda_O) & -\sin(\phi_O)\sin(\lambda_O) & \cos(\phi_O) \\
+   \cos(\phi_O)\cos(\lambda_O) & \cos(\phi_O)\sin(\lambda_O) & \sin(\phi_O)
+   \end{bmatrix}
+</script>
+</div>
+<ol>
+<li><strong>원점의 GPS 좌표를 ECEF 좌표로 변환</strong>:
+   원점의 GPS 좌표 <span class="arithmatex"><span class="MathJax_Preview">(\phi_O, \lambda_O, h_O)</span><script type="math/tex">(\phi_O, \lambda_O, h_O)</script></span>를 사용하여 ECEF 좌표로 변환하는 방법은 다음과 같다:</li>
+</ol>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+   X_O = (N_O + h_O) \cdot \cos(\phi_O) \cdot \cos(\lambda_O)
+</div>
+<script type="math/tex; mode=display">
+   X_O = (N_O + h_O) \cdot \cos(\phi_O) \cdot \cos(\lambda_O)
+</script>
+</div>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+   Y_O = (N_O + h_O) \cdot \cos(\phi_O) \cdot \sin(\lambda_O)
+</div>
+<script type="math/tex; mode=display">
+   Y_O = (N_O + h_O) \cdot \cos(\phi_O) \cdot \sin(\lambda_O)
+</script>
+</div>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+   Z_O = \left[\frac{b^2}{a^2}N_O + h_O\right] \cdot \sin(\phi_O)
+</div>
+<script type="math/tex; mode=display">
+   Z_O = \left[\frac{b^2}{a^2}N_O + h_O\right] \cdot \sin(\phi_O)
+</script>
+</div>
+<p>여기서:
+   - <span class="arithmatex"><span class="MathJax_Preview">N_O = \frac{a^2}{\sqrt{a^2 \cos^2(\phi_O) + b^2 \sin^2(\phi_O)}}</span><script type="math/tex">N_O = \frac{a^2}{\sqrt{a^2 \cos^2(\phi_O) + b^2 \sin^2(\phi_O)}}</script></span>는 원점의 곡률 반경
+   - <span class="arithmatex"><span class="MathJax_Preview">a</span><script type="math/tex">a</script></span>와 <span class="arithmatex"><span class="MathJax_Preview">b</span><script type="math/tex">b</script></span>는 WGS84 타원체의 장반경과 단반경이다.</p>
+<ol>
+<li><strong>드론의 ECEF 좌표에서 GPS 좌표로 변환</strong>:
+   드론의 ECEF 좌표 <span class="arithmatex"><span class="MathJax_Preview">(X_d, Y_d, Z_d)</span><script type="math/tex">(X_d, Y_d, Z_d)</script></span>를 구한 후 이를 GPS 좌표로 변환하려면 반복적인 계산을 통해 위도 <span class="arithmatex"><span class="MathJax_Preview">\phi_d</span><script type="math/tex">\phi_d</script></span>, 경도 <span class="arithmatex"><span class="MathJax_Preview">\lambda_d</span><script type="math/tex">\lambda_d</script></span>, 고도 <span class="arithmatex"><span class="MathJax_Preview">h_d</span><script type="math/tex">h_d</script></span>를 얻는다. 일반적인 변환 과정은 다음과 같다:</li>
+</ol>
+<p>경도:</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+\lambda_d = \arctan2(Y_d, X_d)
+</div>
+<script type="math/tex; mode=display">
+\lambda_d = \arctan2(Y_d, X_d)
+</script>
+</div>
+<p>위도:</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+\phi_d = \arctan2\left(Z_d + e'^2 b \sin^3(\phi_d), \sqrt{X_d^2 + Y_d^2} - e^2 a \cos^3(\phi_d)\right)
+</div>
+<script type="math/tex; mode=display">
+\phi_d = \arctan2\left(Z_d + e'^2 b \sin^3(\phi_d), \sqrt{X_d^2 + Y_d^2} - e^2 a \cos^3(\phi_d)\right)
+</script>
+</div>
+<p>여기서 <span class="arithmatex"><span class="MathJax_Preview">e</span><script type="math/tex">e</script></span>는 이심률, <span class="arithmatex"><span class="MathJax_Preview">e'</span><script type="math/tex">e'</script></span>는 보조 이심률이다.</p>
+<p>고도:</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+h_d = \frac{\sqrt{X_d^2 + Y_d^2}}{\cos(\phi_d)} - N_d
+</div>
+<script type="math/tex; mode=display">
+h_d = \frac{\sqrt{X_d^2 + Y_d^2}}{\cos(\phi_d)} - N_d
+</script>
+</div>
+<p>여기서 <span class="arithmatex"><span class="MathJax_Preview">N_d</span><script type="math/tex">N_d</script></span>는 드론 위치에서의 곡률 반경이다.</p>
+<p>이 과정을 통해 ENU 좌표계를 GPS(WGS84) 좌표계로 변환할 수 있다.</p>
+<p>혹시 원점 <span class="arithmatex"><span class="MathJax_Preview">O</span><script type="math/tex">O</script></span>의 GPS 좌표를 제공해 주시면 더 구체적인 변환을 도와드릴 수 있다.</p>
+<p>죄송한다, 설명이 조금 복잡하게 느껴졌을 수 있겠네요. <span class="arithmatex"><span class="MathJax_Preview">N_d</span><script type="math/tex">N_d</script></span>는 GPS 좌표계에서 곡률 반경을 나타내는 값으로, ECEF 좌표계에서 GPS 좌표로 변환할 때 필요하다. 그러므로 설명을 더 명확히 하기 위해 다시 설명드리겠다.</p>
+<p>우선 <span class="arithmatex"><span class="MathJax_Preview">N_d</span><script type="math/tex">N_d</script></span>가 튀어나온 부분은 <strong>드론 위치에서의 곡률 반경</strong>을 의미하는데, 이 값은 위도를 계산할 때 필요한 지구의 곡률을 고려한 값이다. 일반적으로 WGS84 좌표계를 사용할 때, 지구는 타원체(정확히는 회전 타원체)로 근사되며, 이를 계산하기 위해 사용되는 값이 <span class="arithmatex"><span class="MathJax_Preview">N_d</span><script type="math/tex">N_d</script></span>이다.</p>
+<h3 id="n_dn_d"><span class="arithmatex"><span class="MathJax_Preview">N_d</span><script type="math/tex">N_d</script></span> 정의</h3>
+<p>곡률 반경 <span class="arithmatex"><span class="MathJax_Preview">N_d</span><script type="math/tex">N_d</script></span>는 주어진 위도에서 타원체의 곡률을 계산한 값으로 정의되며, 이는 타원체 표면에서 수직으로 측정한 반경이다. WGS84 타원체에서의 곡률 반경은 다음과 같이 주어진다:</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+N_d = \frac{a^2}{\sqrt{a^2 \cos^2(\phi_d) + b^2 \sin^2(\phi_d)}}
+</div>
+<script type="math/tex; mode=display">
+N_d = \frac{a^2}{\sqrt{a^2 \cos^2(\phi_d) + b^2 \sin^2(\phi_d)}}
+</script>
+</div>
+<p>여기서:
+- <span class="arithmatex"><span class="MathJax_Preview">a</span><script type="math/tex">a</script></span>는 지구 타원체의 장반경 (WGS84에서 약 6378137 m)
+- <span class="arithmatex"><span class="MathJax_Preview">b</span><script type="math/tex">b</script></span>는 지구 타원체의 단반경 (WGS84에서 약 6356752.3142 m)
+- <span class="arithmatex"><span class="MathJax_Preview">\phi_d</span><script type="math/tex">\phi_d</script></span>는 드론 위치에서의 위도이다.</p>
+<h3 id="n_dn_d_1">고도 계산에서 <span class="arithmatex"><span class="MathJax_Preview">N_d</span><script type="math/tex">N_d</script></span>의 역할</h3>
+<p>드론의 고도를 계산할 때 <span class="arithmatex"><span class="MathJax_Preview">N_d</span><script type="math/tex">N_d</script></span>는 드론이 위치한 GPS 좌표계에서의 타원체 반경을 구하기 위해 필요하다. 이를 통해 드론이 실제로 지표면으로부터 얼마나 떨어져 있는지를 계산할 수 있다.</p>
+<p>고도는 드론의 ECEF 좌표 <span class="arithmatex"><span class="MathJax_Preview">(X_d, Y_d, Z_d)</span><script type="math/tex">(X_d, Y_d, Z_d)</script></span>에서 얻은 위도 <span class="arithmatex"><span class="MathJax_Preview">\phi_d</span><script type="math/tex">\phi_d</script></span>와 곡률 반경 <span class="arithmatex"><span class="MathJax_Preview">N_d</span><script type="math/tex">N_d</script></span>를 사용하여 계산되며, 다음과 같이 주어진다:</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+h_d = \frac{\sqrt{X_d^2 + Y_d^2}}{\cos(\phi_d)} - N_d
+</div>
+<script type="math/tex; mode=display">
+h_d = \frac{\sqrt{X_d^2 + Y_d^2}}{\cos(\phi_d)} - N_d
+</script>
+</div>
+<p>즉, <span class="arithmatex"><span class="MathJax_Preview">N_d</span><script type="math/tex">N_d</script></span>는 드론 위치에서의 타원체 곡률 반경으로, 이를 통해 드론의 ECEF 좌표에서 GPS 좌표로 변환할 때 고도를 구하는 데 사용된다.</p>
+<hr/>
+<ul>
+<li><span class="arithmatex"><span class="MathJax_Preview">N_d</span><script type="math/tex">N_d</script></span>는 <strong>드론 위치에서의 곡률 반경</strong>으로, 타원체(지구)의 표면 곡률을 고려한 값이다.</li>
+<li>이 값은 GPS 좌표계로 변환할 때 위도 및 고도를 계산하는 과정에서 사용된다.</li>
+<li><span class="arithmatex"><span class="MathJax_Preview">N_d</span><script type="math/tex">N_d</script></span>는 드론이 위치한 지점의 위도 <span class="arithmatex"><span class="MathJax_Preview">\phi_d</span><script type="math/tex">\phi_d</script></span>에 따라 변하는 값이다.</li>
+</ul>
+<p>혹시 추가적으로 다른 부분에서 더 명확한 설명이 필요하시면 말씀해주세요!</p>
+<p>보조 이심률(<span class="arithmatex"><span class="MathJax_Preview">e'</span><script type="math/tex">e'</script></span>)은 일반 이심률(<span class="arithmatex"><span class="MathJax_Preview">e</span><script type="math/tex">e</script></span>)의 <strong>역수</strong>는 아니다. 대신, 보조 이심률은 일반 이심률과 밀접한 관계를 가지고 있지만, 그 정의는 다르다. 보조 이심률은 타원체의 장반경과 단반경 사이의 비율을 다르게 반영한다. 두 값의 관계를 다시 한 번 정리해 보면:</p>
+<h3 id="1-ee">1. <strong>일반 이심률 (<span class="arithmatex"><span class="MathJax_Preview">e</span><script type="math/tex">e</script></span>)</strong></h3>
+<ul>
+<li>타원체의 편평도를 나타내며, 장반경과 단반경의 비율을 기준으로 정의된다.</li>
+<li>정의:</li>
+</ul>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+     e = \sqrt{1 - \left(\frac{b}{a}\right)^2}
+</div>
+<script type="math/tex; mode=display">
+     e = \sqrt{1 - \left(\frac{b}{a}\right)^2}
+</script>
+</div>
+<pre><code> 여기서 $a$는 타원체의 장반경(적도 반경), $b$는 단반경(극 반경)이다.
+</code></pre>
+<h3 id="2-ee">2. <strong>보조 이심률 (<span class="arithmatex"><span class="MathJax_Preview">e'</span><script type="math/tex">e'</script></span>)</strong></h3>
+<ul>
+<li>보조 이심률은 타원체의 장반경과 단반경의 비율을 반대로 적용하여 정의된 값이다.</li>
+<li>정의:</li>
+</ul>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+     e' = \sqrt{\left(\frac{a}{b}\right)^2 - 1}
+</div>
+<script type="math/tex; mode=display">
+     e' = \sqrt{\left(\frac{a}{b}\right)^2 - 1}
+</script>
+</div>
+<pre><code> 또는:
+</code></pre>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+e' = \frac{e}{\sqrt{1 - e^2}}
+</div>
+<script type="math/tex; mode=display">
+e' = \frac{e}{\sqrt{1 - e^2}}
+</script>
+</div>
+<h3 id="_16">관계 분석</h3>
+<p>보조 이심률은 일반 이심률과의 관계식에서 알 수 있듯이, 단순한 역수가 아니다. 대신, 보조 이심률은 일반 이심률을 기반으로 한 값이며, 지구의 타원체 형상에 대한 다른 표현 방식이다. 이 두 값은 서로 변환 가능하지만, 하나가 다른 것의 역수로 정의되지 않는다.</p>
+<p>정리하자면, <strong>보조 이심률은 일반 이심률의 역수는 아니며</strong>, 각각의 정의는 다르다. 보조 이심률은 일반 이심률을 더 복잡하게 변형한 값이다.</p>
 <p>3차원 공간에서 두 점 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{p}_1</span><script type="math/tex">\mathbf{p}_1</script></span>과 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{p}_2</span><script type="math/tex">\mathbf{p}_2</script></span>가 주어졌을 때, 이들 위치를 연결하는 선과 수평면에 수직인 평면 사이의 교점을 구하는 과정은 다음과 같다. 이때 평면의 위치는 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{p}</span><script type="math/tex">\mathbf{p}</script></span>이고, 법선벡터는 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{n}</span><script type="math/tex">\mathbf{n}</script></span>이라고 가정한다.</p>
 <h3 id="1_2">1. 평면 방정식</h3>
 <p>평면의 방정식은 법선 벡터 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{n}</span><script type="math/tex">\mathbf{n}</script></span>과 평면 위의 한 점 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{p}</span><script type="math/tex">\mathbf{p}</script></span>을 사용하여 다음과 같이 표현할 수 있다.</p>
@@ -1510,7 +1808,7 @@ R_z(\psi) =
 </script>
 </div>
 <p>이 행렬은 <span class="arithmatex"><span class="MathJax_Preview">z</span><script type="math/tex">z</script></span>축을 기준으로 <span class="arithmatex"><span class="MathJax_Preview">\psi</span><script type="math/tex">\psi</script></span>만큼의 회전을 표현하며, 이를 적용한 벡터는 <span class="arithmatex"><span class="MathJax_Preview">xy</span><script type="math/tex">xy</script></span>평면에서만 회전하고, <span class="arithmatex"><span class="MathJax_Preview">z</span><script type="math/tex">z</script></span>축 방향 성분은 변하지 않는다.</p>
-<h3 id="_13">설명</h3>
+<h3 id="_17">설명</h3>
 <ul>
 <li><span class="arithmatex"><span class="MathJax_Preview">\cos \psi</span><script type="math/tex">\cos \psi</script></span>와 <span class="arithmatex"><span class="MathJax_Preview">\sin \psi</span><script type="math/tex">\sin \psi</script></span>는 회전 각도 <span class="arithmatex"><span class="MathJax_Preview">\psi</span><script type="math/tex">\psi</script></span>에 따른 삼각 함수 값이다.</li>
 <li>이 회전은 <span class="arithmatex"><span class="MathJax_Preview">z</span><script type="math/tex">z</script></span>축을 중심으로 <span class="arithmatex"><span class="MathJax_Preview">xy</span><script type="math/tex">xy</script></span>평면 상에서만 영향을 미치므로, <span class="arithmatex"><span class="MathJax_Preview">z</span><script type="math/tex">z</script></span>축 성분은 그대로 유지된다.</li>
@@ -1581,7 +1879,7 @@ R_z(\psi) =
 <p>비파괴 검사를 위해 두 대의 드론은 피사체를 사이에 두고 가상의 평면을 생성한다. 이 평면을 기준으로 드론은 지정된 거리를 유지하며, 조종자의 명령에 따라 일정 간격으로 이동한다.</p>
 <h2 id="5">5. 결론</h2>
 <p>본 논문에서는 두 대의 드론을 이용한 군집 비파괴 검사 시스템을 제안하였다. 각 드론은 서로의 위치를 실시간으로 추정하며 피사체를 조준하고, 지정된 경로를 따라 검사 영상을 취득한다. 제안된 시스템은 MAVLink 기반 통신을 통해 효율적으로 작동하며, 향후 연구에서는 검사 장비의 정밀도를 향상시키고, 다양한 피사체에 대한 적용 가능성을 검토할 예정이다.</p>
-<h2 id="_14">참조</h2>
+<h2 id="_18">참조</h2>
 <p>[Ardupilot] https://ardupilot.org/</p>
 <p>[MAVLink] https://mavlink.io/en/</p>
 <p>[MAVLink2] https://mavlink.io/en/guide/mavlink_2.html</p>
@@ -1596,6 +1894,162 @@ R_z(\psi) =
 </ol>
 <p>Vincenty의 계산법은 매우 정확하며, GPS나 지리 정보 시스템(GIS)에서 타원체 모델을 사용할 때 거리 계산에 자주 사용된다.</p>
 <p>참고로, 이 논문은 타원체 모델을 사용한 지리적 계산에서 여전히 중요한 기여를 하고 있으며, 타원체의 편평도와 이심률을 고려한 매우 정밀한 계산을 가능하게 한다.</p>
+<p>맞습니다! 위에서 설명한 <span class="arithmatex"><span class="MathJax_Preview">\phi_d</span><script type="math/tex">\phi_d</script></span>를 구하는 과정은 재귀적인 형태로 되어 있었는데, 실제로는 수렴하는 방식으로 계산을 해야 한다. 따라서 그 식은 수정되어야 한다. <span class="arithmatex"><span class="MathJax_Preview">\phi_d</span><script type="math/tex">\phi_d</script></span> (위도)를 구하는 보다 정확한 방식은 반복적인 방법을 사용하는 것이다. </p>
+<p>정확한 변환 과정을 살펴보면, 드론의 ECEF 좌표 <span class="arithmatex"><span class="MathJax_Preview">(X_d, Y_d, Z_d)</span><script type="math/tex">(X_d, Y_d, Z_d)</script></span>에서 GPS 좌표로 변환할 때 위도 <span class="arithmatex"><span class="MathJax_Preview">\phi_d</span><script type="math/tex">\phi_d</script></span>는 다음과 같은 방식으로 구해진다:</p>
+<h3 id="1_3">1. 초기 위도 값 추정</h3>
+<p>우선 초기 위도 값을 대략적으로 추정할 수 있다:</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+\phi_d^{(0)} = \arctan\left(\frac{Z_d}{\sqrt{X_d^2 + Y_d^2}}\right)
+</div>
+<script type="math/tex; mode=display">
+\phi_d^{(0)} = \arctan\left(\frac{Z_d}{\sqrt{X_d^2 + Y_d^2}}\right)
+</script>
+</div>
+<p>이는 고도 <span class="arithmatex"><span class="MathJax_Preview">h_d</span><script type="math/tex">h_d</script></span>를 무시한 상태에서의 초기 추정값이다.</p>
+<h3 id="2_3">2. 반복적인 위도 계산</h3>
+<p>초기 위도 값 <span class="arithmatex"><span class="MathJax_Preview">\phi_d^{(0)}</span><script type="math/tex">\phi_d^{(0)}</script></span>를 사용하여 드론 위치에서의 곡률 반경 <span class="arithmatex"><span class="MathJax_Preview">N_d</span><script type="math/tex">N_d</script></span>를 계산한 후, 이를 이용해 위도를 반복적으로 업데이트한다. 이 방법은 다음과 같다:</p>
+<ol>
+<li>초기 위도 <span class="arithmatex"><span class="MathJax_Preview">\phi_d^{(0)}</span><script type="math/tex">\phi_d^{(0)}</script></span>로 시작한다.</li>
+<li>위도의 업데이트는 다음과 같은 식을 사용한다:</li>
+</ol>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+\phi_d^{(n+1)} = \arctan\left(\frac{Z_d + e'^2 N_d \sin(\phi_d^{(n)})}{\sqrt{X_d^2 + Y_d^2}}\right)
+</div>
+<script type="math/tex; mode=display">
+\phi_d^{(n+1)} = \arctan\left(\frac{Z_d + e'^2 N_d \sin(\phi_d^{(n)})}{\sqrt{X_d^2 + Y_d^2}}\right)
+</script>
+</div>
+<p>여기서:
+- <span class="arithmatex"><span class="MathJax_Preview">e'</span><script type="math/tex">e'</script></span>는 보조 이심률 (<span class="arithmatex"><span class="MathJax_Preview">e' = \frac{b}{a}</span><script type="math/tex">e' = \frac{b}{a}</script></span>)이며, <span class="arithmatex"><span class="MathJax_Preview">a</span><script type="math/tex">a</script></span>와 <span class="arithmatex"><span class="MathJax_Preview">b</span><script type="math/tex">b</script></span>는 WGS84 타원체의 장반경과 단반경이다.
+- <span class="arithmatex"><span class="MathJax_Preview">N_d</span><script type="math/tex">N_d</script></span>는 현재 위도에서의 곡률 반경으로 다음과 같이 계산된다:</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+N_d = \frac{a}{\sqrt{1 - e^2 \sin^2(\phi_d^{(n)})}}
+</div>
+<script type="math/tex; mode=display">
+N_d = \frac{a}{\sqrt{1 - e^2 \sin^2(\phi_d^{(n)})}}
+</script>
+</div>
+<p>반복 과정은 위도 값이 수렴할 때까지 진행된다. 일반적으로, 이 과정은 매우 빠르게 수렴한다.</p>
+<h3 id="3_5">3. 경도와 고도 계산</h3>
+<ul>
+<li>경도 <span class="arithmatex"><span class="MathJax_Preview">\lambda_d</span><script type="math/tex">\lambda_d</script></span>는 위도와 고도가 구해지면 아래와 같이 단순 계산으로 구할 수 있다:</li>
+</ul>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+\lambda_d = \arctan2(Y_d, X_d)
+</div>
+<script type="math/tex; mode=display">
+\lambda_d = \arctan2(Y_d, X_d)
+</script>
+</div>
+<ul>
+<li>고도 <span class="arithmatex"><span class="MathJax_Preview">h_d</span><script type="math/tex">h_d</script></span>는 다음과 같이 계산된다:</li>
+</ul>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+h_d = \frac{\sqrt{X_d^2 + Y_d^2}}{\cos(\phi_d)} - N_d
+</div>
+<script type="math/tex; mode=display">
+h_d = \frac{\sqrt{X_d^2 + Y_d^2}}{\cos(\phi_d)} - N_d
+</script>
+</div>
+<p>---:
+이와 같은 방식으로 <span class="arithmatex"><span class="MathJax_Preview">\phi_d</span><script type="math/tex">\phi_d</script></span>를 반복적으로 계산해야 하며, 초기 값으로부터 시작하여 정확한 위도 값을 수렴시키는 방식이다. 위에서 제시된 재귀적인 형태는 실제로 반복적인 계산 방식으로 처리된다.</p>
+<p>따라서 재귀적인 형태는 틀린 방식이 아니며, 적절히 반복적인 방식으로 변환되어야 한다.</p>
+<p>고도가 동일한 두 대의 드론이 WGS84 좌표로 서로의 위치를 공유하고 있고, 상대 위치를 향하도록 하려면, 두 드론이 각각 상대방을 가리키는 벡터 방향을 계산해야 한다. 이를 위해 각 드론의 WGS84 좌표(g_1, g_2)를 활용하여 상대 방향을 계산할 수 있다. WGS84 좌표는 경도(Longitude), 위도(Latitude), 고도(Altitude) 정보를 포함하며, 이를 기초로 하여 각 드론이 상대 드론을 향하게 하는 방법은 다음과 같다.</p>
+<h3 id="1-wgs84-ecef">1. WGS84 좌표를 직교 좌표계로 변환 (ECEF 좌표계)</h3>
+<p>WGS84는 구면 좌표계이므로, 드론 간의 벡터 계산을 쉽게 하기 위해 ECEF 좌표계(지구 중심 좌표계)로 변환한다. ECEF 좌표계에서 X, Y, Z 좌표로 변환하는 공식은 아래와 같다:</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+X = (N + h) \cdot \cos(\phi) \cdot \cos(\lambda)
+</div>
+<script type="math/tex; mode=display">
+X = (N + h) \cdot \cos(\phi) \cdot \cos(\lambda)
+</script>
+</div>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+Y = (N + h) \cdot \cos(\phi) \cdot \sin(\lambda)
+</div>
+<script type="math/tex; mode=display">
+Y = (N + h) \cdot \cos(\phi) \cdot \sin(\lambda)
+</script>
+</div>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+Z = \left(\left(1 - e^2\right) \cdot N + h\right) \cdot \sin(\phi)
+</div>
+<script type="math/tex; mode=display">
+Z = \left(\left(1 - e^2\right) \cdot N + h\right) \cdot \sin(\phi)
+</script>
+</div>
+<ul>
+<li><span class="arithmatex"><span class="MathJax_Preview">\phi</span><script type="math/tex">\phi</script></span>: 위도(Latitude, 단위: 라디안)</li>
+<li><span class="arithmatex"><span class="MathJax_Preview">\lambda</span><script type="math/tex">\lambda</script></span>: 경도(Longitude, 단위: 라디안)</li>
+<li><span class="arithmatex"><span class="MathJax_Preview">h</span><script type="math/tex">h</script></span>: 고도(Altitude, 단위: 미터)</li>
+<li><span class="arithmatex"><span class="MathJax_Preview">N</span><script type="math/tex">N</script></span>: WGS84 타원체의 반경</li>
+</ul>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+  N = \frac{a}{\sqrt{1 - e^2 \cdot \sin^2(\phi)}}
+</div>
+<script type="math/tex; mode=display">
+  N = \frac{a}{\sqrt{1 - e^2 \cdot \sin^2(\phi)}}
+</script>
+</div>
+<ul>
+<li><span class="arithmatex"><span class="MathJax_Preview">a</span><script type="math/tex">a</script></span>: 지구 적도 반경 (6378137.0 m)</li>
+<li><span class="arithmatex"><span class="MathJax_Preview">e</span><script type="math/tex">e</script></span>: 타원체 이심률 (0.081819190842622)</li>
+</ul>
+<h3 id="2_4">2. 두 드론 간 상대 벡터 계산</h3>
+<p>ECEF 좌표계로 변환된 드론 1의 좌표를 <span class="arithmatex"><span class="MathJax_Preview">P_1 = (X_1, Y_1, Z_1)</span><script type="math/tex">P_1 = (X_1, Y_1, Z_1)</script></span>, 드론 2의 좌표를 <span class="arithmatex"><span class="MathJax_Preview">P_2 = (X_2, Y_2, Z_2)</span><script type="math/tex">P_2 = (X_2, Y_2, Z_2)</script></span>라고 하면, 드론 1에서 드론 2를 향하는 상대 벡터는 다음과 같이 계산된다.</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+\vec{r_{12}} = P_2 - P_1 = (X_2 - X_1, Y_2 - Y_1, Z_2 - Z_1)
+</div>
+<script type="math/tex; mode=display">
+\vec{r_{12}} = P_2 - P_1 = (X_2 - X_1, Y_2 - Y_1, Z_2 - Z_1)
+</script>
+</div>
+<p>이 벡터는 드론 1에서 드론 2를 향하는 방향을 나타낸다. 마찬가지로, 드론 2에서 드론 1을 향하는 벡터는 다음과 같다.</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+\vec{r_{21}} = P_1 - P_2 = (X_1 - X_2, Y_1 - Y_2, Z_1 - Z_2)
+</div>
+<script type="math/tex; mode=display">
+\vec{r_{21}} = P_1 - P_2 = (X_1 - X_2, Y_1 - Y_2, Z_1 - Z_2)
+</script>
+</div>
+<h3 id="3_6">3. 상대 방향을 드론의 로컬 좌표계로 변환</h3>
+<p>각 드론의 상대 벡터를 구한 후, 해당 벡터를 드론의 로컬 좌표계 (ENU: 동쪽, 북쪽, 위쪽)로 변환해야 한다. 이를 위해 ECEF 좌표를 ENU 좌표로 변환한다.</p>
+<ul>
+<li><span class="arithmatex"><span class="MathJax_Preview">E = -\sin(\lambda) \cdot \Delta X + \cos(\lambda) \cdot \Delta Y</span><script type="math/tex">E = -\sin(\lambda) \cdot \Delta X + \cos(\lambda) \cdot \Delta Y</script></span></li>
+<li><span class="arithmatex"><span class="MathJax_Preview">N = -\sin(\phi) \cdot \cos(\lambda) \cdot \Delta X - \sin(\phi) \cdot \sin(\lambda) \cdot \Delta Y + \cos(\phi) \cdot \Delta Z</span><script type="math/tex">N = -\sin(\phi) \cdot \cos(\lambda) \cdot \Delta X - \sin(\phi) \cdot \sin(\lambda) \cdot \Delta Y + \cos(\phi) \cdot \Delta Z</script></span></li>
+<li><span class="arithmatex"><span class="MathJax_Preview">U = \cos(\phi) \cdot \cos(\lambda) \cdot \Delta X + \cos(\phi) \cdot \sin(\lambda) \cdot \Delta Y + \sin(\phi) \cdot \Delta Z</span><script type="math/tex">U = \cos(\phi) \cdot \cos(\lambda) \cdot \Delta X + \cos(\phi) \cdot \sin(\lambda) \cdot \Delta Y + \sin(\phi) \cdot \Delta Z</script></span></li>
+</ul>
+<p>여기서 <span class="arithmatex"><span class="MathJax_Preview">\Delta X, \Delta Y, \Delta Z</span><script type="math/tex">\Delta X, \Delta Y, \Delta Z</script></span>는 두 드론 간 상대 ECEF 벡터이다.</p>
+<h3 id="4_3">4. 로컬 좌표계에서 방향 결정</h3>
+<p>ENU 좌표계에서 드론의 yaw (heading, 방위각)를 계산하여 드론이 상대를 향하도록 회전시킬 수 있다. yaw 각도는 다음과 같이 계산된다:</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+\text{yaw} = \text{atan2}(E, N)
+</div>
+<script type="math/tex; mode=display">
+\text{yaw} = \text{atan2}(E, N)
+</script>
+</div>
+<p>이 각도를 이용해 드론이 서로를 향하도록 yaw 방향을 조정하면 된다.</p>
+<hr/>
+<ol>
+<li>WGS84 좌표를 ECEF 좌표로 변환.</li>
+<li>두 드론 간의 상대 벡터를 계산.</li>
+<li>ECEF 좌표를 드론의 로컬 좌표계인 ENU로 변환.</li>
+<li>로컬 좌표계에서 yaw 각도를 계산하여 드론을 서로 향하도록 함.</li>
+</ol>
+<p>이 절차를 통해 두 드론은 서로의 위치를 기반으로 상대적인 방향을 알 수 있다.</p>
 <br/>
 <br/>
 </div>
