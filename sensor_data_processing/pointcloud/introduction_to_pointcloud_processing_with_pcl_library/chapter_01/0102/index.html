@@ -53,8 +53,6 @@
           ]},
           {title: "PCL \uc0ac\uc6a9 \uc608\uc81c", url: "#pcl_3", children: [
           ]},
-          {title: "\ud3ec\uc778\ud2b8 \ud074\ub77c\uc6b0\ub4dc \ub370\uc774\ud130 \uad6c\uc870", url: "#_2", children: [
-          ]},
         ];
 
     </script>
@@ -225,17 +223,6 @@ int main()
 }
 </code></pre>
 <p>이 코드에서는 간단한 5개의 포인트를 포함한 포인트 클라우드를 생성하고, <code>PassThrough</code> 필터를 사용하여 z 좌표값이 0.0에서 1.0 사이인 점들만을 남기는 필터링을 수행한다. 이처럼 PCL은 다양한 필터링, 변환, 클러스터링 등의 기능을 제공하여 포인트 클라우드 데이터를 효과적으로 처리할 수 있다.</p>
-<h3 id="_2">포인트 클라우드 데이터 구조</h3>
-<p>PCL에서 사용하는 포인트 클라우드 데이터 구조는 3차원 공간의 점들로 구성된 데이터를 표현한다. 이 데이터를 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{P}</span><script type="math/tex">\mathbf{P}</script></span>로 나타낼 수 있으며, 다음과 같이 정의할 수 있다:</p>
-<div class="arithmatex">
-<div class="MathJax_Preview">
-\mathbf{P} = \left[ \begin{array}{ccc} x_1 &amp; y_1 &amp; z_1 \\ x_2 &amp; y_2 &amp; z_2 \\ \vdots &amp; \vdots &amp; \vdots \\ x_n &amp; y_n &amp; z_n \end{array} \right]
-</div>
-<script type="math/tex; mode=display">
-\mathbf{P} = \left[ \begin{array}{ccc} x_1 & y_1 & z_1 \\ x_2 & y_2 & z_2 \\ \vdots & \vdots & \vdots \\ x_n & y_n & z_n \end{array} \right]
-</script>
-</div>
-<p>여기서 각 행은 개별 포인트를 나타내며, 각 포인트는 x, y, z 좌표로 구성된다. 이러한 포인트 클라우드 구조는 PCL에서의 기본 데이터 형식으로 사용된다.</p>
 
   <br>
     

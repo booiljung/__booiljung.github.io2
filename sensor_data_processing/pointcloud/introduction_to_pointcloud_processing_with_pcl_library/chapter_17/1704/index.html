@@ -54,7 +54,7 @@
               {title: "\ud655\ub960\uc801 \uc811\uadfc\ubc95", url: "#_9" },
               {title: "\uacbd\ub85c \uacc4\ud68d\uacfc \uc2e4\uc2dc\uac04 \uc81c\uc5b4\uc758 \ud1b5\ud569", url: "#_10" },
           ]},
-          {title: "\uba54\uc26c\uc640 \ucda9\ub3cc \ud68c\ud53c\uc758 \uad00\uacc4", url: "#_11", children: [
+          {title: "\uba54\uc2dc\uc640 \ucda9\ub3cc \ud68c\ud53c\uc758 \uad00\uacc4", url: "#_11", children: [
           ]},
         ];
 
@@ -257,9 +257,9 @@ f(n) = g(n) + h(n)
 <h4 id="_10">경로 계획과 실시간 제어의 통합</h4>
 <p>동적 장애물을 회피하기 위한 최적의 전략은 경로 계획과 실시간 제어를 통합하는 것이다. 경로 계획 단계에서는 동적 장애물의 예상 경로를 반영한 충돌 회피 경로를 미리 생성하며, 실시간 제어 단계에서는 환경의 변화에 대응하여 경로를 동적으로 수정한다.</p>
 <p>이러한 통합된 시스템을 설계할 때 중요한 요소는 반응 시간과 제어의 정밀도다. 객체가 충돌을 피하려면 짧은 시간 안에 경로를 수정해야 하므로, 경로 계획 알고리즘과 제어 시스템의 계산 속도가 매우 중요하다. 이를 위해 여러 최적화 기법이 사용되며, 특히 실시간 시스템에서는 경로 수정 및 제어 입력 계산을 빠르게 수행하기 위해 병렬 처리 또는 GPU 기반 계산이 활용된다.</p>
-<h3 id="_11">메쉬와 충돌 회피의 관계</h3>
-<p>충돌 회피는 포인트 클라우드뿐만 아니라 메쉬 기반 객체와의 상호작용에서도 중요하다. 특히, 메쉬로 표현된 동적 객체와의 충돌 회피는 메쉬의 세부 구조를 고려하여 회피 전략을 세워야 한다.</p>
-<p>메쉬의 각 삼각형 면적을 고려한 충돌 감지는 매우 세밀한 충돌 회피를 가능하게 한다. 두 메쉬 객체 간의 충돌 회피를 위해서는 삼각형 간의 거리 계산이 필요하다. 두 삼각형 <span class="arithmatex"><span class="MathJax_Preview">T_A</span><script type="math/tex">T_A</script></span>와 <span class="arithmatex"><span class="MathJax_Preview">T_B</span><script type="math/tex">T_B</script></span> 사이의 최소 거리는 다음과 같이 계산할 수 있다:</p>
+<h3 id="_11">메시와 충돌 회피의 관계</h3>
+<p>충돌 회피는 포인트 클라우드뿐만 아니라 메시 기반 객체와의 상호작용에서도 중요하다. 특히, 메시로 표현된 동적 객체와의 충돌 회피는 메시의 세부 구조를 고려하여 회피 전략을 세워야 한다.</p>
+<p>메시의 각 삼각형 면적을 고려한 충돌 감지는 매우 세밀한 충돌 회피를 가능하게 한다. 두 메시 객체 간의 충돌 회피를 위해서는 삼각형 간의 거리 계산이 필요하다. 두 삼각형 <span class="arithmatex"><span class="MathJax_Preview">T_A</span><script type="math/tex">T_A</script></span>와 <span class="arithmatex"><span class="MathJax_Preview">T_B</span><script type="math/tex">T_B</script></span> 사이의 최소 거리는 다음과 같이 계산할 수 있다:</p>
 <div class="arithmatex">
 <div class="MathJax_Preview">
 d(T_A, T_B) = \min_{\mathbf{p}_A \in T_A, \mathbf{p}_B \in T_B} \|\mathbf{p}_A - \mathbf{p}_B\|
@@ -268,7 +268,7 @@ d(T_A, T_B) = \min_{\mathbf{p}_A \in T_A, \mathbf{p}_B \in T_B} \|\mathbf{p}_A -
 d(T_A, T_B) = \min_{\mathbf{p}_A \in T_A, \mathbf{p}_B \in T_B} \|\mathbf{p}_A - \mathbf{p}_B\|
 </script>
 </div>
-<p>메쉬 기반 충돌 회피에서는 주로 브로드 페이즈(broad-phase)와 내로우 페이즈(narrow-phase)로 충돌 감지를 나눈다. 브로드 페이즈에서는 객체의 경계 상자를 사용하여 충돌 가능성이 있는 객체들을 빠르게 필터링하고, 내로우 페이즈에서는 세부적인 삼각형 간의 거리 계산을 통해 실제 충돌 여부를 판단한다. 이를 통해 매우 정밀한 충돌 회피를 구현할 수 있다.</p>
+<p>메시 기반 충돌 회피에서는 주로 브로드 페이즈(broad-phase)와 내로우 페이즈(narrow-phase)로 충돌 감지를 나눈다. 브로드 페이즈에서는 객체의 경계 상자를 사용하여 충돌 가능성이 있는 객체들을 빠르게 필터링하고, 내로우 페이즈에서는 세부적인 삼각형 간의 거리 계산을 통해 실제 충돌 여부를 판단한다. 이를 통해 매우 정밀한 충돌 회피를 구현할 수 있다.</p>
 
   <br>
     

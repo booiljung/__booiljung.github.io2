@@ -57,8 +57,6 @@
           ]},
           {title: "\uace0\ucc28\uc6d0 \ub370\uc774\ud130\uc5d0\uc11c\uc758 \ub79c\ub364 \ud3ec\ub808\uc2a4\ud2b8 \uae30\ubc18 \ube44\uc815\uc0c1 \ud3ec\uc778\ud2b8 \ud0d0\uc9c0", url: "#_2", children: [
           ]},
-          {title: "", url: "#_3", children: [
-          ]},
         ];
 
     </script>
@@ -266,10 +264,10 @@ d(\mathbf{p}_i, \text{Model}) > \text{Threshold} \implies \mathbf{p}_i \text{는
 <p>여기서 <span class="arithmatex"><span class="MathJax_Preview">k</span><script type="math/tex">k</script></span>는 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{p}_i</span><script type="math/tex">\mathbf{p}_i</script></span>의 <span class="arithmatex"><span class="MathJax_Preview">k</span><script type="math/tex">k</script></span>-최근접 이웃의 개수이다. 그런 다음, 해당 포인트의 로컬 밀도를 이웃들의 로컬 밀도와 비교하여, LOF 값을 계산한다.</p>
 <div class="arithmatex">
 <div class="MathJax_Preview">
-\text{LOF}(\mathbf{p}_i) = \frac{\sum_{j=1}^{k} \frac{\text{Local Density}(\mathbf{p}_j)}{\text{Local Density}(\mathbf{p}_i)}}}{k}
+\text{LOF}(\mathbf{p}_i) = \frac{\sum_{j=1}^{k} \frac{\text{Local Density}(\mathbf{p}_j)}{\text{Local Density}(\mathbf{p}_i)}}{k}
 </div>
 <script type="math/tex; mode=display">
-\text{LOF}(\mathbf{p}_i) = \frac{\sum_{j=1}^{k} \frac{\text{Local Density}(\mathbf{p}_j)}{\text{Local Density}(\mathbf{p}_i)}}}{k}
+\text{LOF}(\mathbf{p}_i) = \frac{\sum_{j=1}^{k} \frac{\text{Local Density}(\mathbf{p}_j)}{\text{Local Density}(\mathbf{p}_i)}}{k}
 </script>
 </div>
 <p>LOF 값이 클수록 해당 포인트는 비정상 포인트일 가능성이 높으며, 일정 임계값을 넘으면 비정상으로 간주하여 제거된다.</p>
@@ -323,7 +321,6 @@ P(\mathbf{p}_i | \text{비정상}) = \frac{1}{T} \sum_{t=1}^{T} I_t(\mathbf{p}_i
 - <span class="arithmatex"><span class="MathJax_Preview">T</span><script type="math/tex">T</script></span>는 랜덤 포레스트에서 사용된 트리의 개수.
 - <span class="arithmatex"><span class="MathJax_Preview">I_t(\mathbf{p}_i)</span><script type="math/tex">I_t(\mathbf{p}_i)</script></span>는 포인트 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{p}_i</span><script type="math/tex">\mathbf{p}_i</script></span>가 <span class="arithmatex"><span class="MathJax_Preview">t</span><script type="math/tex">t</script></span>-번째 트리에서 비정상으로 분류되는지를 나타내는 지표 함수이다.</p>
 <p>비정상으로 분류된 포인트는 임계값을 넘는 경우 제거된다. 이 방법은 특히 많은 차원을 가진 데이터에서도 빠르고 효과적으로 비정상 포인트를 탐지할 수 있는 장점이 있다.</p>
-<h3 id="_3"></h3>
 
   <br>
     

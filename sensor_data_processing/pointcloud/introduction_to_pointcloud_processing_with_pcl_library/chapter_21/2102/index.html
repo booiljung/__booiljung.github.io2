@@ -42,7 +42,7 @@
           {title: "\uc815\ub82c \uacfc\uc815\uc758 \ud6c4\ucc98\ub9ac (Post-Processing)", url: "#post-processing", children: [
               {title: "\ub370\uc774\ud130 \uc911\ubcf5 \uc81c\uac70", url: "#_2" },
               {title: "\uc7a1\uc74c \uc81c\uac70", url: "#_3" },
-              {title: "\uba54\uc26c\uc640\uc758 \ud1b5\ud569 \uace0\ub824", url: "#_4" },
+              {title: "\uba54\uc2dc\uc640\uc758 \ud1b5\ud569 \uace0\ub824", url: "#_4" },
           ]},
           {title: "\uc815\ub82c \uc815\ud655\ub3c4 \ud3c9\uac00 (Alignment Accuracy Evaluation)", url: "#alignment-accuracy-evaluation", children: [
               {title: "\uc815\ub7c9\uc801 \ud3c9\uac00 (Quantitative Evaluation)", url: "#quantitative-evaluation" },
@@ -177,8 +177,8 @@ d(p_i) > \mu + \alpha \sigma
 </script>
 </div>
 <p>여기서 <span class="arithmatex"><span class="MathJax_Preview">\alpha</span><script type="math/tex">\alpha</script></span>는 사용자가 설정할 수 있는 가중치로, 이상치의 민감도를 조정하는 데 사용된다.</p>
-<h4 id="_4">메쉬와의 통합 고려</h4>
-<p>후처리 과정에서 정렬된 포인트 클라우드를 메쉬 데이터와 통합하는 경우, 추가적인 메쉬 정합 과정이 필요할 수 있다. 포인트 클라우드의 정렬 결과와 메쉬 데이터 사이의 오차를 최소화하기 위한 기법으로는 다양한 기하학적 변환과 스무딩 알고리즘이 사용된다. 특히, 메쉬 데이터의 경우 폴리곤의 복잡성이 문제될 수 있으므로, 간소화 (Simplification) 과정을 통해 메쉬의 해상도를 조정하는 것도 중요한 후처리 단계 중 하나이다.</p>
+<h4 id="_4">메시와의 통합 고려</h4>
+<p>후처리 과정에서 정렬된 포인트 클라우드를 메시 데이터와 통합하는 경우, 추가적인 메시 정합 과정이 필요할 수 있다. 포인트 클라우드의 정렬 결과와 메시 데이터 사이의 오차를 최소화하기 위한 기법으로는 다양한 기하학적 변환과 스무딩 알고리즘이 사용된다. 특히, 메시 데이터의 경우 폴리곤의 복잡성이 문제될 수 있으므로, 간소화 (Simplification) 과정을 통해 메시의 해상도를 조정하는 것도 중요한 후처리 단계 중 하나이다.</p>
 <h3 id="alignment-accuracy-evaluation">정렬 정확도 평가 (Alignment Accuracy Evaluation)</h3>
 <p>정렬된 다중 뷰 포인트 클라우드의 품질을 평가하기 위해서는 정렬 정확도를 평가하는 과정이 필요하다. 이는 보통 두 가지 방법으로 이루어진다: 정량적 평가와 정성적 평가.</p>
 <h4 id="quantitative-evaluation">정량적 평가 (Quantitative Evaluation)</h4>
@@ -201,7 +201,7 @@ d(p_i) > \mu + \alpha \sigma
 </div>
 <p>이러한 수치를 통해 정렬의 정확도를 평가하고, 필요시 추가적인 최적화나 후처리 단계를 적용할 수 있다.</p>
 <h4 id="qualitative-evaluation">정성적 평가 (Qualitative Evaluation)</h4>
-<p>정량적 평가와 함께 정성적 평가는 시각적 검사나 도메인 전문가의 주관적 평가를 기반으로 진행된다. 이는 특히 복잡한 3D 스캔 데이터의 경우, 수치적 평가만으로는 모든 정렬 오류를 감지하기 어려울 때 중요하다. 정성적 평가는 데이터의 전반적인 시각적 일관성, 메쉬와의 매끄러운 통합 여부 등을 포함한다.</p>
+<p>정량적 평가와 함께 정성적 평가는 시각적 검사나 도메인 전문가의 주관적 평가를 기반으로 진행된다. 이는 특히 복잡한 3D 스캔 데이터의 경우, 수치적 평가만으로는 모든 정렬 오류를 감지하기 어려울 때 중요하다. 정성적 평가는 데이터의 전반적인 시각적 일관성, 메시와의 매끄러운 통합 여부 등을 포함한다.</p>
 <h3 id="coordinate-system-alignment">데이터 취합 시 좌표계 일치 (Coordinate System Alignment)</h3>
 <p>다중 뷰에서 취합된 포인트 클라우드를 하나의 좌표계로 통합하려면, 각 포인트 클라우드 데이터가 동일한 전역 좌표계(Global Coordinate System)를 따르도록 조정해야 한다. 이 과정은 보통 각 데이터의 좌표계를 변환하는 것으로 이루어진다. 좌표계 변환은 회전( <span class="arithmatex"><span class="MathJax_Preview">\mathbf{R}</span><script type="math/tex">\mathbf{R}</script></span> )과 평행 이동( <span class="arithmatex"><span class="MathJax_Preview">\mathbf{t}</span><script type="math/tex">\mathbf{t}</script></span> )을 포함하며, 이를 통해 각기 다른 시점에서 촬영된 포인트 클라우드가 동일한 공간에서 일관되게 배치된다.</p>
 <h4 id="_5">좌표계 변환의 수학적 모델</h4>

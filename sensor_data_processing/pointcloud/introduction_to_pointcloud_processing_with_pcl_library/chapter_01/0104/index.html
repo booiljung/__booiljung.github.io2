@@ -103,7 +103,7 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
     <p>PCL(Point Cloud Library)은 3D 포인트 클라우드 데이터를 처리하기 위한 오픈 소스 라이브러리로, 다양한 모듈과 구조로 구성되어 있어 다양한 응용 프로그램에서 사용될 수 있다. PCL의 구조는 주로 모듈 단위로 구분되며, 각 모듈은 특정한 기능을 제공한다. 이러한 모듈들은 독립적으로 동작할 수 있으며, 필요한 기능만을 선택적으로 사용할 수 있도록 설계되어 있다.</p>
 <h3 id="pcl-core">PCL Core 모듈</h3>
 <p>PCL의 <strong>Core 모듈</strong>은 PCL의 기본 기능을 제공하며, 포인트 클라우드 데이터의 관리와 조작을 담당한다. 이 모듈은 포인트 클라우드의 생성, 저장, 로드와 같은 기본 작업을 포함하며, 포인트 클라우드를 구성하는 포인트 데이터의 형식을 정의하는 데 중요한 역할을 한다.</p>
-<p>포인트 클라우드는 보통 다음과 같은 형식으로 표현된다.</p>
+<p>예를 들어, 포인트클라우드는 보통 다음과 같은 형식으로 표현된다.</p>
 <div class="arithmatex">
 <div class="MathJax_Preview">
 \mathbf{P} = \{ \mathbf{p}_1, \mathbf{p}_2, \dots, \mathbf{p}_n \}
@@ -179,7 +179,7 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 </div>
 <p>여기서 '조건'은 평면, 곡면, 혹은 임의의 사용자 정의 조건일 수 있다. PCL Segmentation 모듈은 이러한 조건을 만족하는 포인트를 효율적으로 추출하는 기능을 제공하며, 대표적인 예로 <strong>RANSAC(Random Sample Consensus)</strong> 알고리즘을 사용할 수 있다.</p>
 <h3 id="pcl-surface">PCL Surface 모듈</h3>
-<p><strong>Surface 모듈</strong>은 포인트 클라우드 데이터에서 매끄러운 표면을 생성하는 기능을 담당한다. 이 모듈은 주로 포인트 클라우드 데이터를 기반으로 메쉬(mesh) 또는 곡면(surface)을 생성하는 데 사용되며, 3D 모델링 및 렌더링에서 중요한 역할을 한다.</p>
+<p><strong>Surface 모듈</strong>은 포인트 클라우드 데이터에서 매끄러운 표면을 생성하는 기능을 담당한다. 이 모듈은 주로 포인트 클라우드 데이터를 기반으로 메시(mesh) 또는 곡면(surface)을 생성하는 데 사용되며, 3D 모델링 및 렌더링에서 중요한 역할을 한다.</p>
 <p>포인트 클라우드 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{P}</span><script type="math/tex">\mathbf{P}</script></span>로부터 표면 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{S}</span><script type="math/tex">\mathbf{S}</script></span>를 추정하는 과정은 다음과 같이 표현될 수 있다.</p>
 <div class="arithmatex">
 <div class="MathJax_Preview">
@@ -213,7 +213,7 @@ v(\mathbf{P}) \to \text{3D 시각화}
 v(\mathbf{P}) \to \text{3D 시각화}
 </script>
 </div>
-<p>Visualization 모듈은 단순한 포인트 클라우드 렌더링뿐만 아니라, 표면 렌더링, 메쉬 렌더링 등의 기능도 지원한다. 또한, 사용자는 시각화 도구를 통해 직관적으로 포인트 클라우드를 회전하거나 확대/축소할 수 있다.</p>
+<p>Visualization 모듈은 단순한 포인트 클라우드 렌더링뿐만 아니라, 표면 렌더링, 메시 렌더링 등의 기능도 지원한다. 또한, 사용자는 시각화 도구를 통해 직관적으로 포인트 클라우드를 회전하거나 확대/축소할 수 있다.</p>
 <h3 id="pcl-io">PCL I/O 모듈</h3>
 <p><strong>I/O(Input/Output) 모듈</strong>은 다양한 포인트 클라우드 파일 형식을 읽고 쓰는 작업을 담당한다. PCL은 여러 포맷을 지원하며, 특히 <strong>PCD(Point Cloud Data)</strong> 형식과 <strong>PLY</strong> 형식을 주로 사용한다. 이 모듈은 포인트 클라우드를 파일로부터 로드하거나, 특정 파일 형식으로 저장하는 기능을 제공한다.</p>
 <p>포인트 클라우드 데이터를 파일로부터 읽어오는 과정은 수학적으로 다음과 같이 표현될 수 있다.</p>

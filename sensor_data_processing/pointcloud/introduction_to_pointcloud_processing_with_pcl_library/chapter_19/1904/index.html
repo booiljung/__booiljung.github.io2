@@ -228,7 +228,7 @@ r = \frac{\mathbf{C}}{\mathbf{O}}
 <p>이때 <span class="arithmatex"><span class="MathJax_Preview">\epsilon</span><script type="math/tex">\epsilon</script></span>은 사용자가 정의하는 임계값이다.</p>
 <ol>
 <li><strong>점간 거리 (Point-to-Surface Distance)</strong>:
-   포인트 클라우드에서 압축된 점들이 원본 메쉬 또는 점 데이터의 표면과 얼마나 가까운지를 측정하는 방법이다. 이는 포인트 클라우드의 압축이 표면 형상에 얼마나 영향을 미치는지를 평가할 때 유용하다. 메쉬와 포인트 클라우드 간의 거리를 측정할 수 있으며, 다음과 같은 방식으로 계산할 수 있다:</li>
+   포인트 클라우드에서 압축된 점들이 원본 메시 또는 점 데이터의 표면과 얼마나 가까운지를 측정하는 방법이다. 이는 포인트 클라우드의 압축이 표면 형상에 얼마나 영향을 미치는지를 평가할 때 유용하다. 메시와 포인트 클라우드 간의 거리를 측정할 수 있으며, 다음과 같은 방식으로 계산할 수 있다:</li>
 </ol>
 <div class="arithmatex">
 <div class="MathJax_Preview">
@@ -238,7 +238,7 @@ r = \frac{\mathbf{C}}{\mathbf{O}}
    \text{Surface Distance} = \frac{1}{N} \sum_{i=1}^{N} \inf_{\mathbf{p} \in \mathbf{Surface}} \|\mathbf{p_i^{\text{comp}}} - \mathbf{p}\|
 </script>
 </div>
-<p>여기서 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{Surface}</span><script type="math/tex">\mathbf{Surface}</script></span>는 원본 포인트 클라우드 또는 메쉬 데이터의 표면을 의미한다. 이 값이 작을수록 압축된 포인트 클라우드가 원본의 형상을 잘 유지하고 있다는 의미다.</p>
+<p>여기서 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{Surface}</span><script type="math/tex">\mathbf{Surface}</script></span>는 원본 포인트 클라우드 또는 메시 데이터의 표면을 의미한다. 이 값이 작을수록 압축된 포인트 클라우드가 원본의 형상을 잘 유지하고 있다는 의미다.</p>
 <h3 id="_6">품질 저하의 비선형성</h3>
 <p>포인트 클라우드의 압축 과정에서 품질 저하는 비선형적으로 발생하는 경우가 많다. 즉, 압축률이 일정 수준까지는 품질 저하가 미미하지만, 그 수준을 넘어서면 품질 저하가 급격하게 증가할 수 있다. 이를 <strong>임계 압축률</strong>이라고 하며, 이 값을 넘으면 품질 저하가 급격히 심화된다.</p>
 <p>이를 수식으로 표현하면, 압축률 <span class="arithmatex"><span class="MathJax_Preview">r</span><script type="math/tex">r</script></span>이 임계값 <span class="arithmatex"><span class="MathJax_Preview">r_c</span><script type="math/tex">r_c</script></span>를 넘으면 품질 저하 <span class="arithmatex"><span class="MathJax_Preview">\Delta q</span><script type="math/tex">\Delta q</script></span>는 급격히 증가한다:</p>

@@ -123,7 +123,7 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 </div>
 <p>정렬 과정에서는 주로 ICP(Iterative Closest Point) 알고리즘이 많이 사용된다. 이 알고리즘은 두 포인트 클라우드 간의 대응점을 찾아 변환 행렬을 반복적으로 계산하여 최적의 정렬을 찾아낸다.</p>
 <h3 id="_2">축적의 정의</h3>
-<p>포인트 클라우드의 축적은 서로 다른 시간 또는 위치에서 얻은 여러 클라우드를 하나의 통합된 데이터 세트로 결합하는 과정이다. 이는 다수의 스캔 데이터를 사용하여 한층 더 정밀하고 완전한 포인트 클라우드를 생성하는 데 사용된다. 축적을 수행할 때 중요한 것은 각 포인트 클라우드의 좌표계가 서로 일치하도록 정렬을 먼저 수행한 후에 데이터를 결합하는 것이다.</p>
+<p>포인트 클라우드의 축적(Accumulation)은 서로 다른 시간 또는 위치에서 얻은 여러 클라우드를 하나의 통합된 데이터 세트로 결합하는 과정이다. 이는 다수의 스캔 데이터를 사용하여 한층 더 정밀하고 완전한 포인트 클라우드를 생성하는 데 사용된다. 축적을 수행할 때 중요한 것은 각 포인트 클라우드의 좌표계가 서로 일치하도록 정렬을 먼저 수행한 후에 데이터를 결합하는 것이다.</p>
 <p>포인트 클라우드 데이터의 축적은 각 포인트를 결합한 후, 평균적으로 새로운 포인트 위치를 생성하는 방식으로 이루어질 수 있다. 축적의 수학적 정의는 다음과 같이 나타낼 수 있다. <span class="arithmatex"><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span>개의 포인트 클라우드 집합 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{P}_1, \mathbf{P}_2, \dots, \mathbf{P}_n</span><script type="math/tex">\mathbf{P}_1, \mathbf{P}_2, \dots, \mathbf{P}_n</script></span>이 주어졌을 때, 각 포인트 클라우드의 좌표 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{p}_i</span><script type="math/tex">\mathbf{p}_i</script></span>를 모두 더하여 평균 포인트를 계산할 수 있다.</p>
 <div class="arithmatex">
 <div class="MathJax_Preview">

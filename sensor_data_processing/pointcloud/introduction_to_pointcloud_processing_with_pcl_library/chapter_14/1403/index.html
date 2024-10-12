@@ -35,17 +35,15 @@
           ]},
           {title: "\uae00\ub85c\ubc8c \ud544\ud130\ub9c1", url: "#_4", children: [
               {title: "\uc8fc\uc131\ubd84 \ubd84\uc11d (PCA)", url: "#pca" },
+              {title: "\uc8fc\uc131\ubd84 \ubd84\uc11d\uc744 \ud65c\uc6a9\ud55c \ud544\ud130\ub9c1", url: "#_5" },
           ]},
-          {title: "\uae00\ub85c\ubc8c \ud544\ud130\ub9c1 (\uacc4\uc18d)", url: "#_5", children: [
-              {title: "\uc8fc\uc131\ubd84 \ubd84\uc11d\uc744 \ud65c\uc6a9\ud55c \ud544\ud130\ub9c1", url: "#_6" },
+          {title: "\ub85c\uceec \ud544\ud130\ub9c1\uacfc \uae00\ub85c\ubc8c \ud544\ud130\ub9c1\uc758 \uc7a5\ub2e8\uc810", url: "#_6", children: [
+              {title: "\ub85c\uceec \ud544\ud130\ub9c1\uc758 \uc7a5\uc810", url: "#_7" },
+              {title: "\ub85c\uceec \ud544\ud130\ub9c1\uc758 \ub2e8\uc810", url: "#_8" },
+              {title: "\uae00\ub85c\ubc8c \ud544\ud130\ub9c1\uc758 \uc7a5\uc810", url: "#_9" },
+              {title: "\uae00\ub85c\ubc8c \ud544\ud130\ub9c1\uc758 \ub2e8\uc810", url: "#_10" },
           ]},
-          {title: "\ub85c\uceec \ud544\ud130\ub9c1\uacfc \uae00\ub85c\ubc8c \ud544\ud130\ub9c1\uc758 \uc7a5\ub2e8\uc810", url: "#_7", children: [
-              {title: "\ub85c\uceec \ud544\ud130\ub9c1\uc758 \uc7a5\uc810", url: "#_8" },
-              {title: "\ub85c\uceec \ud544\ud130\ub9c1\uc758 \ub2e8\uc810", url: "#_9" },
-              {title: "\uae00\ub85c\ubc8c \ud544\ud130\ub9c1\uc758 \uc7a5\uc810", url: "#_10" },
-              {title: "\uae00\ub85c\ubc8c \ud544\ud130\ub9c1\uc758 \ub2e8\uc810", url: "#_11" },
-          ]},
-          {title: "\ub85c\uceec \ud544\ud130\ub9c1\uacfc \uae00\ub85c\ubc8c \ud544\ud130\ub9c1\uc758 \uacb0\ud569", url: "#_12", children: [
+          {title: "\ub85c\uceec \ud544\ud130\ub9c1\uacfc \uae00\ub85c\ubc8c \ud544\ud130\ub9c1\uc758 \uacb0\ud569", url: "#_11", children: [
           ]},
         ];
 
@@ -126,8 +124,7 @@ w_{ij} = \exp\left(-\frac{||\mathbf{p}_i - \mathbf{p}_j||^2}{2\sigma^2}\right)
 - <span class="arithmatex"><span class="MathJax_Preview">\mathbf{p}_i</span><script type="math/tex">\mathbf{p}_i</script></span>는 포인트 클라우드의 점 <span class="arithmatex"><span class="MathJax_Preview">i</span><script type="math/tex">i</script></span>,
 - <span class="arithmatex"><span class="MathJax_Preview">\bar{\mathbf{p}}</span><script type="math/tex">\bar{\mathbf{p}}</script></span>는 포인트 클라우드의 평균 점이다.</p>
 <p>공분산 행렬 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{C}</span><script type="math/tex">\mathbf{C}</script></span>의 고유벡터와 고유값을 계산하면, 포인트 클라우드의 주요 방향을 나타내는 주성분을 얻을 수 있다.</p>
-<h2 id="_5">글로벌 필터링 (계속)</h2>
-<h3 id="_6">주성분 분석을 활용한 필터링</h3>
+<h3 id="_5">주성분 분석을 활용한 필터링</h3>
 <p>PCA를 활용하여 필터링을 수행할 때, 각 포인트 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{p}_i</span><script type="math/tex">\mathbf{p}_i</script></span>는 주요 주성분 방향으로 투영되며, 이 과정을 통해 노이즈가 제거되고 데이터가 매끄러워진다. 이 과정은 다음과 같이 설명할 수 있다.</p>
 <p>고유벡터 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{v}_1, \mathbf{v}_2, \mathbf{v}_3</span><script type="math/tex">\mathbf{v}_1, \mathbf{v}_2, \mathbf{v}_3</script></span>가 각각 첫 번째, 두 번째, 세 번째 주성분을 나타낸다고 가정하자. 각 포인트 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{p}_i</span><script type="math/tex">\mathbf{p}_i</script></span>는 이 주성분 벡터에 투영된다:</p>
 <div class="arithmatex">
@@ -142,29 +139,29 @@ w_{ij} = \exp\left(-\frac{||\mathbf{p}_i - \mathbf{p}_j||^2}{2\sigma^2}\right)
 - <span class="arithmatex"><span class="MathJax_Preview">d</span><script type="math/tex">d</script></span>는 주성분의 차원 수로, 데이터의 분산을 충분히 설명할 수 있는 고유벡터 수를 의미한다. 대부분의 경우 <span class="arithmatex"><span class="MathJax_Preview">d = 2</span><script type="math/tex">d = 2</script></span> 또는 <span class="arithmatex"><span class="MathJax_Preview">d = 3</span><script type="math/tex">d = 3</script></span>을 선택한다.
 - <span class="arithmatex"><span class="MathJax_Preview">\mathbf{\bar{p}}</span><script type="math/tex">\mathbf{\bar{p}}</script></span>는 포인트 클라우드의 평균점이다.</p>
 <p>이 필터링 방법은 포인트 클라우드의 구조적인 노이즈를 제거하면서도 데이터의 주요 특성을 유지할 수 있는 장점이 있다.</p>
-<h2 id="_7">로컬 필터링과 글로벌 필터링의 장단점</h2>
-<h3 id="_8">로컬 필터링의 장점</h3>
+<h2 id="_6">로컬 필터링과 글로벌 필터링의 장단점</h2>
+<h3 id="_7">로컬 필터링의 장점</h3>
 <ol>
 <li><strong>세밀한 제어</strong>: 로컬 필터링은 각 점과 이웃점들 사이의 관계에 따라 필터링이 적용되므로, 국소적인 세부 사항을 보존하면서 노이즈를 제거할 수 있다.</li>
 <li><strong>적응성</strong>: 다양한 커널 함수를 사용하여 특정 상황에 맞는 필터링을 적용할 수 있다. 예를 들어, 가우시안 커널을 사용하면 부드러운 필터링이 가능하고, 다른 형태의 커널로는 특정 구조나 패턴을 강조할 수 있다.</li>
 <li><strong>빠른 처리 속도</strong>: 로컬 필터링은 대개 인접한 소수의 점들에 대해 계산이 이루어지므로 처리 속도가 비교적 빠르다.</li>
 </ol>
-<h3 id="_9">로컬 필터링의 단점</h3>
+<h3 id="_8">로컬 필터링의 단점</h3>
 <ol>
 <li><strong>글로벌 구조의 무시</strong>: 로컬 필터링은 각 점의 국소적 정보에만 의존하므로, 데이터의 전반적인 구조나 패턴을 고려하지 않는다. 이로 인해 전역적인 패턴을 필요로 하는 작업에는 적합하지 않을 수 있다.</li>
 <li><strong>과도한 필터링 가능성</strong>: 커널의 크기나 형태가 부적절하게 선택되면, 데이터를 과도하게 부드럽게 만들어 중요한 세부 정보를 손실할 수 있다.</li>
 </ol>
-<h3 id="_10">글로벌 필터링의 장점</h3>
+<h3 id="_9">글로벌 필터링의 장점</h3>
 <ol>
 <li><strong>전반적인 구조 유지</strong>: 글로벌 필터링은 전체 데이터의 구조적 패턴을 유지하면서 노이즈를 제거할 수 있다. PCA와 같은 방법은 데이터의 주요 성분을 보존하는 데 유리하다.</li>
 <li><strong>데이터의 압축</strong>: 글로벌 필터링을 통해 데이터의 차원을 축소하거나 노이즈를 제거하면서 정보의 양을 유지할 수 있다.</li>
 </ol>
-<h3 id="_11">글로벌 필터링의 단점</h3>
+<h3 id="_10">글로벌 필터링의 단점</h3>
 <ol>
 <li><strong>세부 사항 손실</strong>: 글로벌 필터링은 데이터의 전반적인 구조에 초점을 맞추기 때문에, 국소적인 세부 사항이 손실될 수 있다. 이는 특히 작은 영역에서 중요한 정보가 있는 경우 문제가 될 수 있다.</li>
 <li><strong>복잡한 계산</strong>: 공분산 행렬의 계산 및 고유값 분해와 같은 절차가 필요하기 때문에, 데이터의 크기가 커질수록 계산 비용이 증가한다.</li>
 </ol>
-<h2 id="_12">로컬 필터링과 글로벌 필터링의 결합</h2>
+<h2 id="_11">로컬 필터링과 글로벌 필터링의 결합</h2>
 <p>로컬 필터링과 글로벌 필터링은 상호 보완적인 특성을 가지므로, 두 방법을 결합하여 사용하는 경우도 많다. 예를 들어, 포인트 클라우드 데이터에 먼저 로컬 필터링을 적용하여 노이즈를 줄인 후, 글로벌 필터링을 통해 데이터의 전반적인 구조를 강화할 수 있다.</p>
 <p>이러한 방법은 특히 잡음이 많은 데이터에서 효과적이며, 데이터의 국소적 세부 사항과 전체적인 패턴을 동시에 유지하는 데 유리하다. 이를 위한 알고리즘은 다음과 같은 순서로 구성될 수 있다:</p>
 <div class="mermaid">graph TD;

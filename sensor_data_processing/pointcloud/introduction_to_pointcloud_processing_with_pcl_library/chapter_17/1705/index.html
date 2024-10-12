@@ -40,9 +40,9 @@
               {title: "KD-\ud2b8\ub9ac \uad6c\ucd95", url: "#kd-_1" },
               {title: "KD-\ud2b8\ub9ac\uc5d0\uc11c\uc758 \uac70\ub9ac \uac80\uc0c9", url: "#kd-_2" },
           ]},
-          {title: "\ud3ec\uc778\ud2b8 \ud074\ub77c\uc6b0\ub4dc\uc640 \uba54\uc26c\uc758 \ucda9\ub3cc \uac10\uc9c0", url: "#_3", children: [
-              {title: "\uba54\uc26c\uc758 \ud45c\uba74 \uc815\uc758", url: "#_4" },
-              {title: "\ud3ec\uc778\ud2b8\uc640 \uba54\uc26c\uc758 \ucda9\ub3cc \uac10\uc9c0", url: "#_5" },
+          {title: "\ud3ec\uc778\ud2b8 \ud074\ub77c\uc6b0\ub4dc\uc640 \uba54\uc2dc\uc758 \ucda9\ub3cc \uac10\uc9c0", url: "#_3", children: [
+              {title: "\uba54\uc2dc\uc758 \ud45c\uba74 \uc815\uc758", url: "#_4" },
+              {title: "\ud3ec\uc778\ud2b8\uc640 \uba54\uc2dc\uc758 \ucda9\ub3cc \uac10\uc9c0", url: "#_5" },
           ]},
           {title: "PCL\uc744 \uc774\uc6a9\ud55c \ucda9\ub3cc \uac10\uc9c0 \uc54c\uace0\ub9ac\uc998", url: "#pcl", children: [
           ]},
@@ -145,10 +145,10 @@ T(\mathbf{P}) = \text{KD-Tree}(\mathbf{P})
 <h4 id="kd-_2">KD-트리에서의 거리 검색</h4>
 <p>KD-트리에서 두 포인트 클라우드 간의 최소 거리를 계산할 때는 트리를 탐색하며, 거리가 짧을 가능성이 있는 영역만을 집중적으로 검색한다. 이렇게 하면 전체 포인트 클라우드에 대해 일일이 거리를 계산하지 않아도 되므로 실시간 응답이 가능해진다.</p>
 <p>충돌 여부를 판단하는 과정은 KD-트리의 노드를 탐색하며 진행된다. KD-트리의 각 노드는 공간을 정의하므로, 한 포인트 클라우드의 점이 다른 클라우드의 영역과 겹치는지 여부를 확인하는 방식으로 충돌을 감지할 수 있다.</p>
-<h3 id="_3">포인트 클라우드와 메쉬의 충돌 감지</h3>
-<p>실시간 충돌 감지에서 포인트 클라우드와 메쉬 간의 충돌 감지 또한 중요한 응용 사례이다. 포인트 클라우드는 보통 자율주행차 또는 드론 등의 센서로 수집된 데이터를 기반으로 하며, 메쉬는 정적인 물체를 표현하는 데 주로 사용된다. 포인트 클라우드와 메쉬 간의 충돌을 감지하려면 메쉬의 표면과 포인트 클라우드의 점들 간의 거리 계산이 필요하다.</p>
-<h4 id="_4">메쉬의 표면 정의</h4>
-<p>메쉬는 다각형, 주로 삼각형으로 구성된 객체의 표면을 나타낸다. 주어진 메쉬 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{M}</span><script type="math/tex">\mathbf{M}</script></span>는 각 삼각형의 정점을 포함하며, 각 삼각형은 세 개의 정점 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{v}_1, \mathbf{v}_2, \mathbf{v}_3</span><script type="math/tex">\mathbf{v}_1, \mathbf{v}_2, \mathbf{v}_3</script></span>으로 표현된다.</p>
+<h3 id="_3">포인트 클라우드와 메시의 충돌 감지</h3>
+<p>실시간 충돌 감지에서 포인트 클라우드와 메시 간의 충돌 감지 또한 중요한 응용 사례이다. 포인트 클라우드는 보통 자율주행차 또는 드론 등의 센서로 수집된 데이터를 기반으로 하며, 메시는 정적인 물체를 표현하는 데 주로 사용된다. 포인트 클라우드와 메시 간의 충돌을 감지하려면 메시의 표면과 포인트 클라우드의 점들 간의 거리 계산이 필요하다.</p>
+<h4 id="_4">메시의 표면 정의</h4>
+<p>메시는 다각형, 주로 삼각형으로 구성된 객체의 표면을 나타낸다. 주어진 메시 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{M}</span><script type="math/tex">\mathbf{M}</script></span>는 각 삼각형의 정점을 포함하며, 각 삼각형은 세 개의 정점 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{v}_1, \mathbf{v}_2, \mathbf{v}_3</span><script type="math/tex">\mathbf{v}_1, \mathbf{v}_2, \mathbf{v}_3</script></span>으로 표현된다.</p>
 <div class="arithmatex">
 <div class="MathJax_Preview">
 \mathbf{T}_i = \{ \mathbf{v}_1, \mathbf{v}_2, \mathbf{v}_3 \}, \quad \mathbf{M} = \cup_i \mathbf{T}_i
@@ -157,9 +157,9 @@ T(\mathbf{P}) = \text{KD-Tree}(\mathbf{P})
 \mathbf{T}_i = \{ \mathbf{v}_1, \mathbf{v}_2, \mathbf{v}_3 \}, \quad \mathbf{M} = \cup_i \mathbf{T}_i
 </script>
 </div>
-<p>여기서 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{T}_i</span><script type="math/tex">\mathbf{T}_i</script></span>는 메쉬의 <span class="arithmatex"><span class="MathJax_Preview">i</span><script type="math/tex">i</script></span>-번째 삼각형을 의미한다.</p>
-<h4 id="_5">포인트와 메쉬의 충돌 감지</h4>
-<p>포인트 클라우드 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{P}</span><script type="math/tex">\mathbf{P}</script></span>와 메쉬 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{M}</span><script type="math/tex">\mathbf{M}</script></span> 간의 충돌 감지를 위해서는 포인트 클라우드의 각 점 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{p}</span><script type="math/tex">\mathbf{p}</script></span>와 메쉬의 각 삼각형 간의 거리를 계산한다. 삼각형 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{T}_i</span><script type="math/tex">\mathbf{T}_i</script></span>와 점 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{p}</span><script type="math/tex">\mathbf{p}</script></span> 사이의 거리 <span class="arithmatex"><span class="MathJax_Preview">d(\mathbf{p}, \mathbf{T}_i)</span><script type="math/tex">d(\mathbf{p}, \mathbf{T}_i)</script></span>는 삼각형의 평면에 투영된 점 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{p}</span><script type="math/tex">\mathbf{p}</script></span>와 삼각형 내의 가장 가까운 점 사이의 거리로 정의된다.</p>
+<p>여기서 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{T}_i</span><script type="math/tex">\mathbf{T}_i</script></span>는 메시의 <span class="arithmatex"><span class="MathJax_Preview">i</span><script type="math/tex">i</script></span>-번째 삼각형을 의미한다.</p>
+<h4 id="_5">포인트와 메시의 충돌 감지</h4>
+<p>포인트 클라우드 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{P}</span><script type="math/tex">\mathbf{P}</script></span>와 메시 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{M}</span><script type="math/tex">\mathbf{M}</script></span> 간의 충돌 감지를 위해서는 포인트 클라우드의 각 점 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{p}</span><script type="math/tex">\mathbf{p}</script></span>와 메시의 각 삼각형 간의 거리를 계산한다. 삼각형 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{T}_i</span><script type="math/tex">\mathbf{T}_i</script></span>와 점 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{p}</span><script type="math/tex">\mathbf{p}</script></span> 사이의 거리 <span class="arithmatex"><span class="MathJax_Preview">d(\mathbf{p}, \mathbf{T}_i)</span><script type="math/tex">d(\mathbf{p}, \mathbf{T}_i)</script></span>는 삼각형의 평면에 투영된 점 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{p}</span><script type="math/tex">\mathbf{p}</script></span>와 삼각형 내의 가장 가까운 점 사이의 거리로 정의된다.</p>
 <div class="arithmatex">
 <div class="MathJax_Preview">
 d(\mathbf{p}, \mathbf{T}_i) = \min_{\mathbf{q} \in \mathbf{T}_i} || \mathbf{p} - \mathbf{q} ||
@@ -177,7 +177,7 @@ d(\mathbf{p}, \mathbf{T}_i) = \min_{\mathbf{q} \in \mathbf{T}_i} || \mathbf{p} -
 \text{Collision} \iff d(\mathbf{p}, \mathbf{T}_i) < \epsilon
 </script>
 </div>
-<p>이 계산은 KD-트리와 같은 공간 분할 기법을 사용하여 효율적으로 수행될 수 있다. 포인트 클라우드의 각 점에 대해 메쉬의 삼각형을 순차적으로 확인하지 않고, 특정 영역 내에 속하는 삼각형에 대해서만 계산을 수행한다.</p>
+<p>이 계산은 KD-트리와 같은 공간 분할 기법을 사용하여 효율적으로 수행될 수 있다. 포인트 클라우드의 각 점에 대해 메시의 삼각형을 순차적으로 확인하지 않고, 특정 영역 내에 속하는 삼각형에 대해서만 계산을 수행한다.</p>
 <h3 id="pcl">PCL을 이용한 충돌 감지 알고리즘</h3>
 <p><strong>Point Cloud Library (PCL)</strong>은 포인트 클라우드를 처리하는 데 있어 강력한 라이브러리로, 실시간 충돌 감지를 위한 여러 알고리즘을 제공한다. 특히 PCL은 KD-트리와 같은 자료 구조를 사용하여 효율적인 거리 계산을 지원한다. PCL에서 제공하는 주요 함수 중 하나는 <strong>pcl::KdTreeFLANN</strong>이다. 이 클래스는 포인트 클라우드의 KD-트리를 구축하고, 가장 가까운 이웃을 효율적으로 검색할 수 있는 기능을 제공한다.</p>
 <p>다음은 PCL을 이용하여 실시간 충돌 감지 알고리즘을 구현하는 기본적인 단계이다:</p>
@@ -224,7 +224,7 @@ kdtree.setInputCloud(cloud_B);
 <h3 id="_7">실시간 충돌 감지의 추가 응용 분야</h3>
 <ol>
 <li>
-<p><strong>가상 현실(VR)</strong>: 가상 현실 시스템에서도 실시간 충돌 감지는 중요한 역할을 한다. 사용자가 가상 환경 내에서 자유롭게 이동할 때, 가상 객체와의 충돌을 감지하고 그에 맞는 피드백을 제공해야 한다. 이를 위해 사용자의 포지션을 포인트 클라우드로 표현하고, 가상 객체의 메쉬와의 충돌 여부를 실시간으로 판단한다.</p>
+<p><strong>가상 현실(VR)</strong>: 가상 현실 시스템에서도 실시간 충돌 감지는 중요한 역할을 한다. 사용자가 가상 환경 내에서 자유롭게 이동할 때, 가상 객체와의 충돌을 감지하고 그에 맞는 피드백을 제공해야 한다. 이를 위해 사용자의 포지션을 포인트 클라우드로 표현하고, 가상 객체의 메시와의 충돌 여부를 실시간으로 판단한다.</p>
 </li>
 <li>
 <p><strong>산업 자동화</strong>: 산업 로봇이 작업 공간 내에서 작업을 수행할 때, 실시간 충돌 감지를 통해 사람이나 다른 로봇과의 충돌을 피하는 것이 매우 중요하다. 이 경우, 로봇의 각 부위를 포인트 클라우드로 표현하고 작업 환경의 다른 객체들과의 충돌을 감지한다. 이를 통해 안전한 작업 환경을 보장하며, 실시간으로 장애물을 회피하는 기능을 제공한다.</p>
@@ -233,11 +233,11 @@ kdtree.setInputCloud(cloud_B);
 <p><strong>드론 및 무인 항공기(UAV)</strong>: 드론과 같은 무인 항공기는 비행 중에 장애물과의 충돌을 피하기 위해 실시간 충돌 감지 시스템을 활용한다. 특히 도시 환경이나 밀집된 구조물 사이를 비행할 때, 실시간으로 수집되는 포인트 클라우드를 기반으로 장애물을 탐지하고 비행 경로를 조정해야 한다. 드론의 센서에서 실시간으로 들어오는 데이터를 처리하여, 주변 객체와의 거리를 계산하고 충돌 위험이 감지되면 회피 동작을 수행한다.</p>
 </li>
 <li>
-<p><strong>시뮬레이션 및 물리 엔진</strong>: 다양한 시뮬레이션 시스템에서는 가상의 객체 간 충돌을 실시간으로 감지하고 처리할 수 있어야 한다. 예를 들어, 건설 기계의 동작을 시뮬레이션할 때, 포인트 클라우드와 메쉬를 사용하여 기계와 구조물 간의 충돌을 감지하고, 충돌에 따른 피드백을 제공한다. 이러한 시스템은 교육, 훈련, 설계 검증 등에서 중요한 역할을 한다.</p>
+<p><strong>시뮬레이션 및 물리 엔진</strong>: 다양한 시뮬레이션 시스템에서는 가상의 객체 간 충돌을 실시간으로 감지하고 처리할 수 있어야 한다. 예를 들어, 건설 기계의 동작을 시뮬레이션할 때, 포인트 클라우드와 메시를 사용하여 기계와 구조물 간의 충돌을 감지하고, 충돌에 따른 피드백을 제공한다. 이러한 시스템은 교육, 훈련, 설계 검증 등에서 중요한 역할을 한다.</p>
 </li>
 </ol>
 <h3 id="_8">효율적인 충돌 감지를 위한 알고리즘 최적화</h3>
-<p>실시간으로 충돌을 감지하려면, 계산 성능이 중요한 문제로 대두된다. 포인트 클라우드 데이터가 매우 크거나, 복잡한 객체가 포함된 메쉬와 상호작용하는 경우, 충돌 감지의 성능이 저하될 수 있다. 이를 해결하기 위해 몇 가지 최적화 기법을 사용할 수 있다.</p>
+<p>실시간으로 충돌을 감지하려면, 계산 성능이 중요한 문제로 대두된다. 포인트 클라우드 데이터가 매우 크거나, 복잡한 객체가 포함된 메시와 상호작용하는 경우, 충돌 감지의 성능이 저하될 수 있다. 이를 해결하기 위해 몇 가지 최적화 기법을 사용할 수 있다.</p>
 <h4 id="1-voxelization">1. Voxelization을 통한 데이터 축소</h4>
 <p>Voxelization은 3차원 공간을 작은 셀, 즉 "Voxel"로 분할하는 과정이다. 이를 통해 포인트 클라우드를 적절한 크기의 격자로 변환하고, 각 Voxel 내의 데이터를 요약함으로써 데이터 양을 줄일 수 있다. 이렇게 축소된 데이터를 사용하면 충돌 감지 알고리즘의 성능을 크게 향상시킬 수 있다. Voxelization은 공간 분할의 일종으로, 비슷한 범위 내에 있는 점들을 한 묶음으로 처리하여 계산을 최적화하는 데 기여한다.</p>
 <div class="arithmatex">
@@ -255,7 +255,7 @@ V(\mathbf{P}) = \{ V_1, V_2, \dots, V_n \}, \quad V_i = \text{Voxel}(\mathbf{p}_
 <p>Octree는 다음과 같은 방식으로 충돌 감지에 적용된다:</p>
 <ol>
 <li>포인트 클라우드 데이터를 Octree 구조로 저장.</li>
-<li>메쉬 또는 다른 포인트 클라우드와의 충돌 여부를 확인할 때, Octree 노드 간의 거리 계산을 수행.</li>
+<li>메시 또는 다른 포인트 클라우드와의 충돌 여부를 확인할 때, Octree 노드 간의 거리 계산을 수행.</li>
 <li>충돌 가능성이 있는 노드만을 탐색하여 계산을 최소화.</li>
 </ol>
 <h4 id="3">3. 히스토그램 기반 최적화</h4>

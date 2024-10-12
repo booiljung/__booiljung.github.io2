@@ -38,11 +38,14 @@
           {title: "\uc804\uc5ed \ucd5c\uc801\ud654\uc758 \ubaa9\ud45c", url: "#_2", children: [
           ]},
           {title: "\uc804\uc5ed \ucd5c\uc801\ud654 \uc54c\uace0\ub9ac\uc998", url: "#_3", children: [
+              {title: "Random Sampling \uae30\ubc18 \uae30\ubc95", url: "#random-sampling" },
+              {title: "Branch and Bound \uae30\ubc95", url: "#branch-and-bound" },
+              {title: "Evolutionary Algorithm(\uc9c4\ud654 \uc54c\uace0\ub9ac\uc998)", url: "#evolutionary-algorithm" },
           ]},
           {title: "\uc804\uc5ed \ucd5c\uc801\ud654\ub97c \uc704\ud55c \uad6c\uccb4\uc801 \uae30\ubc95", url: "#_4", children: [
-              {title: "1. \uace0\uc815\uc810 \ubc29\ubc95(Fixed-point method)", url: "#1-fixed-point-method" },
-              {title: "2. \uadf8\ub9ac\ub4dc \ud0d0\uc0c9(Grid Search)", url: "#2-grid-search" },
-              {title: "3. \uc2dc\ubbac\ub808\uc774\ud2f0\ub4dc \uc5b4\ub2d0\ub9c1(Simulated Annealing)", url: "#3-simulated-annealing" },
+              {title: "\uace0\uc815\uc810 \ubc29\ubc95(Fixed-point method)", url: "#fixed-point-method" },
+              {title: "\uadf8\ub9ac\ub4dc \ud0d0\uc0c9(Grid Search)", url: "#grid-search" },
+              {title: "\uc2dc\ubbac\ub808\uc774\ud2f0\ub4dc \uc5b4\ub2d0\ub9c1(Simulated Annealing)", url: "#simulated-annealing" },
           ]},
           {title: "\uc804\uc5ed \ucd5c\uc801\ud654\uc758 \ubcf5\uc7a1\uc131", url: "#_5", children: [
           ]},
@@ -76,7 +79,7 @@
           {title: "\uc804\uc5ed \ucd5c\uc801\ud654\uc640 \ud655\ub960\uc801 \ubc29\ubc95\uc758 \uc870\ud569", url: "#_12", children: [
               {title: "1. \ub79c\ub364 \uc0d8\ud50c\ub9c1 \uae30\ubc18 \uc804\uc5ed \ucd5c\uc801\ud654 (Random Sampling-based Optimization)", url: "#1-random-sampling-based-optimization" },
               {title: "2. \ubaac\ud14c\uce74\ub97c\ub85c \uc2dc\ubbac\ub808\uc774\uc158 (Monte Carlo Simulation)", url: "#2-monte-carlo-simulation" },
-              {title: "3. \uc2dc\ubbac\ub808\uc774\ud2f0\ub4dc \uc5b4\ub2d0\ub9c1 (Simulated Annealing)", url: "#3-simulated-annealing_1" },
+              {title: "3. \uc2dc\ubbac\ub808\uc774\ud2f0\ub4dc \uc5b4\ub2d0\ub9c1 (Simulated Annealing)", url: "#3-simulated-annealing" },
           ]},
           {title: "\ub2e4\ubaa9\uc801 \uc804\uc5ed \ucd5c\uc801\ud654 (Multi-objective Global Optimization)", url: "#multi-objective-global-optimization", children: [
               {title: "1. \ud30c\ub808\ud1a0 \ucd5c\uc801\ud654 (Pareto Optimization)", url: "#1-pareto-optimization" },
@@ -170,37 +173,29 @@ E(\mathbf{T}) = \sum_{i=1}^{N} \lVert \mathbf{R} \mathbf{p}_i + \mathbf{t} - \ma
 <p>그러나, 이 최적화 문제는 종종 비선형이며 다수의 지역 최소점을 갖는다. 따라서, 단순한 경사 하강법이나 국소적인 최적화 알고리즘으로는 전체적으로 최적의 해를 찾기 어려울 수 있다. 이를 해결하기 위해 다양한 전역 최적화 기법들이 제안되어 왔다.</p>
 <h3 id="_3">전역 최적화 알고리즘</h3>
 <p>포인트 클라우드 등록 문제를 해결하기 위한 전역 최적화 알고리즘은 주로 세 가지 큰 범주로 나눌 수 있다:</p>
-<ol>
-<li>
-<p><strong>Random Sampling 기반 기법</strong><br />
-    이 기법은 변환 공간에서 무작위 샘플을 선택하여 최적화 문제를 해결하는 방식이다. 대표적인 알고리즘으로는 RANSAC(Random Sample Consensus)와 같은 방법이 있다. 이 방법은 샘플링을 통해 변환 후보를 찾고, 그 중에서 에러 함수가 가장 작은 변환을 선택한다.</p>
+<h4 id="random-sampling"><strong>Random Sampling 기반 기법</strong></h4>
+<p>이 기법은 변환 공간에서 무작위 샘플을 선택하여 최적화 문제를 해결하는 방식이다. 대표적인 알고리즘으로는 RANSAC(Random Sample Consensus)와 같은 방법이 있다. 이 방법은 샘플링을 통해 변환 후보를 찾고, 그 중에서 에러 함수가 가장 작은 변환을 선택한다.</p>
 <p>RANSAC 알고리즘의 기본 과정은 다음과 같다:
 - 변환 공간에서 무작위로 샘플링을 통해 변환 후보를 생성한다.
 - 각 변환 후보에 대해 에러 함수를 계산하고, 그 중에서 최적의 변환을 선택한다.</p>
 <p>이 알고리즘은 노이즈에 강건하지만, 샘플링 과정이 무작위적이기 때문에 최적의 결과를 보장하지 못할 수 있다.</p>
-</li>
-<li>
-<p><strong>Branch and Bound 기법</strong><br />
-    Branch and Bound 기법은 전역 최적화 문제를 해결하는 데 널리 사용되는 방법이다. 이 방법은 탐색 공간을 여러 개의 작은 구역으로 나누고, 각 구역에서의 최적 해를 계산한 후 이를 결합하여 전체 최적 해를 찾는 방식이다. 이 방법은 탐색 공간을 효율적으로 축소하면서 최적의 해를 보장할 수 있다.</p>
+<h4 id="branch-and-bound"><strong>Branch and Bound 기법</strong></h4>
+<p>Branch and Bound 기법은 전역 최적화 문제를 해결하는 데 널리 사용되는 방법이다. 이 방법은 탐색 공간을 여러 개의 작은 구역으로 나누고, 각 구역에서의 최적 해를 계산한 후 이를 결합하여 전체 최적 해를 찾는 방식이다. 이 방법은 탐색 공간을 효율적으로 축소하면서 최적의 해를 보장할 수 있다.</p>
 <p>Branch and Bound 알고리즘의 기본 과정은 다음과 같다:
 - 탐색 공간을 분할한다.
 - 각 분할된 공간에 대해 상한과 하한을 계산한다.
 - 상한과 하한을 비교하여 더 나은 해를 제공할 수 있는 공간을 탐색한다.</p>
 <p>이 방법은 이론적으로는 전역 최적 해를 찾을 수 있지만, 계산 비용이 매우 크기 때문에 실시간 응용에서는 사용이 어려울 수 있다.</p>
-</li>
-<li>
-<p><strong>Evolutionary Algorithm(진화 알고리즘)</strong><br />
-    진화 알고리즘은 자연 선택과 유전적 알고리즘에서 영감을 얻은 최적화 기법으로, 변환 공간에서 다양한 후보 해를 진화시키며 최적의 해를 찾아내는 방식이다. 이 방법은 전역 탐색 능력이 뛰어나며, 국소적인 최적점에 빠지지 않는다는 장점이 있다.</p>
+<h4 id="evolutionary-algorithm"><strong>Evolutionary Algorithm(진화 알고리즘)</strong></h4>
+<p>진화 알고리즘은 자연 선택과 유전적 알고리즘에서 영감을 얻은 최적화 기법으로, 변환 공간에서 다양한 후보 해를 진화시키며 최적의 해를 찾아내는 방식이다. 이 방법은 전역 탐색 능력이 뛰어나며, 국소적인 최적점에 빠지지 않는다는 장점이 있다.</p>
 <p>진화 알고리즘의 기본 과정은 다음과 같다:
 - 초기 후보 집합을 생성한다.
 - 각 후보에 대해 목적 함수를 계산하고, 적합도에 따라 후보를 선택한다.
 - 선택된 후보를 기반으로 새로운 후보를 생성한다(돌연변이, 교차 등).
 - 일정한 세대 수만큼 반복한 후 최적의 해를 선택한다.</p>
-</li>
-</ol>
 <h3 id="_4">전역 최적화를 위한 구체적 기법</h3>
 <p>포인트 클라우드 등록 문제를 전역적으로 해결하기 위해 여러 가지 기법들이 혼합되거나 개선된 형태로 사용된다. 여기서는 일부 구체적인 기법들을 살펴보자.</p>
-<h4 id="1-fixed-point-method">1. 고정점 방법(Fixed-point method)</h4>
+<h4 id="fixed-point-method">고정점 방법(Fixed-point method)</h4>
 <p>고정점 방법은 변환 행렬을 점진적으로 업데이트하며, 목적 함수를 최소화하는 방향으로 변환을 추정하는 방법이다. 이 방식은 전역 최적화를 위한 다양한 기법들과 결합될 수 있다. 변환 행렬 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{T}</span><script type="math/tex">\mathbf{T}</script></span>는 다음과 같이 업데이트된다:</p>
 <div class="arithmatex">
 <div class="MathJax_Preview">
@@ -211,12 +206,12 @@ E(\mathbf{T}) = \sum_{i=1}^{N} \lVert \mathbf{R} \mathbf{p}_i + \mathbf{t} - \ma
 </script>
 </div>
 <p>여기서 <span class="arithmatex"><span class="MathJax_Preview">\alpha</span><script type="math/tex">\alpha</script></span>는 학습률(learning rate)이며, <span class="arithmatex"><span class="MathJax_Preview">\nabla E(\mathbf{T}_{k})</span><script type="math/tex">\nabla E(\mathbf{T}_{k})</script></span>는 목적 함수 <span class="arithmatex"><span class="MathJax_Preview">E(\mathbf{T})</span><script type="math/tex">E(\mathbf{T})</script></span>에 대한 기울기(gradient)이다. 고정점 방법은 빠르게 수렴하는 특성이 있지만, 초깃값 설정에 따라 국소 최적점에 빠질 위험이 있다. 이를 보완하기 위해 전역 최적화 기법과 결합하여 초기 추정값을 보완하는 방식으로 사용될 수 있다.</p>
-<h4 id="2-grid-search">2. 그리드 탐색(Grid Search)</h4>
+<h4 id="grid-search">그리드 탐색(Grid Search)</h4>
 <p>그리드 탐색은 전역 최적화 문제를 해결하는 매우 단순한 기법 중 하나로, 탐색 공간을 일정한 간격으로 나누고 모든 구간에서 목적 함수를 계산하여 최적의 값을 찾는 방식이다. 이 방법은 직관적이고 구현이 용이하지만, 탐색 공간이 커질수록 계산 비용이 기하급수적으로 증가하는 단점이 있다.</p>
 <p>그리드 탐색의 단계는 다음과 같다:
 - 탐색 공간을 미리 설정된 범위로 나누어 각 지점에 대한 변환 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{T}</span><script type="math/tex">\mathbf{T}</script></span>를 설정한다.
 - 각 변환 지점에서 목적 함수 <span class="arithmatex"><span class="MathJax_Preview">E(\mathbf{T})</span><script type="math/tex">E(\mathbf{T})</script></span>를 계산하고, 가장 낮은 값을 갖는 변환을 선택한다.</p>
-<h4 id="3-simulated-annealing">3. 시뮬레이티드 어닐링(Simulated Annealing)</h4>
+<h4 id="simulated-annealing">시뮬레이티드 어닐링(Simulated Annealing)</h4>
 <p>시뮬레이티드 어닐링은 전역 최적화를 위해 널리 사용되는 확률적 기법이다. 물리학에서 금속을 서서히 냉각시키는 과정을 모방한 이 기법은, 초기에 높은 온도에서 임의의 해를 탐색하다가 점점 온도를 낮추며 탐색 범위를 축소해 최적 해를 찾는다. 시뮬레이티드 어닐링 알고리즘은 국소적인 최적점에서 벗어나 전역적인 탐색을 가능하게 한다.</p>
 <p>시뮬레이티드 어닐링의 절차는 다음과 같다:
 - 초기 온도 <span class="arithmatex"><span class="MathJax_Preview">T_0</span><script type="math/tex">T_0</script></span>와 초기 해 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{T}_0</span><script type="math/tex">\mathbf{T}_0</script></span>를 설정한다.
@@ -234,7 +229,7 @@ E(\mathbf{T}) = \sum_{i=1}^{N} \lVert \mathbf{R} \mathbf{p}_i + \mathbf{t} - \ma
 <p>다단계 해법의 기본적인 과정은 다음과 같다:</p>
 <ol>
 <li>
-<p><strong>초기 단계에서의 거친 탐색</strong><br />
+<p><strong>초기 단계에서의 거친 탐색</strong> 
     포인트 클라우드를 저해상도로 축소한 후, 축소된 데이터에서 대략적인 전역 최적 변환 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{T}_{0}</span><script type="math/tex">\mathbf{T}_{0}</script></span>을 찾는다. 이 단계에서는 계산 비용이 적기 때문에 빠르게 전체적인 탐색을 수행할 수 있다.</p>
 </li>
 <li>
@@ -529,7 +524,7 @@ B(\mathbf{T}_i) = -\frac{1}{\mathbf{T}_i - a} - \frac{1}{b - \mathbf{T}_i}
 <li><strong>최적 해 선택</strong>: 여러 샘플 중에서 가장 낮은 에러를 가지는 변환 후보를 최종 해로 선택한다.</li>
 </ol>
 <p>몬테카를로 시뮬레이션은 매우 단순한 방법이지만, 탐색 공간의 크기가 클 경우 많은 샘플이 필요할 수 있으며, 반복적인 계산이 필요하다. 그러나 복잡한 문제를 해결할 때 특히 유용하다.</p>
-<h4 id="3-simulated-annealing_1">3. 시뮬레이티드 어닐링 (Simulated Annealing)</h4>
+<h4 id="3-simulated-annealing">3. 시뮬레이티드 어닐링 (Simulated Annealing)</h4>
 <p>앞서 언급한 시뮬레이티드 어닐링(Simulated Annealing)은 확률적 탐색 기법 중에서도 널리 사용되는 방법이다. 이 기법은 온도를 점진적으로 낮추면서 탐색 범위를 축소해가는 방식으로 전역 최적화를 수행하며, 국소 최적점에서 벗어나 전역 최적점을 찾도록 한다.</p>
 <p>시뮬레이티드 어닐링의 기본 메커니즘은 다음과 같다:</p>
 <ol>
@@ -567,8 +562,7 @@ E_{\text{multi}}(\mathbf{T}) = w_1 E_1(\mathbf{T}) + w_2 E_2(\mathbf{T}) + \dots
 <li><strong>OpenCL 기반 병렬 계산</strong>: 플랫폼 독립적인 OpenCL을 활용하여 다양한 하드웨어 환경에서 병렬 최적화를 수행한다.</li>
 </ul>
 <h4 id="2-distributed-computing">2. 분산 컴퓨팅 (Distributed Computing)</h4>
-<p>분산 컴퓨팅은 대</p>
-<p>규모 포인트 클라우드 데이터를 여러 컴퓨터에 분산하여 처리하는 방법이다. 이를 통해 계산 부담을 분산시켜 전역 최적화를 더 빠르게 수행할 수 있다. 특히 전역 탐색 단계에서 병렬로 여러 탐색 경로를 동시에 처리하는 방식이 매우 유용하다.</p>
+<p>분산 컴퓨팅은 대규모 포인트 클라우드 데이터를 여러 컴퓨터에 분산하여 처리하는 방법이다. 이를 통해 계산 부담을 분산시켜 전역 최적화를 더 빠르게 수행할 수 있다. 특히 전역 탐색 단계에서 병렬로 여러 탐색 경로를 동시에 처리하는 방식이 매우 유용하다.</p>
 <p>분산 컴퓨팅을 활용한 전역 최적화 기법의 예는 다음과 같다:</p>
 <ul>
 <li><strong>MapReduce 기반 최적화</strong>: 대규모 데이터셋을 처리하기 위한 MapReduce 프레임워크를 이용해, 포인트 클라우드 데이터를 여러 노드에서 병렬로 처리한다.</li>
