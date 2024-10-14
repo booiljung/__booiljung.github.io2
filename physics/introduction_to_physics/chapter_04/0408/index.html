@@ -11,7 +11,7 @@
     <link rel="canonical" href="https://booiljung.github.io/physics/introduction_to_physics/chapter_04/0408/">
     <link rel="shortcut icon" href="../../../../img/favicon.ico">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
-    <title>0408 - 실험 도서관</title>
+    <title>양자 상태와 연산자 - 실험 도서관</title>
     <link href="../../../../css/bootstrap-3.3.7.min.css" rel="stylesheet">
     <link href="../../../../css/font-awesome-4.7.0.css" rel="stylesheet">
     <link href="../../../../css/base.css" rel="stylesheet">
@@ -33,7 +33,11 @@
       var is_top_frame = false;
         
         var pageToc = [
-          {title: "title: \"\uc591\uc790 \uc0c1\ud0dc\uc640 \uc5f0\uc0b0\uc790\"", url: "#_top", children: [
+          {title: "\uc591\uc790 \uc0c1\ud0dc\uc640 \uc5f0\uc0b0\uc790", url: "#_top", children: [
+              {title: "\uc591\uc790 \uc0c1\ud0dc", url: "#_2" },
+              {title: "\uc5f0\uc0b0\uc790", url: "#_3" },
+              {title: "\ub0b4\uc801\uacfc \uc678\uc801", url: "#_4" },
+              {title: "\uc720\ub2c8\ud0c0\ub9ac \uc5f0\uc0b0\uc790", url: "#_5" },
           ]},
         ];
 
@@ -57,8 +61,56 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 
     
 
-    <hr />
-<h2 id="title">title: "양자 상태와 연산자"</h2>
+    <h1 id="_1">양자 상태와 연산자</h1>
+<h3 id="_2">양자 상태</h3>
+<p>양자역학에서 시스템의 상태는 고전역학에서의 위치와 속도와 같은 물리적 양들을 통해 기술되지 않는다. 대신, 양자 상태는 힐베르트 공간에서의 벡터로 나타내어진다. 이 벡터는 일반적으로 <span class="arithmatex"><span class="MathJax_Preview">\ket{\psi}</span><script type="math/tex">\ket{\psi}</script></span>로 표기된다. 이러한 상태는 계에 관한 모든 정보를 포함하며, 특정 물리적 양을 측정할 때의 확률 분포를 예측할 수 있다.</p>
+<p>힐베르트 공간은 복소수 값을 갖는 선형 벡터 공간으로, 양자 상태는 이 공간의 요소이다. 양자 상태는 두 가지 중요한 성질을 가진다:</p>
+<ol>
+<li>
+<p>상태 벡터의 길이는 1로 정규화되어야 한다. 즉,
+   [
+   \langle \psi | \psi \rangle = 1
+   ]
+   여기서 <span class="arithmatex"><span class="MathJax_Preview">\langle \psi | \psi \rangle</span><script type="math/tex">\langle \psi | \psi \rangle</script></span>는 상태 벡터 <span class="arithmatex"><span class="MathJax_Preview">\ket{\psi}</span><script type="math/tex">\ket{\psi}</script></span>의 내적을 의미한다.</p>
+</li>
+<li>
+<p>두 양자 상태 벡터 사이의 선형 결합은 다시 양자 상태를 나타낼 수 있다. 예를 들어, 상태 <span class="arithmatex"><span class="MathJax_Preview">\ket{\psi_1}</span><script type="math/tex">\ket{\psi_1}</script></span>와 <span class="arithmatex"><span class="MathJax_Preview">\ket{\psi_2}</span><script type="math/tex">\ket{\psi_2}</script></span>의 선형 결합은 다음과 같이 표현된다:
+   [
+   \ket{\psi} = c_1 \ket{\psi_1} + c_2 \ket{\psi_2}
+   ]
+   여기서 <span class="arithmatex"><span class="MathJax_Preview">c_1</span><script type="math/tex">c_1</script></span>과 <span class="arithmatex"><span class="MathJax_Preview">c_2</span><script type="math/tex">c_2</script></span>는 복소수 계수이다. 이 원리는 양자 중첩 원리로 알려져 있다.</p>
+</li>
+</ol>
+<p>양자 상태를 측정하면, 특정한 관측가능량에 대응하는 고유값을 얻는다. 그러나 측정하기 전에는 시스템이 고유값을 갖지 않고, 다양한 상태들의 중첩으로 존재한다.</p>
+<h3 id="_3">연산자</h3>
+<p>양자역학에서 물리적 양은 연산자에 의해 기술된다. 연산자는 힐베르트 공간에서 벡터를 다른 벡터로 변환하는 함수로 볼 수 있으며, 주로 헤르미티안 연산자로 나타내어진다. 헤르미티안 연산자 <span class="arithmatex"><span class="MathJax_Preview"> \hat{A} </span><script type="math/tex"> \hat{A} </script></span>는 다음과 같은 성질을 만족한다:
+[
+\hat{A}^{\dagger} = \hat{A}
+]
+여기서 <span class="arithmatex"><span class="MathJax_Preview"> \hat{A}^{\dagger} </span><script type="math/tex"> \hat{A}^{\dagger} </script></span>는 <span class="arithmatex"><span class="MathJax_Preview"> \hat{A} </span><script type="math/tex"> \hat{A} </script></span>의 에르미트 수반이다.</p>
+<p>헤르미티안 연산자는 실제 고유값을 가지며, 이는 물리적 관측 가능한 값에 해당한다. 관측 가능한 물리량은 고유값 방정식을 통해 다음과 같이 표현된다:
+[
+\hat{A} \ket{\psi} = a \ket{\psi}
+]
+여기서 <span class="arithmatex"><span class="MathJax_Preview">a</span><script type="math/tex">a</script></span>는 연산자 <span class="arithmatex"><span class="MathJax_Preview"> \hat{A} </span><script type="math/tex"> \hat{A} </script></span>에 해당하는 고유값이고, <span class="arithmatex"><span class="MathJax_Preview"> \ket{\psi} </span><script type="math/tex"> \ket{\psi} </script></span>는 이에 대응하는 고유벡터이다. 측정 시, 시스템은 이러한 고유벡터 중 하나의 상태로 붕괴하며, 고유값 <span class="arithmatex"><span class="MathJax_Preview">a</span><script type="math/tex">a</script></span>가 관측된다.</p>
+<h3 id="_4">내적과 외적</h3>
+<p>두 상태 벡터 <span class="arithmatex"><span class="MathJax_Preview"> \ket{\psi_1} </span><script type="math/tex"> \ket{\psi_1} </script></span>과 <span class="arithmatex"><span class="MathJax_Preview"> \ket{\psi_2} </span><script type="math/tex"> \ket{\psi_2} </script></span>의 내적은 다음과 같이 정의된다:
+[
+\langle \psi_1 | \psi_2 \rangle
+]
+이 값은 두 상태 사이의 확률 진폭을 나타내며, 그 절댓값의 제곱은 두 상태 사이의 전이 확률에 해당한다.</p>
+<p>반면, 외적은 두 벡터를 결합하여 연산자를 형성하는데 사용된다. 예를 들어, 상태 <span class="arithmatex"><span class="MathJax_Preview"> \ket{\psi_1} </span><script type="math/tex"> \ket{\psi_1} </script></span>과 <span class="arithmatex"><span class="MathJax_Preview"> \ket{\psi_2} </span><script type="math/tex"> \ket{\psi_2} </script></span>의 외적은 다음과 같은 연산자를 생성한다:
+[
+\ket{\psi_1} \bra{\psi_2}
+]
+이 연산자는 새로운 상태를 만들기 위한 도구로 사용되며, 특정 상태에서 다른 상태로의 전이를 기술할 수 있다.</p>
+<h3 id="_5">유니타리 연산자</h3>
+<p>양자역학에서 시간에 따른 상태의 변화는 유니타리 연산자에 의해 설명된다. 유니타리 연산자 <span class="arithmatex"><span class="MathJax_Preview"> \hat{U} </span><script type="math/tex"> \hat{U} </script></span>는 다음 조건을 만족하는 연산자이다:
+[
+\hat{U}^{\dagger} \hat{U} = \hat{I}
+]
+여기서 <span class="arithmatex"><span class="MathJax_Preview"> \hat{I} </span><script type="math/tex"> \hat{I} </script></span>는 항등 연산자이다. 유니타리 연산자는 양자 상태의 정규화를 보존하며, 이는 물리적 확률의 보존을 의미한다. Schrödinger 방정식은 시간에 따른 양자 상태의 변화를 기술하는 기본 방정식으로, 유니타리 변환과 관련이 깊다.</p>
+<p>[계속]</p>
 
   <br>
     
