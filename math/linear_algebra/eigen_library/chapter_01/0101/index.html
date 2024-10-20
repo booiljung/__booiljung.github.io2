@@ -33,21 +33,54 @@
       var is_top_frame = false;
         
         var pageToc = [
-          {title: "Eigen\uc758 \uc8fc\uc694 \uae30\ub2a5", url: "#_top", children: [
-              {title: "1. \ubca1\ud130 \ubc0f \ud589\ub82c \uc5f0\uc0b0", url: "#1" },
-              {title: "2. \ud589\ub82c \uacf1\uc148", url: "#2" },
-              {title: "3. \uc5ed\ud589\ub82c \uacc4\uc0b0", url: "#3" },
-              {title: "4. \uc804\uce58 \ud589\ub82c", url: "#4" },
-              {title: "5. \ub300\uac01 \ud589\ub82c \ubc0f \ub300\uac01\ud654", url: "#5" },
-              {title: "6. \uace0\uc720\uac12 \ubc0f \uace0\uc720\ubca1\ud130 \uacc4\uc0b0", url: "#6" },
-              {title: "7. \ud589\ub82c \ubd84\ud574", url: "#7" },
-              {title: "8. \uc120\ud615 \ubc29\uc815\uc2dd\uc758 \ud574\ubc95", url: "#8" },
-              {title: "9. \ud589\ub82c\uc2dd \uacc4\uc0b0", url: "#9" },
-              {title: "10. \ud76c\uc18c \ud589\ub82c \uc9c0\uc6d0", url: "#10" },
-              {title: "11. \ud589\ub82c \ud06c\uae30 \ubcc0\uacbd \ubc0f \ucd08\uae30\ud654", url: "#11" },
-              {title: "12. \ube14\ub85d \uc5f0\uc0b0", url: "#12" },
-              {title: "13. \ub9f5\ud551(Map) \ubc0f \uba54\ubaa8\ub9ac \uad00\ub9ac", url: "#13-map" },
-              {title: "14. \ud15c\ud50c\ub9bf \uc9c0\uc6d0", url: "#14" },
+          {title: "1. \ubca1\ud130 \ubc0f \ud589\ub82c \uc5f0\uc0b0", url: "#_top", children: [
+              {title: "\ub367\uc148 \ubc0f \ube84\uc148", url: "#_1" },
+              {title: "\uc2a4\uce7c\ub77c \uacf1\uc148", url: "#_2" },
+              {title: "\ub0b4\uc801", url: "#_3" },
+              {title: "\uc678\uc801", url: "#_4" },
+          ]},
+          {title: "2. \ud589\ub82c \uacf1\uc148", url: "#2", children: [
+          ]},
+          {title: "3. \uc5ed\ud589\ub82c \uacc4\uc0b0", url: "#3", children: [
+          ]},
+          {title: "4. \uc804\uce58 \ud589\ub82c", url: "#4", children: [
+          ]},
+          {title: "5. \ub300\uac01 \ud589\ub82c \ubc0f \ub300\uac01\ud654", url: "#5", children: [
+          ]},
+          {title: "6. \uace0\uc720\uac12 \ubc0f \uace0\uc720\ubca1\ud130 \uacc4\uc0b0", url: "#6", children: [
+              {title: "\uace0\uc720\uac12 \uacc4\uc0b0", url: "#_5" },
+              {title: "\uace0\uc720\ubca1\ud130 \uacc4\uc0b0", url: "#_6" },
+          ]},
+          {title: "7. \ud589\ub82c \ubd84\ud574", url: "#7", children: [
+              {title: "LU \ubd84\ud574", url: "#lu" },
+              {title: "QR \ubd84\ud574", url: "#qr" },
+              {title: "SVD (\ud2b9\uc774\uac12 \ubd84\ud574)", url: "#svd" },
+          ]},
+          {title: "8. \uc120\ud615 \ubc29\uc815\uc2dd\uc758 \ud574\ubc95", url: "#8", children: [
+              {title: "\uc9c1\uc811 \ud574\ubc95", url: "#_7" },
+              {title: "\ubc18\ubcf5 \ud574\ubc95", url: "#_8" },
+          ]},
+          {title: "9. \ud589\ub82c\uc2dd \uacc4\uc0b0", url: "#9", children: [
+          ]},
+          {title: "10. \ud76c\uc18c \ud589\ub82c \uc9c0\uc6d0", url: "#10", children: [
+              {title: "\ud76c\uc18c \ud589\ub82c\uc758 \uc800\uc7a5 \ubc29\uc2dd", url: "#_9" },
+              {title: "\ud76c\uc18c \ud589\ub82c\uc758 \uc5f0\uc0b0", url: "#_10" },
+              {title: "\ud76c\uc18c \uc120\ud615 \ubc29\uc815\uc2dd\uc758 \ud574\ubc95", url: "#_11" },
+          ]},
+          {title: "11. \ud589\ub82c \ud06c\uae30 \ubcc0\uacbd \ubc0f \ucd08\uae30\ud654", url: "#11", children: [
+              {title: "\ud06c\uae30 \ubcc0\uacbd", url: "#_12" },
+              {title: "\ucd08\uae30\ud654", url: "#_13" },
+          ]},
+          {title: "12. \ube14\ub85d \uc5f0\uc0b0", url: "#12", children: [
+              {title: "\ube14\ub85d \ucc38\uc870", url: "#_14" },
+              {title: "\ube14\ub85d \uc218\uc815", url: "#_15" },
+          ]},
+          {title: "13. \ub9f5\ud551(Map) \ubc0f \uba54\ubaa8\ub9ac \uad00\ub9ac", url: "#13-map", children: [
+              {title: "\ub9f5\ud551 \uae30\ub2a5", url: "#_16" },
+              {title: "\uba54\ubaa8\ub9ac \uc815\ub82c", url: "#_17" },
+          ]},
+          {title: "14. \ud15c\ud50c\ub9bf \uc9c0\uc6d0", url: "#14", children: [
+              {title: "\uc815\uc801 \ud06c\uae30\uc640 \ub3d9\uc801 \ud06c\uae30", url: "#_18" },
           ]},
         ];
 
@@ -70,9 +103,35 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
     
 
     
+    
+      
+    
 
-    <h1 id="eigen">Eigen의 주요 기능</h1>
-<h3 id="1">1. 벡터 및 행렬 연산</h3>
+  <div class="row wm-article-nav-buttons" role="navigation" aria-label="navigation">
+    
+    <div class="wm-article-nav pull-right">
+      <a href="../0102/" class="btn btn-xs btn-default pull-right">
+        Next
+        <i class="fa fa-chevron-right" aria-hidden="true"></i>
+      </a>
+      <a href="../0102/" class="btn btn-xs btn-link">
+        Eigen의 특징
+      </a>
+    </div>
+    
+    <div class="wm-article-nav">
+      <a href="../../01_preface_ko/" class="btn btn-xs btn-default pull-left">
+        <i class="fa fa-chevron-left" aria-hidden="true"></i>
+        Previous</a><a href="../../01_preface_ko/" class="btn btn-xs btn-link">
+        소개
+      </a>
+    </div>
+    
+  </div>
+
+    
+
+    <h3 id="1">1. 벡터 및 행렬 연산</h3>
 <p>Eigen 라이브러리는 벡터와 행렬에 대한 기본적인 연산을 매우 효율적으로 처리할 수 있도록 설계되어 있다. 이 라이브러리에서 제공하는 주요 연산들은 다음과 같다.</p>
 <h4 id="_1">덧셈 및 뺄셈</h4>
 <p>벡터와 행렬의 덧셈과 뺄셈은 차원만 맞다면 간단히 이루어진다. 예를 들어, 두 벡터 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{a}, \mathbf{b} \in \mathbb{R}^n</span><script type="math/tex">\mathbf{a}, \mathbf{b} \in \mathbb{R}^n</script></span> 에 대해 덧셈과 뺄셈은 다음과 같이 표현된다:</p>
@@ -384,6 +443,33 @@ D_{ij} = 0 \quad \text{for} \quad i \neq j
 
   <br>
     
+
+    
+    
+      
+    
+
+  <div class="row wm-article-nav-buttons" role="navigation" aria-label="navigation">
+    
+    <div class="wm-article-nav pull-right">
+      <a href="../0102/" class="btn btn-xs btn-default pull-right">
+        Next
+        <i class="fa fa-chevron-right" aria-hidden="true"></i>
+      </a>
+      <a href="../0102/" class="btn btn-xs btn-link">
+        Eigen의 특징
+      </a>
+    </div>
+    
+    <div class="wm-article-nav">
+      <a href="../../01_preface_ko/" class="btn btn-xs btn-default pull-left">
+        <i class="fa fa-chevron-left" aria-hidden="true"></i>
+        Previous</a><a href="../../01_preface_ko/" class="btn btn-xs btn-link">
+        소개
+      </a>
+    </div>
+    
+  </div>
 
     <br>
 </div>

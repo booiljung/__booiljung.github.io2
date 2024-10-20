@@ -33,15 +33,21 @@
       var is_top_frame = false;
         
         var pageToc = [
-          {title: "\ud589\ub82c \ub367\uc148\uacfc \ube84\uc148", url: "#_top", children: [
-              {title: "\ud589\ub82c \ub367\uc148\uc758 \uc815\uc758", url: "#_2" },
-              {title: "\ud589\ub82c \ub367\uc148\uc758 \uc131\uc9c8", url: "#_3" },
-              {title: "\ud589\ub82c \ube84\uc148\uc758 \uc815\uc758", url: "#_4" },
-              {title: "\ud589\ub82c \ube84\uc148\uc758 \uc131\uc9c8", url: "#_5" },
-              {title: "\ud589\ub82c\uc758 \ub367\uc148\uacfc \ube84\uc148\uc5d0\uc11c \uc601\ud589\ub82c\uc758 \uc5ed\ud560", url: "#_6" },
-              {title: "\ud589\ub82c\uc758 \ub367\uc148\uacfc \uc2a4\uce7c\ub77c \uacf1\uc758 \uacb0\ud569", url: "#_7" },
-              {title: "\ucef4\ud3ec\ub10c\ud2b8\ubcc4 \ubca1\ud130\uc640 \ud589\ub82c \ub367\uc148", url: "#_8" },
-              {title: "\ucef4\ud4e8\ud130\uc5d0\uc11c\uc758 \ud589\ub82c \ub367\uc148\uacfc \ube84\uc148 \uad6c\ud604", url: "#_9" },
+          {title: "\ud589\ub82c \ub367\uc148\uc758 \uc815\uc758", url: "#_top", children: [
+          ]},
+          {title: "\ud589\ub82c \ub367\uc148\uc758 \uc131\uc9c8", url: "#_2", children: [
+          ]},
+          {title: "\ud589\ub82c \ube84\uc148\uc758 \uc815\uc758", url: "#_3", children: [
+          ]},
+          {title: "\ud589\ub82c \ube84\uc148\uc758 \uc131\uc9c8", url: "#_4", children: [
+          ]},
+          {title: "\ud589\ub82c\uc758 \ub367\uc148\uacfc \ube84\uc148\uc5d0\uc11c \uc601\ud589\ub82c\uc758 \uc5ed\ud560", url: "#_5", children: [
+          ]},
+          {title: "\ud589\ub82c\uc758 \ub367\uc148\uacfc \uc2a4\uce7c\ub77c \uacf1\uc758 \uacb0\ud569", url: "#_6", children: [
+          ]},
+          {title: "\ucef4\ud3ec\ub10c\ud2b8\ubcc4 \ubca1\ud130\uc640 \ud589\ub82c \ub367\uc148", url: "#_7", children: [
+          ]},
+          {title: "\ucef4\ud4e8\ud130\uc5d0\uc11c\uc758 \ud589\ub82c \ub367\uc148\uacfc \ube84\uc148 \uad6c\ud604", url: "#_8", children: [
           ]},
         ];
 
@@ -64,9 +70,35 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
     
 
     
+    
+      
+    
 
-    <h1 id="_1">행렬 덧셈과 뺄셈</h1>
-<h3 id="_2">행렬 덧셈의 정의</h3>
+  <div class="row wm-article-nav-buttons" role="navigation" aria-label="navigation">
+    
+    <div class="wm-article-nav pull-right">
+      <a href="../0302/" class="btn btn-xs btn-default pull-right">
+        Next
+        <i class="fa fa-chevron-right" aria-hidden="true"></i>
+      </a>
+      <a href="../0302/" class="btn btn-xs btn-link">
+        Eigen 라이브러리
+      </a>
+    </div>
+    
+    <div class="wm-article-nav">
+      <a href="../../chapter_02/0205/" class="btn btn-xs btn-default pull-left">
+        <i class="fa fa-chevron-left" aria-hidden="true"></i>
+        Previous</a><a href="../../chapter_02/0205/" class="btn btn-xs btn-link">
+        행렬과 벡터의 기본 연산
+      </a>
+    </div>
+    
+  </div>
+
+    
+
+    <h3 id="_1">행렬 덧셈의 정의</h3>
 <p>행렬 덧셈은 두 행렬의 같은 위치에 있는 성분끼리 더하는 연산을 의미한다. 두 행렬이 덧셈이 가능하기 위해서는 두 행렬이 <strong>같은 크기</strong>를 가져야 한다. 즉, 두 행렬이 모두 <span class="arithmatex"><span class="MathJax_Preview">m \times n</span><script type="math/tex">m \times n</script></span>의 크기를 가지고 있어야 한다. 행렬 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{A}</span><script type="math/tex">\mathbf{A}</script></span>와 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{B}</span><script type="math/tex">\mathbf{B}</script></span>가 다음과 같은 형태를 가진다고 가정하자.</p>
 <div class="arithmatex">
 <div class="MathJax_Preview">
@@ -126,24 +158,32 @@ a_{m1} + b_{m1} & a_{m2} + b_{m2} & \cdots & a_{mn} + b_{mn}
 </script>
 </div>
 <p>즉, 행렬의 덧셈은 두 행렬의 동일한 인덱스의 원소끼리 더하는 방식으로 이루어진다.</p>
-<h3 id="_3">행렬 덧셈의 성질</h3>
+<h3 id="_2">행렬 덧셈의 성질</h3>
 <ol>
-<li>
-<p><strong>교환 법칙</strong>: 두 행렬 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{A}</span><script type="math/tex">\mathbf{A}</script></span>와 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{B}</span><script type="math/tex">\mathbf{B}</script></span>가 같은 크기라면, <span class="arithmatex"><span class="MathJax_Preview">\mathbf{A} + \mathbf{B} = \mathbf{B} + \mathbf{A}</span><script type="math/tex">\mathbf{A} + \mathbf{B} = \mathbf{B} + \mathbf{A}</script></span>가 성립한다.
-   [
-   \mathbf{A} + \mathbf{B} = \mathbf{B} + \mathbf{A}
-   ]
-   이는 각 성분의 덧셈이 교환 법칙을 따르기 때문이다. 즉, <span class="arithmatex"><span class="MathJax_Preview">a_{ij} + b_{ij} = b_{ij} + a_{ij}</span><script type="math/tex">a_{ij} + b_{ij} = b_{ij} + a_{ij}</script></span>이다.</p>
-</li>
-<li>
-<p><strong>결합 법칙</strong>: 세 행렬 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{A}, \mathbf{B}, \mathbf{C}</span><script type="math/tex">\mathbf{A}, \mathbf{B}, \mathbf{C}</script></span>가 모두 같은 크기를 가진다면, <span class="arithmatex"><span class="MathJax_Preview">(\mathbf{A} + \mathbf{B}) + \mathbf{C} = \mathbf{A} + (\mathbf{B} + \mathbf{C})</span><script type="math/tex">(\mathbf{A} + \mathbf{B}) + \mathbf{C} = \mathbf{A} + (\mathbf{B} + \mathbf{C})</script></span>가 성립한다.
-   [
-   (\mathbf{A} + \mathbf{B}) + \mathbf{C} = \mathbf{A} + (\mathbf{B} + \mathbf{C})
-   ]
-   이는 성분별로 덧셈의 결합 법칙이 성립하기 때문이다.</p>
-</li>
+<li><strong>교환 법칙</strong>: 두 행렬 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{A}</span><script type="math/tex">\mathbf{A}</script></span>와 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{B}</span><script type="math/tex">\mathbf{B}</script></span>가 같은 크기라면, <span class="arithmatex"><span class="MathJax_Preview">\mathbf{A} + \mathbf{B} = \mathbf{B} + \mathbf{A}</span><script type="math/tex">\mathbf{A} + \mathbf{B} = \mathbf{B} + \mathbf{A}</script></span>가 성립한다.</li>
 </ol>
-<h3 id="_4">행렬 뺄셈의 정의</h3>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+   \mathbf{A} + \mathbf{B} = \mathbf{B} + \mathbf{A}
+</div>
+<script type="math/tex; mode=display">
+   \mathbf{A} + \mathbf{B} = \mathbf{B} + \mathbf{A}
+</script>
+</div>
+<p>이는 각 성분의 덧셈이 교환 법칙을 따르기 때문이다. 즉, <span class="arithmatex"><span class="MathJax_Preview">a_{ij} + b_{ij} = b_{ij} + a_{ij}</span><script type="math/tex">a_{ij} + b_{ij} = b_{ij} + a_{ij}</script></span>이다.</p>
+<ol>
+<li><strong>결합 법칙</strong>: 세 행렬 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{A}, \mathbf{B}, \mathbf{C}</span><script type="math/tex">\mathbf{A}, \mathbf{B}, \mathbf{C}</script></span>가 모두 같은 크기를 가진다면, <span class="arithmatex"><span class="MathJax_Preview">(\mathbf{A} + \mathbf{B}) + \mathbf{C} = \mathbf{A} + (\mathbf{B} + \mathbf{C})</span><script type="math/tex">(\mathbf{A} + \mathbf{B}) + \mathbf{C} = \mathbf{A} + (\mathbf{B} + \mathbf{C})</script></span>가 성립한다.</li>
+</ol>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+   (\mathbf{A} + \mathbf{B}) + \mathbf{C} = \mathbf{A} + (\mathbf{B} + \mathbf{C})
+</div>
+<script type="math/tex; mode=display">
+   (\mathbf{A} + \mathbf{B}) + \mathbf{C} = \mathbf{A} + (\mathbf{B} + \mathbf{C})
+</script>
+</div>
+<p>이는 성분별로 덧셈의 결합 법칙이 성립하기 때문이다.</p>
+<h3 id="_3">행렬 뺄셈의 정의</h3>
 <p>행렬의 뺄셈 역시 행렬 덧셈과 마찬가지로, 같은 크기의 행렬에서 각 성분을 서로 빼는 방식으로 정의된다. 행렬 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{A}</span><script type="math/tex">\mathbf{A}</script></span>와 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{B}</span><script type="math/tex">\mathbf{B}</script></span>가 다음과 같은 형태를 가진다고 하자.</p>
 <div class="arithmatex">
 <div class="MathJax_Preview">
@@ -202,24 +242,32 @@ a_{m1} - b_{m1} & a_{m2} - b_{m2} & \cdots & a_{mn} - b_{mn}
 \end{bmatrix}
 </script>
 </div>
-<h3 id="_5">행렬 뺄셈의 성질</h3>
+<h3 id="_4">행렬 뺄셈의 성질</h3>
 <p>행렬 뺄셈은 행렬 덧셈과 다르게 교환 법칙이 성립하지 않는다. 즉, 일반적으로 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{A} - \mathbf{B} \neq \mathbf{B} - \mathbf{A}</span><script type="math/tex">\mathbf{A} - \mathbf{B} \neq \mathbf{B} - \mathbf{A}</script></span>이다. 그러나 결합 법칙은 다음과 같이 성립한다.</p>
 <ol>
-<li>
-<p><strong>결합 법칙</strong>: 세 행렬 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{A}, \mathbf{B}, \mathbf{C}</span><script type="math/tex">\mathbf{A}, \mathbf{B}, \mathbf{C}</script></span>가 모두 같은 크기를 가진다면, <span class="arithmatex"><span class="MathJax_Preview">(\mathbf{A} - \mathbf{B}) - \mathbf{C} = \mathbf{A} - (\mathbf{B} + \mathbf{C})</span><script type="math/tex">(\mathbf{A} - \mathbf{B}) - \mathbf{C} = \mathbf{A} - (\mathbf{B} + \mathbf{C})</script></span>가 성립한다.
-   [
-   (\mathbf{A} - \mathbf{B}) - \mathbf{C} = \mathbf{A} - (\mathbf{B} + \mathbf{C})
-   ]
-   이는 성분별로 뺄셈의 결합 법칙이 성립하기 때문이다.</p>
-</li>
-<li>
-<p><strong>덧셈과 뺄셈의 결합</strong>: 행렬 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{A}, \mathbf{B}, \mathbf{C}</span><script type="math/tex">\mathbf{A}, \mathbf{B}, \mathbf{C}</script></span>가 모두 같은 크기라면, <span class="arithmatex"><span class="MathJax_Preview">\mathbf{A} + (\mathbf{B} - \mathbf{C}) = (\mathbf{A} + \mathbf{B}) - \mathbf{C}</span><script type="math/tex">\mathbf{A} + (\mathbf{B} - \mathbf{C}) = (\mathbf{A} + \mathbf{B}) - \mathbf{C}</script></span>가 성립한다.
-   [
-   \mathbf{A} + (\mathbf{B} - \mathbf{C}) = (\mathbf{A} + \mathbf{B}) - \mathbf{C}
-   ]</p>
-</li>
+<li><strong>결합 법칙</strong>: 세 행렬 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{A}, \mathbf{B}, \mathbf{C}</span><script type="math/tex">\mathbf{A}, \mathbf{B}, \mathbf{C}</script></span>가 모두 같은 크기를 가진다면, <span class="arithmatex"><span class="MathJax_Preview">(\mathbf{A} - \mathbf{B}) - \mathbf{C} = \mathbf{A} - (\mathbf{B} + \mathbf{C})</span><script type="math/tex">(\mathbf{A} - \mathbf{B}) - \mathbf{C} = \mathbf{A} - (\mathbf{B} + \mathbf{C})</script></span>가 성립한다.</li>
 </ol>
-<h3 id="_6">행렬의 덧셈과 뺄셈에서 영행렬의 역할</h3>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+   (\mathbf{A} - \mathbf{B}) - \mathbf{C} = \mathbf{A} - (\mathbf{B} + \mathbf{C})
+</div>
+<script type="math/tex; mode=display">
+   (\mathbf{A} - \mathbf{B}) - \mathbf{C} = \mathbf{A} - (\mathbf{B} + \mathbf{C})
+</script>
+</div>
+<p>이는 성분별로 뺄셈의 결합 법칙이 성립하기 때문이다.</p>
+<ol>
+<li><strong>덧셈과 뺄셈의 결합</strong>: 행렬 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{A}, \mathbf{B}, \mathbf{C}</span><script type="math/tex">\mathbf{A}, \mathbf{B}, \mathbf{C}</script></span>가 모두 같은 크기라면, <span class="arithmatex"><span class="MathJax_Preview">\mathbf{A} + (\mathbf{B} - \mathbf{C}) = (\mathbf{A} + \mathbf{B}) - \mathbf{C}</span><script type="math/tex">\mathbf{A} + (\mathbf{B} - \mathbf{C}) = (\mathbf{A} + \mathbf{B}) - \mathbf{C}</script></span>가 성립한다.</li>
+</ol>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+   \mathbf{A} + (\mathbf{B} - \mathbf{C}) = (\mathbf{A} + \mathbf{B}) - \mathbf{C}
+</div>
+<script type="math/tex; mode=display">
+   \mathbf{A} + (\mathbf{B} - \mathbf{C}) = (\mathbf{A} + \mathbf{B}) - \mathbf{C}
+</script>
+</div>
+<h3 id="_5">행렬의 덧셈과 뺄셈에서 영행렬의 역할</h3>
 <p>행렬 덧셈과 뺄셈에서 중요한 개념 중 하나는 <strong>영행렬</strong>의 역할이다. 영행렬은 모든 성분이 0인 행렬로 정의된다. <span class="arithmatex"><span class="MathJax_Preview">m \times n</span><script type="math/tex">m \times n</script></span> 크기의 영행렬을 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{0}_{m \times n}</span><script type="math/tex">\mathbf{0}_{m \times n}</script></span>으로 표기할 수 있다. 예를 들어, <span class="arithmatex"><span class="MathJax_Preview">3 \times 3</span><script type="math/tex">3 \times 3</script></span> 크기의 영행렬은 다음과 같다.</p>
 <div class="arithmatex">
 <div class="MathJax_Preview">
@@ -258,7 +306,7 @@ a_{m1} - b_{m1} & a_{m2} - b_{m2} & \cdots & a_{mn} - b_{mn}
 </script>
 </div>
 <p>이 식은 행렬 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{A}</span><script type="math/tex">\mathbf{A}</script></span>와 자기 자신을 뺄 때 영행렬이 된다는 것을 보여준다. 이는 모든 성분에서 자기 자신을 빼면 0이 되기 때문이다.</p>
-<h3 id="_7">행렬의 덧셈과 스칼라 곱의 결합</h3>
+<h3 id="_6">행렬의 덧셈과 스칼라 곱의 결합</h3>
 <p>행렬 덧셈은 스칼라 곱과도 결합된다. 즉, 행렬의 스칼라 배와 덧셈을 결합하여 다음과 같은 성질을 이용할 수 있다. 두 행렬 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{A}, \mathbf{B}</span><script type="math/tex">\mathbf{A}, \mathbf{B}</script></span>와 스칼라 <span class="arithmatex"><span class="MathJax_Preview">c</span><script type="math/tex">c</script></span>에 대해 다음이 성립한다.</p>
 <div class="arithmatex">
 <div class="MathJax_Preview">
@@ -269,7 +317,7 @@ c (\mathbf{A} + \mathbf{B}) = c \mathbf{A} + c \mathbf{B}
 </script>
 </div>
 <p>이 성질은 스칼라의 분배 법칙과 동일한 역할을 한다. 즉, 스칼라 <span class="arithmatex"><span class="MathJax_Preview">c</span><script type="math/tex">c</script></span>를 두 행렬 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{A}</span><script type="math/tex">\mathbf{A}</script></span>와 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{B}</span><script type="math/tex">\mathbf{B}</script></span>에 각각 곱한 결과는 <span class="arithmatex"><span class="MathJax_Preview">c</span><script type="math/tex">c</script></span>를 행렬의 합 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{A} + \mathbf{B}</span><script type="math/tex">\mathbf{A} + \mathbf{B}</script></span>에 곱한 것과 같다.</p>
-<h3 id="_8">컴포넌트별 벡터와 행렬 덧셈</h3>
+<h3 id="_7">컴포넌트별 벡터와 행렬 덧셈</h3>
 <p>행렬 덧셈은 벡터 덧셈과도 밀접한 관련이 있다. 벡터는 1차원 행렬로 볼 수 있으며, 벡터의 덧셈은 행렬 덧셈과 동일한 방식으로 이루어진다. 두 벡터 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{u}</span><script type="math/tex">\mathbf{u}</script></span>와 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{v}</span><script type="math/tex">\mathbf{v}</script></span>가 다음과 같이 주어진다고 하자.</p>
 <div class="arithmatex">
 <div class="MathJax_Preview">
@@ -321,7 +369,7 @@ u_3 + v_3
 </script>
 </div>
 <p>이는 행렬 덧셈의 경우와 동일하게, 같은 인덱스에 있는 성분끼리 더하는 방식이다. 벡터와 행렬의 덧셈과 뺄셈은 차원에 따라 동일한 원리로 적용된다.</p>
-<h3 id="_9">컴퓨터에서의 행렬 덧셈과 뺄셈 구현</h3>
+<h3 id="_8">컴퓨터에서의 행렬 덧셈과 뺄셈 구현</h3>
 <p>행렬 덧셈과 뺄셈은 컴퓨터 프로그래밍에서도 자주 사용되며, 특히 <strong>Eigen 라이브러리</strong>를 사용하여 쉽게 구현할 수 있다. Eigen 라이브러리에서는 행렬을 <strong>Matrix</strong> 클래스로 표현하며, 행렬 덧셈과 뺄셈을 직관적인 방식으로 사용할 수 있다.</p>
 <p>다음은 Eigen 라이브러리에서 행렬 덧셈과 뺄셈을 구현하는 예시이다.</p>
 <pre><code class="language-cpp">#include &lt;Eigen/Dense&gt;
@@ -351,6 +399,33 @@ int main() {
 
   <br>
     
+
+    
+    
+      
+    
+
+  <div class="row wm-article-nav-buttons" role="navigation" aria-label="navigation">
+    
+    <div class="wm-article-nav pull-right">
+      <a href="../0302/" class="btn btn-xs btn-default pull-right">
+        Next
+        <i class="fa fa-chevron-right" aria-hidden="true"></i>
+      </a>
+      <a href="../0302/" class="btn btn-xs btn-link">
+        Eigen 라이브러리
+      </a>
+    </div>
+    
+    <div class="wm-article-nav">
+      <a href="../../chapter_02/0205/" class="btn btn-xs btn-default pull-left">
+        <i class="fa fa-chevron-left" aria-hidden="true"></i>
+        Previous</a><a href="../../chapter_02/0205/" class="btn btn-xs btn-link">
+        행렬과 벡터의 기본 연산
+      </a>
+    </div>
+    
+  </div>
 
     <br>
 </div>

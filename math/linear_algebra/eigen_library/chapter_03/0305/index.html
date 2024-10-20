@@ -33,10 +33,19 @@
       var is_top_frame = false;
         
         var pageToc = [
-          {title: "\ud589\ub82c\uc758 \uc5ed\ud589\ub82c \uacc4\uc0b0", url: "#_top", children: [
-              {title: "\uc5ed\ud589\ub82c\uc758 \uc815\uc758", url: "#_2" },
-              {title: "\uc5ed\ud589\ub82c\uc774 \uc874\uc7ac\ud558\uae30 \uc704\ud55c \uc870\uac74", url: "#_3" },
-              {title: "\uc5ed\ud589\ub82c\uc758 \uacc4\uc0b0 \ubc29\ubc95", url: "#_4" },
+          {title: "\uc5ed\ud589\ub82c\uc758 \uc815\uc758", url: "#_top", children: [
+          ]},
+          {title: "\uc5ed\ud589\ub82c\uc774 \uc874\uc7ac\ud558\uae30 \uc704\ud55c \uc870\uac74", url: "#_2", children: [
+          ]},
+          {title: "\uc5ed\ud589\ub82c\uc758 \uacc4\uc0b0 \ubc29\ubc95", url: "#_3", children: [
+              {title: "1. \uace0\uc804\uc801\uc778 \uc18c\uac70\ubc95 (Gauss-Jordan \uc18c\uac70\ubc95)", url: "#1-gauss-jordan" },
+              {title: "2. LU \ubd84\ud574\ub97c \ud1b5\ud55c \uc5ed\ud589\ub82c \uacc4\uc0b0", url: "#2-lu" },
+              {title: "3. QR \ubd84\ud574\ub97c \ud1b5\ud55c \uc5ed\ud589\ub82c \uacc4\uc0b0", url: "#3-qr" },
+              {title: "4. SVD(\ud2b9\uc774\uac12 \ubd84\ud574)\ub97c \ud1b5\ud55c \uc5ed\ud589\ub82c \uacc4\uc0b0", url: "#4-svd" },
+              {title: "5. \ud589\ub82c \ud568\uc218 \\texttt{inverse()}\ub97c \uc0ac\uc6a9\ud55c \uac04\ub2e8\ud55c \uc5ed\ud589\ub82c \uacc4\uc0b0", url: "#5-textttinverse" },
+              {title: "6. \ube14\ub85d \ud589\ub82c\uc744 \uc774\uc6a9\ud55c \uc5ed\ud589\ub82c \uacc4\uc0b0", url: "#6" },
+              {title: "7. \uc720\uc0ac \uc5ed\ud589\ub82c (Pseudo-inverse)", url: "#7-pseudo-inverse" },
+              {title: "8. \uc218\uce58\uc801 \uc548\uc815\uc131 \ubc0f \uc131\ub2a5 \uace0\ub824\uc0ac\ud56d", url: "#8" },
           ]},
         ];
 
@@ -59,10 +68,36 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
     
 
     
+    
+      
+    
 
-    <h1 id="_1">행렬의 역행렬 계산</h1>
-<p>행렬의 역행렬 계산은 선형대수학에서 매우 중요한 개념 중 하나로, 특히 연립방정식의 해를 구하거나 시스템 제어 및 최적화 문제에서 자주 사용된다. 본 장에서는 Eigen 라이브러리를 활용하여 역행렬을 계산하는 방법에 대해 다룬다.</p>
-<h3 id="_2">역행렬의 정의</h3>
+  <div class="row wm-article-nav-buttons" role="navigation" aria-label="navigation">
+    
+    <div class="wm-article-nav pull-right">
+      <a href="../0306/" class="btn btn-xs btn-default pull-right">
+        Next
+        <i class="fa fa-chevron-right" aria-hidden="true"></i>
+      </a>
+      <a href="../0306/" class="btn btn-xs btn-link">
+        행렬식 계산
+      </a>
+    </div>
+    
+    <div class="wm-article-nav">
+      <a href="../0304/" class="btn btn-xs btn-default pull-left">
+        <i class="fa fa-chevron-left" aria-hidden="true"></i>
+        Previous</a><a href="../0304/" class="btn btn-xs btn-link">
+        행렬의 전치 및 수반 행렬
+      </a>
+    </div>
+    
+  </div>
+
+    
+
+    <p>행렬의 역행렬 계산은 선형대수학에서 매우 중요한 개념 중 하나로, 특히 연립방정식의 해를 구하거나 시스템 제어 및 최적화 문제에서 자주 사용된다. 본 장에서는 Eigen 라이브러리를 활용하여 역행렬을 계산하는 방법에 대해 다룬다.</p>
+<h3 id="_1">역행렬의 정의</h3>
 <p>역행렬(Inverse Matrix)은 정사각행렬 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{A} \in \mathbb{R}^{n \times n}</span><script type="math/tex">\mathbf{A} \in \mathbb{R}^{n \times n}</script></span>이 있을 때, 행렬 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{A}^{-1}</span><script type="math/tex">\mathbf{A}^{-1}</script></span>을 만족하는 행렬로서 다음 조건을 만족한다.</p>
 <div class="arithmatex">
 <div class="MathJax_Preview">
@@ -73,7 +108,7 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 </script>
 </div>
 <p>여기서 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{I}</span><script type="math/tex">\mathbf{I}</script></span>는 <span class="arithmatex"><span class="MathJax_Preview">n \times n</span><script type="math/tex">n \times n</script></span> 크기의 항등행렬(Identity Matrix)이다. 즉, 행렬 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{A}</span><script type="math/tex">\mathbf{A}</script></span>와 그 역행렬 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{A}^{-1}</span><script type="math/tex">\mathbf{A}^{-1}</script></span>을 곱했을 때, 결과는 항등행렬이어야 한다.</p>
-<h3 id="_3">역행렬이 존재하기 위한 조건</h3>
+<h3 id="_2">역행렬이 존재하기 위한 조건</h3>
 <p>모든 행렬에 역행렬이 존재하는 것은 아니다. 정사각행렬 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{A}</span><script type="math/tex">\mathbf{A}</script></span>의 역행렬이 존재하기 위한 조건은 행렬이 가역적(Invertible)이어야 하며, 이는 다음과 같은 조건을 만족해야 한다.</p>
 <ol>
 <li>행렬 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{A}</span><script type="math/tex">\mathbf{A}</script></span>의 행렬식(Determinant)이 0이 아니어야 한다.</li>
@@ -89,7 +124,7 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 <ol>
 <li>행렬 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{A}</span><script type="math/tex">\mathbf{A}</script></span>는 풀랭크(Full Rank)여야 한다. 즉, 행렬의 계수(Rank)는 <span class="arithmatex"><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span>이어야 한다.</li>
 </ol>
-<h3 id="_4">역행렬의 계산 방법</h3>
+<h3 id="_3">역행렬의 계산 방법</h3>
 <p>역행렬을 구하는 방법에는 여러 가지가 있으며, 각 방법은 행렬의 크기와 특성에 따라 효율성이 달라진다. Eigen 라이브러리에서는 다양한 방식으로 역행렬을 계산할 수 있으며, 주로 다음과 같은 방법들이 사용된다.</p>
 <h4 id="1-gauss-jordan">1. 고전적인 소거법 (Gauss-Jordan 소거법)</h4>
 <p>가우스-조르단 소거법은 행렬의 가우스 소거 과정을 통해 역행렬을 구하는 방법이다. 이 방법은 다음과 같은 방식으로 진행된다.</p>
@@ -275,12 +310,22 @@ int main() {
 <h4 id="7-pseudo-inverse">7. 유사 역행렬 (Pseudo-inverse)</h4>
 <p>역행렬이 존재하지 않는 경우, 특히 정사각행렬이 아닌 경우에도 유사 역행렬(Pseudo-inverse)을 사용할 수 있다. 유사 역행렬은 주로 최소자승 문제에서 사용되며, Eigen 라이브러리에서는 \texttt{JacobiSVD}를 통해 쉽게 구할 수 있다.</p>
 <p>유사 역행렬 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{A}^{+}</span><script type="math/tex">\mathbf{A}^{+}</script></span>는 행렬 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{A}</span><script type="math/tex">\mathbf{A}</script></span>에 대해 다음을 만족한다.</p>
-<p>[
+<div class="arithmatex">
+<div class="MathJax_Preview">
 \mathbf{A} \mathbf{A}^{+} \mathbf{A} = \mathbf{A}
-]
-[
+</div>
+<script type="math/tex; mode=display">
+\mathbf{A} \mathbf{A}^{+} \mathbf{A} = \mathbf{A}
+</script>
+</div>
+<div class="arithmatex">
+<div class="MathJax_Preview">
 \mathbf{A}^{+} \mathbf{A} \mathbf{A}^{+} = \mathbf{A}^{+}
-]</p>
+</div>
+<script type="math/tex; mode=display">
+\mathbf{A}^{+} \mathbf{A} \mathbf{A}^{+} = \mathbf{A}^{+}
+</script>
+</div>
 <p>SVD를 이용하여 유사 역행렬을 구하는 방법은 다음과 같다.</p>
 <pre><code class="language-cpp">#include &lt;Eigen/Dense&gt;
 #include &lt;iostream&gt;
@@ -329,6 +374,33 @@ int main() {
 
   <br>
     
+
+    
+    
+      
+    
+
+  <div class="row wm-article-nav-buttons" role="navigation" aria-label="navigation">
+    
+    <div class="wm-article-nav pull-right">
+      <a href="../0306/" class="btn btn-xs btn-default pull-right">
+        Next
+        <i class="fa fa-chevron-right" aria-hidden="true"></i>
+      </a>
+      <a href="../0306/" class="btn btn-xs btn-link">
+        행렬식 계산
+      </a>
+    </div>
+    
+    <div class="wm-article-nav">
+      <a href="../0304/" class="btn btn-xs btn-default pull-left">
+        <i class="fa fa-chevron-left" aria-hidden="true"></i>
+        Previous</a><a href="../0304/" class="btn btn-xs btn-link">
+        행렬의 전치 및 수반 행렬
+      </a>
+    </div>
+    
+  </div>
 
     <br>
 </div>

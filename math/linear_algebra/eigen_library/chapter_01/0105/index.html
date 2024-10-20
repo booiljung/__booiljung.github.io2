@@ -33,22 +33,35 @@
       var is_top_frame = false;
         
         var pageToc = [
-          {title: "\ucf54\ub4dc \ucd5c\uc801\ud654\uc640 \uc131\ub2a5 \uace0\ub824 \uc0ac\ud56d", url: "#_top", children: [
-              {title: "1. \ubca1\ud130\ud654(Vectorization)", url: "#1-vectorization" },
-              {title: "2. \uba54\ubaa8\ub9ac \uc815\ub82c(Alignment)", url: "#2-alignment" },
-              {title: "3. \ube14\ub85d \uc5f0\uc0b0(Block Operations)", url: "#3-block-operations" },
-              {title: "4. \uc9c0\uc5f0 \ud3c9\uac00(Lazy Evaluation)", url: "#4-lazy-evaluation" },
-              {title: "5. \uc218\uce58 \uc548\uc815\uc131(Numerical Stability)", url: "#5-numerical-stability" },
-              {title: "6. \uc2a4\ub808\ub4dc \ubcd1\ub82c\ud654(Thread Parallelism)", url: "#6-thread-parallelism" },
-              {title: "7. \uce90\uc2dc \ud65c\uc6a9(Cache Efficiency)", url: "#7-cache-efficiency" },
-              {title: "8. \uba54\ubaa8\ub9ac \ud560\ub2f9\uacfc \ud574\uc81c \uad00\ub9ac(Memory Allocation and Deallocation)", url: "#8-memory-allocation-and-deallocation" },
-              {title: "9. CPU\uc640 \uba54\ubaa8\ub9ac \ub300\uc5ed\ud3ed \uace0\ub824(CPU and Memory Bandwidth Considerations)", url: "#9-cpu-cpu-and-memory-bandwidth-considerations" },
-              {title: "10. \uc784\uc2dc \uac1d\uccb4 \uc81c\uac70(Temporary Object Elimination)", url: "#10-temporary-object-elimination" },
-              {title: "11. \ud568\uc218 \uc778\ub77c\uc778\ud654(Function Inlining)", url: "#11-function-inlining" },
-              {title: "12. \uace0\uc815 \ud06c\uae30(Fixed-Size)\uc640 \ub3d9\uc801 \ud06c\uae30(Dynamic-Size) \ud589\ub82c", url: "#12-fixed-size-dynamic-size" },
-              {title: "13. \uc790\uae30 \ud560\ub2f9(Self-Assignment) \ucd5c\uc801\ud654", url: "#13-self-assignment" },
-              {title: "14. \ud0c0\uc77c\ub9c1(Tiling)\uacfc \ub8e8\ud504 \uc5b8\ub864\ub9c1(Loop Unrolling)", url: "#14-tiling-loop-unrolling" },
-              {title: "15. \ucee4\uc2a4\ud140 \uc2a4\uce7c\ub77c \ud0c0\uc785(Custom Scalar Types)", url: "#15-custom-scalar-types" },
+          {title: "1. \ubca1\ud130\ud654(Vectorization)", url: "#_top", children: [
+          ]},
+          {title: "2. \uba54\ubaa8\ub9ac \uc815\ub82c(Alignment)", url: "#2-alignment", children: [
+          ]},
+          {title: "3. \ube14\ub85d \uc5f0\uc0b0(Block Operations)", url: "#3-block-operations", children: [
+          ]},
+          {title: "4. \uc9c0\uc5f0 \ud3c9\uac00(Lazy Evaluation)", url: "#4-lazy-evaluation", children: [
+          ]},
+          {title: "5. \uc218\uce58 \uc548\uc815\uc131(Numerical Stability)", url: "#5-numerical-stability", children: [
+          ]},
+          {title: "6. \uc2a4\ub808\ub4dc \ubcd1\ub82c\ud654(Thread Parallelism)", url: "#6-thread-parallelism", children: [
+          ]},
+          {title: "7. \uce90\uc2dc \ud65c\uc6a9(Cache Efficiency)", url: "#7-cache-efficiency", children: [
+          ]},
+          {title: "8. \uba54\ubaa8\ub9ac \ud560\ub2f9\uacfc \ud574\uc81c \uad00\ub9ac(Memory Allocation and Deallocation)", url: "#8-memory-allocation-and-deallocation", children: [
+          ]},
+          {title: "9. CPU\uc640 \uba54\ubaa8\ub9ac \ub300\uc5ed\ud3ed \uace0\ub824(CPU and Memory Bandwidth Considerations)", url: "#9-cpu-cpu-and-memory-bandwidth-considerations", children: [
+          ]},
+          {title: "10. \uc784\uc2dc \uac1d\uccb4 \uc81c\uac70(Temporary Object Elimination)", url: "#10-temporary-object-elimination", children: [
+          ]},
+          {title: "11. \ud568\uc218 \uc778\ub77c\uc778\ud654(Function Inlining)", url: "#11-function-inlining", children: [
+          ]},
+          {title: "12. \uace0\uc815 \ud06c\uae30(Fixed-Size)\uc640 \ub3d9\uc801 \ud06c\uae30(Dynamic-Size) \ud589\ub82c", url: "#12-fixed-size-dynamic-size", children: [
+          ]},
+          {title: "13. \uc790\uae30 \ud560\ub2f9(Self-Assignment) \ucd5c\uc801\ud654", url: "#13-self-assignment", children: [
+          ]},
+          {title: "14. \ud0c0\uc77c\ub9c1(Tiling)\uacfc \ub8e8\ud504 \uc5b8\ub864\ub9c1(Loop Unrolling)", url: "#14-tiling-loop-unrolling", children: [
+          ]},
+          {title: "15. \ucee4\uc2a4\ud140 \uc2a4\uce7c\ub77c \ud0c0\uc785(Custom Scalar Types)", url: "#15-custom-scalar-types", children: [
           ]},
         ];
 
@@ -71,9 +84,35 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
     
 
     
+    
+      
+    
 
-    <h1 id="_1">코드 최적화와 성능 고려 사항</h1>
-<h3 id="1-vectorization">1. 벡터화(Vectorization)</h3>
+  <div class="row wm-article-nav-buttons" role="navigation" aria-label="navigation">
+    
+    <div class="wm-article-nav pull-right">
+      <a href="../../chapter_02/0201/" class="btn btn-xs btn-default pull-right">
+        Next
+        <i class="fa fa-chevron-right" aria-hidden="true"></i>
+      </a>
+      <a href="../../chapter_02/0201/" class="btn btn-xs btn-link">
+        Vector 클래스와 행렬 클래스 소개
+      </a>
+    </div>
+    
+    <div class="wm-article-nav">
+      <a href="../0104/" class="btn btn-xs btn-default pull-left">
+        <i class="fa fa-chevron-left" aria-hidden="true"></i>
+        Previous</a><a href="../0104/" class="btn btn-xs btn-link">
+        Eigen과 C++ 표준 라이브러리의 비교
+      </a>
+    </div>
+    
+  </div>
+
+    
+
+    <h3 id="1-vectorization">1. 벡터화(Vectorization)</h3>
 <p>Eigen 라이브러리의 중요한 성능 최적화 전략 중 하나는 벡터화이다. 벡터화는 CPU의 SIMD(Single Instruction, Multiple Data) 명령어를 사용하여 하나의 연산으로 여러 데이터를 처리하는 방식이다. 이를 통해 연산 성능을 극대화할 수 있다. Eigen 라이브러리는 자동으로 벡터화가 가능한 코드에서 SIMD 명령어를 활용하며, 벡터화가 불가능한 경우 일반 연산을 사용한다.</p>
 <p>벡터화는 다음과 같은 방식으로 수식에 적용된다. 예를 들어, 두 벡터 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{a}, \mathbf{b} \in \mathbb{R}^n</span><script type="math/tex">\mathbf{a}, \mathbf{b} \in \mathbb{R}^n</script></span>의 내적 연산은 다음과 같이 표현된다.</p>
 <div class="arithmatex">
@@ -259,6 +298,33 @@ A_{21} & A_{22} & \dots \\
 
   <br>
     
+
+    
+    
+      
+    
+
+  <div class="row wm-article-nav-buttons" role="navigation" aria-label="navigation">
+    
+    <div class="wm-article-nav pull-right">
+      <a href="../../chapter_02/0201/" class="btn btn-xs btn-default pull-right">
+        Next
+        <i class="fa fa-chevron-right" aria-hidden="true"></i>
+      </a>
+      <a href="../../chapter_02/0201/" class="btn btn-xs btn-link">
+        Vector 클래스와 행렬 클래스 소개
+      </a>
+    </div>
+    
+    <div class="wm-article-nav">
+      <a href="../0104/" class="btn btn-xs btn-default pull-left">
+        <i class="fa fa-chevron-left" aria-hidden="true"></i>
+        Previous</a><a href="../0104/" class="btn btn-xs btn-link">
+        Eigen과 C++ 표준 라이브러리의 비교
+      </a>
+    </div>
+    
+  </div>
 
     <br>
 </div>

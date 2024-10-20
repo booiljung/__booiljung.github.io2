@@ -33,29 +33,52 @@
       var is_top_frame = false;
         
         var pageToc = [
-          {title: "\ud589\ub82c\uacfc \ubca1\ud130\uc758 \uae30\ubcf8 \uc5f0\uc0b0", url: "#_top", children: [
-              {title: "1. \ub367\uc148\uacfc \ube84\uc148", url: "#1" },
-              {title: "2. \uc2a4\uce7c\ub77c \uacf1\uc148", url: "#2" },
-              {title: "3. \ud589\ub82c \uacf1\uc148", url: "#3" },
-              {title: "4. \uc804\uce58 \ud589\ub82c", url: "#4" },
-              {title: "5. \ub0b4\uc801 (Dot Product)", url: "#5-dot-product" },
-              {title: "6. \uc678\uc801 (Cross Product)", url: "#6-cross-product" },
-              {title: "7. \uc5ed\ud589\ub82c", url: "#7" },
-              {title: "8. \ud589\ub82c\uc2dd", url: "#8" },
-              {title: "9. \ub300\uac01\ud569 (Trace)", url: "#9-trace" },
-              {title: "10. \ub2e8\uc704 \ud589\ub82c", url: "#10" },
-              {title: "11. \ub300\uce6d \ud589\ub82c", url: "#11" },
-              {title: "12. \ub300\uac01 \ud589\ub82c", url: "#12" },
-              {title: "13. \uace0\uc720\uac12\uacfc \uace0\uc720\ubca1\ud130", url: "#13" },
-              {title: "14. \uc9c1\uad50 \ud589\ub82c", url: "#14" },
-              {title: "15. QR \ubd84\ud574", url: "#15-qr" },
-              {title: "16. LU \ubd84\ud574", url: "#16-lu" },
-              {title: "17. SVD (\ud2b9\uc774\uac12 \ubd84\ud574)", url: "#17-svd" },
-              {title: "18. \ud589\ub82c\uc758 \ub178\ub984 (Matrix Norm)", url: "#18-matrix-norm" },
-              {title: "19. \uc544\ub2e4\ub9c8\ub974 \uacf1 (Hadamard Product)", url: "#19-hadamard-product" },
-              {title: "20. \ube14\ub85d \ud589\ub82c (Block Matrix)", url: "#20-block-matrix" },
-              {title: "21. \ud589\ub82c \ubd84\ud574 (Matrix Decomposition)", url: "#21-matrix-decomposition" },
-              {title: "\ub300\ud45c\uc801\uc778 \ud589\ub82c \ubd84\ud574 \ubc29\ubc95", url: "#_2" },
+          {title: "1. \ub367\uc148\uacfc \ube84\uc148", url: "#_top", children: [
+          ]},
+          {title: "2. \uc2a4\uce7c\ub77c \uacf1\uc148", url: "#2", children: [
+          ]},
+          {title: "3. \ud589\ub82c \uacf1\uc148", url: "#3", children: [
+          ]},
+          {title: "4. \uc804\uce58 \ud589\ub82c", url: "#4", children: [
+          ]},
+          {title: "5. \ub0b4\uc801 (Dot Product)", url: "#5-dot-product", children: [
+          ]},
+          {title: "6. \uc678\uc801 (Cross Product)", url: "#6-cross-product", children: [
+          ]},
+          {title: "7. \uc5ed\ud589\ub82c", url: "#7", children: [
+          ]},
+          {title: "8. \ud589\ub82c\uc2dd", url: "#8", children: [
+          ]},
+          {title: "9. \ub300\uac01\ud569 (Trace)", url: "#9-trace", children: [
+          ]},
+          {title: "10. \ub2e8\uc704 \ud589\ub82c", url: "#10", children: [
+          ]},
+          {title: "11. \ub300\uce6d \ud589\ub82c", url: "#11", children: [
+          ]},
+          {title: "12. \ub300\uac01 \ud589\ub82c", url: "#12", children: [
+          ]},
+          {title: "13. \uace0\uc720\uac12\uacfc \uace0\uc720\ubca1\ud130", url: "#13", children: [
+          ]},
+          {title: "14. \uc9c1\uad50 \ud589\ub82c", url: "#14", children: [
+          ]},
+          {title: "15. QR \ubd84\ud574", url: "#15-qr", children: [
+          ]},
+          {title: "16. LU \ubd84\ud574", url: "#16-lu", children: [
+          ]},
+          {title: "17. SVD (\ud2b9\uc774\uac12 \ubd84\ud574)", url: "#17-svd", children: [
+          ]},
+          {title: "18. \ud589\ub82c\uc758 \ub178\ub984 (Matrix Norm)", url: "#18-matrix-norm", children: [
+              {title: "1. Frobenius \ub178\ub984", url: "#1-frobenius" },
+              {title: "2. 1-\ub178\ub984", url: "#2-1-" },
+              {title: "3. \ubb34\ud55c \ub178\ub984 (Infinity Norm)", url: "#3-infinity-norm" },
+          ]},
+          {title: "19. \uc544\ub2e4\ub9c8\ub974 \uacf1 (Hadamard Product)", url: "#19-hadamard-product", children: [
+          ]},
+          {title: "20. \ube14\ub85d \ud589\ub82c (Block Matrix)", url: "#20-block-matrix", children: [
+          ]},
+          {title: "21. \ud589\ub82c \ubd84\ud574 (Matrix Decomposition)", url: "#21-matrix-decomposition", children: [
+          ]},
+          {title: "\ub300\ud45c\uc801\uc778 \ud589\ub82c \ubd84\ud574 \ubc29\ubc95", url: "#_1", children: [
           ]},
         ];
 
@@ -78,9 +101,35 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
     
 
     
+    
+      
+    
 
-    <h1 id="_1">행렬과 벡터의 기본 연산</h1>
-<h3 id="1">1. 덧셈과 뺄셈</h3>
+  <div class="row wm-article-nav-buttons" role="navigation" aria-label="navigation">
+    
+    <div class="wm-article-nav pull-right">
+      <a href="../../chapter_03/0301/" class="btn btn-xs btn-default pull-right">
+        Next
+        <i class="fa fa-chevron-right" aria-hidden="true"></i>
+      </a>
+      <a href="../../chapter_03/0301/" class="btn btn-xs btn-link">
+        행렬 덧셈과 뺄셈
+      </a>
+    </div>
+    
+    <div class="wm-article-nav">
+      <a href="../0204/" class="btn btn-xs btn-default pull-left">
+        <i class="fa fa-chevron-left" aria-hidden="true"></i>
+        Previous</a><a href="../0204/" class="btn btn-xs btn-link">
+        Eigen의 템플릿 기법
+      </a>
+    </div>
+    
+  </div>
+
+    
+
+    <h3 id="1">1. 덧셈과 뺄셈</h3>
 <p>행렬과 벡터의 덧셈과 뺄셈은 동일한 차원을 가진 경우에만 가능하다. 이를 수학적으로 표현하면, 두 행렬 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{A}</span><script type="math/tex">\mathbf{A}</script></span>, <span class="arithmatex"><span class="MathJax_Preview">\mathbf{B}</span><script type="math/tex">\mathbf{B}</script></span>가 같은 차원 <span class="arithmatex"><span class="MathJax_Preview">\mathbb{R}^{m \times n}</span><script type="math/tex">\mathbb{R}^{m \times n}</script></span>에 속해 있을 때 덧셈은 아래와 같이 이루어진다:</p>
 <div class="arithmatex">
 <div class="MathJax_Preview">
@@ -100,12 +149,22 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 </script>
 </div>
 <p>벡터와 행렬의 뺄셈 역시 덧셈과 동일한 방식으로 성분별로 계산된다:</p>
-<p>[
+<div class="arithmatex">
+<div class="MathJax_Preview">
 \mathbf{D} = \mathbf{A} - \mathbf{B}, \quad \mathbf{D}(i,j) = \mathbf{A}(i,j) - \mathbf{B}(i,j)
-]
-[
+</div>
+<script type="math/tex; mode=display">
+\mathbf{D} = \mathbf{A} - \mathbf{B}, \quad \mathbf{D}(i,j) = \mathbf{A}(i,j) - \mathbf{B}(i,j)
+</script>
+</div>
+<div class="arithmatex">
+<div class="MathJax_Preview">
 \mathbf{z} = \mathbf{u} - \mathbf{v}, \quad \mathbf{z}(i) = \mathbf{u}(i) - \mathbf{v}(i)
-]</p>
+</div>
+<script type="math/tex; mode=display">
+\mathbf{z} = \mathbf{u} - \mathbf{v}, \quad \mathbf{z}(i) = \mathbf{u}(i) - \mathbf{v}(i)
+</script>
+</div>
 <p>Eigen 라이브러리에서 행렬과 벡터의 덧셈 및 뺄셈은 간단하게 <code>+</code> 및 <code>-</code> 연산자를 사용하여 구현할 수 있다. 예시 코드는 다음과 같다:</p>
 <pre><code class="language-cpp">Eigen::Matrix3d A, B, C;
 C = A + B;
@@ -505,7 +564,7 @@ Eigen::MatrixXd B = A.block(0, 0, 2, 2);  // A의 (0,0) 위치에서 2x2 블록 
 </code></pre>
 <h3 id="21-matrix-decomposition">21. 행렬 분해 (Matrix Decomposition)</h3>
 <p>행렬 분해(matrix decomposition)은 주어진 행렬을 더 작은 행렬로 분해하여 처리하는 방법이다. 앞서 소개한 LU 분해, QR 분해, SVD 분해 등 다양한 분해 방법을 포함하여, 행렬의 특성에 맞게 최적의 분해 방법을 선택할 수 있다. 분해 방법은 선형 시스템 해석, 고유값 문제, 최적화 등에 널리 사용된다.</p>
-<h3 id="_2">대표적인 행렬 분해 방법</h3>
+<h3 id="_1">대표적인 행렬 분해 방법</h3>
 <ol>
 <li>
 <p><strong>LU 분해</strong>: 행렬을 하삼각 행렬 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{L}</span><script type="math/tex">\mathbf{L}</script></span>과 상삼각 행렬 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{U}</span><script type="math/tex">\mathbf{U}</script></span>로 분해하는 방법. 이 방법은 주로 선형 방정식 해법에서 사용된다.</p>
@@ -529,6 +588,33 @@ Eigen::MatrixXd L = llt.matrixL();  // 하삼각 행렬 L
 
   <br>
     
+
+    
+    
+      
+    
+
+  <div class="row wm-article-nav-buttons" role="navigation" aria-label="navigation">
+    
+    <div class="wm-article-nav pull-right">
+      <a href="../../chapter_03/0301/" class="btn btn-xs btn-default pull-right">
+        Next
+        <i class="fa fa-chevron-right" aria-hidden="true"></i>
+      </a>
+      <a href="../../chapter_03/0301/" class="btn btn-xs btn-link">
+        행렬 덧셈과 뺄셈
+      </a>
+    </div>
+    
+    <div class="wm-article-nav">
+      <a href="../0204/" class="btn btn-xs btn-default pull-left">
+        <i class="fa fa-chevron-left" aria-hidden="true"></i>
+        Previous</a><a href="../0204/" class="btn btn-xs btn-link">
+        Eigen의 템플릿 기법
+      </a>
+    </div>
+    
+  </div>
 
     <br>
 </div>

@@ -33,27 +33,63 @@
       var is_top_frame = false;
         
         var pageToc = [
-          {title: "Eigen\uc758 \ud2b9\uc9d5", url: "#_top", children: [
-              {title: "1. \uac00\ubcbc\uc6b4 \ud5e4\ub354 \uc804\uc6a9 \ub77c\uc774\ube0c\ub7ec\ub9ac", url: "#1" },
-              {title: "2. \ud45c\ud604\uc2dd \ud15c\ud50c\ub9bf(Expression Template) \uae30\ubc95\uc744 \uc0ac\uc6a9\ud55c \uace0\uc131\ub2a5 \uc5f0\uc0b0", url: "#2-expression-template" },
-              {title: "3. \ub2e4\uc591\ud55c \ub370\uc774\ud130 \ud0c0\uc785\uacfc \uce58\uc218 \uc9c0\uc6d0", url: "#3" },
-              {title: "4. \ub2e4\uc591\ud55c \uc5f0\uc0b0 \uc9c0\uc6d0", url: "#4" },
-              {title: "5. \ud76c\uc18c \ud589\ub82c(Sparse Matrix) \uc9c0\uc6d0", url: "#5-sparse-matrix" },
-              {title: "6. \ub2e4\uc591\ud55c \ubd84\ud574(decomposition) \uae30\ubc95 \uc81c\uacf5", url: "#6-decomposition" },
-              {title: "7. \ud15c\ud50c\ub9bf\uc744 \ud1b5\ud55c \ub2e4\uc591\ud55c \ud06c\uae30 \uc9c0\uc6d0", url: "#7" },
-              {title: "8. \ub2e4\uc911 \uc2a4\ub808\ub529\uacfc \ubcd1\ub82c \ucc98\ub9ac \uc9c0\uc6d0", url: "#8" },
-              {title: "9. \ud50c\ub7ec\uadf8\uc778 \uc2dc\uc2a4\ud15c", url: "#9" },
-              {title: "10. \uc790\ub3d9 \ubbf8\ubd84(Automatic Differentiation) \uc9c0\uc6d0", url: "#10-automatic-differentiation" },
-              {title: "11. \uc0c1\uc218\uc640 \uc5f0\uc0b0\uc790 \uc624\ubc84\ub85c\ub529", url: "#11" },
-              {title: "12. SIMD \uba85\ub839\uc5b4 \uc9d1\ud569\uc744 \ud1b5\ud55c \ucd5c\uc801\ud654", url: "#12-simd" },
-              {title: "13. \ud15c\ud50c\ub9bf \uba54\ud0c0\ud504\ub85c\uadf8\ub798\ubc0d\uc744 \ud1b5\ud55c \ucd5c\uc801\ud654", url: "#13" },
-              {title: "14. \ube14\ub85d \uc5f0\uc0b0 \uc9c0\uc6d0", url: "#14" },
-              {title: "15. \uc790\uccb4\uc801\uc778 \uc120\ud615 \ubc29\uc815\uc2dd \uc194\ubc84 \uc81c\uacf5", url: "#15" },
-              {title: "16. \uc815\ubc00\ub3c4 \uc870\uc808 \uae30\ub2a5", url: "#16" },
-              {title: "17. \uac15\ub825\ud55c \ub514\ubc84\uae45 \ubc0f \uc5d0\ub7ec \ucc98\ub9ac \uae30\ub2a5", url: "#17" },
-              {title: "18. \ubc94\uc6a9\uc801\uc774\uace0 \uc9c1\uad00\uc801\uc778 API", url: "#18-api" },
-              {title: "19. \ud0c0 \ub77c\uc774\ube0c\ub7ec\ub9ac\uc640\uc758 \ud1b5\ud569\uc131", url: "#19" },
-              {title: "20. \uc720\ub2db \ud14c\uc2a4\ud2b8\uc640 \uc548\uc815\uc131", url: "#20" },
+          {title: "1. \uac00\ubcbc\uc6b4 \ud5e4\ub354 \uc804\uc6a9 \ub77c\uc774\ube0c\ub7ec\ub9ac", url: "#_top", children: [
+          ]},
+          {title: "2. \ud45c\ud604\uc2dd \ud15c\ud50c\ub9bf(Expression Template) \uae30\ubc95\uc744 \uc0ac\uc6a9\ud55c \uace0\uc131\ub2a5 \uc5f0\uc0b0", url: "#2-expression-template", children: [
+          ]},
+          {title: "3. \ub2e4\uc591\ud55c \ub370\uc774\ud130 \ud0c0\uc785\uacfc \uce58\uc218 \uc9c0\uc6d0", url: "#3", children: [
+          ]},
+          {title: "4. \ub2e4\uc591\ud55c \uc5f0\uc0b0 \uc9c0\uc6d0", url: "#4", children: [
+          ]},
+          {title: "5. \ud76c\uc18c \ud589\ub82c(Sparse Matrix) \uc9c0\uc6d0", url: "#5-sparse-matrix", children: [
+          ]},
+          {title: "6. \ub2e4\uc591\ud55c \ubd84\ud574(decomposition) \uae30\ubc95 \uc81c\uacf5", url: "#6-decomposition", children: [
+              {title: "LU \ubd84\ud574", url: "#lu" },
+              {title: "QR \ubd84\ud574", url: "#qr" },
+              {title: "Eigenvalue \ubd84\ud574", url: "#eigenvalue" },
+              {title: "SVD (Singular Value Decomposition)", url: "#svd-singular-value-decomposition" },
+          ]},
+          {title: "7. \ud15c\ud50c\ub9bf\uc744 \ud1b5\ud55c \ub2e4\uc591\ud55c \ud06c\uae30 \uc9c0\uc6d0", url: "#7", children: [
+              {title: "\uace0\uc815 \ud06c\uae30 \uc608\uc2dc", url: "#_1" },
+              {title: "\ub3d9\uc801 \ud06c\uae30 \uc608\uc2dc", url: "#_2" },
+          ]},
+          {title: "8. \ub2e4\uc911 \uc2a4\ub808\ub529\uacfc \ubcd1\ub82c \ucc98\ub9ac \uc9c0\uc6d0", url: "#8", children: [
+          ]},
+          {title: "9. \ud50c\ub7ec\uadf8\uc778 \uc2dc\uc2a4\ud15c", url: "#9", children: [
+          ]},
+          {title: "10. \uc790\ub3d9 \ubbf8\ubd84(Automatic Differentiation) \uc9c0\uc6d0", url: "#10-automatic-differentiation", children: [
+          ]},
+          {title: "11. \uc0c1\uc218\uc640 \uc5f0\uc0b0\uc790 \uc624\ubc84\ub85c\ub529", url: "#11", children: [
+          ]},
+          {title: "12. SIMD \uba85\ub839\uc5b4 \uc9d1\ud569\uc744 \ud1b5\ud55c \ucd5c\uc801\ud654", url: "#12-simd", children: [
+          ]},
+          {title: "13. \ud15c\ud50c\ub9bf \uba54\ud0c0\ud504\ub85c\uadf8\ub798\ubc0d\uc744 \ud1b5\ud55c \ucd5c\uc801\ud654", url: "#13", children: [
+              {title: "\uc608\uc2dc: \ud589\ub82c\uc758 \uace0\uc815 \ud06c\uae30 \ucd5c\uc801\ud654", url: "#_3" },
+              {title: "\uc608\uc2dc: \ub7f0\ud0c0\uc784\uc5d0 \ucd5c\uc801\ud654\ub41c \ub3d9\uc801 \ud06c\uae30 \ud589\ub82c", url: "#_4" },
+          ]},
+          {title: "14. \ube14\ub85d \uc5f0\uc0b0 \uc9c0\uc6d0", url: "#14", children: [
+              {title: "\uc608\uc2dc: \ube14\ub85d \ucd94\ucd9c", url: "#_5" },
+              {title: "\uc608\uc2dc: \ube14\ub85d\uc5d0 \ub300\ud55c \uc5f0\uc0b0", url: "#_6" },
+          ]},
+          {title: "15. \uc790\uccb4\uc801\uc778 \uc120\ud615 \ubc29\uc815\uc2dd \uc194\ubc84 \uc81c\uacf5", url: "#15", children: [
+              {title: "\uc9c1\uc811 \ubc29\ubc95(Direct Methods)", url: "#direct-methods" },
+              {title: "\ubc18\ubcf5\uc801 \ubc29\ubc95(Iterative Methods)", url: "#iterative-methods" },
+          ]},
+          {title: "16. \uc815\ubc00\ub3c4 \uc870\uc808 \uae30\ub2a5", url: "#16", children: [
+              {title: "\ub2e8\uc815\ubc00\ub3c4\uc640 \ubc30\uc815\ubc00\ub3c4", url: "#_7" },
+              {title: "\uc784\uc758 \uc815\ubc00\ub3c4 \ub370\uc774\ud130 \ud0c0\uc785", url: "#_8" },
+          ]},
+          {title: "17. \uac15\ub825\ud55c \ub514\ubc84\uae45 \ubc0f \uc5d0\ub7ec \ucc98\ub9ac \uae30\ub2a5", url: "#17", children: [
+              {title: "\ud06c\uae30 \ubd88\uc77c\uce58 \uc5d0\ub7ec", url: "#_9" },
+              {title: "\ud2b9\uc774 \ud589\ub82c \ucc98\ub9ac", url: "#_10" },
+          ]},
+          {title: "18. \ubc94\uc6a9\uc801\uc774\uace0 \uc9c1\uad00\uc801\uc778 API", url: "#18-api", children: [
+              {title: "\ubca1\ud130\uc640 \ud589\ub82c \uc5f0\uc0b0\uc758 \uc9c1\uad00\uc801 \ud45c\ud604", url: "#_11" },
+          ]},
+          {title: "19. \ud0c0 \ub77c\uc774\ube0c\ub7ec\ub9ac\uc640\uc758 \ud1b5\ud569\uc131", url: "#19", children: [
+          ]},
+          {title: "20. \uc720\ub2db \ud14c\uc2a4\ud2b8\uc640 \uc548\uc815\uc131", url: "#20", children: [
+              {title: "\uc608\uc2dc: \uc790\uccb4 \ud14c\uc2a4\ud2b8 \ucf54\ub4dc \ucd94\uac00", url: "#_12" },
           ]},
         ];
 
@@ -76,13 +112,39 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
     
 
     
+    
+      
+    
 
-    <h1 id="eigen">Eigen의 특징</h1>
-<h3 id="1">1. 가벼운 헤더 전용 라이브러리</h3>
+  <div class="row wm-article-nav-buttons" role="navigation" aria-label="navigation">
+    
+    <div class="wm-article-nav pull-right">
+      <a href="../0103/" class="btn btn-xs btn-default pull-right">
+        Next
+        <i class="fa fa-chevron-right" aria-hidden="true"></i>
+      </a>
+      <a href="../0103/" class="btn btn-xs btn-link">
+        설치 및 환경 설정
+      </a>
+    </div>
+    
+    <div class="wm-article-nav">
+      <a href="../0101/" class="btn btn-xs btn-default pull-left">
+        <i class="fa fa-chevron-left" aria-hidden="true"></i>
+        Previous</a><a href="../0101/" class="btn btn-xs btn-link">
+        Eigen의 주요 기능
+      </a>
+    </div>
+    
+  </div>
+
+    
+
+    <h3 id="1">1. 가벼운 헤더 전용 라이브러리</h3>
 <p>Eigen 라이브러리는 헤더 전용으로 설계되어 있으며, 별도의 라이브러리 파일을 링크할 필요가 없다. 즉, 컴파일 시에 추가적인 바이너리를 생성하지 않으며, 단지 필요한 헤더 파일을 포함하기만 하면 된다. 이로 인해 외부 종속성 없이 간편하게 사용할 수 있으며, 대부분의 플랫폼과 컴파일러에서 쉽게 호환된다. 또한, 이러한 특성 덕분에 복잡한 빌드 시스템 없이도 빠른 개발이 가능하다.</p>
 <h3 id="2-expression-template">2. 표현식 템플릿(Expression Template) 기법을 사용한 고성능 연산</h3>
 <p>Eigen은 내부적으로 표현식 템플릿(Expression Template) 기법을 활용하여 효율적인 수치 연산을 제공한다. 이 기법은 C++의 템플릿 기능을 활용하여 불필요한 중간 객체를 생성하지 않고, 복잡한 수학적 연산을 최적화한다.</p>
-<p>예를 들어, 두 개의 벡터 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{a}</span><script type="math/tex">\mathbf{a}</script></span>와 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{b}</span><script type="math/tex">\mathbf{b}</script></span>, 그리고 스칼라 값 <span class="arithmatex"><span class="MathJax_Preview"> \alpha </span><script type="math/tex"> \alpha </script></span>에 대해 다음과 같은 연산을 생각해보자:</p>
+<p>예를 들어, 두 개의 벡터 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{a}</span><script type="math/tex">\mathbf{a}</script></span>와 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{b}</span><script type="math/tex">\mathbf{b}</script></span>, 그리고 스칼라 값 <span class="arithmatex"><span class="MathJax_Preview">\alpha</span><script type="math/tex">\alpha</script></span>에 대해 다음과 같은 연산을 생각해보자:</p>
 <div class="arithmatex">
 <div class="MathJax_Preview">
 \mathbf{c} = \alpha (\mathbf{a} + \mathbf{b})
@@ -345,6 +407,33 @@ int main() {
 
   <br>
     
+
+    
+    
+      
+    
+
+  <div class="row wm-article-nav-buttons" role="navigation" aria-label="navigation">
+    
+    <div class="wm-article-nav pull-right">
+      <a href="../0103/" class="btn btn-xs btn-default pull-right">
+        Next
+        <i class="fa fa-chevron-right" aria-hidden="true"></i>
+      </a>
+      <a href="../0103/" class="btn btn-xs btn-link">
+        설치 및 환경 설정
+      </a>
+    </div>
+    
+    <div class="wm-article-nav">
+      <a href="../0101/" class="btn btn-xs btn-default pull-left">
+        <i class="fa fa-chevron-left" aria-hidden="true"></i>
+        Previous</a><a href="../0101/" class="btn btn-xs btn-link">
+        Eigen의 주요 기능
+      </a>
+    </div>
+    
+  </div>
 
     <br>
 </div>

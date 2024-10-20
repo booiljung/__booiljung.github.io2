@@ -33,17 +33,47 @@
       var is_top_frame = false;
         
         var pageToc = [
-          {title: "Eigen\uacfc C++ \ud45c\uc900 \ub77c\uc774\ube0c\ub7ec\ub9ac\uc758 \ube44\uad50", url: "#_top", children: [
-              {title: "1. \ubca1\ud130 \ubc0f \ud589\ub82c \uc5f0\uc0b0\uc758 \ucc28\uc774", url: "#1" },
-              {title: "2. \ud589\ub82c \uc5f0\uc0b0\uc758 \ucc28\uc774", url: "#2" },
-              {title: "3. \ucc28\uc6d0\uc5d0 \ub300\ud55c \uc720\uc5f0\uc131", url: "#3" },
-              {title: "4. \uc5f0\uc0b0 \ucd5c\uc801\ud654", url: "#4" },
-              {title: "5. \ud15c\ud50c\ub9bf \uae30\ubc18\uc758 \uc790\ub8cc\ud615 \uc9c0\uc6d0", url: "#5" },
-              {title: "6. \uba54\ubaa8\ub9ac \uad00\ub9ac \ubc0f \ucd5c\uc801\ud654", url: "#6" },
-              {title: "7. \ub514\ubc84\uae45 \ubc0f \uc624\ub958 \ucc98\ub9ac", url: "#7" },
-              {title: "8. \ud568\uc218 \ubc0f \uc54c\uace0\ub9ac\uc998\uc758 \uc9c0\uc6d0", url: "#8" },
-              {title: "9. \uc131\ub2a5 \ubc0f \ud6a8\uc728\uc131", url: "#9" },
-              {title: "10. \uc0ac\uc6a9 \ud3b8\uc758\uc131 \ubc0f \ucf54\ub4dc \uac00\ub3c5\uc131", url: "#10" },
+          {title: "1. \ubca1\ud130 \ubc0f \ud589\ub82c \uc5f0\uc0b0\uc758 \ucc28\uc774", url: "#_top", children: [
+              {title: "1.1 \ubca1\ud130\uc758 \uc815\uc758\uc640 \ud45c\ud604", url: "#11" },
+              {title: "1.2 \ubca1\ud130 \uc5f0\uc0b0", url: "#12" },
+          ]},
+          {title: "2. \ud589\ub82c \uc5f0\uc0b0\uc758 \ucc28\uc774", url: "#2", children: [
+              {title: "2.1 \ud589\ub82c\uc758 \uc815\uc758\uc640 \ud45c\ud604", url: "#21" },
+              {title: "2.2 \ud589\ub82c \uacf1\uc148", url: "#22" },
+          ]},
+          {title: "3. \ucc28\uc6d0\uc5d0 \ub300\ud55c \uc720\uc5f0\uc131", url: "#3", children: [
+              {title: "3.1 \uace0\uc815 \ud06c\uae30 \ubca1\ud130\uc640 \ud589\ub82c", url: "#31" },
+              {title: "3.2 \ub3d9\uc801 \ud06c\uae30 \ubca1\ud130\uc640 \ud589\ub82c", url: "#32" },
+          ]},
+          {title: "4. \uc5f0\uc0b0 \ucd5c\uc801\ud654", url: "#4", children: [
+              {title: "4.1 \ud45c\ud604\uc2dd \uc9c0\uc5f0 \ud3c9\uac00 (Lazy Evaluation)", url: "#41-lazy-evaluation" },
+              {title: "4.2 \uce90\uc2dc \uce5c\ud654\uc801 \uc124\uacc4", url: "#42" },
+              {title: "4.3 \uba40\ud2f0\uc2a4\ub808\ub529 \ubc0f \ubcd1\ub82c\ud654", url: "#43" },
+          ]},
+          {title: "5. \ud15c\ud50c\ub9bf \uae30\ubc18\uc758 \uc790\ub8cc\ud615 \uc9c0\uc6d0", url: "#5", children: [
+              {title: "5.1 \ud15c\ud50c\ub9bf\uc744 \uc0ac\uc6a9\ud55c \uc790\ub8cc\ud615 \uc9c0\uc815", url: "#51" },
+              {title: "5.2 \ud2b9\uc218\ud55c \uc790\ub8cc\ud615 \uc9c0\uc6d0", url: "#52" },
+              {title: "5.3 \uc815\ubc00\ub3c4\uc640 \uc790\ub8cc\ud615\uc758 \ucc28\uc774", url: "#53" },
+          ]},
+          {title: "6. \uba54\ubaa8\ub9ac \uad00\ub9ac \ubc0f \ucd5c\uc801\ud654", url: "#6", children: [
+              {title: "6.1 \uba54\ubaa8\ub9ac \uc815\ub82c\uacfc SIMD \ucd5c\uc801\ud654", url: "#61-simd" },
+              {title: "6.2 \ub3d9\uc801 \uba54\ubaa8\ub9ac \ud560\ub2f9", url: "#62" },
+          ]},
+          {title: "7. \ub514\ubc84\uae45 \ubc0f \uc624\ub958 \ucc98\ub9ac", url: "#7", children: [
+              {title: "7.1 \ub514\ubc84\uae45 \ub3c4\uad6c", url: "#71" },
+          ]},
+          {title: "8. \ud568\uc218 \ubc0f \uc54c\uace0\ub9ac\uc998\uc758 \uc9c0\uc6d0", url: "#8", children: [
+              {title: "8.1 \uc120\ud615\ub300\uc218 \ud568\uc218 \uc9c0\uc6d0", url: "#81" },
+              {title: "8.2 \uc218\uce58 \ud574\uc11d \uc54c\uace0\ub9ac\uc998", url: "#82" },
+              {title: "8.3 \ud2b9\ud654\ub41c \uc218\ud559 \ud568\uc218", url: "#83" },
+          ]},
+          {title: "9. \uc131\ub2a5 \ubc0f \ud6a8\uc728\uc131", url: "#9", children: [
+              {title: "9.1 \uc5f0\uc0b0 \uc131\ub2a5", url: "#91" },
+              {title: "9.2 \uba54\ubaa8\ub9ac \uc0ac\uc6a9 \ucd5c\uc801\ud654", url: "#92" },
+          ]},
+          {title: "10. \uc0ac\uc6a9 \ud3b8\uc758\uc131 \ubc0f \ucf54\ub4dc \uac00\ub3c5\uc131", url: "#10", children: [
+              {title: "10.1 \uc9c1\uad00\uc801\uc778 \uc218\ud559\uc801 \ud45c\ud604", url: "#101" },
+              {title: "10.2 \ucf54\ub4dc\uc758 \uac04\uacb0\uc131", url: "#102" },
           ]},
         ];
 
@@ -66,9 +96,35 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
     
 
     
+    
+      
+    
 
-    <h1 id="eigen-c">Eigen과 C++ 표준 라이브러리의 비교</h1>
-<h3 id="1">1. 벡터 및 행렬 연산의 차이</h3>
+  <div class="row wm-article-nav-buttons" role="navigation" aria-label="navigation">
+    
+    <div class="wm-article-nav pull-right">
+      <a href="../0105/" class="btn btn-xs btn-default pull-right">
+        Next
+        <i class="fa fa-chevron-right" aria-hidden="true"></i>
+      </a>
+      <a href="../0105/" class="btn btn-xs btn-link">
+        코드 최적화와 성능 고려 사항
+      </a>
+    </div>
+    
+    <div class="wm-article-nav">
+      <a href="../0103/" class="btn btn-xs btn-default pull-left">
+        <i class="fa fa-chevron-left" aria-hidden="true"></i>
+        Previous</a><a href="../0103/" class="btn btn-xs btn-link">
+        설치 및 환경 설정
+      </a>
+    </div>
+    
+  </div>
+
+    
+
+    <h3 id="1">1. 벡터 및 행렬 연산의 차이</h3>
 <p>Eigen 라이브러리와 C++ 표준 라이브러리(STL) 간의 가장 두드러진 차이는 벡터와 행렬 연산을 처리하는 방식에서 나타난다. Eigen은 벡터와 행렬을 수학적으로 다루는 데 최적화된 라이브러리로, 다양한 차원의 벡터 및 행렬을 처리할 수 있는 도구를 제공한다. 반면, C++ 표준 라이브러리(STL)은 일반적인 데이터 컨테이너인 <code>std::vector</code>와 같은 클래스들을 제공하며, 이를 사용하여 벡터를 구현할 수 있지만 수학적 연산은 직접 지원하지 않는다. </p>
 <h4 id="11">1.1 벡터의 정의와 표현</h4>
 <p>Eigen에서의 벡터는 수학적으로 정의된 그대로 사용된다. 예를 들어, 3차원 벡터는 다음과 같이 표현할 수 있다:</p>
@@ -248,7 +304,7 @@ complexMatrix(1, 1) = std::complex&lt;double&gt;(3.0, 4.0);  // (3 + 4i)
 };
 </code></pre>
 <h4 id="52">5.2 특수한 자료형 지원</h4>
-<p>Eigen은 여러 가지 특수한 자료형을 지원하는데, 이는 특히 물리학, 공학, 금융 등의 분야에서 중요한 역할을 한다. 예를 들어, Eigen은 <strong>고정소수점(fixed-point)</strong> 자료형, <strong>복소수형</strong>, <strong>변환 행렬</strong>, <strong>자코비안 행렬</strong> 등을 위한 특화된 자료형과 연산을 제공한다.</p>
+<p>Eigen은 여러 가지 특수한 자료형을 지원하는데, 이는 특히 물리학, 공학, 금융 등의 분야에서 중요한 역할을 한다. 예를 들어, Eigen은 <strong>고정소수점(fixed-point)</strong> 자료형, <strong>복소수형</strong>, <strong>변환 행렬</strong>, <strong>야코비 행렬</strong> 등을 위한 특화된 자료형과 연산을 제공한다.</p>
 <ul>
 <li><strong>고정소수점 자료형</strong>: 고정된 소수 자릿수를 가지는 수를 표현할 수 있어 임베디드 시스템에서 널리 사용된다.</li>
 <li><strong>복소수 자료형</strong>: <code>std::complex</code>를 사용하여 복소수 연산을 지원하며, 복소수 벡터 및 행렬 연산도 직관적으로 처리할 수 있다.</li>
@@ -401,6 +457,33 @@ Eigen::MatrixXd B = A.inverse() * A.transpose();
 
   <br>
     
+
+    
+    
+      
+    
+
+  <div class="row wm-article-nav-buttons" role="navigation" aria-label="navigation">
+    
+    <div class="wm-article-nav pull-right">
+      <a href="../0105/" class="btn btn-xs btn-default pull-right">
+        Next
+        <i class="fa fa-chevron-right" aria-hidden="true"></i>
+      </a>
+      <a href="../0105/" class="btn btn-xs btn-link">
+        코드 최적화와 성능 고려 사항
+      </a>
+    </div>
+    
+    <div class="wm-article-nav">
+      <a href="../0103/" class="btn btn-xs btn-default pull-left">
+        <i class="fa fa-chevron-left" aria-hidden="true"></i>
+        Previous</a><a href="../0103/" class="btn btn-xs btn-link">
+        설치 및 환경 설정
+      </a>
+    </div>
+    
+  </div>
 
     <br>
 </div>
