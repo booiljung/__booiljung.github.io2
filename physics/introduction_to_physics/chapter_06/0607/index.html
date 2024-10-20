@@ -33,17 +33,40 @@
       var is_top_frame = false;
         
         var pageToc = [
-          {title: "\ube5b\uc758 \uc774\uc911\uc131", url: "#_top", children: [
-              {title: "1. \ube5b\uc758 \ud30c\ub3d9\uc801 \uc131\uc9c8", url: "#1" },
-              {title: "2. \ube5b\uc758 \uc785\uc790\uc801 \uc131\uc9c8", url: "#2" },
-              {title: "3. \ub4dc\ube0c\ub85c\uc774\uc758 \ubb3c\uc9c8\ud30c \uc774\ub860", url: "#3" },
-              {title: "4. \ud30c\ub3d9\ud568\uc218\uc640 \uc591\uc790\uc5ed\ud559\uc758 \ub3c4\uc785", url: "#4" },
-              {title: "5. \ucf54\ud39c\ud558\uac90 \ud574\uc11d", url: "#5" },
-              {title: "6. \uc774\uc911\uc131\uc5d0 \ub300\ud55c \uc2e4\ud5d8\uc801 \uc99d\uba85", url: "#6" },
-              {title: "7. \uc591\uc790\uc7a5 \uc774\ub860\uc5d0\uc11c\uc758 \ube5b\uc758 \uc774\uc911\uc131", url: "#7" },
-              {title: "8. \ud30c\ub3d9-\uc785\uc790 \uc774\uc911\uc131\uc758 \ucca0\ud559\uc801 \ub17c\uc758", url: "#8-" },
-              {title: "9. \uc591\uc790\uc5ed\ud559\uc801 \uc774\uc911\uc131\uc758 \uc751\uc6a9", url: "#9" },
-              {title: "10. \uc0c8\ub85c\uc6b4 \uc774\ub860\uc801 \ubc1c\uc804", url: "#10" },
+          {title: "1. \ube5b\uc758 \ud30c\ub3d9\uc801 \uc131\uc9c8", url: "#_top", children: [
+              {title: "\uac04\uc12d\uacfc \ud68c\uc808 \ud604\uc0c1", url: "#_1" },
+          ]},
+          {title: "2. \ube5b\uc758 \uc785\uc790\uc801 \uc131\uc9c8", url: "#2", children: [
+          ]},
+          {title: "3. \ub4dc\ube0c\ub85c\uc774\uc758 \ubb3c\uc9c8\ud30c \uc774\ub860", url: "#3", children: [
+              {title: "\uc804\uc790 \ud68c\uc808 \uc2e4\ud5d8", url: "#_2" },
+          ]},
+          {title: "4. \ud30c\ub3d9\ud568\uc218\uc640 \uc591\uc790\uc5ed\ud559\uc758 \ub3c4\uc785", url: "#4", children: [
+          ]},
+          {title: "5. \ucf54\ud39c\ud558\uac90 \ud574\uc11d", url: "#5", children: [
+              {title: "5.1 \uc0c1\ubcf4\uc131 \uc6d0\ub9ac", url: "#51" },
+              {title: "5.2 \uce21\uc815 \ubb38\uc81c", url: "#52" },
+              {title: "5.3 \ubd88\ud655\uc815\uc131 \uc6d0\ub9ac", url: "#53" },
+          ]},
+          {title: "6. \uc774\uc911\uc131\uc5d0 \ub300\ud55c \uc2e4\ud5d8\uc801 \uc99d\uba85", url: "#6", children: [
+              {title: "6.1 \uc601\uc758 \uc774\uc911 \uc2ac\ub9bf \uc2e4\ud5d8 (\ud30c\ub3d9\uc801 \uc131\uc9c8)", url: "#61" },
+              {title: "6.2 \uad11\uc804 \ud6a8\uacfc \uc2e4\ud5d8 (\uc785\uc790\uc801 \uc131\uc9c8)", url: "#62" },
+              {title: "6.3 \ud604\ub300\uc758 \uc774\uc911 \uc2ac\ub9bf \uc2e4\ud5d8 (\ub2e8\uc77c \uad11\uc790 \uc218\uc900\uc5d0\uc11c)", url: "#63" },
+          ]},
+          {title: "7. \uc591\uc790\uc7a5 \uc774\ub860\uc5d0\uc11c\uc758 \ube5b\uc758 \uc774\uc911\uc131", url: "#7", children: [
+          ]},
+          {title: "8. \ud30c\ub3d9-\uc785\uc790 \uc774\uc911\uc131\uc758 \ucca0\ud559\uc801 \ub17c\uc758", url: "#8-", children: [
+              {title: "8.1 \uacb0\uc815\ub860\uacfc \ud655\ub960\ub860\uc758 \ub300\ub9bd", url: "#81" },
+              {title: "8.2 \uc2e4\uc7ac\ub860\uacfc \ub3c4\uad6c\uc8fc\uc758", url: "#82" },
+          ]},
+          {title: "9. \uc591\uc790\uc5ed\ud559\uc801 \uc774\uc911\uc131\uc758 \uc751\uc6a9", url: "#9", children: [
+              {title: "9.1 \uc591\uc790 \ucef4\ud4e8\ud130", url: "#91" },
+              {title: "9.2 \uc591\uc790 \uc554\ud638\ud654", url: "#92" },
+              {title: "9.3 \ub808\uc774\uc800\uc640 \uad11\ud559 \uae30\uc220", url: "#93" },
+          ]},
+          {title: "10. \uc0c8\ub85c\uc6b4 \uc774\ub860\uc801 \ubc1c\uc804", url: "#10", children: [
+              {title: "10.1 \uc591\uc790 \uc911\ub825", url: "#101" },
+              {title: "10.2 \ub048 \uc774\ub860", url: "#102" },
           ]},
         ];
 
@@ -66,9 +89,35 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
     
 
     
+    
+      
+    
 
-    <h1 id="_1">빛의 이중성</h1>
-<p>빛의 이중성은 물리학에서 매우 중요한 개념으로, 빛이 파동이면서 입자의 성질을 모두 가진다는 사실을 나타낸다. 이 개념은 20세기 초반, 특히 양자 역학의 발전과 함께 주요한 논의 주제가 되었다. 본 장에서는 빛이 갖는 이중적 성질을 설명하고, 이를 통해 빛의 파동적 및 입자적 특성이 어떻게 나타나는지 분석한다.</p>
+  <div class="row wm-article-nav-buttons" role="navigation" aria-label="navigation">
+    
+    <div class="wm-article-nav pull-right">
+      <a href="../0608/" class="btn btn-xs btn-default pull-right">
+        Next
+        <i class="fa fa-chevron-right" aria-hidden="true"></i>
+      </a>
+      <a href="../0608/" class="btn btn-xs btn-link">
+        편광
+      </a>
+    </div>
+    
+    <div class="wm-article-nav">
+      <a href="../0606/" class="btn btn-xs btn-default pull-left">
+        <i class="fa fa-chevron-left" aria-hidden="true"></i>
+        Previous</a><a href="../0606/" class="btn btn-xs btn-link">
+        전자기파
+      </a>
+    </div>
+    
+  </div>
+
+    
+
+    <p>빛의 이중성은 물리학에서 매우 중요한 개념으로, 빛이 파동이면서 입자의 성질을 모두 가진다는 사실을 나타낸다. 이 개념은 20세기 초반, 특히 양자 역학의 발전과 함께 주요한 논의 주제가 되었다. 본 장에서는 빛이 갖는 이중적 성질을 설명하고, 이를 통해 빛의 파동적 및 입자적 특성이 어떻게 나타나는지 분석한다.</p>
 <h3 id="1">1. 빛의 파동적 성질</h3>
 <p>빛의 파동적 성질은 주로 19세기 중반부터 맥스웰의 전자기 이론을 통해 입증되었다. 빛은 전자기파의 한 형태로, 진동하는 전기장과 자기장이 공간을 통해 퍼져 나가는 방식으로 설명된다. 맥스웰 방정식에 따르면, 전자기파의 속도는 진공에서 다음과 같이 주어진다:</p>
 <div class="arithmatex">
@@ -84,7 +133,7 @@ c = \frac{1}{\sqrt{\mu_0 \epsilon_0}}
 - <span class="arithmatex"><span class="MathJax_Preview">\mu_0</span><script type="math/tex">\mu_0</script></span>는 진공의 투자율 (약 <span class="arithmatex"><span class="MathJax_Preview">4\pi \times 10^{-7} \, \text{N/A}^2</span><script type="math/tex">4\pi \times 10^{-7} \, \text{N/A}^2</script></span>),
 - <span class="arithmatex"><span class="MathJax_Preview">\epsilon_0</span><script type="math/tex">\epsilon_0</script></span>는 진공의 유전율 (약 <span class="arithmatex"><span class="MathJax_Preview">8.854 \times 10^{-12} \, \text{F/m}</span><script type="math/tex">8.854 \times 10^{-12} \, \text{F/m}</script></span>)이다.</p>
 <p>이 방정식은 빛의 속도가 전자기장과 자기장의 특성에 의존함을 보여주며, 빛이 전자기파라는 파동적 성질을 강조한다.</p>
-<h4 id="_2">간섭과 회절 현상</h4>
+<h4 id="_1">간섭과 회절 현상</h4>
 <p>빛의 파동적 성질은 간섭과 회절 현상을 통해 더욱 명확하게 드러난다. 간섭은 두 개 이상의 빛이 겹쳐질 때 서로 상쇄하거나 강화되는 현상이며, 회절은 빛이 장애물을 만나거나 좁은 틈을 지날 때 방향이 꺾이는 현상이다.</p>
 <p>간섭의 대표적인 예는 영(Young)의 이중 슬릿 실험이다. 이 실험에서 두 개의 슬릿을 통과한 빛은 스크린에 간섭 무늬를 형성하며, 이는 빛이 파동임을 나타낸다. 두 슬릿 사이의 거리가 <span class="arithmatex"><span class="MathJax_Preview">d</span><script type="math/tex">d</script></span>, 스크린까지의 거리가 <span class="arithmatex"><span class="MathJax_Preview">L</span><script type="math/tex">L</script></span>, 빛의 파장이 <span class="arithmatex"><span class="MathJax_Preview">\lambda</span><script type="math/tex">\lambda</script></span>일 때, 스크린 상의 간섭 무늬는 다음과 같은 식으로 나타낼 수 있다:</p>
 <div class="arithmatex">
@@ -143,7 +192,7 @@ K_{\text{max}} = h\nu - \phi
 - <span class="arithmatex"><span class="MathJax_Preview">h</span><script type="math/tex">h</script></span>는 플랑크 상수 (<span class="arithmatex"><span class="MathJax_Preview">6.626 \times 10^{-34} \, \text{J·s}</span><script type="math/tex">6.626 \times 10^{-34} \, \text{J·s}</script></span>),
 - <span class="arithmatex"><span class="MathJax_Preview">p</span><script type="math/tex">p</script></span>는 입자의 운동량 (<span class="arithmatex"><span class="MathJax_Preview">p = mv</span><script type="math/tex">p = mv</script></span>)이다.</p>
 <p>이 이론은 전자와 같은 작은 입자들이 파동적 성질을 가질 수 있음을 나타낸다. 이 파동적 성질은 이후 전자 회절 실험을 통해 확인되었다. 전자 빔을 결정에 통과시킬 때 전자가 마치 빛과 같은 간섭 패턴을 보이는 현상은, 전자가 입자임과 동시에 파동의 성질을 가진다는 것을 입증하는 중요한 실험이었다.</p>
-<h4 id="_3">전자 회절 실험</h4>
+<h4 id="_2">전자 회절 실험</h4>
 <p>전자 회절 실험은 드브로이 이론을 실험적으로 검증한 중요한 연구이다. 이 실험에서, 전자들이 좁은 간격의 결정 구조를 통과할 때 마치 파동처럼 간섭과 회절 현상을 나타낸다. 실험적으로 전자와 같은 입자가 파동적 성질을 가지며, 그 파장은 드브로이 식에 의해 정확하게 예측될 수 있다는 사실이 증명되었다.</p>
 <p>전자 회절 실험에서 관찰된 간섭 패턴은 빛의 간섭 패턴과 유사하다. 이러한 결과는 전자뿐만 아니라 모든 물질이 파동적 성질을 가질 수 있다는 드브로이의 가설을 뒷받침한다.</p>
 <h3 id="4">4. 파동함수와 양자역학의 도입</h3>
@@ -221,6 +270,33 @@ i \hbar \frac{\partial}{\partial t} \psi(\mathbf{r}, t) = \hat{H} \psi(\mathbf{r
 
   <br>
     
+
+    
+    
+      
+    
+
+  <div class="row wm-article-nav-buttons" role="navigation" aria-label="navigation">
+    
+    <div class="wm-article-nav pull-right">
+      <a href="../0608/" class="btn btn-xs btn-default pull-right">
+        Next
+        <i class="fa fa-chevron-right" aria-hidden="true"></i>
+      </a>
+      <a href="../0608/" class="btn btn-xs btn-link">
+        편광
+      </a>
+    </div>
+    
+    <div class="wm-article-nav">
+      <a href="../0606/" class="btn btn-xs btn-default pull-left">
+        <i class="fa fa-chevron-left" aria-hidden="true"></i>
+        Previous</a><a href="../0606/" class="btn btn-xs btn-link">
+        전자기파
+      </a>
+    </div>
+    
+  </div>
 
     <br>
 </div>
