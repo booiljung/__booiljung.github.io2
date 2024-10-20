@@ -67,6 +67,12 @@ body {
     letter-spacing: 0.00em; /* 자간 */
 }
 
+li {
+    margin-left: 0px;
+    text-indent: 0px;
+    padding-left: 0px;
+}
+
 @page {
     margin-top: 5cm; /* 위 여백 */
     margin-bottom: 5cm; /* 아래 여백 */
