@@ -33,19 +33,50 @@
       var is_top_frame = false;
         
         var pageToc = [
-          {title: "\ud50c\ub77c\uc988\ub9c8\uc758 \uc9d1\ud569 \ub3d9\uc791\uacfc \ud30c\ub3d9", url: "#_top", children: [
-              {title: "\ud50c\ub77c\uc988\ub9c8 \ud30c\ub3d9\uc758 \uae30\ucd08 \uac1c\ub150", url: "#_2" },
-              {title: "\ud50c\ub77c\uc988\ub9c8\uc758 \uae30\ubcf8 \ubc29\uc815\uc2dd", url: "#_3" },
-              {title: "\ud50c\ub77c\uc988\ub9c8\uc758 \ud30c\ub3d9 \ubaa8\ub4dc", url: "#_4" },
-              {title: "\ud50c\ub77c\uc988\ub9c8 \ud30c\ub3d9\uc758 \uc218\ud559\uc801 \ubaa8\ub378\ub9c1", url: "#_5" },
-              {title: "\ube44\uc120\ud615 \ud6a8\uacfc\uc640 \uc194\ub9ac\ud1a4 (Nonlinear Effects and Solitons)", url: "#nonlinear-effects-and-solitons" },
-              {title: "\uc804\uc790\uae30 \ubaa8\ub4dc\uc640 \uc790\uae30 \uc720\uccb4 \ud30c\ub3d9 (Electromagnetic Modes and Magnetohydrodynamic Waves)", url: "#electromagnetic-modes-and-magnetohydrodynamic-waves" },
-              {title: "\ud50c\ub77c\uc988\ub9c8\uc758 \uc8fc\uc694 \ud30c\ub3d9 \uc720\ud615", url: "#_8" },
-              {title: "\uc800\uc8fc\ud30c \ud50c\ub77c\uc988\ub9c8 \ud30c\ub3d9 (Low-Frequency Plasma Waves)", url: "#low-frequency-plasma-waves" },
-              {title: "\ud50c\ub77c\uc988\ub9c8 \ub0b4 \uc790\uae30 \uc7ac\uacb0\ud569 (Magnetic Reconnection in Plasma)", url: "#magnetic-reconnection-in-plasma" },
-              {title: "\ud50c\ub77c\uc988\ub9c8 \ud30c\ub3d9\uc758 \ubd84\uc0b0 \uad00\uacc4 (Dispersion Relation of Plasma Waves)", url: "#dispersion-relation-of-plasma-waves" },
-              {title: "\ud50c\ub77c\uc988\ub9c8\uc758 \uc804\ud30c \uc800\uc9c0 \ubc0f \uac10\uc1e0 (Wave Cutoff and Damping in Plasma)", url: "#wave-cutoff-and-damping-in-plasma" },
-              {title: "\ud50c\ub77c\uc988\ub9c8\uc758 \ube44\uc120\ud615 \ud30c\ub3d9 \ub3d9\uc5ed\ud559 (Nonlinear Wave Dynamics in Plasma)", url: "#nonlinear-wave-dynamics-in-plasma" },
+          {title: "\ud50c\ub77c\uc988\ub9c8 \ud30c\ub3d9\uc758 \uae30\ucd08 \uac1c\ub150", url: "#_top", children: [
+          ]},
+          {title: "\ud50c\ub77c\uc988\ub9c8\uc758 \uae30\ubcf8 \ubc29\uc815\uc2dd", url: "#_2", children: [
+              {title: "\uc5f0\uc18d \ubc29\uc815\uc2dd (Continuity Equation)", url: "#continuity-equation" },
+              {title: "\uc6b4\ub3d9 \ubc29\uc815\uc2dd (Momentum Equation)", url: "#momentum-equation" },
+              {title: "\ub9e5\uc2a4\uc6f0 \ubc29\uc815\uc2dd (Maxwell\u0027s Equations)", url: "#maxwells-equations" },
+          ]},
+          {title: "\ud50c\ub77c\uc988\ub9c8\uc758 \ud30c\ub3d9 \ubaa8\ub4dc", url: "#_3", children: [
+              {title: "\uc804\uc790\uae30 \ud30c\ub3d9 (Electromagnetic Waves)", url: "#electromagnetic-waves" },
+              {title: "\uc804\uc790 \uc74c\ud30c (Electron Acoustic Waves)", url: "#electron-acoustic-waves" },
+              {title: "\uc774\uc628 \uc74c\ud30c (Ion Acoustic Waves)", url: "#ion-acoustic-waves" },
+          ]},
+          {title: "\ud50c\ub77c\uc988\ub9c8 \ud30c\ub3d9\uc758 \uc218\ud559\uc801 \ubaa8\ub378\ub9c1", url: "#_4", children: [
+              {title: "\uc804\uc790\uae30\ud30c\uc758 \uc804\ud30c (Propagation of Electromagnetic Waves)", url: "#propagation-of-electromagnetic-waves" },
+              {title: "\uc804\uc790 \uc74c\ud30c\uc758 \uc218\ud559\uc801 \ud45c\ud604", url: "#_5" },
+              {title: "\uc774\uc628 \uc74c\ud30c\uc758 \uc218\ud559\uc801 \ud45c\ud604", url: "#_6" },
+          ]},
+          {title: "\ube44\uc120\ud615 \ud6a8\uacfc\uc640 \uc194\ub9ac\ud1a4 (Nonlinear Effects and Solitons)", url: "#nonlinear-effects-and-solitons", children: [
+          ]},
+          {title: "\uc804\uc790\uae30 \ubaa8\ub4dc\uc640 \uc790\uae30 \uc720\uccb4 \ud30c\ub3d9 (Electromagnetic Modes and Magnetohydrodynamic Waves)", url: "#electromagnetic-modes-and-magnetohydrodynamic-waves", children: [
+              {title: "\uc790\uae30 \uc720\uccb4 \ud30c\ub3d9 \ubc29\uc815\uc2dd (Magnetohydrodynamic Wave Equation)", url: "#magnetohydrodynamic-wave-equation" },
+          ]},
+          {title: "\ud50c\ub77c\uc988\ub9c8\uc758 \uc8fc\uc694 \ud30c\ub3d9 \uc720\ud615", url: "#_7", children: [
+              {title: "\ub7ad\ubba4\uc5b4 \ud30c\ub3d9 (Langmuir Waves)", url: "#langmuir-waves" },
+              {title: "\uc0ac\uc774\ud074\ub85c\ud2b8\ub860 \ud30c\ub3d9 (Cyclotron Waves)", url: "#cyclotron-waves" },
+              {title: "\uc774\uc628 \uc0ac\uc774\ud074\ub85c\ud2b8\ub860 \ud30c\ub3d9 (Ion Cyclotron Waves)", url: "#ion-cyclotron-waves" },
+          ]},
+          {title: "\uc800\uc8fc\ud30c \ud50c\ub77c\uc988\ub9c8 \ud30c\ub3d9 (Low-Frequency Plasma Waves)", url: "#low-frequency-plasma-waves", children: [
+              {title: "\uc54c\ud398\uc778 \ud30c\ub3d9 (Alfv\u00e9n Waves)", url: "#alfven-waves" },
+          ]},
+          {title: "\ud50c\ub77c\uc988\ub9c8 \ub0b4 \uc790\uae30 \uc7ac\uacb0\ud569 (Magnetic Reconnection in Plasma)", url: "#magnetic-reconnection-in-plasma", children: [
+              {title: "\uc790\uae30 \uc7ac\uacb0\ud569\uc758 \uae30\ubcf8 \uc6d0\ub9ac", url: "#_12" },
+          ]},
+          {title: "\ud50c\ub77c\uc988\ub9c8 \ud30c\ub3d9\uc758 \ubd84\uc0b0 \uad00\uacc4 (Dispersion Relation of Plasma Waves)", url: "#dispersion-relation-of-plasma-waves", children: [
+              {title: "\ub7ad\ubba4\uc5b4 \ud30c\ub3d9\uc758 \ubd84\uc0b0 \uad00\uacc4", url: "#_13" },
+              {title: "\uc774\uc628 \uc74c\ud30c\uc758 \ubd84\uc0b0 \uad00\uacc4", url: "#_14" },
+          ]},
+          {title: "\ud50c\ub77c\uc988\ub9c8\uc758 \uc804\ud30c \uc800\uc9c0 \ubc0f \uac10\uc1e0 (Wave Cutoff and Damping in Plasma)", url: "#wave-cutoff-and-damping-in-plasma", children: [
+              {title: "\ud30c\ub3d9 \uc804\ud30c\uc758 \uc800\uc9c0 \uc870\uac74 (Wave Cutoff Conditions)", url: "#wave-cutoff-conditions" },
+              {title: "\ub79c\ub2e4\uc6b0 \uac10\uc1e0 (Landau Damping)", url: "#landau-damping" },
+          ]},
+          {title: "\ud50c\ub77c\uc988\ub9c8\uc758 \ube44\uc120\ud615 \ud30c\ub3d9 \ub3d9\uc5ed\ud559 (Nonlinear Wave Dynamics in Plasma)", url: "#nonlinear-wave-dynamics-in-plasma", children: [
+              {title: "\ud30c\ub3d9 \uac04\uc758 \uc0c1\ud638\uc791\uc6a9 (Wave-Wave Interactions)", url: "#wave-wave-interactions" },
+              {title: "\ud50c\ub77c\uc988\ub9c8 \uc194\ub9ac\ud1a4 (Plasma Solitons)", url: "#plasma-solitons" },
           ]},
         ];
 
@@ -68,13 +99,39 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
     
 
     
+    
+      
+    
 
-    <h1 id="_1">플라즈마의 집합 동작과 파동</h1>
-<p>플라즈마는 입자들이 개별적으로 움직이는 동시에 집합적으로도 행동하는 복잡한 시스템이다. 이러한 집합 동작은 플라즈마 내의 전하를 띤 입자들 사이의 상호작용, 전자기장과의 상호작용, 그리고 플라즈마의 밀도와 온도 같은 물리적 특성에 의해 결정된다. 이 과정에서 나타나는 중요한 현상 중 하나는 플라즈마 파동이다. 플라즈마 파동은 플라즈마의 집합 동작을 설명하는 데 핵심적인 역할을 하며, 다양한 물리적 효과를 분석할 수 있는 중요한 수단이 된다.</p>
-<h3 id="_2">플라즈마 파동의 기초 개념</h3>
+  <div class="row wm-article-nav-buttons" role="navigation" aria-label="navigation">
+    
+    <div class="wm-article-nav pull-right">
+      <a href="../1603/" class="btn btn-xs btn-default pull-right">
+        Next
+        <i class="fa fa-chevron-right" aria-hidden="true"></i>
+      </a>
+      <a href="../1603/" class="btn btn-xs btn-link">
+        플라즈마에서의 자기장과 전류
+      </a>
+    </div>
+    
+    <div class="wm-article-nav">
+      <a href="../1601/" class="btn btn-xs btn-default pull-left">
+        <i class="fa fa-chevron-left" aria-hidden="true"></i>
+        Previous</a><a href="../1601/" class="btn btn-xs btn-link">
+        플라즈마의 정의와 특성
+      </a>
+    </div>
+    
+  </div>
+
+    
+
+    <p>플라즈마는 입자들이 개별적으로 움직이는 동시에 집합적으로도 행동하는 복잡한 시스템이다. 이러한 집합 동작은 플라즈마 내의 전하를 띤 입자들 사이의 상호작용, 전자기장과의 상호작용, 그리고 플라즈마의 밀도와 온도 같은 물리적 특성에 의해 결정된다. 이 과정에서 나타나는 중요한 현상 중 하나는 플라즈마 파동이다. 플라즈마 파동은 플라즈마의 집합 동작을 설명하는 데 핵심적인 역할을 하며, 다양한 물리적 효과를 분석할 수 있는 중요한 수단이 된다.</p>
+<h3 id="_1">플라즈마 파동의 기초 개념</h3>
 <p>플라즈마에서 발생하는 파동은 고전적인 매질에서의 음파와는 차원이 다른 성격을 지닌다. 전하를 띤 입자들이 전자기장과 상호작용함으로써 나타나는 전자기적 특성이 더해져 다양한 종류의 파동이 발생할 수 있다. 이 파동들은 플라즈마의 밀도, 온도, 자기장 강도에 따라 매우 다른 형태로 나타난다.</p>
 <p>기본적으로 플라즈마 파동은 전기장 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{E}</span><script type="math/tex">\mathbf{E}</script></span>, 자기장 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{B}</span><script type="math/tex">\mathbf{B}</script></span>, 전자 밀도 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{n_e}</span><script type="math/tex">\mathbf{n_e}</script></span>, 이온 밀도 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{n_i}</span><script type="math/tex">\mathbf{n_i}</script></span> 등의 변화가 시간 및 공간에 걸쳐 전파되는 현상이다. 이를 이해하기 위해 다음과 같은 플라즈마의 기본 방정식을 살펴볼 필요가 있다.</p>
-<h3 id="_3">플라즈마의 기본 방정식</h3>
+<h3 id="_2">플라즈마의 기본 방정식</h3>
 <p>플라즈마의 집합 동작은 다음과 같은 연속 방정식, 운동 방정식, 맥스웰 방정식에 의해 기술된다.</p>
 <h4 id="continuity-equation">연속 방정식 (Continuity Equation)</h4>
 <div class="arithmatex">
@@ -97,14 +154,24 @@ m \left( \frac{\partial \mathbf{v}}{\partial t} + \mathbf{v} \cdot \nabla \mathb
 </div>
 <p>여기서 <span class="arithmatex"><span class="MathJax_Preview">m</span><script type="math/tex">m</script></span>은 입자의 질량, <span class="arithmatex"><span class="MathJax_Preview">q</span><script type="math/tex">q</script></span>는 입자의 전하, <span class="arithmatex"><span class="MathJax_Preview">\mathbf{E}</span><script type="math/tex">\mathbf{E}</script></span>는 전기장, <span class="arithmatex"><span class="MathJax_Preview">\mathbf{B}</span><script type="math/tex">\mathbf{B}</script></span>는 자기장, <span class="arithmatex"><span class="MathJax_Preview">P</span><script type="math/tex">P</script></span>는 압력을 의미한다. 이 방정식은 전하를 띤 입자가 전자기장 내에서 어떻게 운동하는지를 설명하며, 전기장 및 자기장과의 상호작용을 포함한다.</p>
 <h4 id="maxwells-equations">맥스웰 방정식 (Maxwell's Equations)</h4>
-<p>[
+<div class="arithmatex">
+<div class="MathJax_Preview">
 \nabla \cdot \mathbf{E} = \frac{\rho}{\epsilon_0}, \quad \nabla \cdot \mathbf{B} = 0
-]
-[
+</div>
+<script type="math/tex; mode=display">
+\nabla \cdot \mathbf{E} = \frac{\rho}{\epsilon_0}, \quad \nabla \cdot \mathbf{B} = 0
+</script>
+</div>
+<div class="arithmatex">
+<div class="MathJax_Preview">
 \nabla \times \mathbf{E} = -\frac{\partial \mathbf{B}}{\partial t}, \quad \nabla \times \mathbf{B} = \mu_0 \mathbf{J} + \mu_0 \epsilon_0 \frac{\partial \mathbf{E}}{\partial t}
-]</p>
+</div>
+<script type="math/tex; mode=display">
+\nabla \times \mathbf{E} = -\frac{\partial \mathbf{B}}{\partial t}, \quad \nabla \times \mathbf{B} = \mu_0 \mathbf{J} + \mu_0 \epsilon_0 \frac{\partial \mathbf{E}}{\partial t}
+</script>
+</div>
 <p>여기서 <span class="arithmatex"><span class="MathJax_Preview">\rho</span><script type="math/tex">\rho</script></span>는 전하 밀도, <span class="arithmatex"><span class="MathJax_Preview">\mathbf{J}</span><script type="math/tex">\mathbf{J}</script></span>는 전류 밀도, <span class="arithmatex"><span class="MathJax_Preview">\epsilon_0</span><script type="math/tex">\epsilon_0</script></span>는 진공의 유전율, <span class="arithmatex"><span class="MathJax_Preview">\mu_0</span><script type="math/tex">\mu_0</script></span>는 진공의 투자율을 나타낸다. 맥스웰 방정식은 전기장과 자기장이 어떻게 상호작용하며 공간을 통해 전파되는지를 기술하는 기본 방정식이다.</p>
-<h3 id="_4">플라즈마의 파동 모드</h3>
+<h3 id="_3">플라즈마의 파동 모드</h3>
 <p>플라즈마 내에서 관찰되는 다양한 파동 모드는 일반적으로 다음과 같이 분류할 수 있다.</p>
 <h4 id="electromagnetic-waves">전자기 파동 (Electromagnetic Waves)</h4>
 <p>전자기 파동은 플라즈마 내부를 전파할 수 있으며, 이 경우 맥스웰 방정식의 해로부터 그 성질을 유도할 수 있다. 플라즈마의 밀도와 자기장에 따라 파동의 속도와 감쇠 특성이 변하게 된다. 대표적인 예로는 빛과 같은 전자기파가 있으며, 플라즈마 내에서도 유사한 형태로 전파된다.</p>
@@ -112,7 +179,7 @@ m \left( \frac{\partial \mathbf{v}}{\partial t} + \mathbf{v} \cdot \nabla \mathb
 <p>전자 음파는 전자 밀도의 진동에 의해 발생하는 파동으로, 플라즈마의 전자 밀도가 급격히 변할 때 주로 발생한다. 이러한 파동은 전자의 운동 속도와 플라즈마 주위의 압력 변화와 관련이 있다.</p>
 <h4 id="ion-acoustic-waves">이온 음파 (Ion Acoustic Waves)</h4>
 <p>이온 음파는 이온 밀도와 전자의 압력 변화에 의해 생성되는 저주파 파동으로, 플라즈마의 이온과 전자 사이의 상호작용을 기반으로 한다. 이 파동은 이온의 관성 효과가 중요한 역할을 하며, 플라즈마의 온도와 밀도에 큰 영향을 받는다.</p>
-<h3 id="_5">플라즈마 파동의 수학적 모델링</h3>
+<h3 id="_4">플라즈마 파동의 수학적 모델링</h3>
 <p>플라즈마에서 발생하는 다양한 파동을 이해하기 위해서는 수학적 모델링이 필수적이다. 일반적으로 플라즈마 파동은 전자기장과 입자의 운동 방정식을 결합하여 설명할 수 있다. 플라즈마의 다양한 파동 모드를 해석하기 위해 선형화(linearization) 기법을 사용하여, 복잡한 비선형 방정식을 단순화하는 방법을 자주 사용한다.</p>
 <h4 id="propagation-of-electromagnetic-waves">전자기파의 전파 (Propagation of Electromagnetic Waves)</h4>
 <p>플라즈마 내에서 전자기파가 전파될 때, 전자기장의 성분은 다음의 파동 방정식을 따른다.</p>
@@ -125,7 +192,7 @@ m \left( \frac{\partial \mathbf{v}}{\partial t} + \mathbf{v} \cdot \nabla \mathb
 </script>
 </div>
 <p>여기서 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{E}</span><script type="math/tex">\mathbf{E}</script></span>는 전기장, <span class="arithmatex"><span class="MathJax_Preview">\mu_0</span><script type="math/tex">\mu_0</script></span>는 진공의 투자율, <span class="arithmatex"><span class="MathJax_Preview">\epsilon_0</span><script type="math/tex">\epsilon_0</script></span>는 진공의 유전율, <span class="arithmatex"><span class="MathJax_Preview">\mathbf{J}</span><script type="math/tex">\mathbf{J}</script></span>는 전류 밀도를 나타낸다. 이 방정식은 맥스웰 방정식으로부터 유도되며, 전류 밀도 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{J}</span><script type="math/tex">\mathbf{J}</script></span>가 전하 입자의 집합 운동에 의해 발생하는 경우 플라즈마의 동작을 설명할 수 있다.</p>
-<h4 id="_6">전자 음파의 수학적 표현</h4>
+<h4 id="_5">전자 음파의 수학적 표현</h4>
 <p>전자 음파는 플라즈마 내의 전자의 압축 및 팽창으로 인해 발생하는 파동이다. 전자 음파는 일반적으로 전자의 압축성(compressibility)에 기인하며, 플라즈마 온도가 일정하고 균일할 때 발생한다. 전자 음파의 파동 방정식은 다음과 같이 쓸 수 있다.</p>
 <div class="arithmatex">
 <div class="MathJax_Preview">
@@ -136,7 +203,7 @@ m \left( \frac{\partial \mathbf{v}}{\partial t} + \mathbf{v} \cdot \nabla \mathb
 </script>
 </div>
 <p>여기서 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{n_e}</span><script type="math/tex">\mathbf{n_e}</script></span>는 전자의 밀도 변화를, <span class="arithmatex"><span class="MathJax_Preview">v_e</span><script type="math/tex">v_e</script></span>는 전자 음속을 나타낸다. 이 방정식은 전자 밀도의 시간적 변화가 공간적 변화와 어떻게 연관되는지를 설명한다.</p>
-<h4 id="_7">이온 음파의 수학적 표현</h4>
+<h4 id="_6">이온 음파의 수학적 표현</h4>
 <p>이온 음파는 플라즈마 내에서 이온과 전자 간의 상호작용에 의해 발생하는 파동으로, 이온의 압축성을 고려해야 한다. 이 경우의 파동 방정식은 다음과 같다.</p>
 <div class="arithmatex">
 <div class="MathJax_Preview">
@@ -171,12 +238,12 @@ m \left( \frac{\partial \mathbf{v}}{\partial t} + \mathbf{v} \cdot \nabla \mathb
 </script>
 </div>
 <p>여기서 <span class="arithmatex"><span class="MathJax_Preview">\rho</span><script type="math/tex">\rho</script></span>는 플라즈마 밀도, <span class="arithmatex"><span class="MathJax_Preview">\mathbf{v}</span><script type="math/tex">\mathbf{v}</script></span>는 유체 속도, <span class="arithmatex"><span class="MathJax_Preview">\mathbf{J}</span><script type="math/tex">\mathbf{J}</script></span>는 전류 밀도, <span class="arithmatex"><span class="MathJax_Preview">\mathbf{B}</span><script type="math/tex">\mathbf{B}</script></span>는 자기장을 나타낸다. 이 방정식은 전자기장과의 상호작용을 통해 플라즈마가 어떻게 운동하는지를 설명하며, 특히 자기장과 플라즈마 간의 에너지 교환에 중요한 역할을 한다.</p>
-<h3 id="_8">플라즈마의 주요 파동 유형</h3>
+<h3 id="_7">플라즈마의 주요 파동 유형</h3>
 <p>플라즈마 물리학에서는 다양한 파동이 존재하며, 이들은 플라즈마의 특성, 온도, 밀도, 그리고 외부 자기장에 따라 그 성질이 달라진다. 주요 파동 유형은 다음과 같다.</p>
 <h4 id="langmuir-waves">랭뮤어 파동 (Langmuir Waves)</h4>
 <p>랭뮤어 파동은 고주파 전자 플라즈마 파동으로, 플라즈마에서 전자들의 집합적 동작에 의해 발생한다. 이는 플라즈마 내 전자 밀도가 변할 때 주로 관찰되며, 전자 간의 상호작용에 의해 전자들이 진동하게 된다.</p>
-<h5 id="_9">랭뮤어 파동의 주파수</h5>
-<p>랭뮤어 파동의 고유 주파수는 전자 플라즈마 주파수 <span class="arithmatex"><span class="MathJax_Preview"> \omega_p </span><script type="math/tex"> \omega_p </script></span>로 표현되며, 이는 다음과 같다.</p>
+<h5 id="_8">랭뮤어 파동의 주파수</h5>
+<p>랭뮤어 파동의 고유 주파수는 전자 플라즈마 주파수 <span class="arithmatex"><span class="MathJax_Preview">\omega_p</span><script type="math/tex">\omega_p</script></span>로 표현되며, 이는 다음과 같다.</p>
 <div class="arithmatex">
 <div class="MathJax_Preview">
 \omega_p = \sqrt{\frac{n_e e^2}{\epsilon_0 m_e}}
@@ -185,11 +252,11 @@ m \left( \frac{\partial \mathbf{v}}{\partial t} + \mathbf{v} \cdot \nabla \mathb
 \omega_p = \sqrt{\frac{n_e e^2}{\epsilon_0 m_e}}
 </script>
 </div>
-<p>여기서 <span class="arithmatex"><span class="MathJax_Preview"> n_e </span><script type="math/tex"> n_e </script></span>는 전자 밀도, <span class="arithmatex"><span class="MathJax_Preview"> e </span><script type="math/tex"> e </script></span>는 전자의 전하, <span class="arithmatex"><span class="MathJax_Preview"> \epsilon_0 </span><script type="math/tex"> \epsilon_0 </script></span>는 진공의 유전율, <span class="arithmatex"><span class="MathJax_Preview"> m_e </span><script type="math/tex"> m_e </script></span>는 전자의 질량을 의미한다. 이 주파수는 플라즈마 내 전자들의 고유 진동 주파수를 나타내며, 전자들이 서로 밀고 당기면서 발생하는 진동 현상을 설명한다.</p>
+<p>여기서 <span class="arithmatex"><span class="MathJax_Preview">n_e</span><script type="math/tex">n_e</script></span>는 전자 밀도, <span class="arithmatex"><span class="MathJax_Preview">e</span><script type="math/tex">e</script></span>는 전자의 전하, <span class="arithmatex"><span class="MathJax_Preview">\epsilon_0</span><script type="math/tex">\epsilon_0</script></span>는 진공의 유전율, <span class="arithmatex"><span class="MathJax_Preview">m_e</span><script type="math/tex">m_e</script></span>는 전자의 질량을 의미한다. 이 주파수는 플라즈마 내 전자들의 고유 진동 주파수를 나타내며, 전자들이 서로 밀고 당기면서 발생하는 진동 현상을 설명한다.</p>
 <h4 id="cyclotron-waves">사이클로트론 파동 (Cyclotron Waves)</h4>
 <p>사이클로트론 파동은 플라즈마에서 외부 자기장이 존재할 때 전자와 이온이 회전 운동을 하면서 발생하는 파동이다. 자기장에 의해 전자와 이온은 나선형 경로를 따라 운동하게 되며, 이때 나타나는 진동을 사이클로트론 진동이라 한다. 이러한 파동은 자기장에서의 입자 운동을 연구하는 데 중요한 역할을 한다.</p>
-<h5 id="_10">전자 사이클로트론 주파수</h5>
-<p>사이클로트론 진동에서 전자의 진동 주파수는 전자 사이클로트론 주파수 <span class="arithmatex"><span class="MathJax_Preview"> \omega_{ce} </span><script type="math/tex"> \omega_{ce} </script></span>로 정의된다.</p>
+<h5 id="_9">전자 사이클로트론 주파수</h5>
+<p>사이클로트론 진동에서 전자의 진동 주파수는 전자 사이클로트론 주파수 <span class="arithmatex"><span class="MathJax_Preview">\omega_{ce}</span><script type="math/tex">\omega_{ce}</script></span>로 정의된다.</p>
 <div class="arithmatex">
 <div class="MathJax_Preview">
 \omega_{ce} = \frac{e B}{m_e}
@@ -198,11 +265,11 @@ m \left( \frac{\partial \mathbf{v}}{\partial t} + \mathbf{v} \cdot \nabla \mathb
 \omega_{ce} = \frac{e B}{m_e}
 </script>
 </div>
-<p>여기서 <span class="arithmatex"><span class="MathJax_Preview"> B </span><script type="math/tex"> B </script></span>는 자기장의 세기를 나타낸다. 이 주파수는 자기장의 강도에 비례하여 변하며, 자기장 강도가 강할수록 진동 주파수도 높아진다.</p>
+<p>여기서 <span class="arithmatex"><span class="MathJax_Preview">B</span><script type="math/tex">B</script></span>는 자기장의 세기를 나타낸다. 이 주파수는 자기장의 강도에 비례하여 변하며, 자기장 강도가 강할수록 진동 주파수도 높아진다.</p>
 <h4 id="ion-cyclotron-waves">이온 사이클로트론 파동 (Ion Cyclotron Waves)</h4>
 <p>이온 사이클로트론 파동은 이온이 자기장 내에서 회전 운동을 하면서 발생하는 파동으로, 전자 사이클로트론 파동과 유사하지만 주파수는 훨씬 낮다. 이는 이온의 질량이 전자보다 훨씬 크기 때문에 발생하는 현상으로, 이온의 움직임을 기반으로 형성된다.</p>
-<h5 id="_11">이온 사이클로트론 주파수</h5>
-<p>이온 사이클로트론 주파수 <span class="arithmatex"><span class="MathJax_Preview"> \omega_{ci} </span><script type="math/tex"> \omega_{ci} </script></span>는 다음과 같이 주어진다.</p>
+<h5 id="_10">이온 사이클로트론 주파수</h5>
+<p>이온 사이클로트론 주파수 <span class="arithmatex"><span class="MathJax_Preview">\omega_{ci}</span><script type="math/tex">\omega_{ci}</script></span>는 다음과 같이 주어진다.</p>
 <div class="arithmatex">
 <div class="MathJax_Preview">
 \omega_{ci} = \frac{q_i B}{m_i}
@@ -211,13 +278,13 @@ m \left( \frac{\partial \mathbf{v}}{\partial t} + \mathbf{v} \cdot \nabla \mathb
 \omega_{ci} = \frac{q_i B}{m_i}
 </script>
 </div>
-<p>여기서 <span class="arithmatex"><span class="MathJax_Preview"> q_i </span><script type="math/tex"> q_i </script></span>는 이온의 전하, <span class="arithmatex"><span class="MathJax_Preview"> m_i </span><script type="math/tex"> m_i </script></span>는 이온의 질량을 의미한다. 이 주파수는 이온의 운동을 분석하고자 할 때 중요한 파라미터로, 특히 자기장과 상호작용하는 이온들의 거동을 연구할 때 필수적이다.</p>
+<p>여기서 <span class="arithmatex"><span class="MathJax_Preview">q_i</span><script type="math/tex">q_i</script></span>는 이온의 전하, <span class="arithmatex"><span class="MathJax_Preview">m_i</span><script type="math/tex">m_i</script></span>는 이온의 질량을 의미한다. 이 주파수는 이온의 운동을 분석하고자 할 때 중요한 파라미터로, 특히 자기장과 상호작용하는 이온들의 거동을 연구할 때 필수적이다.</p>
 <h3 id="low-frequency-plasma-waves">저주파 플라즈마 파동 (Low-Frequency Plasma Waves)</h3>
 <p>플라즈마에서는 고주파 뿐만 아니라 저주파 파동도 존재한다. 이러한 파동은 플라즈마 내의 이온과 전자 간의 상호작용에 의해 발생하며, 주로 자기 유체역학(MHD) 영역에서 관찰된다. 저주파 파동은 플라즈마의 대규모 거동을 설명하는 데 유용하며, 플라즈마 에너지 전달, 자기장 재결합, 및 플라즈마의 안정성과 관련이 있다.</p>
 <h4 id="alfven-waves">알페인 파동 (Alfvén Waves)</h4>
 <p>알페인 파동은 플라즈마 내에서 자기장에 의해 발생하는 저주파 파동으로, 자기 유체역학에서 매우 중요한 파동이다. 이 파동은 플라즈마가 자기장 선을 따라 진동하며 전파될 때 발생한다. 알페인 파동은 자기장과 플라즈마 입자의 상호작용을 이해하는 데 중요한 정보를 제공한다.</p>
-<h5 id="_12">알페인 속도</h5>
-<p>알페인 속도 <span class="arithmatex"><span class="MathJax_Preview"> v_A </span><script type="math/tex"> v_A </script></span>는 다음과 같이 정의된다.</p>
+<h5 id="_11">알페인 속도</h5>
+<p>알페인 속도 <span class="arithmatex"><span class="MathJax_Preview">v_A</span><script type="math/tex">v_A</script></span>는 다음과 같이 정의된다.</p>
 <div class="arithmatex">
 <div class="MathJax_Preview">
 v_A = \frac{B}{\sqrt{\mu_0 \rho}}
@@ -226,10 +293,10 @@ v_A = \frac{B}{\sqrt{\mu_0 \rho}}
 v_A = \frac{B}{\sqrt{\mu_0 \rho}}
 </script>
 </div>
-<p>여기서 <span class="arithmatex"><span class="MathJax_Preview"> B </span><script type="math/tex"> B </script></span>는 자기장의 세기, <span class="arithmatex"><span class="MathJax_Preview"> \rho </span><script type="math/tex"> \rho </script></span>는 플라즈마의 밀도, <span class="arithmatex"><span class="MathJax_Preview"> \mu_0 </span><script type="math/tex"> \mu_0 </script></span>는 진공의 투자율이다. 알페인 속도는 자기장의 강도와 플라즈마 밀도에 따라 결정되며, 플라즈마가 전파할 수 있는 최대 속도를 의미한다.</p>
+<p>여기서 <span class="arithmatex"><span class="MathJax_Preview">B</span><script type="math/tex">B</script></span>는 자기장의 세기, <span class="arithmatex"><span class="MathJax_Preview">\rho</span><script type="math/tex">\rho</script></span>는 플라즈마의 밀도, <span class="arithmatex"><span class="MathJax_Preview">\mu_0</span><script type="math/tex">\mu_0</script></span>는 진공의 투자율이다. 알페인 속도는 자기장의 강도와 플라즈마 밀도에 따라 결정되며, 플라즈마가 전파할 수 있는 최대 속도를 의미한다.</p>
 <h3 id="magnetic-reconnection-in-plasma">플라즈마 내 자기 재결합 (Magnetic Reconnection in Plasma)</h3>
 <p>플라즈마의 집합 동작을 이해할 때 중요한 또 다른 현상은 자기 재결합이다. 자기 재결합은 플라즈마 내에서 서로 반대 방향을 가지는 자기장이 만나면서 재구성되고, 그 과정에서 플라즈마가 에너지를 방출하거나 전파하게 되는 현상이다. 이 과정은 플라즈마 물리학의 중요한 연구 주제 중 하나이며, 특히 태양 플레어와 같은 천문학적 현상을 설명하는 데 필수적이다.</p>
-<h4 id="_13">자기 재결합의 기본 원리</h4>
+<h4 id="_12">자기 재결합의 기본 원리</h4>
 <p>자기 재결합 과정에서는 자기장의 에너지가 플라즈마 입자의 운동 에너지로 전환된다. 이 과정은 다음의 전기장과 자기장의 관계식을 통해 기술할 수 있다.</p>
 <div class="arithmatex">
 <div class="MathJax_Preview">
@@ -242,7 +309,7 @@ v_A = \frac{B}{\sqrt{\mu_0 \rho}}
 <p>이 방정식은 자기장 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{B}</span><script type="math/tex">\mathbf{B}</script></span>가 시간에 따라 변화할 때, 그것이 전기장을 형성한다는 사실을 나타낸다. 자기 재결합은 플라즈마의 집합 동작에 있어서 중요한 에너지 전달 메커니즘으로, 우주 플라즈마 및 핵융합 플라즈마에서 자주 연구되는 주제이다.</p>
 <h3 id="dispersion-relation-of-plasma-waves">플라즈마 파동의 분산 관계 (Dispersion Relation of Plasma Waves)</h3>
 <p>플라즈마 파동의 특성을 이해하기 위해서는 파동의 분산 관계(dispersion relation)를 살펴보는 것이 중요하다. 분산 관계는 파동 벡터 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{k}</span><script type="math/tex">\mathbf{k}</script></span>와 각 주파수 <span class="arithmatex"><span class="MathJax_Preview">\omega</span><script type="math/tex">\omega</script></span> 사이의 관계를 나타내며, 파동이 플라즈마 내에서 어떻게 전파되는지에 대한 중요한 정보를 제공한다.</p>
-<h4 id="_14">랭뮤어 파동의 분산 관계</h4>
+<h4 id="_13">랭뮤어 파동의 분산 관계</h4>
 <p>랭뮤어 파동의 경우, 플라즈마에서 전자 밀도의 진동에 의해 발생하며 그 분산 관계는 다음과 같다.</p>
 <div class="arithmatex">
 <div class="MathJax_Preview">
@@ -253,7 +320,7 @@ v_A = \frac{B}{\sqrt{\mu_0 \rho}}
 </script>
 </div>
 <p>여기서 <span class="arithmatex"><span class="MathJax_Preview">\omega_p</span><script type="math/tex">\omega_p</script></span>는 전자 플라즈마 주파수, <span class="arithmatex"><span class="MathJax_Preview">v_e</span><script type="math/tex">v_e</script></span>는 전자 열속도(thermal velocity), <span class="arithmatex"><span class="MathJax_Preview">\mathbf{k}</span><script type="math/tex">\mathbf{k}</script></span>는 파동 벡터의 크기이다. 이 식은 랭뮤어 파동이 고유 주파수를 중심으로 진동하며, 파동 벡터의 크기에 따라 파동의 주파수가 변하는 것을 보여준다. </p>
-<h4 id="_15">이온 음파의 분산 관계</h4>
+<h4 id="_14">이온 음파의 분산 관계</h4>
 <p>이온 음파는 이온과 전자의 집합적 운동에 의해 발생하며, 그 분산 관계는 다음과 같다.</p>
 <div class="arithmatex">
 <div class="MathJax_Preview">
@@ -318,6 +385,33 @@ i \frac{\partial \psi}{\partial t} + \alpha \frac{\partial^2 \psi}{\partial x^2}
 
   <br>
     
+
+    
+    
+      
+    
+
+  <div class="row wm-article-nav-buttons" role="navigation" aria-label="navigation">
+    
+    <div class="wm-article-nav pull-right">
+      <a href="../1603/" class="btn btn-xs btn-default pull-right">
+        Next
+        <i class="fa fa-chevron-right" aria-hidden="true"></i>
+      </a>
+      <a href="../1603/" class="btn btn-xs btn-link">
+        플라즈마에서의 자기장과 전류
+      </a>
+    </div>
+    
+    <div class="wm-article-nav">
+      <a href="../1601/" class="btn btn-xs btn-default pull-left">
+        <i class="fa fa-chevron-left" aria-hidden="true"></i>
+        Previous</a><a href="../1601/" class="btn btn-xs btn-link">
+        플라즈마의 정의와 특성
+      </a>
+    </div>
+    
+  </div>
 
     <br>
 </div>

@@ -33,11 +33,13 @@
       var is_top_frame = false;
         
         var pageToc = [
-          {title: "\uac00\uc6b0\uc2a4, \uc559\ud398\ub974, \ud328\ub7ec\ub370\uc774 \ubc95\uce59\uc758 \uc218\ud559\uc801 \ud45c\ud604", url: "#_top", children: [
-              {title: "\uac00\uc6b0\uc2a4 \ubc95\uce59 (Gauss\u0027s Law)", url: "#gausss-law" },
-              {title: "\uc559\ud398\ub974-\ub9e5\uc2a4\uc6f0 \ubc95\uce59 (Amp\u00e8re-Maxwell Law)", url: "#-ampere-maxwell-law" },
-              {title: "\ud328\ub7ec\ub370\uc774 \ubc95\uce59 (Faraday\u0027s Law)", url: "#faradays-law" },
-              {title: "\uac00\uc6b0\uc2a4\uc640 \uc559\ud398\ub974, \ud328\ub7ec\ub370\uc774 \ubc95\uce59\uc758 \uc0c1\ud638 \uad00\uacc4", url: "#_2" },
+          {title: "\uac00\uc6b0\uc2a4 \ubc95\uce59 (Gauss\u0027s Law)", url: "#_top", children: [
+          ]},
+          {title: "\uc559\ud398\ub974-\ub9e5\uc2a4\uc6f0 \ubc95\uce59 (Amp\u00e8re-Maxwell Law)", url: "#-ampere-maxwell-law", children: [
+          ]},
+          {title: "\ud328\ub7ec\ub370\uc774 \ubc95\uce59 (Faraday\u0027s Law)", url: "#faradays-law", children: [
+          ]},
+          {title: "\uac00\uc6b0\uc2a4\uc640 \uc559\ud398\ub974, \ud328\ub7ec\ub370\uc774 \ubc95\uce59\uc758 \uc0c1\ud638 \uad00\uacc4", url: "#_1", children: [
           ]},
         ];
 
@@ -60,9 +62,35 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
     
 
     
+    
+      
+    
 
-    <h1 id="_1">가우스, 앙페르, 패러데이 법칙의 수학적 표현</h1>
-<h3 id="gausss-law">가우스 법칙 (Gauss's Law)</h3>
+  <div class="row wm-article-nav-buttons" role="navigation" aria-label="navigation">
+    
+    <div class="wm-article-nav pull-right">
+      <a href="../1003/" class="btn btn-xs btn-default pull-right">
+        Next
+        <i class="fa fa-chevron-right" aria-hidden="true"></i>
+      </a>
+      <a href="../1003/" class="btn btn-xs btn-link">
+        맥스웰 방정식의 통합
+      </a>
+    </div>
+    
+    <div class="wm-article-nav">
+      <a href="../1001/" class="btn btn-xs btn-default pull-left">
+        <i class="fa fa-chevron-left" aria-hidden="true"></i>
+        Previous</a><a href="../1001/" class="btn btn-xs btn-link">
+        전자기장 방정식의 기본 원리
+      </a>
+    </div>
+    
+  </div>
+
+    
+
+    <h3 id="gausss-law">가우스 법칙 (Gauss's Law)</h3>
 <p>가우스 법칙은 전기장 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{E}</span><script type="math/tex">\mathbf{E}</script></span>와 전하 분포 사이의 관계를 나타내는 기본적인 전자기 법칙이다. 이 법칙은 폐곡면을 통과하는 전기장의 플럭스가 그 폐곡면 내부의 총 전하에 비례한다는 것을 의미한다. 수학적으로는 다음과 같이 표현된다.</p>
 <div class="arithmatex">
 <div class="MathJax_Preview">
@@ -150,7 +178,7 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 - <span class="arithmatex"><span class="MathJax_Preview">\nabla \times \mathbf{E}</span><script type="math/tex">\nabla \times \mathbf{E}</script></span>는 전기장의 회전을 나타낸다.
 - <span class="arithmatex"><span class="MathJax_Preview">\frac{\partial \mathbf{B}}{\partial t}</span><script type="math/tex">\frac{\partial \mathbf{B}}{\partial t}</script></span>는 자기장의 시간에 따른 변화율이다.</p>
 <p>패러데이 법칙은 전자기 유도 현상을 기반으로 하여 발전기, 변압기 등 전력 시스템에서 중요한 역할을 하며, 자기장이 시간적으로 변할 때 전기장이 생긴다는 점에서 앙페르-맥스웰 법칙과 대칭적인 관계를 가지고 있다.</p>
-<h3 id="_2">가우스와 앙페르, 패러데이 법칙의 상호 관계</h3>
+<h3 id="_1">가우스와 앙페르, 패러데이 법칙의 상호 관계</h3>
 <p>위의 세 가지 법칙은 맥스웰 방정식의 일부로서, 전자기장 이론의 기본을 구성한다. 각 법칙은 전기장과 자기장의 생성과 상호작용을 설명하며, 공간에서 전기적, 자기적 현상을 정량적으로 설명할 수 있는 수학적 표현을 제공한다.</p>
 <p>특히, 가우스 법칙은 전기장의 원천을 설명하고, 앙페르-맥스웰 법칙과 패러데이 법칙은 전기장과 자기장의 상호 유도 현상을 설명한다. 이 세 법칙이 함께 작용하여 전자기파의 존재와 특성을 이해하는 기반이 된다.</p>
 <p>이와 같은 법칙들은 특정 대칭성이 있는 경우, 예를 들어 구형 대칭, 원통형 대칭, 그리고 평면 대칭 문제에서 유용하게 적용된다. 또한, 이들 법칙을 활용하여 다양한 전자기 시스템의 거동을 분석하고 설계할 수 있다.</p>
@@ -158,6 +186,33 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 
   <br>
     
+
+    
+    
+      
+    
+
+  <div class="row wm-article-nav-buttons" role="navigation" aria-label="navigation">
+    
+    <div class="wm-article-nav pull-right">
+      <a href="../1003/" class="btn btn-xs btn-default pull-right">
+        Next
+        <i class="fa fa-chevron-right" aria-hidden="true"></i>
+      </a>
+      <a href="../1003/" class="btn btn-xs btn-link">
+        맥스웰 방정식의 통합
+      </a>
+    </div>
+    
+    <div class="wm-article-nav">
+      <a href="../1001/" class="btn btn-xs btn-default pull-left">
+        <i class="fa fa-chevron-left" aria-hidden="true"></i>
+        Previous</a><a href="../1001/" class="btn btn-xs btn-link">
+        전자기장 방정식의 기본 원리
+      </a>
+    </div>
+    
+  </div>
 
     <br>
 </div>

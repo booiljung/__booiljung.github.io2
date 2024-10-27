@@ -28,14 +28,24 @@
       var is_top_frame = false;
         
         var pageToc = [
-          {title: "\uc2a4\uce7c\ub77c\uc640 \ubca1\ud130 \ud544\ub4dc\uc758 \uae30\ucd08", url: "#_top", children: [
-              {title: "\uc2a4\uce7c\ub77c \ud544\ub4dc\uc758 \uc815\uc758", url: "#_2" },
-              {title: "\ubca1\ud130 \ud544\ub4dc\uc758 \uc815\uc758", url: "#_4" },
-              {title: "\uc2a4\uce7c\ub77c \ubc0f \ubca1\ud130 \ud544\ub4dc\uc758 \ubbf8\ubd84 \uc5f0\uc0b0", url: "#_6" },
-              {title: "\ubc1c\uc0b0(Divergence)", url: "#divergence" },
-              {title: "\ud68c\uc804(Curl)", url: "#curl" },
-              {title: "\ub77c\ud50c\ub77c\uc2dc\uc548(Laplacian)", url: "#laplacian" },
-              {title: "\ubb3c\ub9ac\uc801 \ud574\uc11d\uacfc \uc2dc\uac01\uc801 \ud45c\ud604", url: "#_9" },
+          {title: "\uc2a4\uce7c\ub77c \ud544\ub4dc\uc758 \uc815\uc758", url: "#_top", children: [
+              {title: "\uc2a4\uce7c\ub77c \ud544\ub4dc\uc758 \uc608", url: "#_2" },
+          ]},
+          {title: "\ubca1\ud130 \ud544\ub4dc\uc758 \uc815\uc758", url: "#_3", children: [
+              {title: "\ubca1\ud130 \ud544\ub4dc\uc758 \uc608", url: "#_4" },
+          ]},
+          {title: "\uc2a4\uce7c\ub77c \ubc0f \ubca1\ud130 \ud544\ub4dc\uc758 \ubbf8\ubd84 \uc5f0\uc0b0", url: "#_5", children: [
+              {title: "\uadf8\ub77c\ub514\uc5b8\ud2b8(Gradient)", url: "#gradient" },
+          ]},
+          {title: "\ubc1c\uc0b0(Divergence)", url: "#divergence", children: [
+              {title: "\ubc1c\uc0b0\uc758 \uc608", url: "#_6" },
+          ]},
+          {title: "\ud68c\uc804(Curl)", url: "#curl", children: [
+              {title: "\ud68c\uc804\uc758 \uc608", url: "#_7" },
+          ]},
+          {title: "\ub77c\ud50c\ub77c\uc2dc\uc548(Laplacian)", url: "#laplacian", children: [
+          ]},
+          {title: "\ubb3c\ub9ac\uc801 \ud574\uc11d\uacfc \uc2dc\uac01\uc801 \ud45c\ud604", url: "#_8", children: [
           ]},
         ];
 
@@ -51,8 +61,25 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 </script>
 <div class="container-fluid wm-page-content">
 <a name="_top"></a>
-<h1 id="_1">스칼라와 벡터 필드의 기초</h1>
-<h3 id="_2">스칼라 필드의 정의</h3>
+<div aria-label="navigation" class="row wm-article-nav-buttons" role="navigation">
+<div class="wm-article-nav pull-right">
+<a class="btn btn-xs btn-default pull-right" href="../0103/">
+        Next
+        <i aria-hidden="true" class="fa fa-chevron-right"></i>
+</a>
+<a class="btn btn-xs btn-link" href="../0103/">
+        전하의 성질과 보존 법칙
+      </a>
+</div>
+<div class="wm-article-nav">
+<a class="btn btn-xs btn-default pull-left" href="../0101/">
+<i aria-hidden="true" class="fa fa-chevron-left"></i>
+        Previous</a><a class="btn btn-xs btn-link" href="../0101/">
+        전자기장과 전자기력의 정의
+      </a>
+</div>
+</div>
+<h3 id="_1">스칼라 필드의 정의</h3>
 <p>스칼라 필드는 공간의 각 점에 대해 하나의 스칼라 값을 할당하는 함수로 정의된다. 스칼라 필드 <span class="arithmatex"><span class="MathJax_Preview">\phi</span><script type="math/tex">\phi</script></span>는 다음과 같이 표현할 수 있다.</p>
 <div class="arithmatex">
 <div class="MathJax_Preview">
@@ -63,7 +90,7 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 </script>
 </div>
 <p>즉, 임의의 점 <span class="arithmatex"><span class="MathJax_Preview">(x, y, z) \in \mathbb{R}^3</span><script type="math/tex">(x, y, z) \in \mathbb{R}^3</script></span>에 대해 <span class="arithmatex"><span class="MathJax_Preview">\phi(x, y, z)</span><script type="math/tex">\phi(x, y, z)</script></span>는 스칼라 값을 반환한다. 스칼라 필드는 예를 들어 온도, 압력, 밀도와 같은 물리량을 공간 내의 위치에 따라 나타내는 데 사용된다.</p>
-<h4 id="_3">스칼라 필드의 예</h4>
+<h4 id="_2">스칼라 필드의 예</h4>
 <p>온도 분포를 나타내는 스칼라 필드를 생각해보자. 온도 필드 <span class="arithmatex"><span class="MathJax_Preview">T(x, y, z)</span><script type="math/tex">T(x, y, z)</script></span>는 공간의 각 점 <span class="arithmatex"><span class="MathJax_Preview">(x, y, z)</span><script type="math/tex">(x, y, z)</script></span>에서의 온도를 나타낸다. 특정 점에서 온도를 구하려면 단순히 그 점의 좌표를 입력하여 결과 값을 계산할 수 있다.</p>
 <div class="arithmatex">
 <div class="MathJax_Preview">
@@ -74,7 +101,7 @@ T(x, y, z) = 300 - x^2 - y^2
 </script>
 </div>
 <p>위와 같은 식으로 정의된 스칼라 필드는 3차원 공간에서 특정 위치의 온도를 제공한다.</p>
-<h3 id="_4">벡터 필드의 정의</h3>
+<h3 id="_3">벡터 필드의 정의</h3>
 <p>벡터 필드는 공간의 각 점에 대해 벡터 값을 할당하는 함수로 정의된다. 벡터 필드 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{F}</span><script type="math/tex">\mathbf{F}</script></span>는 다음과 같이 표현할 수 있다.</p>
 <div class="arithmatex">
 <div class="MathJax_Preview">
@@ -85,7 +112,7 @@ T(x, y, z) = 300 - x^2 - y^2
 </script>
 </div>
 <p>여기서 임의의 점 <span class="arithmatex"><span class="MathJax_Preview">(x, y, z) \in \mathbb{R}^3</span><script type="math/tex">(x, y, z) \in \mathbb{R}^3</script></span>에 대해 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{F}(x, y, z)</span><script type="math/tex">\mathbf{F}(x, y, z)</script></span>는 3차원 벡터를 반환한다. 벡터 필드는 예를 들어 전기장, 자기장, 속도장과 같은 물리량을 나타내는 데 사용된다.</p>
-<h4 id="_5">벡터 필드의 예</h4>
+<h4 id="_4">벡터 필드의 예</h4>
 <p>전기장을 나타내는 벡터 필드를 생각해보자. 전기장 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{E}(x, y, z)</span><script type="math/tex">\mathbf{E}(x, y, z)</script></span>는 공간의 각 점에서의 전기장의 크기와 방향을 제공한다. 예를 들어, 특정 전하 <span class="arithmatex"><span class="MathJax_Preview">q</span><script type="math/tex">q</script></span>가 원점에 위치해 있는 경우, 전기장은 다음과 같은 벡터 필드로 나타낼 수 있다.</p>
 <div class="arithmatex">
 <div class="MathJax_Preview">
@@ -96,7 +123,7 @@ T(x, y, z) = 300 - x^2 - y^2
 </script>
 </div>
 <p>여기서 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{r} = (x, y, z)</span><script type="math/tex">\mathbf{r} = (x, y, z)</script></span>는 원점에서 해당 위치까지의 위치 벡터이며, <span class="arithmatex"><span class="MathJax_Preview">\epsilon_0</span><script type="math/tex">\epsilon_0</script></span>는 진공의 유전율이다.</p>
-<h3 id="_6">스칼라 및 벡터 필드의 미분 연산</h3>
+<h3 id="_5">스칼라 및 벡터 필드의 미분 연산</h3>
 <p>스칼라 및 벡터 필드에 대해 미분 연산을 정의할 수 있다. 이는 필드가 공간에 걸쳐 어떻게 변화하는지를 설명하는 중요한 수단이다. 주로 사용하는 미분 연산으로는 그라디언트(Gradient), 발산(Divergence), 회전(Curl)이 있다.</p>
 <h4 id="gradient">그라디언트(Gradient)</h4>
 <p>스칼라 필드 <span class="arithmatex"><span class="MathJax_Preview">\phi(x, y, z)</span><script type="math/tex">\phi(x, y, z)</script></span>의 그라디언트는 벡터 필드이며, 각 점에서 스칼라 필드의 변화율을 나타낸다. 그라디언트는 다음과 같이 정의된다.</p>
@@ -120,7 +147,7 @@ T(x, y, z) = 300 - x^2 - y^2
 </script>
 </div>
 <p>발산이 양수일 경우 해당 지점에서 벡터 필드는 바깥으로 퍼져나가는 형태이며, 음수일 경우 해당 지점으로 수렴하는 형태를 가진다. 발산은 유체의 밀도 변화나 전기장 분포의 변화를 설명하는 데 유용하다.</p>
-<h4 id="_7">발산의 예</h4>
+<h4 id="_6">발산의 예</h4>
 <p>예를 들어, 전하 분포가 있는 공간에서 전기장의 발산은 다음과 같은 형태로 표현될 수 있다.</p>
 <div class="arithmatex">
 <div class="MathJax_Preview">
@@ -142,7 +169,7 @@ T(x, y, z) = 300 - x^2 - y^2
 </script>
 </div>
 <p>회전이 0인 지점에서는 해당 벡터 필드가 회전하지 않으며, 특정 방향으로 값이 존재하면 그 방향으로 회전하는 성질을 가진다. 회전은 전자기학에서 자기장 분포나 유체의 회전 현상을 설명하는 데 사용된다.</p>
-<h4 id="_8">회전의 예</h4>
+<h4 id="_7">회전의 예</h4>
 <p>전자기학에서 전기장 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{E}</span><script type="math/tex">\mathbf{E}</script></span>와 자기장 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{B}</span><script type="math/tex">\mathbf{B}</script></span> 간의 관계에서, 전기장의 회전은 다음과 같은 식으로 표현된다.</p>
 <div class="arithmatex">
 <div class="MathJax_Preview">
@@ -174,7 +201,7 @@ T(x, y, z) = 300 - x^2 - y^2
 </script>
 </div>
 <p>라플라시안은 물리적으로 특정 영역에서의 변화 정도를 측정하는데, 전자기장과 같은 필드의 분포를 분석하는 데 중요하다.</p>
-<h3 id="_9">물리적 해석과 시각적 표현</h3>
+<h3 id="_8">물리적 해석과 시각적 표현</h3>
 <p>스칼라 및 벡터 필드는 물리적 공간에서 다양한 현상을 나타내기 때문에 시각적 표현이 유용하다. 다음은 벡터 필드의 발산과 회전을 시각화하는 다이어그램 예시이다.</p>
 <div class="mermaid">graph TD
     A[점에서의 발산] --&gt;|필드가 퍼져나감| B(양의 발산)
@@ -184,6 +211,24 @@ T(x, y, z) = 300 - x^2 - y^2
 </div>
 <p>위 다이어그램에서 발산과 회전의 방향성을 통해 필드가 특정 지점에서 어떻게 작용하는지를 이해할 수 있다.</p>
 <br/>
+<div aria-label="navigation" class="row wm-article-nav-buttons" role="navigation">
+<div class="wm-article-nav pull-right">
+<a class="btn btn-xs btn-default pull-right" href="../0103/">
+        Next
+        <i aria-hidden="true" class="fa fa-chevron-right"></i>
+</a>
+<a class="btn btn-xs btn-link" href="../0103/">
+        전하의 성질과 보존 법칙
+      </a>
+</div>
+<div class="wm-article-nav">
+<a class="btn btn-xs btn-default pull-left" href="../0101/">
+<i aria-hidden="true" class="fa fa-chevron-left"></i>
+        Previous</a><a class="btn btn-xs btn-link" href="../0101/">
+        전자기장과 전자기력의 정의
+      </a>
+</div>
+</div>
 <br/>
 </div>
 <footer class="container-fluid wm-page-content">
