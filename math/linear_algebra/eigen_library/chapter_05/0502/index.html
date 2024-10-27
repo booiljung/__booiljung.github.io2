@@ -33,10 +33,19 @@
       var is_top_frame = false;
         
         var pageToc = [
-          {title: "\uc11c\ube0c \ud589\ub82c \ucd94\ucd9c", url: "#_top", children: [
-              {title: "\uc11c\ube0c \ud589\ub82c \uac1c\ub150", url: "#_2" },
-              {title: "Eigen\uc5d0\uc11c \uc11c\ube0c \ud589\ub82c \ucd94\ucd9c", url: "#eigen" },
-              {title: "\uc11c\ube0c \ud589\ub82c\uc758 \ub2e4\uc591\ud55c \ud65c\uc6a9", url: "#_3" },
+          {title: "\uc11c\ube0c \ud589\ub82c \uac1c\ub150", url: "#_top", children: [
+          ]},
+          {title: "Eigen\uc5d0\uc11c \uc11c\ube0c \ud589\ub82c \ucd94\ucd9c", url: "#eigen", children: [
+              {title: "\uc608\uc81c 1: \uae30\ubcf8 \uc11c\ube0c \ud589\ub82c \ucd94\ucd9c", url: "#1" },
+          ]},
+          {title: "\uc11c\ube0c \ud589\ub82c\uc758 \ub2e4\uc591\ud55c \ud65c\uc6a9", url: "#_2", children: [
+              {title: "\uc608\uc81c 2: \ud589\ub82c \uc218\uc815\uacfc \uc11c\ube0c \ud589\ub82c", url: "#2" },
+              {title: "\uc608\uc81c 3: \ubcc0\uc218 \ud06c\uae30 \uc11c\ube0c \ud589\ub82c \ucd94\ucd9c", url: "#3" },
+              {title: "\uc608\uc81c 4: \ud070 \ud589\ub82c\uc758 \ubd80\ubd84 \ud589\ub82c \uc791\uc5c5", url: "#4" },
+              {title: "\uc608\uc81c 5: \ud589/\uc5f4\uc744 \uae30\uc900\uc73c\ub85c \uc11c\ube0c \ud589\ub82c \ucd94\ucd9c", url: "#5" },
+              {title: "\uc608\uc81c 6: \uc11c\ube0c \ud589\ub82c\uc744 \uc774\uc6a9\ud55c \ub300\uac01\uc120 \ucd94\ucd9c", url: "#6" },
+              {title: "\uc608\uc81c 7: \uc0c1\uc704 \ubc0f \ud558\uc704 \uc0bc\uac01 \ud589\ub82c \ucd94\ucd9c", url: "#7" },
+              {title: "\uc608\uc81c 8: \ud558\uc704 \uc0bc\uac01 \ud589\ub82c \ucd94\ucd9c", url: "#8" },
           ]},
         ];
 
@@ -59,9 +68,35 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
     
 
     
+    
+      
+    
 
-    <h1 id="_1">서브 행렬 추출</h1>
-<h3 id="_2">서브 행렬 개념</h3>
+  <div class="row wm-article-nav-buttons" role="navigation" aria-label="navigation">
+    
+    <div class="wm-article-nav pull-right">
+      <a href="../0503/" class="btn btn-xs btn-default pull-right">
+        Next
+        <i class="fa fa-chevron-right" aria-hidden="true"></i>
+      </a>
+      <a href="../0503/" class="btn btn-xs btn-link">
+        블록 연산의 활용
+      </a>
+    </div>
+    
+    <div class="wm-article-nav">
+      <a href="../0501/" class="btn btn-xs btn-default pull-left">
+        <i class="fa fa-chevron-left" aria-hidden="true"></i>
+        Previous</a><a href="../0501/" class="btn btn-xs btn-link">
+        행렬의 블록(Block) 분해
+      </a>
+    </div>
+    
+  </div>
+
+    
+
+    <h3 id="_1">서브 행렬 개념</h3>
 <p>서브 행렬(sub-matrix)은 주어진 행렬에서 특정 행(row)과 열(column)을 선택하여 그들로 구성된 더 작은 행렬이다. 서브 행렬 추출은 대규모 행렬을 부분적으로 다루거나, 특정 영역만 필요할 때 매우 유용하다. Eigen 라이브러리에서 서브 행렬 추출은 다양한 방법으로 이루어지며, 각 방법에 따라 접근 방식이 달라질 수 있다.</p>
 <p>Eigen 라이브러리에서 서브 행렬을 추출하는 기본적인 방법은 <code>block()</code> 함수를 사용하는 것이다. 이 함수는 주어진 행렬에서 특정 위치의 부분 행렬을 추출하는 역할을 한다. 수학적으로 말하면, 주어진 행렬 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{A} \in \mathbb{R}^{m \times n}</span><script type="math/tex">\mathbf{A} \in \mathbb{R}^{m \times n}</script></span>에서 원하는 서브 행렬 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{B} \in \mathbb{R}^{p \times q}</span><script type="math/tex">\mathbf{B} \in \mathbb{R}^{p \times q}</script></span>는 다음과 같이 추출된다:</p>
 <div class="arithmatex">
@@ -133,7 +168,7 @@ int main() {
 </script>
 </div>
 <p>이러한 방식으로 특정 위치에서 크기를 지정하여 서브 행렬을 추출할 수 있다.</p>
-<h3 id="_3">서브 행렬의 다양한 활용</h3>
+<h3 id="_2">서브 행렬의 다양한 활용</h3>
 <p>서브 행렬을 추출하는 방법은 다양한 응용에서 활용된다. 특히 대규모 행렬 연산에서 특정 영역의 행렬만 필요하거나, 블록 행렬 연산에서 특정 블록을 추출할 때 유용하다. 다음은 Eigen에서 서브 행렬 추출을 다양한 방식으로 활용하는 예시들이다.</p>
 <h4 id="2">예제 2: 행렬 수정과 서브 행렬</h4>
 <p>서브 행렬을 추출한 후, 해당 부분을 수정하거나 다른 값으로 교체할 수 있다. 다음은 서브 행렬을 수정하는 예제이다.</p>
@@ -224,7 +259,7 @@ int main() {
 <p>이 코드는 100x100의 대규모 행렬에서 20x20 서브 행렬을 추출한 후, 해당 서브 행렬에 대해 행렬 곱 연산을 수행한다. 대규모 데이터를 다룰 때 특정 블록에만 집중하여 연산 성능을 최적화할 수 있다.</p>
 <h4 id="5">예제 5: 행/열을 기준으로 서브 행렬 추출</h4>
 <p>Eigen 라이브러리에서는 <code>block()</code> 메서드 외에도 특정 행(row) 또는 열(column)을 추출하는 방법도 지원한다. 이를 통해 행렬에서 특정 행이나 열에 대한 연산을 쉽게 수행할 수 있다.</p>
-<h5 id="_4">예제: 행과 열 추출</h5>
+<h5 id="_3">예제: 행과 열 추출</h5>
 <p>다음 예제는 행렬의 특정 행과 열을 추출하는 방법을 보여준다.</p>
 <pre><code class="language-cpp">#include &lt;iostream&gt;
 #include &lt;Eigen/Dense&gt;
@@ -256,7 +291,7 @@ int main() {
 </ul>
 <h4 id="6">예제 6: 서브 행렬을 이용한 대각선 추출</h4>
 <p>행렬에서 대각선 요소를 추출하는 것도 서브 행렬을 이용한 중요한 응용 중 하나이다. Eigen에서는 <code>diagonal()</code> 메서드를 사용하여 대각선을 추출할 수 있다. 서브 행렬의 특정 대각선만 추출하거나 연산을 수행할 때 유용하다.</p>
-<h5 id="_5">예제: 대각선 추출</h5>
+<h5 id="_4">예제: 대각선 추출</h5>
 <pre><code class="language-cpp">#include &lt;iostream&gt;
 #include &lt;Eigen/Dense&gt;
 
@@ -288,7 +323,7 @@ int main() {
 <p>이러한 방식으로 대각선 요소를 추출하여 특수한 연산을 수행할 수 있다.</p>
 <h4 id="7">예제 7: 상위 및 하위 삼각 행렬 추출</h4>
 <p>서브 행렬 추출은 상위 삼각 행렬(upper triangular matrix) 또는 하위 삼각 행렬(lower triangular matrix)을 추출할 때도 유용하다. Eigen에서는 <code>triangularView()</code> 메서드를 통해 삼각 행렬을 쉽게 추출할 수 있다.</p>
-<h5 id="_6">예제: 상위 삼각 행렬 추출</h5>
+<h5 id="_5">예제: 상위 삼각 행렬 추출</h5>
 <pre><code class="language-cpp">#include &lt;iostream&gt;
 #include &lt;Eigen/Dense&gt;
 
@@ -371,6 +406,33 @@ int main() {
 
   <br>
     
+
+    
+    
+      
+    
+
+  <div class="row wm-article-nav-buttons" role="navigation" aria-label="navigation">
+    
+    <div class="wm-article-nav pull-right">
+      <a href="../0503/" class="btn btn-xs btn-default pull-right">
+        Next
+        <i class="fa fa-chevron-right" aria-hidden="true"></i>
+      </a>
+      <a href="../0503/" class="btn btn-xs btn-link">
+        블록 연산의 활용
+      </a>
+    </div>
+    
+    <div class="wm-article-nav">
+      <a href="../0501/" class="btn btn-xs btn-default pull-left">
+        <i class="fa fa-chevron-left" aria-hidden="true"></i>
+        Previous</a><a href="../0501/" class="btn btn-xs btn-link">
+        행렬의 블록(Block) 분해
+      </a>
+    </div>
+    
+  </div>
 
     <br>
 </div>

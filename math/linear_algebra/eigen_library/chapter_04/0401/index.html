@@ -33,16 +33,23 @@
       var is_top_frame = false;
         
         var pageToc = [
-          {title: "\ubca1\ud130\uc640 \ud589\ub82c \uac04\uc758 \uacf1\uc148", url: "#_top", children: [
-              {title: "\ubca1\ud130\uc640 \ud589\ub82c \uacf1\uc148\uc758 \uc815\uc758", url: "#_2" },
-              {title: "Eigen \ub77c\uc774\ube0c\ub7ec\ub9ac\ub97c \uc774\uc6a9\ud55c \ubca1\ud130\uc640 \ud589\ub82c \uacf1\uc148", url: "#eigen" },
-              {title: "\ubca1\ud130\uc640 \ud589\ub82c \uacf1\uc148\uc758 \uc608", url: "#_3" },
-              {title: "\ud589\ub82c \ud06c\uae30\uc640 \ubca1\ud130 \ud06c\uae30\uc758 \ud638\ud658\uc131", url: "#_4" },
-              {title: "Eigen \ub77c\uc774\ube0c\ub7ec\ub9ac\uc5d0\uc11c\uc758 \ud638\ud658\uc131 \uac80\uc0ac", url: "#eigen_1" },
-              {title: "\ubca1\ud130-\ud589\ub82c \uacf1\uc148\uc758 \uc131\ub2a5 \ucd5c\uc801\ud654", url: "#-" },
-              {title: "Eigen\uc5d0\uc11c\uc758 \ud589\ub82c-\ubca1\ud130 \uacf1\uc148 \uc131\ub2a5 \uace0\ub824\uc0ac\ud56d", url: "#eigen-" },
-              {title: "Eigen\uc5d0\uc11c\uc758 \ud589\ub82c \ud06c\uae30 \ubcc0\uacbd \ubc0f \uc131\ub2a5 \ucc28\uc774", url: "#eigen_2" },
-              {title: "\ubca1\ud130\uc640 \ud589\ub82c \uac04\uc758 \uc131\ubd84\ubcc4 \uacf1\uc148 (Element-wise Product)", url: "#element-wise-product" },
+          {title: "\ubca1\ud130\uc640 \ud589\ub82c \uacf1\uc148\uc758 \uc815\uc758", url: "#_top", children: [
+          ]},
+          {title: "Eigen \ub77c\uc774\ube0c\ub7ec\ub9ac\ub97c \uc774\uc6a9\ud55c \ubca1\ud130\uc640 \ud589\ub82c \uacf1\uc148", url: "#eigen", children: [
+          ]},
+          {title: "\ubca1\ud130\uc640 \ud589\ub82c \uacf1\uc148\uc758 \uc608", url: "#_2", children: [
+          ]},
+          {title: "\ud589\ub82c \ud06c\uae30\uc640 \ubca1\ud130 \ud06c\uae30\uc758 \ud638\ud658\uc131", url: "#_3", children: [
+          ]},
+          {title: "Eigen \ub77c\uc774\ube0c\ub7ec\ub9ac\uc5d0\uc11c\uc758 \ud638\ud658\uc131 \uac80\uc0ac", url: "#eigen_1", children: [
+          ]},
+          {title: "\ubca1\ud130-\ud589\ub82c \uacf1\uc148\uc758 \uc131\ub2a5 \ucd5c\uc801\ud654", url: "#-", children: [
+          ]},
+          {title: "Eigen\uc5d0\uc11c\uc758 \ud589\ub82c-\ubca1\ud130 \uacf1\uc148 \uc131\ub2a5 \uace0\ub824\uc0ac\ud56d", url: "#eigen-", children: [
+          ]},
+          {title: "Eigen\uc5d0\uc11c\uc758 \ud589\ub82c \ud06c\uae30 \ubcc0\uacbd \ubc0f \uc131\ub2a5 \ucc28\uc774", url: "#eigen_2", children: [
+          ]},
+          {title: "\ubca1\ud130\uc640 \ud589\ub82c \uac04\uc758 \uc131\ubd84\ubcc4 \uacf1\uc148 (Element-wise Product)", url: "#element-wise-product", children: [
           ]},
         ];
 
@@ -65,9 +72,35 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
     
 
     
+    
+      
+    
 
-    <h1 id="_1">벡터와 행렬 간의 곱셈</h1>
-<h3 id="_2">벡터와 행렬 곱셈의 정의</h3>
+  <div class="row wm-article-nav-buttons" role="navigation" aria-label="navigation">
+    
+    <div class="wm-article-nav pull-right">
+      <a href="../0402/" class="btn btn-xs btn-default pull-right">
+        Next
+        <i class="fa fa-chevron-right" aria-hidden="true"></i>
+      </a>
+      <a href="../0402/" class="btn btn-xs btn-link">
+        벡터의 내적과 외적
+      </a>
+    </div>
+    
+    <div class="wm-article-nav">
+      <a href="../../chapter_03/0308/" class="btn btn-xs btn-default pull-left">
+        <i class="fa fa-chevron-left" aria-hidden="true"></i>
+        Previous</a><a href="../../chapter_03/0308/" class="btn btn-xs btn-link">
+        Kronecker 곱과 Hadamard 곱
+      </a>
+    </div>
+    
+  </div>
+
+    
+
+    <h3 id="_1">벡터와 행렬 곱셈의 정의</h3>
 <p>벡터와 행렬 간의 곱셈은 선형대수에서 매우 중요한 연산으로, 여러 응용 분야에서 사용된다. 우선 벡터 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{v}</span><script type="math/tex">\mathbf{v}</script></span>와 행렬 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{A}</span><script type="math/tex">\mathbf{A}</script></span> 간의 곱셈은 행렬의 각 행에 벡터를 곱하는 방식으로 이해할 수 있다. 구체적으로, <span class="arithmatex"><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span> 차원의 벡터 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{v} \in \mathbb{R}^n</span><script type="math/tex">\mathbf{v} \in \mathbb{R}^n</script></span>과 <span class="arithmatex"><span class="MathJax_Preview">m \times n</span><script type="math/tex">m \times n</script></span> 행렬 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{A} \in \mathbb{R}^{m \times n}</span><script type="math/tex">\mathbf{A} \in \mathbb{R}^{m \times n}</script></span>이 주어졌을 때, 벡터-행렬 곱셈은 다음과 같이 정의된다:</p>
 <div class="arithmatex">
 <div class="MathJax_Preview">
@@ -112,7 +145,7 @@ int main() {
 }
 </code></pre>
 <p>이 코드에서는 3차원 벡터와 <span class="arithmatex"><span class="MathJax_Preview">3 \times 3</span><script type="math/tex">3 \times 3</script></span> 행렬을 정의하고, 두 개의 곱셈을 수행하여 그 결과를 출력한다. 결과는 벡터와 행렬의 곱셈 규칙에 따라 <span class="arithmatex"><span class="MathJax_Preview">3 \times 1</span><script type="math/tex">3 \times 1</script></span> 벡터가 된다. </p>
-<h3 id="_3">벡터와 행렬 곱셈의 예</h3>
+<h3 id="_2">벡터와 행렬 곱셈의 예</h3>
 <p>위에서 설명한 벡터와 행렬의 곱셈 규칙을 구체적인 예로 살펴보자. 예를 들어, 다음과 같은 벡터 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{v}</span><script type="math/tex">\mathbf{v}</script></span>와 행렬 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{A}</span><script type="math/tex">\mathbf{A}</script></span>가 주어졌다고 가정하자:</p>
 <div class="arithmatex">
 <div class="MathJax_Preview">
@@ -132,15 +165,30 @@ int main() {
 </script>
 </div>
 <p>각 행의 계산을 하나씩 풀어보면:</p>
-<p>[
+<div class="arithmatex">
+<div class="MathJax_Preview">
 \mathbf{y}_1 = 1 \times 1 + 2 \times 2 + 3 \times 3 = 1 + 4 + 9 = 14
-]
-[
+</div>
+<script type="math/tex; mode=display">
+\mathbf{y}_1 = 1 \times 1 + 2 \times 2 + 3 \times 3 = 1 + 4 + 9 = 14
+</script>
+</div>
+<div class="arithmatex">
+<div class="MathJax_Preview">
 \mathbf{y}_2 = 4 \times 1 + 5 \times 2 + 6 \times 3 = 4 + 10 + 18 = 32
-]
-[
+</div>
+<script type="math/tex; mode=display">
+\mathbf{y}_2 = 4 \times 1 + 5 \times 2 + 6 \times 3 = 4 + 10 + 18 = 32
+</script>
+</div>
+<div class="arithmatex">
+<div class="MathJax_Preview">
 \mathbf{y}_3 = 7 \times 1 + 8 \times 2 + 9 \times 3 = 7 + 16 + 27 = 50
-]</p>
+</div>
+<script type="math/tex; mode=display">
+\mathbf{y}_3 = 7 \times 1 + 8 \times 2 + 9 \times 3 = 7 + 16 + 27 = 50
+</script>
+</div>
 <p>따라서, 최종 결과 벡터 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{y}</span><script type="math/tex">\mathbf{y}</script></span>는 다음과 같다:</p>
 <div class="arithmatex">
 <div class="MathJax_Preview">
@@ -151,7 +199,7 @@ int main() {
 </script>
 </div>
 <p>Eigen 라이브러리를 사용한 결과와 동일하게, <span class="arithmatex"><span class="MathJax_Preview">\mathbf{A}</span><script type="math/tex">\mathbf{A}</script></span>와 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{v}</span><script type="math/tex">\mathbf{v}</script></span>의 곱셈 결과는 <span class="arithmatex"><span class="MathJax_Preview">3 \times 1</span><script type="math/tex">3 \times 1</script></span> 벡터가 된다.</p>
-<h3 id="_4">행렬 크기와 벡터 크기의 호환성</h3>
+<h3 id="_3">행렬 크기와 벡터 크기의 호환성</h3>
 <p>행렬과 벡터 간의 곱셈에서 중요한 점은 행렬의 열 개수와 벡터의 크기가 일치해야 한다는 것이다. 다시 말해, <span class="arithmatex"><span class="MathJax_Preview">m \times n</span><script type="math/tex">m \times n</script></span> 크기의 행렬 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{A}</span><script type="math/tex">\mathbf{A}</script></span>와 <span class="arithmatex"><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span> 차원의 벡터 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{v}</span><script type="math/tex">\mathbf{v}</script></span>의 곱은 성립하지만, 만약 벡터의 크기가 행렬의 열 개수와 다를 경우 곱셈은 정의되지 않는다.</p>
 <p>이를 수식으로 표현하면, <span class="arithmatex"><span class="MathJax_Preview">\mathbf{A} \in \mathbb{R}^{m \times n}</span><script type="math/tex">\mathbf{A} \in \mathbb{R}^{m \times n}</script></span>와 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{v} \in \mathbb{R}^n</span><script type="math/tex">\mathbf{v} \in \mathbb{R}^n</script></span>이 주어졌을 때만 곱셈 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{A} \mathbf{v}</span><script type="math/tex">\mathbf{A} \mathbf{v}</script></span>가 가능하며, 그 결과는 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{y} \in \mathbb{R}^m</span><script type="math/tex">\mathbf{y} \in \mathbb{R}^m</script></span>이다. 이는 행렬 곱셈의 기본 규칙을 따르는 것이다.</p>
 <h3 id="eigen_1">Eigen 라이브러리에서의 호환성 검사</h3>
@@ -270,6 +318,33 @@ int main() {
 
   <br>
     
+
+    
+    
+      
+    
+
+  <div class="row wm-article-nav-buttons" role="navigation" aria-label="navigation">
+    
+    <div class="wm-article-nav pull-right">
+      <a href="../0402/" class="btn btn-xs btn-default pull-right">
+        Next
+        <i class="fa fa-chevron-right" aria-hidden="true"></i>
+      </a>
+      <a href="../0402/" class="btn btn-xs btn-link">
+        벡터의 내적과 외적
+      </a>
+    </div>
+    
+    <div class="wm-article-nav">
+      <a href="../../chapter_03/0308/" class="btn btn-xs btn-default pull-left">
+        <i class="fa fa-chevron-left" aria-hidden="true"></i>
+        Previous</a><a href="../../chapter_03/0308/" class="btn btn-xs btn-link">
+        Kronecker 곱과 Hadamard 곱
+      </a>
+    </div>
+    
+  </div>
 
     <br>
 </div>
